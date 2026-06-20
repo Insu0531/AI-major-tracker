@@ -821,7 +821,7 @@ export default function Home() {
             </div>
 
             {/* Right: timetable */}
-            <div key={flashKey} className="flex-1 flex flex-col overflow-hidden p-4 gap-2 animate-[fadeIn_0.4s_ease] min-w-0">
+            <div key={flashKey} className="flex-1 flex flex-col overflow-hidden p-4 gap-2 animate-[fadeIn_0.4s_ease] min-w-0 min-h-0">
               {/* 패널 토글 버튼 */}
               <button
                 onClick={() => setPanelOpen((v) => !v)}

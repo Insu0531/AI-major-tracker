@@ -258,7 +258,7 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
       </div>
 
       {/* Right: timetable */}
-      <div key={flashKey} className="flex-1 flex flex-col overflow-hidden p-4 gap-2 animate-[fadeIn_0.4s_ease] min-w-0">
+      <div key={flashKey} className="flex-1 flex flex-col overflow-hidden p-4 gap-2 animate-[fadeIn_0.4s_ease] min-w-0 min-h-0">
         <button
           onClick={() => setPanelOpen((v) => !v)}
           className="self-start flex items-center gap-1 text-xs text-gray-500 border border-gray-300 rounded px-2 py-1 hover:bg-gray-50 shrink-0"
