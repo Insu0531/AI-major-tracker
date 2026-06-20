@@ -882,7 +882,9 @@ export default function Home() {
 
         {/* ── 교양 마법사 탭 ── */}
         {tab === "gyoyang" && (
-          <GyoyangWizard pinnedCombo={pinnedCombo} initialSem={sem} />
+          <div className="flex flex-1 overflow-hidden">
+            <GyoyangWizard pinnedCombo={pinnedCombo} initialSem={sem} />
+          </div>
         )}
       </main>
 
