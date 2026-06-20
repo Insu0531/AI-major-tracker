@@ -94,18 +94,29 @@ function* cartesian<T>(groups: T[][]): Generator<T[]> {
 
 export function generateCombos(selectedGroups: SectionGroup[]): Section[][] {
   const n = selectedGroups.length;
-  // 큰 크기부터 시도, 유효 조합 찾으면 그 크기에서 멈춤
+
+  // 1단계: 모든 크기의 유효 조합을 수집하되, 더 큰 조합에 이미 포함된 조합은 제외
+  // "최대 독립 집합" — 어떤 유효 조합의 부분집합인 조합은 결과에서 제거
+  const allValid: { idxSet: number[]; combo: Section[] }[] = [];
+
   for (let size = n; size >= 1; size--) {
-    const results: Section[][] = [];
     for (const idxSubset of combinations(n, size)) {
       const sub = idxSubset.map((i) => selectedGroups[i]);
       for (const combo of cartesian(sub)) {
-        if (!hasOverlap(combo)) results.push(combo);
+        if (!hasOverlap(combo)) {
+          // 이 조합의 과목 인덱스 집합이 기존 유효 조합의 부분집합이면 스킵
+          const isSubsumed = allValid.some(({ idxSet }) =>
+            idxSubset.every((idx) => idxSet.includes(idx))
+          );
+          if (!isSubsumed) {
+            allValid.push({ idxSet: idxSubset, combo });
+          }
+        }
       }
     }
-    if (results.length > 0) return results;
   }
-  return [];
+
+  return allValid.map(({ combo }) => combo);
 }
 
 function* combinations(n: number, k: number): Generator<number[]> {

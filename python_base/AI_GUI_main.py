@@ -670,23 +670,20 @@ class App(tk.Tk):
                     slots.append((day, start, end))
             return False
 
-        # 크기 n → n-1 → ... 순으로 겹치지 않는 최대 부분집합 조합 탐색
-        all_combos = []
+        # 유효한 조합 탐색: 더 큰 조합의 부분집합인 경우는 제외 (최대 독립 집합만 포함)
         n_groups = len(section_groups)
-        found_size = 0
+        all_valid = []  # [(idx_set, combo), ...]
         for size in range(n_groups, 0, -1):
-            if size < found_size:
-                break
             for idx_subset in itertools.combinations(range(n_groups), size):
                 sub_groups = [section_groups[i] for i in idx_subset]
                 for c in itertools.product(*sub_groups):
                     combo = list(c)
                     if not has_overlap(combo):
-                        all_combos.append(combo)
-                        found_size = size
-            if found_size == size:
-                # 이 크기에서 유효한 조합을 찾았으면 더 작은 크기는 탐색 안 함
-                break
+                        # 이미 찾은 더 큰 조합의 부분집합이면 스킵
+                        idx_set = set(idx_subset)
+                        if not any(idx_set <= existing_idx for existing_idx, _ in all_valid):
+                            all_valid.append((idx_set, combo))
+        all_combos = [combo for _, combo in all_valid]
 
         self._combos = all_combos
         self._filtered_combos = all_combos
