@@ -199,9 +199,9 @@ export default function Home() {
         if (includeProfs.size > 0) {
           if (![...includeProfs].every((p) => combo.some((sec) => sec.profs.includes(p)))) return false;
         }
-        // 개설 전공 — 선택한 학과 중 하나라도 없는 조합 제외 (하나라도 포함이면 통과)
+        // 개설 전공 — 선택한 전공의 과목만 허용 (모든 과목이 선택 전공 중 하나에 속해야 통과)
         if (includeDepts.size > 0) {
-          if (!combo.some((sec) => includeDepts.has(sec.dept))) return false;
+          if (!combo.every((sec) => includeDepts.has(sec.dept))) return false;
         }
         const allSlots = combo.flatMap((sec) => sec.times);
         // 공강 요일
@@ -619,7 +619,7 @@ export default function Home() {
                         {/* 개설 전공 필터 */}
                         {deptsInCombos.length > 0 && (
                           <div className="px-1">
-                            <p className="text-xs text-gray-400 mb-1.5">개설 전공 포함</p>
+                            <p className="text-xs text-gray-400 mb-1.5">개설 전공 선택 <span className="text-gray-300">(선택 전공 과목만)</span></p>
                             <div className="flex flex-col gap-0.5">
                               {deptsInCombos.map((dept) => (
                                 <label key={dept} className="flex items-center gap-2 px-1 py-0.5 hover:bg-gray-50 rounded cursor-pointer">
