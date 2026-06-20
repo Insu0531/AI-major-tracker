@@ -483,9 +483,6 @@ export default function Home() {
                   }`}
                 >
                   필터
-                  {(filterMap.size > 0 || parseInt(minCredit) > 0 || dayOff.size > 0 || noMorning || noEvening || excludeProfs.size > 0 || includeProfs.size > 0 || includeDepts.size > 0) && (
-                    <span className="ml-1 text-xs text-blue-500">●</span>
-                  )}
                 </button>
               </div>
 
