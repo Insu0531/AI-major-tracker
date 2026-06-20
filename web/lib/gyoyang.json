@@ -1,0 +1,2298 @@
+[
+  {
+    "code": "CLTR0001",
+    "name": "국어와 매체언어",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0003",
+    "name": "실용화법",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0011",
+    "name": "중국어1",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0012",
+    "name": "중국어2",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0016",
+    "name": "교양한문",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0017",
+    "name": "실용한자",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0021",
+    "name": "시사영어",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0022",
+    "name": "프랑스어1",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0023",
+    "name": "프랑스어2",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0024",
+    "name": "독일어1",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0025",
+    "name": "독일어2",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0032",
+    "name": "일어 I",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0033",
+    "name": "일어 II",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0034",
+    "name": "영어 I",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0035",
+    "name": "영어 II",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0036",
+    "name": "러시아어 I",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0037",
+    "name": "러시아어 II",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0038",
+    "name": "스페인어",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0039",
+    "name": "베트남어",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0040",
+    "name": "스페인어 2",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0041",
+    "name": "한국사",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0042",
+    "name": "동양의역사와문화",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0043",
+    "name": "서양의역사와문화",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0044",
+    "name": "철학의이해",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0045",
+    "name": "논리와 비판적 사고",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0046",
+    "name": "고고학의 이해",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0048",
+    "name": "철학사상사",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0053",
+    "name": "한국의문학과영화",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0058",
+    "name": "자원봉사활동",
+    "credit": "3-2-2",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0061",
+    "name": "정치학의 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0069",
+    "name": "인간과성",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0073",
+    "name": "현대사회와 윤리",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0074",
+    "name": "결혼과 가족관계",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0078",
+    "name": "심리학의이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0082",
+    "name": "매스컴과 사회",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0083",
+    "name": "경제의이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0085",
+    "name": "경영의이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0089",
+    "name": "회계와사회생활",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0090",
+    "name": "현대사회와법",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0091",
+    "name": "현대사회와행정",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0094",
+    "name": "문화인류학의이해",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0095",
+    "name": "프랑스문화의이해",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0096",
+    "name": "영상으로보는독일문화",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0101",
+    "name": "인간과자연",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0102",
+    "name": "자연과학의이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0103",
+    "name": "과학사의이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0106",
+    "name": "화학의신비",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0107",
+    "name": "자연과환경",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0108",
+    "name": "생명의신비",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0112",
+    "name": "생활속의통계",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0117",
+    "name": "농업과환경",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0118",
+    "name": "생활과원예",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0120",
+    "name": "아름다운 지구",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0126",
+    "name": "중국문학의이해",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0128",
+    "name": "일본문학의 이해",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0130",
+    "name": "프랑스문학의 이해",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0131",
+    "name": "독일문학의 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0132",
+    "name": "러시아문학의 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0133",
+    "name": "국악의 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0156",
+    "name": "지구과학",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0174",
+    "name": "현대사회와 스포츠",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0180",
+    "name": "골프",
+    "credit": "1-0-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0181",
+    "name": "호신술",
+    "credit": "1-0-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0183",
+    "name": "캠핑",
+    "credit": "1-0-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0185",
+    "name": "인간과주거문화",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0187",
+    "name": "현대인의 식생활",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0188",
+    "name": "현대인과 패션",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0190",
+    "name": "젠더와 사회",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0195",
+    "name": "C/C++프로그래밍기초",
+    "credit": "3-2-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0205",
+    "name": "대학글쓰기",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0208",
+    "name": "심화글쓰기",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0210",
+    "name": "명저읽기와 토론",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0211",
+    "name": "수학 I",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0212",
+    "name": "수학 II",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0213",
+    "name": "물리학 I",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0214",
+    "name": "물리학 II",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0215",
+    "name": "화학 I",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0216",
+    "name": "화학 II",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0221",
+    "name": "통계학",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0223",
+    "name": "물리학실험 I",
+    "credit": "1-0-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0224",
+    "name": "물리학실험 II",
+    "credit": "1-0-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0226",
+    "name": "화학실험 I",
+    "credit": "1-0-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0227",
+    "name": "화학실험 II",
+    "credit": "1-0-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0233",
+    "name": "생물학실험 I",
+    "credit": "1-0-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0234",
+    "name": "생물학실험 II",
+    "credit": "1-0-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0242",
+    "name": "인문사회수학",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0246",
+    "name": "일반생명과학Ⅰ",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0247",
+    "name": "일반생명과학Ⅱ",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0248",
+    "name": "한국사상과 윤리",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0251",
+    "name": "한국문학의 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0252",
+    "name": "논쟁술",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0253",
+    "name": "대중음악을 통한 미국문화와 영어표현법",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0256",
+    "name": "법과 경제",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0258",
+    "name": "비만과 건강",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0267",
+    "name": "웹 프로그래밍 기초",
+    "credit": "3-2-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0268",
+    "name": "파이선 프로그래밍",
+    "credit": "3-2-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0271",
+    "name": "독서로 세상보기",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0301",
+    "name": "Korean Language I",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0302",
+    "name": "Korean Language II",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0313",
+    "name": "Modern Korean Society",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0327",
+    "name": "Korean Language III",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0342",
+    "name": "Korean Language Ⅳ",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0343",
+    "name": "Korean Language Ⅴ",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0344",
+    "name": "Korean Language Ⅵ",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0348",
+    "name": "Cultural Life in Korea",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0351",
+    "name": "Academic Writing & Study Skills",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0352",
+    "name": "Business Communication & Writing Skills",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0353",
+    "name": "Practical Korean Writing",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0354",
+    "name": "Practical Korean Listening",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0359",
+    "name": "Korea in Motion: Korean Film and the Korean Wave",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0361",
+    "name": "South Korea and International Relations",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0366",
+    "name": "Academic Korean Speaking",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0367",
+    "name": "Academic Korean Reading",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0372",
+    "name": "인공지능의 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0373",
+    "name": "빅데이터 기초 실습",
+    "credit": "3-2-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0374",
+    "name": "생활 안전을 위한 공간적 사고",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0376",
+    "name": "디자인과 크리에이티브",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0401",
+    "name": "체력 컨디셔닝",
+    "credit": "2-1-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0404",
+    "name": "20세기 중국의 이해",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0411",
+    "name": "실용영어1",
+    "credit": "2-2-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0412",
+    "name": "실용영어2",
+    "credit": "2-2-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0413",
+    "name": "비즈니스영어",
+    "credit": "2-2-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0455",
+    "name": "외국인을 위한 한국어 문법",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0458",
+    "name": "러시아 문화 읽기",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0460",
+    "name": "우주와 생명",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0462",
+    "name": "팔공산과 대구 문화의 이해",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0466",
+    "name": "영화를 통한 스포츠 읽기",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0467",
+    "name": "전통문화체험",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0468",
+    "name": "인물로 본 서양사",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0469",
+    "name": "대구지리기행",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0471",
+    "name": "친환경적 삶과 건축",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0472",
+    "name": "현대예술의 표현방식과 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0473",
+    "name": "인도를 읽는 열두개의 시선",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0474",
+    "name": "역사로 보는 서양기업과 기업문화",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0476",
+    "name": "일본어 스피치와 프리젠테이션",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0489",
+    "name": "여성과 중국정치의 역사",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0492",
+    "name": "르네상스 문학과 미술",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0499",
+    "name": "Discussions in English",
+    "credit": "2-2-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0501",
+    "name": "한국의 언어와 문학",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0503",
+    "name": "신화와 상상력",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0504",
+    "name": "동화의 세계",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0508",
+    "name": "인간과 언어",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0511",
+    "name": "내면의 수사학",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0514",
+    "name": "논어에서 배우는 삶의 지혜",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0515",
+    "name": "과학기술과 윤리",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0518",
+    "name": "아름다움이란 무엇인가",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0520",
+    "name": "문화로 읽는 대중가요의 흐름",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0521",
+    "name": "기독교와 인류문명",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0523",
+    "name": "영상으로보는중국문화",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0524",
+    "name": "러시아, 러시아인",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0525",
+    "name": "영국의 역사와 문화",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0527",
+    "name": "한국문학과 사회",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0531",
+    "name": "현대지리학의 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0533",
+    "name": "인간의 삶과 사회복지",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0534",
+    "name": "교육학의이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0535",
+    "name": "패션과 사회",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0538",
+    "name": "시사생명과학",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0539",
+    "name": "생물다양성",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0540",
+    "name": "생명자원과 환경",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0541",
+    "name": "인간생활과 동물",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0542",
+    "name": "축산식품과 건강",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0544",
+    "name": "지구시스템의 이해",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0546",
+    "name": "우주의 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0551",
+    "name": "중국의 사상과 윤리",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0552",
+    "name": "비즈니스 프랑스어",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0553",
+    "name": "비즈니스 독일어",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0554",
+    "name": "비즈니스 중국어",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0555",
+    "name": "비즈니스 일본어",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0556",
+    "name": "비즈니스 러시아어",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0557",
+    "name": "아랍어",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0565",
+    "name": "프랑스동화의 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0570",
+    "name": "문학과 영화, 그리고 나",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0577",
+    "name": "영남학과 지방학",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0583",
+    "name": "일본대중문화의 이해",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0585",
+    "name": "과학과 문화",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0588",
+    "name": "중국정치이야기",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0591",
+    "name": "국제시사해설",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0601",
+    "name": "인문과 예술로 만나는 삶과 인성",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0603",
+    "name": "인간발달과 행복",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0605",
+    "name": "평생학습사회와 인간교육",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0608",
+    "name": "결혼준비 교육",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0609",
+    "name": "성격의 재발견",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0611",
+    "name": "예비부모교육",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0612",
+    "name": "인간관계 성공 레슨",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0613",
+    "name": "동서고전의 만남",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0614",
+    "name": "독도의 자연알기",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0617",
+    "name": "성의진화",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0618",
+    "name": "이미지 메이킹 & 패션 코디네이션",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0619",
+    "name": "웰빙과 건강",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0620",
+    "name": "통일과 남북한 관계의 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0622",
+    "name": "음식문화와 건강",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0625",
+    "name": "식생활과 사회 Issue",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0638",
+    "name": "디자인? 디자인!",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0639",
+    "name": "디자인과 현대문화",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0640",
+    "name": "음악, 철학 그리고 문화",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0641",
+    "name": "영화와 패션철학",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0642",
+    "name": "현대디자인사",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0643",
+    "name": "공연예술의 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0646",
+    "name": "한국어로 보는 한국문화",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0652",
+    "name": "생활테니스",
+    "credit": "1-0-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0654",
+    "name": "댄스스포츠",
+    "credit": "1-0-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0657",
+    "name": "생활배드민턴",
+    "credit": "1-0-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0658",
+    "name": "생활수영",
+    "credit": "1-0-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0659",
+    "name": "생활스키",
+    "credit": "1-0-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0665",
+    "name": "한국의 선비문화와 고전",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0667",
+    "name": "세계문화의 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0668",
+    "name": "인물따라 떠나는 한국사 기행",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0672",
+    "name": "영화로 철학하기",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0674",
+    "name": "문화 속의 상상력과 창의력",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0678",
+    "name": "영상으로 보는 일본문학",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0679",
+    "name": "데이터로 이해하는 일본인,일본어",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0680",
+    "name": "영화로 만나는 러시아와 동유럽 문화",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0682",
+    "name": "대중음악과 사회",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0685",
+    "name": "세계화시대의 여가에 대한 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0687",
+    "name": "유비쿼터스 정보와 미래사회",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0694",
+    "name": "형태구성 및 조형심리",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0698",
+    "name": "스토리 미술",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0701",
+    "name": "이태리어",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0703",
+    "name": "행복한 삶과 가족",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0709",
+    "name": "웰빙, 웰에이징 그리고 웰다잉",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0710",
+    "name": "정보학의 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0714",
+    "name": "복현모둠강좌",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0730",
+    "name": "국제개발협력의 이해",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0742",
+    "name": "옛이야기의 전통과 아름다움",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0743",
+    "name": "기후변화의 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0750",
+    "name": "미래사회와 교육",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0751",
+    "name": "행정법의 이해",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0752",
+    "name": "민법학의 기초",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0753",
+    "name": "노동법의 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0754",
+    "name": "정보사회와 지식재산",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0755",
+    "name": "식품위생의 이해",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0756",
+    "name": "EU and Global Development",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0759",
+    "name": "독도학",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0768",
+    "name": "글로벌· 다문화 사회와 미래교육",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0769",
+    "name": "글로벌· 다문화 인재 리더십",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0770",
+    "name": "글로벌· 다문화 현장 인턴십",
+    "credit": "1-0-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0774",
+    "name": "영화 속의 생명과학과 4차 산업",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0780",
+    "name": "실용금융",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0781",
+    "name": "4차 산업혁명과 에너지 정책",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0782",
+    "name": "건강육아 레시피",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0783",
+    "name": "환경문제와 국가",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0785",
+    "name": "감염 미생물의 세계",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0791",
+    "name": "수학 리마인드",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0793",
+    "name": "Transnational Literature & Film",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0794",
+    "name": "오픈소스 소프트웨어 기초",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0795",
+    "name": "동양철학과 현대사회",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0796",
+    "name": "아시아 도시의 인문 여행",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0797",
+    "name": "한중 문화 콘텐츠 개발과 교류",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0798",
+    "name": "식품의 예술",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0799",
+    "name": "정보기술 윤리의 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0800",
+    "name": "일상 속의 물리",
+    "credit": "3-2-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0801",
+    "name": "컴퓨터제작",
+    "credit": "3-2-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0805",
+    "name": "스페인·라틴아메리카의 역사와 문화",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0806",
+    "name": "토론의 준비와 실제",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0807",
+    "name": "신소재의 미래활용: 플라스틱",
+    "credit": "3-2-2",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0808",
+    "name": "상대성이론과 양자역학 입문",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0809",
+    "name": "반려동물의 해부생리학적 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0810",
+    "name": "자동차구조 및 기술문화의 이해",
+    "credit": "3-2-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0811",
+    "name": "인문사회 코딩기초",
+    "credit": "3-2-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0812",
+    "name": "자연과학 코딩기초",
+    "credit": "3-2-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0813",
+    "name": "빅데이터와 R프로그래밍",
+    "credit": "3-2-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0814",
+    "name": "인문사회 기초수학",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0815",
+    "name": "인문사회 기초통계",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0816",
+    "name": "인문사회 기초생명과학",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0817",
+    "name": "인문사회 기초물리학 및 화학",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0818",
+    "name": "인문사회 기초지구과학",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0819",
+    "name": "기초수학2",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0820",
+    "name": "기초수학1",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0821",
+    "name": "물리학입문",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0822",
+    "name": "화학입문",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0823",
+    "name": "생명과학입문",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0824",
+    "name": "리더십승마",
+    "credit": "3-2-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0825",
+    "name": "인공지능과 케글분석",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0826",
+    "name": "인간과 AI 기술",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0827",
+    "name": "인공지능의 책임성과 윤리",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0828",
+    "name": "동아시아 문화리터러시",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0829",
+    "name": "지속가능한 미래를 위한 다양성과 세계시민성",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0831",
+    "name": "문학으로 배우는 교양법률",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0832",
+    "name": "중국의 전통문화와 현대",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": true
+  },
+  {
+    "code": "CLTR0835",
+    "name": "에듀테크",
+    "credit": "3-2-2",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0836",
+    "name": "미래사회와 교사 역량",
+    "credit": "3-2-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0837",
+    "name": "환경교육특강",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0838",
+    "name": "해양생태학으로의 산책",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0839",
+    "name": "현대사회와 인권",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0840",
+    "name": "사회학적 상상력과 현대사회",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0841",
+    "name": "인류사와 인류세",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0842",
+    "name": "반려동물과 함께하는 삶의 이해",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0843",
+    "name": "지속가능발전교육과 삶의 실천",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0844",
+    "name": "현대 도시 모빌리티의 풍경",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0845",
+    "name": "IT와 예술",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0846",
+    "name": "운동과 뇌",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0847",
+    "name": "ESG와 발명",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0848",
+    "name": "스마트 기술의 이해와 활용",
+    "credit": "3-2-2",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0849",
+    "name": "날씨와 생활",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0850",
+    "name": "인공지능 활용",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0851",
+    "name": "인류세 생태문화와 평화학",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0852",
+    "name": "고전 속 사랑앓이",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0853",
+    "name": "K-POP과 글로벌 음악 산업",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0854",
+    "name": "인공지능을 위한 선형대수",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0855",
+    "name": "한국사 속의 가족과 여성",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0856",
+    "name": "지속가능한 의생활 문화",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0857",
+    "name": "인류의 지속가능한 성장은 가능한가? : SDGs의 이해와 실천",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0858",
+    "name": "펫 휴머나이제이션의 이해",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0859",
+    "name": "글로벌 이슈와 정의로운 국제관계: 전쟁, 난민, 빈곤, 기후 위기",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0860",
+    "name": "글로벌 통상의 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0861",
+    "name": "인간과 지구시스템과학 1",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0862",
+    "name": "인간과 지구시스템과학 2",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0863",
+    "name": "건강한 뇌와 행복한 삶",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0864",
+    "name": "AI·디지털 이야기 창작과 공유 및 활용",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0865",
+    "name": "미래교육과 글로벌 트렌드",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0866",
+    "name": "생성형AI의 이해와 활용",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0867",
+    "name": "열린 대구, 글로벌 공생",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0868",
+    "name": "한국문화와 대구지역 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0869",
+    "name": "Academic Korean Listening",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0870",
+    "name": "명상과 치유",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0871",
+    "name": "도자기의 세계",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0872",
+    "name": "생명의 시작과 끝들의 문화적 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0873",
+    "name": "건강과 질병의 사회문화적 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0874",
+    "name": "여행과 행복",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0877",
+    "name": "인공지능을 활용한 영어 학습",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0878",
+    "name": "하늘을 재고 땅을 나누다: 조선의 과학, 일상을 바꾸다",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0879",
+    "name": "글로벌 문화컨텐츠",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0881",
+    "name": "Snap to Cut: AI 영상제작",
+    "credit": "3-2-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0882",
+    "name": "AI로 보는 한국 고전",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0883",
+    "name": "시니어와 미래 외식비즈니스",
+    "credit": "3-3-0",
+    "sdg": true,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0884",
+    "name": "항공우주와 드론의 이해",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0885",
+    "name": "미래사회와 나의 삶에 대한 디자인",
+    "credit": "3-2-2",
+    "sdg": false,
+    "hmnts": false
+  },
+  {
+    "code": "CLTR0886",
+    "name": "국제사회와 법",
+    "credit": "3-3-0",
+    "sdg": false,
+    "hmnts": false
+  }
+]

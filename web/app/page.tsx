@@ -4,6 +4,7 @@ import { useState, useRef, useCallback, useEffect } from "react";
 import { buildSectionGroups, generateCombos, Section, SectionGroup } from "@/lib/timetable";
 import { COURSES_BY_MAJOR, Major, MAJOR_LABELS } from "@/lib/courses";
 import TimetableGrid from "@/components/TimetableGrid";
+import GyoyangWizard from "@/components/GyoyangWizard";
 
 type Row = {
   grade: string;
@@ -13,6 +14,7 @@ type Row = {
   dept: string;
   prof: string;
   timeStr: string;
+  rmrk: string;
 };
 
 type SortState = { col: keyof Row; dir: "asc" | "desc" } | null;
@@ -24,12 +26,14 @@ const COLS: { key: keyof Row; label: string }[] = [
   { key: "dept", label: "개설학과" },
   { key: "prof", label: "교수" },
   { key: "timeStr", label: "강의시간" },
+  { key: "rmrk", label: "비고" },
 ];
 
 const MAX_SELECT = 10;
 
 export default function Home() {
-  const [tab, setTab] = useState<"search" | "wizard">("search");
+  const [tab, setTab] = useState<"search" | "wizard" | "gyoyang">("search");
+  const [pinnedCombo, setPinnedCombo] = useState<Section[] | null>(null);
   const [major, setMajor] = useState<Major>("ai");
   const [semYear, setSemYear] = useState("2026");
   const [semTerm, setSemTerm] = useState("1");
@@ -60,6 +64,7 @@ export default function Home() {
   const [leftTab, setLeftTab] = useState<"select" | "filter">("select");
   const [panelOpen, setPanelOpen] = useState(() => typeof window !== "undefined" && window.innerWidth >= 768);
   const [flashKey, setFlashKey] = useState(0);
+  const [slideDir, setSlideDir] = useState<"left" | "right">("left");
   // 고정 분반: crseNo(분반코드) → Row (과목 조회에서 "마법사에 추가"한 특정 분반)
   const [pinnedRows, setPinnedRows] = useState<Map<string, Row>>(new Map());
 
@@ -72,21 +77,24 @@ export default function Home() {
     setSaving(true);
     try {
       const domtoimage = (await import("dom-to-image-more")).default;
-      const TARGET_W = 800;
-      const TARGET_H = 720;
-      const scaleX = TARGET_W / timetableRef.current.scrollWidth;
-      const scaleY = TARGET_H / timetableRef.current.scrollHeight;
-      const dataUrl = await domtoimage.toPng(timetableRef.current, {
+      const el = timetableRef.current;
+      // 캡처용 고정 크기 클론 — 화면 밖에 렌더 후 찍기
+      const CAPTURE_W = 900;
+      const clone = el.cloneNode(true) as HTMLElement;
+      clone.style.position = "fixed";
+      clone.style.left = "-9999px";
+      clone.style.top = "0";
+      clone.style.width = `${CAPTURE_W}px`;
+      clone.style.height = "auto";
+      clone.style.overflow = "visible";
+      document.body.appendChild(clone);
+      const dataUrl = await domtoimage.toPng(clone, {
         bgcolor: "#ffffff",
-        width: TARGET_W,
-        height: TARGET_H,
-        style: {
-          transform: `scale(${scaleX}, ${scaleY})`,
-          transformOrigin: "top left",
-          width: `${timetableRef.current.scrollWidth}px`,
-          height: `${timetableRef.current.scrollHeight}px`,
-        },
+        scale: 3,
+        width: CAPTURE_W,
+        height: clone.scrollHeight,
       });
+      document.body.removeChild(clone);
       const link = document.createElement("a");
       link.href = dataUrl;
       link.download = `시간표_${comboIdx + 1}.png`;
@@ -295,19 +303,32 @@ export default function Home() {
 
       {/* Tabs */}
       <div className="bg-white border-b border-gray-200 px-6 flex shrink-0">
-        {(["search", "wizard"] as const).map((t) => (
-          <button
-            key={t}
-            onClick={() => setTab(t)}
-            className={`px-4 py-2 text-sm border-b-2 transition-colors ${
-              tab === t
-                ? "border-blue-500 text-blue-600 font-semibold"
-                : "border-transparent text-gray-500 hover:text-gray-700"
-            }`}
-          >
-            {t === "search" ? "과목 조회" : "시간표 마법사"}
-          </button>
-        ))}
+        {([
+          { key: "search", label: "과목 조회" },
+          { key: "wizard", label: "시간표 마법사" },
+          { key: "gyoyang", label: "교양 마법사" },
+        ] as const).map(({ key, label }) => {
+          const disabled = key === "gyoyang" && !pinnedCombo;
+          return (
+            <button
+              key={key}
+              onClick={() => { if (!disabled) setTab(key); }}
+              title={disabled ? "시간표 마법사에서 ★ 교양 마법사로 이동을 먼저 선택하세요" : undefined}
+              className={`px-4 py-2 text-sm border-b-2 transition-colors ${
+                tab === key
+                  ? "border-blue-500 text-blue-600 font-semibold"
+                  : disabled
+                  ? "border-transparent text-gray-300 cursor-not-allowed"
+                  : "border-transparent text-gray-500 hover:text-gray-700"
+              }`}
+            >
+              {label}
+              {key === "gyoyang" && pinnedCombo && (
+                <span className="ml-1 text-xs text-amber-500">★</span>
+              )}
+            </button>
+          );
+        })}
       </div>
 
       <main className="flex-1 flex flex-col overflow-hidden">
@@ -442,7 +463,11 @@ export default function Home() {
                         </td>
                         {COLS.map((c) => (
                           <td key={c.key} className="px-3 py-1.5 text-gray-700 whitespace-nowrap">
-                            {row[c.key]}
+                            {c.key === "timeStr" ? (
+                              <div className="overflow-x-auto max-w-40" style={{ scrollbarWidth: "none" }}>
+                                {row[c.key]}
+                              </div>
+                            ) : row[c.key]}
                           </td>
                         ))}
                       </tr>
@@ -450,7 +475,7 @@ export default function Home() {
                   })}
                   {!loading && rows.length === 0 && (
                     <tr>
-                      <td colSpan={7} className="text-center text-gray-400 py-12 text-sm">
+                      <td colSpan={8} className="text-center text-gray-400 py-12 text-sm">
                         학기를 입력하고 조회하세요
                       </td>
                     </tr>
@@ -808,32 +833,40 @@ export default function Home() {
                 <>
                   <div className="flex items-center gap-3 flex-wrap shrink-0">
                     <button
-                      onClick={() => setComboIdx((i) => (i - 1 + filteredCombos.length) % filteredCombos.length)}
+                      onClick={() => { setSlideDir("right"); setComboIdx((i) => (i - 1 + filteredCombos.length) % filteredCombos.length); }}
                       className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm"
                     >◀</button>
                     <span className="text-sm text-gray-600 w-20 text-center">
                       {comboIdx + 1} / {filteredCombos.length}
                     </span>
                     <button
-                      onClick={() => setComboIdx((i) => (i + 1) % filteredCombos.length)}
+                      onClick={() => { setSlideDir("left"); setComboIdx((i) => (i + 1) % filteredCombos.length); }}
                       className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm"
                     >▶</button>
                     <span className="text-sm font-semibold text-blue-600">
                       총 {totalCredit}학점
                     </span>
-                    <button
-                      onClick={saveAsImage}
-                      disabled={saving}
-                      className="ml-auto flex items-center gap-1 text-xs px-3 py-1.5 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white rounded transition-colors shrink-0"
-                    >
-                      {saving ? "저장 중..." : "이미지 저장"}
-                    </button>
-                    <span className="text-xs text-gray-400 truncate max-w-sm">
+                    <span className="text-xs text-gray-400 ml-auto truncate max-w-sm">
                       {currentCombo.map((s) => s.name.replace(/\s*\(.*?\)\s*$/, "")).join(" · ")}
                     </span>
                   </div>
-                  <div className="flex-1 overflow-auto">
+                  <div key={`${comboIdx}-${slideDir}`} className={`flex-1 overflow-auto ${slideDir === "left" ? "slide-left" : "slide-right"}`}>
                     <TimetableGrid ref={timetableRef} combo={currentCombo} />
+                  </div>
+                  <div className="flex gap-3 shrink-0 pt-1">
+                    <button
+                      onClick={saveAsImage}
+                      disabled={saving}
+                      className="flex-1 py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors"
+                    >
+                      {saving ? "저장 중..." : "이미지 저장"}
+                    </button>
+                    <button
+                      onClick={() => { setPinnedCombo(currentCombo); setTab("gyoyang"); }}
+                      className="flex-1 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded-lg transition-colors"
+                    >
+                      ★ 이 시간표로 교양 마법사 시작
+                    </button>
                   </div>
                 </>
               ) : (
@@ -845,6 +878,11 @@ export default function Home() {
               )}
             </div>
           </div>
+        )}
+
+        {/* ── 교양 마법사 탭 ── */}
+        {tab === "gyoyang" && (
+          <GyoyangWizard pinnedCombo={pinnedCombo} initialSem={sem} />
         )}
       </main>
 
