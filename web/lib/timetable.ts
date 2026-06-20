@@ -95,28 +95,48 @@ function* cartesian<T>(groups: T[][]): Generator<T[]> {
 export function generateCombos(selectedGroups: SectionGroup[]): Section[][] {
   const n = selectedGroups.length;
 
-  // 1단계: 모든 크기의 유효 조합을 수집하되, 더 큰 조합에 이미 포함된 조합은 제외
-  // "최대 독립 집합" — 어떤 유효 조합의 부분집합인 조합은 결과에서 제거
-  const allValid: { idxSet: number[]; combo: Section[] }[] = [];
+  // 크기별로 유효 조합 수집
+  // 크기 k의 유효 조합이 하나라도 있으면, 크기 k보다 작은 조합은 해당 과목 인덱스 집합이
+  // 크기 k 조합의 부분집합인 경우에만 제외 (다른 인덱스 조합은 독립적으로 포함)
+  const validBySize: Map<number, { idxSet: Set<number>; combo: Section[] }[]> = new Map();
 
   for (let size = n; size >= 1; size--) {
+    const found: { idxSet: Set<number>; combo: Section[] }[] = [];
     for (const idxSubset of combinations(n, size)) {
       const sub = idxSubset.map((i) => selectedGroups[i]);
       for (const combo of cartesian(sub)) {
         if (!hasOverlap(combo)) {
-          // 이 조합의 과목 인덱스 집합이 기존 유효 조합의 부분집합이면 스킵
-          const isSubsumed = allValid.some(({ idxSet }) =>
-            idxSubset.every((idx) => idxSet.includes(idx))
-          );
-          if (!isSubsumed) {
-            allValid.push({ idxSet: idxSubset, combo });
-          }
+          found.push({ idxSet: new Set(idxSubset), combo });
         }
       }
     }
+    if (found.length > 0) validBySize.set(size, found);
   }
 
-  return allValid.map(({ combo }) => combo);
+  if (validBySize.size === 0) return [];
+
+  const maxSize = Math.max(...validBySize.keys());
+  const result: Section[][] = [];
+
+  // 최대 크기 조합은 전부 포함
+  for (const { combo } of validBySize.get(maxSize)!) {
+    result.push(combo);
+  }
+
+  // 작은 크기는 최대 크기 조합의 부분집합 인덱스가 아닌 경우에만 포함
+  const maxIdxSets = validBySize.get(maxSize)!.map((v) => v.idxSet);
+  for (let size = maxSize - 1; size >= 1; size--) {
+    const entries = validBySize.get(size);
+    if (!entries) continue;
+    for (const { idxSet, combo } of entries) {
+      const subsumed = maxIdxSets.some((maxSet) =>
+        [...idxSet].every((i) => maxSet.has(i))
+      );
+      if (!subsumed) result.push(combo);
+    }
+  }
+
+  return result;
 }
 
 function* combinations(n: number, k: number): Generator<number[]> {

@@ -670,20 +670,31 @@ class App(tk.Tk):
                     slots.append((day, start, end))
             return False
 
-        # 유효한 조합 탐색: 더 큰 조합의 부분집합인 경우는 제외 (최대 독립 집합만 포함)
+        # 크기별로 유효 조합 수집 후, 최대 크기 + 최대 크기의 부분집합이 아닌 소규모 조합 포함
         n_groups = len(section_groups)
-        all_valid = []  # [(idx_set, combo), ...]
+        valid_by_size = {}  # size → [(idx_set, combo), ...]
         for size in range(n_groups, 0, -1):
+            found = []
             for idx_subset in itertools.combinations(range(n_groups), size):
                 sub_groups = [section_groups[i] for i in idx_subset]
                 for c in itertools.product(*sub_groups):
                     combo = list(c)
                     if not has_overlap(combo):
-                        # 이미 찾은 더 큰 조합의 부분집합이면 스킵
-                        idx_set = set(idx_subset)
-                        if not any(idx_set <= existing_idx for existing_idx, _ in all_valid):
-                            all_valid.append((idx_set, combo))
-        all_combos = [combo for _, combo in all_valid]
+                        found.append((set(idx_subset), combo))
+            if found:
+                valid_by_size[size] = found
+
+        all_combos = []
+        if valid_by_size:
+            max_size = max(valid_by_size.keys())
+            max_idx_sets = [idx_set for idx_set, _ in valid_by_size[max_size]]
+            # 최대 크기 조합 전부 포함
+            all_combos = [combo for _, combo in valid_by_size[max_size]]
+            # 작은 크기는 최대 크기의 부분집합이 아닌 경우만 포함
+            for size in range(max_size - 1, 0, -1):
+                for idx_set, combo in valid_by_size.get(size, []):
+                    if not any(idx_set <= ms for ms in max_idx_sets):
+                        all_combos.append(combo)
 
         self._combos = all_combos
         self._filtered_combos = all_combos
