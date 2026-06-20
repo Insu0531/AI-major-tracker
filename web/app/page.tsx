@@ -101,6 +101,10 @@ export default function Home() {
           } else if (json.type === "done") {
             setRows(json.data ?? []);
             setStatusText(`총 ${(json.data ?? []).length}개 분반 개설됨 (${sem})`);
+            // 새 조회 시 wizard 초기화
+            setCheckMap(new Map());
+            setCombos([]);
+            setFilteredCombos([]);
           }
         }
       }
