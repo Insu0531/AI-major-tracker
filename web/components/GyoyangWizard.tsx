@@ -18,6 +18,49 @@ function slotsOverlap(a: TimeSlot[], b: TimeSlot[]): boolean {
   return false;
 }
 
+// 교수 선택 팝업 — 단일 과목에 대해 교수 목록 보여주고 선택받기
+function ProfPickerModal({
+  courseName,
+  profs,
+  stepIdx,
+  totalSteps,
+  onSelect,
+  onSkip,
+}: {
+  courseName: string;
+  profs: string[];
+  stepIdx: number;
+  totalSteps: number;
+  onSelect: (prof: string) => void;
+  onSkip: () => void;
+}) {
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+      <div className="bg-white dark:bg-[#262626] rounded-xl shadow-2xl p-6 w-80 max-w-[90vw] flex flex-col gap-4">
+        <div className="flex items-center justify-between">
+          <span className="text-xs text-gray-400">{stepIdx + 1} / {totalSteps}</span>
+          <button onClick={onSkip} className="text-xs text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">건너뛰기</button>
+        </div>
+        <div>
+          <p className="text-xs text-gray-400 mb-0.5">교수 선택</p>
+          <p className="text-sm font-semibold text-gray-800 dark:text-gray-100 leading-tight">{courseName}</p>
+        </div>
+        <div className="flex flex-col gap-2">
+          {profs.map((prof) => (
+            <button
+              key={prof}
+              onClick={() => onSelect(prof)}
+              className="w-full py-2.5 rounded-lg border border-gray-200 dark:border-gray-600 text-sm text-gray-700 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-[#1e3a5f] hover:border-blue-400 transition-colors text-left px-4"
+            >
+              {prof}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo: Section[] | null; initialSem?: string }) {
   const [semYear, setSemYear] = useState(() => initialSem?.split("-")[0] ?? "2026");
   const [semTerm, setSemTerm] = useState(() => initialSem?.split("-")[1] ?? "1");
@@ -35,7 +78,7 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
   // 전체 조회 결과 (학기 전체 교양)
   const [allRows, setAllRows] = useState<Row[]>([]);
   const [loading, setLoading] = useState(false);
-  const [fetched, setFetched] = useState(false); // 이 학기 조회 완료 여부
+  const [fetched, setFetched] = useState(false);
 
   // 조합
   const [combos, setCombos] = useState<Section[][]>([]);
@@ -46,9 +89,17 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
   const [saving, setSaving] = useState(false);
   const timetableRef = useRef<HTMLDivElement | null>(null);
 
+  // 교수 선택 팝업 상태
+  type ProfStep = { name: string; profs: string[] };
+  const [profSteps, setProfSteps] = useState<ProfStep[]>([]);
+  const [profStepIdx, setProfStepIdx] = useState(0);
+  // 선택된 교수 map: courseName → prof (undefined = 선택 안 함/건너뜀)
+  const profPickResults = useRef<Map<string, string>>(new Map());
+  // 팝업 완료 후 실행할 콜백
+  const afterPickRef = useRef<((picks: Map<string, string>) => void) | null>(null);
+
   const abortRef = useRef<AbortController | null>(null);
 
-  // 학기 전체 교양 조회
   const doFetch = useCallback(async () => {
     abortRef.current?.abort();
     abortRef.current = new AbortController();
@@ -89,7 +140,6 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
     }
   }, [sem]);
 
-  // 학기 변경(또는 최초 마운트) 시 자동 조회
   useEffect(() => {
     setAllRows([]);
     setFetched(false);
@@ -99,10 +149,8 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sem]);
 
-  // 이번 학기 개설된 과목 코드 집합
   const openCodes = new Set(allRows.map((r) => r.code));
 
-  // 전공 시간표와 겹치는 과목 코드 집합
   const pinnedSlots = pinnedCombo?.flatMap((s) => s.times) ?? [];
   const conflictCodes = new Set(
     fetched && pinnedSlots.length > 0
@@ -132,14 +180,12 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
     return sortAsc ? cmp : -cmp;
   });
 
-  // 선택 과목 변경 시 조합 생성
   useEffect(() => {
     if (allRows.length === 0 || selected.size === 0) { setCombos([]); return; }
 
     const selectedRows = allRows.filter((r) => selected.has(r.code));
     const groups: SectionGroup[] = buildSectionGroups(selectedRows);
 
-    // 피닝된 전공 시간표와 겹치는 분반 제거
     const pinnedSlots = pinnedCombo?.flatMap((s) => s.times) ?? [];
     const filteredGroups = pinnedSlots.length > 0
       ? groups.map((group) => group.filter((sec) => !slotsOverlap(sec.times, pinnedSlots))).filter((g) => g.length > 0)
@@ -156,11 +202,42 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
   const displayCombo = [...(pinnedCombo ?? []), ...currentCombo];
   const totalCredit = displayCombo.reduce((s, sec) => s + sec.credit, 0);
 
-  const saveAsImage = async () => {
+  // 교수 선택이 필요한 과목 추출 (교양 파트만, profs가 2개 이상)
+  const getMultiProfSections = (combo: Section[]): ProfStep[] => {
+    return combo
+      .filter((sec) => sec.profs.length > 1)
+      .map((sec) => ({ name: sec.name, profs: sec.profs }));
+  };
+
+  // 교수 선택 결과를 반영한 combo 생성
+  // picks: courseName → 선택한 교수 (없으면 첫 번째 교수 유지)
+  const applyProfPicks = (combo: Section[], picks: Map<string, string>): Section[] => {
+    return combo.map((sec) => {
+      const picked = picks.get(sec.name);
+      if (!picked || sec.profs.length <= 1) return sec;
+      return { ...sec, profs: [picked] };
+    });
+  };
+
+  // 현재 다크모드 여부
+  const isDark = () =>
+    typeof document !== "undefined" && document.documentElement.classList.contains("dark");
+
+  const doCapture = async (comboToCapture: Section[]) => {
     if (!timetableRef.current) return;
     setSaving(true);
     try {
       const domtoimage = (await import("dom-to-image-more")).default;
+
+      // 캡처 대상 combo를 displayCombo 형태로 만들기
+      const fullCombo = [...(pinnedCombo ?? []), ...comboToCapture];
+
+      // 임시 TimetableGrid DOM 없이 캡처하려면 ref를 직접 쓰고
+      // 현재 표시된 timetableRef를 그대로 씀 (이미 applyProfPicks 반영된 상태라면)
+      // → 여기선 간단히 현재 timetableRef DOM을 클론해 찍음
+      // (교수 선택 반영은 displayComboForCapture state를 통해 TimetableGrid에 전달)
+      void fullCombo; // fullCombo는 captureCombo state를 통해 이미 반영됨
+
       const el = timetableRef.current;
       const CAPTURE_W = 900;
       const clone = el.cloneNode(true) as HTMLElement;
@@ -171,26 +248,98 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
       clone.style.height = "auto";
       clone.style.overflow = "visible";
       document.body.appendChild(clone);
-      // 다크모드 일시 해제 — 이미지는 항상 라이트 모드로 저장
-      const wasDark = document.documentElement.classList.contains("dark");
-      if (wasDark) document.documentElement.classList.remove("dark");
+
+      const dark = isDark();
       const dataUrl = await domtoimage.toPng(clone, {
-        bgcolor: "#ffffff",
+        bgcolor: dark ? "#171717" : "#ffffff",
         scale: 3,
         width: CAPTURE_W,
         height: clone.scrollHeight,
       });
-      if (wasDark) document.documentElement.classList.add("dark");
       document.body.removeChild(clone);
+
       const link = document.createElement("a");
       link.href = dataUrl;
       link.download = `교양시간표_${comboIdx + 1}.png`;
       document.body.appendChild(link); link.click(); document.body.removeChild(link);
-    } finally { setSaving(false); }
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  // 교수가 선택된 시간표를 캡처용으로 잠깐 보여주기 위한 state
+  // null이면 displayCombo 그대로 사용
+  const [captureCombo, setCaptureCombo] = useState<Section[] | null>(null);
+
+  // 실제로 시간표에 표시되는 combo
+  const visibleCombo = captureCombo
+    ? [...(pinnedCombo ?? []), ...captureCombo]
+    : displayCombo;
+
+  // 팝업에서 교수 선택 완료 → 다음 스텝 or 완료
+  const handleProfSelect = (prof: string) => {
+    const step = profSteps[profStepIdx];
+    profPickResults.current.set(step.name, prof);
+    advanceProfStep();
+  };
+
+  const handleProfSkip = () => {
+    advanceProfStep();
+  };
+
+  const advanceProfStep = () => {
+    const nextIdx = profStepIdx + 1;
+    if (nextIdx < profSteps.length) {
+      setProfStepIdx(nextIdx);
+    } else {
+      // 모든 스텝 완료
+      const picks = new Map(profPickResults.current);
+      setProfSteps([]);
+      setProfStepIdx(0);
+      afterPickRef.current?.(picks);
+      afterPickRef.current = null;
+    }
+  };
+
+  const saveAsImage = async () => {
+    const steps = getMultiProfSections(currentCombo);
+
+    if (steps.length === 0) {
+      // 선택할 교수 없음 → 바로 캡처
+      await doCapture(currentCombo);
+      return;
+    }
+
+    // 팝업 시작
+    profPickResults.current = new Map();
+    setProfSteps(steps);
+    setProfStepIdx(0);
+
+    afterPickRef.current = async (picks) => {
+      const resolved = applyProfPicks(currentCombo, picks);
+      // 선택 반영된 combo를 잠깐 표시 후 캡처
+      setCaptureCombo(resolved);
+      // 한 프레임 뒤에 캡처 (DOM 업데이트 대기)
+      await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+      await doCapture(resolved);
+      setCaptureCombo(null);
+    };
   };
 
   return (
     <div className="flex flex-1 overflow-hidden relative">
+      {/* 교수 선택 팝업 */}
+      {profSteps.length > 0 && profStepIdx < profSteps.length && (
+        <ProfPickerModal
+          courseName={profSteps[profStepIdx].name}
+          profs={profSteps[profStepIdx].profs}
+          stepIdx={profStepIdx}
+          totalSteps={profSteps.length}
+          onSelect={handleProfSelect}
+          onSkip={handleProfSkip}
+        />
+      )}
+
       {/* Left panel */}
       <div className={`${panelOpen ? "w-80" : "w-0"} shrink-0 border-r border-gray-200 bg-white flex flex-col overflow-hidden transition-all duration-200 h-full`}>
         {/* 학기 표시 + 로딩 */}
@@ -248,17 +397,14 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
             filteredList.map((c) => {
               const isSelected = selected.has(c.code);
               const disabled = !isSelected && selected.size >= MAX_SELECT;
-              // 체크된 경우 교수별 가능/불가 계산
-              const profRows = isSelected
-                ? allRows.filter((r) => r.code === c.code)
-                : [];
-              const profMap = new Map<string, boolean>(); // prof → 가능 여부
+              const profRows = isSelected ? allRows.filter((r) => r.code === c.code) : [];
+              const profMap = new Map<string, boolean>();
               for (const r of profRows) {
                 const sec = buildSectionGroups([r]).flat()[0];
                 const conflict = sec ? slotsOverlap(sec.times, pinnedSlots) : false;
                 for (const prof of (r.prof || "미정").split(",").map((p) => p.trim())) {
                   if (!profMap.has(prof)) profMap.set(prof, !conflict);
-                  else if (!conflict) profMap.set(prof, true); // 가능한 분반이 하나라도 있으면 가능
+                  else if (!conflict) profMap.set(prof, true);
                 }
               }
               return (
@@ -320,7 +466,7 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
               <span className="text-sm font-semibold text-blue-600">총 {totalCredit}학점</span>
             </div>
             <div key={`${comboIdx}-${slideDir}`} className={`flex-1 overflow-auto min-h-0 ${slideDir === "left" ? "slide-left" : "slide-right"}`}>
-              <TimetableGrid ref={timetableRef} combo={displayCombo} />
+              <TimetableGrid ref={timetableRef} combo={visibleCombo} />
             </div>
             <div className="shrink-0 pt-1">
               <button onClick={saveAsImage} disabled={saving} className="w-full py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors">

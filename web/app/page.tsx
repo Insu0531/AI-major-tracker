@@ -106,16 +106,13 @@ export default function Home() {
       clone.style.height = "auto";
       clone.style.overflow = "visible";
       document.body.appendChild(clone);
-      // 다크모드 일시 해제 — 이미지는 항상 라이트 모드로 저장
-      const wasDark = document.documentElement.classList.contains("dark");
-      if (wasDark) document.documentElement.classList.remove("dark");
+      const dark = document.documentElement.classList.contains("dark");
       const dataUrl = await domtoimage.toPng(clone, {
-        bgcolor: "#ffffff",
+        bgcolor: dark ? "#171717" : "#ffffff",
         scale: 3,
         width: CAPTURE_W,
         height: clone.scrollHeight,
       });
-      if (wasDark) document.documentElement.classList.add("dark");
       document.body.removeChild(clone);
       const link = document.createElement("a");
       link.href = dataUrl;
@@ -903,12 +900,12 @@ export default function Home() {
           </div>
         )}
 
-        {/* ── 교양 마법사 탭 ── */}
-        {tab === "gyoyang" && (
-          <div className="flex flex-1 overflow-hidden">
+        {/* ── 교양 마법사 탭 ── 항상 마운트, 탭 전환 시 숨기기만 해서 상태 유지 */}
+        <div className={`flex flex-1 overflow-hidden ${tab === "gyoyang" ? "" : "hidden"}`}>
+          {pinnedCombo !== null && (
             <GyoyangWizard pinnedCombo={pinnedCombo} initialSem={sem} />
-          </div>
-        )}
+          )}
+        </div>
 
         {/* ── 설정 탭 ── */}
         {tab === "settings" && (
