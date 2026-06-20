@@ -46,6 +46,7 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
   const [listSearch, setListSearch] = useState("");
   const [listSortState, setListSortState] = useState<{ col: keyof Row; dir: "asc" | "desc" } | null>(null);
   const [maxCredit, setMaxCredit] = useState(0); // 0 = 제한 없음
+  const [minGyoyangCredit, setMinGyoyangCredit] = useState(0); // 0 = 제한 없음
   const [flashKey, setFlashKey] = useState(0);
   const [slideDir, setSlideDir] = useState<"left" | "right">("left");
   const [saving, setSaving] = useState(false);
@@ -192,9 +193,20 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
     if (typeof window !== "undefined" && window.innerWidth < 768) setPanelOpen(false);
   }, [allRows, selected, pinnedCombo, maxCredit]);
 
-  const currentCombo = combos[comboIdx] ?? [];
+  useEffect(() => { setComboIdx(0); }, [minGyoyangCredit]);
+
+  const pinnedCredit = (pinnedCombo ?? []).reduce((s, sec) => s + sec.credit, 0);
+  // 전체 학점(전공+교양) 기준 필터
+  const visibleCombos = minGyoyangCredit > 0
+    ? combos.filter((c) => {
+        const gyoyang = c.reduce((s, sec) => s + sec.credit, 0);
+        return pinnedCredit + gyoyang >= minGyoyangCredit;
+      })
+    : combos;
+  const currentCombo = visibleCombos[comboIdx] ?? [];
   const displayCombo = [...(pinnedCombo ?? []), ...currentCombo];
   const totalCredit = displayCombo.reduce((s, sec) => s + sec.credit, 0);
+  const gyoyangCredit = currentCombo.reduce((s, sec) => s + sec.credit, 0);
 
   // 현재 다크모드 여부
   const isDark = () =>
@@ -434,7 +446,9 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
             )}
           </div>
           {fetched && selected.size > 0 && combos.length > 0 && (
-            <p className="text-xs text-gray-500 text-center pb-2">조합 {combos.length}개</p>
+            <p className="text-xs text-gray-500 text-center pb-2">
+              조합 {visibleCombos.length}개{minGyoyangCredit > 0 && combos.length !== visibleCombos.length ? ` / 전체 ${combos.length}개` : ""}
+            </p>
           )}
         </>)}
       </div>
@@ -458,13 +472,33 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
         {/* 시간표 뷰 */}
         {leftTab === "timetable" && (
           <div key={flashKey} className="flex-1 flex flex-col overflow-hidden p-4 gap-2 animate-[fadeIn_0.4s_ease] min-h-0">
-            {combos.length > 0 ? (
+            {/* 필터 바: 조합이 있을 때 항상 표시 */}
+            {combos.length > 0 && (
+              <div className="flex items-center gap-2 shrink-0">
+                <div className="ml-auto flex items-center gap-1.5">
+                  <label className="text-xs text-gray-500 shrink-0">전체 최소</label>
+                  <select
+                    value={minGyoyangCredit}
+                    onChange={(e) => setMinGyoyangCredit(Number(e.target.value))}
+                    className="border border-gray-300 rounded px-1.5 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-blue-400"
+                  >
+                    <option value={0}>제한 없음</option>
+                    {Array.from({ length: 17 }, (_, i) => i + 9).map((v) => (
+                      <option key={v} value={v}>{v}학점 이상</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            )}
+            {visibleCombos.length > 0 ? (
               <>
                 <div className="flex items-center gap-3 flex-wrap shrink-0">
-                  <button onClick={() => { setSlideDir("right"); setComboIdx((i) => (i - 1 + combos.length) % combos.length); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm">◀</button>
-                  <span className="text-sm text-gray-600 w-20 text-center">{comboIdx + 1} / {combos.length}</span>
-                  <button onClick={() => { setSlideDir("left"); setComboIdx((i) => (i + 1) % combos.length); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm">▶</button>
-                  <span className="text-sm font-semibold text-blue-600">총 {totalCredit}학점</span>
+                  <button onClick={() => { setSlideDir("right"); setComboIdx((i) => (i - 1 + visibleCombos.length) % visibleCombos.length); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm">◀</button>
+                  <span className="text-sm text-gray-600 w-24 text-center">{comboIdx + 1} / {visibleCombos.length}</span>
+                  <button onClick={() => { setSlideDir("left"); setComboIdx((i) => (i + 1) % visibleCombos.length); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm">▶</button>
+                  <span className="text-sm font-semibold text-blue-600">
+                    총 {totalCredit}학점 <span className="text-gray-400 font-normal text-xs">(전공 {pinnedCredit} + 교양 {gyoyangCredit})</span>
+                  </span>
                 </div>
                 <div key={`${comboIdx}-${slideDir}`} className={`flex-1 overflow-auto min-h-0 ${slideDir === "left" ? "slide-left" : "slide-right"}`}>
                   <TimetableGrid ref={timetableRef} combo={visibleCombo} />
@@ -477,7 +511,9 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
               </>
             ) : (
               <div className="flex-1 flex flex-col items-center justify-center text-gray-400 text-sm gap-2">
-                {!fetched ? (
+                {combos.length > 0 ? (
+                  <p>최소 학점 조건을 만족하는 조합이 없습니다</p>
+                ) : !fetched ? (
                   <p>왼쪽에서 조회 후 과목을 선택하면 조합이 자동 생성됩니다</p>
                 ) : selected.size === 0 ? (
                   <p>과목을 선택하면 조합이 자동 생성됩니다</p>
