@@ -60,6 +60,8 @@ export default function Home() {
   const [leftTab, setLeftTab] = useState<"select" | "filter">("select");
   const [panelOpen, setPanelOpen] = useState(() => typeof window !== "undefined" && window.innerWidth >= 768);
   const [flashKey, setFlashKey] = useState(0);
+  // 고정 분반: crseNo(분반코드) → Row (과목 조회에서 "마법사에 추가"한 특정 분반)
+  const [pinnedRows, setPinnedRows] = useState<Map<string, Row>>(new Map());
 
   const abortRef = useRef<AbortController | null>(null);
 
@@ -106,6 +108,7 @@ export default function Home() {
             setCheckMap(new Map());
             setCombos([]);
             setFilteredCombos([]);
+            setPinnedRows(new Map());
           }
         }
       }
@@ -152,11 +155,25 @@ export default function Home() {
     const selected = [...courseGroups.entries()]
       .filter(([base]) => checkMap.get(base))
       .map(([base]) => base);
+    // 고정 분반의 과목도 자동 포함
+    for (const row of pinnedRows.values()) {
+      const base = row.crseNo.replace(/-\d+$/, "");
+      if (!selected.includes(base)) selected.push(base);
+    }
     if (!selected.length) {
       alert("과목을 하나 이상 선택해주세요.");
       return;
     }
-    const selectedRows = rows.filter((r) => selected.includes(r.crseNo.replace(/-\d+$/, "")));
+    // 고정 분반이 있는 과목은 해당 분반만, 없는 과목은 전체 분반 사용
+    const pinnedCrseNos = new Set(pinnedRows.keys());
+    const selectedRows = rows.filter((r) => {
+      const base = r.crseNo.replace(/-\d+$/, "");
+      if (!selected.includes(base)) return false;
+      // 이 과목에 고정된 분반이 하나라도 있으면 고정된 것만 통과
+      const hasPinned = [...pinnedRows.values()].some((p) => p.crseNo.replace(/-\d+$/, "") === base);
+      if (hasPinned) return pinnedCrseNos.has(r.crseNo);
+      return true;
+    });
     const groups: SectionGroup[] = buildSectionGroups(selectedRows);
     const all = generateCombos(groups);
     setCombos(all);
@@ -341,11 +358,11 @@ export default function Home() {
               </div>
             )}
 
-            {/* 마법사 선택 컬럼 제거 */}
             <div className="flex-1 overflow-auto border border-gray-200 rounded bg-white">
               <table className="text-sm w-full border-collapse min-w-max">
                 <thead className="sticky top-0 bg-gray-50 z-10">
                   <tr>
+                    <th className="px-2 py-2 border-b border-gray-200 text-gray-400 font-medium whitespace-nowrap">고정</th>
                     {COLS.map((c) => (
                       <th
                         key={c.key}
@@ -359,23 +376,44 @@ export default function Home() {
                   </tr>
                 </thead>
                 <tbody>
-                  {sortedRows.map((row, i) => (
-                    <tr
-                      key={i}
-                      className={`border-b border-gray-100 hover:bg-blue-50 transition-colors ${
-                        i % 2 === 0 ? "bg-white" : "bg-gray-50/60"
-                      }`}
-                    >
-                      {COLS.map((c) => (
-                        <td key={c.key} className="px-3 py-1.5 text-gray-700 whitespace-nowrap">
-                          {row[c.key]}
+                  {sortedRows.map((row, i) => {
+                    const isPinned = pinnedRows.has(row.crseNo);
+                    return (
+                      <tr
+                        key={i}
+                        className={`border-b border-gray-100 hover:bg-blue-50 transition-colors ${
+                          isPinned ? "bg-amber-50" : i % 2 === 0 ? "bg-white" : "bg-gray-50/60"
+                        }`}
+                      >
+                        <td className="px-2 py-1.5 text-center whitespace-nowrap">
+                          <button
+                            onClick={() => {
+                              const next = new Map(pinnedRows);
+                              if (isPinned) next.delete(row.crseNo);
+                              else next.set(row.crseNo, row);
+                              setPinnedRows(next);
+                            }}
+                            title={isPinned ? "고정 해제" : "이 분반을 마법사에 고정"}
+                            className={`text-xs px-1.5 py-0.5 rounded border transition-colors ${
+                              isPinned
+                                ? "bg-amber-400 text-white border-amber-400 hover:bg-amber-500"
+                                : "border-gray-300 text-gray-400 hover:bg-gray-100 hover:text-gray-600"
+                            }`}
+                          >
+                            {isPinned ? "★" : "☆"}
+                          </button>
                         </td>
-                      ))}
-                    </tr>
-                  ))}
+                        {COLS.map((c) => (
+                          <td key={c.key} className="px-3 py-1.5 text-gray-700 whitespace-nowrap">
+                            {row[c.key]}
+                          </td>
+                        ))}
+                      </tr>
+                    );
+                  })}
                   {!loading && rows.length === 0 && (
                     <tr>
-                      <td colSpan={6} className="text-center text-gray-400 py-12 text-sm">
+                      <td colSpan={7} className="text-center text-gray-400 py-12 text-sm">
                         학기를 입력하고 조회하세요
                       </td>
                     </tr>
@@ -439,31 +477,55 @@ export default function Home() {
                         {[...courseGroups.entries()]
                           .filter(([, v]) => v.grade === grade)
                           .map(([base, v]) => {
-                            const checked = checkMap.get(base) ?? false;
+                            const pinnedForBase = [...pinnedRows.values()].filter((p) => p.crseNo.replace(/-\d+$/, "") === base);
+                            const isPinnedCourse = pinnedForBase.length > 0;
+                            const checked = isPinnedCourse || (checkMap.get(base) ?? false);
                             const disabled = !checked && checkedCount >= MAX_SELECT;
                             return (
-                              <label
-                                key={base}
-                                className={`flex items-center gap-2 px-1 py-1 rounded ${
-                                  disabled ? "opacity-40 cursor-not-allowed" : "hover:bg-gray-50 cursor-pointer"
-                                }`}
-                              >
-                                <input
-                                  type="checkbox"
-                                  checked={checked}
-                                  disabled={disabled}
-                                  onChange={(e) => {
-                                    if (e.target.checked && checkedCount >= MAX_SELECT) return;
-                                    const next = new Map(checkMap);
-                                    next.set(base, e.target.checked);
-                                    setCheckMap(next);
-                                  }}
-                                />
-                                <span className="text-sm text-gray-700 leading-tight">
-                                  {v.name.replace(/\s*\(.*?\)\s*$/, "")}
-                                  <span className="text-gray-400 text-xs ml-1">({v.count}분반)</span>
-                                </span>
-                              </label>
+                              <div key={base}>
+                                <label
+                                  className={`flex items-center gap-2 px-1 py-1 rounded ${
+                                    isPinnedCourse ? "cursor-default" : disabled ? "opacity-40 cursor-not-allowed" : "hover:bg-gray-50 cursor-pointer"
+                                  }`}
+                                >
+                                  <input
+                                    type="checkbox"
+                                    checked={checked}
+                                    disabled={isPinnedCourse || disabled}
+                                    onChange={(e) => {
+                                      if (isPinnedCourse) return;
+                                      if (e.target.checked && checkedCount >= MAX_SELECT) return;
+                                      const next = new Map(checkMap);
+                                      next.set(base, e.target.checked);
+                                      setCheckMap(next);
+                                    }}
+                                  />
+                                  <span className="text-sm text-gray-700 leading-tight">
+                                    {v.name.replace(/\s*\(.*?\)\s*$/, "")}
+                                    {isPinnedCourse
+                                      ? <span className="text-amber-500 text-xs ml-1">★ 고정</span>
+                                      : <span className="text-gray-400 text-xs ml-1">({v.count}분반)</span>
+                                    }
+                                  </span>
+                                </label>
+                                {isPinnedCourse && (
+                                  <div className="ml-6 flex flex-col gap-0.5 mb-0.5">
+                                    {pinnedForBase.map((p) => (
+                                      <div key={p.crseNo} className="flex items-center justify-between text-xs text-amber-700 bg-amber-50 rounded px-1.5 py-0.5">
+                                        <span>{p.prof} · {p.timeStr}</span>
+                                        <button
+                                          onClick={() => {
+                                            const next = new Map(pinnedRows);
+                                            next.delete(p.crseNo);
+                                            setPinnedRows(next);
+                                          }}
+                                          className="ml-1 text-amber-400 hover:text-red-500"
+                                        >✕</button>
+                                      </div>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
                             );
                           })}
                       </div>
@@ -472,7 +534,7 @@ export default function Home() {
                   <div className="p-2 border-t border-gray-100 shrink-0">
                     <button
                       onClick={generateWizard}
-                      disabled={checkedCount === 0}
+                      disabled={checkedCount === 0 && pinnedRows.size === 0}
                       className="w-full bg-blue-600 text-white text-sm py-2 rounded hover:bg-blue-700 disabled:opacity-40 transition-colors"
                     >
                       조합 생성
