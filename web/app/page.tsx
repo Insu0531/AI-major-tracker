@@ -50,6 +50,7 @@ export default function Home() {
   const [filterMap, setFilterMap] = useState<Map<string, boolean>>(new Map());
   const [minCredit, setMinCredit] = useState<string>("");
   const [leftTab, setLeftTab] = useState<"select" | "filter">("select");
+  const [panelOpen, setPanelOpen] = useState(() => typeof window !== "undefined" && window.innerWidth >= 768);
   const [flashKey, setFlashKey] = useState(0);
 
   const abortRef = useRef<AbortController | null>(null);
@@ -154,6 +155,8 @@ export default function Home() {
     setFlashKey((k) => k + 1);
     setTab("wizard");
     setLeftTab("filter");
+    // 모바일에서는 조합 생성 후 패널 닫기
+    if (typeof window !== "undefined" && window.innerWidth < 768) setPanelOpen(false);
   };
 
   const applyFilter = () => {
@@ -329,9 +332,9 @@ export default function Home() {
 
         {/* ── 시간표 마법사 탭 ── */}
         {tab === "wizard" && (
-          <div className="flex flex-1 overflow-hidden">
+          <div className="flex flex-1 overflow-hidden relative">
             {/* Left panel */}
-            <div className="w-72 shrink-0 border-r border-gray-200 bg-white flex flex-col overflow-hidden">
+            <div className={`${panelOpen ? "w-72" : "w-0"} shrink-0 border-r border-gray-200 bg-white flex flex-col overflow-hidden transition-all duration-200`}>
 
               {/* 내부 탭 */}
               <div className="flex border-b border-gray-200 shrink-0">
@@ -487,7 +490,14 @@ export default function Home() {
             </div>
 
             {/* Right: timetable */}
-            <div key={flashKey} className="flex-1 flex flex-col overflow-hidden p-4 gap-2 animate-[fadeIn_0.4s_ease]">
+            <div key={flashKey} className="flex-1 flex flex-col overflow-hidden p-4 gap-2 animate-[fadeIn_0.4s_ease] min-w-0">
+              {/* 패널 토글 버튼 */}
+              <button
+                onClick={() => setPanelOpen((v) => !v)}
+                className="self-start flex items-center gap-1 text-xs text-gray-500 border border-gray-300 rounded px-2 py-1 hover:bg-gray-50 shrink-0"
+              >
+                {panelOpen ? "◀ 패널 닫기" : "▶ 패널 열기"}
+              </button>
               {filteredCombos.length > 0 ? (
                 <>
                   <div className="flex items-center gap-3 flex-wrap shrink-0">
