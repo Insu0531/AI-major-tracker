@@ -106,12 +106,16 @@ export default function Home() {
       clone.style.height = "auto";
       clone.style.overflow = "visible";
       document.body.appendChild(clone);
+      // 다크모드 일시 해제 — 이미지는 항상 라이트 모드로 저장
+      const wasDark = document.documentElement.classList.contains("dark");
+      if (wasDark) document.documentElement.classList.remove("dark");
       const dataUrl = await domtoimage.toPng(clone, {
         bgcolor: "#ffffff",
         scale: 3,
         width: CAPTURE_W,
         height: clone.scrollHeight,
       });
+      if (wasDark) document.documentElement.classList.add("dark");
       document.body.removeChild(clone);
       const link = document.createElement("a");
       link.href = dataUrl;

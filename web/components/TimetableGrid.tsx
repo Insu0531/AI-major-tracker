@@ -105,7 +105,7 @@ const TimetableGrid = forwardRef<HTMLDivElement, { combo: Section[] }>(function 
                 <div key={i} className="absolute w-full border-t border-gray-100" style={{ top: i * rowH }} />
               ))}
               {Array.from({ length: totalHours }, (_, i) => (
-                <div key={`h${i}`} className="absolute w-full border-t border-gray-50" style={{ top: i * rowH + rowH / 2 }} />
+                <div key={`h${i}`} className="absolute w-full border-t border-gray-100 opacity-50" style={{ top: i * rowH + rowH / 2 }} />
               ))}
             </div>
           ))}
