@@ -189,7 +189,11 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
         <div className="px-3 pt-3 pb-2 shrink-0 flex items-center justify-between border-b border-gray-100">
           <span className="text-sm font-medium text-gray-700">{semYear}년 {semTerm === "s" ? "여름" : semTerm === "w" ? "겨울" : `${semTerm}학기`}</span>
           {loading && <span className="text-gray-400 text-xs animate-pulse">불러오는 중...</span>}
-          {fetched && !loading && <span className="text-xs text-gray-400">{filteredList.length}개 선택 가능</span>}
+          {fetched && !loading && (
+            <span className="text-xs text-gray-400">
+              {filteredList.length}/{[...openCodes].filter((c) => !conflictCodes.has(c)).length}개 선택 가능
+            </span>
+          )}
         </div>
 
         {/* 검색 + 필터 */}
@@ -227,26 +231,50 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
             filteredList.map((c) => {
               const isSelected = selected.has(c.code);
               const disabled = !isSelected && selected.size >= MAX_SELECT;
+              // 체크된 경우 교수별 가능/불가 계산
+              const profRows = isSelected
+                ? allRows.filter((r) => r.code === c.code)
+                : [];
+              const profMap = new Map<string, boolean>(); // prof → 가능 여부
+              for (const r of profRows) {
+                const sec = buildSectionGroups([r]).flat()[0];
+                const conflict = sec ? slotsOverlap(sec.times, pinnedSlots) : false;
+                for (const prof of (r.prof || "미정").split(",").map((p) => p.trim())) {
+                  if (!profMap.has(prof)) profMap.set(prof, !conflict);
+                  else if (!conflict) profMap.set(prof, true); // 가능한 분반이 하나라도 있으면 가능
+                }
+              }
               return (
-                <label key={c.code} className={`flex items-start gap-2 px-1 py-1 rounded ${disabled ? "opacity-40 cursor-not-allowed" : "cursor-pointer hover:bg-gray-50"} ${isSelected ? "bg-blue-50" : ""}`}>
-                  <input
-                    type="checkbox" checked={isSelected} disabled={disabled}
-                    onChange={(e) => {
-                      if (e.target.checked && selected.size >= MAX_SELECT) return;
-                      const next = new Set(selected);
-                      e.target.checked ? next.add(c.code) : next.delete(c.code);
-                      setSelected(next);
-                    }}
-                    className="mt-0.5 shrink-0"
-                  />
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm text-gray-700 leading-tight truncate">{c.name}</p>
-                    <p className="text-xs text-gray-400">{c.code} · {c.credit}학점
-                      {c.sdg && <span className="ml-1 text-green-600">SDG</span>}
-                      {c.hmnts && <span className="ml-1 text-purple-600">인문</span>}
-                    </p>
-                  </div>
-                </label>
+                <div key={c.code}>
+                  <label className={`flex items-start gap-2 px-1 py-1 rounded ${disabled ? "opacity-40 cursor-not-allowed" : "cursor-pointer hover:bg-gray-50"} ${isSelected ? "bg-blue-50" : ""}`}>
+                    <input
+                      type="checkbox" checked={isSelected} disabled={disabled}
+                      onChange={(e) => {
+                        if (e.target.checked && selected.size >= MAX_SELECT) return;
+                        const next = new Set(selected);
+                        e.target.checked ? next.add(c.code) : next.delete(c.code);
+                        setSelected(next);
+                      }}
+                      className="mt-0.5 shrink-0"
+                    />
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm text-gray-700 leading-tight truncate">{c.name}</p>
+                      <p className="text-xs text-gray-400">{c.code} · {c.credit}학점
+                        {c.sdg && <span className="ml-1 text-green-600">SDG</span>}
+                        {c.hmnts && <span className="ml-1 text-purple-600">인문</span>}
+                      </p>
+                    </div>
+                  </label>
+                  {isSelected && profMap.size > 0 && (
+                    <div className="ml-6 mb-1 flex flex-col gap-0.5">
+                      {[...profMap.entries()].map(([prof, ok]) => (
+                        <span key={prof} className={`text-xs px-1.5 py-0.5 rounded ${ok ? "text-green-700 bg-green-50" : "text-red-400 bg-red-50 line-through"}`}>
+                          {ok ? "✓" : "✗"} {prof}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
               );
             })
           )}
