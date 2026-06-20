@@ -1,5 +1,13 @@
 import { NextRequest } from "next/server";
 import { Course, COURSES_BY_MAJOR, Major, parseSemester } from "@/lib/courses";
+import { Redis } from "@upstash/redis";
+
+const redis = new Redis({
+  url: process.env.KV_REST_API_URL!,
+  token: process.env.KV_REST_API_TOKEN!,
+});
+
+const CACHE_TTL = 60 * 60 * 24 * 180; // 6개월
 
 const KNU_API =
   "https://knuin.knu.ac.kr/public/web/stddm/lsspr/syllabus/lectPlnInqr/selectListLectPlnInqr";
@@ -70,6 +78,31 @@ export async function GET(req: NextRequest) {
   }
   const { year, semCode } = parsed;
 
+  const cacheKey = `sections:${majorParam}:${sem}`;
+
+  // 캐시 히트 → SSE로 즉시 전송
+  try {
+    const cached = await redis.get<object[]>(cacheKey);
+    if (cached && Array.isArray(cached)) {
+      const encoder = new TextEncoder();
+      const stream = new ReadableStream({
+        start(controller) {
+          const send = (obj: object) =>
+            controller.enqueue(encoder.encode("data: " + JSON.stringify(obj) + "\n\n"));
+          const CHUNK = 20;
+          for (let i = 0; i < cached.length; i += CHUNK) {
+            send({ type: "progress", current: Math.min(i + CHUNK, cached.length), total: cached.length, name: "", rows: cached.slice(i, i + CHUNK), cached: true });
+          }
+          send({ type: "done", totalRows: cached.length, cached: true });
+          controller.close();
+        },
+      });
+      return new Response(stream, {
+        headers: { "Content-Type": "text/event-stream", "Cache-Control": "no-cache", "Connection": "keep-alive" },
+      });
+    }
+  } catch { /* 캐시 오류 시 그냥 KNU API 호출 */ }
+
   const encoder = new TextEncoder();
   const BATCH = 5;
   const total = COURSES.length;
@@ -79,8 +112,8 @@ export async function GET(req: NextRequest) {
       const send = (obj: object) =>
         controller.enqueue(encoder.encode("data: " + JSON.stringify(obj) + "\n\n"));
 
-      const allRows: object[] = [];
       let done = 0;
+      const allRows: object[] = [];
 
       for (let i = 0; i < COURSES.length; i += BATCH) {
         const batch = COURSES.slice(i, i + BATCH);
@@ -88,20 +121,22 @@ export async function GET(req: NextRequest) {
         for (let j = 0; j < batch.length; j++) {
           done++;
           allRows.push(...results[j]);
-          send({ type: "progress", current: done, total, name: batch[j].name });
+          send({ type: "progress", current: done, total, name: batch[j].name, rows: results[j] });
         }
       }
 
-      send({ type: "done", data: allRows });
+      send({ type: "done", totalRows: allRows.length });
+
+      // 캐시 저장 (비동기, 스트림 닫은 후)
+      try {
+        await redis.set(cacheKey, allRows, { ex: CACHE_TTL });
+      } catch { /* 캐시 저장 실패 무시 */ }
+
       controller.close();
     },
   });
 
   return new Response(stream, {
-    headers: {
-      "Content-Type": "text/event-stream",
-      "Cache-Control": "no-cache",
-      "Connection": "keep-alive",
-    },
+    headers: { "Content-Type": "text/event-stream", "Cache-Control": "no-cache", "Connection": "keep-alive" },
   });
 }

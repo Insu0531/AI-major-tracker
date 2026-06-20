@@ -129,9 +129,11 @@ export default function Home() {
           const json = JSON.parse(line.slice(5).trim());
           if (json.type === "progress") {
             setProgress({ current: json.current, name: json.name });
+            if (json.rows?.length) {
+              setRows((prev) => [...prev, ...json.rows]);
+            }
           } else if (json.type === "done") {
-            setRows(json.data ?? []);
-            setStatusText(`총 ${(json.data ?? []).length}개 분반 개설됨 (${sem})`);
+            setStatusText(`총 ${json.totalRows}개 분반 개설됨 (${sem})`);
             // 새 조회 시 wizard 초기화
             setCheckMap(new Map());
             setCombos([]);
@@ -409,10 +411,11 @@ export default function Home() {
                     const isPinned = pinnedRows.has(row.crseNo);
                     return (
                       <tr
-                        key={i}
+                        key={row.crseNo + i}
                         className={`border-b border-gray-100 hover:bg-blue-50 transition-colors ${
                           isPinned ? "bg-amber-50" : i % 2 === 0 ? "bg-white" : "bg-gray-50/60"
-                        }`}
+                        } ${loading ? "row-animate" : ""}`}
+                        style={loading ? { animationDelay: `${(i % 20) * 18}ms` } : undefined}
                       >
                         <td className="px-2 py-1.5 text-center whitespace-nowrap">
                           <button

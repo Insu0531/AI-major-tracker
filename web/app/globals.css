@@ -29,3 +29,12 @@ body {
   from { opacity: 0; transform: translateY(6px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+@keyframes rowIn {
+  from { opacity: 0; transform: translateY(-4px); background-color: #eff6ff; }
+  to   { opacity: 1; transform: translateY(0);    background-color: transparent; }
+}
+
+.row-animate {
+  animation: rowIn 0.35s ease forwards;
+}
