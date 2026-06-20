@@ -54,7 +54,7 @@ export default function Home() {
     abortRef.current = new AbortController();
     setLoading(true);
     setRows([]);
-    setProgress({ current: 1, name: "서버에 요청 중..." });
+    setProgress({ current: 0, name: "서버에 요청 중..." });
     setStatusText("");
     setSortState(null);
 
@@ -67,9 +67,29 @@ export default function Home() {
         setStatusText(err.error ?? "오류가 발생했습니다.");
         return;
       }
-      const json = await res.json();
-      setRows(json.data ?? []);
-      setStatusText(`총 ${(json.data ?? []).length}개 분반 개설됨 (${sem})`);
+
+      const reader = res.body!.getReader();
+      const decoder = new TextDecoder();
+      let buf = "";
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buf += decoder.decode(value, { stream: true });
+        const parts = buf.split("\n\n");
+        buf = parts.pop() ?? "";
+        for (const part of parts) {
+          const line = part.trim();
+          if (!line.startsWith("data:")) continue;
+          const json = JSON.parse(line.slice(5).trim());
+          if (json.type === "progress") {
+            setProgress({ current: json.current, name: json.name });
+          } else if (json.type === "done") {
+            setRows(json.data ?? []);
+            setStatusText(`총 ${(json.data ?? []).length}개 분반 개설됨 (${sem})`);
+          }
+        }
+      }
     } catch (e: unknown) {
       if (e instanceof Error && e.name !== "AbortError") setStatusText("오류가 발생했습니다.");
     } finally {
@@ -145,13 +165,11 @@ export default function Home() {
   const currentCombo = filteredCombos[comboIdx] ?? [];
   const totalCredit = currentCombo.reduce((s, sec) => s + sec.credit, 0);
   const namesInCombos = [...new Set(combos.flatMap((c) => c.map((s) => s.name)))];
-  void progress; void TOTAL;
-
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       {/* Header */}
       <header className="bg-white border-b border-gray-200 px-6 py-3 flex items-center shrink-0">
-        <h1 className="text-base font-bold text-gray-800">경북대 AI전공 개설과목 조회</h1>
+        <h1 className="text-base font-bold text-gray-800">경북대 전공 개설과목 조회</h1>
       </header>
 
       {/* Tabs */}
@@ -211,12 +229,22 @@ export default function Home() {
               <span className="text-xs text-gray-500">{statusText}</span>
             </div>
 
-            {loading && (
+            {loading && progress && (
               <div className="flex flex-col gap-1">
-                <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
-                  <div className="bg-blue-500 h-2 rounded-full animate-pulse w-full" />
+                <div className="flex items-center gap-2">
+                  <div className="flex-1 bg-gray-200 rounded-full h-2 overflow-hidden">
+                    <div
+                      className="bg-blue-500 h-2 rounded-full transition-all duration-300"
+                      style={{ width: `${progress.current === 0 ? 2 : (progress.current / TOTAL) * 100}%` }}
+                    />
+                  </div>
+                  <span className="text-xs text-gray-500 shrink-0">
+                    ({progress.current}/{TOTAL})
+                  </span>
                 </div>
-                <span className="text-xs text-gray-500">과목 정보를 가져오는 중... (약 10~20초)</span>
+                <span className="text-xs text-gray-400 truncate">
+                  {progress.current === 0 ? "서버에 연결 중..." : progress.name}
+                </span>
               </div>
             )}
 

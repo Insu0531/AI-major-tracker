@@ -136,10 +136,14 @@ export default function TimetableGrid({ combo }: { combo: Section[] }) {
               onMouseEnter={(e) => {
                 const rect = containerRef.current?.getBoundingClientRect();
                 if (!rect) return;
+                const profs = b.prof.split(" / ");
+                const profLine = profs.length > 1
+                  ? profs.join(" / ") + "\n※ 교수별 분반 선택 가능"
+                  : profs[0];
                 setTooltip({
                   x: e.clientX - rect.left + 12,
                   y: e.clientY - rect.top + 8,
-                  text: `${b.name}\n${b.prof}\n${b.timeStr}`,
+                  text: `${b.name}\n${profLine}\n${b.timeStr}`,
                 });
               }}
               onMouseMove={(e) => {
@@ -154,7 +158,14 @@ export default function TimetableGrid({ combo }: { combo: Section[] }) {
               <p className="text-white text-xs font-bold leading-tight px-1 pt-0.5 truncate">
                 {shortName}
               </p>
-              <p className="text-white/80 text-[11px] px-1 truncate">{b.prof.split(" / ")[0]}</p>
+              {(() => {
+                const profs = b.prof.split(" / ");
+                return (
+                  <p className="text-white/80 text-[11px] px-1 truncate">
+                    {profs.length > 1 ? `(${profs.length}개 분반)` : profs[0]}
+                  </p>
+                );
+              })()}
             </div>
           );
         })}

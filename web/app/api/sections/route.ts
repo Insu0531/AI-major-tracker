@@ -16,35 +16,15 @@ const HEADERS = {
 function makePayload(year: string, semCode: string, code: string) {
   return {
     search: {
-      estblYear: year,
-      estblSmstrSctcd: semCode,
-      sbjetCd: code,
-      sbjetNm: "",
-      estblDprtnCd: "",
-      sbjetSctcd: "",
-      sbjetSctcd2: "",
-      sbjetRelmCd: "",
-      crgePrfssNm: "",
-      bldngCd: "",
-      bldngNm: "",
-      bldngSn: "",
-      lssnsLcttmUntcd: "",
-      rmtCrseYn: "",
-      rltmCrseYn: "",
-      flplnCrseYn: "",
-      prctsExrmnYn: "",
-      dgGbDstrcRmtCrseYn: "",
-      pstinNtnnvRmtCrseYn: "",
-      riseRmtCrseYn: "",
-      cltreHmntsCltreYn: "",
-      knuFtrDesigYn: "",
-      sdgCltreYn: "",
-      sugrdEvltnYn: "",
-      lctreLnggeSctcd: "ko",
-      rprsnLctreLnggeSctcd: "",
-      isApi: "Y",
-      gubun: "01",
-      contents: code,
+      estblYear: year, estblSmstrSctcd: semCode, sbjetCd: code,
+      sbjetNm: "", estblDprtnCd: "", sbjetSctcd: "", sbjetSctcd2: "",
+      sbjetRelmCd: "", crgePrfssNm: "", bldngCd: "", bldngNm: "",
+      bldngSn: "", lssnsLcttmUntcd: "", rmtCrseYn: "", rltmCrseYn: "",
+      flplnCrseYn: "", prctsExrmnYn: "", dgGbDstrcRmtCrseYn: "",
+      pstinNtnnvRmtCrseYn: "", riseRmtCrseYn: "", cltreHmntsCltreYn: "",
+      knuFtrDesigYn: "", sdgCltreYn: "", sugrdEvltnYn: "",
+      lctreLnggeSctcd: "ko", rprsnLctreLnggeSctcd: "",
+      isApi: "Y", gubun: "01", contents: code,
     },
   };
 }
@@ -87,17 +67,38 @@ export async function GET(req: NextRequest) {
   }
   const { year, semCode } = parsed;
 
-  // 5개씩 묶어서 병렬 호출 (KNU 서버 과부하 방지)
+  const encoder = new TextEncoder();
   const BATCH = 5;
-  const allRows: object[] = [];
+  const total = COURSES.length;
 
-  for (let i = 0; i < COURSES.length; i += BATCH) {
-    const batch = COURSES.slice(i, i + BATCH);
-    const results = await Promise.all(batch.map((c) => fetchCourse(year, semCode, c)));
-    results.forEach((rows) => allRows.push(...rows));
-  }
+  const stream = new ReadableStream({
+    async start(controller) {
+      const send = (obj: object) =>
+        controller.enqueue(encoder.encode("data: " + JSON.stringify(obj) + "\n\n"));
 
-  return new Response(JSON.stringify({ data: allRows }), {
-    headers: { "Content-Type": "application/json" },
+      const allRows: object[] = [];
+      let done = 0;
+
+      for (let i = 0; i < COURSES.length; i += BATCH) {
+        const batch = COURSES.slice(i, i + BATCH);
+        const results = await Promise.all(batch.map((c) => fetchCourse(year, semCode, c)));
+        for (let j = 0; j < batch.length; j++) {
+          done++;
+          allRows.push(...results[j]);
+          send({ type: "progress", current: done, total, name: batch[j].name });
+        }
+      }
+
+      send({ type: "done", data: allRows });
+      controller.close();
+    },
+  });
+
+  return new Response(stream, {
+    headers: {
+      "Content-Type": "text/event-stream",
+      "Cache-Control": "no-cache",
+      "Connection": "keep-alive",
+    },
   });
 }
