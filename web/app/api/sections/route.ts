@@ -51,6 +51,31 @@ function makePayload(year: string, semCode: string, code: string) {
 
 export const maxDuration = 60;
 
+async function fetchCourse(year: string, semCode: string, course: typeof COURSES[0]) {
+  try {
+    const res = await fetch(KNU_API, {
+      method: "POST",
+      headers: HEADERS,
+      body: JSON.stringify(makePayload(year, semCode, course.code)),
+      signal: AbortSignal.timeout(10000),
+    });
+    if (!res.ok) return [];
+    const json = await res.json();
+    const rows: Record<string, string>[] = Array.isArray(json) ? json : (json?.data ?? []);
+    return rows.map((row) => ({
+      grade: course.grade,
+      credit: course.credit,
+      crseNo: row.crseNo ?? course.code,
+      name: course.name,
+      dept: row.estblDprtnNm ?? "",
+      prof: row.totalPrfssNm ?? "",
+      timeStr: row.lssnsRealTimeInfo ?? "",
+    }));
+  } catch {
+    return [];
+  }
+}
+
 export async function GET(req: NextRequest) {
   const sem = req.nextUrl.searchParams.get("sem") ?? "";
   const parsed = parseSemester(sem);
@@ -62,62 +87,17 @@ export async function GET(req: NextRequest) {
   }
   const { year, semCode } = parsed;
 
-  const encoder = new TextEncoder();
-  const total = COURSES.length;
+  // 5개씩 묶어서 병렬 호출 (KNU 서버 과부하 방지)
+  const BATCH = 5;
+  const allRows: object[] = [];
 
-  const stream = new ReadableStream({
-    async start(controller) {
-      const send = (obj: object) =>
-        controller.enqueue(encoder.encode("data: " + JSON.stringify(obj) + "\n\n"));
+  for (let i = 0; i < COURSES.length; i += BATCH) {
+    const batch = COURSES.slice(i, i + BATCH);
+    const results = await Promise.all(batch.map((c) => fetchCourse(year, semCode, c)));
+    results.forEach((rows) => allRows.push(...rows));
+  }
 
-      for (let i = 0; i < COURSES.length; i++) {
-        const course = COURSES[i];
-        send({ type: "progress", current: i + 1, total, code: course.code, name: course.name });
-
-        try {
-          const res = await fetch(KNU_API, {
-            method: "POST",
-            headers: HEADERS,
-            body: JSON.stringify(makePayload(year, semCode, course.code)),
-            signal: AbortSignal.timeout(10000),
-          });
-
-          if (res.ok) {
-            const json = await res.json();
-            const rows: Record<string, string>[] = Array.isArray(json)
-              ? json
-              : (json?.data ?? []);
-
-            for (const row of rows) {
-              send({
-                type: "row",
-                data: {
-                  grade: course.grade,
-                  credit: course.credit,
-                  crseNo: row.crseNo ?? course.code,
-                  name: course.name,
-                  dept: row.estblDprtnNm ?? "",
-                  prof: row.totalPrfssNm ?? "",
-                  timeStr: row.lssnsRealTimeInfo ?? "",
-                },
-              });
-            }
-          }
-        } catch {
-          // 개별 과목 실패 무시
-        }
-      }
-
-      send({ type: "done", total });
-      controller.close();
-    },
-  });
-
-  return new Response(stream, {
-    headers: {
-      "Content-Type": "text/event-stream",
-      "Cache-Control": "no-cache",
-      "Connection": "keep-alive",
-    },
+  return new Response(JSON.stringify({ data: allRows }), {
+    headers: { "Content-Type": "application/json" },
   });
 }

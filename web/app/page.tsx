@@ -52,7 +52,7 @@ export default function Home() {
     abortRef.current = new AbortController();
     setLoading(true);
     setRows([]);
-    setProgress({ current: 0, name: "" });
+    setProgress({ current: 1, name: "서버에 요청 중..." });
     setStatusText("");
     setSortState(null);
 
@@ -67,30 +67,9 @@ export default function Home() {
         return;
       }
 
-      const reader = res.body!.getReader();
-      const decoder = new TextDecoder();
-      const collected: Row[] = [];
-      let buf = "";
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        buf += decoder.decode(value, { stream: true });
-        const lines = buf.split("\n\n");
-        buf = lines.pop() ?? "";
-        for (const line of lines) {
-          if (!line.startsWith("data: ")) continue;
-          const msg = JSON.parse(line.slice(6));
-          if (msg.type === "progress") {
-            setProgress({ current: msg.current, name: msg.name });
-          } else if (msg.type === "row") {
-            collected.push(msg.data);
-            setRows([...collected]);
-          } else if (msg.type === "done") {
-            setStatusText(`총 ${collected.length}개 분반 개설됨 (${sem})`);
-          }
-        }
-      }
+      const json = await res.json();
+      setRows(json.data ?? []);
+      setStatusText(`총 ${(json.data ?? []).length}개 분반 개설됨 (${sem})`);
     } catch (e: unknown) {
       if (e instanceof Error && e.name !== "AbortError") setStatusText("오류가 발생했습니다.");
     } finally {
@@ -229,17 +208,12 @@ export default function Home() {
             </div>
 
             {/* Progress bar */}
-            {loading && progress && (
+            {loading && (
               <div className="flex flex-col gap-1">
                 <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
-                  <div
-                    className="bg-blue-500 h-2 rounded-full transition-all duration-300"
-                    style={{ width: `${pct}%` }}
-                  />
+                  <div className="bg-blue-500 h-2 rounded-full animate-pulse w-full" />
                 </div>
-                <span className="text-xs text-gray-500">
-                  [{progress.current}/{TOTAL}] {progress.name} 조회 중...
-                </span>
+                <span className="text-xs text-gray-500">KNU 서버에서 과목 정보를 가져오는 중... (약 10~20초)</span>
               </div>
             )}
 
