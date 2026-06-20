@@ -71,17 +71,13 @@ export default function Home() {
     if (!timetableRef.current) return;
     setSaving(true);
     try {
-      const html2canvas = (await import("html2canvas")).default;
-      const canvas = await html2canvas(timetableRef.current, {
-        backgroundColor: "#ffffff",
+      const domtoimage = (await import("dom-to-image-more")).default;
+      const dataUrl = await domtoimage.toPng(timetableRef.current, {
+        bgcolor: "#ffffff",
         scale: 2,
-        useCORS: true,
-        scrollX: 0,
-        scrollY: 0,
         width: timetableRef.current.scrollWidth,
         height: timetableRef.current.scrollHeight,
       });
-      const dataUrl = canvas.toDataURL("image/png");
       const link = document.createElement("a");
       link.href = dataUrl;
       link.download = `시간표_${comboIdx + 1}.png`;
