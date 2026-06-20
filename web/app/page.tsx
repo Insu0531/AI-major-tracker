@@ -2,6 +2,7 @@
 
 import { useState, useRef, useCallback } from "react";
 import { buildSectionGroups, generateCombos, Section, SectionGroup } from "@/lib/timetable";
+import { COURSES } from "@/lib/courses";
 import TimetableGrid from "@/components/TimetableGrid";
 
 type Row = {
@@ -16,22 +17,25 @@ type Row = {
 
 type SortState = { col: keyof Row; dir: "asc" | "desc" } | null;
 
-const COLS: { key: keyof Row; label: string; w: string }[] = [
-  { key: "grade", label: "학년", w: "w-12" },
-  { key: "crseNo", label: "과목코드", w: "w-32" },
-  { key: "name", label: "교과목명", w: "w-56" },
-  { key: "dept", label: "개설학과", w: "w-44" },
-  { key: "prof", label: "교수", w: "w-28" },
-  { key: "timeStr", label: "강의시간", w: "w-64" },
+const COLS: { key: keyof Row; label: string }[] = [
+  { key: "grade", label: "학년" },
+  { key: "crseNo", label: "과목코드" },
+  { key: "name", label: "교과목명" },
+  { key: "dept", label: "개설학과" },
+  { key: "prof", label: "교수" },
+  { key: "timeStr", label: "강의시간" },
 ];
+
+const TOTAL = COURSES.length;
 
 export default function Home() {
   const [tab, setTab] = useState<"search" | "wizard">("search");
   const [sem, setSem] = useState("2026-1");
   const [rows, setRows] = useState<Row[]>([]);
   const [loading, setLoading] = useState(false);
-  const [progress, setProgress] = useState("");
+  const [progress, setProgress] = useState<{ current: number; name: string } | null>(null);
   const [sortState, setSortState] = useState<SortState>(null);
+  const [statusText, setStatusText] = useState("");
 
   // wizard
   const [checkMap, setCheckMap] = useState<Map<string, boolean>>(new Map());
@@ -39,6 +43,7 @@ export default function Home() {
   const [filteredCombos, setFilteredCombos] = useState<Section[][]>([]);
   const [comboIdx, setComboIdx] = useState(0);
   const [filterMap, setFilterMap] = useState<Map<string, boolean>>(new Map());
+
   const abortRef = useRef<AbortController | null>(null);
 
   const doFetch = useCallback(async () => {
@@ -47,23 +52,50 @@ export default function Home() {
     abortRef.current = new AbortController();
     setLoading(true);
     setRows([]);
-    setProgress("조회 중...");
+    setProgress({ current: 0, name: "" });
+    setStatusText("");
+    setSortState(null);
+
     try {
       const res = await fetch(`/api/sections?sem=${encodeURIComponent(sem)}`, {
         signal: abortRef.current.signal,
       });
+
       if (!res.ok) {
         const err = await res.json();
-        setProgress(err.error ?? "오류가 발생했습니다.");
+        setStatusText(err.error ?? "오류가 발생했습니다.");
         return;
       }
-      const json = await res.json();
-      setRows(json.data);
-      setProgress(`총 ${json.data.length}개 분반`);
+
+      const reader = res.body!.getReader();
+      const decoder = new TextDecoder();
+      const collected: Row[] = [];
+      let buf = "";
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buf += decoder.decode(value, { stream: true });
+        const lines = buf.split("\n\n");
+        buf = lines.pop() ?? "";
+        for (const line of lines) {
+          if (!line.startsWith("data: ")) continue;
+          const msg = JSON.parse(line.slice(6));
+          if (msg.type === "progress") {
+            setProgress({ current: msg.current, name: msg.name });
+          } else if (msg.type === "row") {
+            collected.push(msg.data);
+            setRows([...collected]);
+          } else if (msg.type === "done") {
+            setStatusText(`총 ${collected.length}개 분반 개설됨 (${sem})`);
+          }
+        }
+      }
     } catch (e: unknown) {
-      if (e instanceof Error && e.name !== "AbortError") setProgress("오류가 발생했습니다.");
+      if (e instanceof Error && e.name !== "AbortError") setStatusText("오류가 발생했습니다.");
     } finally {
       setLoading(false);
+      setProgress(null);
     }
   }, [sem, loading]);
 
@@ -86,7 +118,6 @@ export default function Home() {
     });
   };
 
-  // 과목 그룹핑 (체크박스용)
   const courseGroups = (() => {
     const map = new Map<string, { name: string; grade: string; count: number }>();
     for (const row of rows) {
@@ -102,11 +133,9 @@ export default function Home() {
       .filter(([base]) => checkMap.get(base))
       .map(([base]) => base);
     if (!selected.length) return;
-
     const selectedRows = rows.filter((r) => selected.includes(r.crseNo.replace(/-\d+$/, "")));
     const groups: SectionGroup[] = buildSectionGroups(selectedRows);
     const all = generateCombos(groups);
-
     setCombos(all);
     setFilteredCombos(all);
     setComboIdx(0);
@@ -131,17 +160,18 @@ export default function Home() {
   const currentCombo = filteredCombos[comboIdx] ?? [];
   const totalCredit = currentCombo.reduce((s, sec) => s + sec.credit, 0);
   const namesInCombos = [...new Set(combos.flatMap((c) => c.map((s) => s.name)))];
+  const pct = progress ? Math.round((progress.current / TOTAL) * 100) : 0;
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gray-50">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 px-6 py-3 flex items-center gap-4">
+      <header className="bg-white border-b border-gray-200 px-6 py-3 flex items-center gap-4 shrink-0">
         <h1 className="text-base font-bold text-gray-800">경북대 AI전공 개설과목 조회</h1>
         <span className="text-xs text-gray-400 ml-auto">made by insu0531 · 참고용으로만 사용하세요</span>
       </header>
 
       {/* Tabs */}
-      <div className="bg-white border-b border-gray-200 px-6 flex">
+      <div className="bg-white border-b border-gray-200 px-6 flex shrink-0">
         {(["search", "wizard"] as const).map((t) => (
           <button
             key={t}
@@ -161,6 +191,7 @@ export default function Home() {
         {/* ── 과목 조회 탭 ── */}
         {tab === "search" && (
           <div className="flex flex-col flex-1 overflow-hidden p-4 gap-3">
+            {/* Controls */}
             <div className="flex items-center gap-3 flex-wrap">
               <input
                 className="border border-gray-300 rounded px-3 py-1.5 text-sm w-32 focus:outline-none focus:ring-1 focus:ring-blue-400"
@@ -168,6 +199,7 @@ export default function Home() {
                 onChange={(e) => setSem(e.target.value)}
                 placeholder="2026-1"
                 onKeyDown={(e) => e.key === "Enter" && doFetch()}
+                disabled={loading}
               />
               <span className="text-xs text-gray-400">(2026-1 / 2026-2 / 2026-s / 2026-w)</span>
               <button
@@ -177,7 +209,15 @@ export default function Home() {
               >
                 {loading ? "조회 중..." : "조회"}
               </button>
-              {rows.length > 0 && (
+              {loading && (
+                <button
+                  onClick={() => { abortRef.current?.abort(); setLoading(false); setProgress(null); }}
+                  className="text-sm px-3 py-1.5 border border-gray-300 rounded hover:bg-gray-50 text-gray-600"
+                >
+                  취소
+                </button>
+              )}
+              {rows.length > 0 && !loading && (
                 <button
                   onClick={generateWizard}
                   className="bg-green-600 text-white text-sm px-4 py-1.5 rounded hover:bg-green-700 transition-colors"
@@ -185,24 +225,40 @@ export default function Home() {
                   시간표 마법사 →
                 </button>
               )}
-              <span className="text-xs text-gray-500 ml-2">{progress}</span>
+              <span className="text-xs text-gray-500">{statusText}</span>
             </div>
 
+            {/* Progress bar */}
+            {loading && progress && (
+              <div className="flex flex-col gap-1">
+                <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+                  <div
+                    className="bg-blue-500 h-2 rounded-full transition-all duration-300"
+                    style={{ width: `${pct}%` }}
+                  />
+                </div>
+                <span className="text-xs text-gray-500">
+                  [{progress.current}/{TOTAL}] {progress.name} 조회 중...
+                </span>
+              </div>
+            )}
+
+            {/* Table */}
             <div className="flex-1 overflow-auto border border-gray-200 rounded bg-white">
-              <table className="text-sm w-full border-collapse">
+              <table className="text-sm w-full border-collapse min-w-max">
                 <thead className="sticky top-0 bg-gray-50 z-10">
                   <tr>
                     {COLS.map((c) => (
                       <th
                         key={c.key}
                         onClick={() => toggleSort(c.key)}
-                        className={`text-left px-3 py-2 font-semibold text-gray-600 border-b border-gray-200 cursor-pointer select-none whitespace-nowrap hover:bg-gray-100 ${c.w}`}
+                        className="text-left px-3 py-2 font-semibold text-gray-600 border-b border-gray-200 cursor-pointer select-none whitespace-nowrap hover:bg-gray-100"
                       >
                         {c.label}
                         {sortState?.col === c.key ? (sortState.dir === "asc" ? " ▲" : " ▼") : ""}
                       </th>
                     ))}
-                    <th className="px-3 py-2 text-left font-semibold text-gray-600 border-b border-gray-200 text-xs whitespace-nowrap">
+                    <th className="px-3 py-2 text-left font-semibold text-gray-600 border-b border-gray-200 whitespace-nowrap text-xs">
                       마법사 선택
                     </th>
                   </tr>
@@ -219,7 +275,7 @@ export default function Home() {
                         }`}
                       >
                         {COLS.map((c) => (
-                          <td key={c.key} className="px-3 py-1.5 text-gray-700 truncate max-w-xs">
+                          <td key={c.key} className="px-3 py-1.5 text-gray-700 whitespace-nowrap">
                             {row[c.key]}
                           </td>
                         ))}
@@ -255,7 +311,8 @@ export default function Home() {
           <div className="flex flex-1 overflow-hidden">
             {/* Left panel */}
             <div className="w-64 shrink-0 border-r border-gray-200 bg-white flex flex-col overflow-hidden">
-              <div className="p-3 border-b border-gray-100">
+              {/* 과목 선택 */}
+              <div className="p-3 border-b border-gray-100 shrink-0">
                 <p className="text-xs font-bold text-gray-700 mb-1">과목 선택</p>
                 <div className="flex gap-1">
                   <button
@@ -295,7 +352,7 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="p-2 border-t border-gray-100">
+              <div className="p-2 border-t border-gray-100 shrink-0">
                 <button
                   onClick={generateWizard}
                   className="w-full bg-blue-600 text-white text-sm py-1.5 rounded hover:bg-blue-700 transition-colors"
@@ -307,9 +364,9 @@ export default function Home() {
                 )}
               </div>
 
-              {/* Filter */}
+              {/* 필터 */}
               {namesInCombos.length > 0 && (
-                <div className="border-t border-gray-200 p-2">
+                <div className="border-t border-gray-200 p-2 shrink-0">
                   <p className="text-xs font-bold text-gray-700 mb-0.5">필수 포함 필터</p>
                   <p className="text-xs text-gray-400 mb-1">체크한 과목이 모두 포함된 조합만</p>
                   <div className="overflow-y-auto max-h-32 mb-1">
@@ -347,7 +404,7 @@ export default function Home() {
             <div className="flex-1 flex flex-col overflow-hidden p-4 gap-2">
               {filteredCombos.length > 0 ? (
                 <>
-                  <div className="flex items-center gap-3 flex-wrap">
+                  <div className="flex items-center gap-3 flex-wrap shrink-0">
                     <button
                       onClick={() => setComboIdx((i) => (i - 1 + filteredCombos.length) % filteredCombos.length)}
                       className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm"
@@ -382,7 +439,7 @@ export default function Home() {
         )}
       </main>
 
-      <footer className="border-t border-gray-200 bg-white px-6 py-1.5 text-xs text-gray-400 flex gap-4">
+      <footer className="border-t border-gray-200 bg-white px-6 py-1.5 text-xs text-gray-400 flex gap-4 shrink-0">
         <span>made by insu0531</span>
         <span>· 본 서비스는 참고용으로만 사용하세요. 실제 수강신청 전 학교 포털을 반드시 확인하세요.</span>
       </footer>
