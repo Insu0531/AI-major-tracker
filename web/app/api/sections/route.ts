@@ -58,6 +58,7 @@ async function fetchCourse(year: string, semCode: string, course: Course) {
       dept: row.estblDprtnNm ?? "",
       prof: row.totalPrfssNm ?? "",
       timeStr: row.lssnsRealTimeInfo ?? "",
+      rmrk: row.rmrk ? String(row.rmrk).replace(/<[^>]*>/g, "").trim() : "",
     }));
   } catch {
     return [];
