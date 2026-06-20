@@ -70,7 +70,7 @@ const TimetableGrid = forwardRef<HTMLDivElement, { combo: Section[] }>(function 
   const blocks = comboToBlocks(combo);
 
   return (
-    <div ref={(el) => { containerRef.current = el; if (typeof ref === "function") ref(el); else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = el; }} className="relative overflow-auto border border-gray-200 rounded bg-white select-none">
+    <div ref={(el) => { containerRef.current = el; if (typeof ref === "function") ref(el); else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = el; }} className="relative overflow-auto border border-gray-200 rounded bg-white select-none h-full">
       {/* 최소 너비 래퍼 — 세로 모드에서 가로 스크롤 */}
       <div style={{ minWidth: MIN_GRID_W }}>
         {/* Header row */}
@@ -138,13 +138,6 @@ const TimetableGrid = forwardRef<HTMLDivElement, { combo: Section[] }>(function 
                   setTooltip((prev) => prev ? { ...prev, x: e.clientX - rect.left + 12, y: e.clientY - rect.top + 8 } : prev);
                 }}
                 onMouseLeave={() => setTooltip(null)}
-                onTouchStart={() => {
-                  const profLine = profs.length > 1
-                    ? profs.join(" / ") + "\n※ 교수별 분반 선택 가능"
-                    : profs[0];
-                  setTooltip({ x: 8, y: 8, text: `${b.name}\n${profLine}\n${b.timeStr}` });
-                }}
-                onTouchEnd={() => setTimeout(() => setTooltip(null), 2000)}
               >
                 <p className="text-white text-xs font-bold leading-tight px-1 pt-0.5 truncate" style={{ WebkitFontSmoothing: "antialiased" }}>
                   {shortName}
