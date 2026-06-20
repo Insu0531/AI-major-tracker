@@ -31,7 +31,9 @@ const MAX_SELECT = 10;
 
 export default function Home() {
   const [tab, setTab] = useState<"search" | "wizard">("search");
-  const [sem, setSem] = useState("2026-1");
+  const [semYear, setSemYear] = useState("2026");
+  const [semTerm, setSemTerm] = useState("1");
+  const sem = `${semYear}-${semTerm}`;
   const [rows, setRows] = useState<Row[]>([]);
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState<{ current: number; name: string } | null>(null);
@@ -200,15 +202,32 @@ export default function Home() {
         {tab === "search" && (
           <div className="flex flex-col flex-1 overflow-hidden p-4 gap-3">
             <div className="flex items-center gap-3 flex-wrap">
-              <input
-                className="border border-gray-300 rounded px-3 py-1.5 text-sm w-32 focus:outline-none focus:ring-1 focus:ring-blue-400"
-                value={sem}
-                onChange={(e) => setSem(e.target.value)}
-                placeholder="2026-1"
-                onKeyDown={(e) => e.key === "Enter" && doFetch()}
+              {/* 연도 드롭다운 */}
+              <select
+                className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+                value={semYear}
+                onChange={(e) => setSemYear(e.target.value)}
                 disabled={loading}
-              />
-              <span className="text-xs text-gray-400">(2026-1 / 2026-2 / 2026-s / 2026-w)</span>
+              >
+                {Array.from({ length: 15 }, (_, i) => String(2026 + i)).map((y) => (
+                  <option key={y} value={y}>{y}년</option>
+                ))}
+              </select>
+              {/* 학기 버튼 */}
+              {(["1", "2", "s", "w"] as const).map((t) => (
+                <button
+                  key={t}
+                  onClick={() => setSemTerm(t)}
+                  disabled={loading}
+                  className={`px-3 py-1.5 text-sm rounded border transition-colors ${
+                    semTerm === t
+                      ? "bg-blue-600 text-white border-blue-600"
+                      : "border-gray-300 text-gray-600 hover:bg-gray-50"
+                  }`}
+                >
+                  {{ "1": "1학기", "2": "2학기", "s": "여름", "w": "겨울" }[t]}
+                </button>
+              ))}
               <button
                 onClick={doFetch}
                 disabled={loading}
