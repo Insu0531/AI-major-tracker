@@ -446,6 +446,8 @@ class App(tk.Tk):
         self.combo_nav_label = tk.Label(nav, text="조합 없음", width=14)
         self.combo_nav_label.pack(side="left", padx=8)
         ttk.Button(nav, text="▶", width=3, command=self._next_combo).pack(side="left")
+        self.credit_label = tk.Label(nav, text="", fg="#444", font=("맑은 고딕", 9))
+        self.credit_label.pack(side="left", padx=(16, 0))
 
         tt_frame = tk.Frame(right)
         tt_frame.pack(fill="both", expand=True)
@@ -590,7 +592,9 @@ class App(tk.Tk):
             grade, crse_no, name, *_ = row
             base_code = crse_no.rsplit("-", 1)[0]  # CAIB0227-001 → CAIB0227
             if base_code not in groups:
-                groups[base_code] = {"name": name, "grade": grade, "sections": []}
+                credit_str = next((c for _, cd, _, c in COURSES_JSON if cd == base_code), "0")
+                credit = int(credit_str.split("-")[0])
+                groups[base_code] = {"name": name, "grade": grade, "credit": credit, "sections": []}
             groups[base_code]["sections"].append(row)
 
         def _on_check_scroll(event):
@@ -643,7 +647,8 @@ class App(tk.Tk):
                 key = (row[2], time_str)  # (과목명, 강의시간)
                 if key not in slot_map:
                     slot_map[key] = {"crse_no": row[1], "name": row[2],
-                                     "profs": [row[4]], "time_str": time_str, "times": times}
+                                     "profs": [row[4]], "time_str": time_str, "times": times,
+                                     "credit": info.get("credit", 0)}
                 else:
                     if row[4] not in slot_map[key]["profs"]:
                         slot_map[key]["profs"].append(row[4])
@@ -742,6 +747,9 @@ class App(tk.Tk):
         combo = self._filtered_combos[idx]
         n = len(self._filtered_combos)
         self.combo_nav_label.config(text=f"{idx + 1} / {n}")
+
+        total_credit = sum(sec.get("credit", 0) for sec in combo)
+        self.credit_label.config(text=f"총 {total_credit}학점")
 
         sections_vis = []
         for i, sec in enumerate(combo):
