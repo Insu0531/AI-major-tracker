@@ -101,8 +101,24 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
   // 이번 학기 개설된 과목 코드 집합
   const openCodes = new Set(allRows.map((r) => r.code));
 
+  // 전공 시간표와 겹치는 과목 코드 집합
+  const pinnedSlots = pinnedCombo?.flatMap((s) => s.times) ?? [];
+  const conflictCodes = new Set(
+    fetched && pinnedSlots.length > 0
+      ? [...openCodes].filter((code) =>
+          allRows
+            .filter((r) => r.code === code)
+            .every((r) => {
+              const sec = buildSectionGroups([r]).flat()[0];
+              return sec ? slotsOverlap(sec.times, pinnedSlots) : false;
+            })
+        )
+      : []
+  );
+
   const filteredList = ALL_COURSES.filter((c) => {
     if (fetched && !openCodes.has(c.code)) return false; // 미개설 제외
+    if (fetched && conflictCodes.has(c.code)) return false; // 전공과 모두 충돌 제외
     if (filterSdg && !c.sdg) return false;
     if (filterHmnts && !c.hmnts) return false;
     if (search) {
