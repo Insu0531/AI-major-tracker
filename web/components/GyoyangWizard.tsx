@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { buildSectionGroups, generateCombos, Section, SectionGroup, TimeSlot } from "@/lib/timetable";
 import TimetableGrid from "@/components/TimetableGrid";
+import ProfPickerModal, { ProfStep, getMultiProfSections, applyProfPicks } from "@/components/ProfPickerModal";
 import GYOYANG_LIST from "@/lib/gyoyang.json";
 
 type GyoyangCourse = { code: string; name: string; credit: string; sdg: boolean; hmnts: boolean };
@@ -16,49 +17,6 @@ function slotsOverlap(a: TimeSlot[], b: TimeSlot[]): boolean {
     if (x.day === y.day && x.start < y.end && x.end > y.start) return true;
   }
   return false;
-}
-
-// 교수 선택 팝업 — 단일 과목에 대해 교수 목록 보여주고 선택받기
-function ProfPickerModal({
-  courseName,
-  profs,
-  stepIdx,
-  totalSteps,
-  onSelect,
-  onSkip,
-}: {
-  courseName: string;
-  profs: string[];
-  stepIdx: number;
-  totalSteps: number;
-  onSelect: (prof: string) => void;
-  onSkip: () => void;
-}) {
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-      <div className="bg-white dark:bg-[#262626] rounded-xl shadow-2xl p-6 w-80 max-w-[90vw] flex flex-col gap-4">
-        <div className="flex items-center justify-between">
-          <span className="text-xs text-gray-400">{stepIdx + 1} / {totalSteps}</span>
-          <button onClick={onSkip} className="text-xs text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">건너뛰기</button>
-        </div>
-        <div>
-          <p className="text-xs text-gray-400 mb-0.5">교수 선택</p>
-          <p className="text-sm font-semibold text-gray-800 dark:text-gray-100 leading-tight">{courseName}</p>
-        </div>
-        <div className="flex flex-col gap-2">
-          {profs.map((prof) => (
-            <button
-              key={prof}
-              onClick={() => onSelect(prof)}
-              className="w-full py-2.5 rounded-lg border border-gray-200 dark:border-gray-600 text-sm text-gray-700 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-[#1e3a5f] hover:border-blue-400 transition-colors text-left px-4"
-            >
-              {prof}
-            </button>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
 }
 
 export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo: Section[] | null; initialSem?: string }) {
@@ -90,7 +48,6 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
   const timetableRef = useRef<HTMLDivElement | null>(null);
 
   // 교수 선택 팝업 상태
-  type ProfStep = { name: string; profs: string[] };
   const [profSteps, setProfSteps] = useState<ProfStep[]>([]);
   const [profStepIdx, setProfStepIdx] = useState(0);
   // 선택된 교수 map: courseName → prof (undefined = 선택 안 함/건너뜀)
@@ -201,23 +158,6 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
   const currentCombo = combos[comboIdx] ?? [];
   const displayCombo = [...(pinnedCombo ?? []), ...currentCombo];
   const totalCredit = displayCombo.reduce((s, sec) => s + sec.credit, 0);
-
-  // 교수 선택이 필요한 과목 추출 (교양 파트만, profs가 2개 이상)
-  const getMultiProfSections = (combo: Section[]): ProfStep[] => {
-    return combo
-      .filter((sec) => sec.profs.length > 1)
-      .map((sec) => ({ name: sec.name, profs: sec.profs }));
-  };
-
-  // 교수 선택 결과를 반영한 combo 생성
-  // picks: courseName → 선택한 교수 (없으면 첫 번째 교수 유지)
-  const applyProfPicks = (combo: Section[], picks: Map<string, string>): Section[] => {
-    return combo.map((sec) => {
-      const picked = picks.get(sec.name);
-      if (!picked || sec.profs.length <= 1) return sec;
-      return { ...sec, profs: [picked] };
-    });
-  };
 
   // 현재 다크모드 여부
   const isDark = () =>

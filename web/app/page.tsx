@@ -5,6 +5,7 @@ import { buildSectionGroups, generateCombos, Section, SectionGroup } from "@/lib
 import { COURSES_BY_MAJOR, Major, MAJOR_LABELS } from "@/lib/courses";
 import TimetableGrid from "@/components/TimetableGrid";
 import GyoyangWizard from "@/components/GyoyangWizard";
+import ProfPickerModal, { ProfStep, getMultiProfSections, applyProfPicks } from "@/components/ProfPickerModal";
 
 type Row = {
   grade: string;
@@ -90,13 +91,39 @@ export default function Home() {
   const timetableRef = useRef<HTMLDivElement | null>(null);
   const [saving, setSaving] = useState(false);
 
-  const saveAsImage = async () => {
+  // 교수 선택 팝업 상태
+  const [profSteps, setProfSteps] = useState<ProfStep[]>([]);
+  const [profStepIdx, setProfStepIdx] = useState(0);
+  const profPickResults = useRef<Map<string, string>>(new Map());
+  const afterPickRef = useRef<((picks: Map<string, string>) => void) | null>(null);
+  // 교수 선택 반영된 캡처용 combo (null이면 currentCombo 그대로)
+  const [captureCombo, setCaptureCombo] = useState<Section[] | null>(null);
+  const visibleCombo = captureCombo ?? (filteredCombos[comboIdx] ?? []);
+
+  const handleProfSelect = (prof: string) => {
+    profPickResults.current.set(profSteps[profStepIdx].name, prof);
+    advanceProfStep();
+  };
+  const handleProfSkip = () => advanceProfStep();
+  const advanceProfStep = () => {
+    const next = profStepIdx + 1;
+    if (next < profSteps.length) {
+      setProfStepIdx(next);
+    } else {
+      const picks = new Map(profPickResults.current);
+      setProfSteps([]);
+      setProfStepIdx(0);
+      afterPickRef.current?.(picks);
+      afterPickRef.current = null;
+    }
+  };
+
+  const doCapture = async (comboToCapture: Section[]) => {
     if (!timetableRef.current) return;
     setSaving(true);
     try {
       const domtoimage = (await import("dom-to-image-more")).default;
       const el = timetableRef.current;
-      // 캡처용 고정 크기 클론 — 화면 밖에 렌더 후 찍기
       const CAPTURE_W = 900;
       const clone = el.cloneNode(true) as HTMLElement;
       clone.style.position = "fixed";
@@ -114,6 +141,7 @@ export default function Home() {
         height: clone.scrollHeight,
       });
       document.body.removeChild(clone);
+      void comboToCapture;
       const link = document.createElement("a");
       link.href = dataUrl;
       link.download = `시간표_${comboIdx + 1}.png`;
@@ -123,6 +151,25 @@ export default function Home() {
     } finally {
       setSaving(false);
     }
+  };
+
+  const saveAsImage = async () => {
+    const currentCombo = filteredCombos[comboIdx] ?? [];
+    const steps = getMultiProfSections(currentCombo);
+    if (steps.length === 0) {
+      await doCapture(currentCombo);
+      return;
+    }
+    profPickResults.current = new Map();
+    setProfSteps(steps);
+    setProfStepIdx(0);
+    afterPickRef.current = async (picks) => {
+      const resolved = applyProfPicks(currentCombo, picks);
+      setCaptureCombo(resolved);
+      await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+      await doCapture(resolved);
+      setCaptureCombo(null);
+    };
   };
 
   const doFetch = useCallback(async () => {
@@ -509,6 +556,17 @@ export default function Home() {
         {/* ── 시간표 마법사 탭 ── */}
         {tab === "wizard" && (
           <div className="flex flex-1 overflow-hidden relative">
+            {/* 교수 선택 팝업 */}
+            {profSteps.length > 0 && profStepIdx < profSteps.length && (
+              <ProfPickerModal
+                courseName={profSteps[profStepIdx].name}
+                profs={profSteps[profStepIdx].profs}
+                stepIdx={profStepIdx}
+                totalSteps={profSteps.length}
+                onSelect={handleProfSelect}
+                onSkip={handleProfSkip}
+              />
+            )}
             {/* Left panel */}
             <div className={`${panelOpen ? "w-72" : "w-0"} shrink-0 border-r border-gray-200 bg-white flex flex-col overflow-hidden transition-all duration-200`}>
 
@@ -871,7 +929,7 @@ export default function Home() {
                     </span>
                   </div>
                   <div key={`${comboIdx}-${slideDir}`} className={`flex-1 overflow-auto min-h-0 ${slideDir === "left" ? "slide-left" : "slide-right"}`}>
-                    <TimetableGrid ref={timetableRef} combo={currentCombo} />
+                    <TimetableGrid ref={timetableRef} combo={visibleCombo} />
                   </div>
                   <div className="flex gap-3 shrink-0 pt-1">
                     <button
