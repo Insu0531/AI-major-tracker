@@ -151,10 +151,10 @@ export default function TimetableGrid({ combo }: { combo: Section[] }) {
               }}
               onMouseLeave={() => setTooltip(null)}
             >
-              <p className="text-white text-[10px] font-bold leading-tight px-1 pt-0.5 truncate">
+              <p className="text-white text-xs font-bold leading-tight px-1 pt-0.5 truncate">
                 {shortName}
               </p>
-              <p className="text-white/80 text-[9px] px-1 truncate">{b.prof.split(" / ")[0]}</p>
+              <p className="text-white/80 text-[11px] px-1 truncate">{b.prof.split(" / ")[0]}</p>
             </div>
           );
         })}
