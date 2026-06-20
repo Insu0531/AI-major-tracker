@@ -1,0 +1,109 @@
+"""기존 전공 + 에너지 전공 2026년 JSON 일괄 생성"""
+import subprocess, sys
+
+majors = [
+    # (학과코드, key, 라벨, base코드)
+    ("1301","math","수학과",None),
+    ("1302","chem","화학과",None),
+    ("1304","stat","통계학과",None),
+    # ("161102", "energy_cv", "에너지공학부-에너지변환전공",   "1611"),
+    # 130Q 지구시스템과학부
+    ("130Q01","geo_geol","지질학전공","130Q"),
+    ("130Q02","geo_astro","천문대기과학전공","130Q"),
+    ("130Q03","geo_ocean","해양학전공","130Q"),
+    ("1101","kor_lit","국어국문학과",None),
+    ("1102","eng_lit","영어영문학과",None),
+    ("1103","fre_lit","불어불문학과",None),
+    ("1104","ger_lit","독어독문학과",None),
+    ("1105","chi_lit","중어중문학과",None),
+    ("1106","history","사학과",None),
+    ("1107","philosophy","철학과",None),
+    ("1108","anthro","고고인류학과",None),
+    ("1109","jpn_lit","일어일문학과",None),
+    ("110A","kor_clas","한문학과",None),
+    ("110B","rus_lit","노어노문학과",None),
+    # 1200 사회과학대학
+    ("1201","poli_sci","정치외교학과",None),
+    ("1202","sociology","사회학과",None),
+    ("1203","geography","지리학과",None),
+    ("1204","doc_info","문헌정보학과",None),
+    ("1205","psychology","심리학과",None),
+    ("1403","business","경영학부",None),
+    ("1404","econ","경제통상학부",None),
+    ("1605","polymer","고분자공학과",None),
+    ("1606","env_eng","환경공학과",None),
+    ("1607","textile","섬유시스템공학과",None),
+    ("1617","metal_mat","금속재료공학과",None),
+    ("1703","agri_civil","농업토목공학과",None),
+    ("170B01","plant_sci","응용생명과학부-식물생명과학전공","170B"),
+    ("170B04","env_life_chem","응용생명과학부-환경생명화학전공","170B"),
+    ("170P01","food_biotech","식품공학부-식품생물공학전공","170P"),
+    ("170P02","food_mat","식품공학부-식품소재공학전공","170P"),
+    ("170P03","food_app","식품공학부-식품응용공학전공","170P"),
+    ("170Y","plant_med","식물의학과",None),
+    ("170Z","food_econ","식품자원경제학과",None),
+    ("1711","smart_bio_mech","스마트생물산업기계공학과",None),
+    # 19 사범대학
+    ("1901","edu","교육학과",None),
+    ("1902","kor_edu","국어교육과",None),
+    ("1903","eng_edu","영어교육과",None),
+    ("1907","ethics_edu","윤리교육과",None),
+    ("1908","math_edu","수학교육과",None),
+    ("190A","home_edu","가정교육과",None),
+    # 190D 유럽어교육학부
+    ("190D01","ger_edu","유럽어교육학부-독어교육전공","190D"),
+    ("190D02","fre_edu","유럽어교육학부-불어교육전공","190D"),
+    ("190E","history_edu","역사교육과",None),
+    ("190F","geo_edu","지리교육과",None),
+    ("190G","social_edu","일반사회교육과",None),
+    ("190H","phys_edu","물리교육과",None),
+    ("190I","chem_edu","화학교육과",None),
+    ("190J","bio_edu","생물교육과",None),
+    ("190K","earth_edu","지구과학교육과",None),
+    ("190L","civic_edu","국민윤리교육과",None),
+    ("190M","commerce_edu","상업교육과",None),
+    ("190N","geo2_edu","지학교육과",None),
+    ("190O","music_edu","음악교육과",None),
+    ("190P","art_edu","미술교육과",None),
+    # 1B 생활과학대학
+    ("1B01","home_mgmt","가정관리학과",None),
+    ("1B02","child_family","아동가족학과",None),
+    ("1B03","clothing","의류학과",None),
+    ("1B04","food_nutrition","식품영양학과",None),
+    ("1B05001","life_sci_a","생활과학과군A","1B05"),
+    ("1B05002","life_sci_b","생활과학과군B","1B05"),
+    ("1B05003","life_sci_c","생활과학과군C","1B05"),
+    ("1B06","eco_housing","의생활학과",None),
+    ("1B0701","child_dev","아동학부-아동가족학전공","1B07"),
+    ("1B0702","child_edu","아동학부-아동교육전공","1B07"),
+    # 1S01 행정학부
+    ("1S0101","pub_admin","행정학부-공공관리전공","1S01"),
+    ("1S0102","pub_policy","행정학부-공공정책전공","1S01"),
+    # 10 첨단기술융합대학
+    ("100101","bio_med_eng","의생명융합공학전공","1001"),
+    ("100102","robot_smart","로봇및스마트시스템공학전공","1001"),
+    ("100103","h2_energy","수소및신재생에너지전공","1001"),
+    ("1002","smart_mobility","스마트모빌리티공학과",None),
+    ("1004","innov_pharma","혁신신약학과",None),
+    ("1005","bio_med_fusion","의생명융합공학과",None),
+    ("1006","robotics","로봇공학과",None),
+    ("1007","adv_tech_self1","첨단기술융합대학 자율학부1",None),
+    ("1008","adv_tech_self2","첨단기술융합대학 자율학부2",None),
+    ("1009","auto_fusion","자율시스템 융합전공",None),
+    # 1T 융합학부
+    ("1T0101","ai_conv","융합학부-인공지능전공","1T01"),
+    ("1T0102","bio_med_conv","융합학부-의생명융합공학전공","1T01"),
+    ("1T0103","robot_conv","융합학부-로봇및스마트시스템공학전공","1T01"),
+    ("1T0104","h2_conv","융합학부-수소및신재생에너지전공","1T01"),
+    ("1T0105","mobility_conv","융합학부-스마트모빌리티공학전공","1T01"),
+]
+
+years = "2021,2022,2023,2024,2025,2026"
+
+for dept_cd, key, label, base in majors:
+    cmd = [sys.executable, "add_major.py", dept_cd, key, label, "--years", years]
+    if base:
+        cmd += ["--base", base]
+    print(f"\n{'='*60}")
+    print(f"실행: {' '.join(cmd)}")
+    subprocess.run(cmd, encoding="utf-8")

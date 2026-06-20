@@ -84,8 +84,9 @@ export default function Home() {
   const [panelOpen, setPanelOpen] = useState(() => typeof window !== "undefined" && window.innerWidth >= 768);
   const [flashKey, setFlashKey] = useState(0);
   const [slideDir, setSlideDir] = useState<"left" | "right">("left");
-  // 고정 분반: crseNo(분반코드) → Row (과목 조회에서 "마법사에 추가"한 특정 분반)
+  // 고정 분반: crseNo → Row / 제외 분반: crseNo Set
   const [pinnedRows, setPinnedRows] = useState<Map<string, Row>>(new Map());
+  const [excludedRows, setExcludedRows] = useState<Set<string>>(new Set());
 
   // 전공+입학연도 변경 시 과목 목록 fetch
   useEffect(() => {
@@ -140,6 +141,7 @@ export default function Home() {
             setCombos([]);
             setFilteredCombos([]);
             setPinnedRows(new Map());
+            setExcludedRows(new Set());
           }
         }
       }
@@ -195,12 +197,12 @@ export default function Home() {
       alert("과목을 하나 이상 선택해주세요.");
       return;
     }
-    // 고정 분반이 있는 과목은 해당 분반만, 없는 과목은 전체 분반 사용
+    // 고정 분반이 있는 과목은 해당 분반만, 제외 분반은 제거, 없는 과목은 전체 분반 사용
     const pinnedCrseNos = new Set(pinnedRows.keys());
     const selectedRows = rows.filter((r) => {
       const base = r.crseNo.replace(/-\d+$/, "");
       if (!selected.includes(base)) return false;
-      // 이 과목에 고정된 분반이 하나라도 있으면 고정된 것만 통과
+      if (excludedRows.has(r.crseNo)) return false;
       const hasPinned = [...pinnedRows.values()].some((p) => p.crseNo.replace(/-\d+$/, "") === base);
       if (hasPinned) return pinnedCrseNos.has(r.crseNo);
       return true;
@@ -436,31 +438,55 @@ export default function Home() {
                 <tbody>
                   {sortedRows.map((row, i) => {
                     const isPinned = pinnedRows.has(row.crseNo);
+                    const isExcluded = excludedRows.has(row.crseNo);
                     return (
                       <tr
                         key={row.crseNo + i}
                         className={`border-b border-gray-100 hover:bg-blue-50 transition-colors ${
-                          isPinned ? "bg-amber-50" : i % 2 === 0 ? "bg-white" : "bg-gray-50/60"
+                          isPinned ? "bg-amber-50" : isExcluded ? "bg-red-50 opacity-60" : i % 2 === 0 ? "bg-white" : "bg-gray-50/60"
                         } ${loading ? "row-animate" : ""}`}
                         style={loading ? { animationDelay: `${(i % 20) * 18}ms` } : undefined}
                       >
                         <td className="px-2 py-1.5 text-center whitespace-nowrap">
-                          <button
-                            onClick={() => {
-                              const next = new Map(pinnedRows);
-                              if (isPinned) next.delete(row.crseNo);
-                              else next.set(row.crseNo, row);
-                              setPinnedRows(next);
-                            }}
-                            title={isPinned ? "고정 해제" : "이 분반을 마법사에 고정"}
-                            className={`text-xs px-1.5 py-0.5 rounded border transition-colors ${
-                              isPinned
-                                ? "bg-amber-400 text-white border-amber-400 hover:bg-amber-500"
-                                : "border-gray-300 text-gray-400 hover:bg-gray-100 hover:text-gray-600"
-                            }`}
-                          >
-                            {isPinned ? "★" : "☆"}
-                          </button>
+                          {(() => {
+                            const isPinned = pinnedRows.has(row.crseNo);
+                            const isExcluded = excludedRows.has(row.crseNo);
+                            return (
+                              <button
+                                onClick={() => {
+                                  if (!isPinned && !isExcluded) {
+                                    // 기본 → 고정
+                                    const next = new Map(pinnedRows);
+                                    next.set(row.crseNo, row);
+                                    setPinnedRows(next);
+                                  } else if (isPinned) {
+                                    // 고정 → 제외
+                                    const nextPin = new Map(pinnedRows);
+                                    nextPin.delete(row.crseNo);
+                                    setPinnedRows(nextPin);
+                                    const nextExcl = new Set(excludedRows);
+                                    nextExcl.add(row.crseNo);
+                                    setExcludedRows(nextExcl);
+                                  } else {
+                                    // 제외 → 기본
+                                    const nextExcl = new Set(excludedRows);
+                                    nextExcl.delete(row.crseNo);
+                                    setExcludedRows(nextExcl);
+                                  }
+                                }}
+                                title={isPinned ? "클릭 시 제외로 전환" : isExcluded ? "클릭 시 기본으로 전환" : "클릭 시 고정"}
+                                className={`text-xs px-1.5 py-0.5 rounded border transition-colors ${
+                                  isPinned
+                                    ? "bg-amber-400 text-white border-amber-400 hover:bg-amber-500"
+                                    : isExcluded
+                                    ? "bg-red-500 text-white border-red-500 hover:bg-red-600"
+                                    : "border-gray-300 text-gray-400 hover:bg-gray-100 hover:text-gray-600"
+                                }`}
+                              >
+                                {isPinned ? "★" : isExcluded ? "✕" : "☆"}
+                              </button>
+                            );
+                          })()}
                         </td>
                         {COLS.map((c) => (
                           <td key={c.key} className="px-3 py-1.5 text-gray-700 whitespace-nowrap">

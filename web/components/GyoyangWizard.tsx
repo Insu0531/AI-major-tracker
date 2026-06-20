@@ -10,7 +10,7 @@ type GyoyangCourse = { code: string; name: string; credit: string; sdg: boolean;
 const ALL_COURSES: GyoyangCourse[] = GYOYANG_LIST as GyoyangCourse[];
 const MAX_SELECT = 6;
 
-type Row = { grade: string; crseNo: string; name: string; code: string; credit: string; dept: string; prof: string; timeStr: string; rmrk: string };
+type Row = { grade: string; crseNo: string; name: string; code: string; credit: string; dept: string; prof: string; timeStr: string; rmrk: string; tag?: string };
 
 function slotsOverlap(a: TimeSlot[], b: TimeSlot[]): boolean {
   for (const x of a) for (const y of b) {
@@ -42,6 +42,10 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
   const [combos, setCombos] = useState<Section[][]>([]);
   const [comboIdx, setComboIdx] = useState(0);
   const [panelOpen, setPanelOpen] = useState(() => typeof window !== "undefined" && window.innerWidth >= 768);
+  const [leftTab, setLeftTab] = useState<"timetable" | "list">("timetable");
+  const [listSearch, setListSearch] = useState("");
+  const [listSortState, setListSortState] = useState<{ col: keyof Row; dir: "asc" | "desc" } | null>(null);
+  const [maxCredit, setMaxCredit] = useState(0); // 0 = 제한 없음
   const [flashKey, setFlashKey] = useState(0);
   const [slideDir, setSlideDir] = useState<"left" | "right">("left");
   const [saving, setSaving] = useState(false);
@@ -148,12 +152,45 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
       ? groups.map((group) => group.filter((sec) => !slotsOverlap(sec.times, pinnedSlots))).filter((g) => g.length > 0)
       : groups;
 
-    const all = generateCombos(filteredGroups);
+    const pinnedCredit = (pinnedCombo ?? []).reduce((s, sec) => s + sec.credit, 0);
+
+    let all: Section[][];
+    if (maxCredit > 0 && pinnedCredit < maxCredit) {
+      // 허용 교양 학점
+      const allowedCredit = maxCredit - pinnedCredit;
+      // 교양 group별 학점 (각 group의 첫 section 기준)
+      const groupCredits = filteredGroups.map((g) => g[0]?.credit ?? 0);
+      // 부분집합 인덱스 열거 (학점 합계 <= allowedCredit인 것만)
+      const validSubsets: number[][] = [];
+      const n = filteredGroups.length;
+      for (let mask = 1; mask < (1 << n); mask++) {
+        const indices: number[] = [];
+        let creditSum = 0;
+        for (let i = 0; i < n; i++) {
+          if (mask & (1 << i)) { indices.push(i); creditSum += groupCredits[i]; }
+        }
+        if (creditSum <= allowedCredit) validSubsets.push(indices);
+      }
+      // 각 부분집합에 대해 generateCombos 실행 후 합산
+      const seen = new Set<string>();
+      const result: Section[][] = [];
+      for (const indices of validSubsets) {
+        const subGroups = indices.map((i) => filteredGroups[i]);
+        for (const combo of generateCombos(subGroups)) {
+          const key = combo.map((s) => `${s.crseNo}|${s.timeStr}`).sort().join(";");
+          if (!seen.has(key)) { seen.add(key); result.push(combo); }
+        }
+      }
+      all = result;
+    } else {
+      all = generateCombos(filteredGroups);
+    }
+
     setCombos(all);
     setComboIdx(0);
     setFlashKey((k) => k + 1);
     if (typeof window !== "undefined" && window.innerWidth < 768) setPanelOpen(false);
-  }, [allRows, selected, pinnedCombo]);
+  }, [allRows, selected, pinnedCombo, maxCredit]);
 
   const currentCombo = combos[comboIdx] ?? [];
   const displayCombo = [...(pinnedCombo ?? []), ...currentCombo];
@@ -290,144 +327,261 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
           <span className="text-sm font-medium text-gray-700">{semYear}년 {semTerm === "s" ? "여름" : semTerm === "w" ? "겨울" : `${semTerm}학기`}</span>
           {loading && <span className="text-gray-400 text-xs animate-pulse">불러오는 중...</span>}
           {fetched && !loading && (
-            <span className="text-xs text-gray-400">
-              {filteredList.length}/{[...openCodes].filter((c) => !conflictCodes.has(c)).length}개 선택 가능
-            </span>
+            <span className="text-xs text-gray-400">{allRows.length}개 분반</span>
           )}
         </div>
 
-        {/* 검색 + 필터 */}
-        <div className="px-3 py-2 shrink-0 flex flex-col gap-1.5 border-b border-gray-100">
-          <div className="flex gap-1.5">
-            <input
-              type="text" value={search} onChange={(e) => setSearch(e.target.value)}
-              placeholder="과목명 또는 과목코드 검색..."
-              className="flex-1 border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
-            />
-            <button
-              onClick={() => setSortAsc((v) => !v)}
-              className="shrink-0 border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-600 hover:bg-gray-50"
-              title="이름 정렬"
-            >
-              ㄱ{sortAsc ? "▲" : "▼"}
-            </button>
-          </div>
-          <div className="flex gap-3 items-center">
-            <label className="flex items-center gap-1 text-xs text-gray-600 cursor-pointer">
-              <input type="checkbox" checked={filterSdg} onChange={(e) => setFilterSdg(e.target.checked)} />
-              SDG교양
-            </label>
-            <label className="flex items-center gap-1 text-xs text-gray-600 cursor-pointer">
-              <input type="checkbox" checked={filterHmnts} onChange={(e) => setFilterHmnts(e.target.checked)} />
-              인문교양
-            </label>
-            <span className={`text-xs ml-auto ${selected.size >= MAX_SELECT ? "text-red-500 font-bold" : "text-gray-400"}`}>
-              {selected.size}/{MAX_SELECT}
-            </span>
-            {selected.size > 0 && (
-              <button onClick={() => setSelected(new Set())} className="text-xs text-gray-400 hover:text-red-500">전체 해제</button>
-            )}
-          </div>
-        </div>
-
-        {/* 과목 목록 */}
-        <div className="overflow-y-auto px-2 py-1 flex-1 min-h-0">
-          {!fetched ? (
-            <p className="text-xs text-gray-400 text-center py-8">{loading ? "교양 과목 불러오는 중..." : "학기를 선택하면 자동으로 불러옵니다"}</p>
-          ) : filteredList.length === 0 ? (
-            <p className="text-xs text-gray-400 text-center py-8">검색 결과 없음</p>
-          ) : (
-            filteredList.map((c) => {
-              const isSelected = selected.has(c.code);
-              const disabled = !isSelected && selected.size >= MAX_SELECT;
-              const profRows = isSelected ? allRows.filter((r) => r.code === c.code) : [];
-              const profMap = new Map<string, boolean>();
-              for (const r of profRows) {
-                const sec = buildSectionGroups([r]).flat()[0];
-                const conflict = sec ? slotsOverlap(sec.times, pinnedSlots) : false;
-                for (const prof of (r.prof || "미정").split(",").map((p) => p.trim())) {
-                  if (!profMap.has(prof)) profMap.set(prof, !conflict);
-                  else if (!conflict) profMap.set(prof, true);
-                }
-              }
-              return (
-                <div key={c.code}>
-                  <label className={`flex items-start gap-2 px-1 py-1 rounded ${disabled ? "opacity-40 cursor-not-allowed" : "cursor-pointer hover:bg-gray-50"} ${isSelected ? "bg-blue-50" : ""}`}>
-                    <input
-                      type="checkbox" checked={isSelected} disabled={disabled}
-                      onChange={(e) => {
-                        if (e.target.checked && selected.size >= MAX_SELECT) return;
-                        const next = new Set(selected);
-                        e.target.checked ? next.add(c.code) : next.delete(c.code);
-                        setSelected(next);
-                      }}
-                      className="mt-0.5 shrink-0"
-                    />
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm text-gray-700 leading-tight truncate">{c.name}</p>
-                      <p className="text-xs text-gray-400">{c.code} · {c.credit}학점
-                        {c.sdg && <span className="ml-1 text-green-600">SDG</span>}
-                        {c.hmnts && <span className="ml-1 text-purple-600">인문</span>}
-                      </p>
-                    </div>
-                  </label>
-                  {isSelected && profMap.size > 0 && (
-                    <div className="ml-6 mb-1 flex flex-col gap-0.5">
-                      {[...profMap.entries()].map(([prof, ok]) => (
-                        <span key={prof} className={`text-xs px-1.5 py-0.5 rounded ${ok ? "text-green-700 bg-green-50" : "text-red-400 bg-red-50 line-through"}`}>
-                          {ok ? "✓" : "✗"} {prof}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              );
-            })
-          )}
-        </div>
-
-        {fetched && selected.size > 0 && combos.length > 0 && (
-          <p className="text-xs text-gray-500 text-center pb-2">조합 {combos.length}개</p>
-        )}
-      </div>
-
-      {/* Right: timetable */}
-      <div key={flashKey} className="flex-1 flex flex-col overflow-hidden p-4 gap-2 animate-[fadeIn_0.4s_ease] min-w-0 min-h-0">
-        <button
-          onClick={() => setPanelOpen((v) => !v)}
-          className="self-start flex items-center gap-1 text-xs text-gray-500 border border-gray-300 rounded px-2 py-1 hover:bg-gray-50 shrink-0"
-        >
-          {panelOpen ? "◀ 패널 닫기" : "▶ 패널 열기"}
-        </button>
-
-        {combos.length > 0 ? (
-          <>
-            <div className="flex items-center gap-3 flex-wrap shrink-0">
-              <button onClick={() => { setSlideDir("right"); setComboIdx((i) => (i - 1 + combos.length) % combos.length); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm">◀</button>
-              <span className="text-sm text-gray-600 w-20 text-center">{comboIdx + 1} / {combos.length}</span>
-              <button onClick={() => { setSlideDir("left"); setComboIdx((i) => (i + 1) % combos.length); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm">▶</button>
-              <span className="text-sm font-semibold text-blue-600">총 {totalCredit}학점</span>
-            </div>
-            <div key={`${comboIdx}-${slideDir}`} className={`flex-1 overflow-auto min-h-0 ${slideDir === "left" ? "slide-left" : "slide-right"}`}>
-              <TimetableGrid ref={timetableRef} combo={visibleCombo} />
-            </div>
-            <div className="shrink-0 pt-1">
-              <button onClick={saveAsImage} disabled={saving} className="w-full py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors">
-                {saving ? "저장 중..." : "최종 시간표 이미지 저장"}
+        {/* 과목 선택 */}
+        {(<>
+          <div className="px-3 py-2 shrink-0 flex flex-col gap-1.5 border-b border-gray-100">
+            <div className="flex gap-1.5">
+              <input
+                type="text" value={search} onChange={(e) => setSearch(e.target.value)}
+                placeholder="과목명 또는 과목코드 검색..."
+                className="flex-1 border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+              />
+              <button onClick={() => setSortAsc((v) => !v)}
+                className="shrink-0 border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-600 hover:bg-gray-50" title="이름 정렬">
+                ㄱ{sortAsc ? "▲" : "▼"}
               </button>
             </div>
-          </>
-        ) : (
-          <div className="flex-1 flex flex-col items-center justify-center text-gray-400 text-sm gap-2">
+            <div className="flex gap-3 items-center">
+              <label className="flex items-center gap-1 text-xs text-gray-600 cursor-pointer">
+                <input type="checkbox" checked={filterSdg} onChange={(e) => setFilterSdg(e.target.checked)} />
+                SDG교양
+              </label>
+              <label className="flex items-center gap-1 text-xs text-gray-600 cursor-pointer">
+                <input type="checkbox" checked={filterHmnts} onChange={(e) => setFilterHmnts(e.target.checked)} />
+                인문교양
+              </label>
+              <span className={`text-xs ml-auto ${selected.size >= MAX_SELECT ? "text-red-500 font-bold" : "text-gray-400"}`}>
+                {selected.size}/{MAX_SELECT}
+              </span>
+              {selected.size > 0 && (
+                <button onClick={() => setSelected(new Set())} className="text-xs text-gray-400 hover:text-red-500">전체 해제</button>
+              )}
+            </div>
+            <div className="flex items-center gap-2">
+              <label className="text-xs text-gray-600 shrink-0">최대 학점</label>
+              <select
+                value={maxCredit}
+                onChange={(e) => setMaxCredit(Number(e.target.value))}
+                className="flex-1 border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-blue-400"
+              >
+                <option value={0}>제한 없음</option>
+                {Array.from({ length: 16 }, (_, i) => i + 12).map((v) => (
+                  <option key={v} value={v}>{v}학점</option>
+                ))}
+              </select>
+              {maxCredit > 0 && (
+                <span className="text-xs text-gray-400 shrink-0">
+                  전공 {(pinnedCombo ?? []).reduce((s, sec) => s + sec.credit, 0)}학점
+                </span>
+              )}
+            </div>
+          </div>
+          <div className="overflow-y-auto px-2 py-1 flex-1 min-h-0">
             {!fetched ? (
-              <p>왼쪽에서 조회 후 과목을 선택하면 조합이 자동 생성됩니다</p>
-            ) : selected.size === 0 ? (
-              <p>과목을 선택하면 조합이 자동 생성됩니다</p>
+              <p className="text-xs text-gray-400 text-center py-8">{loading ? "교양 과목 불러오는 중..." : "학기를 선택하면 자동으로 불러옵니다"}</p>
+            ) : filteredList.length === 0 ? (
+              <p className="text-xs text-gray-400 text-center py-8">검색 결과 없음</p>
             ) : (
-              <p>선택한 과목 조합이 없습니다 (전공 시간표와 모두 충돌)</p>
+              filteredList.map((c) => {
+                const isSelected = selected.has(c.code);
+                const disabled = !isSelected && selected.size >= MAX_SELECT;
+                const profRows = isSelected ? allRows.filter((r) => r.code === c.code) : [];
+                const profMap = new Map<string, boolean>();
+                for (const r of profRows) {
+                  const sec = buildSectionGroups([r]).flat()[0];
+                  const conflict = sec ? slotsOverlap(sec.times, pinnedSlots) : false;
+                  for (const prof of (r.prof || "미정").split(",").map((p) => p.trim())) {
+                    if (!profMap.has(prof)) profMap.set(prof, !conflict);
+                    else if (!conflict) profMap.set(prof, true);
+                  }
+                }
+                return (
+                  <div key={c.code}>
+                    <label className={`flex items-start gap-2 px-1 py-1 rounded ${disabled ? "opacity-40 cursor-not-allowed" : "cursor-pointer hover:bg-gray-50"} ${isSelected ? "bg-blue-50" : ""}`}>
+                      <input type="checkbox" checked={isSelected} disabled={disabled}
+                        onChange={(e) => {
+                          if (e.target.checked && selected.size >= MAX_SELECT) return;
+                          const next = new Set(selected);
+                          e.target.checked ? next.add(c.code) : next.delete(c.code);
+                          setSelected(next);
+                        }}
+                        className="mt-0.5 shrink-0"
+                      />
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm text-gray-700 leading-tight truncate">{c.name}</p>
+                        <p className="text-xs text-gray-400">{c.code} · {c.credit}학점
+                          {c.sdg && <span className="ml-1 text-green-600">SDG</span>}
+                          {c.hmnts && <span className="ml-1 text-purple-600">인문</span>}
+                        </p>
+                      </div>
+                    </label>
+                    {isSelected && profMap.size > 0 && (
+                      <div className="ml-6 mb-1 flex flex-col gap-0.5">
+                        {[...profMap.entries()].map(([prof, ok]) => (
+                          <span key={prof} className={`text-xs px-1.5 py-0.5 rounded ${ok ? "text-green-700 bg-green-50" : "text-red-400 bg-red-50 line-through"}`}>
+                            {ok ? "✓" : "✗"} {prof}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })
+            )}
+          </div>
+          {fetched && selected.size > 0 && combos.length > 0 && (
+            <p className="text-xs text-gray-500 text-center pb-2">조합 {combos.length}개</p>
+          )}
+        </>)}
+      </div>
+
+      {/* Right area */}
+      <div className="flex-1 flex flex-col overflow-hidden min-w-0 min-h-0">
+        {/* 오른쪽 상단 탭바 */}
+        <div className="flex items-center gap-2 px-4 pt-3 pb-0 shrink-0 border-b border-gray-200 bg-white">
+          <button onClick={() => setPanelOpen((v) => !v)}
+            className="flex items-center gap-1 text-xs text-gray-500 border border-gray-300 rounded px-2 py-1 hover:bg-gray-50 mr-2">
+            {panelOpen ? "◀" : "▶"}
+          </button>
+          {(["timetable", "list"] as const).map((t) => (
+            <button key={t} onClick={() => setLeftTab(t)}
+              className={`pb-2 px-1 text-sm border-b-2 transition-colors ${leftTab === t ? "border-blue-500 text-blue-600 font-semibold" : "border-transparent text-gray-400 hover:text-gray-600"}`}>
+              {t === "timetable" ? "시간표" : "전체 목록"}
+            </button>
+          ))}
+        </div>
+
+        {/* 시간표 뷰 */}
+        {leftTab === "timetable" && (
+          <div key={flashKey} className="flex-1 flex flex-col overflow-hidden p-4 gap-2 animate-[fadeIn_0.4s_ease] min-h-0">
+            {combos.length > 0 ? (
+              <>
+                <div className="flex items-center gap-3 flex-wrap shrink-0">
+                  <button onClick={() => { setSlideDir("right"); setComboIdx((i) => (i - 1 + combos.length) % combos.length); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm">◀</button>
+                  <span className="text-sm text-gray-600 w-20 text-center">{comboIdx + 1} / {combos.length}</span>
+                  <button onClick={() => { setSlideDir("left"); setComboIdx((i) => (i + 1) % combos.length); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm">▶</button>
+                  <span className="text-sm font-semibold text-blue-600">총 {totalCredit}학점</span>
+                </div>
+                <div key={`${comboIdx}-${slideDir}`} className={`flex-1 overflow-auto min-h-0 ${slideDir === "left" ? "slide-left" : "slide-right"}`}>
+                  <TimetableGrid ref={timetableRef} combo={visibleCombo} />
+                </div>
+                <div className="shrink-0 pt-1">
+                  <button onClick={saveAsImage} disabled={saving} className="w-full py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors">
+                    {saving ? "저장 중..." : "최종 시간표 이미지 저장"}
+                  </button>
+                </div>
+              </>
+            ) : (
+              <div className="flex-1 flex flex-col items-center justify-center text-gray-400 text-sm gap-2">
+                {!fetched ? (
+                  <p>왼쪽에서 조회 후 과목을 선택하면 조합이 자동 생성됩니다</p>
+                ) : selected.size === 0 ? (
+                  <p>과목을 선택하면 조합이 자동 생성됩니다</p>
+                ) : (
+                  <p>선택한 과목 조합이 없습니다 (전공 시간표와 모두 충돌)</p>
+                )}
+              </div>
             )}
           </div>
         )}
+
+        {/* 전체 목록 뷰 */}
+        {leftTab === "list" && (() => {
+          const LIST_COLS: { key: keyof Row | "tag"; label: string }[] = [
+            { key: "tag",     label: "교과구분" },
+            { key: "crseNo",  label: "강좌번호" },
+            { key: "name",    label: "교과목명" },
+            { key: "credit",  label: "학점" },
+            { key: "prof",    label: "담당교수" },
+            { key: "timeStr", label: "강의시간" },
+            { key: "rmrk",   label: "비고" },
+          ];
+          const toggleListSort = (col: keyof Row | "tag") => {
+            setListSortState((prev) => {
+              if (!prev || prev.col !== col) return { col: col as keyof Row, dir: "asc" };
+              if (prev.dir === "asc") return { col: col as keyof Row, dir: "desc" };
+              return null;
+            });
+          };
+          const q = listSearch.toLowerCase();
+          const filtered = allRows.filter((r) => {
+            if (q && !r.name.toLowerCase().includes(q) && !r.prof.toLowerCase().includes(q) && !r.crseNo.toLowerCase().includes(q)) return false;
+            return true;
+          });
+          const sorted = listSortState ? [...filtered].sort((a, b) => {
+            const col = listSortState.col as keyof Row;
+            const av = col === "tag" ? (a.tag ?? "") : a[col] ?? "";
+            const bv = col === "tag" ? (b.tag ?? "") : b[col] ?? "";
+            const an = Number(av), bn = Number(bv);
+            const cmp = !isNaN(an) && !isNaN(bn) ? an - bn : av.localeCompare(bv, "ko");
+            return listSortState.dir === "asc" ? cmp : -cmp;
+          }) : filtered;
+
+          return (
+            <div className="flex-1 flex flex-col overflow-hidden min-h-0">
+              <div className="px-4 py-2 shrink-0 flex gap-2 flex-wrap items-center border-b border-gray-100">
+                <input
+                  type="text" value={listSearch} onChange={(e) => setListSearch(e.target.value)}
+                  placeholder="과목명·교수·강좌번호 검색..."
+                  className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400 w-60"
+                />
+                {fetched && <span className="text-xs text-gray-400 ml-auto">{sorted.length}건</span>}
+              </div>
+              <div className="flex-1 overflow-auto border border-gray-200 rounded-none bg-white min-h-0">
+                {!fetched ? (
+                  <p className="text-sm text-gray-400 text-center py-16">{loading ? "불러오는 중..." : "조회 후 표시됩니다"}</p>
+                ) : sorted.length === 0 ? (
+                  <p className="text-sm text-gray-400 text-center py-16">검색 결과 없음</p>
+                ) : (
+                  <table className="text-sm w-full border-collapse min-w-max">
+                    <thead className="sticky top-0 bg-gray-50 z-10">
+                      <tr>
+                        {LIST_COLS.map((c) => (
+                          <th key={c.key} onClick={() => toggleListSort(c.key)}
+                            className="text-left px-3 py-2 font-semibold text-gray-600 border-b border-gray-200 cursor-pointer select-none whitespace-nowrap hover:bg-gray-100">
+                            {c.label}
+                            {listSortState?.col === c.key ? (listSortState.dir === "asc" ? " ▲" : " ▼") : ""}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {sorted.map((r, i) => {
+                        const displayTag = r.crseNo.startsWith("CLTR") ? "교양" : "일반선택";
+                        const displayTagColor = displayTag === "교양" ? "text-blue-700 bg-blue-50" : "text-amber-700 bg-amber-50";
+                        return (
+                          <tr key={i} className={`border-b border-gray-100 hover:bg-blue-50 transition-colors ${i % 2 === 0 ? "bg-white" : "bg-gray-50/60"}`}>
+                            <td className="px-2 py-1.5 whitespace-nowrap">
+                              <span className={`px-1.5 py-0.5 rounded text-xs font-medium ${displayTagColor}`}>{displayTag}</span>
+                            </td>
+                            <td className="px-2 py-1.5 whitespace-nowrap text-gray-700 text-xs">{r.crseNo}</td>
+                            <td className="px-2 py-1.5 text-gray-700 max-w-45">
+                              <div className="truncate" title={r.name}>{r.name}</div>
+                            </td>
+                            <td className="px-2 py-1.5 text-center whitespace-nowrap text-gray-700">{r.credit}</td>
+                            <td className="px-2 py-1.5 text-gray-700 max-w-25">
+                              <div className="truncate" title={r.prof}>{r.prof}</div>
+                            </td>
+                            <td className="px-2 py-1.5 text-gray-700 max-w-30">
+                              <div className="truncate" title={r.timeStr}>{r.timeStr}</div>
+                            </td>
+                            <td className="px-2 py-1.5 text-gray-400 max-w-25">
+                              <div className="truncate" title={r.rmrk}>{r.rmrk}</div>
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                )}
+              </div>
+            </div>
+          );
+        })()}
       </div>
     </div>
   );
