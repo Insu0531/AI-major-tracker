@@ -295,7 +295,7 @@ export default function Home() {
   const deptsInCombos = [...new Set(combos.flatMap((c) => c.map((s) => s.dept)).filter(Boolean))].sort((a, b) => a.localeCompare(b, "ko"));
   const filteredProfs = profSearch ? profsInCombos.filter((p) => p.includes(profSearch)) : profsInCombos;
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className="h-screen flex flex-col bg-gray-50 overflow-hidden">
       {/* Header */}
       <header className="bg-white border-b border-gray-200 px-6 py-3 flex items-center shrink-0">
         <h1 className="text-base font-bold text-gray-800">경북대 전공 개설과목 조회</h1>
