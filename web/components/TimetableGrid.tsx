@@ -56,126 +56,113 @@ function comboToBlocks(combo: Section[]): Block[] {
   return [...slotMap.values()];
 }
 
+// 모바일 세로에서도 읽을 수 있는 최소 열 너비
+const MIN_COL_W = 52;
+const LABEL_W = 36;
+const MIN_GRID_W = LABEL_W + DAY_LABELS.length * MIN_COL_W;
+
 export default function TimetableGrid({ combo }: { combo: Section[] }) {
   const [tooltip, setTooltip] = useState<{ x: number; y: number; text: string } | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const totalHours = END_H - START_H;
-  const rowH = 48; // px per hour
-  const labelW = 48;
+  const rowH = 52;
   const blocks = comboToBlocks(combo);
 
   return (
     <div ref={containerRef} className="relative overflow-auto border border-gray-200 rounded bg-white select-none">
-      {/* Header row */}
-      <div className="flex sticky top-0 z-10 bg-white border-b border-gray-200">
-        <div style={{ minWidth: labelW }} className="text-xs text-gray-400 flex items-center justify-center py-1" />
-        {DAY_LABELS.map((d) => (
-          <div key={d} className="flex-1 text-center text-xs font-bold py-1 text-gray-600 border-l border-gray-100">
-            {d}
-          </div>
-        ))}
-      </div>
-
-      {/* Grid body */}
-      <div className="relative flex" style={{ height: totalHours * rowH }}>
-        {/* Time labels */}
-        <div style={{ minWidth: labelW }} className="relative shrink-0">
-          {Array.from({ length: totalHours + 1 }, (_, i) => (
-            <div
-              key={i}
-              className="absolute right-1 text-xs text-gray-400"
-              style={{ top: i * rowH - 6 }}
-            >
-              {START_H + i}
+      {/* 최소 너비 래퍼 — 세로 모드에서 가로 스크롤 */}
+      <div style={{ minWidth: MIN_GRID_W }}>
+        {/* Header row */}
+        <div className="flex sticky top-0 z-10 bg-white border-b border-gray-200">
+          <div style={{ minWidth: LABEL_W }} className="text-xs text-gray-400 flex items-center justify-center py-1 shrink-0" />
+          {DAY_LABELS.map((d) => (
+            <div key={d} className="flex-1 text-center text-xs font-bold py-1.5 text-gray-700 border-l border-gray-100">
+              {d}
             </div>
           ))}
         </div>
 
-        {/* Day columns */}
-        {DAY_LABELS.map((_, dayIdx) => (
-          <div key={dayIdx} className="flex-1 relative border-l border-gray-100">
-            {/* Hour lines */}
-            {Array.from({ length: totalHours }, (_, i) => (
+        {/* Grid body */}
+        <div className="relative flex" style={{ height: totalHours * rowH }}>
+          {/* Time labels */}
+          <div style={{ minWidth: LABEL_W }} className="relative shrink-0">
+            {Array.from({ length: totalHours + 1 }, (_, i) => (
               <div
                 key={i}
-                className="absolute w-full border-t border-gray-100"
-                style={{ top: i * rowH }}
-              />
-            ))}
-            {/* Half-hour lines */}
-            {Array.from({ length: totalHours }, (_, i) => (
-              <div
-                key={`h${i}`}
-                className="absolute w-full border-t border-gray-50"
-                style={{ top: i * rowH + rowH / 2 }}
-              />
+                className="absolute right-1 text-[11px] text-gray-400 font-medium"
+                style={{ top: i * rowH - 7 }}
+              >
+                {START_H + i}
+              </div>
             ))}
           </div>
-        ))}
 
-        {/* Blocks overlay */}
-        {blocks.map((b, i) => {
-          const colW = `calc((100% - ${labelW}px) / ${DAY_LABELS.length})`;
-          const top = (b.start - START_H) * rowH;
-          const height = (b.end - b.start) * rowH;
-          const left = `calc(${labelW}px + ${b.day} * (100% - ${labelW}px) / ${DAY_LABELS.length} + 2px)`;
-          const shortName = b.name.replace(/\s*\(.*?\)\s*$/, "").trim();
-
-          return (
-            <div
-              key={i}
-              className="absolute rounded overflow-hidden cursor-pointer"
-              style={{
-                top: top + 1,
-                height: height - 2,
-                left,
-                width: `calc(${colW} - 4px)`,
-                backgroundColor: b.color,
-              }}
-              onMouseEnter={(e) => {
-                const rect = containerRef.current?.getBoundingClientRect();
-                if (!rect) return;
-                const profs = b.prof.split(" / ");
-                const profLine = profs.length > 1
-                  ? profs.join(" / ") + "\n※ 교수별 분반 선택 가능"
-                  : profs[0];
-                setTooltip({
-                  x: e.clientX - rect.left + 12,
-                  y: e.clientY - rect.top + 8,
-                  text: `${b.name}\n${profLine}\n${b.timeStr}`,
-                });
-              }}
-              onMouseMove={(e) => {
-                const rect = containerRef.current?.getBoundingClientRect();
-                if (!rect) return;
-                setTooltip((prev) =>
-                  prev ? { ...prev, x: e.clientX - rect.left + 12, y: e.clientY - rect.top + 8 } : prev
-                );
-              }}
-              onMouseLeave={() => setTooltip(null)}
-            >
-              <p className="text-white text-xs font-bold leading-tight px-1 pt-0.5 truncate">
-                {shortName}
-              </p>
-              {(() => {
-                const profs = b.prof.split(" / ");
-                return (
-                  <p className="text-white/80 text-[11px] px-1 truncate">
-                    {profs.length > 1 ? `(${profs.length}개 분반)` : profs[0]}
-                  </p>
-                );
-              })()}
+          {/* Day columns */}
+          {DAY_LABELS.map((_, dayIdx) => (
+            <div key={dayIdx} className="flex-1 relative border-l border-gray-100">
+              {Array.from({ length: totalHours }, (_, i) => (
+                <div key={i} className="absolute w-full border-t border-gray-100" style={{ top: i * rowH }} />
+              ))}
+              {Array.from({ length: totalHours }, (_, i) => (
+                <div key={`h${i}`} className="absolute w-full border-t border-gray-50" style={{ top: i * rowH + rowH / 2 }} />
+              ))}
             </div>
-          );
-        })}
+          ))}
+
+          {/* Blocks overlay */}
+          {blocks.map((b, i) => {
+            const colW = `calc((100% - ${LABEL_W}px) / ${DAY_LABELS.length})`;
+            const top = (b.start - START_H) * rowH;
+            const height = (b.end - b.start) * rowH;
+            const left = `calc(${LABEL_W}px + ${b.day} * (100% - ${LABEL_W}px) / ${DAY_LABELS.length} + 2px)`;
+            const shortName = b.name.replace(/\s*\(.*?\)\s*$/, "").trim();
+            const profs = b.prof.split(" / ");
+
+            return (
+              <div
+                key={i}
+                className="absolute rounded overflow-hidden cursor-pointer"
+                style={{ top: top + 1, height: height - 2, left, width: `calc(${colW} - 4px)`, backgroundColor: b.color }}
+                onMouseEnter={(e) => {
+                  const rect = containerRef.current?.getBoundingClientRect();
+                  if (!rect) return;
+                  const profLine = profs.length > 1
+                    ? profs.join(" / ") + "\n※ 교수별 분반 선택 가능"
+                    : profs[0];
+                  setTooltip({ x: e.clientX - rect.left + 12, y: e.clientY - rect.top + 8, text: `${b.name}\n${profLine}\n${b.timeStr}` });
+                }}
+                onMouseMove={(e) => {
+                  const rect = containerRef.current?.getBoundingClientRect();
+                  if (!rect) return;
+                  setTooltip((prev) => prev ? { ...prev, x: e.clientX - rect.left + 12, y: e.clientY - rect.top + 8 } : prev);
+                }}
+                onMouseLeave={() => setTooltip(null)}
+                onTouchStart={() => {
+                  const profLine = profs.length > 1
+                    ? profs.join(" / ") + "\n※ 교수별 분반 선택 가능"
+                    : profs[0];
+                  setTooltip({ x: 8, y: 8, text: `${b.name}\n${profLine}\n${b.timeStr}` });
+                }}
+                onTouchEnd={() => setTimeout(() => setTooltip(null), 2000)}
+              >
+                <p className="text-white text-xs font-bold leading-tight px-1 pt-0.5 truncate" style={{ WebkitFontSmoothing: "antialiased" }}>
+                  {shortName}
+                </p>
+                <p className="text-white text-[11px] px-1 truncate opacity-90" style={{ WebkitFontSmoothing: "antialiased" }}>
+                  {profs.length > 1 ? `(${profs.length}개 분반)` : profs[0]}
+                </p>
+              </div>
+            );
+          })}
+        </div>
       </div>
 
       {/* Tooltip */}
       {tooltip && (
         <div
-          className="absolute z-50 bg-yellow-50 border border-gray-300 rounded shadow-md px-2 py-1.5 text-xs pointer-events-none whitespace-pre"
-          style={{ left: tooltip.x, top: tooltip.y }}
+          className="absolute z-50 bg-yellow-50 border border-gray-300 rounded shadow-md px-2.5 py-2 text-sm pointer-events-none whitespace-pre leading-relaxed text-gray-800"
+          style={{ left: tooltip.x, top: tooltip.y, maxWidth: "calc(100% - 16px)" }}
         >
           {tooltip.text}
         </div>
