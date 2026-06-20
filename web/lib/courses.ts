@@ -5,7 +5,7 @@
   credit: string;
 };
 
-export type Major = "ai" | "elec" | "mech" | "space" | "energy" | "energy_re" | "energy_cv" | "nursing" | "physics" | "math" | "chem" | "stat" | "geo_geol" | "geo_astro" | "geo_ocean" | "kor_lit" | "eng_lit" | "fre_lit" | "ger_lit" | "chi_lit" | "history" | "philosophy" | "anthro" | "jpn_lit" | "kor_clas" | "rus_lit" | "poli_sci" | "sociology" | "geography" | "doc_info" | "psychology" | "business" | "econ" | "polymer" | "env_eng" | "textile" | "metal_mat" | "agri_civil" | "plant_sci" | "env_life_chem" | "food_biotech" | "food_mat" | "food_app" | "plant_med" | "food_econ" | "smart_bio_mech" | "edu" | "kor_edu" | "eng_edu" | "ethics_edu" | "math_edu" | "home_edu" | "ger_edu" | "fre_edu" | "history_edu" | "geo_edu" | "social_edu" | "phys_edu" | "chem_edu" | "bio_edu" | "earth_edu" | "civic_edu" | "commerce_edu" | "geo2_edu" | "music_edu" | "art_edu" | "home_mgmt" | "child_family" | "clothing" | "food_nutrition" | "life_sci_a" | "life_sci_b" | "life_sci_c" | "eco_housing" | "child_dev" | "child_edu" | "pub_admin" | "pub_policy" | "bio_med_eng" | "robot_smart" | "h2_energy" | "smart_mobility" | "innov_pharma" | "bio_med_fusion" | "robotics" | "adv_tech_self1" | "adv_tech_self2" | "auto_fusion" | "ai_conv" | "bio_med_conv" | "robot_conv" | "h2_conv" | "mobility_conv";
+export type Major = "ai" | "elec" | "mech" | "space" | "energy" | "energy_re" | "energy_cv" | "nursing" | "physics" | "math" | "chem" | "stat" | "geo_geol" | "geo_astro" | "geo_ocean" | "kor_lit" | "eng_lit" | "fre_lit" | "ger_lit" | "chi_lit" | "history" | "philosophy" | "anthro" | "jpn_lit" | "kor_clas" | "rus_lit" | "poli_sci" | "sociology" | "geography" | "doc_info" | "psychology" | "business" | "econ" | "polymer" | "env_eng" | "textile" | "metal_mat" | "agri_civil" | "plant_sci" | "env_life_chem" | "food_biotech" | "food_mat" | "food_app" | "plant_med" | "food_econ" | "smart_bio_mech" | "edu" | "kor_edu" | "eng_edu" | "ethics_edu" | "math_edu" | "home_edu" | "ger_edu" | "fre_edu" | "history_edu" | "geo_edu" | "social_edu" | "phys_edu" | "chem_edu" | "bio_edu" | "earth_edu" | "civic_edu" | "commerce_edu" | "geo2_edu" | "music_edu" | "art_edu" | "home_mgmt" | "child_family" | "clothing" | "food_nutrition" | "life_sci_a" | "life_sci_b" | "life_sci_c" | "eco_housing" | "child_dev" | "child_edu" | "pub_admin" | "pub_policy" | "bio_med_eng" | "robot_smart" | "h2_energy" | "smart_mobility" | "innov_pharma" | "bio_med_fusion" | "robotics" | "adv_tech_self1" | "adv_tech_self2" | "auto_fusion" | "ai_conv" | "bio_med_conv" | "robot_conv" | "h2_conv" | "mobility_conv" | "cs_know" | "cs_sw_conv" | "cs_sys_sw" | "cs_global_sw" | "cs_platform" | "cs_data" | "cs_human_ai" | "cs_ai_comp" | "cs_deep" | "cs_adv";
 
 export const MAJOR_LABELS: Record<Major, string> = {
   ai: "전자공학부 인공지능전공",
@@ -92,6 +92,16 @@ export const MAJOR_LABELS: Record<Major, string> = {
   philosophy: "철학과",
   adv_tech_self1: "첨단기술융합대학 자율학부1",
   adv_tech_self2: "첨단기술융합대학 자율학부2",
+  cs_global_sw: "컴퓨터학부-글로벌소프트웨어융합전공",
+  cs_data: "컴퓨터학부-데이터과학전공",
+  cs_sys_sw: "컴퓨터학부-시스템소프트웨어전공",
+  cs_deep: "컴퓨터학부-심화컴퓨팅전공",
+  cs_sw_conv: "컴퓨터학부-융합소프트웨어전공",
+  cs_human_ai: "컴퓨터학부-인간중심소프트웨어전공",
+  cs_ai_comp: "컴퓨터학부-인공지능컴퓨팅전공",
+  cs_know: "컴퓨터학부-지식정보컴퓨팅전공",
+  cs_adv: "컴퓨터학부-첨단컴퓨팅연구전공",
+  cs_platform: "컴퓨터학부-플랫폼소프트웨어전공",
   stat: "통계학과",
   kor_clas: "한문학과",
   geo_ocean: "해양학전공",
@@ -197,6 +207,16 @@ export const MAJOR_META: Record<Major, { deptCd: string; baseDeptCd?: string }> 
   robot_conv: { deptCd: "1T0103", baseDeptCd: "1T01" },
   h2_conv: { deptCd: "1T0104", baseDeptCd: "1T01" },
   mobility_conv: { deptCd: "1T0105", baseDeptCd: "1T01" },
+  cs_know: { deptCd: "100201", baseDeptCd: "1002" },
+  cs_sw_conv: { deptCd: "100202", baseDeptCd: "1002" },
+  cs_sys_sw: { deptCd: "100203", baseDeptCd: "1002" },
+  cs_global_sw: { deptCd: "100204", baseDeptCd: "1002" },
+  cs_platform: { deptCd: "100205", baseDeptCd: "1002" },
+  cs_data: { deptCd: "100206", baseDeptCd: "1002" },
+  cs_human_ai: { deptCd: "100207", baseDeptCd: "1002" },
+  cs_ai_comp: { deptCd: "100208", baseDeptCd: "1002" },
+  cs_deep: { deptCd: "100209", baseDeptCd: "1002" },
+  cs_adv: { deptCd: "100210", baseDeptCd: "1002" },
 };
 
 /** /public/courses/{major}/{entryYear}.json 에서 과목 목록 fetch (클라이언트용) */

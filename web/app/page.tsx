@@ -53,6 +53,19 @@ export default function Home() {
   };
   const [pinnedCombo, setPinnedCombo] = useState<Section[] | null>(null);
   const [major, setMajor] = useState<Major>("ai");
+  const [majorSearch, setMajorSearch] = useState("");
+  const [majorDropOpen, setMajorDropOpen] = useState(false);
+  const majorDropRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (majorDropRef.current && !majorDropRef.current.contains(e.target as Node)) {
+        setMajorDropOpen(false);
+        setMajorSearch("");
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
   const [semYear, setSemYear] = useState("2026");
   const [semTerm, setSemTerm] = useState("1");
   const [entryYear, setEntryYear] = useState(2026);
@@ -327,17 +340,47 @@ export default function Home() {
         {tab === "search" && (
           <div className="flex flex-col flex-1 overflow-hidden p-4 gap-3">
             <div className="flex items-center gap-3 flex-wrap">
-              {/* 전공 드롭다운 */}
-              <select
-                className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
-                value={major}
-                onChange={(e) => { setMajor(e.target.value as Major); setRows([]); setStatusText(""); }}
-                disabled={loading}
-              >
-                {(Object.entries(MAJOR_LABELS) as [Major, string][]).map(([key, label]) => (
-                  <option key={key} value={key}>{label}</option>
-                ))}
-              </select>
+              {/* 전공 드롭다운 (검색 가능) */}
+              <div ref={majorDropRef} className="relative">
+                <button
+                  type="button"
+                  disabled={loading}
+                  onClick={() => { setMajorDropOpen((v) => !v); setMajorSearch(""); }}
+                  className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400 bg-white min-w-48 text-left flex items-center justify-between gap-2 disabled:opacity-50"
+                >
+                  <span className="truncate">{MAJOR_LABELS[major]}</span>
+                  <span className="text-gray-400 shrink-0">▾</span>
+                </button>
+                {majorDropOpen && (
+                  <div className="absolute z-50 top-full left-0 mt-1 w-72 bg-white border border-gray-200 rounded shadow-lg flex flex-col" style={{ maxHeight: 320 }}>
+                    <div className="p-1.5 border-b border-gray-100 shrink-0">
+                      <input
+                        autoFocus
+                        type="text"
+                        value={majorSearch}
+                        onChange={(e) => setMajorSearch(e.target.value)}
+                        placeholder="전공 검색..."
+                        className="w-full border border-gray-300 rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+                      />
+                    </div>
+                    <div className="overflow-y-auto flex-1">
+                      {(Object.entries(MAJOR_LABELS) as [Major, string][])
+                        .filter(([, label]) => !majorSearch || label.includes(majorSearch))
+                        .map(([key, label]) => (
+                          <button
+                            key={key}
+                            type="button"
+                            onClick={() => { setMajor(key); setRows([]); setStatusText(""); setMajorDropOpen(false); setMajorSearch(""); }}
+                            className={`w-full text-left px-3 py-1.5 text-sm hover:bg-blue-50 transition-colors ${key === major ? "bg-blue-100 text-blue-700 font-medium" : "text-gray-700"}`}
+                          >
+                            {label}
+                          </button>
+                        ))
+                      }
+                    </div>
+                  </div>
+                )}
+              </div>
               {/* 입학연도 드롭다운 */}
               <select
                 className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"

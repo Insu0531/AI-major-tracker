@@ -1,0 +1,350 @@
+[
+  {
+    "grade": "2",
+    "code": "SMMB0204",
+    "name": "MATLAB",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "SMMB0201",
+    "name": "SW기초",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0331",
+    "name": "고체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SMMB0202",
+    "name": "공학및전공의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SMMB0239",
+    "name": "공학선형대수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0212",
+    "name": "공학수학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SMMB0240",
+    "name": "공학확률및통계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0225",
+    "name": "동역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SMMB0241",
+    "name": "모빌리티 메카트로닉스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SMMB0205",
+    "name": "모빌리티 썸머스쿨1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "SMMB0208",
+    "name": "모빌리티 윈터스쿨1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "SMMB0206",
+    "name": "모빌리티기초설계1A",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "SMMB0207",
+    "name": "모빌리티기초설계1B",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "SMMB0209",
+    "name": "모빌리티기초설계2A",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "SMMB0210",
+    "name": "모빌리티기초설계2B",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "AUTO0351",
+    "name": "센서및계측공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "STAT0452",
+    "name": "수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0226",
+    "name": "열역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0332",
+    "name": "유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0324",
+    "name": "인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EESO0212",
+    "name": "재료공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0223",
+    "name": "정역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENVI0311",
+    "name": "창의공학설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CHEN0241",
+    "name": "프로그래밍언어",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "MACH0325",
+    "name": "기구학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SMMB0217",
+    "name": "로봇운영체제",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "MOBI0222",
+    "name": "머신러닝",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SMMB0211",
+    "name": "모델링및제어1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SMMB0218",
+    "name": "모델링및제어2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CROS0214",
+    "name": "모빌리티 비전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SMMB0212",
+    "name": "모빌리티 썸머스쿨2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "SMMB0219",
+    "name": "모빌리티 윈터스쿨2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "SMMB0213",
+    "name": "모빌리티 제조공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SMMB0214",
+    "name": "모빌리티요소설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SMMB0215",
+    "name": "모빌리티응용설계1A",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "SMMB0216",
+    "name": "모빌리티응용설계1B",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "SMMB0220",
+    "name": "모빌리티응용설계2A",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "SMMB0221",
+    "name": "모빌리티응용설계2B",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "SMMB0222",
+    "name": "배터리와 연료전지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SMMB0223",
+    "name": "스마트제조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0345",
+    "name": "열전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SMMB0224",
+    "name": "진동시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SMMB0225",
+    "name": "FEM",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SMMB0226",
+    "name": "드론항공공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SEEE0535",
+    "name": "로보틱스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SMMB0227",
+    "name": "모빌리티 신뢰성공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SMMB0233",
+    "name": "모빌리티 최적설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SMMB0234",
+    "name": "모빌리티NVH",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SMMB0228",
+    "name": "모빌리티종합설계1A",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "SMMB0229",
+    "name": "모빌리티종합설계1B",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "SMMB0235",
+    "name": "모빌리티종합설계2A",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "SMMB0230",
+    "name": "미래차 동역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SMMB0231",
+    "name": "전기차동력시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SMMB0236",
+    "name": "차세대에너지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SMMB0232",
+    "name": "첨단레이저응용기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SMMB0237",
+    "name": "친환경차시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SMMB0238",
+    "name": "품질과안전관리",
+    "credit": "3-3-0"
+  }
+]
