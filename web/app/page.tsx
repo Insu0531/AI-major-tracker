@@ -47,7 +47,8 @@ export default function Home() {
   const [combos, setCombos] = useState<Section[][]>([]);
   const [filteredCombos, setFilteredCombos] = useState<Section[][]>([]);
   const [comboIdx, setComboIdx] = useState(0);
-  const [filterMap, setFilterMap] = useState<Map<string, boolean>>(new Map());
+  // filterMap: name → true(필수, 교수 무관) | string(필수 + 특정 교수)
+  const [filterMap, setFilterMap] = useState<Map<string, true | string>>(new Map());
   const [minCredit, setMinCredit] = useState<string>("");
   const [dayOff, setDayOff] = useState<Set<number>>(new Set());
   const [noMorning, setNoMorning] = useState<string>("");
@@ -179,14 +180,19 @@ export default function Home() {
 
   useEffect(() => {
     if (combos.length === 0) { setFilteredCombos([]); return; }
-    const required = [...filterMap.entries()].filter(([, v]) => v).map(([k]) => k);
+    // filterMap value: true = 과목만 필수, string = 과목+교수 필수
+    const required = [...filterMap.entries()];
     const min = parseInt(minCredit);
     const morningLimit = parseInt(noMorning);
     const eveningLimit = parseInt(noEvening);
 
     setFilteredCombos(
       combos.filter((combo) => {
-        if (required.length && !required.every((r) => combo.some((sec) => sec.name === r))) return false;
+        if (required.length && !required.every(([name, prof]) =>
+          combo.some((sec) =>
+            sec.name === name && (prof === true || sec.profs.includes(prof as string))
+          )
+        )) return false;
         if (!isNaN(min) && min > 0) {
           if (combo.reduce((s, sec) => s + sec.credit, 0) < min) return false;
         }
@@ -219,6 +225,12 @@ export default function Home() {
   const currentCombo = filteredCombos[comboIdx] ?? [];
   const totalCredit = currentCombo.reduce((s, sec) => s + sec.credit, 0);
   const namesInCombos = [...new Set(combos.flatMap((c) => c.map((s) => s.name)))];
+  // 과목별 교수 목록: name → 교수[]
+  const profsByName = new Map<string, string[]>();
+  for (const name of namesInCombos) {
+    const profs = [...new Set(combos.flatMap((c) => c.filter((s) => s.name === name).flatMap((s) => s.profs)))].sort((a, b) => a.localeCompare(b, "ko"));
+    profsByName.set(name, profs);
+  }
   const profsInCombos = [...new Set(combos.flatMap((c) => c.flatMap((s) => s.profs)))].sort((a, b) => a.localeCompare(b, "ko"));
   const deptsInCombos = [...new Set(combos.flatMap((c) => c.map((s) => s.dept)).filter(Boolean))].sort((a, b) => a.localeCompare(b, "ko"));
   const filteredProfs = profSearch ? profsInCombos.filter((p) => p.includes(profSearch)) : profsInCombos;
@@ -404,7 +416,7 @@ export default function Home() {
                   }`}
                 >
                   필터
-                  {([...filterMap.values()].some(Boolean) || parseInt(minCredit) > 0 || dayOff.size > 0 || noMorning || noEvening || excludeProfs.size > 0 || includeProfs.size > 0 || includeDepts.size > 0) && (
+                  {(filterMap.size > 0 || parseInt(minCredit) > 0 || dayOff.size > 0 || noMorning || noEvening || excludeProfs.size > 0 || includeProfs.size > 0 || includeDepts.size > 0) && (
                     <span className="ml-1 text-xs text-blue-500">●</span>
                   )}
                 </button>
@@ -482,6 +494,49 @@ export default function Home() {
                   ) : (
                     <>
                       <div className="overflow-y-auto flex-1 px-2 pt-2 pb-1 flex flex-col gap-4">
+                        {/* 필수 포함 과목 + 교수 */}
+                        <div className="px-1">
+                          <p className="text-xs text-gray-400 mb-1.5">필수 포함 과목 <span className="text-gray-300">(교수 지정 가능)</span></p>
+                          <div className="flex flex-col gap-1">
+                            {namesInCombos.map((name) => {
+                              const val = filterMap.get(name);
+                              const checked = val !== undefined;
+                              const profs = profsByName.get(name) ?? [];
+                              return (
+                                <div key={name}>
+                                  <label className="flex items-center gap-2 px-1 py-0.5 hover:bg-gray-50 rounded cursor-pointer">
+                                    <input
+                                      type="checkbox"
+                                      checked={checked}
+                                      onChange={(e) => {
+                                        const next = new Map(filterMap);
+                                        if (e.target.checked) next.set(name, true);
+                                        else next.delete(name);
+                                        setFilterMap(next);
+                                      }}
+                                    />
+                                    <span className="text-sm text-gray-700 leading-tight">{name.replace(/\s*\(.*?\)\s*$/, "")}</span>
+                                  </label>
+                                  {checked && profs.length > 1 && (
+                                    <select
+                                      value={val === true ? "" : val}
+                                      onChange={(e) => {
+                                        const next = new Map(filterMap);
+                                        next.set(name, e.target.value === "" ? true : e.target.value);
+                                        setFilterMap(next);
+                                      }}
+                                      className="ml-6 mt-0.5 w-[calc(100%-1.5rem)] border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-blue-400"
+                                    >
+                                      <option value="">교수 무관</option>
+                                      {profs.map((p) => <option key={p} value={p}>{p}</option>)}
+                                    </select>
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+
                         {/* 공강 요일 */}
                         <div className="px-1">
                           <p className="text-xs text-gray-400 mb-1.5">공강 요일 <span className="text-gray-300">(중복 선택)</span></p>
@@ -632,24 +687,6 @@ export default function Home() {
                           </div>
                         )}
 
-                        {/* 필수 포함 과목 */}
-                        <div className="px-1">
-                          <p className="text-xs text-gray-400 mb-1">필수 포함 과목</p>
-                          {namesInCombos.map((name) => (
-                            <label key={name} className="flex items-center gap-2 px-1 py-1 hover:bg-gray-50 rounded cursor-pointer">
-                              <input
-                                type="checkbox"
-                                checked={filterMap.get(name) ?? false}
-                                onChange={(e) => {
-                                  const next = new Map(filterMap);
-                                  next.set(name, e.target.checked);
-                                  setFilterMap(next);
-                                }}
-                              />
-                              <span className="text-sm text-gray-700">{name.replace(/\s*\(.*?\)\s*$/, "")}</span>
-                            </label>
-                          ))}
-                        </div>
                       </div>
                       <div className="p-2 border-t border-gray-100 shrink-0">
                         <p className="text-xs text-gray-500 text-center">
