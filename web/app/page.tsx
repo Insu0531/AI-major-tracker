@@ -49,6 +49,13 @@ export default function Home() {
   const [comboIdx, setComboIdx] = useState(0);
   const [filterMap, setFilterMap] = useState<Map<string, boolean>>(new Map());
   const [minCredit, setMinCredit] = useState<string>("");
+  const [dayOff, setDayOff] = useState<Set<number>>(new Set());
+  const [noMorning, setNoMorning] = useState<string>("");
+  const [noEvening, setNoEvening] = useState<string>("");
+  const [excludeProfs, setExcludeProfs] = useState<Set<string>>(new Set());
+  const [includeProfs, setIncludeProfs] = useState<Set<string>>(new Set());
+  const [includeDepts, setIncludeDepts] = useState<Set<string>>(new Set());
+  const [profSearch, setProfSearch] = useState<string>("");
   const [leftTab, setLeftTab] = useState<"select" | "filter">("select");
   const [panelOpen, setPanelOpen] = useState(() => typeof window !== "undefined" && window.innerWidth >= 768);
   const [flashKey, setFlashKey] = useState(0);
@@ -152,6 +159,13 @@ export default function Home() {
     setComboIdx(0);
     setFilterMap(new Map());
     setMinCredit("");
+    setDayOff(new Set());
+    setNoMorning("");
+    setNoEvening("");
+    setExcludeProfs(new Set());
+    setIncludeProfs(new Set());
+    setIncludeDepts(new Set());
+    setProfSearch("");
     setFlashKey((k) => k + 1);
     setTab("wizard");
     setLeftTab("filter");
@@ -162,12 +176,42 @@ export default function Home() {
   const applyFilter = () => {
     const required = [...filterMap.entries()].filter(([, v]) => v).map(([k]) => k);
     const min = parseInt(minCredit);
+    const morningLimit = parseInt(noMorning);   // 이 시각 이전 시작 수업 제외
+    const eveningLimit = parseInt(noEvening);   // 이 시각 이후 끝나는 수업 제외
+
     setFilteredCombos(
       combos.filter((combo) => {
+        // 필수 과목
         if (required.length && !required.every((r) => combo.some((sec) => sec.name === r))) return false;
+        // 최소 학점
         if (!isNaN(min) && min > 0) {
-          const total = combo.reduce((s, sec) => s + sec.credit, 0);
-          if (total < min) return false;
+          if (combo.reduce((s, sec) => s + sec.credit, 0) < min) return false;
+        }
+        // 제외 교수 — 조합 내 어떤 section의 profs에라도 포함되면 제외
+        if (excludeProfs.size > 0) {
+          if (combo.some((sec) => sec.profs.some((p) => excludeProfs.has(p)))) return false;
+        }
+        // 포함 교수 — 선택한 교수 중 하나라도 조합에 없으면 제외
+        if (includeProfs.size > 0) {
+          if (![...includeProfs].every((p) => combo.some((sec) => sec.profs.includes(p)))) return false;
+        }
+        // 개설 전공 — 선택한 학과 중 하나라도 없는 조합 제외 (하나라도 포함이면 통과)
+        if (includeDepts.size > 0) {
+          if (!combo.some((sec) => includeDepts.has(sec.dept))) return false;
+        }
+        const allSlots = combo.flatMap((sec) => sec.times);
+        // 공강 요일
+        if (dayOff.size > 0) {
+          const usedDays = new Set(allSlots.map((t) => t.day));
+          if ([...dayOff].some((d) => usedDays.has(d))) return false;
+        }
+        // 아침 수업 없음 (morningLimit시 이전에 시작하는 수업 제외)
+        if (!isNaN(morningLimit) && morningLimit > 0) {
+          if (allSlots.some((t) => t.start < morningLimit)) return false;
+        }
+        // 저녁 수업 없음 (eveningLimit시 이후에 끝나는 수업 제외)
+        if (!isNaN(eveningLimit) && eveningLimit > 0) {
+          if (allSlots.some((t) => t.end > eveningLimit)) return false;
         }
         return true;
       })
@@ -178,6 +222,9 @@ export default function Home() {
   const currentCombo = filteredCombos[comboIdx] ?? [];
   const totalCredit = currentCombo.reduce((s, sec) => s + sec.credit, 0);
   const namesInCombos = [...new Set(combos.flatMap((c) => c.map((s) => s.name)))];
+  const profsInCombos = [...new Set(combos.flatMap((c) => c.flatMap((s) => s.profs)))].sort((a, b) => a.localeCompare(b, "ko"));
+  const deptsInCombos = [...new Set(combos.flatMap((c) => c.map((s) => s.dept)).filter(Boolean))].sort((a, b) => a.localeCompare(b, "ko"));
+  const filteredProfs = profSearch ? profsInCombos.filter((p) => p.includes(profSearch)) : profsInCombos;
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       {/* Header */}
@@ -360,7 +407,7 @@ export default function Home() {
                   }`}
                 >
                   필터
-                  {([...filterMap.values()].some(Boolean) || (parseInt(minCredit) > 0)) && (
+                  {([...filterMap.values()].some(Boolean) || parseInt(minCredit) > 0 || dayOff.size > 0 || noMorning || noEvening || excludeProfs.size > 0 || includeProfs.size > 0 || includeDepts.size > 0) && (
                     <span className="ml-1 text-xs text-blue-500">●</span>
                   )}
                 </button>
@@ -437,8 +484,62 @@ export default function Home() {
                     </div>
                   ) : (
                     <>
-                      <div className="overflow-y-auto flex-1 px-2 pt-2 pb-1 flex flex-col gap-3">
-                        {/* 학점 필터 */}
+                      <div className="overflow-y-auto flex-1 px-2 pt-2 pb-1 flex flex-col gap-4">
+                        {/* 공강 요일 */}
+                        <div className="px-1">
+                          <p className="text-xs text-gray-400 mb-1.5">공강 요일 <span className="text-gray-300">(중복 선택)</span></p>
+                          <div className="flex gap-1">
+                            {["월", "화", "수", "목", "금"].map((d, i) => (
+                              <button
+                                key={i}
+                                onClick={() => {
+                                  const next = new Set(dayOff);
+                                  next.has(i) ? next.delete(i) : next.add(i);
+                                  setDayOff(next);
+                                }}
+                                className={`flex-1 py-1.5 text-sm rounded border transition-colors ${
+                                  dayOff.has(i)
+                                    ? "bg-blue-600 text-white border-blue-600"
+                                    : "border-gray-300 text-gray-600 hover:bg-gray-50"
+                                }`}
+                              >
+                                {d}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* 아침 수업 없음 */}
+                        <div className="px-1">
+                          <p className="text-xs text-gray-400 mb-1">아침 수업 없음</p>
+                          <select
+                            value={noMorning}
+                            onChange={(e) => setNoMorning(e.target.value)}
+                            className="w-full border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+                          >
+                            <option value="">제한 없음</option>
+                            {["9", "10", "11", "12"].map((h) => (
+                              <option key={h} value={h}>{h}시 이전 수업 없음</option>
+                            ))}
+                          </select>
+                        </div>
+
+                        {/* 저녁 수업 없음 */}
+                        <div className="px-1">
+                          <p className="text-xs text-gray-400 mb-1">저녁 수업 없음</p>
+                          <select
+                            value={noEvening}
+                            onChange={(e) => setNoEvening(e.target.value)}
+                            className="w-full border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+                          >
+                            <option value="">제한 없음</option>
+                            {["17", "18", "19", "20", "21"].map((h) => (
+                              <option key={h} value={h}>{h}시 이후 수업 없음</option>
+                            ))}
+                          </select>
+                        </div>
+
+                        {/* 최소 학점 */}
                         <div className="px-1">
                           <p className="text-xs text-gray-400 mb-1">최소 학점</p>
                           <select
@@ -453,7 +554,88 @@ export default function Home() {
                           </select>
                         </div>
 
-                        {/* 필수 과목 필터 */}
+                        {/* 교수 필터 */}
+                        <div className="px-1">
+                          <p className="text-xs text-gray-400 mb-1.5">교수 필터</p>
+                          <input
+                            type="text"
+                            value={profSearch}
+                            onChange={(e) => setProfSearch(e.target.value)}
+                            placeholder="교수 검색..."
+                            className="w-full border border-gray-300 rounded px-2 py-1 text-sm mb-1.5 focus:outline-none focus:ring-1 focus:ring-blue-400"
+                          />
+                          <div className="max-h-36 overflow-y-auto flex flex-col gap-0.5 border border-gray-100 rounded p-1">
+                            {filteredProfs.length === 0 && (
+                              <p className="text-xs text-gray-300 px-1 py-1">결과 없음</p>
+                            )}
+                            {filteredProfs.map((prof) => {
+                              const isExclude = excludeProfs.has(prof);
+                              const isInclude = includeProfs.has(prof);
+                              return (
+                                <div key={prof} className="flex items-center justify-between px-1 py-0.5 hover:bg-gray-50 rounded">
+                                  <span className="text-sm text-gray-700 truncate flex-1">{prof}</span>
+                                  <div className="flex gap-1 shrink-0 ml-1">
+                                    <button
+                                      onClick={() => {
+                                        const next = new Set(includeProfs);
+                                        const excl = new Set(excludeProfs);
+                                        if (isInclude) { next.delete(prof); }
+                                        else { next.add(prof); excl.delete(prof); }
+                                        setIncludeProfs(next); setExcludeProfs(excl);
+                                      }}
+                                      className={`text-[11px] px-1.5 py-0.5 rounded border transition-colors ${isInclude ? "bg-blue-600 text-white border-blue-600" : "border-gray-300 text-gray-500 hover:bg-gray-100"}`}
+                                    >포함</button>
+                                    <button
+                                      onClick={() => {
+                                        const next = new Set(excludeProfs);
+                                        const incl = new Set(includeProfs);
+                                        if (isExclude) { next.delete(prof); }
+                                        else { next.add(prof); incl.delete(prof); }
+                                        setExcludeProfs(next); setIncludeProfs(incl);
+                                      }}
+                                      className={`text-[11px] px-1.5 py-0.5 rounded border transition-colors ${isExclude ? "bg-red-500 text-white border-red-500" : "border-gray-300 text-gray-500 hover:bg-gray-100"}`}
+                                    >제외</button>
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
+                          {(includeProfs.size > 0 || excludeProfs.size > 0) && (
+                            <div className="mt-1 flex flex-wrap gap-1">
+                              {[...includeProfs].map((p) => (
+                                <span key={p} className="text-[11px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded">{p} ✓</span>
+                              ))}
+                              {[...excludeProfs].map((p) => (
+                                <span key={p} className="text-[11px] bg-red-100 text-red-600 px-1.5 py-0.5 rounded">{p} ✗</span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+
+                        {/* 개설 전공 필터 */}
+                        {deptsInCombos.length > 0 && (
+                          <div className="px-1">
+                            <p className="text-xs text-gray-400 mb-1.5">개설 전공 포함</p>
+                            <div className="flex flex-col gap-0.5">
+                              {deptsInCombos.map((dept) => (
+                                <label key={dept} className="flex items-center gap-2 px-1 py-0.5 hover:bg-gray-50 rounded cursor-pointer">
+                                  <input
+                                    type="checkbox"
+                                    checked={includeDepts.has(dept)}
+                                    onChange={(e) => {
+                                      const next = new Set(includeDepts);
+                                      e.target.checked ? next.add(dept) : next.delete(dept);
+                                      setIncludeDepts(next);
+                                    }}
+                                  />
+                                  <span className="text-sm text-gray-700">{dept}</span>
+                                </label>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* 필수 포함 과목 */}
                         <div className="px-1">
                           <p className="text-xs text-gray-400 mb-1">필수 포함 과목</p>
                           {namesInCombos.map((name) => (

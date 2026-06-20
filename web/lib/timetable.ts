@@ -21,6 +21,7 @@ export function parseTimes(timeStr: string): TimeSlot[] {
 export type Section = {
   name: string;
   profs: string[];
+  dept: string;
   timeStr: string;
   times: TimeSlot[];
   credit: number;
@@ -30,9 +31,8 @@ export type Section = {
 export type SectionGroup = Section[];
 
 export function buildSectionGroups(
-  rows: { grade: string; credit: string; crseNo: string; name: string; prof: string; timeStr: string }[]
+  rows: { grade: string; credit: string; crseNo: string; name: string; dept: string; prof: string; timeStr: string }[]
 ): SectionGroup[] {
-  // 과목코드 앞부분으로 그룹핑
   const groupMap = new Map<string, { name: string; credit: number; rows: typeof rows }>();
   for (const row of rows) {
     const base = row.crseNo.replace(/-\d+$/, "");
@@ -45,7 +45,6 @@ export function buildSectionGroups(
 
   const groups: SectionGroup[] = [];
   for (const { name, credit, rows: groupRows } of groupMap.values()) {
-    // 같은 (name, timeStr)은 교수만 합침
     const slotMap = new Map<string, Section>();
     for (const row of groupRows) {
       const times = parseTimes(row.timeStr);
@@ -55,6 +54,7 @@ export function buildSectionGroups(
         slotMap.set(key, {
           name,
           profs: [row.prof],
+          dept: row.dept,
           timeStr: row.timeStr,
           times,
           credit,
