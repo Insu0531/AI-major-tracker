@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback } from "react";
 import { buildSectionGroups, generateCombos, Section, SectionGroup } from "@/lib/timetable";
-import { COURSES_BY_MAJOR, MAJOR_LABELS, Major } from "@/lib/courses";
+import { COURSES_BY_MAJOR, Major } from "@/lib/courses";
 import TimetableGrid from "@/components/TimetableGrid";
 
 type Row = {
@@ -204,22 +204,16 @@ export default function Home() {
         {tab === "search" && (
           <div className="flex flex-col flex-1 overflow-hidden p-4 gap-3">
             <div className="flex items-center gap-3 flex-wrap">
-              {/* 전공 선택 */}
-              {(Object.entries(MAJOR_LABELS) as [Major, string][]).map(([key, label]) => (
-                <button
-                  key={key}
-                  onClick={() => { setMajor(key); setRows([]); setStatusText(""); }}
-                  disabled={loading}
-                  className={`px-3 py-1.5 text-sm rounded border transition-colors ${
-                    major === key
-                      ? "bg-indigo-600 text-white border-indigo-600"
-                      : "border-gray-300 text-gray-600 hover:bg-gray-50"
-                  }`}
-                >
-                  {label}
-                </button>
-              ))}
-              <span className="text-gray-300">|</span>
+              {/* 전공 드롭다운 */}
+              <select
+                className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+                value={major}
+                onChange={(e) => { setMajor(e.target.value as Major); setRows([]); setStatusText(""); }}
+                disabled={loading}
+              >
+                <option value="ai">전자공학부 인공지능전공</option>
+                <option value="elec">전자공학부</option>
+              </select>
               {/* 연도 드롭다운 */}
               <select
                 className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
@@ -231,21 +225,18 @@ export default function Home() {
                   <option key={y} value={y}>{y}년</option>
                 ))}
               </select>
-              {/* 학기 버튼 */}
-              {(["1", "2", "s", "w"] as const).map((t) => (
-                <button
-                  key={t}
-                  onClick={() => setSemTerm(t)}
-                  disabled={loading}
-                  className={`px-3 py-1.5 text-sm rounded border transition-colors ${
-                    semTerm === t
-                      ? "bg-blue-600 text-white border-blue-600"
-                      : "border-gray-300 text-gray-600 hover:bg-gray-50"
-                  }`}
-                >
-                  {{ "1": "1학기", "2": "2학기", "s": "여름", "w": "겨울" }[t]}
-                </button>
-              ))}
+              {/* 학기 드롭다운 */}
+              <select
+                className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+                value={semTerm}
+                onChange={(e) => setSemTerm(e.target.value)}
+                disabled={loading}
+              >
+                <option value="1">1학기</option>
+                <option value="2">2학기</option>
+                <option value="s">여름</option>
+                <option value="w">겨울</option>
+              </select>
               <button
                 onClick={doFetch}
                 disabled={loading}
