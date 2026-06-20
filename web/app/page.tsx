@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { buildSectionGroups, generateCombos, Section, SectionGroup } from "@/lib/timetable";
 import { COURSES_BY_MAJOR, Major } from "@/lib/courses";
 import TimetableGrid from "@/components/TimetableGrid";
@@ -177,43 +177,36 @@ export default function Home() {
     if (typeof window !== "undefined" && window.innerWidth < 768) setPanelOpen(false);
   };
 
-  const applyFilter = () => {
+  useEffect(() => {
+    if (combos.length === 0) { setFilteredCombos([]); return; }
     const required = [...filterMap.entries()].filter(([, v]) => v).map(([k]) => k);
     const min = parseInt(minCredit);
-    const morningLimit = parseInt(noMorning);   // 이 시각 이전 시작 수업 제외
-    const eveningLimit = parseInt(noEvening);   // 이 시각 이후 끝나는 수업 제외
+    const morningLimit = parseInt(noMorning);
+    const eveningLimit = parseInt(noEvening);
 
     setFilteredCombos(
       combos.filter((combo) => {
-        // 필수 과목
         if (required.length && !required.every((r) => combo.some((sec) => sec.name === r))) return false;
-        // 최소 학점
         if (!isNaN(min) && min > 0) {
           if (combo.reduce((s, sec) => s + sec.credit, 0) < min) return false;
         }
-        // 제외 교수 — 조합 내 어떤 section의 profs에라도 포함되면 제외
         if (excludeProfs.size > 0) {
           if (combo.some((sec) => sec.profs.some((p) => excludeProfs.has(p)))) return false;
         }
-        // 포함 교수 — 선택한 교수 중 하나라도 조합에 없으면 제외
         if (includeProfs.size > 0) {
           if (![...includeProfs].every((p) => combo.some((sec) => sec.profs.includes(p)))) return false;
         }
-        // 개설 전공 — 선택한 전공의 과목만 허용 (모든 과목이 선택 전공 중 하나에 속해야 통과)
         if (includeDepts.size > 0) {
           if (!combo.every((sec) => includeDepts.has(sec.dept))) return false;
         }
         const allSlots = combo.flatMap((sec) => sec.times);
-        // 공강 요일
         if (dayOff.size > 0) {
           const usedDays = new Set(allSlots.map((t) => t.day));
           if ([...dayOff].some((d) => usedDays.has(d))) return false;
         }
-        // 아침 수업 없음 (morningLimit시 이전에 시작하는 수업 제외)
         if (!isNaN(morningLimit) && morningLimit > 0) {
           if (allSlots.some((t) => t.start < morningLimit)) return false;
         }
-        // 저녁 수업 없음 (eveningLimit시 이후에 끝나는 수업 제외)
         if (!isNaN(eveningLimit) && eveningLimit > 0) {
           if (allSlots.some((t) => t.end > eveningLimit)) return false;
         }
@@ -221,7 +214,7 @@ export default function Home() {
       })
     );
     setComboIdx(0);
-  };
+  }, [combos, filterMap, minCredit, dayOff, noMorning, noEvening, excludeProfs, includeProfs, includeDepts]);
 
   const currentCombo = filteredCombos[comboIdx] ?? [];
   const totalCredit = currentCombo.reduce((s, sec) => s + sec.credit, 0);
@@ -659,13 +652,7 @@ export default function Home() {
                         </div>
                       </div>
                       <div className="p-2 border-t border-gray-100 shrink-0">
-                        <button
-                          onClick={applyFilter}
-                          className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm py-2 rounded transition-colors"
-                        >
-                          필터 적용
-                        </button>
-                        <p className="text-xs text-gray-500 text-center mt-1">
+                        <p className="text-xs text-gray-500 text-center">
                           {filteredCombos.length}개 / 전체 {combos.length}개
                         </p>
                       </div>
