@@ -44,7 +44,9 @@ export default function Home() {
   const [filteredCombos, setFilteredCombos] = useState<Section[][]>([]);
   const [comboIdx, setComboIdx] = useState(0);
   const [filterMap, setFilterMap] = useState<Map<string, boolean>>(new Map());
+  const [minCredit, setMinCredit] = useState<string>("");
   const [leftTab, setLeftTab] = useState<"select" | "filter">("select");
+  const [flashKey, setFlashKey] = useState(0);
 
   const abortRef = useRef<AbortController | null>(null);
 
@@ -144,21 +146,25 @@ export default function Home() {
     setFilteredCombos(all);
     setComboIdx(0);
     setFilterMap(new Map());
+    setMinCredit("");
+    setFlashKey((k) => k + 1);
     setTab("wizard");
-    setLeftTab("select");
+    setLeftTab("filter");
   };
 
   const applyFilter = () => {
     const required = [...filterMap.entries()].filter(([, v]) => v).map(([k]) => k);
-    if (!required.length) {
-      setFilteredCombos(combos);
-    } else {
-      setFilteredCombos(
-        combos.filter((combo) =>
-          required.every((r) => combo.some((sec) => sec.name === r))
-        )
-      );
-    }
+    const min = parseInt(minCredit);
+    setFilteredCombos(
+      combos.filter((combo) => {
+        if (required.length && !required.every((r) => combo.some((sec) => sec.name === r))) return false;
+        if (!isNaN(min) && min > 0) {
+          const total = combo.reduce((s, sec) => s + sec.credit, 0);
+          if (total < min) return false;
+        }
+        return true;
+      })
+    );
     setComboIdx(0);
   };
 
@@ -322,8 +328,8 @@ export default function Home() {
                       : "text-gray-500 hover:text-gray-700"
                   }`}
                 >
-                  필수 포함 필터
-                  {[...filterMap.values()].some(Boolean) && (
+                  필터
+                  {([...filterMap.values()].some(Boolean) || (parseInt(minCredit) > 0)) && (
                     <span className="ml-1 text-xs text-blue-500">●</span>
                   )}
                 </button>
@@ -391,46 +397,61 @@ export default function Home() {
                 </>
               )}
 
-              {/* 필수 포함 필터 패널 */}
+              {/* 필터 패널 */}
               {leftTab === "filter" && (
                 <>
-                  <div className="px-3 pt-2 pb-1 shrink-0">
-                    <p className="text-xs text-gray-400">체크한 과목이 모두 포함된 조합만 표시</p>
-                  </div>
                   {namesInCombos.length === 0 ? (
                     <div className="flex-1 flex items-center justify-center text-xs text-gray-400 px-4 text-center">
                       먼저 과목 선택 탭에서 조합을 생성하세요
                     </div>
                   ) : (
                     <>
-                      <div className="overflow-y-auto flex-1 px-2 pb-1">
-                        {namesInCombos.map((name) => (
-                          <label key={name} className="flex items-center gap-2 px-1 py-1 hover:bg-gray-50 rounded cursor-pointer">
+                      <div className="overflow-y-auto flex-1 px-2 pt-2 pb-1 flex flex-col gap-3">
+                        {/* 학점 필터 */}
+                        <div className="px-1">
+                          <p className="text-xs text-gray-400 mb-1">최소 학점</p>
+                          <div className="flex items-center gap-2">
                             <input
-                              type="checkbox"
-                              checked={filterMap.get(name) ?? false}
-                              onChange={(e) => {
-                                const next = new Map(filterMap);
-                                next.set(name, e.target.checked);
-                                setFilterMap(next);
-                              }}
+                              type="number"
+                              min={0}
+                              value={minCredit}
+                              onChange={(e) => setMinCredit(e.target.value)}
+                              placeholder="예) 9"
+                              className="w-full border border-gray-300 rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
                             />
-                            <span className="text-sm text-gray-700">{name.replace(/\s*\(.*?\)\s*$/, "")}</span>
-                          </label>
-                        ))}
+                            <span className="text-xs text-gray-400 shrink-0">학점 이상</span>
+                          </div>
+                        </div>
+
+                        {/* 필수 과목 필터 */}
+                        <div className="px-1">
+                          <p className="text-xs text-gray-400 mb-1">필수 포함 과목</p>
+                          {namesInCombos.map((name) => (
+                            <label key={name} className="flex items-center gap-2 px-1 py-1 hover:bg-gray-50 rounded cursor-pointer">
+                              <input
+                                type="checkbox"
+                                checked={filterMap.get(name) ?? false}
+                                onChange={(e) => {
+                                  const next = new Map(filterMap);
+                                  next.set(name, e.target.checked);
+                                  setFilterMap(next);
+                                }}
+                              />
+                              <span className="text-sm text-gray-700">{name.replace(/\s*\(.*?\)\s*$/, "")}</span>
+                            </label>
+                          ))}
+                        </div>
                       </div>
                       <div className="p-2 border-t border-gray-100 shrink-0">
                         <button
                           onClick={applyFilter}
-                          className="w-full bg-gray-100 hover:bg-gray-200 text-sm py-2 rounded transition-colors"
+                          className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm py-2 rounded transition-colors"
                         >
                           필터 적용
                         </button>
-                        {filteredCombos.length !== combos.length && (
-                          <p className="text-xs text-gray-500 text-center mt-1">
-                            필터 결과: {filteredCombos.length}개
-                          </p>
-                        )}
+                        <p className="text-xs text-gray-500 text-center mt-1">
+                          {filteredCombos.length}개 / 전체 {combos.length}개
+                        </p>
                       </div>
                     </>
                   )}
@@ -439,7 +460,7 @@ export default function Home() {
             </div>
 
             {/* Right: timetable */}
-            <div className="flex-1 flex flex-col overflow-hidden p-4 gap-2">
+            <div key={flashKey} className="flex-1 flex flex-col overflow-hidden p-4 gap-2 animate-[fadeIn_0.4s_ease]">
               {filteredCombos.length > 0 ? (
                 <>
                   <div className="flex items-center gap-3 flex-wrap shrink-0">
