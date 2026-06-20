@@ -1,0 +1,188 @@
+[
+  {
+    "grade": "1",
+    "code": "ESED0390",
+    "name": "수리지구과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0231",
+    "name": "일반지구과학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0232",
+    "name": "일반지구과학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ESED0536",
+    "name": "관측천문학교육 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ESED0413",
+    "name": "광물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ESED0352",
+    "name": "대기과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SCED0234",
+    "name": "일반지구과학3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOL0212",
+    "name": "지질학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ESED0563",
+    "name": "해양물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ESED0364",
+    "name": "해양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ESED0453",
+    "name": "현대기후학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ESED0513",
+    "name": "암석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ESED0315",
+    "name": "야외지질학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ESED0535",
+    "name": "은하계천문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ESED0557",
+    "name": "종관기상학교육 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0639",
+    "name": "지구과학교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEOL0385",
+    "name": "지구물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ESED0584",
+    "name": "지구환경과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ESED0432",
+    "name": "천문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ESED0437",
+    "name": "천체물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ESED0423",
+    "name": "층서고생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ESED0588",
+    "name": "심화지구과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ESED0587",
+    "name": "응용지질학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ESED0201",
+    "name": "자연재해와 에너지자원",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ESED0505",
+    "name": "지구과학 교육과정 및 평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TCHR0475",
+    "name": "지구과학 논리 및 논술지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ESED0482",
+    "name": "지구과학 실험 지도",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ESED0586",
+    "name": "지구과학 자료처리 및 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TCHR0679",
+    "name": "지구과학교재연구및지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ESED0481",
+    "name": "지구시스템교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ASAT0205",
+    "name": "태양계천문학",
+    "credit": "3-3-0"
+  }
+]

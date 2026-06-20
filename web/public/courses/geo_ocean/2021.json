@@ -1,0 +1,200 @@
+[
+  {
+    "grade": "1",
+    "code": "EASC0211",
+    "name": "지구시스템과학",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "2",
+    "code": "OECA0242",
+    "name": "매트랩강좌 기초",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "OECA0219",
+    "name": "물리해양학 및 실험 I",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "OECA0233",
+    "name": "물리해양학 및 실험 II",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "OECA0221",
+    "name": "미생물해양학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "OECA0222",
+    "name": "미생물해양학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "OECA0217",
+    "name": "생물해양학 및 실험 I",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "OECA0231",
+    "name": "생물해양학 및 실험 II",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "OECA0218",
+    "name": "화학해양학 및 실험 I",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "OECA0232",
+    "name": "화학해양학 및 실험 II",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "INDC0411",
+    "name": "환경화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "OECA0254",
+    "name": "온실기체와 지구온난화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "OCEA0214",
+    "name": "해수분석학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "OECA0253",
+    "name": "해양기후학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "OECA0236",
+    "name": "해양생명공학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "OECA0244",
+    "name": "해양생명공학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "OECA0235",
+    "name": "해양생지화학순환 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "OECA0240",
+    "name": "해양생지화학순환 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "OECA0249",
+    "name": "해양생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "OECA0259",
+    "name": "해양생태학 및 실험 I(캡스톤디자인)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "OECA0255",
+    "name": "해양생태학 및 실험II(캡스톤디자인)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "OECA0238",
+    "name": "해양선상실습개론",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "OECA0226",
+    "name": "해양역학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "OECA0227",
+    "name": "해양역학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "OECA0260",
+    "name": "물리해양수조실습 I (캡스톤디자인)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "OECA0257",
+    "name": "물리해양수조실습 II(캡스톤디자인)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "OECA0246",
+    "name": "물리해양학특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "OECA0251",
+    "name": "물리해양학특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "OECA0243",
+    "name": "생물해양학특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "OECA0248",
+    "name": "생물해양학특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "OECA0256",
+    "name": "해양생태학특론II(캡스톤디자인)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "OECA0245",
+    "name": "화학해양학특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "OECA0258",
+    "name": "화학해양학특론 II(캡스톤디자인)",
+    "credit": "3-3-0"
+  }
+]

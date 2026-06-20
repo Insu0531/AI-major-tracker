@@ -1,0 +1,194 @@
+[
+  {
+    "grade": "1",
+    "code": "ENED0574",
+    "name": "영어독해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ENED0365",
+    "name": "영어의미분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ENED0376",
+    "name": "영어작문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ENED0341",
+    "name": "영어회화1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENED0391",
+    "name": "기술혁신과 영어교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENED0377",
+    "name": "멀티미디어영어교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENED0309",
+    "name": "영문학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENED0262",
+    "name": "영미소설의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "TCHR0623",
+    "name": "영어교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENED0369",
+    "name": "영어문법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENED0255",
+    "name": "영어응용음성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENED0261",
+    "name": "영어학의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENED0343",
+    "name": "영어회화2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENED0344",
+    "name": "영어회화3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENED0392",
+    "name": "영문학 특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENED0592",
+    "name": "영문학을 통한 영어교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENED0384",
+    "name": "영미희곡 및 연극지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENED0355",
+    "name": "영시의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0473",
+    "name": "영어 논리 및 논술지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENED0398",
+    "name": "영어 말하기, 쓰기 지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENED0575",
+    "name": "영어교수방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENED0381",
+    "name": "영어교육평가론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENED0382",
+    "name": "영어응용언어학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENED0383",
+    "name": "영어통사구조의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENED0393",
+    "name": "제2 언어습득",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENED0591",
+    "name": "중급영어작문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ENED0368",
+    "name": "언어학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ENED0589",
+    "name": "영미문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ENED0594",
+    "name": "영어 듣기, 읽기 지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ENED0387",
+    "name": "영어교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TCHR0663",
+    "name": "영어교재연구및지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ENED0389",
+    "name": "영어발표 및 토론",
+    "credit": "3-3-0"
+  }
+]

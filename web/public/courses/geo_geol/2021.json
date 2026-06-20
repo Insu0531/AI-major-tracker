@@ -1,0 +1,206 @@
+[
+  {
+    "grade": "1",
+    "code": "EASC0211",
+    "name": "지구시스템과학",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOL0242",
+    "name": "결정광학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "GEOL0263",
+    "name": "고생물학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "GEOL0233",
+    "name": "광물학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "GEOL0281",
+    "name": "수리지구과학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "GEOL0495",
+    "name": "수리지질학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOL0387",
+    "name": "지구물리학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "GEOL0277",
+    "name": "지질도학 및 야외지질학실습",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "2",
+    "code": "GEOL0212",
+    "name": "지질학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOL0222",
+    "name": "층서학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOL0295",
+    "name": "환경지질학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEOL0371",
+    "name": "구조지질학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEOL0342",
+    "name": "변성암석학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEOL0344",
+    "name": "암석학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEOL0484",
+    "name": "지구정보해석 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEOL0389",
+    "name": "지구통계학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEOL0338",
+    "name": "지구화학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEOL0494",
+    "name": "지반역학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEOL0422",
+    "name": "지사학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEOL0394",
+    "name": "지질공학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEOL0386",
+    "name": "탐사지구물리학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEOL0353",
+    "name": "퇴적지질학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEOL0345",
+    "name": "판구조론 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEOL0341",
+    "name": "화성암석학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "GEOL0337",
+    "name": "광물자원학및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "GEOL0365",
+    "name": "미고생물학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "GEOL0497",
+    "name": "분지해석학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "GEOL0496",
+    "name": "석유지질학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "GEOL0414",
+    "name": "응용광물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GEOL0433",
+    "name": "지구화학탐사및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "GEOL0411",
+    "name": "지질학특수연구",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "GEOL0413",
+    "name": "지하수개발",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GEOL0423",
+    "name": "한국지질론 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "GEOL0454",
+    "name": "해양지질학및실험",
+    "credit": "3-2-2"
+  }
+]

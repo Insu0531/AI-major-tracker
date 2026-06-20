@@ -1,0 +1,230 @@
+[
+  {
+    "grade": "1",
+    "code": "ABSC0202",
+    "name": "응용생명과학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "AGRO0292",
+    "name": "재배학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ABSC0203",
+    "name": "환경생명화학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0392",
+    "name": "기초생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0391",
+    "name": "기초유기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGEC0407",
+    "name": "농산물유통학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DPBS0424",
+    "name": "생물생산기계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DPBS0404",
+    "name": "식물분자생물학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGRO0479",
+    "name": "식물생장조절론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGRO0361",
+    "name": "식물유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGRO0491",
+    "name": "실험통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DPBS0360",
+    "name": "작물병충해방제론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DPBS0312",
+    "name": "작물생리학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DPBS0313",
+    "name": "작물학및실험1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DPBS0316",
+    "name": "작물학및실험2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DPBS0311",
+    "name": "토양비료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DPBS0408",
+    "name": "IT와 식물산업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DPBS0422",
+    "name": "기능성작물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGEC0308",
+    "name": "농업경영학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DPBS0407",
+    "name": "식물분자생물학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HORT0419",
+    "name": "식물생명공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DPBS0405",
+    "name": "식물생명공학 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DPBS0402",
+    "name": "식물소재학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DPBS0318",
+    "name": "식물육종학및실험1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DPBS0358",
+    "name": "식물육종학및실험2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FOOD0328",
+    "name": "식품가공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGRO0435",
+    "name": "잡초방제학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DPBS0317",
+    "name": "환경생리생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DPBS0345",
+    "name": "국제농업개발학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DPBS0411",
+    "name": "글로벌식량생산이론 및 실무",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DPBS0319",
+    "name": "기초식물유전체학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DPBS0423",
+    "name": "농산업디자인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DPBS0409",
+    "name": "생명기술산업학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DPBS0426",
+    "name": "식량안보 및 작물생산학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DPBS0302",
+    "name": "작물생물정보학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DPBS0303",
+    "name": "작물영양생리학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DPBS0301",
+    "name": "정밀농업의 이해와 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DPBS0403",
+    "name": "종자생산 및 조직배양",
+    "credit": "3-3-0"
+  }
+]

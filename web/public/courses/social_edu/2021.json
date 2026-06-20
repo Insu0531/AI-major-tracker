@@ -1,0 +1,194 @@
+[
+  {
+    "grade": "1",
+    "code": "SSED0512",
+    "name": "경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SSED0222",
+    "name": "거시경제교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SSED0221",
+    "name": "미시경제교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SSED0241",
+    "name": "민법과교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SSED0256",
+    "name": "법학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SSED0255",
+    "name": "사회학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SSED0458",
+    "name": "시민교육과사회윤리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SSED0332",
+    "name": "인간과사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SSED0511",
+    "name": "정치와사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SSED0250",
+    "name": "정치학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SSED0514",
+    "name": "경제와사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SSED0521",
+    "name": "문화와사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SSED0513",
+    "name": "법과사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SSED0456",
+    "name": "사회과학방법론과 교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0631",
+    "name": "일반사회교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SSED0313",
+    "name": "정치교육연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SSED0602",
+    "name": "통합사회과교육연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SSED0312",
+    "name": "한국정치와시민교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SSED0502",
+    "name": "현대사회학이론과 교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SSED0444",
+    "name": "형법과교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SSED0328",
+    "name": "경제교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SSED0252",
+    "name": "경제학교재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SSED0225",
+    "name": "디지털정보경제학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "SSED0445",
+    "name": "법철학과교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SSED0254",
+    "name": "법학교재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SSED0436",
+    "name": "사회·문화교재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TCHR0474",
+    "name": "일반사회 논리 및 논술지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SSED0457",
+    "name": "일반사회교육연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TCHR0671",
+    "name": "일반사회교재연구및지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SSED0415",
+    "name": "정당의이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SSED0251",
+    "name": "정치학교재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SSED0503",
+    "name": "현대다문화사회의이해와교육",
+    "credit": "3-3-0"
+  }
+]

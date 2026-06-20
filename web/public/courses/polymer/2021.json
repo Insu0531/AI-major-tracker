@@ -1,0 +1,230 @@
+[
+  {
+    "grade": "1",
+    "code": "POLY0230",
+    "name": "공학기초설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "ENGR0216",
+    "name": "공학전산활용실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "ENGR0351",
+    "name": "공학화학실험 I",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "ENGR0352",
+    "name": "공학화학실험 II",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "POLY0221",
+    "name": "고분자개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0212",
+    "name": "공학수학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0332",
+    "name": "물리화학실험",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0503",
+    "name": "분석화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "POLY0231",
+    "name": "유기재료화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "POLY0232",
+    "name": "유기재료화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0331",
+    "name": "유기화학실험",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "POLY0241",
+    "name": "재료물리화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "POLY0242",
+    "name": "재료물리화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLY0502",
+    "name": "고분자공정해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLY0383",
+    "name": "고분자구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLY0332",
+    "name": "고분자물리 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLY0335",
+    "name": "고분자물리 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLY0322",
+    "name": "고분자재료설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLY0311",
+    "name": "고분자합성실험",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "POLY0224",
+    "name": "고분자화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLY0325",
+    "name": "고분자화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "META0427",
+    "name": "나노재료설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0252",
+    "name": "무기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLY0356",
+    "name": "유변학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLY0454",
+    "name": "합성고무",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLY0314",
+    "name": "합성수지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0247",
+    "name": "화공양론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "POLY0463",
+    "name": "계면접착",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "POLY0415",
+    "name": "고분자 R&D 창의적 종합 설계",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "4",
+    "code": "POLY0451",
+    "name": "고분자가공",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "POLY0462",
+    "name": "고분자기기분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "POLY0431",
+    "name": "고분자물성실험",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "4",
+    "code": "POLY0212",
+    "name": "고분자융합소재설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "POLY0464",
+    "name": "고분자정밀합성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "POLY0461",
+    "name": "기능성고분자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "POLY0364",
+    "name": "생체고분자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "POLY0411",
+    "name": "합성섬유",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,206 @@
+[
+  {
+    "grade": "1",
+    "code": "ENGR0217",
+    "name": "공학 프로그래밍언어",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "ENVI0470",
+    "name": "환경공학입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0212",
+    "name": "공학수학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOF0202",
+    "name": "기초미생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENVI0201",
+    "name": "대기오염론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0502",
+    "name": "물리화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENVI0437",
+    "name": "수질분석",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "STAT0452",
+    "name": "수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0203",
+    "name": "유기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENVI0457",
+    "name": "폐기물분석",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "CHEN0247",
+    "name": "화공양론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENVI0334",
+    "name": "환경유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "INDC0411",
+    "name": "환경화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENVI0456",
+    "name": "대기오염실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "ENVI0354",
+    "name": "대기오염제어1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENVI0363",
+    "name": "대기오염제어2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENVI0347",
+    "name": "물리화학폐수처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENVI0339",
+    "name": "생물처리공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENVI0225",
+    "name": "자원순환공학 에코디자인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENVI0223",
+    "name": "폐기물관리 및 자원재활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENVI0438",
+    "name": "폐수처리실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "ENVI0473",
+    "name": "환경 상하수도공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENVI0222",
+    "name": "환경복원공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENVI0314",
+    "name": "환경수리수문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENVI0224",
+    "name": "환경수질공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ENVI0384",
+    "name": "소음진동학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ENVI0381",
+    "name": "실내공기오염",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ENVI0226",
+    "name": "첨단환경기기분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ENVI0366",
+    "name": "화학안전공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ENVI0321",
+    "name": "환경공학 캡스톤디자인",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "4",
+    "code": "ENVI0393",
+    "name": "환경공학세미나1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "ENVI0394",
+    "name": "환경공학세미나2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "ENVI0227",
+    "name": "환경빅데이터와 딥러닝",
+    "credit": "3-3-0"
+  }
+]

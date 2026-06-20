@@ -1,0 +1,182 @@
+[
+  {
+    "grade": "1",
+    "code": "FRAN0201",
+    "name": "생활프랑스어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FRAN0221",
+    "name": "프랑스어문법1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FRAN0222",
+    "name": "프랑스어문법2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HUMN0215",
+    "name": "설득의 수사학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FRAN0371",
+    "name": "프랑스문학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FRAN0234",
+    "name": "프랑스산문읽기1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FRAN0244",
+    "name": "프랑스산문읽기2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FRAN0421",
+    "name": "프랑스어구조이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FRAN0235",
+    "name": "프랑스어글쓰기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FRAN0211",
+    "name": "프랑스어회화1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FRAN0212",
+    "name": "프랑스어회화2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FRAN0416",
+    "name": "프랑스언어의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FRAN0434",
+    "name": "현대프랑스소설",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRAN0246",
+    "name": "근대프랑스소설",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HICC0206",
+    "name": "문화와 상징",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRAN0357",
+    "name": "오늘의 프랑스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRAN0358",
+    "name": "파리의 역사와 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRAN0569",
+    "name": "프랑스 문화비평",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRAN0353",
+    "name": "프랑스 문화유산",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRAN0472",
+    "name": "프랑스 영화 특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRAN0302",
+    "name": "프랑스문학과 신화적 상상력",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRAN0303",
+    "name": "프랑스문화와 상상력",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRAN0591",
+    "name": "프랑스문화와예술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRAN0361",
+    "name": "프랑스어권 지역의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRAN0241",
+    "name": "프랑스어번역연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRAN0449",
+    "name": "프랑스역사와 사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRAN0352",
+    "name": "프랑스와 유럽연합",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRAN0362",
+    "name": "프랑스의 문화산업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRAN0233",
+    "name": "프랑스의 미디어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRAN0453",
+    "name": "현대프랑스시",
+    "credit": "3-3-0"
+  }
+]

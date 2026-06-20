@@ -1,0 +1,224 @@
+[
+  {
+    "grade": "1",
+    "code": "LIBR0475",
+    "name": "기록학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "LIBR0479",
+    "name": "데이터사이언스개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "LIBR0251",
+    "name": "문헌정보학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "LIBR0428",
+    "name": "정보기술과 인간",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "LIBR0254",
+    "name": "정보문화사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "LIBR0362",
+    "name": "검색엔진",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "LIBR0322",
+    "name": "공공도서관경영",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "LIBR0478",
+    "name": "기록물아카이브론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "LIBR0477",
+    "name": "데이터분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DIIM0214",
+    "name": "데이터큐레이션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "LIBR0333",
+    "name": "디지털도서관론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "LIBR0354",
+    "name": "서지학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "LIBR0446",
+    "name": "장서관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "LIBR0472",
+    "name": "전자자원관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "LIBR0331",
+    "name": "정보시스템론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "LIBR0253",
+    "name": "정보자원과 뉴미디어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "LIBR0325",
+    "name": "정보자원목록론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "LIBR0324",
+    "name": "정보자원분류론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "LIBR0323",
+    "name": "지식정보센터경영",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DIIM0212",
+    "name": "데이터베이스 디자인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LIBR0470",
+    "name": "데이터시각화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LIBR0255",
+    "name": "도서관 공간구성론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LIBR0423",
+    "name": "독서지도론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DIIM0211",
+    "name": "디지털정보검색",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LIBR0480",
+    "name": "메타데이터의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LIBR0481",
+    "name": "문헌정보학연구방법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LIBR0464",
+    "name": "웹프로그래밍의 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LIBR0462",
+    "name": "이용자인터페이스론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LIBR0473",
+    "name": "정보서비스론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LIBR0448",
+    "name": "정보이용자론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LIBR0447",
+    "name": "지식정보검색론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LIBR0476",
+    "name": "텍스트마이닝",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LIBR0469",
+    "name": "학교도서관경영",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "LIBR0357",
+    "name": "도서관 · 정보센터 실습",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "4",
+    "code": "LIBR0474",
+    "name": "빅데이터 분석 캡스톤디자인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "LIBR0482",
+    "name": "정보서비스 개발 및 평가론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "LIBR0413",
+    "name": "정보윤리의 이해",
+    "credit": "3-3-0"
+  }
+]

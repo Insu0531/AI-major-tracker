@@ -1,0 +1,158 @@
+[
+  {
+    "grade": "1",
+    "code": "KLCC0213",
+    "name": "기초한문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "KLCC0542",
+    "name": "서예의이론과실제",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "KLCC0211",
+    "name": "한문의이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "KLCC0421",
+    "name": "한문학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KLCC0353",
+    "name": "고문진보강독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KLCC0321",
+    "name": "사서강독 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KLCC0322",
+    "name": "사서강독 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KLCC0333",
+    "name": "한국역사서강독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KLCC0343",
+    "name": "한국한문강독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KLCC0341",
+    "name": "한국한문소설",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KLCC0352",
+    "name": "한국한시강독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KLCC0423",
+    "name": "한시의이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KLCC0361",
+    "name": "경전강독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KLCC0331",
+    "name": "사기통감강독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KLCC0531",
+    "name": "한국역대산문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KLCC0532",
+    "name": "한국한문학비평",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KLCC0431",
+    "name": "한국한문학사1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KLCC0432",
+    "name": "한국한문학사2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KLCC0521",
+    "name": "한국한문학작가론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KLCC0522",
+    "name": "한국한문학작가론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "KLCC0543",
+    "name": "국학문헌해제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "KLCC0371",
+    "name": "문학이론강독 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "KLCC0372",
+    "name": "문학이론강독 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "KLCC0363",
+    "name": "제자서강독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "KLCC0551",
+    "name": "한국한문학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "KLCC0553",
+    "name": "한국한문학특강",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,194 @@
+[
+  {
+    "grade": "1",
+    "code": "CLTX0362",
+    "name": "디자인CAD",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "CLTX0260",
+    "name": "디지털패션마케팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "CLTX0251",
+    "name": "색채와 패션",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "CLTX0261",
+    "name": "의류소재 기초화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "CLTX0253",
+    "name": "의복환경학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "CLTX0252",
+    "name": "패션디자인기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CLTX0262",
+    "name": "AI 패션 프로젝트",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CLTX0263",
+    "name": "디지털패션콘텐츠디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CLTX0228",
+    "name": "복식문화사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CLTX0256",
+    "name": "의류재료실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CLTX0255",
+    "name": "의류재료의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CLTX0330",
+    "name": "의복구성실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CLTX0219",
+    "name": "인체와의복",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CLTX0257",
+    "name": "첨단섬유의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CLTX0240",
+    "name": "패션일러스트레이션",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CLTX0222",
+    "name": "평면재단",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CLTX0265",
+    "name": "기능성의복설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CLTX0358",
+    "name": "소재기획",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CLTX0427",
+    "name": "어패럴CAD",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CLTX0315",
+    "name": "염색이론 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CLTX0331",
+    "name": "테일러링",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CLTX0343",
+    "name": "텍스타일디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CLTX0264",
+    "name": "패션데이터애널리틱스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CLTX0360",
+    "name": "패션디자인 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CLTX0259",
+    "name": "패션리테일머천다이징",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CLTX0353",
+    "name": "패션미학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CLTX0245",
+    "name": "3D 패션 주얼리 디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CLTX0266",
+    "name": "글로벌패션비즈니스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CLTX0267",
+    "name": "버추얼패션디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CLTX0269",
+    "name": "의복감성공학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CLTX0268",
+    "name": "패션창업과 실무",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CLTX0361",
+    "name": "패션컬렉션 실습",
+    "credit": "3-2-2"
+  }
+]

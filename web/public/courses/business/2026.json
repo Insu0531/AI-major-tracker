@@ -1,0 +1,374 @@
+[
+  {
+    "grade": "1",
+    "code": "MGMT0209",
+    "name": "경영수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ECON0613",
+    "name": "미시경제학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "MGMT0227",
+    "name": "회계의이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MGMT0243",
+    "name": "경영정보론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MGMT0231",
+    "name": "경영통계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MGMT0216",
+    "name": "금융학원론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MGMT0252",
+    "name": "기업윤리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MGMT0221",
+    "name": "마케팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MGMT0228",
+    "name": "상법 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MGMT0229",
+    "name": "상법 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MGMT0238",
+    "name": "운영관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MGMT0325",
+    "name": "원가관리회계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MGMT0320",
+    "name": "원가관리회계원론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MGMT0211",
+    "name": "재무관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MGMT0310",
+    "name": "재무회계원론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MGMT0203",
+    "name": "조직행위론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MGMT0431",
+    "name": "중급회계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0232",
+    "name": "경영과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0327",
+    "name": "경영데이터분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0204",
+    "name": "경영전략론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0201",
+    "name": "경영조직론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0416",
+    "name": "고급관리회계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0323",
+    "name": "고급재무회계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0248",
+    "name": "공공기관 경영실무",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0410",
+    "name": "글로벌경영",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0213",
+    "name": "금융파생상품론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0401",
+    "name": "데이터베이스입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0223",
+    "name": "마케팅조사론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0236",
+    "name": "물류관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0219",
+    "name": "비즈니스커뮤니케이션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0417",
+    "name": "세무회계 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0419",
+    "name": "세무회계 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0432",
+    "name": "연결재무제표론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0308",
+    "name": "원가회계연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0237",
+    "name": "유통관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0202",
+    "name": "인적자원관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0220",
+    "name": "자산운용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0218",
+    "name": "재무설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0312",
+    "name": "재무제표분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0420",
+    "name": "재무회계연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0422",
+    "name": "정부 및 비영리회계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0247",
+    "name": "지역산업과지역기업의이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0409",
+    "name": "창조성관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0212",
+    "name": "투자론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0311",
+    "name": "회계감사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0435",
+    "name": "IT프로젝트관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0210",
+    "name": "경영과 신기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0259",
+    "name": "경영세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0408",
+    "name": "경영컨설팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0222",
+    "name": "광고론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0215",
+    "name": "금융기관경영론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0249",
+    "name": "금융리스크관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0208",
+    "name": "기술경영론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0258",
+    "name": "기술사업화론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0207",
+    "name": "벤처창업론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0331",
+    "name": "서비스경영",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0421",
+    "name": "세무회계연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0224",
+    "name": "소비자행동론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0434",
+    "name": "자본시장론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0436",
+    "name": "전자금융의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0440",
+    "name": "전자상거래",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0322",
+    "name": "회계학세미나",
+    "credit": "3-3-0"
+  }
+]

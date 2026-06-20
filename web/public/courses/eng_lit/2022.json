@@ -1,0 +1,272 @@
+[
+  {
+    "grade": "1",
+    "code": "ENGL0396",
+    "name": "미국문학개관 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ENGL0397",
+    "name": "미국문학개관 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ENGL0246",
+    "name": "사고와 언어, 그리고 과학과 창의성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ENGL0248",
+    "name": "상상과 치유의 문학이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ENGL0247",
+    "name": "영문학과 신화적 상상력",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ENGL0241",
+    "name": "영어학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGL0398",
+    "name": "19세기 미국소설",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGL0365",
+    "name": "19세기 영국소설",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGL0452",
+    "name": "19세기영미시",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGL0344",
+    "name": "고급영어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGL0271",
+    "name": "근대영미희곡",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGL0272",
+    "name": "디지털 인문학 개관",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGL0351",
+    "name": "르네상스시대영국시",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGL0443",
+    "name": "실용영어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGL0292",
+    "name": "영국문학개관 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGL0393",
+    "name": "영국문학개관 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGL0245",
+    "name": "영문법1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGL0347",
+    "name": "영문법2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGL0261",
+    "name": "영미단편소설",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGL0312",
+    "name": "영어음성음운론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGL0244",
+    "name": "영어토론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HUCO0214",
+    "name": "인문카운슬링과 회복탄력성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HUCO0212",
+    "name": "인문학과 카운슬링2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0464",
+    "name": "20세기미국소설",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0575",
+    "name": "20세기미국희곡",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0565",
+    "name": "20세기영국소설",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0473",
+    "name": "20세기영국희곡",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0281",
+    "name": "비평이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0573",
+    "name": "셰익스피어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0446",
+    "name": "언어와 인지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0555",
+    "name": "영미소설특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0551",
+    "name": "영미시론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0441",
+    "name": "영어대화법 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0544",
+    "name": "영어대화법 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0545",
+    "name": "영어사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0352",
+    "name": "영어산문강독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0424",
+    "name": "영어와 데이터과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0313",
+    "name": "영어음성음운론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0531",
+    "name": "영어의미론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0422",
+    "name": "영어통사론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0442",
+    "name": "영어형태론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0450",
+    "name": "영작문1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0425",
+    "name": "응용영어학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0348",
+    "name": "전문영어강독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0553",
+    "name": "현대영미시",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "grade": "2",
+    "code": "CROS0222",
+    "name": "AI프로그래밍실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0522",
+    "name": "CAD",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0212",
+    "name": "공학수학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0225",
+    "name": "동역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CROS0201",
+    "name": "로봇기계공학기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CROS0218",
+    "name": "로봇운영체제 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CROS0202",
+    "name": "로봇전기전자공학기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CROS0216",
+    "name": "로봇제어1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CROS0203",
+    "name": "로봇컴퓨터공학기초",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CROS0219",
+    "name": "모델링 및 시뮬레이션",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0356",
+    "name": "기구학및기계역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CROS0205",
+    "name": "로봇공학실험1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CROS0206",
+    "name": "로봇공학실험2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CROS0213",
+    "name": "로봇매니퓰레이터",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CROS0217",
+    "name": "로봇제어2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0323",
+    "name": "마이크로프로세서",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CROS0215",
+    "name": "모빌리티 지능",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0483",
+    "name": "센서와액츄에이터",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0452",
+    "name": "수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0324",
+    "name": "인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CROS0223",
+    "name": "로봇공학 캡스톤디자인1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CROS0204",
+    "name": "로봇현장기술특강",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CROS0214",
+    "name": "모빌리티 비전",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,224 @@
+[
+  {
+    "grade": "1",
+    "code": "FOOD0211",
+    "name": "식품공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "CHEM0504",
+    "name": "유기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FOAT0260",
+    "name": "물리화학의 식품응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FOBI0332",
+    "name": "미용식품학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FOAT0262",
+    "name": "식품가공공정기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FOAT0273",
+    "name": "식품산업과 현장실습",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "2",
+    "code": "FOAT0261",
+    "name": "식품실험통계학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FOAT0228",
+    "name": "식품응용기기분석 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FOAT0271",
+    "name": "식품응용면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FOAT0223",
+    "name": "식품응용미생물학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FOAT0266",
+    "name": "식품응용분석학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FOAT0242",
+    "name": "식품응용생명과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FOAT0221",
+    "name": "식품응용생화학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FOAT0222",
+    "name": "식품응용생화학 2 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FOAT0231",
+    "name": "식품응용화학 1 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FOAT0272",
+    "name": "디지털식품품질관리와 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FOAT0264",
+    "name": "세포기능유전체학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOAT0233",
+    "name": "식품가공공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOAT0246",
+    "name": "식품생리활성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOAT0274",
+    "name": "식품응용독성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOAT0229",
+    "name": "식품응용미생물학 2 및 실험실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FOAT0243",
+    "name": "식품응용발효공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOAT0245",
+    "name": "식품응용분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOAT0263",
+    "name": "식품응용생물공정공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOAT0250",
+    "name": "식품응용화학 2 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FOBI0343",
+    "name": "식품응용효소학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOAT0226",
+    "name": "응용식품가공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FOAT0269",
+    "name": "건강기능식품개발캡스톤디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "FOAT0268",
+    "name": "공장 및 HACCP 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FOAT0232",
+    "name": "기능성식품응용학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FOAT0235",
+    "name": "식품산업미생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FOAT0275",
+    "name": "식품안전 및 법규",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FOAT0267",
+    "name": "식품안전과 식중독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FOAT0248",
+    "name": "식품응용의약학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FOAT0265",
+    "name": "식품의 냉장냉동과 저장",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FOBI0336",
+    "name": "전통발효식품학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FOAT0253",
+    "name": "캡스톤디자인 제품개발",
+    "credit": "3-2-2"
+  }
+]

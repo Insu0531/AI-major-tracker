@@ -1,0 +1,218 @@
+[
+  {
+    "grade": "1",
+    "code": "PSYC0361",
+    "name": "발달심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PSYC0322",
+    "name": "성격심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PSYC0218",
+    "name": "심리통계 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "PSYC0301",
+    "name": "심리학 개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PSYC0355",
+    "name": "인지신경과학의 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PSYC0232",
+    "name": "감각과 지각 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "PSYC0601",
+    "name": "공학심리와 디자인 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "PSYC0570",
+    "name": "노화심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PSYC0528",
+    "name": "소비자심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PSYC0220",
+    "name": "심리설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PSYC0448",
+    "name": "심리조사방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PSYC0212",
+    "name": "심리평가",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "PSYC0344",
+    "name": "인지발달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PSYC0211",
+    "name": "정신병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PSYC0432",
+    "name": "청소년심리 및 상담",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PSYC0341",
+    "name": "학습심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PSYC0332",
+    "name": "현대사회심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PSYC0503",
+    "name": "고급심리설계실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "PSYC0442",
+    "name": "고급인지신경과학 및 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PSYC0216",
+    "name": "발달정신병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PSYC0423",
+    "name": "상담심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PSYC0231",
+    "name": "신경심리평가",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "PSYC0224",
+    "name": "심리측정 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "PSYC0214",
+    "name": "심리치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PSYC0598",
+    "name": "인지심리학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "PSYC0513",
+    "name": "임상심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PSYC0223",
+    "name": "진로상담 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PSYC0492",
+    "name": "고급심리통계 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "PSYC0526",
+    "name": "광고 심리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PSYC0222",
+    "name": "기억심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PSYC0571",
+    "name": "부부상담과 가족상담",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PSYC0504",
+    "name": "사이버심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PSYC0596",
+    "name": "심리실험과컴퓨터실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "PSYC0451",
+    "name": "조직심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PSYC0221",
+    "name": "집단상담 및 치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PSYC0225",
+    "name": "창의성과 문제해결",
+    "credit": "3-3-0"
+  }
+]

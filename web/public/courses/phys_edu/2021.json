@@ -1,0 +1,176 @@
+[
+  {
+    "grade": "1",
+    "code": "PHED0223",
+    "name": "물리학의 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0201",
+    "name": "일반물리학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0203",
+    "name": "일반물리학실험",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "TCHR0469",
+    "name": "물리 논리 및 논술지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHED0231",
+    "name": "물리수학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHED0232",
+    "name": "물리수학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHED0221",
+    "name": "역학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHED0222",
+    "name": "역학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SCED0202",
+    "name": "일반물리학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHED0426",
+    "name": "일반물리학3및연습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "PHED0312",
+    "name": "전기자기학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0636",
+    "name": "물리교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHED0428",
+    "name": "물리학습자료개발",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHED0411",
+    "name": "양자물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHED0357",
+    "name": "열물리학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "PHED0316",
+    "name": "전기자기학2및실험",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "3",
+    "code": "PHED0351",
+    "name": "전산물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHED0430",
+    "name": "중등물리실험지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHED0467",
+    "name": "컴퓨터기반물리교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHED0325",
+    "name": "파동과광학교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHED0317",
+    "name": "파동과광학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "PHED0335",
+    "name": "현대물리교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHED0294",
+    "name": "현대물리학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "PHED0382",
+    "name": "물리교육과정및평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TCHR0676",
+    "name": "물리교재연구및지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHED0429",
+    "name": "물리문제해결지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHED0432",
+    "name": "물리토픽연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHED0415",
+    "name": "양자물리교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHED0359",
+    "name": "통계물리학개론",
+    "credit": "3-3-0"
+  }
+]

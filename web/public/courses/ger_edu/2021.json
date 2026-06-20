@@ -1,0 +1,200 @@
+[
+  {
+    "grade": "1",
+    "code": "DTED0232",
+    "name": "독어문법1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DTED0233",
+    "name": "독어문법2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DTED0243",
+    "name": "독어회화1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DTED0244",
+    "name": "독어회화2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DTED0237",
+    "name": "독일의 대학생활",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DTED0234",
+    "name": "독일의 일상생활",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DTED0334",
+    "name": "노래로 배우는 독일어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DTED0251",
+    "name": "독문학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DTED0344",
+    "name": "독어권문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DTED0321",
+    "name": "독어듣기지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DTED0541",
+    "name": "독어발음지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DTED0571",
+    "name": "독어실용문작성지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GERL0441",
+    "name": "독어학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DTED0343",
+    "name": "독일동화읽기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DTED0236",
+    "name": "독일아동문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DTED0235",
+    "name": "리듬으로 배우는 독일어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DTED0531",
+    "name": "Media독어교육지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DTED0383",
+    "name": "독문학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DTED0551",
+    "name": "독어독해지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DTED0362",
+    "name": "독어학습평가론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DTED0561",
+    "name": "독어회화지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DTED0375",
+    "name": "독일시의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0468",
+    "name": "독일어 논리 및 논술지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0581",
+    "name": "독일어교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DTED0377",
+    "name": "독일청소년문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DTED0573",
+    "name": "영화로배우는독일어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DTED0386",
+    "name": "독어학교수법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DTED0271",
+    "name": "독일문학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DTED0389",
+    "name": "독일소설 읽기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TCHR0582",
+    "name": "독일어교재연구및지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DTED0376",
+    "name": "독일희곡의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DTED0534",
+    "name": "독한번역연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DTED0388",
+    "name": "영화와 독일문학",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,218 @@
+[
+  {
+    "grade": "1",
+    "code": "PHIL0262",
+    "name": "동양철학의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PHIL0316",
+    "name": "철학고전 읽기와 토론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PHIL0261",
+    "name": "철학의 근본문제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHIL0322",
+    "name": "논리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHIL0477",
+    "name": "불교의 철학적 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHIL0311",
+    "name": "서양고대철학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHIL0324",
+    "name": "서양근대철학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHIL0314",
+    "name": "서양중세철학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHIL0351",
+    "name": "심리철학과 인지과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHIL0587",
+    "name": "예술철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHIL0342",
+    "name": "윤리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHIL0392",
+    "name": "인도철학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHIL0304",
+    "name": "정신분석과 철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHIL0591",
+    "name": "중국철학의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHIL0461",
+    "name": "형이상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHIL0344",
+    "name": "과학철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHIL0475",
+    "name": "도가철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHIL0425",
+    "name": "독일관념론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHIL0422",
+    "name": "역사철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHIL0375",
+    "name": "유가철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHIL0451",
+    "name": "인식론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHIL0306",
+    "name": "철학과 실존치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHIL0305",
+    "name": "철학상담의 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHIL0454",
+    "name": "철학적 인간학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHIL0585",
+    "name": "한국철학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHIL0434",
+    "name": "현대영미철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHIL0534",
+    "name": "현대유럽철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHIL0266",
+    "name": "명상의 인문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHIL0522",
+    "name": "문화와 매체철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHIL0333",
+    "name": "법과철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHIL0583",
+    "name": "비교철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHIL0589",
+    "name": "비판이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHIL0315",
+    "name": "서양고중세철학 특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHIL0545",
+    "name": "정치사회철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHIL0267",
+    "name": "죽음철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHIL0433",
+    "name": "현상학",
+    "credit": "3-3-0"
+  }
+]

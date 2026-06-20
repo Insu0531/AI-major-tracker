@@ -1,0 +1,170 @@
+[
+  {
+    "grade": "1",
+    "code": "CHFA0232",
+    "name": "가족관계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "CHID0215",
+    "name": "보육교사(인성)론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "CHFA0221",
+    "name": "유아교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "WELF0202",
+    "name": "인간행동과사회환경",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHFA0263",
+    "name": "놀이지도",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CHFA0259",
+    "name": "아동과학지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHFA0297",
+    "name": "아동권리와복지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHFA0295",
+    "name": "아동문학교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHFA0281",
+    "name": "아동생활지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHFA0280",
+    "name": "아동안전관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHFA0296",
+    "name": "언어지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHFA0211",
+    "name": "영유아발달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "WELF0205",
+    "name": "정신건강론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHFA0283",
+    "name": "특수아동이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHID0204",
+    "name": "아동미술",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CHFA0346",
+    "name": "아동상담론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHFA0289",
+    "name": "아동수학지도(캡스톤디자인)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHFA0260",
+    "name": "아동음악",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CHFA0293",
+    "name": "영유아교수방법론",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CHFA0292",
+    "name": "영유아사회정서지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHFA0222",
+    "name": "유아교육과정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHFA0452",
+    "name": "보육실습",
+    "credit": "3-2-6(주)"
+  },
+  {
+    "grade": "4",
+    "code": "CHFA0338",
+    "name": "부모교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHFA0291",
+    "name": "아동건강교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHFA0270",
+    "name": "아동관찰 및 행동연구",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CHFA0294",
+    "name": "영유아보육프로그램개발과평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHFA0427",
+    "name": "유아교육기관운영관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHFA0288",
+    "name": "유아사회교육(캡스톤디자인)",
+    "credit": "3-3-0"
+  }
+]

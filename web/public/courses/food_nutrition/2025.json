@@ -1,0 +1,182 @@
+[
+  {
+    "grade": "1",
+    "code": "BIOC0521",
+    "name": "생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FSNU0327",
+    "name": "식품재료학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "CHEM0504",
+    "name": "유기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MEDI0220",
+    "name": "공중보건학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOC0431",
+    "name": "생화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOC0432",
+    "name": "생화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FSNU0343",
+    "name": "식생활관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FOOD0441",
+    "name": "식품화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FOOD0442",
+    "name": "식품화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FSNU0331",
+    "name": "영양학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FSNU0332",
+    "name": "영양학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FSNU0434",
+    "name": "고급영양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOOD0575",
+    "name": "기능성식품학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FSNU0444",
+    "name": "단체급식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FSNU0435",
+    "name": "생애주기영양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOC0433",
+    "name": "생화학실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "MBIO0461",
+    "name": "식품미생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOOD0443",
+    "name": "식품화학실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FSNU0427",
+    "name": "실험조리",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FSNU0538",
+    "name": "영양교육 및 상담실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FSNU0433",
+    "name": "임상영양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FSNU0428",
+    "name": "조리원리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FSNU0546",
+    "name": "급식경영학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FSNU0537",
+    "name": "분자영양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FSNU0534",
+    "name": "식사요법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FSNU0523",
+    "name": "식품가공 및 저장학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FSNU0524",
+    "name": "식품위생학및법규",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FSNU0545",
+    "name": "영양사현장실습",
+    "credit": "2-0-80(시)"
+  },
+  {
+    "grade": "4",
+    "code": "FSNU0533",
+    "name": "영양판정 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "FSNU0536",
+    "name": "지역사회영양학",
+    "credit": "3-3-0"
+  }
+]

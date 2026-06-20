@@ -1,0 +1,182 @@
+[
+  {
+    "grade": "1",
+    "code": "MTED0234",
+    "name": "고급선형대수",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "MATH0205",
+    "name": "미분방정식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "MTED0231",
+    "name": "선형대수",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "MTED0212",
+    "name": "집합과논리교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "COME0311",
+    "name": "확률및통계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MTED0323",
+    "name": "고급위상수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MTED0502",
+    "name": "고급이산수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MTED0233",
+    "name": "고급해석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "TCHR0635",
+    "name": "수학교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MTED0572",
+    "name": "수학사와 수학교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MTED0322",
+    "name": "위상수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MATH0235",
+    "name": "정수론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MTED0503",
+    "name": "조합및그래프이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MTED0331",
+    "name": "해석기하학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MTED0211",
+    "name": "해석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0579",
+    "name": "고등학교수학교재연구및지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MTED0483",
+    "name": "복소해석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0578",
+    "name": "중학교수학교재연구및지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MTED0334",
+    "name": "추상대수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MTED0333",
+    "name": "현대대수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MTED0433",
+    "name": "현대미분기하학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MTED0434",
+    "name": "현대미분기하학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MTED0534",
+    "name": "기하지도법1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MTED0535",
+    "name": "기하지도법2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TCHR0471",
+    "name": "수학 논리 및 논술지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MTED0371",
+    "name": "수학수업설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MTED0524",
+    "name": "창의융합적수학추론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MTED0525",
+    "name": "창의융합적수학추론2",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "4",
+    "code": "MTED0514",
+    "name": "통합수학문제해결1",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "4",
+    "code": "MTED0515",
+    "name": "통합수학문제해결2",
+    "credit": "3-3-0"
+  }
+]

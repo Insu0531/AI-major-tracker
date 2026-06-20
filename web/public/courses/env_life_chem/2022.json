@@ -1,0 +1,272 @@
+[
+  {
+    "grade": "1",
+    "code": "ABSC0202",
+    "name": "응용생명과학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ABSC0204",
+    "name": "응용생물학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "AGRO0292",
+    "name": "재배학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ABSC0203",
+    "name": "환경생명화학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0469",
+    "name": "기기 · 분석화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0392",
+    "name": "기초생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0391",
+    "name": "기초유기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0413",
+    "name": "기초토양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGBL0314",
+    "name": "미생물학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0533",
+    "name": "미생물학실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0470",
+    "name": "분석 · 유기화학실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0422",
+    "name": "생명물리화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0404",
+    "name": "생명유기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0311",
+    "name": "식물영양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0468",
+    "name": "응용생명화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "INDC0411",
+    "name": "환경화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ACHE0464",
+    "name": "고급유전공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ACHE0446",
+    "name": "농식품화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ACHE0465",
+    "name": "농약 · 환경화학실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ACHE0451",
+    "name": "농약학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ACHE0453",
+    "name": "농약화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ACHE0631",
+    "name": "분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIIN0212",
+    "name": "생물정보학의 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ACHE0463",
+    "name": "식물 · 토양화학실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ACHE0471",
+    "name": "식물생리화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIIN0211",
+    "name": "유전공학의 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ACHE0431",
+    "name": "응용생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ACHE0461",
+    "name": "응용토양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ACHE0476",
+    "name": "최신미생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ABIC0312",
+    "name": "환경생물공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ACHE0473",
+    "name": "기능성화장품학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ACHE0472",
+    "name": "농식품안전성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIIN0214",
+    "name": "농식품유해물질정보학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ACHE0474",
+    "name": "농식품품질학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ACHE0467",
+    "name": "농식품화학실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ACHE0475",
+    "name": "바이오 빅데이터와 통계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ACHE0425",
+    "name": "바이오에너지과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ACHE0403",
+    "name": "발효생물화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ACHE0405",
+    "name": "비료자재학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIIN0213",
+    "name": "생물정보학실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "BIOC0433",
+    "name": "생화학실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "AGRO0491",
+    "name": "실험통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEM0635",
+    "name": "천연물화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ACHE0406",
+    "name": "환경생명화학연습1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "ACHE0408",
+    "name": "환경생명화학연습2",
+    "credit": "1-0-2"
+  }
+]

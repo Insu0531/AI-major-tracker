@@ -1,0 +1,170 @@
+[
+  {
+    "grade": "2",
+    "code": "CHEM0205",
+    "name": "물리화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0201",
+    "name": "분석화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0202",
+    "name": "분석화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0233",
+    "name": "분석화학실험",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0203",
+    "name": "유기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0204",
+    "name": "유기화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0331",
+    "name": "유기화학실험",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0251",
+    "name": "화학수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0234",
+    "name": "화학연습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0353",
+    "name": "기기분석1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0354",
+    "name": "기기분석2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0301",
+    "name": "무기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0302",
+    "name": "무기화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0333",
+    "name": "무기화학실험",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0206",
+    "name": "물리화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0207",
+    "name": "물리화학3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0332",
+    "name": "물리화학실험",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "3",
+    "code": "BIOC0431",
+    "name": "생화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOC0432",
+    "name": "생화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0356",
+    "name": "화학공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEM0355",
+    "name": "고분자화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEM0456",
+    "name": "고체 및 재료화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEM0303",
+    "name": "무기화학3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEM0351",
+    "name": "양자화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEM0452",
+    "name": "유기반응론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEM0454",
+    "name": "유기합성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEM0431",
+    "name": "화학기기실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CHEM0459",
+    "name": "화학연구 및 실험(종합설계)",
+    "credit": "3-0-6"
+  }
+]

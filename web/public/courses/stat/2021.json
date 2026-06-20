@@ -1,0 +1,152 @@
+[
+  {
+    "grade": "1",
+    "code": "STAT0221",
+    "name": "기초확률론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "STAT0248",
+    "name": "R 프로그래밍 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "STAT0259",
+    "name": "수리통계학1 및 연습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "STAT0241",
+    "name": "통계수학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "STAT0258",
+    "name": "통계수학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "STAT0212",
+    "name": "통계적방법 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "STAT0313",
+    "name": "통계패키지 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "STAT0341",
+    "name": "표본조사설계 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "STAT0254",
+    "name": "회귀분석 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0637",
+    "name": "기초확률과정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0436",
+    "name": "다변량자료분석 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0632",
+    "name": "범주형자료분석 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0512",
+    "name": "빅데이터분석 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0325",
+    "name": "수리통계학2 및 연습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0545",
+    "name": "시계열자료분석 및 실험(캡스톤디자인)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0331",
+    "name": "실험계획법 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0543",
+    "name": "캡스톤 디자인 프로젝트",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0549",
+    "name": "통계계산 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0422",
+    "name": "통계적품질관리 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "STAT0513",
+    "name": "GIS 공간자료 분석 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "STAT0424",
+    "name": "데이터마이닝 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "STAT0552",
+    "name": "바이오통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "STAT0554",
+    "name": "베이지안통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "STAT0521",
+    "name": "비모수통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "STAT0447",
+    "name": "자료분석 및 실험",
+    "credit": "3-2-2"
+  }
+]

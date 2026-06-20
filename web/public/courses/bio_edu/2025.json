@@ -1,0 +1,170 @@
+[
+  {
+    "grade": "1",
+    "code": "SCED0221",
+    "name": "일반생물학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0222",
+    "name": "일반생물학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0211",
+    "name": "일반화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIED0335",
+    "name": "계통분류학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ANSC0432",
+    "name": "동물생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIED0233",
+    "name": "동물생리학 실험지도",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "BIED0460",
+    "name": "생명과학 연구실습 1",
+    "credit": "1-0-15(주)"
+  },
+  {
+    "grade": "2",
+    "code": "BIED0461",
+    "name": "생명과학 연구실습 2",
+    "credit": "1-0-15(주)"
+  },
+  {
+    "grade": "2",
+    "code": "BIED0333",
+    "name": "생물화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOC0622",
+    "name": "세포생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIED0232",
+    "name": "세포생물학 실험지도",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "BIED0456",
+    "name": "야외실습 및 체험학습 지도법",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GENE0612",
+    "name": "면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ACHE0631",
+    "name": "분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIED0235",
+    "name": "분자생물학 실험지도",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "BIED0459",
+    "name": "생명과학교육 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0561",
+    "name": "생명과학교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0562",
+    "name": "생명과학교재연구 및 지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIED0413",
+    "name": "생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIED0411",
+    "name": "식물생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIED0234",
+    "name": "식물생리학 실험지도",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "BIOL0479",
+    "name": "진화생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIED0631",
+    "name": "발생학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TCHR0563",
+    "name": "생명과학 논리 및 논술지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TCHR0303",
+    "name": "생명과학 수업의 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TCHR0304",
+    "name": "생명과학과 디지털 활용 교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIOC0621",
+    "name": "유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIED0455",
+    "name": "중등생명과학실험 지도법",
+    "credit": "2-1-2"
+  }
+]

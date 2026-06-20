@@ -1,0 +1,212 @@
+[
+  {
+    "grade": "1",
+    "code": "MATH0492",
+    "name": "수학사개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "MATH0235",
+    "name": "정수론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "MATH0292",
+    "name": "집합과수리논리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "MATH0200",
+    "name": "현대수학의 소개",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MATH0419",
+    "name": "벡터해석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MATH0206",
+    "name": "상미분방정식1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MATH0421",
+    "name": "상미분방정식2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MATH0231",
+    "name": "선형대수학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MATH0241",
+    "name": "선형대수학1실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "MATH0232",
+    "name": "선형대수학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MATH0242",
+    "name": "선형대수학2실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "MATH0408",
+    "name": "수리계산론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MATH0201",
+    "name": "해석학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MATH0211",
+    "name": "해석학1실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "MATH0202",
+    "name": "해석학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MATH0212",
+    "name": "해석학2실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "MATH0417",
+    "name": "미분기하학1및실습",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "3",
+    "code": "MATH0411",
+    "name": "복소함수론1및실습",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "3",
+    "code": "MATH0412",
+    "name": "복소함수론2및실습",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "3",
+    "code": "MATH0427",
+    "name": "수치해석학입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MATH0415",
+    "name": "위상수학1및실습",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "3",
+    "code": "MATH0416",
+    "name": "위상수학2및실습",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "3",
+    "code": "MATH0254",
+    "name": "조합론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MATH0410",
+    "name": "편미분방정식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MATH0413",
+    "name": "현대대수학1및실습",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "3",
+    "code": "MATH0414",
+    "name": "현대대수학2및실습",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "4",
+    "code": "MATH0429",
+    "name": "기하학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MATH0428",
+    "name": "대수학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MATH0418",
+    "name": "미분기하학2및실습",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "4",
+    "code": "MCIM0505",
+    "name": "수리적 지능공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MCIM0506",
+    "name": "수리적빅데이터개론(캡스톤디자인)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "MTED0482",
+    "name": "실함수론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MATH0422",
+    "name": "응용수학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MATH0407",
+    "name": "조합위상수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MATH0327",
+    "name": "함수해석학개론",
+    "credit": "3-3-0"
+  }
+]

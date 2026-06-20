@@ -1,0 +1,218 @@
+[
+  {
+    "grade": "1",
+    "code": "HIST0412",
+    "name": "서양사개설",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "HIST0529",
+    "name": "영문사적강독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "HIST0383",
+    "name": "중국사개설",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "HIST0512",
+    "name": "한국사연구입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0222",
+    "name": "고려시대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0381",
+    "name": "동양사강독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0283",
+    "name": "삼국유사의세계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0422",
+    "name": "서양고중세사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0413",
+    "name": "서양현대사1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0452",
+    "name": "서양현대사2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0235",
+    "name": "역사와픽션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0234",
+    "name": "전쟁과인간",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0312",
+    "name": "중국고대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0322",
+    "name": "중국중세사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0352",
+    "name": "중국현대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0211",
+    "name": "한국고대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0526",
+    "name": "한국사사료강독1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0251",
+    "name": "한국현대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIST0528",
+    "name": "국제관계사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIST0363",
+    "name": "동양사논저강독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIST0372",
+    "name": "동양사연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIST0431",
+    "name": "서양근대사1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIST0441",
+    "name": "서양근대사2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIST0472",
+    "name": "서양사연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIST0232",
+    "name": "조선시대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIST0342",
+    "name": "중국근대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIST0332",
+    "name": "중국근세사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIST0241",
+    "name": "한국근대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIST0527",
+    "name": "한국사사료강독2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIST0272",
+    "name": "한국사연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIST0281",
+    "name": "한국사적해제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIST0262",
+    "name": "한국사특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HIST0482",
+    "name": "미국사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HIST0521",
+    "name": "사학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HIST0382",
+    "name": "일본사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HIST0282",
+    "name": "한국사회경제사",
+    "credit": "3-3-0"
+  }
+]

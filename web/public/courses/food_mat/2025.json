@@ -1,0 +1,212 @@
+[
+  {
+    "grade": "1",
+    "code": "FOOD0211",
+    "name": "식품공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "CHEM0504",
+    "name": "유기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOF0206",
+    "name": "기기분석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOF0202",
+    "name": "기초미생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOF0204",
+    "name": "기초영양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0534",
+    "name": "낙농식품미생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0503",
+    "name": "분석화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0631",
+    "name": "분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOF0203",
+    "name": "생물실험통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOC0431",
+    "name": "생화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOC0432",
+    "name": "생화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FOBI0315",
+    "name": "식품소재학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHAR0252",
+    "name": "건강기능식품학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOBI0201",
+    "name": "기초생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOBI0203",
+    "name": "발효식품소재공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOBI0204",
+    "name": "발효식품소재공학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ANSC0463",
+    "name": "발효유가공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOC0622",
+    "name": "세포생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOBI0223",
+    "name": "식품공정공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOBI0312",
+    "name": "식품생명화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOBI0347",
+    "name": "식품소재분석학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FOBI0413",
+    "name": "식품위생ㆍ미생물학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FOBI0202",
+    "name": "실험동물기능성식품평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MBIO0326",
+    "name": "유전공학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0635",
+    "name": "천연물화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FOBI0348",
+    "name": "기능성 식품과 면역",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FOBI0214",
+    "name": "식품 스타트업 기획",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "FOBI0213",
+    "name": "식품가공저장원리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FOBI0205",
+    "name": "식품고분자공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FOBI0402",
+    "name": "식품보건학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FOBI0216",
+    "name": "식품소재물성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FOBI0225",
+    "name": "식품소재산업세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FSNU0424",
+    "name": "식품품질관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FOBI0224",
+    "name": "식품효소공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FOBI0416",
+    "name": "캡스톤 식품소재공학연습",
+    "credit": "3-2-2"
+  }
+]

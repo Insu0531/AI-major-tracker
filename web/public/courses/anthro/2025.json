@@ -1,0 +1,212 @@
+[
+  {
+    "grade": "1",
+    "code": "ARAN0211",
+    "name": "고고학입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ARAN0202",
+    "name": "문화의이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ARAN0319",
+    "name": "문화콘텐츠 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ARAN0430",
+    "name": "한국민속학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ARAN0312",
+    "name": "한국선사고고학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARAN0316",
+    "name": "고고학실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARAN0333",
+    "name": "동남아의 사회와 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARAN0334",
+    "name": "문화, 질병, 치유",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARAN0323",
+    "name": "문화와정치",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARAN0315",
+    "name": "성, 사랑, 사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARAN0318",
+    "name": "야외고고학실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARAN0332",
+    "name": "인간, 환경, 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARAN0313",
+    "name": "인류의 기원과 진화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARAN0222",
+    "name": "인류학이론과방법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARAN0423",
+    "name": "중국의사회와문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARAN0212",
+    "name": "한국고고학입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARAN0314",
+    "name": "한국역사고고학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARAN0413",
+    "name": "가야고고학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARAN0411",
+    "name": "고고학이론과방법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARAN0529",
+    "name": "과학기술과 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARAN0329",
+    "name": "관광과 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARAN0434",
+    "name": "글로벌시대의 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARAN0531",
+    "name": "동아시아고고학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARAN0322",
+    "name": "문화와경제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARAN0415",
+    "name": "박물관학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARAN0412",
+    "name": "신라고고학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARAN0527",
+    "name": "영상과 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARAN0425",
+    "name": "일본의사회와문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARAN0335",
+    "name": "정책인류학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARAN0418",
+    "name": "한국고대의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARAN0433",
+    "name": "다문화사회론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARAN0432",
+    "name": "문화정책과 지역개발",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARAN0528",
+    "name": "문화현장조사실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARAN0530",
+    "name": "물질문화연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARAN0526",
+    "name": "음식과 문화",
+    "credit": "3-3-0"
+  }
+]

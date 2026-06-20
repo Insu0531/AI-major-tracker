@@ -1,0 +1,200 @@
+[
+  {
+    "grade": "1",
+    "code": "RUSS0242",
+    "name": "러시아어 음성실습",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "RUSS0221",
+    "name": "러시아어기초연습",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "RUSS0316",
+    "name": "러시아어문법 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "RUSS0317",
+    "name": "러시아어문법 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "RUSS0224",
+    "name": "러시아어문법활용1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "RUSS0225",
+    "name": "러시아어문법활용2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "RUSS0325",
+    "name": "러시아 고전의 세계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "RUSS0326",
+    "name": "러시아문학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "RUSS0334",
+    "name": "러시아어 강독1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "RUSS0335",
+    "name": "러시아어 강독2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "RUSS0318",
+    "name": "러시아어문법 3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "RUSS0354",
+    "name": "러시아어작문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "RUSS0319",
+    "name": "러시아어학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CUCD0302",
+    "name": "영화와 문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "RUSS0345",
+    "name": "현대 러시아 사회의 이해 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "RUSS0346",
+    "name": "현대 러시아 사회의 이해 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "RUSS0502",
+    "name": "고급 러시아어 문법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "RUSS0445",
+    "name": "고급 러시아어 회화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "RUSS0507",
+    "name": "극동 지역 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "RUSS0422",
+    "name": "러시아소설론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "RUSS0424",
+    "name": "러시아시론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "RUSS0414",
+    "name": "러시아어 형태론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "RUSS0417",
+    "name": "러시아어와 문화컨텍스트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "RUSS0503",
+    "name": "러시아작가론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "RUSS0506",
+    "name": "러시아지역학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "RUSS0508",
+    "name": "시베리아 지역 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "RUSS0453",
+    "name": "현대 러시아 사회와 미디어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "RUSS0526",
+    "name": "다매체 시대와 러시아문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "RUSS0248",
+    "name": "러시아어의 쟁점들",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "RUSS0253",
+    "name": "러시아어통번역연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "RUSS0251",
+    "name": "소비에트와 포스트소비에트 문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "RUSS0255",
+    "name": "졸업논문",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "RUSS0254",
+    "name": "학술논문작성법",
+    "credit": "1-1-0"
+  }
+]

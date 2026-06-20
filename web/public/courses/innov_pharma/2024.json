@@ -1,0 +1,296 @@
+[
+  {
+    "grade": "1",
+    "code": "INDM0202",
+    "name": "기초신약개발",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "1",
+    "code": "INDM0201",
+    "name": "신약개발입문",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "INDM0204",
+    "name": "물리분석약학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "INDM0239",
+    "name": "신약 표적 생물학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "INDM0240",
+    "name": "신약 표적 생물학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "INDM0203",
+    "name": "신약개발론1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "INDM0207",
+    "name": "신약개발론2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "INDM0206",
+    "name": "신약개발실험1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "INDM0208",
+    "name": "신약개발실험2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "PHAR0288",
+    "name": "약품생화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "INDM0248",
+    "name": "약품생화학2(혁신신약)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHAR0340",
+    "name": "약화학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "INDM0247",
+    "name": "약화학2(혁신신약)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "INDM0241",
+    "name": "의약품 데이터 분석 및 실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "INDM0227",
+    "name": "근거중심의학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "INDM0212",
+    "name": "바이오의약품",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "INDM0215",
+    "name": "신약개발실험3",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "INDM0223",
+    "name": "신약개발실험4",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "INDM0216",
+    "name": "신약과 의약화학1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "INDM0224",
+    "name": "신약과 의약화학2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "INDM0214",
+    "name": "의약품 규제과학1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "INDM0222",
+    "name": "의약품 규제과학2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "INDM0242",
+    "name": "의약품 빅데이터분석 및 실습",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "INDM0213",
+    "name": "의약품합성화학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "INDM0220",
+    "name": "전임상독성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "INDM0252",
+    "name": "제약공학(혁신신약)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "INDM0211",
+    "name": "제약학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "INDM0219",
+    "name": "제약학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "INDM0221",
+    "name": "질환과 의약품1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "INDM0249",
+    "name": "천연물약품학(혁신신약)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "INDM0210",
+    "name": "첨단기기분석학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "INDM0226",
+    "name": "나노의약품",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "INDM0231",
+    "name": "산업약학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "INDM0244",
+    "name": "신약 임상독성학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "INDM0238",
+    "name": "신약개발특허",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "INDM0255",
+    "name": "약효와 약물대사(혁신신약)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "INDM0254",
+    "name": "의약분자설계학(혁신신약)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "INDM0253",
+    "name": "의약품경제성 평가(혁신신약)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "INDM0230",
+    "name": "의약품정보학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "INDM0243",
+    "name": "인공지능신약개발",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "INDM0234",
+    "name": "임상 약동학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "INDM0228",
+    "name": "임상시험개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "INDM0256",
+    "name": "임상시험설계(혁신신약)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "INDM0229",
+    "name": "질환과 의약품2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "INDM0233",
+    "name": "첨단신약개발1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "INDM0237",
+    "name": "첨단신약개발2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "INDM0232",
+    "name": "혁신신약개발1 (캡스톤디자인)",
+    "credit": "3-1-4"
+  },
+  {
+    "grade": "4",
+    "code": "INDM0236",
+    "name": "혁신신약개발3 (캡스톤디자인)",
+    "credit": "3-1-4"
+  },
+  {
+    "grade": "4",
+    "code": "INDM0235",
+    "name": "혁신신약콜로퀴움",
+    "credit": "1-1-0"
+  }
+]

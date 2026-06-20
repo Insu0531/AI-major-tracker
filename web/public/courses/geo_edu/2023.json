@@ -1,0 +1,242 @@
+[
+  {
+    "grade": "1",
+    "code": "GEED0240",
+    "name": "세계지리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "GEED0223",
+    "name": "인문지리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "GEED0212",
+    "name": "자연지리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "GEED0546",
+    "name": "지리교육야외실습 1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "GEED0547",
+    "name": "지리교육야외실습 2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "GEED0340",
+    "name": "한국지리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOG0319",
+    "name": "경제지리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEED0339",
+    "name": "경제활동입지론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOG0314",
+    "name": "기후학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEED0327",
+    "name": "도시지리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOG0428",
+    "name": "사회지리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEED0527",
+    "name": "자연지리분석법",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "GEED0545",
+    "name": "지도학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "GEED0548",
+    "name": "지리교육야외실습 3",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "GEED0549",
+    "name": "지리교육야외실습 4",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "GEED0414",
+    "name": "지리정보론및원격탐사론",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "GEOG0311",
+    "name": "지형학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "TCHR0442",
+    "name": "통합사회교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEED0554",
+    "name": "기후변화와 지속가능한 세계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEED0449",
+    "name": "아시아지리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEED0523",
+    "name": "역사지리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEED0330",
+    "name": "이주, 다문화 그리고 지역",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEED0326",
+    "name": "인구지리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEED0528",
+    "name": "인문지리분석법",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEED0552",
+    "name": "장소와 문화경관",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEED0426",
+    "name": "정보·통신지리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0633",
+    "name": "지리교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEED0550",
+    "name": "지리교육야외실습 5",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEED0551",
+    "name": "지리교육야외실습 6",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0673",
+    "name": "지리교재연구및지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEED0423",
+    "name": "지리사상사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEED0412",
+    "name": "토양·생물지리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEOG0513",
+    "name": "환경지리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GEED0543",
+    "name": "아메리카·오세아니아지리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GEED0544",
+    "name": "유럽·아프리카지리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GEED0524",
+    "name": "인문지리교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GEED0526",
+    "name": "자연지리교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GEED0336",
+    "name": "지리 교수·학습 이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TCHR0476",
+    "name": "지리 논리 및 논술지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GEED0525",
+    "name": "지역지리교육",
+    "credit": "3-3-0"
+  }
+]

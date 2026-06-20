@@ -1,0 +1,200 @@
+[
+  {
+    "grade": "1",
+    "code": "KOED0241",
+    "name": "국문학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "KOED0311",
+    "name": "국문학선독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "KOED0231",
+    "name": "국어학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "KOED0323",
+    "name": "언어와 언어교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "KOED0524",
+    "name": "현대시작품지도론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KOED0359",
+    "name": "고전소설교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "TCHR0622",
+    "name": "국어교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KOED0525",
+    "name": "매체언어교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KOED0584",
+    "name": "문학교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KOED0337",
+    "name": "음운교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KOED0253",
+    "name": "학교문법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KOED0335",
+    "name": "한국현대문학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KOED0346",
+    "name": "현대소설작품지도론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KOED0556",
+    "name": "화법교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KOED0367",
+    "name": "희곡·연희지도론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KOED0390",
+    "name": "고전산문교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KOED0255",
+    "name": "고전시가교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KOED0272",
+    "name": "국문학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0465",
+    "name": "국어 논리 및 논술지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KOED0361",
+    "name": "국어어휘교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KOED0386",
+    "name": "국어통사교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KOED0546",
+    "name": "독서교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KOED0369",
+    "name": "시조·가사교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KOED0389",
+    "name": "의미교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KOED0343",
+    "name": "중·근세어강독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KOED0266",
+    "name": "현대소설교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KOED0360",
+    "name": "현대시교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "KOED0578",
+    "name": "국문학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "KOED0576",
+    "name": "국어과교육과정 및 평가론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TCHR0662",
+    "name": "국어교재연구및지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "KOED0281",
+    "name": "국어사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "KOED0577",
+    "name": "국어학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "KOED0373",
+    "name": "문학비평론",
+    "credit": "3-3-0"
+  }
+]

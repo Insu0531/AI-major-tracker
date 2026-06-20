@@ -1,0 +1,224 @@
+[
+  {
+    "grade": "1",
+    "code": "ENGR0351",
+    "name": "공학화학실험 I",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "ENGR0352",
+    "name": "공학화학실험 II",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "META0340",
+    "name": "결정구조와 회절",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0212",
+    "name": "공학수학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "META0235",
+    "name": "나노재료 및 기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "META0237",
+    "name": "반도체재료물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "META0329",
+    "name": "상평형과 미세조직",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "META0236",
+    "name": "이론열역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CIME0332",
+    "name": "재료공정실험",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "META0215",
+    "name": "재료과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "META0316",
+    "name": "재료의기계적성질",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CIME0447",
+    "name": "재료전기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "META0523",
+    "name": "금속신소재세미나 1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "META0524",
+    "name": "금속신소재세미나 2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "META0230",
+    "name": "금속재료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "META0451",
+    "name": "반도체소자공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "META0433",
+    "name": "소성가공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "META0318",
+    "name": "재료물리실험",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "CIME0315",
+    "name": "재료물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CIME0351",
+    "name": "재료열역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "META0357",
+    "name": "재료확산",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "META0315",
+    "name": "전달현상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "META0320",
+    "name": "전자재료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "META0355",
+    "name": "첨단재료상변태",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "META0317",
+    "name": "표면처리공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "META0351",
+    "name": "금속열처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "META0233",
+    "name": "박막재료공정학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "META0429",
+    "name": "반도체공정설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "META0452",
+    "name": "분말야금학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "META0232",
+    "name": "에너지저장공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "META0411",
+    "name": "응고공정학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "META0234",
+    "name": "재료제조공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "META0410",
+    "name": "재료조직 및 물성평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "META0354",
+    "name": "첨단제련공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "META0441",
+    "name": "캡스톤설계 1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "META0442",
+    "name": "캡스톤설계 2",
+    "credit": "3-2-2"
+  }
+]

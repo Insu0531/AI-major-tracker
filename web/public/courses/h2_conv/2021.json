@@ -1,0 +1,140 @@
+[
+  {
+    "grade": "3",
+    "code": "CHYE0210",
+    "name": "무기소재분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHYE0205",
+    "name": "바이오에너지 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHYE0203",
+    "name": "바이오에너지개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHYE0209",
+    "name": "바이오에너지전환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHYE0212",
+    "name": "신재생에너지 실험",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "CHYE0211",
+    "name": "신재생에너지 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHYE0206",
+    "name": "신재생에너지 팀티칭",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHYE0208",
+    "name": "에너지반도체공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHYE0207",
+    "name": "에너지저장·변환촉매",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHYE0204",
+    "name": "유기소재분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHYE0202",
+    "name": "유기에너지소재개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHYE0213",
+    "name": "융합학부 공통 Colloquium",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHYE0201",
+    "name": "전기화학공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHYE0214",
+    "name": "학부연구 프로젝트 I (수소 및 신재생에너지전공)",
+    "credit": "6-4-4"
+  },
+  {
+    "grade": "4",
+    "code": "CHYE0216",
+    "name": "광에너지소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHYE0215",
+    "name": "무기결정화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHYE0222",
+    "name": "바이오소재 수중 탐사",
+    "credit": "3-1-4"
+  },
+  {
+    "grade": "4",
+    "code": "CHYE0217",
+    "name": "바이오소재분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHYE0220",
+    "name": "수소 및 신재생에너지 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHYE0218",
+    "name": "수소에너지 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHYE0227",
+    "name": "에너지융합 캡스톤디자인",
+    "credit": "3-1-4"
+  },
+  {
+    "grade": "4",
+    "code": "CHYE0219",
+    "name": "영어논문 쓰기",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "4",
+    "code": "CHYE0221",
+    "name": "학부연구 프로젝트 II (수소 및 신재생에너지전공)",
+    "credit": "6-4-4"
+  }
+]

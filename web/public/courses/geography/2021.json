@@ -1,0 +1,218 @@
+[
+  {
+    "grade": "2",
+    "code": "GEOG0319",
+    "name": "경제지리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOG0314",
+    "name": "기후학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOG0333",
+    "name": "도시지리학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOG0320",
+    "name": "동아시아 지역의 기후와 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOG0425",
+    "name": "문화지리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOG0533",
+    "name": "미주지역지리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOG0531",
+    "name": "유럽지역지리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOG0336",
+    "name": "자연경관의 문화콘텐츠",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOG0534",
+    "name": "장소마케팅론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOG0334",
+    "name": "지도학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "GEOG0435",
+    "name": "지리정보시스템개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOG0315",
+    "name": "지형학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "GEOG0325",
+    "name": "한국지리및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEOG0328",
+    "name": "GIS프로젝트(캡스톤디자인)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEOG0324",
+    "name": "계량지리학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEOG0326",
+    "name": "공간빅데이터의 이해와 활용",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEOG0427",
+    "name": "국토지리조사",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEOG0340",
+    "name": "기상정보의 이해와 활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEOG0322",
+    "name": "기후변화와 미래환경",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEOG0321",
+    "name": "기후자료처리 및 분석",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEOG0342",
+    "name": "도시재생론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEOG0529",
+    "name": "도시지리정보시스템및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEOG0337",
+    "name": "문화콘텐츠 산업론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEOG0428",
+    "name": "사회지리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEOG0528",
+    "name": "산업입지분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEOG0536",
+    "name": "아시아 지역과 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEOG0345",
+    "name": "원격탐사의이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEOG0349",
+    "name": "자연재해의 이해와 관리",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GEOG0422",
+    "name": "지리학발달사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEOG0341",
+    "name": "지형환경변화와 인간생활",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GEOG0524",
+    "name": "세계정치지리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GEOG0525",
+    "name": "여가및관광지리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GEOG0530",
+    "name": "역사지리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GEOG0535",
+    "name": "인구이동론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GEOG0423",
+    "name": "토지이용과계획",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GEOG0513",
+    "name": "환경지리학",
+    "credit": "3-3-0"
+  }
+]

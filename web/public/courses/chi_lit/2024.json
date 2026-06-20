@@ -1,0 +1,176 @@
+[
+  {
+    "grade": "1",
+    "code": "CHIL0253",
+    "name": "중국고전문연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "CHIL0368",
+    "name": "중국문학과 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "CHIL0567",
+    "name": "중국언어와 문학의 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "CHIL0463",
+    "name": "중국의 언어와 문자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "CHIL0254",
+    "name": "초급중국어회화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHIL0367",
+    "name": "고급중국어독해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHIL0352",
+    "name": "고급중국어회화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHIL0437",
+    "name": "중국고전명문읽기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHIL0426",
+    "name": "중국고전명시읽기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHIL0316",
+    "name": "중국고전문학의흐름 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHIL0317",
+    "name": "중국고전문학의흐름 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHIL0383",
+    "name": "중국어문법1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHIL0365",
+    "name": "중급중국어독해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHIL0351",
+    "name": "중급중국어회화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHTR0303",
+    "name": "현대중국사회와경제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHIL0433",
+    "name": "사와곡의세계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHTR0301",
+    "name": "중국문화와통상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHIL0364",
+    "name": "중국소설의세계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHIL0396",
+    "name": "중국어문법2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHIL0371",
+    "name": "중국어작문 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHIL0372",
+    "name": "중국어작문 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHIL0453",
+    "name": "중국역사철학텍스트 읽기와 토론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHIL0454",
+    "name": "중국역사철학텍스트 읽기와 토론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHTR0302",
+    "name": "한중문화콘텐츠",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHIL0425",
+    "name": "현대중국의 문학과 사상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHIL0434",
+    "name": "현대중국의탐색",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHIL0566",
+    "name": "중국어 주제발표와 토론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHIL0565",
+    "name": "중국어번역연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHIL0393",
+    "name": "중국어학의이해",
+    "credit": "3-3-0"
+  }
+]

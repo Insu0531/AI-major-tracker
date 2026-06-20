@@ -1,0 +1,194 @@
+[
+  {
+    "grade": "1",
+    "code": "POLI0222",
+    "name": "국제관계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "POLI0212",
+    "name": "정치학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "POLI0224",
+    "name": "정치학과 데이터 사이언스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "POLI0414",
+    "name": "현대정치이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "POLI0422",
+    "name": "국제개발협력의 정치",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "POLI0431",
+    "name": "국제정치사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "POLI0216",
+    "name": "국제정치와 데이터",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "POLI0218",
+    "name": "독도정치학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "POLI0462",
+    "name": "비교정치론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "POLI0213",
+    "name": "세계 시민권, 윤리 및 정의",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ITPO0212",
+    "name": "정보사회의 정치",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "POLI0312",
+    "name": "정치학방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "POLI0300",
+    "name": "정치학영어원강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "POLI0451",
+    "name": "지방정치론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "POLI0332",
+    "name": "지정학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "POLI0501",
+    "name": "한국 좋은 정부론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "POLI0498",
+    "name": "한국민주주의론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLI0219",
+    "name": "AI 정치와 파이썬",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLI0507",
+    "name": "공존을 위한 민주주의-세계시민교육의 시각에서",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLI0217",
+    "name": "국제정치경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLI0542",
+    "name": "동양외교사 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "POLI0433",
+    "name": "러시아정치론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLI0496",
+    "name": "민주주의영어원강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLI0432",
+    "name": "유럽정치론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLI0452",
+    "name": "일본정치론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLI0326",
+    "name": "정치와 법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLI0466",
+    "name": "정치제도론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLI0416",
+    "name": "정치학읽기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLI0443",
+    "name": "중국정치론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "POLI0220",
+    "name": "머신러닝을 활용한 정치 데이터 분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "POLI0531",
+    "name": "외교정책론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "POLI0223",
+    "name": "정당과 선거를 통해 본 한국 민주주의",
+    "credit": "3-3-0"
+  }
+]

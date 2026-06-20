@@ -1,0 +1,200 @@
+[
+  {
+    "grade": "1",
+    "code": "SCED0211",
+    "name": "일반화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "CHED0251",
+    "name": "일반화학연습",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "1",
+    "code": "CHED0202",
+    "name": "일반화학연습2",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "2",
+    "code": "SCED0584",
+    "name": "4차산업과 과학교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0205",
+    "name": "물리화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0201",
+    "name": "분석화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0202",
+    "name": "분석화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0233",
+    "name": "분석화학실험",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0203",
+    "name": "유기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0204",
+    "name": "유기화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "TCHR0637",
+    "name": "화학교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0301",
+    "name": "무기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0302",
+    "name": "무기화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0333",
+    "name": "무기화학실험",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0206",
+    "name": "물리화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHED0207",
+    "name": "물리화학및교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0332",
+    "name": "물리화학실험",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "3",
+    "code": "CHED0332",
+    "name": "유기분광학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0209",
+    "name": "유기화학3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0331",
+    "name": "유기화학실험",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "3",
+    "code": "CHED0351",
+    "name": "이론화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0479",
+    "name": "화학 논리 및 논술지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHED0588",
+    "name": "화학실험연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHED0353",
+    "name": "기기분석및교육1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHED0354",
+    "name": "기기분석및교육2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHED0304",
+    "name": "무기분광 및 전기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHED0453",
+    "name": "물리화학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEM0455",
+    "name": "배위화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHED0361",
+    "name": "유기화학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHED0370",
+    "name": "유기화학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHED0591",
+    "name": "화학교육평가1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHED0592",
+    "name": "화학교육평가2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "TCHR0677",
+    "name": "화학교재연구및지도법",
+    "credit": "3-3-0"
+  }
+]

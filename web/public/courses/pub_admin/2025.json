@@ -1,0 +1,206 @@
+[
+  {
+    "grade": "1",
+    "code": "PUAD0232",
+    "name": "인사행정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PUAD0322",
+    "name": "행정계량분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PUAD0292",
+    "name": "행정자료해석과 통계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PUAD0222",
+    "name": "공직적성론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PUAD0233",
+    "name": "관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PUAD0273",
+    "name": "도시행정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "JURA0521",
+    "name": "민법총칙",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PUAD0241",
+    "name": "재무행정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PUAD0251",
+    "name": "정책학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PUAD0231",
+    "name": "조직론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PUAD0271",
+    "name": "지방행정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PUAD0221",
+    "name": "행정경제분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PUAD0291",
+    "name": "헌법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PUAD0453",
+    "name": "갈등협상론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PUAD0330",
+    "name": "공공회계1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PUAD0331",
+    "name": "공공회계2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PUAD0406",
+    "name": "공기업론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PUAD0225",
+    "name": "리더쉽",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PUAD0452",
+    "name": "비교행정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PUAD0341",
+    "name": "연구조사방법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PUAD0343",
+    "name": "재정학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PUAD0252",
+    "name": "중국의 법과 사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PUAD0226",
+    "name": "지방자치와 법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PUAD0372",
+    "name": "지방재정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PUAD0261",
+    "name": "지역경제론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PUAD0392",
+    "name": "행정법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PUAD0332",
+    "name": "거버넌스 사례연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PUAD0228",
+    "name": "공공감사론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PUAD0437",
+    "name": "정부혁신론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PUAD0442",
+    "name": "최신행정이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PUAD0313",
+    "name": "한국정부관료제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PUAD0415",
+    "name": "행정사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PUAD0423",
+    "name": "행정정보체계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PUAD0413",
+    "name": "행정철학",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,194 @@
+[
+  {
+    "grade": "1",
+    "code": "CHFA0232",
+    "name": "가족관계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "CHID0215",
+    "name": "보육교사(인성)론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "CHFA0221",
+    "name": "유아교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "WELF0202",
+    "name": "인간행동과사회환경",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHFA0244",
+    "name": "가족과 젠더",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHFA0272",
+    "name": "가족상담 및 치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHFA0268",
+    "name": "가족생활교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHFA0287",
+    "name": "발달심리(영유아발달)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "WELF0201",
+    "name": "사회복지개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHFA0247",
+    "name": "상담이론 및 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHFA0343",
+    "name": "심리검사",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "WELF0285",
+    "name": "아동복지론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHFA0280",
+    "name": "아동안전관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHFA0243",
+    "name": "가족과 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "WELF0382",
+    "name": "가족복지론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHFA0269",
+    "name": "노년학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHFA0338",
+    "name": "부모교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHFA0271",
+    "name": "부부교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "WELF0284",
+    "name": "사회복지실천기술론",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "WELF0282",
+    "name": "사회복지실천론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHFA0212",
+    "name": "아동발달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHFA0346",
+    "name": "아동상담론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHFA0248",
+    "name": "청소년발달 및 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHFA0237",
+    "name": "건강가정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHFA0273",
+    "name": "건강가정현장실습",
+    "credit": "3-0-4(주)"
+  },
+  {
+    "grade": "4",
+    "code": "WELF0323",
+    "name": "노인복지론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "WELF0383",
+    "name": "사회복지조사론",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "WELF0483",
+    "name": "사회복지현장실습",
+    "credit": "3-2-6(주)"
+  },
+  {
+    "grade": "4",
+    "code": "WELF0205",
+    "name": "정신건강론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "WELF0281",
+    "name": "지역사회복지론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHFA0345",
+    "name": "집단상담의이론과실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHFA0249",
+    "name": "학습이론과 실제",
+    "credit": "3-3-0"
+  }
+]

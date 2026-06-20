@@ -1,0 +1,200 @@
+[
+  {
+    "grade": "1",
+    "code": "SOCI0213",
+    "name": "글로벌 시대의 문화와 직업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SOCI0497",
+    "name": "글로컬 문화콘텐츠의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SOCI0211",
+    "name": "사회심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SOCI0313",
+    "name": "IT와 현대사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SOCI0321",
+    "name": "고전사회학이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SOCI0474",
+    "name": "문화사회학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SOCI0431",
+    "name": "사회불평등",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SOCI0311",
+    "name": "사회조사방법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SOCI0312",
+    "name": "사회통계학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "SOCI0531",
+    "name": "역사비교사회학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SOCI0314",
+    "name": "인문사회과학 질적연구방법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SOCI0544",
+    "name": "일상생활의 사회학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SOCI0361",
+    "name": "일탈사회학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SOCI0476",
+    "name": "지역사회학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SOCI0343",
+    "name": "초국적 이동성과 사회변동",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SOCI0322",
+    "name": "현대사회학이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SOCI0331",
+    "name": "경제사회학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SOCI0541",
+    "name": "과학기술과사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SOCI0215",
+    "name": "도시공간과 사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SOCI0483",
+    "name": "문화사회학실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "SOCI0491",
+    "name": "사회조사실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "SOCI0344",
+    "name": "예술사회학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SOCI0451",
+    "name": "정치사회학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SOCI0493",
+    "name": "젠더사회학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SOCI0391",
+    "name": "지역연구실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "SOCI0495",
+    "name": "해외인구연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SOCI0543",
+    "name": "북한사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SOCI0217",
+    "name": "사회운동의 사회학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SOCI0496",
+    "name": "사회학적 시대진단",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SOCI0592",
+    "name": "정보사회학실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "SOCI0341",
+    "name": "조직사회학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SOCI0214",
+    "name": "종교와 사회변동",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SOCI0218",
+    "name": "질병과 의료의 사회학적 이해",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,188 @@
+[
+  {
+    "grade": "1",
+    "code": "MECH0484",
+    "name": "실험계획법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DYFI0259",
+    "name": "첨단섬유신소재개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DYFI0411",
+    "name": "계면활성제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0355",
+    "name": "고분자화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DYFI0448",
+    "name": "공학기초창의설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0212",
+    "name": "공학수학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0502",
+    "name": "물리화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0503",
+    "name": "분석화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FIBR0321",
+    "name": "섬유재료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0203",
+    "name": "유기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0204",
+    "name": "유기화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DYFI0260",
+    "name": "고분자구조물성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DYFI0236",
+    "name": "섬유가공",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DYFI0256",
+    "name": "섬유고분자물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DYFI0240",
+    "name": "섬유염색이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DYFI0254",
+    "name": "섬유요소설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DYFI0257",
+    "name": "섬유재료공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DYFI0326",
+    "name": "섬유형성공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DYFI0258",
+    "name": "염료및기능성색소화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DYFI0317",
+    "name": "염료합성실험",
+    "credit": "3-1-4"
+  },
+  {
+    "grade": "3",
+    "code": "FIER0241",
+    "name": "염색가공실험",
+    "credit": "3-1-4"
+  },
+  {
+    "grade": "3",
+    "code": "DYFI0261",
+    "name": "유기전자재료공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DYFI0255",
+    "name": "컬러과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLY0411",
+    "name": "합성섬유",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DYFI0497",
+    "name": "IT융합형 스마트 텍스타일",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DYFI0496",
+    "name": "NBT 융합 섬유소재",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DYFI0415",
+    "name": "섬유고분자실험",
+    "credit": "3-1-4"
+  },
+  {
+    "grade": "4",
+    "code": "TEXT0424",
+    "name": "섬유복합재료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DYFI0250",
+    "name": "섬유캡스톤디자인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DYFI0495",
+    "name": "하이테크융합섬유기술",
+    "credit": "3-3-0"
+  }
+]

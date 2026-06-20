@@ -1,0 +1,278 @@
+[
+  {
+    "grade": "1",
+    "code": "ECON0211",
+    "name": "경제원론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ECON0212",
+    "name": "경제원론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ECON0645",
+    "name": "경제통상통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ECON0204",
+    "name": "무역학원론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECON0322",
+    "name": "거시경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECON0351",
+    "name": "경제사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECON0312",
+    "name": "공공경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECON0483",
+    "name": "국제무역계약론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECON0636",
+    "name": "기업경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECON0381",
+    "name": "무역상무론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECON0613",
+    "name": "미시경제학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECON0614",
+    "name": "미시경제학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECON0202",
+    "name": "정치경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0642",
+    "name": "게임이론과 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0662",
+    "name": "경제발전론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0473",
+    "name": "경제성장과 경기변동",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0472",
+    "name": "경제통합론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0451",
+    "name": "경제학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0633",
+    "name": "계량경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0471",
+    "name": "국제경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0424",
+    "name": "국제금융론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0482",
+    "name": "국제물류론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0352",
+    "name": "근대경제사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0584",
+    "name": "기술혁신의경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0442",
+    "name": "노동경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0474",
+    "name": "다국적기업경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0484",
+    "name": "무역결제와 보험",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PUAD0485",
+    "name": "법경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0441",
+    "name": "불평등의 경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0646",
+    "name": "빅데이터와 경제시계열분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0612",
+    "name": "산업조직론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0431",
+    "name": "수리경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0461",
+    "name": "지역경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0324",
+    "name": "화폐금융론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECON0683",
+    "name": "FTA의 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECON0544",
+    "name": "경제민주주의",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECON0563",
+    "name": "경제윤리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECON0562",
+    "name": "경제정책론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECON0573",
+    "name": "국제경제관계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECON0571",
+    "name": "국제경제정책",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECON0585",
+    "name": "국제경제통상법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECON0583",
+    "name": "국제비즈니스법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECON0534",
+    "name": "금융선물옵션론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECON0561",
+    "name": "한국경제론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECON0551",
+    "name": "한국경제사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECON0541",
+    "name": "환경경제학",
+    "credit": "3-3-0"
+  }
+]

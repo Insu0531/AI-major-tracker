@@ -1,0 +1,158 @@
+[
+  {
+    "grade": "2",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0213",
+    "name": "기초전자물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CMEB0212",
+    "name": "바이오유체공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CMEB0206",
+    "name": "분자생명공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CMEB0207",
+    "name": "생분석화학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0203",
+    "name": "유기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CMEB0226",
+    "name": "의생명기초통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CMEB0225",
+    "name": "의생명연구기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CMEB0201",
+    "name": "의생명융합공학입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CMEB0205",
+    "name": "의생명화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CMEB0219",
+    "name": "인체생리학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0245",
+    "name": "전자회로1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CMEB0211",
+    "name": "랩온어칩개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CMEB0223",
+    "name": "바이오기전공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CMEB0209",
+    "name": "세포조직공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CMEB0208",
+    "name": "의생명프로그래밍언어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CMEB0210",
+    "name": "종양면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CMEB0202",
+    "name": "학부연구프로젝트 I (의생명융합공학전공)",
+    "credit": "6-4-4"
+  },
+  {
+    "grade": "3",
+    "code": "CMEB0203",
+    "name": "학부연구프로젝트 II (의생명융합공학전공)",
+    "credit": "6-4-4"
+  },
+  {
+    "grade": "4",
+    "code": "NANO0235",
+    "name": "나노바이오공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CMEB0218",
+    "name": "바이오기술스타트업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CMEB0213",
+    "name": "생체재료공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CMEB0214",
+    "name": "시스템생물학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CMEB0224",
+    "name": "의생명세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CMEB0230",
+    "name": "의생명영상개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CMEB0204",
+    "name": "의생명캡스톤디자인",
+    "credit": "3-2-2"
+  }
+]

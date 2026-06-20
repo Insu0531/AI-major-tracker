@@ -1,0 +1,200 @@
+[
+  {
+    "grade": "1",
+    "code": "AGBL0332",
+    "name": "곤충학(식물의학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ACHE0392",
+    "name": "기초생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "AGBL0314",
+    "name": "미생물학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "AGBL0222",
+    "name": "생물자원학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "AGBL0311",
+    "name": "식물병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGBL0337",
+    "name": "곤충계통분류학(식물의학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGBL0427",
+    "name": "곤충생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGBL0522",
+    "name": "곤충생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGBL0340",
+    "name": "농업생물통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGBL0312",
+    "name": "식물균병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGBL0414",
+    "name": "식물바이러스병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGBL0336",
+    "name": "식물생리학(식물의학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGBL0411",
+    "name": "식물세균병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGBL0342",
+    "name": "식물진균병관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGBL0341",
+    "name": "재배학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGBL0266",
+    "name": "글로벌병해충관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGBL0331",
+    "name": "보건곤충학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ACHE0631",
+    "name": "분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGBL0333",
+    "name": "수목병리학(식물의학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGBL0343",
+    "name": "식물바이러스병관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGBL0433",
+    "name": "식물병리학실험",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "DOAB0325",
+    "name": "식물보호학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGBL0338",
+    "name": "유전학(식물의학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGBL0434",
+    "name": "응용곤충학실험",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "AGBL0344",
+    "name": "임상식물병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGBL0339",
+    "name": "해충관리학(식물의학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGBL0423",
+    "name": "해충학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ACHE0451",
+    "name": "농약학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGBL0346",
+    "name": "생물적방제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGBL0335",
+    "name": "식물검역학(식물의학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGBL0334",
+    "name": "식물병관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGBL0345",
+    "name": "잡초학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ACHE0321",
+    "name": "토양학",
+    "credit": "3-3-0"
+  }
+]

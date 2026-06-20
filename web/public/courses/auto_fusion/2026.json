@@ -1,0 +1,98 @@
+[
+  {
+    "grade": "2",
+    "code": "CROS0222",
+    "name": "AI프로그래밍실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0522",
+    "name": "CAD",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CROS0219",
+    "name": "모델링 및 시뮬레이션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SESM0209",
+    "name": "우주항공 동역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SESM0214",
+    "name": "우주항공 제어공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ITEC0417",
+    "name": "기계학습개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CAIB0235",
+    "name": "딥러닝프로그래밍실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SESM0221",
+    "name": "비행동역학 및 제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SESM0234",
+    "name": "유도 항법 제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0522",
+    "name": "현대제어시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CAIB0216",
+    "name": "강화학습개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0424",
+    "name": "컴퓨터비전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "ATSY0202",
+    "name": "항공드론 AI 기초수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "ATSY0204",
+    "name": "항공드론 AI입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "ATSY0203",
+    "name": "항공드론알고리즘",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "ATSY0201",
+    "name": "항공드론캡스톤디자인",
+    "credit": "3-3-0"
+  }
+]

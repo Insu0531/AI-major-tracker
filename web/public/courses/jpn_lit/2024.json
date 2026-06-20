@@ -1,0 +1,230 @@
+[
+  {
+    "grade": "1",
+    "code": "JPNL0206",
+    "name": "일본, 일본인, 일본어 (팀티칭)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "JPNL0328",
+    "name": "일본어말하기 연습",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "JPNL0327",
+    "name": "일본어회화 기초",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "JPNL0207",
+    "name": "일본한자 익히기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "JPNL0205",
+    "name": "전공 일본어 중급",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "JPNL0204",
+    "name": "전공 일본어 초급",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "JPNL0306",
+    "name": "실용일본어문법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "JPNL0316",
+    "name": "일본명문읽기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "JPNL0419",
+    "name": "일본문학입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "JPNL0308",
+    "name": "일본어 글쓰기 초급",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "JPNL0307",
+    "name": "일본어학의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "JPNL0424",
+    "name": "일본어회화 중급",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "JPNL0329",
+    "name": "일본어회화 초급",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "JPNL0516",
+    "name": "일본의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "JPNL0314",
+    "name": "일본희곡",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "JPNL0330",
+    "name": "콘텐츠활용일본어",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "JPNL0528",
+    "name": "일본경제특강1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "JPNL0529",
+    "name": "일본경제특강2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "JPNL0418",
+    "name": "일본고전상식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "JPNL0527",
+    "name": "일본대외관계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "JPNL0313",
+    "name": "일본문학감상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "JPNL0420",
+    "name": "일본문화사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "JPNL0417",
+    "name": "일본미디어리터러시",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "JPNL0531",
+    "name": "일본사회문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "JPNL0409",
+    "name": "일본소설과 콘텐츠개발",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "JPNL0305",
+    "name": "일본시사이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "JPNL0406",
+    "name": "일본어 글쓰기  중급",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "JPNL0407",
+    "name": "일본어의 역사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "JPNL0425",
+    "name": "일본어회화 심화",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "JPNL0522",
+    "name": "일본학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "JPNL0408",
+    "name": "현대일본어 문법의   이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "JPNL0534",
+    "name": "일본기업문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "JPNL0427",
+    "name": "일본명가감상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "JPNL0426",
+    "name": "일본어 어휘의 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "JPNL0523",
+    "name": "일본정치문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "JPNL0524",
+    "name": "일본표상문화론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "JPNL0532",
+    "name": "졸업논문세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "JPNL0533",
+    "name": "졸업논문세미나2",
+    "credit": "3-3-0"
+  }
+]

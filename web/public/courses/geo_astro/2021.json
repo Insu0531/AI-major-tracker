@@ -1,0 +1,218 @@
+[
+  {
+    "grade": "1",
+    "code": "EASC0211",
+    "name": "지구시스템과학",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "2",
+    "code": "ASAT0265",
+    "name": "기상통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ASAT0211",
+    "name": "대기과학입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ASAT0376",
+    "name": "대기관측 및 측기론",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ASAT0365",
+    "name": "대기열역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ASAT0585",
+    "name": "수리대기과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ASAT0485",
+    "name": "우주생물학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ASAT0227",
+    "name": "이론천문학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ASAT0201",
+    "name": "일반천문학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ASAT0202",
+    "name": "일반천문학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ASAT0575",
+    "name": "전산대기과학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ASAT0226",
+    "name": "전산천문학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ASAT0205",
+    "name": "태양계천문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ASAT0301",
+    "name": "관측천문학 및 실습 1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ASAT0302",
+    "name": "관측천문학 및 실습 2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ASAT0386",
+    "name": "대기역학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ASAT0387",
+    "name": "대기역학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ASAT0520",
+    "name": "대기오염(캡스톤디자인)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ASAT0665",
+    "name": "대기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ASAT0426",
+    "name": "우리은하와 외부은하",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ASAT0521",
+    "name": "종관기상학 및 실습(캡스톤 디자인)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ASAT0371",
+    "name": "중규모기상학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ASAT0601",
+    "name": "천체물리학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ASAT0406",
+    "name": "항성과 항성계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ASAT0566",
+    "name": "구름물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ASAT0395",
+    "name": "기초레이더기상학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ASAT0508",
+    "name": "대기과학논문실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ASAT0555",
+    "name": "대기복사학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ASAT0465",
+    "name": "미기상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ASAT0372",
+    "name": "상대론적 천체물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ASAT0655",
+    "name": "수치예보 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ASAT0524",
+    "name": "실용천문학 및 실습(캡스톤 디자인)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ASAT0212",
+    "name": "천문빅데이터사이언스 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ASAT0602",
+    "name": "천체물리학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ASAT0430",
+    "name": "현대우주론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ASAT0515",
+    "name": "현대천문학",
+    "credit": "3-3-0"
+  }
+]

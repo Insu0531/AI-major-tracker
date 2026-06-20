@@ -1,0 +1,182 @@
+[
+  {
+    "grade": "1",
+    "code": "AMEN0511",
+    "name": "디지털스마트농업기계공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AMEN0333",
+    "name": "3D 창의공학설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0212",
+    "name": "공학수학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AMEN0254",
+    "name": "기계제도 및 CAD",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "APCH0212",
+    "name": "기초창의설계",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0225",
+    "name": "동역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AMEN0461",
+    "name": "바이오재료공학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "AMEN0448",
+    "name": "생물산업 전기·전자공학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "AMEN0269",
+    "name": "생물산업유체공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AMEN0260",
+    "name": "열공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "META0231",
+    "name": "재료역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AMEN0335",
+    "name": "전산응용기계설계실무",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AMEN0263",
+    "name": "기계계측공학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AMEN0355",
+    "name": "기계요소설계 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AMEN0244",
+    "name": "농업인공지능공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AMEN0245",
+    "name": "농업정보공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AMEN0443",
+    "name": "마이크로프로세서 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AMEN0323",
+    "name": "생물가공시스템공학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AMEN0266",
+    "name": "생물계측공학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AMEN0264",
+    "name": "생물생산기계설계 및 분석",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0474",
+    "name": "진동공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AMEN0458",
+    "name": "생물산업기계설계",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "4",
+    "code": "AMEN0466",
+    "name": "생물산업기계설계실무",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "4",
+    "code": "AMEN0267",
+    "name": "생물산업모델링 및 분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AMEN0261",
+    "name": "신동력 에너지공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0332",
+    "name": "자동제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CIME0451",
+    "name": "캡스톤디자인1",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "4",
+    "code": "CIME0452",
+    "name": "캡스톤디자인2",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "4",
+    "code": "AMEN0265",
+    "name": "트랙터공학",
+    "credit": "3-3-0"
+  }
+]

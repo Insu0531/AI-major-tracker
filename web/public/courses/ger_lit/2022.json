@@ -1,0 +1,206 @@
+[
+  {
+    "grade": "1",
+    "code": "DTED0231",
+    "name": "기초독문법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "GERL0565",
+    "name": "독일동화문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "GERL0301",
+    "name": "독일어발음및어휘연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DTED0262",
+    "name": "중급독문법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GERL0561",
+    "name": "교양소설, 문학적 상상과 치유",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GERL0302",
+    "name": "기초독문이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GERL0444",
+    "name": "독어학입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GERL0321",
+    "name": "독일소설",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GERL0454",
+    "name": "독일어권 여행과 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GERL0331",
+    "name": "독일어회화1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GERL0332",
+    "name": "독일어회화2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GERL0352",
+    "name": "독일지역학 입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GERL0491",
+    "name": "독작문1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GERL0492",
+    "name": "독작문2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GERL0566",
+    "name": "디지털시대의 의사소통",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GERL0416",
+    "name": "분열과 통일의 독일근현대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HUCO0211",
+    "name": "인문학과 카운슬링1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GERL0410",
+    "name": "독문학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GERL0553",
+    "name": "독어학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GERL0423",
+    "name": "독일드라마",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GERL0526",
+    "name": "독일문장구조의이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GERL0422",
+    "name": "독일시",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GERL0451",
+    "name": "독일어회화3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CUCD0304",
+    "name": "독일언어 문화콘텐츠",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GERL0504",
+    "name": "독일의 언론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GERL0544",
+    "name": "독일의지리와풍속",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GERL0398",
+    "name": "독서로 독일문화 읽기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GERL0457",
+    "name": "독일문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GERL0505",
+    "name": "독일사회 행위자와 에이전시",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GERL0404",
+    "name": "독일사회와 세계화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GERL0506",
+    "name": "독일의 경제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GERL0458",
+    "name": "독일의 정치",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GERL0568",
+    "name": "번역실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GERL0567",
+    "name": "통역입문",
+    "credit": "3-3-0"
+  }
+]

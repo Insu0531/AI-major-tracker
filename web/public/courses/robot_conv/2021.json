@@ -1,0 +1,116 @@
+[
+  {
+    "grade": "3",
+    "code": "MECH0356",
+    "name": "기구학및기계역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CROS0205",
+    "name": "로봇공학실험1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CROS0206",
+    "name": "로봇공학실험2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CROS0201",
+    "name": "로봇기계공학기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CROS0207",
+    "name": "로봇요소설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CROS0202",
+    "name": "로봇전기전자공학기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CROS0203",
+    "name": "로봇컴퓨터공학기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CROS0204",
+    "name": "로봇현장기술특강",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0323",
+    "name": "마이크로프로세서",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0452",
+    "name": "수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0482",
+    "name": "시스템제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0321",
+    "name": "신호및시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0332",
+    "name": "자동제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COME0311",
+    "name": "확률및통계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CROS0210",
+    "name": "로봇공학설계 팀프로젝트1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CROS0211",
+    "name": "로봇공학설계 팀프로젝트2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CROS0213",
+    "name": "로봇매니퓰레이터",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CROS0214",
+    "name": "모빌리티 비전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0483",
+    "name": "센서와액츄에이터",
+    "credit": "3-3-0"
+  }
+]

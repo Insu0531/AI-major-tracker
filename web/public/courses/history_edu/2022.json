@@ -1,0 +1,206 @@
+[
+  {
+    "grade": "1",
+    "code": "HIED0437",
+    "name": "서양사교재론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "HIED0427",
+    "name": "아시아사교재론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "TCHR0472",
+    "name": "역사 논리 및 논술지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "HIED0241",
+    "name": "한국사개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "HIED0417",
+    "name": "한국사교재론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0311",
+    "name": "동양고대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0321",
+    "name": "동양중세사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0411",
+    "name": "서양고대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0421",
+    "name": "서양중세사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIED0252",
+    "name": "세계문화사교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIED0210",
+    "name": "역사학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIED0489",
+    "name": "지역사특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "TCHR0443",
+    "name": "통합사회교재연구및지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIED0524",
+    "name": "한국고고학과 고대 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0211",
+    "name": "한국고대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIED0219",
+    "name": "한국사학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIED0313",
+    "name": "한국중세사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIED0480",
+    "name": "동서교류사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIED0528",
+    "name": "동아시아 관계사 교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIST0341",
+    "name": "동양근대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIST0351",
+    "name": "동양현대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIED0435",
+    "name": "서양근대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIST0451",
+    "name": "서양현대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0628",
+    "name": "역사교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIED0519",
+    "name": "역사교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIST0241",
+    "name": "한국근대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIED0527",
+    "name": "한국문화사 교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HIST0251",
+    "name": "한국현대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HIED0525",
+    "name": "동양사학습평가연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HIED0526",
+    "name": "서양사학습평가연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HIED0521",
+    "name": "세계사수업연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TCHR0668",
+    "name": "역사교재연구및지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HIED0522",
+    "name": "한국사수업연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HIED0523",
+    "name": "한국사학습평가연습",
+    "credit": "3-3-0"
+  }
+]

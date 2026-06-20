@@ -1,0 +1,170 @@
+[
+  {
+    "grade": "1",
+    "code": "FRED0292",
+    "name": "기초프랑스문학텍스트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FRED0215",
+    "name": "기초프랑스어문법1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FRED0217",
+    "name": "기초프랑스어문법2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FRED0232",
+    "name": "기초프랑스어연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FRED0263",
+    "name": "프랑스어강독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FRED0216",
+    "name": "프랑스어입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FRED0313",
+    "name": "중급프랑스어문법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FRED0385",
+    "name": "중급프랑스어연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FRED0344",
+    "name": "프랑스단편강독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FRED0372",
+    "name": "프랑스문학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FRED0394",
+    "name": "프랑스산문강독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FRED0333",
+    "name": "프랑스어음성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FRAN0231",
+    "name": "프랑스어작문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FRED0335",
+    "name": "프랑스어회화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRED0444",
+    "name": "프랑스문학교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRED0473",
+    "name": "프랑스문학사조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRED0422",
+    "name": "프랑스소설",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRED0543",
+    "name": "프랑스시",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0478",
+    "name": "프랑스어 논리 및 논술지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0583",
+    "name": "프랑스어교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRED0535",
+    "name": "프랑스어권 한국어교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRED0495",
+    "name": "프랑스어권문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRED0486",
+    "name": "프랑스어작문연습",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRED0462",
+    "name": "프랑스어학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRED0435",
+    "name": "프랑스어회화연습",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRED0483",
+    "name": "프랑스와프랑스어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TCHR0584",
+    "name": "프랑스어교재연구및지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FRED0540",
+    "name": "프랑스희곡",
+    "credit": "3-3-0"
+  }
+]
