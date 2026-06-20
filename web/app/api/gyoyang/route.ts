@@ -90,6 +90,7 @@ export async function GET(req: NextRequest) {
         const rows = raw
           .filter((r) => r.sbjetSctnm === "교양")
           .map((r) => ({
+            grade: r.estblGrade ?? "",
             crseNo: r.crseNo ?? "",
             name: r.sbjetNm ?? "",
             code: r.sbjetCd ?? "",

@@ -9,7 +9,7 @@ type GyoyangCourse = { code: string; name: string; credit: string; sdg: boolean;
 const ALL_COURSES: GyoyangCourse[] = GYOYANG_LIST as GyoyangCourse[];
 const MAX_SELECT = 6;
 
-type Row = { crseNo: string; name: string; code: string; credit: string; dept: string; prof: string; timeStr: string; rmrk: string };
+type Row = { grade: string; crseNo: string; name: string; code: string; credit: string; dept: string; prof: string; timeStr: string; rmrk: string };
 
 function slotsOverlap(a: TimeSlot[], b: TimeSlot[]): boolean {
   for (const x of a) for (const y of b) {
