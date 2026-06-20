@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback } from "react";
 import { buildSectionGroups, generateCombos, Section, SectionGroup } from "@/lib/timetable";
-import { COURSES } from "@/lib/courses";
+import { COURSES_BY_MAJOR, MAJOR_LABELS, Major } from "@/lib/courses";
 import TimetableGrid from "@/components/TimetableGrid";
 
 type Row = {
@@ -26,14 +26,16 @@ const COLS: { key: keyof Row; label: string }[] = [
   { key: "timeStr", label: "강의시간" },
 ];
 
-const TOTAL = COURSES.length;
 const MAX_SELECT = 10;
 
 export default function Home() {
   const [tab, setTab] = useState<"search" | "wizard">("search");
+  const [major, setMajor] = useState<Major>("ai");
   const [semYear, setSemYear] = useState("2026");
   const [semTerm, setSemTerm] = useState("1");
   const sem = `${semYear}-${semTerm}`;
+  const COURSES = COURSES_BY_MAJOR[major];
+  const TOTAL = COURSES.length;
   const [rows, setRows] = useState<Row[]>([]);
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState<{ current: number; name: string } | null>(null);
@@ -63,7 +65,7 @@ export default function Home() {
     setSortState(null);
 
     try {
-      const res = await fetch(`/api/sections?sem=${encodeURIComponent(sem)}`, {
+      const res = await fetch(`/api/sections?sem=${encodeURIComponent(sem)}&major=${major}`, {
         signal: abortRef.current.signal,
       });
       if (!res.ok) {
@@ -202,6 +204,22 @@ export default function Home() {
         {tab === "search" && (
           <div className="flex flex-col flex-1 overflow-hidden p-4 gap-3">
             <div className="flex items-center gap-3 flex-wrap">
+              {/* 전공 선택 */}
+              {(Object.entries(MAJOR_LABELS) as [Major, string][]).map(([key, label]) => (
+                <button
+                  key={key}
+                  onClick={() => { setMajor(key); setRows([]); setStatusText(""); }}
+                  disabled={loading}
+                  className={`px-3 py-1.5 text-sm rounded border transition-colors ${
+                    major === key
+                      ? "bg-indigo-600 text-white border-indigo-600"
+                      : "border-gray-300 text-gray-600 hover:bg-gray-50"
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+              <span className="text-gray-300">|</span>
               {/* 연도 드롭다운 */}
               <select
                 className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"

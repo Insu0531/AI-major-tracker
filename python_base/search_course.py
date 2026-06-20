@@ -4,7 +4,7 @@ import re
 import json
 
 API_URL = "https://knuin.knu.ac.kr/public/stddm/edu.knu"  # 실제 API URL로 교체 필요
-PARAMS = {"itttn_cd": "1O0109"}  # 필요시 POST body로 변경
+PARAMS = {"itttn_cd": "1O01"}  # 필요시 POST body로 변경
 
 
 def clean_name(name: str) -> str:

@@ -1,5 +1,5 @@
 import { NextRequest } from "next/server";
-import { COURSES, parseSemester } from "@/lib/courses";
+import { Course, COURSES_BY_MAJOR, Major, parseSemester } from "@/lib/courses";
 
 const KNU_API =
   "https://knuin.knu.ac.kr/public/web/stddm/lsspr/syllabus/lectPlnInqr/selectListLectPlnInqr";
@@ -31,7 +31,7 @@ function makePayload(year: string, semCode: string, code: string) {
 
 export const maxDuration = 60;
 
-async function fetchCourse(year: string, semCode: string, course: typeof COURSES[0]) {
+async function fetchCourse(year: string, semCode: string, course: Course) {
   try {
     const res = await fetch(KNU_API, {
       method: "POST",
@@ -58,6 +58,9 @@ async function fetchCourse(year: string, semCode: string, course: typeof COURSES
 
 export async function GET(req: NextRequest) {
   const sem = req.nextUrl.searchParams.get("sem") ?? "";
+  const majorParam = (req.nextUrl.searchParams.get("major") ?? "ai") as Major;
+  const COURSES = COURSES_BY_MAJOR[majorParam] ?? COURSES_BY_MAJOR["ai"];
+
   const parsed = parseSemester(sem);
   if (!parsed) {
     return new Response(
