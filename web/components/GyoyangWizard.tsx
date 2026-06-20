@@ -27,6 +27,7 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
   const [search, setSearch] = useState("");
   const [filterSdg, setFilterSdg] = useState(false);
   const [filterHmnts, setFilterHmnts] = useState(false);
+  const [sortAsc, setSortAsc] = useState(true);
 
   // 선택된 교양 과목 코드 목록
   const [selected, setSelected] = useState<Set<string>>(new Set());
@@ -117,8 +118,8 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
   );
 
   const filteredList = ALL_COURSES.filter((c) => {
-    if (fetched && !openCodes.has(c.code)) return false; // 미개설 제외
-    if (fetched && conflictCodes.has(c.code)) return false; // 전공과 모두 충돌 제외
+    if (fetched && !openCodes.has(c.code)) return false;
+    if (fetched && conflictCodes.has(c.code)) return false;
     if (filterSdg && !c.sdg) return false;
     if (filterHmnts && !c.hmnts) return false;
     if (search) {
@@ -126,6 +127,9 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
       if (!c.name.toLowerCase().includes(q) && !c.code.toLowerCase().includes(q)) return false;
     }
     return true;
+  }).sort((a, b) => {
+    const cmp = a.name.localeCompare(b.name, "ko");
+    return sortAsc ? cmp : -cmp;
   });
 
   // 선택 과목 변경 시 조합 생성
@@ -198,11 +202,20 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
 
         {/* 검색 + 필터 */}
         <div className="px-3 py-2 shrink-0 flex flex-col gap-1.5 border-b border-gray-100">
-          <input
-            type="text" value={search} onChange={(e) => setSearch(e.target.value)}
-            placeholder="과목명 또는 과목코드 검색..."
-            className="w-full border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
-          />
+          <div className="flex gap-1.5">
+            <input
+              type="text" value={search} onChange={(e) => setSearch(e.target.value)}
+              placeholder="과목명 또는 과목코드 검색..."
+              className="flex-1 border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+            />
+            <button
+              onClick={() => setSortAsc((v) => !v)}
+              className="shrink-0 border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-600 hover:bg-gray-50"
+              title="이름 정렬"
+            >
+              ㄱ{sortAsc ? "▲" : "▼"}
+            </button>
+          </div>
           <div className="flex gap-3 items-center">
             <label className="flex items-center gap-1 text-xs text-gray-600 cursor-pointer">
               <input type="checkbox" checked={filterSdg} onChange={(e) => setFilterSdg(e.target.checked)} />
