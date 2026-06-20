@@ -72,11 +72,20 @@ export default function Home() {
     setSaving(true);
     try {
       const domtoimage = (await import("dom-to-image-more")).default;
+      const TARGET_W = 800;
+      const TARGET_H = 720;
+      const scaleX = TARGET_W / timetableRef.current.scrollWidth;
+      const scaleY = TARGET_H / timetableRef.current.scrollHeight;
       const dataUrl = await domtoimage.toPng(timetableRef.current, {
         bgcolor: "#ffffff",
-        scale: 2,
-        width: timetableRef.current.scrollWidth,
-        height: timetableRef.current.scrollHeight,
+        width: TARGET_W,
+        height: TARGET_H,
+        style: {
+          transform: `scale(${scaleX}, ${scaleY})`,
+          transformOrigin: "top left",
+          width: `${timetableRef.current.scrollWidth}px`,
+          height: `${timetableRef.current.scrollHeight}px`,
+        },
       });
       const link = document.createElement("a");
       link.href = dataUrl;
