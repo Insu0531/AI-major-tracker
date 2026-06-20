@@ -208,12 +208,12 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
   };
 
   // 교수가 선택된 시간표를 캡처용으로 잠깐 보여주기 위한 state
-  // null이면 displayCombo 그대로 사용
   const [captureCombo, setCaptureCombo] = useState<Section[] | null>(null);
+  const [capturedPinnedCombo, setCapturedPinnedCombo] = useState<Section[] | null>(null);
 
-  // 실제로 시간표에 표시되는 combo
-  const visibleCombo = captureCombo
-    ? [...(pinnedCombo ?? []), ...captureCombo]
+  // 실제로 시간표에 표시되는 combo (캡처 중일 땐 교수 선택 반영본 사용)
+  const visibleCombo = captureCombo !== null
+    ? [...(capturedPinnedCombo ?? pinnedCombo ?? []), ...captureCombo]
     : displayCombo;
 
   // 팝업에서 교수 선택 완료 → 다음 스텝 or 완료
@@ -242,27 +242,30 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
   };
 
   const saveAsImage = async () => {
-    const steps = getMultiProfSections(currentCombo);
+    // 전공(pinnedCombo) + 교양(currentCombo) 합쳐서 다중교수 스텝 수집
+    const fullComboForPick = [...(pinnedCombo ?? []), ...currentCombo];
+    const steps = getMultiProfSections(fullComboForPick);
 
     if (steps.length === 0) {
-      // 선택할 교수 없음 → 바로 캡처
       await doCapture(currentCombo);
       return;
     }
 
-    // 팝업 시작
     profPickResults.current = new Map();
     setProfSteps(steps);
     setProfStepIdx(0);
 
     afterPickRef.current = async (picks) => {
-      const resolved = applyProfPicks(currentCombo, picks);
-      // 선택 반영된 combo를 잠깐 표시 후 캡처
-      setCaptureCombo(resolved);
-      // 한 프레임 뒤에 캡처 (DOM 업데이트 대기)
+      // 전공/교양 각각에 교수 선택 반영
+      const resolvedPinned = applyProfPicks(pinnedCombo ?? [], picks);
+      const resolvedGyoyang = applyProfPicks(currentCombo, picks);
+      setCaptureCombo(resolvedGyoyang);
+      // pinnedCombo는 visibleCombo 계산에서 captureCombo와 합쳐지므로 별도 state 필요
+      setCapturedPinnedCombo(resolvedPinned);
       await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
-      await doCapture(resolved);
+      await doCapture(resolvedGyoyang);
       setCaptureCombo(null);
+      setCapturedPinnedCombo(null);
     };
   };
 
@@ -410,7 +413,7 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
             </div>
             <div className="shrink-0 pt-1">
               <button onClick={saveAsImage} disabled={saving} className="w-full py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors">
-                {saving ? "저장 중..." : "이미지 저장"}
+                {saving ? "저장 중..." : "최종 시간표 이미지 저장"}
               </button>
             </div>
           </>
