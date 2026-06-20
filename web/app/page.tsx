@@ -428,18 +428,33 @@ export default function Home() {
                       <div className="overflow-y-auto flex-1 px-2 pt-2 pb-1 flex flex-col gap-3">
                         {/* 학점 필터 */}
                         <div className="px-1">
-                          <p className="text-xs text-gray-400 mb-1">최소 학점</p>
-                          <div className="flex items-center gap-2">
-                            <input
-                              type="number"
-                              min={0}
-                              value={minCredit}
-                              onChange={(e) => setMinCredit(e.target.value)}
-                              placeholder="예) 9"
-                              className="w-full border border-gray-300 rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
-                            />
-                            <span className="text-xs text-gray-400 shrink-0">학점 이상</span>
+                          <div className="flex items-center justify-between mb-1">
+                            <p className="text-xs text-gray-400">최소 학점</p>
+                            {minCredit !== "" && (
+                              <button
+                                onClick={() => setMinCredit("")}
+                                className="text-xs text-gray-400 hover:text-gray-600"
+                              >초기화</button>
+                            )}
                           </div>
+                          <div className="grid grid-cols-6 gap-1">
+                            {Array.from({ length: 18 }, (_, i) => String(i + 6)).map((n) => (
+                              <button
+                                key={n}
+                                onClick={() => setMinCredit(minCredit === n ? "" : n)}
+                                className={`text-xs py-1 rounded border transition-colors ${
+                                  minCredit === n
+                                    ? "bg-blue-600 text-white border-blue-600"
+                                    : "border-gray-300 text-gray-600 hover:bg-gray-50"
+                                }`}
+                              >
+                                {n}
+                              </button>
+                            ))}
+                          </div>
+                          {minCredit !== "" && (
+                            <p className="text-xs text-blue-600 mt-1">{minCredit}학점 이상</p>
+                          )}
                         </div>
 
                         {/* 필수 과목 필터 */}
