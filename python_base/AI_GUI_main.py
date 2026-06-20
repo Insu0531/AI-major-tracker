@@ -644,7 +644,7 @@ class App(tk.Tk):
                 times = parse_times(time_str)
                 if not times:
                     continue
-                key = (row[2], time_str, row[4])  # (과목명, 강의시간, 교수)
+                key = (row[2], time_str)  # (과목명, 강의시간)
                 if key not in slot_map:
                     slot_map[key] = {"crse_no": row[1], "name": row[2],
                                      "profs": [row[4]], "time_str": time_str, "times": times,

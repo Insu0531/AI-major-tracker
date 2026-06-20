@@ -50,7 +50,7 @@ export function buildSectionGroups(
     for (const row of groupRows) {
       const times = parseTimes(row.timeStr);
       if (!times.length) continue;
-      const key = `${row.name}|${row.timeStr}|${row.prof}`;
+      const key = `${row.name}|${row.timeStr}`;
       if (!slotMap.has(key)) {
         slotMap.set(key, {
           name,
