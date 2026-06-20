@@ -32,7 +32,25 @@ const COLS: { key: keyof Row; label: string }[] = [
 const MAX_SELECT = 10;
 
 export default function Home() {
-  const [tab, setTab] = useState<"search" | "wizard" | "gyoyang">("search");
+  const [tab, setTab] = useState<"search" | "wizard" | "gyoyang" | "settings">("search");
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const stored = localStorage.getItem("theme");
+    setDarkMode(stored === "dark");
+  }, []);
+
+  const toggleDark = () => {
+    const next = !darkMode;
+    setDarkMode(next);
+    if (next) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  };
   const [pinnedCombo, setPinnedCombo] = useState<Section[] | null>(null);
   const [major, setMajor] = useState<Major>("ai");
   const [semYear, setSemYear] = useState("2026");
@@ -307,6 +325,7 @@ export default function Home() {
           { key: "search", label: "과목 조회" },
           { key: "wizard", label: "시간표 마법사" },
           { key: "gyoyang", label: "교양 마법사" },
+          { key: "settings", label: "설정" },
         ] as const).map(({ key, label }) => {
           const disabled = key === "gyoyang" && !pinnedCombo;
           return (
@@ -884,6 +903,27 @@ export default function Home() {
         {tab === "gyoyang" && (
           <div className="flex flex-1 overflow-hidden">
             <GyoyangWizard pinnedCombo={pinnedCombo} initialSem={sem} />
+          </div>
+        )}
+
+        {/* ── 설정 탭 ── */}
+        {tab === "settings" && (
+          <div className="flex-1 p-6 flex flex-col gap-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-4 max-w-md">
+              <h2 className="text-sm font-semibold text-gray-700 mb-4">화면</h2>
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm text-gray-700">다크 모드</p>
+                  <p className="text-xs text-gray-400 mt-0.5">어두운 배경으로 전환합니다</p>
+                </div>
+                <button
+                  onClick={toggleDark}
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${darkMode ? "bg-blue-600" : "bg-gray-300"}`}
+                >
+                  <span className={`inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform ${darkMode ? "translate-x-6" : "translate-x-1"}`} />
+                </button>
+              </div>
+            </div>
           </div>
         )}
       </main>
