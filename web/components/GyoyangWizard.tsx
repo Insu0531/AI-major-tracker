@@ -185,25 +185,11 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
     <div className="flex flex-1 overflow-hidden relative">
       {/* Left panel */}
       <div className={`${panelOpen ? "w-80" : "w-0"} shrink-0 border-r border-gray-200 bg-white flex flex-col overflow-hidden transition-all duration-200 h-full`}>
-        {/* 학기 선택 */}
-        <div className="px-3 pt-3 pb-2 shrink-0 flex gap-2 items-center border-b border-gray-100">
-          <select value={semYear} onChange={(e) => setSemYear(e.target.value)} className="border border-gray-300 rounded px-2 py-1 text-sm flex-1 focus:outline-none focus:ring-1 focus:ring-blue-400">
-            {Array.from({ length: 15 }, (_, i) => String(2026 + i)).map((y) => <option key={y} value={y}>{y}년</option>)}
-          </select>
-          <select value={semTerm} onChange={(e) => setSemTerm(e.target.value)} className="border border-gray-300 rounded px-2 py-1 text-sm flex-1 focus:outline-none focus:ring-1 focus:ring-blue-400">
-            <option value="1">1학기</option>
-            <option value="2">2학기</option>
-            <option value="s">여름</option>
-            <option value="w">겨울</option>
-          </select>
-          {loading && <span className="text-gray-400 text-xs shrink-0 animate-pulse">불러오는 중...</span>}
-        </div>
-
-        {/* 피닝 상태 표시 */}
-        <div className={`px-3 py-1.5 text-xs shrink-0 ${pinnedCombo ? "bg-amber-50 text-amber-700" : "bg-gray-50 text-gray-400"}`}>
-          {pinnedCombo
-            ? `★ 전공 시간표 고정됨 (${pinnedCombo.length}과목) — 겹치는 교양 자동 제외`
-            : "시간표 마법사에서 ★ 이 시간표로 교양 마법사 시작을 누르면 충돌 자동 제외됩니다"}
+        {/* 학기 표시 + 로딩 */}
+        <div className="px-3 pt-3 pb-2 shrink-0 flex items-center justify-between border-b border-gray-100">
+          <span className="text-sm font-medium text-gray-700">{semYear}년 {semTerm === "s" ? "여름" : semTerm === "w" ? "겨울" : `${semTerm}학기`}</span>
+          {loading && <span className="text-gray-400 text-xs animate-pulse">불러오는 중...</span>}
+          {fetched && !loading && <span className="text-xs text-gray-400">{filteredList.length}개 선택 가능</span>}
         </div>
 
         {/* 검색 + 필터 */}
@@ -213,7 +199,7 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
             placeholder="과목명 또는 과목코드 검색..."
             className="w-full border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
           />
-          <div className="flex gap-3">
+          <div className="flex gap-3 items-center">
             <label className="flex items-center gap-1 text-xs text-gray-600 cursor-pointer">
               <input type="checkbox" checked={filterSdg} onChange={(e) => setFilterSdg(e.target.checked)} />
               SDG교양
@@ -232,7 +218,7 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
         </div>
 
         {/* 과목 목록 */}
-        <div className="overflow-y-auto px-2 py-1 flex-1">
+        <div className="overflow-y-auto px-2 py-1 flex-1 min-h-0">
           {!fetched ? (
             <p className="text-xs text-gray-400 text-center py-8">{loading ? "교양 과목 불러오는 중..." : "학기를 선택하면 자동으로 불러옵니다"}</p>
           ) : filteredList.length === 0 ? (
