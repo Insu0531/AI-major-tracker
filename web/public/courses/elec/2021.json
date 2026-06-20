@@ -1,0 +1,596 @@
+[
+  {
+    "grade": "1",
+    "code": "EECS0201",
+    "name": "C프로그래밍과실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ELEC0212",
+    "name": "기초전자공학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ELEC0213",
+    "name": "기초전자물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ELEC0214",
+    "name": "기초전자수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ELEC0211",
+    "name": "기초전자실험 및 설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "ITEC0201",
+    "name": "컴퓨터학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0247",
+    "name": "논리회로",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0311",
+    "name": "물리전자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MTED0231",
+    "name": "선형대수",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COME0301",
+    "name": "이산수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COME0331",
+    "name": "자료구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0253",
+    "name": "전기전자일반",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0251",
+    "name": "전자공학실험1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0252",
+    "name": "전자공학실험2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0241",
+    "name": "전자장1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0242",
+    "name": "전자장2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0245",
+    "name": "전자회로1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0520",
+    "name": "파이썬프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0243",
+    "name": "회로이론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0244",
+    "name": "회로이론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EECS0499",
+    "name": "IT공학전문영어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0301",
+    "name": "기초RF공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0311",
+    "name": "논리회로설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0323",
+    "name": "마이크로프로세서",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EECS0326",
+    "name": "마이크로프로세서설계실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0104",
+    "name": "문제해결기반 공학연수실습 (심화전자공학)",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0103",
+    "name": "문제해결기반 공학연수실습 (전자공학)",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0331",
+    "name": "빅데이터응용",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0422",
+    "name": "소프트웨어공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0452",
+    "name": "수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0321",
+    "name": "신호및시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0312",
+    "name": "운영체제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0332",
+    "name": "자동제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0334",
+    "name": "전력전자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0333",
+    "name": "전자소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0246",
+    "name": "전자회로2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EECS0324",
+    "name": "전자회로설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0411",
+    "name": "컴퓨터구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0331",
+    "name": "통신이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0427",
+    "name": "현대물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0550",
+    "name": "화합물반도체공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0206",
+    "name": "확률과정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0514",
+    "name": "3차원음향시스템설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0403",
+    "name": "IT지식재산권",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0558",
+    "name": "PBL기반반도체실무프로젝트",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0557",
+    "name": "SK하이닉스반도체공정기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0412",
+    "name": "SoC설계 및 프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0517",
+    "name": "고급프로그래밍실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0452",
+    "name": "광전자공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0561",
+    "name": "광전자공학설계 및 응용",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0504",
+    "name": "기계학습시스템설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "EECS0460",
+    "name": "기초디스플레이공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0490",
+    "name": "네트워크기반제어개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EECS0312",
+    "name": "네트워크프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0514",
+    "name": "뇌인지공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0323",
+    "name": "데이타통신",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0469",
+    "name": "데이터마이닝응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EECS0404",
+    "name": "디지털신호처리실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0461",
+    "name": "디지털신호해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0413",
+    "name": "디지털집적회로",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0562",
+    "name": "디지털집적회로실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0471",
+    "name": "디지털통신",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0443",
+    "name": "무선공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0559",
+    "name": "무선공학설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0428",
+    "name": "반도체소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0554",
+    "name": "반도체소자설계실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0422",
+    "name": "반도체재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0513",
+    "name": "사물컴퓨팅시스템설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0447",
+    "name": "생체전자공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0483",
+    "name": "센서와액츄에이터",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0500",
+    "name": "스마트자동차전자실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0448",
+    "name": "시각심리및디스플레이공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0555",
+    "name": "시스템반도체설계실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0412",
+    "name": "아날로그집적회로",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0319",
+    "name": "알고리즘1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0477",
+    "name": "암호공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0421",
+    "name": "영상처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0503",
+    "name": "융합의료이미징공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0450",
+    "name": "음향심리및오디오공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0449",
+    "name": "의료광학영상시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0510",
+    "name": "의용전자공학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0475",
+    "name": "이동통신",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0324",
+    "name": "인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0556",
+    "name": "인공지능반도체공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EECS0420",
+    "name": "임베디드시스템설계실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "EECS0463",
+    "name": "임베디드시스템프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0515",
+    "name": "자율시스템설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0516",
+    "name": "전력변환시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0518",
+    "name": "전자공학종합설계1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0519",
+    "name": "전자공학종합설계2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0506",
+    "name": "전파및광학시스템설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0340",
+    "name": "전파전파 및 안테나공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0473",
+    "name": "정보및부호이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0464",
+    "name": "지능시스템개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0421",
+    "name": "집적회로공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0402",
+    "name": "집적회로공정실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0414",
+    "name": "컴퓨터망",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0424",
+    "name": "컴퓨터비전",
+    "credit": "3-3-0"
+  }
+]

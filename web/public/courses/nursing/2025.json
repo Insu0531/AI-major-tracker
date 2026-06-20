@@ -1,0 +1,350 @@
+[
+  {
+    "grade": "1",
+    "code": "NURS0231",
+    "name": "간호학개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "NURS0289",
+    "name": "인간관계와 의사소통",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "NURS0633",
+    "name": "인체구조와 기능 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "NURS0634",
+    "name": "인체구조와 기능 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "NURS0229",
+    "name": "인체구조와 기능 모형실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0269",
+    "name": "간호경영과 기업가 정신",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0636",
+    "name": "간호병태생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0285",
+    "name": "간호약리학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0391",
+    "name": "건강사정",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0394",
+    "name": "건강사정실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0270",
+    "name": "근거기반 간호연구",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0230",
+    "name": "기본간호학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0282",
+    "name": "기본간호학실습 1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0287",
+    "name": "기본간호학실습 2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0276",
+    "name": "디지털헬스와 간호",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0273",
+    "name": "문화다양성과 인권",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0274",
+    "name": "성인건강간호 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0275",
+    "name": "성인건강간호 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "SSED0332",
+    "name": "인간과사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0302",
+    "name": "글로벌 헬스",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0297",
+    "name": "보건간호",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0382",
+    "name": "보건교육",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0589",
+    "name": "보건교육실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0277",
+    "name": "성인건강간호 3",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0278",
+    "name": "성인건강간호 4",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0291",
+    "name": "성인건강간호학실습1",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0292",
+    "name": "성인건강간호학실습2",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0298",
+    "name": "성인건강간호학실습3",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0295",
+    "name": "아동건강간호 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0280",
+    "name": "아동건강간호1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0311",
+    "name": "아동건강간호학실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0279",
+    "name": "여성건강간호 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0294",
+    "name": "여성건강간호 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0299",
+    "name": "여성건강간호학실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0293",
+    "name": "여성아동간호 시뮬레이션",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0597",
+    "name": "영양과 간호",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0371",
+    "name": "정신건강간호학 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0338",
+    "name": "중환자간호",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0296",
+    "name": "지역사회간호",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0301",
+    "name": "지역정신간호 시뮬레이션",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0572",
+    "name": "간호관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0423",
+    "name": "간호관리학실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0306",
+    "name": "간호윤리와 보건관계법",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0625",
+    "name": "간호정보",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0261",
+    "name": "간호정책과 리더십",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0605",
+    "name": "노인건강간호",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0606",
+    "name": "노인건강간호실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "DEHY0266",
+    "name": "보건프로그램개발 및 평가",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0312",
+    "name": "성인통합간호시뮬레이션",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0310",
+    "name": "인공지능과 보건의료빅데이터",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0372",
+    "name": "정신건강간호학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0304",
+    "name": "정신건강간호학실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0303",
+    "name": "지역사회보건간호실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0309",
+    "name": "지역정신건강간호 및 실습",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0594",
+    "name": "직업환경건강간호",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0307",
+    "name": "통합간호술기",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0308",
+    "name": "통합간호실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0240",
+    "name": "호스피스",
+    "credit": "2-2-0"
+  }
+]

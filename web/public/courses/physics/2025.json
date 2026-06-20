@@ -1,0 +1,182 @@
+[
+  {
+    "grade": "2",
+    "code": "PHYS0226",
+    "name": "고급수리물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0223",
+    "name": "고전역학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0224",
+    "name": "고전역학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0261",
+    "name": "물리학실험III",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0234",
+    "name": "물리학을 위한 프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0225",
+    "name": "수리물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0341",
+    "name": "열물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0227",
+    "name": "전기와 자기1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0323",
+    "name": "현대물리실험",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0222",
+    "name": "현대물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0239",
+    "name": "AI기반 전산물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0229",
+    "name": "양자물리1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0230",
+    "name": "양자물리2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0351",
+    "name": "전공탐구프로젝트1",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0352",
+    "name": "전공탐구프로젝트2",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0228",
+    "name": "전기와 자기2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0363",
+    "name": "전자계측및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0342",
+    "name": "통계물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0240",
+    "name": "파동현상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0431",
+    "name": "현대광학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0233",
+    "name": "고급양자물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0237",
+    "name": "고에너지물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0499",
+    "name": "반도체 및 디스플레이 물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0494",
+    "name": "상대론과우주",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0235",
+    "name": "양자나노소자실험",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0243",
+    "name": "양자정보입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0238",
+    "name": "응집물질물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0479",
+    "name": "첨단과학컬로퀴엄(캡스톤디자인) 1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0478",
+    "name": "첨단과학컬로퀴엄(캡스톤디자인) 2",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0236",
+    "name": "핵과에너지",
+    "credit": "3-3-0"
+  }
+]

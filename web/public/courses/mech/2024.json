@@ -1,0 +1,164 @@
+[
+  {
+    "grade": "1",
+    "code": "MECH0522",
+    "name": "CAD",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "MECH0349",
+    "name": "창의공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0331",
+    "name": "고체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0212",
+    "name": "공학수학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0359",
+    "name": "기계공작법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0334",
+    "name": "기계재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0356",
+    "name": "기구학및기계역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0225",
+    "name": "동역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0226",
+    "name": "열역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0332",
+    "name": "유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0343",
+    "name": "응용고체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0351",
+    "name": "응용열역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0212",
+    "name": "전기전자공학기초 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0593",
+    "name": "CAD응용설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0354",
+    "name": "계측공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0227",
+    "name": "기계공학R&D학습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0335",
+    "name": "기계공학실험",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0336",
+    "name": "기계요소설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0358",
+    "name": "메카트로닉스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0452",
+    "name": "수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0482",
+    "name": "시스템제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0345",
+    "name": "열전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0426",
+    "name": "응용유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0474",
+    "name": "진동공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0583",
+    "name": "로봇시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0486",
+    "name": "마이크로컨트롤러",
+    "credit": "3-2-2"
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "grade": "1",
+    "code": "EESO0211",
+    "name": "에너지공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0212",
+    "name": "공학수학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0247",
+    "name": "논리회로",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EESO0237",
+    "name": "물질에너지수지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EESO0252",
+    "name": "에너지열역학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EESO0253",
+    "name": "에너지열역학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EESO0235",
+    "name": "에너지재료공학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EESO0219",
+    "name": "원자력공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0245",
+    "name": "전자회로1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0427",
+    "name": "현대물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0243",
+    "name": "회로이론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0244",
+    "name": "회로이론2",
+    "credit": "3-3-0"
+  }
+]

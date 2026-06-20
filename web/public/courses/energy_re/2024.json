@@ -1,0 +1,218 @@
+[
+  {
+    "grade": "1",
+    "code": "EESO0211",
+    "name": "에너지공학개론",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0212",
+    "name": "공학수학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0247",
+    "name": "논리회로",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EESO0237",
+    "name": "물질에너지수지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EESO0252",
+    "name": "에너지열역학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EESO0253",
+    "name": "에너지열역학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EESO0235",
+    "name": "에너지재료공학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EESO0219",
+    "name": "원자력공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0245",
+    "name": "전자회로1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0427",
+    "name": "현대물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0243",
+    "name": "회로이론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0244",
+    "name": "회로이론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EESO0260",
+    "name": "기초핵공학실험",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "EESO0220",
+    "name": "방사선공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EESO0249",
+    "name": "방사선관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0452",
+    "name": "수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EESO0236",
+    "name": "에너지재료공학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EESO0238",
+    "name": "에너지전기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EESO0239",
+    "name": "에너지촉매",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EESO0259",
+    "name": "에너지촉매실험",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "EESO0248",
+    "name": "원자력법령",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EESO0216",
+    "name": "태양전지공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0241",
+    "name": "프로그래밍언어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EESO0255",
+    "name": "에너지박막재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EESO0242",
+    "name": "에너지변환소재",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EESO0241",
+    "name": "에너지변환전지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EESO0240",
+    "name": "에너지소자공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EESO0262",
+    "name": "에너지저장실험",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "4",
+    "code": "EESO0245",
+    "name": "에너지환경",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EESO0223",
+    "name": "원자로공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EESO0251",
+    "name": "원자로시스템공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EESO0233",
+    "name": "창의시스템설계1",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "4",
+    "code": "EESO0234",
+    "name": "창의시스템설계2",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "4",
+    "code": "EESO0261",
+    "name": "태양광발전실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "EESO0250",
+    "name": "핵주기공학",
+    "credit": "3-3-0"
+  }
+]

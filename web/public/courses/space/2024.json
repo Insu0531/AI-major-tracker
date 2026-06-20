@@ -1,0 +1,218 @@
+[
+  {
+    "grade": "1",
+    "code": "SESM0201",
+    "name": "우주공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SESM0204",
+    "name": "우주항공 열역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SESM0203",
+    "name": "축조역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0212",
+    "name": "공학수학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SESM0207",
+    "name": "극한재료역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SESM0206",
+    "name": "기지극한재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SESM0212",
+    "name": "기지환경공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "STAT0452",
+    "name": "수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SESM0205",
+    "name": "우주공학 응용SW",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "SESM0215",
+    "name": "우주궤도역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SESM0208",
+    "name": "우주항공 공기역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SESM0209",
+    "name": "우주항공 동역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SESM0214",
+    "name": "우주항공 제어공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SESM0210",
+    "name": "우주항공전자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SESM0211",
+    "name": "축조공법 및 장비",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "SESM0226",
+    "name": "기지공조설비",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SESM0227",
+    "name": "기지충격해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SESM0219",
+    "name": "기지환경제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SESM0221",
+    "name": "비행동역학 및 제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SESM0223",
+    "name": "우주공학실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "SESM0220",
+    "name": "우주선 진동공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SESM0213",
+    "name": "우주항공 열전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SESM0234",
+    "name": "유도 항법 제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SESM0222",
+    "name": "인공위성 시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SESM0218",
+    "name": "자동축조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SESM0216",
+    "name": "지능형 시스템",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "SESM0225",
+    "name": "축조 시뮬레이션",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "SESM0217",
+    "name": "축조로버 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SESM0224",
+    "name": "축조로버 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "SESM0236",
+    "name": "우주공학  프로젝트관리1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "SESM0237",
+    "name": "우주공학  프로젝트관리2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "SESM0230",
+    "name": "우주공학 설계1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "SESM0233",
+    "name": "우주공학 설계2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "SESM0232",
+    "name": "우주항공 모빌리티",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SESM0235",
+    "name": "우주항공 컴퓨터비전",
+    "credit": "3-3-0"
+  }
+]

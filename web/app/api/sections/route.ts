@@ -1,5 +1,7 @@
 import { NextRequest } from "next/server";
-import { Course, COURSES_BY_MAJOR, Major, parseSemester } from "@/lib/courses";
+import { promises as fs } from "fs";
+import path from "path";
+import { Course, Major, parseSemester } from "@/lib/courses";
 import { Redis } from "@upstash/redis";
 
 const redis = new Redis({
@@ -65,10 +67,20 @@ async function fetchCourse(year: string, semCode: string, course: Course) {
   }
 }
 
+async function loadCourses(major: Major, entryYear: number): Promise<Course[]> {
+  try {
+    const filePath = path.join(process.cwd(), "public", "courses", major, `${entryYear}.json`);
+    const raw = await fs.readFile(filePath, "utf-8");
+    return JSON.parse(raw) as Course[];
+  } catch {
+    return [];
+  }
+}
+
 export async function GET(req: NextRequest) {
   const sem = req.nextUrl.searchParams.get("sem") ?? "";
   const majorParam = (req.nextUrl.searchParams.get("major") ?? "ai") as Major;
-  const COURSES = COURSES_BY_MAJOR[majorParam] ?? COURSES_BY_MAJOR["ai"];
+  const entryYear = parseInt(req.nextUrl.searchParams.get("entryYear") ?? "0");
 
   const parsed = parseSemester(sem);
   if (!parsed) {
@@ -79,9 +91,17 @@ export async function GET(req: NextRequest) {
   }
   const { year, semCode } = parsed;
 
-  const cacheKey = `sections:${majorParam}:${sem}`;
+  const COURSES = await loadCourses(majorParam, entryYear || parseInt(year));
 
-  // 캐시 히트 → SSE로 즉시 전송
+  if (COURSES.length === 0) {
+    return new Response(
+      JSON.stringify({ error: "해당 전공/입학연도의 과목 데이터가 없습니다. add_major.py를 실행해주세요." }),
+      { status: 404, headers: { "Content-Type": "application/json" } }
+    );
+  }
+
+  const cacheKey = `sections:${majorParam}:${entryYear}:${sem}`;
+
   try {
     const cached = await redis.get<object[]>(cacheKey);
     if (cached && Array.isArray(cached)) {
@@ -128,7 +148,6 @@ export async function GET(req: NextRequest) {
 
       send({ type: "done", totalRows: allRows.length });
 
-      // 캐시 저장 (비동기, 스트림 닫은 후)
       try {
         await redis.set(cacheKey, allRows, { ex: CACHE_TTL });
       } catch { /* 캐시 저장 실패 무시 */ }

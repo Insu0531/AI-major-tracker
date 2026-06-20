@@ -1,0 +1,170 @@
+[
+  {
+    "grade": "2",
+    "code": "CAIB0207",
+    "name": "기계학습입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CAIB0230",
+    "name": "문제해결과 알고리즘",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CAIB0228",
+    "name": "인공지능 기초와 활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CAIB0227",
+    "name": "인공지능수학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CAIB0231",
+    "name": "인공지능수학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0453",
+    "name": "컴퓨팅사고와 SW코딩",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CAIB0229",
+    "name": "프로그래밍 기초와 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0311",
+    "name": "논리회로설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ITEC0514",
+    "name": "뇌인지공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CAIB0226",
+    "name": "데이터분석 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MOBI0224",
+    "name": "딥러닝",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CAIB0235",
+    "name": "딥러닝프로그래밍실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CAIB0234",
+    "name": "신경망개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0325",
+    "name": "알고리즘",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CAIB0233",
+    "name": "영상이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0455",
+    "name": "지능HCI",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CAIB0232",
+    "name": "지식표현과 추론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CAIB0208",
+    "name": "학부연구프로젝트 1 (인공지능전공)",
+    "credit": "6-4-4"
+  },
+  {
+    "grade": "4",
+    "code": "CAIB0219",
+    "name": "AI융합 캡스톤디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CAIB0220",
+    "name": "AI하드웨어기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CAIB0216",
+    "name": "강화학습개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CAIB0225",
+    "name": "음성인식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CAIB0222",
+    "name": "인공지능시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CAIB0223",
+    "name": "인공지능프로그래밍실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CAIB0211",
+    "name": "자연어처리개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CAIB0224",
+    "name": "정보이론기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0424",
+    "name": "컴퓨터비전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CAIB0221",
+    "name": "패턴인식기초",
+    "credit": "3-3-0"
+  }
+]

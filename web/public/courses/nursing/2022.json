@@ -1,0 +1,428 @@
+[
+  {
+    "grade": "1",
+    "code": "NURS0231",
+    "name": "간호학개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "NURS0597",
+    "name": "영양과 간호",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "SSED0332",
+    "name": "인간과사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "NURS0633",
+    "name": "인체구조와 기능 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "NURS0634",
+    "name": "인체구조와 기능 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "NURS0637",
+    "name": "인체구조와 기능 실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0635",
+    "name": "간호미생물학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0636",
+    "name": "간호병태생리학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0285",
+    "name": "간호약리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0391",
+    "name": "건강사정",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0394",
+    "name": "건강사정실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0281",
+    "name": "기본간호학 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0286",
+    "name": "기본간호학 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0282",
+    "name": "기본간호학실습 1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0287",
+    "name": "기본간호학실습 2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0396",
+    "name": "비판적사고와간호과정",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0598",
+    "name": "성인건강간호학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0283",
+    "name": "성장과발달",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0613",
+    "name": "아동건강간호학 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0607",
+    "name": "여성건강간호학 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0289",
+    "name": "인간관계와 의사소통",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0290",
+    "name": "인간관계와 의사소통 실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0260",
+    "name": "간호연구 및 간호통계",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0625",
+    "name": "간호정보",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0626",
+    "name": "간호조직관리 1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0588",
+    "name": "근거중심간호",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0382",
+    "name": "보건교육",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0589",
+    "name": "보건교육실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0600",
+    "name": "성인건강간호실습1",
+    "credit": "2-0-6"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0602",
+    "name": "성인건강간호실습2",
+    "credit": "3-0-9"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0599",
+    "name": "성인건강간호학 2",
+    "credit": "4-4-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0601",
+    "name": "성인건강간호학 3",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0615",
+    "name": "아동건강간호실습 1",
+    "credit": "1-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0630",
+    "name": "아동건강간호실습2(캡스톤디자인)",
+    "credit": "1-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0614",
+    "name": "아동건강간호학 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0616",
+    "name": "아동건강간호학 3",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0609",
+    "name": "여성건강간호실습1",
+    "credit": "1-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0611",
+    "name": "여성건강간호실습2",
+    "credit": "1-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0608",
+    "name": "여성건강간호학 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0610",
+    "name": "여성건강간호학 3",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0619",
+    "name": "정신건강간호 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0620",
+    "name": "정신건강간호 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0621",
+    "name": "정신건강간호실습1",
+    "credit": "1-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0591",
+    "name": "지역사회보건간호실습 1",
+    "credit": "1-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "NURS0590",
+    "name": "지역사회보건간호학 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0627",
+    "name": "간호관리학실습 1",
+    "credit": "1-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0629",
+    "name": "간호관리학실습 2",
+    "credit": "1-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0337",
+    "name": "간호윤리세미나",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0261",
+    "name": "간호정책과 리더십",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0628",
+    "name": "간호조직관리 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0631",
+    "name": "국제간호",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0605",
+    "name": "노인건강간호",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0632",
+    "name": "노인건강간호실습(캡스톤디자인)",
+    "credit": "1-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0336",
+    "name": "다문화간호",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0545",
+    "name": "보건관계법",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "DEHY0266",
+    "name": "보건프로그램개발 및 평가",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0604",
+    "name": "성인건강간호실습3",
+    "credit": "1-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0603",
+    "name": "성인건강간호학 4",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0618",
+    "name": "아동건강간호실습 3",
+    "credit": "1-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0612",
+    "name": "여성건강간호실습3",
+    "credit": "1-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0596",
+    "name": "응급간호실습",
+    "credit": "1-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0622",
+    "name": "정신건강간호 3",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0623",
+    "name": "정신건강간호실습2",
+    "credit": "1-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0624",
+    "name": "정신건강간호실습3",
+    "credit": "1-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0593",
+    "name": "지역사회보건간호실습 2",
+    "credit": "1-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0592",
+    "name": "지역사회보건간호학 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0595",
+    "name": "직업건강간호실습",
+    "credit": "1-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0594",
+    "name": "직업환경건강간호",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0548",
+    "name": "통합실습1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0586",
+    "name": "통합실습2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "NURS0240",
+    "name": "호스피스",
+    "credit": "2-2-0"
+  }
+]

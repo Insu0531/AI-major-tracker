@@ -1,0 +1,182 @@
+[
+  {
+    "grade": "1",
+    "code": "PHYS0201",
+    "name": "물리전공소개",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0215",
+    "name": "물리학III",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0261",
+    "name": "물리학실험III",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0241",
+    "name": "수리물리1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0242",
+    "name": "수리물리2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0211",
+    "name": "역학및연습1",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0212",
+    "name": "역학및연습2",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0311",
+    "name": "전자기학및연습1",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0323",
+    "name": "현대물리실험",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0222",
+    "name": "현대물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0331",
+    "name": "양자물리및연습1",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0332",
+    "name": "양자물리및연습2",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0341",
+    "name": "열물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0351",
+    "name": "전공탐구프로젝트1",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0352",
+    "name": "전공탐구프로젝트2",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0454",
+    "name": "전산물리학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0363",
+    "name": "전자계측및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0312",
+    "name": "전자기학및연습2",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0342",
+    "name": "통계물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0431",
+    "name": "현대광학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0455",
+    "name": "고급응용전산물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0621",
+    "name": "고체물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0592",
+    "name": "물리학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0499",
+    "name": "반도체 및 디스플레이 물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0494",
+    "name": "상대론과우주",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0493",
+    "name": "입자물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0479",
+    "name": "첨단과학컬로퀴엄(캡스톤디자인) 1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0478",
+    "name": "첨단과학컬로퀴엄(캡스톤디자인) 2",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0477",
+    "name": "첨단물리종합설계",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0481",
+    "name": "핵물리",
+    "credit": "3-3-0"
+  }
+]

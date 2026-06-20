@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback, useEffect } from "react";
 import { buildSectionGroups, generateCombos, Section, SectionGroup } from "@/lib/timetable";
-import { COURSES_BY_MAJOR, Major, MAJOR_LABELS } from "@/lib/courses";
+import { Major, MAJOR_LABELS, ENTRY_YEAR_MIN, ENTRY_YEAR_MAX, fetchCoursesByYear, Course } from "@/lib/courses";
 import TimetableGrid from "@/components/TimetableGrid";
 import GyoyangWizard from "@/components/GyoyangWizard";
 import ProfPickerModal, { ProfStep, getMultiProfSections, applyProfPicks } from "@/components/ProfPickerModal";
@@ -56,9 +56,10 @@ export default function Home() {
   const [major, setMajor] = useState<Major>("ai");
   const [semYear, setSemYear] = useState("2026");
   const [semTerm, setSemTerm] = useState("1");
+  const [entryYear, setEntryYear] = useState(2026);
   const sem = `${semYear}-${semTerm}`;
-  const COURSES = COURSES_BY_MAJOR[major];
-  const TOTAL = COURSES.length;
+  const [courses, setCourses] = useState<Course[]>([]);
+  const TOTAL = courses.length;
   const [rows, setRows] = useState<Row[]>([]);
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState<{ current: number; name: string } | null>(null);
@@ -86,6 +87,11 @@ export default function Home() {
   const [slideDir, setSlideDir] = useState<"left" | "right">("left");
   // 고정 분반: crseNo(분반코드) → Row (과목 조회에서 "마법사에 추가"한 특정 분반)
   const [pinnedRows, setPinnedRows] = useState<Map<string, Row>>(new Map());
+
+  // 전공+입학연도 변경 시 과목 목록 fetch
+  useEffect(() => {
+    fetchCoursesByYear(major, entryYear).then(setCourses);
+  }, [major, entryYear]);
 
   const abortRef = useRef<AbortController | null>(null);
   const timetableRef = useRef<HTMLDivElement | null>(null);
@@ -183,7 +189,7 @@ export default function Home() {
     setSortState(null);
 
     try {
-      const res = await fetch(`/api/sections?sem=${encodeURIComponent(sem)}&major=${major}`, {
+      const res = await fetch(`/api/sections?sem=${encodeURIComponent(sem)}&major=${major}&entryYear=${entryYear}`, {
         signal: abortRef.current.signal,
       });
       if (!res.ok) {
@@ -227,7 +233,7 @@ export default function Home() {
       setLoading(false);
       setProgress(null);
     }
-  }, [sem, major, loading]);
+  }, [sem, major, entryYear, loading]);
 
   const sortedRows = (() => {
     if (!sortState) return rows;
@@ -414,14 +420,25 @@ export default function Home() {
                   <option key={key} value={key}>{label}</option>
                 ))}
               </select>
-              {/* 연도 드롭다운 */}
+              {/* 입학연도 드롭다운 */}
+              <select
+                className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+                value={entryYear}
+                onChange={(e) => { setEntryYear(Number(e.target.value)); setRows([]); setStatusText(""); }}
+                disabled={loading}
+              >
+                {Array.from({ length: ENTRY_YEAR_MAX - ENTRY_YEAR_MIN + 1 }, (_, i) => ENTRY_YEAR_MIN + i).map((y) => (
+                  <option key={y} value={y}>{y}학번</option>
+                ))}
+              </select>
+              {/* 조회학기 연도 드롭다운 */}
               <select
                 className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
                 value={semYear}
                 onChange={(e) => setSemYear(e.target.value)}
                 disabled={loading}
               >
-                {Array.from({ length: 15 }, (_, i) => String(2026 + i)).map((y) => (
+                {Array.from({ length: 15 }, (_, i) => String(2021 + i)).map((y) => (
                   <option key={y} value={y}>{y}년</option>
                 ))}
               </select>
@@ -439,10 +456,11 @@ export default function Home() {
               </select>
               <button
                 onClick={doFetch}
-                disabled={loading}
+                disabled={loading || courses.length === 0}
+                title={courses.length === 0 ? "해당 학번의 이수체계 데이터가 없습니다" : undefined}
                 className="bg-blue-600 text-white text-sm px-4 py-1.5 rounded hover:bg-blue-700 disabled:opacity-50 transition-colors"
               >
-                {loading ? "조회 중..." : "조회"}
+                {loading ? "조회 중..." : courses.length === 0 ? "데이터 없음" : "조회"}
               </button>
               {loading && (
                 <button

@@ -1,0 +1,200 @@
+[
+  {
+    "grade": "1",
+    "code": "EESO0211",
+    "name": "에너지공학개론",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0212",
+    "name": "공학수학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0247",
+    "name": "논리회로",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EESO0237",
+    "name": "물질에너지수지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EESO0252",
+    "name": "에너지열역학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EESO0253",
+    "name": "에너지열역학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EESO0235",
+    "name": "에너지재료공학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EESO0219",
+    "name": "원자력공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0245",
+    "name": "전자회로1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0427",
+    "name": "현대물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0243",
+    "name": "회로이론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0244",
+    "name": "회로이론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EESO0263",
+    "name": "기초전기회로실험",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0452",
+    "name": "수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0321",
+    "name": "신호및시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0322",
+    "name": "에너지변환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0431",
+    "name": "전력공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EESO0256",
+    "name": "전력시스템공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0334",
+    "name": "전력전자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SCED0241",
+    "name": "전자기학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0246",
+    "name": "전자회로2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EESO0226",
+    "name": "제어공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0241",
+    "name": "프로그래밍언어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EESO0264",
+    "name": "기초전력변환기실험",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0323",
+    "name": "마이크로프로세서",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EESO0246",
+    "name": "신재생에너지변환개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EESO0258",
+    "name": "에너지변환설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "EESO0257",
+    "name": "에너지제어실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0432",
+    "name": "전기기계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EESO0227",
+    "name": "전력변환기응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EESO0233",
+    "name": "창의시스템설계1",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "4",
+    "code": "EESO0234",
+    "name": "창의시스템설계2",
+    "credit": "4-3-2"
+  }
+]
