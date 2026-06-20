@@ -850,7 +850,7 @@ export default function Home() {
                       {currentCombo.map((s) => s.name.replace(/\s*\(.*?\)\s*$/, "")).join(" · ")}
                     </span>
                   </div>
-                  <div key={`${comboIdx}-${slideDir}`} className={`flex-1 overflow-auto ${slideDir === "left" ? "slide-left" : "slide-right"}`}>
+                  <div key={`${comboIdx}-${slideDir}`} className={`flex-1 overflow-auto min-h-0 ${slideDir === "left" ? "slide-left" : "slide-right"}`}>
                     <TimetableGrid ref={timetableRef} combo={currentCombo} />
                   </div>
                   <div className="flex gap-3 shrink-0 pt-1">
