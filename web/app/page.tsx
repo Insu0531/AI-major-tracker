@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useCallback, useEffect } from "react";
+import { track } from "@vercel/analytics";
 import { buildSectionGroups, generateCombos, Section, NoTimeSection } from "@/lib/timetable";
 import { Major, MAJOR_LABELS, ENTRY_YEAR_MIN, ENTRY_YEAR_MAX, fetchCoursesByYear, Course } from "@/lib/courses";
 import TimetableGrid from "@/components/TimetableGrid";
@@ -118,6 +119,7 @@ export default function Home() {
     setProgress({ current: 0, name: "서버에 요청 중..." });
     setStatusText("");
     setSortState(null);
+    track("search", { major, entryYear, sem });
 
     try {
       const res = await fetch(`/api/sections?sem=${encodeURIComponent(sem)}&major=${major}&entryYear=${entryYear}`, {
