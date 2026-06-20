@@ -26,8 +26,8 @@ body {
 }
 
 select {
-  color: inherit;
-  -webkit-text-fill-color: currentColor;
+  color: #111827;
+  -webkit-text-fill-color: #111827;
   opacity: 1;
 }
 
