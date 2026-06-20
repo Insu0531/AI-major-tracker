@@ -81,10 +81,17 @@ export default function Home() {
         width: timetableRef.current.scrollWidth,
         height: timetableRef.current.scrollHeight,
       });
-      const link = document.createElement("a");
-      link.download = `시간표_${comboIdx + 1}.png`;
-      link.href = canvas.toDataURL("image/png");
-      link.click();
+      canvas.toBlob((blob) => {
+        if (!blob) return;
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = `시간표_${comboIdx + 1}.png`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      }, "image/png");
     } finally {
       setSaving(false);
     }
