@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback, useEffect } from "react";
 import { buildSectionGroups, generateCombos, Section, SectionGroup } from "@/lib/timetable";
-import { COURSES_BY_MAJOR, Major } from "@/lib/courses";
+import { COURSES_BY_MAJOR, Major, MAJOR_LABELS } from "@/lib/courses";
 import TimetableGrid from "@/components/TimetableGrid";
 
 type Row = {
@@ -81,17 +81,13 @@ export default function Home() {
         width: timetableRef.current.scrollWidth,
         height: timetableRef.current.scrollHeight,
       });
-      canvas.toBlob((blob) => {
-        if (!blob) return;
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = `시간표_${comboIdx + 1}.png`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
-      }, "image/png");
+      const dataUrl = canvas.toDataURL("image/png");
+      const link = document.createElement("a");
+      link.href = dataUrl;
+      link.download = `시간표_${comboIdx + 1}.png`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     } finally {
       setSaving(false);
     }
@@ -319,8 +315,9 @@ export default function Home() {
                 onChange={(e) => { setMajor(e.target.value as Major); setRows([]); setStatusText(""); }}
                 disabled={loading}
               >
-                <option value="ai">전자공학부 인공지능전공</option>
-                <option value="elec">전자공학부</option>
+                {(Object.entries(MAJOR_LABELS) as [Major, string][]).map(([key, label]) => (
+                  <option key={key} value={key}>{label}</option>
+                ))}
               </select>
               {/* 연도 드롭다운 */}
               <select
