@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { buildSectionGroups, generateCombos, Section, SectionGroup, TimeSlot } from "@/lib/timetable";
+import { buildSectionGroups, generateCombos, Section, SectionGroup, TimeSlot, NoTimeSection } from "@/lib/timetable";
 import TimetableGrid from "@/components/TimetableGrid";
 import ProfPickerModal, { ProfStep, getMultiProfSections, applyProfPicks } from "@/components/ProfPickerModal";
 import GYOYANG_LIST from "@/lib/gyoyang.json";
@@ -19,7 +19,7 @@ function slotsOverlap(a: TimeSlot[], b: TimeSlot[]): boolean {
   return false;
 }
 
-export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo: Section[] | null; initialSem?: string }) {
+export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initialSem }: { pinnedCombo: Section[] | null; pinnedNoTimeSections?: NoTimeSection[]; initialSem?: string }) {
   const [semYear, setSemYear] = useState(() => initialSem?.split("-")[0] ?? "2026");
   const [semTerm, setSemTerm] = useState(() => initialSem?.split("-")[1] ?? "1");
   const sem = `${semYear}-${semTerm}`;
@@ -47,6 +47,7 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
   const [listSortState, setListSortState] = useState<{ col: keyof Row; dir: "asc" | "desc" } | null>(null);
   const [maxCredit, setMaxCredit] = useState(0); // 0 = 제한 없음
   const [minGyoyangCredit, setMinGyoyangCredit] = useState(0); // 0 = 제한 없음
+  const [noTimeSections, setNoTimeSections] = useState<NoTimeSection[]>([]);
   const [flashKey, setFlashKey] = useState(0);
   const [slideDir, setSlideDir] = useState<"left" | "right">("left");
   const [saving, setSaving] = useState(false);
@@ -120,7 +121,7 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
           allRows
             .filter((r) => r.code === code)
             .every((r) => {
-              const sec = buildSectionGroups([r]).flat()[0];
+              const sec = buildSectionGroups([r]).groups.flat()[0];
               return sec ? slotsOverlap(sec.times, pinnedSlots) : false;
             })
         )
@@ -143,10 +144,11 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
   });
 
   useEffect(() => {
-    if (allRows.length === 0 || selected.size === 0) { setCombos([]); return; }
+    if (allRows.length === 0 || selected.size === 0) { setCombos([]); setNoTimeSections([]); return; }
 
     const selectedRows = allRows.filter((r) => selected.has(r.code));
-    const groups: SectionGroup[] = buildSectionGroups(selectedRows);
+    const { groups, noTimeSections: nts } = buildSectionGroups(selectedRows);
+    setNoTimeSections(nts);
 
     const pinnedSlots = pinnedCombo?.flatMap((s) => s.times) ?? [];
     const filteredGroups = pinnedSlots.length > 0
@@ -195,7 +197,8 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
 
   useEffect(() => { setComboIdx(0); }, [minGyoyangCredit]);
 
-  const pinnedCredit = (pinnedCombo ?? []).reduce((s, sec) => s + sec.credit, 0);
+  const pinnedNoTimeCredit = (pinnedNoTimeSections ?? []).reduce((s, sec) => s + sec.credit, 0);
+  const pinnedCredit = (pinnedCombo ?? []).reduce((s, sec) => s + sec.credit, 0) + pinnedNoTimeCredit;
   // 전체 학점(전공+교양) 기준 필터
   const visibleCombos = minGyoyangCredit > 0
     ? combos.filter((c) => {
@@ -205,8 +208,9 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
     : combos;
   const currentCombo = visibleCombos[comboIdx] ?? [];
   const displayCombo = [...(pinnedCombo ?? []), ...currentCombo];
-  const totalCredit = displayCombo.reduce((s, sec) => s + sec.credit, 0);
-  const gyoyangCredit = currentCombo.reduce((s, sec) => s + sec.credit, 0);
+  const gyoyangNoTimeCredit = noTimeSections.reduce((s, sec) => s + sec.credit, 0);
+  const gyoyangCredit = currentCombo.reduce((s, sec) => s + sec.credit, 0) + gyoyangNoTimeCredit;
+  const totalCredit = displayCombo.reduce((s, sec) => s + sec.credit, 0) + pinnedNoTimeCredit + gyoyangNoTimeCredit;
 
   // 현재 다크모드 여부
   const isDark = () =>
@@ -229,6 +233,9 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
 
       const el = timetableRef.current;
       const CAPTURE_W = 900;
+      const dark = isDark();
+      const bg = dark ? "#171717" : "#ffffff";
+
       const clone = el.cloneNode(true) as HTMLElement;
       clone.style.position = "fixed";
       clone.style.left = "-9999px";
@@ -238,9 +245,8 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
       clone.style.overflow = "visible";
       document.body.appendChild(clone);
 
-      const dark = isDark();
       const dataUrl = await domtoimage.toPng(clone, {
-        bgcolor: dark ? "#171717" : "#ffffff",
+        bgcolor: bg,
         scale: 3,
         width: CAPTURE_W,
         height: clone.scrollHeight,
@@ -404,7 +410,7 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
                 const profRows = isSelected ? allRows.filter((r) => r.code === c.code) : [];
                 const profMap = new Map<string, boolean>();
                 for (const r of profRows) {
-                  const sec = buildSectionGroups([r]).flat()[0];
+                  const sec = buildSectionGroups([r]).groups.flat()[0];
                   const conflict = sec ? slotsOverlap(sec.times, pinnedSlots) : false;
                   for (const prof of (r.prof || "미정").split(",").map((p) => p.trim())) {
                     if (!profMap.has(prof)) profMap.set(prof, !conflict);
@@ -503,6 +509,14 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
                 <div key={`${comboIdx}-${slideDir}`} className={`flex-1 overflow-auto min-h-0 ${slideDir === "left" ? "slide-left" : "slide-right"}`}>
                   <TimetableGrid ref={timetableRef} combo={visibleCombo} />
                 </div>
+                {((pinnedNoTimeSections?.length ?? 0) > 0 || noTimeSections.length > 0) && (
+                  <div className="shrink-0 border border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-950/70 rounded-lg px-4 py-3 flex flex-wrap gap-x-4 gap-y-2">
+                    <span className="text-sm font-semibold text-orange-600 dark:text-orange-400 w-full">시간 외</span>
+                    {[...(pinnedNoTimeSections ?? []), ...noTimeSections].map((s) => (
+                      <span key={s.crseNo} className="text-sm text-orange-700 dark:text-orange-300">{s.name} <span className="text-orange-400 dark:text-orange-500 text-xs">({s.credit}학점)</span></span>
+                    ))}
+                  </div>
+                )}
                 <div className="shrink-0 pt-1">
                   <button onClick={saveAsImage} disabled={saving} className="w-full py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors">
                     {saving ? "저장 중..." : "최종 시간표 이미지 저장"}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useCallback, useEffect } from "react";
-import { buildSectionGroups, generateCombos, Section, SectionGroup } from "@/lib/timetable";
+import { buildSectionGroups, generateCombos, Section, NoTimeSection } from "@/lib/timetable";
 import { Major, MAJOR_LABELS, ENTRY_YEAR_MIN, ENTRY_YEAR_MAX, fetchCoursesByYear, Course } from "@/lib/courses";
 import TimetableGrid from "@/components/TimetableGrid";
 import GyoyangWizard from "@/components/GyoyangWizard";
@@ -100,6 +100,7 @@ export default function Home() {
   // 고정 분반: crseNo → Row / 제외 분반: crseNo Set
   const [pinnedRows, setPinnedRows] = useState<Map<string, Row>>(new Map());
   const [excludedRows, setExcludedRows] = useState<Set<string>>(new Set());
+  const [noTimeSections, setNoTimeSections] = useState<NoTimeSection[]>([]);
 
   // 전공+입학연도 변경 시 과목 목록 fetch
   useEffect(() => {
@@ -220,7 +221,8 @@ export default function Home() {
       if (hasPinned) return pinnedCrseNos.has(r.crseNo);
       return true;
     });
-    const groups: SectionGroup[] = buildSectionGroups(selectedRows);
+    const { groups, noTimeSections: nts } = buildSectionGroups(selectedRows);
+    setNoTimeSections(nts);
     const all = generateCombos(groups);
     setCombos(all);
     setFilteredCombos(all);
@@ -286,7 +288,8 @@ export default function Home() {
   }, [combos, filterMap, minCredit, dayOff, noMorning, noEvening, excludeProfs, includeProfs, includeDepts]);
 
   const currentCombo = filteredCombos[comboIdx] ?? [];
-  const totalCredit = currentCombo.reduce((s, sec) => s + sec.credit, 0);
+  const noTimeCredit = noTimeSections.reduce((s, sec) => s + sec.credit, 0);
+  const totalCredit = currentCombo.reduce((s, sec) => s + sec.credit, 0) + noTimeCredit;
   const namesInCombos = [...new Set(combos.flatMap((c) => c.map((s) => s.name)))];
   // 과목별 교수 목록: name → 교수[]
   const profsByName = new Map<string, string[]>();
@@ -923,6 +926,14 @@ export default function Home() {
                   <div key={`${comboIdx}-${slideDir}`} className={`flex-1 overflow-auto min-h-0 ${slideDir === "left" ? "slide-left" : "slide-right"}`}>
                     <TimetableGrid combo={currentCombo} />
                   </div>
+                  {noTimeSections.length > 0 && (
+                    <div className="shrink-0 border border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-950/70 rounded-lg px-4 py-3 flex flex-wrap gap-x-4 gap-y-2">
+                      <span className="text-sm font-semibold text-orange-600 dark:text-orange-400 w-full">시간 외</span>
+                      {noTimeSections.map((s) => (
+                        <span key={s.crseNo} className="text-sm text-orange-700 dark:text-orange-300">{s.name} <span className="text-orange-400 dark:text-orange-500 text-xs">({s.credit}학점)</span></span>
+                      ))}
+                    </div>
+                  )}
                   <div className="flex gap-3 shrink-0 pt-1">
                     <button
                       onClick={() => { setPinnedCombo(currentCombo); setTab("gyoyang"); }}
@@ -946,7 +957,7 @@ export default function Home() {
         {/* ── 교양 마법사 탭 ── 항상 마운트, 탭 전환 시 숨기기만 해서 상태 유지 */}
         <div className={`flex flex-1 overflow-hidden ${tab === "gyoyang" ? "" : "hidden"}`}>
           {pinnedCombo !== null && (
-            <GyoyangWizard pinnedCombo={pinnedCombo} initialSem={sem} />
+            <GyoyangWizard pinnedCombo={pinnedCombo} pinnedNoTimeSections={noTimeSections} initialSem={sem} />
           )}
         </div>
 

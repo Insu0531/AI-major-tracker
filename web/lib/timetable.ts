@@ -30,9 +30,11 @@ export type Section = {
 
 export type SectionGroup = Section[];
 
+export type NoTimeSection = { name: string; credit: number; crseNo: string };
+
 export function buildSectionGroups(
   rows: { grade: string; credit: string; crseNo: string; name: string; dept: string; prof: string; timeStr: string }[]
-): SectionGroup[] {
+): { groups: SectionGroup[]; noTimeSections: NoTimeSection[] } {
   const groupMap = new Map<string, { name: string; credit: number; rows: typeof rows }>();
   for (const row of rows) {
     const base = row.crseNo.replace(/-\d+$/, "");
@@ -44,6 +46,8 @@ export function buildSectionGroups(
   }
 
   const groups: SectionGroup[] = [];
+  const noTimeSections: NoTimeSection[] = [];
+
   for (const { name, credit, rows: groupRows } of groupMap.values()) {
     const slotMap = new Map<string, Section>();
     for (const row of groupRows) {
@@ -65,9 +69,15 @@ export function buildSectionGroups(
         if (!sec.profs.includes(row.prof)) sec.profs.push(row.prof);
       }
     }
-    if (slotMap.size > 0) groups.push([...slotMap.values()]);
+    if (slotMap.size > 0) {
+      groups.push([...slotMap.values()]);
+    } else {
+      // 모든 분반에 강의시간이 없는 과목
+      const base = groupRows[0]?.crseNo.replace(/-\d+$/, "") ?? "";
+      noTimeSections.push({ name, credit, crseNo: base });
+    }
   }
-  return groups;
+  return { groups, noTimeSections };
 }
 
 function hasOverlap(combo: Section[]): boolean {
