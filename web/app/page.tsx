@@ -139,6 +139,7 @@ export default function Home() {
   const currentCombo = filteredCombos[comboIdx] ?? [];
   const totalCredit = currentCombo.reduce((s, sec) => s + sec.credit, 0);
   const namesInCombos = [...new Set(combos.flatMap((c) => c.map((s) => s.name)))];
+  const checkedCount = [...checkMap.values()].filter(Boolean).length;
   const pct = progress ? Math.round((progress.current / TOTAL) * 100) : 0;
 
   return (
@@ -287,17 +288,17 @@ export default function Home() {
             <div className="w-64 shrink-0 border-r border-gray-200 bg-white flex flex-col overflow-hidden">
               {/* 과목 선택 */}
               <div className="p-3 border-b border-gray-100 shrink-0">
-                <p className="text-xs font-bold text-gray-700 mb-1">과목 선택</p>
-                <div className="flex gap-1">
-                  <button
-                    onClick={() => setCheckMap(new Map([...courseGroups.keys()].map((k) => [k, true])))}
-                    className="text-xs px-2 py-0.5 border border-gray-300 rounded hover:bg-gray-50"
-                  >전체 선택</button>
-                  <button
-                    onClick={() => setCheckMap(new Map())}
-                    className="text-xs px-2 py-0.5 border border-gray-300 rounded hover:bg-gray-50"
-                  >전체 해제</button>
+                <div className="flex items-center justify-between">
+                  <p className="text-xs font-bold text-gray-700">과목 선택</p>
+                  <span className={`text-xs font-semibold ${checkedCount >= 10 ? "text-red-500" : "text-gray-400"}`}>
+                    {checkedCount} / 10
+                  </span>
                 </div>
+                <p className="text-xs text-gray-400 mt-0.5">최대 10개까지 선택 가능</p>
+                <button
+                  onClick={() => setCheckMap(new Map())}
+                  className="mt-1 text-xs px-2 py-0.5 border border-gray-300 rounded hover:bg-gray-50"
+                >전체 해제</button>
               </div>
 
               <div className="overflow-y-auto flex-1 px-2 py-1">
@@ -306,22 +307,31 @@ export default function Home() {
                     <p className="text-xs text-gray-400 px-1 py-1 mt-1">── {grade}학년 ──</p>
                     {[...courseGroups.entries()]
                       .filter(([, v]) => v.grade === grade)
-                      .map(([base, v]) => (
-                        <label key={base} className="flex items-center gap-1.5 px-1 py-0.5 hover:bg-gray-50 rounded cursor-pointer">
-                          <input
-                            type="checkbox"
-                            checked={checkMap.get(base) ?? false}
-                            onChange={(e) => {
-                              const next = new Map(checkMap);
-                              next.set(base, e.target.checked);
-                              setCheckMap(next);
-                            }}
-                          />
-                          <span className="text-xs text-gray-700 leading-tight">
-                            {v.name.replace(/\s*\(.*?\)\s*$/, "")} ({v.count}분반)
-                          </span>
-                        </label>
-                      ))}
+                      .map(([base, v]) => {
+                        const checked = checkMap.get(base) ?? false;
+                        const disabled = !checked && checkedCount >= 10;
+                        return (
+                          <label
+                            key={base}
+                            className={`flex items-center gap-1.5 px-1 py-0.5 rounded ${disabled ? "opacity-40 cursor-not-allowed" : "hover:bg-gray-50 cursor-pointer"}`}
+                          >
+                            <input
+                              type="checkbox"
+                              checked={checked}
+                              disabled={disabled}
+                              onChange={(e) => {
+                                if (e.target.checked && checkedCount >= 10) return;
+                                const next = new Map(checkMap);
+                                next.set(base, e.target.checked);
+                                setCheckMap(next);
+                              }}
+                            />
+                            <span className="text-xs text-gray-700 leading-tight">
+                              {v.name.replace(/\s*\(.*?\)\s*$/, "")} ({v.count}분반)
+                            </span>
+                          </label>
+                        );
+                      })}
                   </div>
                 ))}
               </div>
