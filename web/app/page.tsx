@@ -316,14 +316,14 @@ export default function Home() {
     <div className="h-screen flex flex-col bg-gray-50 overflow-hidden">
       {/* Header */}
       <header className="bg-white border-b border-gray-200 px-6 py-3 flex items-center shrink-0">
-        <h1 className="text-base font-bold text-gray-800">경북대 전공 개설과목 조회</h1>
+        <h1 className="text-base font-bold text-gray-800">경북대학교 시간표 마법사</h1>
       </header>
 
       {/* Tabs */}
       <div className="bg-white border-b border-gray-200 px-6 flex shrink-0">
         {([
-          { key: "search", label: "과목 조회" },
-          { key: "wizard", label: "시간표 마법사" },
+          { key: "search", label: "전공 조회" },
+          { key: "wizard", label: "전공 마법사" },
           { key: "gyoyang", label: "교양 마법사" },
           { key: "settings", label: "설정" },
         ] as const).map(({ key, label }) => {
