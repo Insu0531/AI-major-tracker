@@ -98,7 +98,11 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sem]);
 
+  // 이번 학기 개설된 과목 코드 집합
+  const openCodes = new Set(allRows.map((r) => r.code));
+
   const filteredList = ALL_COURSES.filter((c) => {
+    if (fetched && !openCodes.has(c.code)) return false; // 미개설 제외
     if (filterSdg && !c.sdg) return false;
     if (filterHmnts && !c.hmnts) return false;
     if (search) {
@@ -221,12 +225,10 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
             filteredList.map((c) => {
               const isSelected = selected.has(c.code);
               const disabled = !isSelected && selected.size >= MAX_SELECT;
-              // 이번 학기에 실제 분반이 있는지
-              const hasRows = allRows.some((r) => r.code === c.code);
               return (
-                <label key={c.code} className={`flex items-start gap-2 px-1 py-1 rounded ${disabled ? "opacity-40 cursor-not-allowed" : !hasRows ? "opacity-30 cursor-not-allowed" : "cursor-pointer hover:bg-gray-50"} ${isSelected ? "bg-blue-50" : ""}`}>
+                <label key={c.code} className={`flex items-start gap-2 px-1 py-1 rounded ${disabled ? "opacity-40 cursor-not-allowed" : "cursor-pointer hover:bg-gray-50"} ${isSelected ? "bg-blue-50" : ""}`}>
                   <input
-                    type="checkbox" checked={isSelected} disabled={disabled || !hasRows}
+                    type="checkbox" checked={isSelected} disabled={disabled}
                     onChange={(e) => {
                       if (e.target.checked && selected.size >= MAX_SELECT) return;
                       const next = new Set(selected);
@@ -240,7 +242,6 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
                     <p className="text-xs text-gray-400">{c.code} · {c.credit}학점
                       {c.sdg && <span className="ml-1 text-green-600">SDG</span>}
                       {c.hmnts && <span className="ml-1 text-purple-600">인문</span>}
-                      {!hasRows && <span className="ml-1 text-gray-300">이번 학기 미개설</span>}
                     </p>
                   </div>
                 </label>
@@ -271,7 +272,7 @@ export default function GyoyangWizard({ pinnedCombo, initialSem }: { pinnedCombo
               <button onClick={() => { setSlideDir("left"); setComboIdx((i) => (i + 1) % combos.length); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm">▶</button>
               <span className="text-sm font-semibold text-blue-600">총 {totalCredit}학점</span>
             </div>
-            <div key={`${comboIdx}-${slideDir}`} className={`flex-1 overflow-auto ${slideDir === "left" ? "slide-left" : "slide-right"}`}>
+            <div key={`${comboIdx}-${slideDir}`} className={`flex-1 overflow-auto min-h-0 ${slideDir === "left" ? "slide-left" : "slide-right"}`}>
               <TimetableGrid ref={timetableRef} combo={displayCombo} />
             </div>
             <div className="shrink-0 pt-1">
