@@ -1,7 +1,7 @@
 "use client";
 
 import { Section } from "@/lib/timetable";
-import { useRef, useState } from "react";
+import { useRef, useState, forwardRef } from "react";
 
 const DAY_LABELS = ["월", "화", "수", "목", "금"];
 const START_H = 9;
@@ -61,7 +61,7 @@ const MIN_COL_W = 52;
 const LABEL_W = 36;
 const MIN_GRID_W = LABEL_W + DAY_LABELS.length * MIN_COL_W;
 
-export default function TimetableGrid({ combo }: { combo: Section[] }) {
+const TimetableGrid = forwardRef<HTMLDivElement, { combo: Section[] }>(function TimetableGrid({ combo }, ref) {
   const [tooltip, setTooltip] = useState<{ x: number; y: number; text: string } | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -70,7 +70,7 @@ export default function TimetableGrid({ combo }: { combo: Section[] }) {
   const blocks = comboToBlocks(combo);
 
   return (
-    <div ref={containerRef} className="relative overflow-auto border border-gray-200 rounded bg-white select-none">
+    <div ref={(el) => { containerRef.current = el; if (typeof ref === "function") ref(el); else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = el; }} className="relative overflow-auto border border-gray-200 rounded bg-white select-none">
       {/* 최소 너비 래퍼 — 세로 모드에서 가로 스크롤 */}
       <div style={{ minWidth: MIN_GRID_W }}>
         {/* Header row */}
@@ -169,4 +169,6 @@ export default function TimetableGrid({ combo }: { combo: Section[] }) {
       )}
     </div>
   );
-}
+});
+
+export default TimetableGrid;

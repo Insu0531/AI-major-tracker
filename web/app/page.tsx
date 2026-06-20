@@ -64,6 +64,31 @@ export default function Home() {
   const [pinnedRows, setPinnedRows] = useState<Map<string, Row>>(new Map());
 
   const abortRef = useRef<AbortController | null>(null);
+  const timetableRef = useRef<HTMLDivElement | null>(null);
+  const [saving, setSaving] = useState(false);
+
+  const saveAsImage = async () => {
+    if (!timetableRef.current) return;
+    setSaving(true);
+    try {
+      const html2canvas = (await import("html2canvas")).default;
+      const canvas = await html2canvas(timetableRef.current, {
+        backgroundColor: "#ffffff",
+        scale: 2,
+        useCORS: true,
+        scrollX: 0,
+        scrollY: 0,
+        width: timetableRef.current.scrollWidth,
+        height: timetableRef.current.scrollHeight,
+      });
+      const link = document.createElement("a");
+      link.download = `시간표_${comboIdx + 1}.png`;
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+    } finally {
+      setSaving(false);
+    }
+  };
 
   const doFetch = useCallback(async () => {
     if (loading) return;
@@ -787,12 +812,19 @@ export default function Home() {
                     <span className="text-sm font-semibold text-blue-600">
                       총 {totalCredit}학점
                     </span>
-                    <span className="text-xs text-gray-400 ml-auto truncate max-w-sm">
+                    <button
+                      onClick={saveAsImage}
+                      disabled={saving}
+                      className="ml-auto flex items-center gap-1 text-xs px-3 py-1.5 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white rounded transition-colors shrink-0"
+                    >
+                      {saving ? "저장 중..." : "이미지 저장"}
+                    </button>
+                    <span className="text-xs text-gray-400 truncate max-w-sm">
                       {currentCombo.map((s) => s.name.replace(/\s*\(.*?\)\s*$/, "")).join(" · ")}
                     </span>
                   </div>
                   <div className="flex-1 overflow-auto">
-                    <TimetableGrid combo={currentCombo} />
+                    <TimetableGrid ref={timetableRef} combo={currentCombo} />
                   </div>
                 </>
               ) : (
@@ -808,7 +840,7 @@ export default function Home() {
       </main>
 
       <footer className="border-t border-gray-200 bg-white px-6 py-1.5 text-xs text-gray-400 flex gap-2 shrink-0">
-        <span>made by insu0531</span>
+        <span>insu0531@knu.ac.kr</span>
         <span>·</span>
         <span>본 서비스는 참고용으로만 사용하세요. 실제 수강신청 전 학교 포털을 반드시 확인하세요.</span>
       </footer>
