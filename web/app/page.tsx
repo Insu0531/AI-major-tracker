@@ -303,7 +303,10 @@ export default function Home() {
   return (
     <div className="h-screen flex flex-col bg-gray-50 overflow-hidden">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 px-6 py-3 flex items-center shrink-0">
+      <header className="bg-white border-b border-gray-200 px-6 py-3 flex items-center gap-2.5 shrink-0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-6 h-6 shrink-0">
+          <circle cx="16" cy="16" r="16" fill="#e53e3e"/>
+        </svg>
         <h1 className="text-base font-bold text-gray-800">경북대학교 시간표 마법사</h1>
       </header>
 
