@@ -7,8 +7,8 @@ const DAY_LABELS = ["월", "화", "수", "목", "금"];
 const START_H = 9;
 const END_H = 22;
 const BLOCK_COLORS = [
-  "#4e79a7", "#f28e2b", "#e15759", "#76b7b2", "#59a14f",
-  "#edc948", "#b07aa1", "#ff9da7", "#9c755f", "#bab0ac",
+  "#3d6087", "#c47222", "#c04045", "#5a9090", "#44803b",
+  "#c9a830", "#8d5f85", "#e07d8a", "#7a5a47", "#908c88",
 ];
 
 type Block = {
@@ -141,14 +141,14 @@ const TimetableGrid = forwardRef<HTMLDivElement, { combo: Section[] }>(function 
                 }}
                 onMouseLeave={() => setTooltip(null)}
               >
-                <p className="text-white text-xs font-bold leading-tight px-1 pt-0.5 truncate" style={{ WebkitFontSmoothing: "antialiased" }}>
+                <p className="text-white text-xs font-semibold leading-tight px-1 pt-0.5 break-keep" style={{ WebkitFontSmoothing: "antialiased" }}>
                   {shortName}
                 </p>
-                <p className="text-white text-[11px] px-1 truncate opacity-90" style={{ WebkitFontSmoothing: "antialiased" }}>
+                <p className="text-white text-[11px] font-semibold px-1 break-keep opacity-90" style={{ WebkitFontSmoothing: "antialiased" }}>
                   {profs.length > 1 ? `(${profs.length}개 분반)` : profs[0]}
                 </p>
                 {b.location && b.location.split("\n").map((line, i) => (
-                  <p key={i} className="text-white text-[10px] px-1 truncate opacity-75 leading-tight" style={{ WebkitFontSmoothing: "antialiased" }}>
+                  <p key={i} className="text-white text-[10px] font-semibold px-1 break-keep opacity-75 leading-tight" style={{ WebkitFontSmoothing: "antialiased" }}>
                     {line}
                   </p>
                 ))}

@@ -801,7 +801,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                   </div>
                 </div>
                 <div className="shrink-0 pt-1">
-                  <button onClick={saveAsImage} disabled={saving || !timetableRef.current} className="w-full py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors">
+                  <button onClick={saveAsImage} disabled={saving || !pinnedCombo?.length} className="w-full py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors">
                     {saving ? "저장 중..." : "최종 시간표 이미지 저장"}
                   </button>
                 </div>

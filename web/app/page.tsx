@@ -338,6 +338,15 @@ export default function Home() {
       <header className="bg-white border-b border-gray-200 px-6 py-3 flex items-center gap-2.5 shrink-0">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-6 h-6 shrink-0">
           <circle cx="16" cy="16" r="16" fill="#e53e3e"/>
+          <g fill="#ffb3cc" stroke="#e07090" strokeWidth="0.4">
+            <ellipse cx="16" cy="11.5" rx="3" ry="5" transform="rotate(0 16 16)"/>
+            <ellipse cx="16" cy="11.5" rx="3" ry="5" transform="rotate(72 16 16)"/>
+            <ellipse cx="16" cy="11.5" rx="3" ry="5" transform="rotate(144 16 16)"/>
+            <ellipse cx="16" cy="11.5" rx="3" ry="5" transform="rotate(216 16 16)"/>
+            <ellipse cx="16" cy="11.5" rx="3" ry="5" transform="rotate(288 16 16)"/>
+          </g>
+          <circle cx="16" cy="16" r="2.8" fill="#b82020"/>
+          <circle cx="16" cy="16" r="1.1" fill="#ffd700"/>
         </svg>
         <h1 className="text-base font-bold text-gray-800">경북대학교 시간표 마법사</h1>
       </header>
