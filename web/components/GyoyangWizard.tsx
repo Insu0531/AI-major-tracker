@@ -419,7 +419,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
       // 이미지 저장 완료 토스트
       if (saveToastTimer.current) clearTimeout(saveToastTimer.current);
       setSaveToast(true);
-      saveToastTimer.current = setTimeout(() => setSaveToast(false), 4000);
+      saveToastTimer.current = setTimeout(() => setSaveToast(false), 10000);
 
       // 수강신청 팝업용 과목 목록 수집 (교수 선택이 반영된 버전 우선 사용)
       const fullComboForReg = [...(pinnedForReg ?? pinnedCombo ?? []), ...comboToCapture];
