@@ -1,0 +1,248 @@
+[
+  {
+    "grade": "1",
+    "code": "ENGR0217",
+    "name": "공학 프로그래밍언어",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "ENGR0351",
+    "name": "공학화학실험 I",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "ENGR0352",
+    "name": "공학화학실험 II",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0212",
+    "name": "공학수학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "INDC0213",
+    "name": "기기분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0205",
+    "name": "물리화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0206",
+    "name": "물리화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0503",
+    "name": "분석화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0203",
+    "name": "유기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0204",
+    "name": "유기화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHYE0201",
+    "name": "전기화학공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEN0293",
+    "name": "창의기초설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CHEN0247",
+    "name": "화공양론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0348",
+    "name": "공정제어1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0252",
+    "name": "무기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0342",
+    "name": "물질전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0343",
+    "name": "반응공학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0344",
+    "name": "반응공학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0453",
+    "name": "석유화학공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0345",
+    "name": "열전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0451",
+    "name": "이동현상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0513",
+    "name": "재료화학공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0256",
+    "name": "화공열역학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0355",
+    "name": "화공열역학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0341",
+    "name": "화공유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0515",
+    "name": "화공특강",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0393",
+    "name": "화학공학실험1",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "4",
+    "code": "CHEN0463",
+    "name": "고분자화학공학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEN0464",
+    "name": "고분자화학공학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEN0347",
+    "name": "공정제어2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEN0357",
+    "name": "분리공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEN0516",
+    "name": "산업밀착형화학공학특강",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEN0500",
+    "name": "생물공정공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEN0456",
+    "name": "생물화학공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEN0502",
+    "name": "에너지공정공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEN0611",
+    "name": "전자재료화학공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEN0356",
+    "name": "촉매공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CIME0450",
+    "name": "캡스톤디자인",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "4",
+    "code": "CHEN0452",
+    "name": "화학공장설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEN0394",
+    "name": "화학공학실험2",
+    "credit": "3-0-6"
+  }
+]

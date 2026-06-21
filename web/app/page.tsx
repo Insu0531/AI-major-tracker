@@ -65,19 +65,19 @@ export default function Home() {
   const [majorDropOpen, setMajorDropOpen] = useState(false);
   const majorDropRef = useRef<HTMLDivElement>(null);
 
-  const [major2, setMajor2] = useState<Major | null>(null);
-  const [majorSearch2, setMajorSearch2] = useState("");
-  const [majorDropOpen2, setMajorDropOpen2] = useState(false);
-  const majorDropRef2 = useRef<HTMLDivElement>(null);
+  const [extraMajors, setExtraMajors] = useState<Major[]>([]);
+  const [extraSearch, setExtraSearch] = useState("");
+  const [openExtraIdx, setOpenExtraIdx] = useState<number | null>(null);
+  const extraContainerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (majorDropRef.current && !majorDropRef.current.contains(e.target as Node)) {
         setMajorDropOpen(false);
         setMajorSearch("");
       }
-      if (majorDropRef2.current && !majorDropRef2.current.contains(e.target as Node)) {
-        setMajorDropOpen2(false);
-        setMajorSearch2("");
+      if (extraContainerRef.current && !extraContainerRef.current.contains(e.target as Node)) {
+        setOpenExtraIdx(null);
+        setExtraSearch("");
       }
     };
     document.addEventListener("mousedown", handler);
@@ -176,7 +176,7 @@ export default function Home() {
 
     try {
       const allRows: Row[] = [];
-      const tag1 = major2 ? "주전공" : "";
+      const tag1 = extraMajors.length > 0 ? "주전공" : "";
       await streamRows(major, entryYear, tag1, signal, (rows) => {
         allRows.push(...rows);
         setRows((prev) => [...prev, ...rows]);
@@ -191,9 +191,10 @@ export default function Home() {
         });
       }, (name) => setProgress({ current: 0, name }));
 
-      if (major2) {
-        setProgress({ current: 0, name: "복수전공 조회 중..." });
-        await streamRows(major2, entryYear, "복수전공", signal, (rows) => {
+      for (let i = 0; i < extraMajors.length; i++) {
+        const label = `복수전공${extraMajors.length > 1 ? i + 1 : ""}`;
+        setProgress({ current: 0, name: `${label} 조회 중...` });
+        await streamRows(extraMajors[i], entryYear, "복수전공", signal, (rows) => {
           allRows.push(...rows);
           setRows((prev) => [...prev, ...rows]);
           setExcludedRows((prev) => {
@@ -208,7 +209,7 @@ export default function Home() {
         }, (name) => setProgress({ current: 0, name }));
       }
 
-      setStatusText(`총 ${allRows.length}개 분반 개설됨 (${sem}${major2 ? " · 복수전공 포함" : ""})`);
+      setStatusText(`총 ${allRows.length}개 분반 개설됨 (${sem}${extraMajors.length > 0 ? " · 복수전공 포함" : ""})`);
       setCheckMap(new Map());
       setCombos([]);
       setFilteredCombos([]);
@@ -218,7 +219,7 @@ export default function Home() {
       setLoading(false);
       setProgress(null);
     }
-  }, [sem, major, major2, entryYear, loading, isSangju, streamRows]);
+  }, [sem, major, extraMajors, entryYear, loading, isSangju, streamRows]);
 
   const sortedRows = (() => {
     const base = rows;
@@ -490,69 +491,76 @@ export default function Home() {
                   </div>
                 )}
               </div>
-              {/* 복수전공 */}
-              {major2 === null ? (
-                <button
-                  type="button"
-                  onClick={() => { setMajor2("ai"); setMajorDropOpen2(true); }}
-                  className="text-xs text-blue-500 border border-blue-200 rounded px-2 py-1.5 hover:bg-blue-50 whitespace-nowrap"
-                >
-                  + 복수전공
-                </button>
-              ) : (
-                <div ref={majorDropRef2} className="relative flex items-center gap-1">
+              {/* 복수전공 (최대 3개) */}
+              <div ref={extraContainerRef} className="flex items-center gap-1 flex-wrap">
+                {extraMajors.map((em, idx) => (
+                  <div key={idx} className="relative flex items-center gap-1">
+                    <button
+                      type="button"
+                      disabled={loading}
+                      onClick={() => { setOpenExtraIdx(openExtraIdx === idx ? null : idx); setExtraSearch(""); }}
+                      className="border border-blue-300 rounded px-2 py-1.5 text-sm bg-blue-50 min-w-40 text-left flex items-center justify-between gap-2 disabled:opacity-50"
+                    >
+                      <span className="truncate text-blue-700">{MAJOR_LABELS[em]}</span>
+                      <span className="text-blue-400 shrink-0">▾</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setExtraMajors(extraMajors.filter((_, i) => i !== idx))}
+                      className="text-gray-400 hover:text-red-500 text-sm px-1"
+                    >✕</button>
+                    {openExtraIdx === idx && (
+                      <div className="absolute z-50 top-full left-0 mt-1 w-72 bg-white border border-gray-200 rounded shadow-lg flex flex-col" style={{ maxHeight: 320 }}>
+                        <div className="p-1.5 border-b border-gray-100 shrink-0">
+                          <input
+                            autoFocus
+                            type="text"
+                            value={extraSearch}
+                            onChange={(e) => setExtraSearch(e.target.value)}
+                            placeholder="복수전공 검색..."
+                            className="w-full border border-gray-300 rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+                          />
+                        </div>
+                        <div className="overflow-y-auto flex-1">
+                          {(Object.entries(MAJOR_LABELS) as [Major, string][])
+                            .sort(([ka, a], [kb, b]) => {
+                              if (ka === "ai") return -1;
+                              if (kb === "ai") return 1;
+                              const aS = a.startsWith("[상주]"), bS = b.startsWith("[상주]");
+                              if (aS !== bS) return aS ? 1 : -1;
+                              return a.localeCompare(b, "ko");
+                            })
+                            .filter(([, label]) => !extraSearch || label.includes(extraSearch))
+                            .map(([key, label]) => (
+                              <button
+                                key={key}
+                                type="button"
+                                onClick={() => {
+                                  setExtraMajors(extraMajors.map((m, i) => i === idx ? key as Major : m));
+                                  setOpenExtraIdx(null);
+                                  setExtraSearch("");
+                                }}
+                                className={`w-full text-left px-3 py-1.5 text-sm hover:bg-blue-50 transition-colors ${key === em ? "bg-blue-100 text-blue-700 font-medium" : "text-gray-700"}`}
+                              >
+                                {label}
+                              </button>
+                            ))
+                          }
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+                {extraMajors.length < 3 && (
                   <button
                     type="button"
-                    disabled={loading}
-                    onClick={() => { setMajorDropOpen2((v) => !v); setMajorSearch2(""); }}
-                    className="border border-blue-300 rounded px-2 py-1.5 text-sm bg-blue-50 min-w-40 text-left flex items-center justify-between gap-2 disabled:opacity-50"
+                    onClick={() => { setExtraMajors([...extraMajors, "ai"]); setOpenExtraIdx(extraMajors.length); setExtraSearch(""); }}
+                    className="text-xs text-blue-500 border border-blue-200 rounded px-2 py-1.5 hover:bg-blue-50 whitespace-nowrap"
                   >
-                    <span className="truncate text-blue-700">{MAJOR_LABELS[major2]}</span>
-                    <span className="text-blue-400 shrink-0">▾</span>
+                    + 복수전공
                   </button>
-                  <button
-                    type="button"
-                    onClick={() => setMajor2(null)}
-                    className="text-gray-400 hover:text-red-500 text-sm px-1"
-                  >✕</button>
-                  {majorDropOpen2 && (
-                    <div className="absolute z-50 top-full left-0 mt-1 w-72 bg-white border border-gray-200 rounded shadow-lg flex flex-col" style={{ maxHeight: 320 }}>
-                      <div className="p-1.5 border-b border-gray-100 shrink-0">
-                        <input
-                          autoFocus
-                          type="text"
-                          value={majorSearch2}
-                          onChange={(e) => setMajorSearch2(e.target.value)}
-                          placeholder="복수전공 검색..."
-                          className="w-full border border-gray-300 rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
-                        />
-                      </div>
-                      <div className="overflow-y-auto flex-1">
-                        {(Object.entries(MAJOR_LABELS) as [Major, string][])
-                          .sort(([ka, a], [kb, b]) => {
-                            if (ka === "ai") return -1;
-                            if (kb === "ai") return 1;
-                            const aS = a.startsWith("[상주]"), bS = b.startsWith("[상주]");
-                            if (aS !== bS) return aS ? 1 : -1;
-                            return a.localeCompare(b, "ko");
-                          })
-                          .filter(([, label]) => !majorSearch2 || label.includes(majorSearch2))
-                          .map(([key, label]) => (
-                            <button
-                              key={key}
-                              type="button"
-                              onClick={() => { setMajor2(key); setMajorDropOpen2(false); setMajorSearch2(""); }}
-                              className={`w-full text-left px-3 py-1.5 text-sm hover:bg-blue-50 transition-colors ${key === major2 ? "bg-blue-100 text-blue-700 font-medium" : "text-gray-700"}`}
-                            >
-                              {label}
-                            </button>
-                          ))
-                        }
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )}
+                )}
+              </div>
 
               {/* 입학연도 드롭다운 */}
               <select
@@ -589,7 +597,7 @@ export default function Home() {
                 <option value="w">겨울</option>
               </select>
               <div className="relative"
-                onMouseEnter={() => major2 && setShowMajor2Tip(true)}
+                onMouseEnter={() => extraMajors.length > 0 && setShowMajor2Tip(true)}
                 onMouseLeave={() => setShowMajor2Tip(false)}
               >
                 <button
@@ -603,7 +611,7 @@ export default function Home() {
                 >
                   {loading ? "조회 중..." : courses.length === 0 ? "데이터 없음" : "조회"}
                 </button>
-                {showMajor2Tip && major2 && (
+                {showMajor2Tip && extraMajors.length > 0 && (
                   <div className="absolute z-50 top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-amber-50 border border-amber-200 rounded-lg shadow-lg px-3 py-2 text-xs text-amber-800 leading-relaxed pointer-events-none">
                     <div className="absolute left-1/2 -translate-x-1/2 bottom-full w-2 h-2 bg-amber-50 border-t border-l border-amber-200 rotate-45 mb-[-1px]" />
                     복수전공 과목을 추가로 표시하는 기능입니다. 실제 복수전공 이수 기준은 학교 포털에서 직접 확인하세요.
@@ -870,7 +878,7 @@ export default function Home() {
 
                       const allEntries = [...courseGroups.entries()];
 
-                      if (!major2) {
+                      if (extraMajors.length === 0) {
                         return renderGradeGroups(allEntries);
                       }
 
@@ -1214,7 +1222,7 @@ export default function Home() {
         {/* ── 교양 마법사 탭 ── 항상 마운트, 탭 전환 시 숨기기만 해서 상태 유지 */}
         <div className={`flex flex-1 overflow-hidden ${tab === "gyoyang" ? "" : "hidden"}`}>
           {pinnedCombo !== null && (
-            <GyoyangWizard pinnedCombo={pinnedCombo} pinnedNoTimeSections={noTimeSections} initialSem={sem} majorLabel={MAJOR_LABELS[major]} majorLabel2={major2 ? MAJOR_LABELS[major2] : undefined} major={major} onFeedbackClick={() => setTab("feedback")} />
+            <GyoyangWizard pinnedCombo={pinnedCombo} pinnedNoTimeSections={noTimeSections} initialSem={sem} majorLabel={MAJOR_LABELS[major]} majorLabel2={extraMajors.length > 0 ? extraMajors.map((m) => MAJOR_LABELS[m]).join("·") : undefined} major={major} onFeedbackClick={() => setTab("feedback")} />
           )}
         </div>
 

@@ -1,0 +1,230 @@
+[
+  {
+    "grade": "1",
+    "code": "ENGR0217",
+    "name": "공학 프로그래밍언어",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "ENGR0351",
+    "name": "공학화학실험 I",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "ENGR0352",
+    "name": "공학화학실험 II",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0212",
+    "name": "공학수학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0205",
+    "name": "물리화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0206",
+    "name": "물리화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0503",
+    "name": "분석화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0203",
+    "name": "유기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0204",
+    "name": "유기화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "APCH0220",
+    "name": "응용분석화학실험설계",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "CHEN0293",
+    "name": "창의기초설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CHEN0247",
+    "name": "화공양론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "APCH0425",
+    "name": "그린화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "INDC0213",
+    "name": "기기분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0301",
+    "name": "무기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0302",
+    "name": "무기화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "APCH0310",
+    "name": "물질 및 열전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "APCH0307",
+    "name": "석유 및 정밀화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "APCH0211",
+    "name": "양자화학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "APCH0306",
+    "name": "유기합성화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "APCH0313",
+    "name": "응용무기화학실험설계",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "APCH0213",
+    "name": "응용물리화학실험설계",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "APCH0216",
+    "name": "응용유기화학실험설계",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "APCH0419",
+    "name": "응용화학계산",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "APCH0428",
+    "name": "응용화학특강1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "3",
+    "code": "APCH0429",
+    "name": "응용화학특강2",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0341",
+    "name": "화공유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "APCH0309",
+    "name": "화학공학열역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "APCH0405",
+    "name": "고분자화학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "APCH0304",
+    "name": "고체화학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "INDC0311",
+    "name": "무기공업화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "APCH0411",
+    "name": "반응공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "APCH0407",
+    "name": "생물화학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DYFI0315",
+    "name": "유기공업화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "INDC0324",
+    "name": "유기재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "APCH0409",
+    "name": "응용전기화학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "APCH0421",
+    "name": "응용화학 종합설계",
+    "credit": "3-2-2"
+  }
+]
