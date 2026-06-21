@@ -1,0 +1,218 @@
+[
+  {
+    "grade": "1",
+    "code": "WELF0206",
+    "name": "사회복지학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "WELF0305",
+    "name": "사회복지현장의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "WELF0202",
+    "name": "인간행동과사회환경",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "WELF0205",
+    "name": "정신건강론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "WELF0381",
+    "name": "교정복지론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "WELF0323",
+    "name": "노인복지론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "WELF0286",
+    "name": "사회문제론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "WELF0334",
+    "name": "사회보장론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "WELF0284",
+    "name": "사회복지실천기술론",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "WELF0282",
+    "name": "사회복지실천론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "WELF0215",
+    "name": "사회복지역사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "WELF0383",
+    "name": "사회복지조사론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "WELF0285",
+    "name": "아동복지론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "WELF0204",
+    "name": "자원봉사론",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "WELF0281",
+    "name": "지역사회복지론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "WELF0348",
+    "name": "청소년복지론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "WELF0382",
+    "name": "가족복지론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "WELF0438",
+    "name": "사회복지법제와 실천",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "WELF0492",
+    "name": "사회복지와 데이터 활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "WELF0302",
+    "name": "사회복지와 상담",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "WELF0366",
+    "name": "사회복지자료분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "WELF0346",
+    "name": "사회복지정책론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "WELF0313",
+    "name": "사회복지행정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "WELF0482",
+    "name": "여성복지론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "WELF0213",
+    "name": "장애인복지론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "WELF0447",
+    "name": "정신건강사회복지론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "WELF0422",
+    "name": "프로그램개발과평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "WELF0247",
+    "name": "학교사회복지론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "WELF0459",
+    "name": "가족상담 및 가족치료",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "WELF0441",
+    "name": "사회복지 사례관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "WELF0306",
+    "name": "사회복지와 문화적 다양성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "WELF0287",
+    "name": "사회복지윤리와철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "WELF0481",
+    "name": "사회복지지도감독론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "WELF0484",
+    "name": "사회복지현장실습Ⅰ",
+    "credit": "3-2-4(주)"
+  },
+  {
+    "grade": "4",
+    "code": "WELF0485",
+    "name": "사회복지현장실습Ⅱ",
+    "credit": "3-2-4(주)"
+  },
+  {
+    "grade": "4",
+    "code": "WELF0458",
+    "name": "의료사회복지론",
+    "credit": "3-3-0"
+  }
+]
