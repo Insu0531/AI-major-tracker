@@ -1,0 +1,290 @@
+[
+  {
+    "grade": "1",
+    "code": "ARTS0363",
+    "name": "매체연구 1",
+    "credit": "2-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "ARTS0364",
+    "name": "매체연구 2",
+    "credit": "2-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "ARTS0353",
+    "name": "발상과 표현 1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "1",
+    "code": "ARTS0354",
+    "name": "발상과 표현 2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "1",
+    "code": "ARTS0308",
+    "name": "서양미술사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ARTS0211",
+    "name": "소묘 1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "1",
+    "code": "ARTS0212",
+    "name": "소묘 2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "1",
+    "code": "ARTS0316",
+    "name": "입체조형",
+    "credit": "2-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "ARTS0603",
+    "name": "창작과 현장세미나 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "ARTS0315",
+    "name": "평면조형",
+    "credit": "2-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "ARTS0403",
+    "name": "한국미술사",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0401",
+    "name": "동양미술사",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0505",
+    "name": "동양화론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0365",
+    "name": "매체연구 3",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0366",
+    "name": "매체연구 4",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0605",
+    "name": "매체와 소프트웨어 1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0606",
+    "name": "매체와 소프트웨어 2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0502",
+    "name": "미술비평",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0358",
+    "name": "발상과 표현 3",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0359",
+    "name": "발상과 표현 4",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0303",
+    "name": "서양미술사1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0407",
+    "name": "조각론1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0408",
+    "name": "조각론2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0591",
+    "name": "조형연구 1",
+    "credit": "4-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0592",
+    "name": "조형연구 2",
+    "credit": "4-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0604",
+    "name": "창작과 현장세미나 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0426",
+    "name": "판화 1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0427",
+    "name": "판화 2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0219",
+    "name": "한국현대미술의 이해 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0429",
+    "name": "한국현대미술의 이해 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0501",
+    "name": "현대미술론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARTS0367",
+    "name": "매체연구 5",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "ARTS0368",
+    "name": "매체연구 6",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "ARTS0300",
+    "name": "미술교수학습방법",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARTS0461",
+    "name": "재료기법 1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "ARTS0462",
+    "name": "재료기법 2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "ARTS0593",
+    "name": "조형연구 3",
+    "credit": "4-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "ARTS0594",
+    "name": "조형연구 4",
+    "credit": "4-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "ARTS0451",
+    "name": "표현기법 1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "ARTS0452",
+    "name": "표현기법 2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "ARTS0533",
+    "name": "공간표현 1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "ARTS0534",
+    "name": "공간표현 2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "ARTS0348",
+    "name": "작품분석 1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "ARTS0349",
+    "name": "작품분석 2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "ARTS0523",
+    "name": "재료연습 1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "ARTS0524",
+    "name": "재료연습 2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "ARTS0595",
+    "name": "조형연구 5",
+    "credit": "4-0-4"
+  },
+  {
+    "grade": "4",
+    "code": "ARTS0596",
+    "name": "조형연구 6",
+    "credit": "4-0-4"
+  }
+]

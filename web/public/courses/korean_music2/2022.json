@@ -1,0 +1,608 @@
+[
+  {
+    "grade": "1",
+    "code": "KMUS0492",
+    "name": "공연영상콘텐츠개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0323",
+    "name": "관현악1",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0601",
+    "name": "국악개론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0602",
+    "name": "국악개론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0271",
+    "name": "국악개인전공실기1",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0272",
+    "name": "국악개인전공실기2",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0206",
+    "name": "국악교육현장 실기지도법1",
+    "credit": "2-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0208",
+    "name": "국악교육현장 실기지도법2",
+    "credit": "2-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0241",
+    "name": "국악성악전공실기1",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0242",
+    "name": "국악성악전공실기2",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0223",
+    "name": "국악시창1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0224",
+    "name": "국악시창2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0261",
+    "name": "국악작곡전공실기1",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0262",
+    "name": "국악작곡전공실기2",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0231",
+    "name": "기악전공실기1",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0232",
+    "name": "기악전공실기2",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0205",
+    "name": "문화예술교육개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0207",
+    "name": "문화예술교육현장의 이해와 실습",
+    "credit": "2-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0611",
+    "name": "문화행사 기획",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0325",
+    "name": "반주론1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0326",
+    "name": "반주론2",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0251",
+    "name": "이론전공실기1",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0252",
+    "name": "이론전공실기2",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0219",
+    "name": "특수악기론1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0220",
+    "name": "특수악기론2",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0215",
+    "name": "합주론1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "KMUS0216",
+    "name": "합주론2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0324",
+    "name": "관현악2",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0273",
+    "name": "국악개인전공실기3",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0274",
+    "name": "국악개인전공실기4",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0343",
+    "name": "국악성악전공실기3",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0344",
+    "name": "국악성악전공실기4",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0363",
+    "name": "국악작곡전공실기3",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0364",
+    "name": "국악작곡전공실기4",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0333",
+    "name": "기악전공실기3",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0334",
+    "name": "기악전공실기4",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0371",
+    "name": "민속성악클래스",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0421",
+    "name": "서양음악개론1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0422",
+    "name": "서양음악개론2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0221",
+    "name": "시창 청음 1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0222",
+    "name": "시창 청음 2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0313",
+    "name": "연주법1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0314",
+    "name": "연주법2",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0353",
+    "name": "이론전공실기3",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0354",
+    "name": "이론전공실기4",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0317",
+    "name": "정가연구1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0315",
+    "name": "제2기악전공실기A-1",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0319",
+    "name": "제2기악전공실기A-2",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0425",
+    "name": "피아노1",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0426",
+    "name": "피아노2",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0471",
+    "name": "한국음악사1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0472",
+    "name": "한국음악사2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0311",
+    "name": "합주론3",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "KMUS0312",
+    "name": "합주론4",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0423",
+    "name": "관현악3",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0424",
+    "name": "관현악4",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0275",
+    "name": "국악개인전공실기5",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0276",
+    "name": "국악개인전공실기6",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0445",
+    "name": "국악성악전공실기5",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0446",
+    "name": "국악성악전공실기6",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0465",
+    "name": "국악작곡전공실기5",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0466",
+    "name": "국악작곡전공실기6",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0435",
+    "name": "기악전공실기5",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0436",
+    "name": "기악전공실기6",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0481",
+    "name": "민속기악클래스",
+    "credit": "2-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0533",
+    "name": "연주법 6",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0413",
+    "name": "연주법3",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0414",
+    "name": "연주법4",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0427",
+    "name": "음악교육지도법1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0428",
+    "name": "음악교육지도법2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0455",
+    "name": "이론전공실기5",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0456",
+    "name": "이론전공실기6",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0410",
+    "name": "제2기악전공실기A-3",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0432",
+    "name": "제2기악전공실기A-4",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0603",
+    "name": "지휘법",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0491",
+    "name": "컴퓨터음악실습1",
+    "credit": "2-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0411",
+    "name": "합주론5",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0412",
+    "name": "합주론6",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0281",
+    "name": "현악/관악클래스1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0282",
+    "name": "현악/관악클래스2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0419",
+    "name": "화성학1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "KMUS0420",
+    "name": "화성학2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0523",
+    "name": "관현악5",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0524",
+    "name": "관현악6",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0525",
+    "name": "관현악7",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0526",
+    "name": "관현악8",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0605",
+    "name": "국악감상과 스토리텔링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0277",
+    "name": "국악개인전공실기7",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0278",
+    "name": "국악개인전공실기8",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0547",
+    "name": "국악성악전공실기7",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0548",
+    "name": "국악성악전공실기8",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0567",
+    "name": "국악작곡전공실기7",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0568",
+    "name": "국악작곡전공실기8",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0537",
+    "name": "기악전공실기7",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0538",
+    "name": "기악전공실기8",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0543",
+    "name": "연주법 7",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0513",
+    "name": "연주법5",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0557",
+    "name": "이론전공실기7",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0558",
+    "name": "이론전공실기8",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0511",
+    "name": "합주론7",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0512",
+    "name": "합주론8",
+    "credit": "2-2-0"
+  }
+]

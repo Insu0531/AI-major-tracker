@@ -1,0 +1,866 @@
+[
+  {
+    "grade": "1",
+    "code": "MUSI0281",
+    "name": "관현악전공실기 1",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0282",
+    "name": "관현악전공실기 2",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0251",
+    "name": "성악전공실기 1",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0252",
+    "name": "성악전공실기 2",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0221",
+    "name": "시창 청음 1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0222",
+    "name": "시창 청음 2",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0213",
+    "name": "음악 교수학습방법",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0214",
+    "name": "음악 교육프로그램 개발",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0292",
+    "name": "음악감상법1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0293",
+    "name": "음악감상법2",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0227",
+    "name": "음악기초이론",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0353",
+    "name": "이태리어딕션",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0246",
+    "name": "일반화성학 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0225",
+    "name": "작곡기초이론 1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0226",
+    "name": "작곡기초이론 2",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0271",
+    "name": "작곡전공실기 1",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0272",
+    "name": "작곡전공실기 2",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0233",
+    "name": "전공화성법 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0234",
+    "name": "전공화성법 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0611",
+    "name": "커뮤니케이션 기법",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0261",
+    "name": "피아노전공실기 1",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0262",
+    "name": "피아노전공실기 2",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0243",
+    "name": "합주 1",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0244",
+    "name": "합주 2",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0241",
+    "name": "합창 1",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "1",
+    "code": "MUSI0242",
+    "name": "합창 2",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0367",
+    "name": "건반화성 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0368",
+    "name": "건반화성 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0283",
+    "name": "관현악 제2실기 1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0284",
+    "name": "관현악 제2실기 2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0381",
+    "name": "관현악전공실기 3",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0382",
+    "name": "관현악전공실기 4",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0335",
+    "name": "독일어딕션",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0391",
+    "name": "서양음악사1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0392",
+    "name": "서양음악사2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0357",
+    "name": "성악 제2실기 1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0358",
+    "name": "성악 제2실기 2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0351",
+    "name": "성악전공실기 3",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0352",
+    "name": "성악전공실기 4",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0387",
+    "name": "실내악 1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0388",
+    "name": "실내악 2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0311",
+    "name": "연주 1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0312",
+    "name": "연주 2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0211",
+    "name": "이론과 실습 1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0212",
+    "name": "이론과 실습 2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0247",
+    "name": "일반화성학 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0248",
+    "name": "일반화성학 3",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0371",
+    "name": "작곡전공실기 3",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0372",
+    "name": "작곡전공실기 4",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0373",
+    "name": "작곡클래스 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0374",
+    "name": "작곡클래스 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0327",
+    "name": "전공대위법 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0328",
+    "name": "전공대위법 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0333",
+    "name": "전공화성법 3",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0334",
+    "name": "전공화성법 4",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0377",
+    "name": "컴퓨터음악1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0378",
+    "name": "컴퓨터음악2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0365",
+    "name": "피아노 앙상블 1",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0366",
+    "name": "피아노 앙상블 2",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0363",
+    "name": "피아노 제2실기 1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0364",
+    "name": "피아노 제2실기 2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0361",
+    "name": "피아노전공실기 3",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0362",
+    "name": "피아노전공실기 4",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0255",
+    "name": "피아노테크닉 1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0256",
+    "name": "피아노테크닉 2",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0343",
+    "name": "합주 3",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0344",
+    "name": "합주 4",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0341",
+    "name": "합창 3",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0342",
+    "name": "합창 4",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0385",
+    "name": "현악합주 1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "MUSI0386",
+    "name": "현악합주 2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0383",
+    "name": "관악합주 1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0384",
+    "name": "관악합주 2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0489",
+    "name": "관현악문헌1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0490",
+    "name": "관현악문헌2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0483",
+    "name": "관현악법 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0484",
+    "name": "관현악법 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0481",
+    "name": "관현악전공실기 5",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0482",
+    "name": "관현악전공실기 6",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0315",
+    "name": "대위법 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0491",
+    "name": "서양음악사3",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0492",
+    "name": "서양음악사4",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0455",
+    "name": "성악문헌1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0456",
+    "name": "성악문헌2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0451",
+    "name": "성악전공실기 5",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0452",
+    "name": "성악전공실기 6",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0411",
+    "name": "연주 3",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0412",
+    "name": "연주 4",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0553",
+    "name": "예술가곡연구 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0554",
+    "name": "예술가곡연구 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0453",
+    "name": "오페라클래스 1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0454",
+    "name": "오페라클래스 2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0475",
+    "name": "작곡법",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0471",
+    "name": "작곡전공실기 5",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0472",
+    "name": "작곡전공실기 6",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0473",
+    "name": "작곡클래스 3",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0474",
+    "name": "작곡클래스 4",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0427",
+    "name": "전공대위법 3",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0428",
+    "name": "전공대위법 4",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0606",
+    "name": "지휘법1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0607",
+    "name": "지휘법2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0493",
+    "name": "컴퓨터음악 3",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0494",
+    "name": "컴퓨터음악 4",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0354",
+    "name": "프랑스어딕션",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0465",
+    "name": "피아노문헌 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0466",
+    "name": "피아노문헌 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0253",
+    "name": "피아노반주법 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0254",
+    "name": "피아노반주법 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0461",
+    "name": "피아노전공실기 5",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0462",
+    "name": "피아노전공실기 6",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0443",
+    "name": "합주 5",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0444",
+    "name": "합주 6",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0441",
+    "name": "합창 5",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0442",
+    "name": "합창 6",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0495",
+    "name": "현대음악론1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0496",
+    "name": "현대음악론2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0235",
+    "name": "현대화성 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0236",
+    "name": "현대화성 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0487",
+    "name": "현악합주 3",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0488",
+    "name": "현악합주 4",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0431",
+    "name": "형식과 분석1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "MUSI0432",
+    "name": "형식과 분석2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "MUSI0485",
+    "name": "관악합주 3",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "MUSI0486",
+    "name": "관악합주 4",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "MUSI0581",
+    "name": "관현악전공실기 7",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "4",
+    "code": "MUSI0582",
+    "name": "관현악전공실기 8",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0601",
+    "name": "국악개론 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "KMUS0602",
+    "name": "국악개론 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "MUSI0316",
+    "name": "대위법 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "MUSI0551",
+    "name": "성악전공실기 7",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "4",
+    "code": "MUSI0552",
+    "name": "성악전공실기 8",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "4",
+    "code": "MUSI0346",
+    "name": "영어딕션 1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "MUSI0347",
+    "name": "영어딕션 2",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "MUSI0571",
+    "name": "작곡전공실기 7",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "4",
+    "code": "MUSI0572",
+    "name": "작곡전공실기 8",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "4",
+    "code": "MUSI0459",
+    "name": "종교곡 및 오라토리오",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "MUSI0563",
+    "name": "피아노교수법 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "MUSI0564",
+    "name": "피아노교수법 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "MUSI0561",
+    "name": "피아노전공실기 7",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "4",
+    "code": "MUSI0562",
+    "name": "피아노전공실기 8",
+    "credit": "1-0-1"
+  },
+  {
+    "grade": "4",
+    "code": "MUSI0543",
+    "name": "합주 7",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "4",
+    "code": "MUSI0544",
+    "name": "합주 8",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "4",
+    "code": "MUSI0541",
+    "name": "합창 7",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "4",
+    "code": "MUSI0542",
+    "name": "합창 8",
+    "credit": "2-0-4"
+  }
+]

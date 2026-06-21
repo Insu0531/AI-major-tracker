@@ -1,0 +1,218 @@
+[
+  {
+    "grade": "1",
+    "code": "ARTS0321",
+    "name": "기초디자인 1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "1",
+    "code": "ARTS0322",
+    "name": "기초디자인 2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "1",
+    "code": "VICD0223",
+    "name": "드로잉",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "1",
+    "code": "VICD0224",
+    "name": "아이디어스케치",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "1",
+    "code": "VICD0213",
+    "name": "컴퓨터그래픽스1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "1",
+    "code": "VICD0214",
+    "name": "컴퓨터그래픽스2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "VICD0227",
+    "name": "UX디자인1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0421",
+    "name": "그래픽디자인 1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0422",
+    "name": "그래픽디자인 2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0406",
+    "name": "디자인사",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0405",
+    "name": "색채학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "VICD0531",
+    "name": "인터랙티브디자인 1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "VICD0231",
+    "name": "컴퓨터그래픽스3",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "VICD0225",
+    "name": "타이포그래피1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "VICD0226",
+    "name": "타이포그래피2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "VICD0232",
+    "name": "포토그래피1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "VICD0233",
+    "name": "포토그래피2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "VICD0235",
+    "name": "UX디자인2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "VICD0222",
+    "name": "공간디자인",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "VICD0571",
+    "name": "광고디자인",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "DYFI0222",
+    "name": "디자인개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "VICD0237",
+    "name": "디자인마케팅",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "VICD0241",
+    "name": "디자인프로젝트1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "VICD0416",
+    "name": "에디토리얼디자인1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "VICD0417",
+    "name": "에디토리얼디자인2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "VICD0532",
+    "name": "인터랙티브디자인 2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "VICD0236",
+    "name": "인포메이션디자인1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "VICD0234",
+    "name": "커뮤니케이션디자인1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "VICD0242",
+    "name": "디자인프로젝트2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "VICD0243",
+    "name": "디자인프로젝트3",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "VICD0245",
+    "name": "디자인프로젝트4",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "VICD0248",
+    "name": "디자인프로젝트5",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "VICD0437",
+    "name": "에디토리얼디자인 3",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "VICD0246",
+    "name": "인포메이션디자인2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "VICD0244",
+    "name": "커뮤니케이션디자인2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "VICD0247",
+    "name": "패키지디자인",
+    "credit": "3-0-3"
+  }
+]

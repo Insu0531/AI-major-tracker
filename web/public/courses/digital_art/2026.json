@@ -1,0 +1,110 @@
+[
+  {
+    "grade": "1",
+    "code": "DIAR0205",
+    "name": "인공지능 예술융합",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DIAR0206",
+    "name": "인터랙티브 미디어 창작",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "COMP0453",
+    "name": "컴퓨팅사고와 SW코딩",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0365",
+    "name": "매체연구 3",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0366",
+    "name": "매체연구 4",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0605",
+    "name": "매체와 소프트웨어 1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "ARTS0606",
+    "name": "매체와 소프트웨어 2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "2",
+    "code": "COME0331",
+    "name": "자료구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0217",
+    "name": "자바프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ITEC0201",
+    "name": "컴퓨터학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARTS0461",
+    "name": "재료기법 1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "3",
+    "code": "ARTS0462",
+    "name": "재료기법 2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0428",
+    "name": "IT기술경영개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0435",
+    "name": "디지털미디어아트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DIAR0203",
+    "name": "빅데이터예술융합",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARTS0523",
+    "name": "재료연습 1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "ARTS0524",
+    "name": "재료연습 2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0414",
+    "name": "컴퓨터망",
+    "credit": "3-3-0"
+  }
+]
