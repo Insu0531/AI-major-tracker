@@ -1176,9 +1176,17 @@ export default function Home() {
                   </div>
                 </>
               ) : (
-                <div className="flex-1 flex flex-col items-center justify-center gap-2 text-gray-400 text-sm">
+                <div className="flex-1 flex flex-col items-center justify-center gap-3 text-gray-400 text-sm">
                   {combos.length === 0
-                    ? "과목을 선택하고 조합 생성을 눌러주세요"
+                    ? <>
+                        <span>과목을 선택하고 조합 생성을 눌러주세요</span>
+                        <button
+                          onClick={() => { setPinnedCombo([]); setTab("gyoyang"); }}
+                          className="mt-1 px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded-lg transition-colors"
+                        >
+                          전공 없이 교양 마법사로 바로가기
+                        </button>
+                      </>
                     : <>
                         <span>필터 조건에 맞는 조합이 없습니다</span>
                         {(() => {

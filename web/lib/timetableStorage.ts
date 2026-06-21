@@ -27,8 +27,18 @@ export function loadSavedTimetables(): SavedTimetable[] {
 
 export function saveTimetable(entry: Omit<SavedTimetable, "id" | "savedAt">): SavedTimetable {
   const list = loadSavedTimetables();
+  const existingNames = new Set(list.map((t) => t.name));
+
+  let name = entry.name;
+  if (existingNames.has(name)) {
+    let n = 1;
+    while (existingNames.has(`${entry.name} (${n})`)) n++;
+    name = `${entry.name} (${n})`;
+  }
+
   const newEntry: SavedTimetable = {
     ...entry,
+    name,
     id: `tt_${Date.now()}`,
     savedAt: new Date().toISOString(),
   };
