@@ -169,11 +169,11 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
     if (filterHmnts && !c.hmnts) return false;
     if (filterDayOff.size > 0 && fetched) {
       const rows = allRows.filter((r) => r.code === c.code);
-      const hasValidSection = rows.some((r) => {
+      const hasMatchingSection = rows.some((r) => {
         const slots = parseTimes(r.timeStr);
-        return slots.length > 0 && !slots.some((s) => filterDayOff.has(s.day));
+        return slots.some((s) => filterDayOff.has(s.day));
       });
-      if (!hasValidSection) return false;
+      if (!hasMatchingSection) return false;
     }
     if (search) {
       const q = search.toLowerCase();
@@ -443,7 +443,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
               )}
             </div>
             <div className="flex items-center gap-1">
-              <span className="text-xs text-gray-600 shrink-0">공강</span>
+              <span className="text-xs text-gray-600 shrink-0">요일</span>
               {["월","화","수","목","금"].map((d, i) => (
                 <button key={i} onClick={() => {
                   const next = new Set(filterDayOff);
