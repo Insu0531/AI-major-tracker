@@ -51,6 +51,17 @@ function formatTimeStr(timeStr: string): string {
   }
   return parts.join(", ");
 }
+// 각 timeStr을 요일 조합으로 변환 후 중복 제거해 "월목/화금" 형태로 반환
+function summarizeDays(timeStrs: string[]): string {
+  const patterns = new Set<string>();
+  for (const ts of timeStrs) {
+    const days = new Set<number>();
+    for (const s of parseTimes(ts)) days.add(s.day);
+    const pattern = [...days].sort((a, b) => a - b).map((d) => DAY_NAMES[d]).join("");
+    if (pattern) patterns.add(pattern);
+  }
+  return [...patterns].join("/");
+}
 
 export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initialSem, majorLabel }: { pinnedCombo: Section[] | null; pinnedNoTimeSections?: NoTimeSection[]; initialSem?: string; majorLabel?: string }) {
   const [semYear, setSemYear] = useState(() => initialSem?.split("-")[0] ?? "2026");
@@ -62,10 +73,13 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   const [filterSdg, setFilterSdg] = useState(false);
   const [filterHmnts, setFilterHmnts] = useState(false);
   const [filterDayOff, setFilterDayOff] = useState<Set<number>>(new Set());
+  const [filterDayCombo, setFilterDayCombo] = useState<string>("");
   const [sortAsc, setSortAsc] = useState(true);
 
   // 선택된 교양 과목 코드 목록
   const [selected, setSelected] = useState<Set<string>>(new Set());
+  // 시간 상세 펼쳐진 과목 코드 목록
+  const [expandedCodes, setExpandedCodes] = useState<Set<string>>(new Set());
 
   // 전체 조회 결과 (학기 전체 교양)
   const [allRows, setAllRows] = useState<Row[]>([]);
@@ -162,28 +176,43 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
       : []
   );
 
-  const filteredList = ALL_COURSES.filter((c) => {
-    if (fetched && !openCodes.has(c.code)) return false;
-    if (fetched && conflictCodes.has(c.code)) return false;
-    if (filterSdg && !c.sdg) return false;
-    if (filterHmnts && !c.hmnts) return false;
-    if (filterDayOff.size > 0 && fetched) {
-      const rows = allRows.filter((r) => r.code === c.code);
-      const hasMatchingSection = rows.some((r) => {
-        const slots = parseTimes(r.timeStr);
-        return slots.some((s) => filterDayOff.has(s.day));
-      });
-      if (!hasMatchingSection) return false;
-    }
-    if (search) {
-      const q = search.toLowerCase();
-      if (!c.name.toLowerCase().includes(q) && !c.code.toLowerCase().includes(q)) return false;
-    }
-    return true;
-  }).sort((a, b) => {
-    const cmp = a.name.localeCompare(b.name, "ko");
-    return sortAsc ? cmp : -cmp;
-  });
+  const filteredList = useMemo(() => {
+    const list = ALL_COURSES.filter((c) => {
+      if (fetched && !openCodes.has(c.code)) return false;
+      if (fetched && conflictCodes.has(c.code)) return false;
+      if (filterSdg && !c.sdg) return false;
+      if (filterHmnts && !c.hmnts) return false;
+      if (filterDayOff.size > 0 && fetched) {
+        const rows = allRows.filter((r) => r.code === c.code);
+        const hasMatchingSection = rows.some((r) => {
+          const slots = parseTimes(r.timeStr);
+          return slots.some((s) => filterDayOff.has(s.day));
+        });
+        if (!hasMatchingSection) return false;
+      }
+      if (filterDayCombo && fetched) {
+        const comboChars = new Set([...filterDayCombo]);
+        const rows = allRows.filter((r) => r.code === c.code);
+        const hasMatch = rows.some((r) => {
+          const days = new Set(parseTimes(r.timeStr).map((s) => DAY_NAMES[s.day]));
+          return [...comboChars].every((ch) => days.has(ch));
+        });
+        if (!hasMatch) return false;
+      }
+      if (search) {
+        const q = search.toLowerCase();
+        if (!c.name.toLowerCase().includes(q) && !c.code.toLowerCase().includes(q)) return false;
+      }
+      return true;
+    }).sort((a, b) => {
+      const cmp = a.name.localeCompare(b.name, "ko");
+      return sortAsc ? cmp : -cmp;
+    });
+    // 선택된 항목을 현재 순서 그대로 맨 위로 고정, 나머지는 아래
+    const sel = list.filter((c) => selected.has(c.code));
+    const rest = list.filter((c) => !selected.has(c.code));
+    return [...sel, ...rest];
+  }, [ALL_COURSES, fetched, openCodes, conflictCodes, filterSdg, filterHmnts, filterDayOff, filterDayCombo, allRows, search, sortAsc, selected]);
 
   useEffect(() => {
     if (allRows.length === 0 || selected.size === 0) { setCombos([]); setNoTimeSections([]); return; }
@@ -402,13 +431,13 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
       )}
 
       {/* Left panel */}
-      <div className={`${panelOpen ? "w-80" : "w-0"} shrink-0 border-r border-gray-200 bg-white flex flex-col overflow-hidden transition-all duration-200 h-full`}>
+      <div className={`${panelOpen ? "w-96" : "w-0"} shrink-0 border-r border-gray-200 bg-white flex flex-col overflow-hidden transition-all duration-200 h-full`}>
         {/* 학기 표시 + 로딩 */}
         <div className="px-3 pt-3 pb-2 shrink-0 flex items-center justify-between border-b border-gray-100">
           <span className="text-sm font-medium text-gray-700">{semYear}년 {semTerm === "s" ? "여름" : semTerm === "w" ? "겨울" : `${semTerm}학기`}</span>
           {loading && <span className="text-gray-400 text-xs animate-pulse">불러오는 중...</span>}
           {fetched && !loading && (
-            <span className="text-xs text-gray-400">{allRows.length}개 분반</span>
+            <span className="text-xs text-gray-400">{new Set(allRows.map((r) => r.code)).size}과목 · {allRows.length}분반</span>
           )}
         </div>
 
@@ -435,7 +464,13 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                 <input type="checkbox" checked={filterHmnts} onChange={(e) => setFilterHmnts(e.target.checked)} />
                 인문교양
               </label>
-              <span className={`text-xs ml-auto ${selected.size >= MAX_SELECT ? "text-red-500 font-bold" : "text-gray-400"}`}>
+              {fetched && (
+                <span className="text-xs text-gray-400 ml-auto">
+                  {filteredList.length}과목 ·{" "}
+                  {filteredList.reduce((s, c) => s + allRows.filter((r) => r.code === c.code).length, 0)}분반
+                </span>
+              )}
+              <span className={`text-xs ${selected.size >= MAX_SELECT ? "text-red-500 font-bold" : "text-gray-400"}`}>
                 {selected.size}/{MAX_SELECT}
               </span>
               {selected.size > 0 && (
@@ -443,7 +478,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
               )}
             </div>
             <div className="flex items-center gap-1">
-              <span className="text-xs text-gray-600 shrink-0">요일</span>
+              <span className="text-xs text-gray-600 shrink-0">포함 요일</span>
               {["월","화","수","목","금"].map((d, i) => (
                 <button key={i} onClick={() => {
                   const next = new Set(filterDayOff);
@@ -453,6 +488,19 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                   {d}
                 </button>
               ))}
+            </div>
+            <div className="flex items-center gap-2">
+              <label className="text-xs text-gray-600 shrink-0">요일 조합</label>
+              <select
+                value={filterDayCombo}
+                onChange={(e) => setFilterDayCombo(e.target.value)}
+                className="flex-1 border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-blue-400"
+              >
+                <option value="">전체</option>
+                {(["월화","월수","월목","월금","화수","화목","화금","수목","수금","목금"]).map((combo) => (
+                  <option key={combo} value={combo}>{combo}</option>
+                ))}
+              </select>
             </div>
             <div className="flex items-center gap-2">
               <label className="text-xs text-gray-600 shrink-0">최대 학점</label>
@@ -511,6 +559,25 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                   }
                 }
 
+                const isExpanded = expandedCodes.has(c.code);
+                // 분반별 요일 패턴 + conflict 여부
+                const dayPatterns: { pattern: string; ok: boolean }[] = [];
+                if (fetched) {
+                  const seen = new Map<string, boolean>();
+                  for (const r of courseRows) {
+                    if (!r.timeStr) continue;
+                    const days = new Set<number>();
+                    for (const s of parseTimes(r.timeStr)) days.add(s.day);
+                    const pattern = [...days].sort((a, b) => a - b).map((d) => DAY_NAMES[d]).join("");
+                    if (!pattern) continue;
+                    const sec = buildSectionGroups([r]).groups.flat()[0];
+                    const conflict = sec ? slotsOverlap(sec.times, pinnedSlots) : false;
+                    if (!seen.has(pattern)) seen.set(pattern, !conflict);
+                    else if (!conflict) seen.set(pattern, true);
+                  }
+                  for (const [pattern, ok] of seen) dayPatterns.push({ pattern, ok });
+                }
+
                 return (
                   <div key={c.code} className={`mb-1 rounded ${isSelected ? "bg-blue-50" : ""}`}>
                     <label className={`flex items-start gap-2 px-1 pt-1 pb-0.5 rounded ${disabled ? "opacity-40 cursor-not-allowed" : "cursor-pointer hover:bg-gray-50"} ${isSelected ? "hover:bg-blue-100" : ""}`}>
@@ -529,9 +596,33 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                           {c.sdg && <span className="ml-1 text-green-600">SDG</span>}
                           {c.hmnts && <span className="ml-1 text-purple-600">인문</span>}
                         </p>
+                        {fetched && dayPatterns.length > 0 && (
+                          <p className="text-xs mt-0.5">
+                            {dayPatterns.map(({ pattern, ok }, i) => (
+                              <span key={pattern}>
+                                {i > 0 && <span className="text-gray-400">/</span>}
+                                <span className={ok ? "text-green-600" : "text-red-400"}>{pattern}</span>
+                              </span>
+                            ))}
+                          </p>
+                        )}
                       </div>
+                      {fetched && profMap.size > 0 && (
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            const next = new Set(expandedCodes);
+                            next.has(c.code) ? next.delete(c.code) : next.add(c.code);
+                            setExpandedCodes(next);
+                          }}
+                          className="text-xs text-gray-400 hover:text-gray-600 shrink-0 px-1"
+                        >
+                          {isExpanded ? "▲" : "▼"}
+                        </button>
+                      )}
                     </label>
-                    {fetched && profMap.size > 0 && (
+                    {fetched && profMap.size > 0 && isExpanded && (
                       <div className="ml-6 mb-1 flex flex-col gap-0.5">
                         {[...profMap.entries()].map(([prof, { timeStrs, conflict }]) => {
                           const ok = !conflict;
