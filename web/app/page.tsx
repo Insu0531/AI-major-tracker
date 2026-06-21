@@ -45,6 +45,8 @@ export default function Home() {
   const [refetchConfirm, setRefetchConfirm] = useState(false);
   const [showMajor2Tip, setShowMajor2Tip] = useState(false);
   const [gyoyangDirectConfirm, setGyoyangDirectConfirm] = useState(false);
+  const [semWarnConfirm, setSemWarnConfirm] = useState(false);
+  const [semWarnSeen, setSemWarnSeen] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem("theme");
@@ -93,6 +95,7 @@ export default function Home() {
   const [semTerm, setSemTerm] = useState("1");
   const [entryYear, setEntryYear] = useState(2026);
   const sem = `${semYear}-${semTerm}`;
+  const SEM_WARN_ACTIVE = semYear === "2026" && semTerm === "2" && new Date() < new Date("2026-07-11");
   const [courses, setCourses] = useState<Course[]>([]);
   const TOTAL = courses.length;
   const [rows, setRows] = useState<Row[]>([]);
@@ -439,7 +442,7 @@ export default function Home() {
         {/* ── 과목 조회 탭 ── */}
         {tab === "search" && (
           <div className="flex flex-col flex-1 overflow-hidden p-4 gap-3">
-            <div className="flex items-center gap-3 flex-wrap" onKeyDown={(e) => { if (e.key === "Enter" && !loading && courses.length > 0) { if (rows.length > 0) { setRefetchConfirm(true); return; } doFetch(); } }}>
+            <div className="flex items-center gap-3 flex-wrap" onKeyDown={(e) => { if (e.key === "Enter" && !loading && courses.length > 0) { if (rows.length > 0) { setRefetchConfirm(true); return; } if (SEM_WARN_ACTIVE && !semWarnSeen) { setSemWarnConfirm(true); return; } doFetch(); } }}>
               {/* 전공 드롭다운 (검색 가능) */}
               <div ref={majorDropRef} className="relative">
                 <button
@@ -612,6 +615,7 @@ export default function Home() {
                 <button
                   onClick={() => {
                     if (rows.length > 0) { setRefetchConfirm(true); return; }
+                    if (SEM_WARN_ACTIVE && !semWarnSeen) { setSemWarnConfirm(true); return; }
                     doFetch();
                   }}
                   disabled={loading || courses.length === 0}
@@ -1274,6 +1278,30 @@ export default function Home() {
           </div>
         )}
       </main>
+
+      {/* 2026-2학기 시간표 신뢰도 안내 */}
+      {semWarnConfirm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+          <div className="bg-white rounded-2xl shadow-2xl px-6 py-6 flex flex-col gap-4 w-[88vw] max-w-sm">
+            <div className="flex flex-col items-center gap-1">
+              <span className="text-2xl">⚠️</span>
+              <p className="text-sm font-bold text-gray-800 text-center">2026년 2학기 시간표 안내</p>
+            </div>
+            <p className="text-xs text-gray-600 text-center leading-relaxed">
+              현재 조회되는 2026년 2학기 시간표는<br />
+              <span className="font-semibold text-amber-600">학교 공식 확정 시간표가 아닙니다.</span><br /><br />
+              전산 시스템에 임시로 등록된 데이터로,<br />
+              실제 강의 시간·담당 교수·분반이<br />
+              변경될 수 있습니다.<br /><br />
+              참고용으로만 활용해 주세요.
+            </p>
+            <div className="flex gap-2">
+              <button onClick={() => setSemWarnConfirm(false)} className="flex-1 py-2 border border-gray-300 rounded-lg text-sm text-gray-600 hover:bg-gray-50">취소</button>
+              <button onClick={() => { setSemWarnConfirm(false); setSemWarnSeen(true); doFetch(); }} className="flex-1 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded-lg">그래도 조회</button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* 전공 없이 교양 바로가기 확인 */}
       {gyoyangDirectConfirm && (
