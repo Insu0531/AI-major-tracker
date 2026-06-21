@@ -1,0 +1,230 @@
+[
+  {
+    "grade": "1",
+    "code": "FPST0203",
+    "name": "목재과학의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "LARC0381",
+    "name": "서양조경사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FORE0213",
+    "name": "숲과 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FPST0202",
+    "name": "인간과 재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FORE0217",
+    "name": "임학의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "LARC0211",
+    "name": "조경학원론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FORE0494",
+    "name": "산림곤충학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FORE0503",
+    "name": "산림수문학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FORE0492",
+    "name": "산림자원조사론 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FORE0506",
+    "name": "산림지리정보체계론 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FREN0213",
+    "name": "산림측량학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FORE0491",
+    "name": "산림토양학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FORE0498",
+    "name": "산림통계학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FREN0226",
+    "name": "산림휴양학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FORE0375",
+    "name": "수목병리학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FORE0323",
+    "name": "수목생리학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FORE0599",
+    "name": "수목원정원관리학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FORE0214",
+    "name": "수목학 및 실습 I",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FORE0451",
+    "name": "도시임업및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FORE0500",
+    "name": "산림경영학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FORE0595",
+    "name": "산림레포츠학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FORE0497",
+    "name": "산림미생물학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FORE0501",
+    "name": "산림생물공학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FORE0598",
+    "name": "산림생태학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FORE0593",
+    "name": "산림유전육종학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FORE0594",
+    "name": "산림정책·평가학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FORE0499",
+    "name": "산림토목공학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FORE0332",
+    "name": "산지보전공학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FORE0412",
+    "name": "조림학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FORE0482",
+    "name": "학술림 종합 실습",
+    "credit": "2-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "FORE0596",
+    "name": "산림보호학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "FORE0493",
+    "name": "산림자원경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FORE0215",
+    "name": "수목학 및 실습 Ⅱ",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "FORE0571",
+    "name": "야생동물관리학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "FORE0532",
+    "name": "임업기계학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "FORE0584",
+    "name": "임학실습 Ⅰ",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "FORE0585",
+    "name": "임학실습 Ⅱ",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "FORE0597",
+    "name": "해외 산림경영 최신동향",
+    "credit": "3-3-0"
+  }
+]

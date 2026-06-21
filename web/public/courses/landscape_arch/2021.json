@@ -1,0 +1,200 @@
+[
+  {
+    "grade": "1",
+    "code": "FPST0203",
+    "name": "목재과학의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FORE0213",
+    "name": "숲과 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FPST0202",
+    "name": "인간과 재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FORE0217",
+    "name": "임학의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "LARC0359",
+    "name": "조경제도 및 표현실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "LARC0211",
+    "name": "조경학원론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "LARC0382",
+    "name": "도시환경생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "LARC0381",
+    "name": "서양조경사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "LARC0255",
+    "name": "정원설계 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "LARC0355",
+    "name": "조경 프리젠테이션 기법",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "LARC0239",
+    "name": "조경CAD실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "LARC0263",
+    "name": "조경계획 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "LARC0312",
+    "name": "조경디자인이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "LARC0253",
+    "name": "조경수목학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "LARC0232",
+    "name": "조경시공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "LARC0240",
+    "name": "조경컴퓨터그래픽실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "LARC0324",
+    "name": "지피식물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LARC0261",
+    "name": "경관생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LARC0228",
+    "name": "공원 및 오픈스페이스 스튜디오",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "LARC0251",
+    "name": "공원녹지계획론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LARC0364",
+    "name": "동양조경사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LARC0352",
+    "name": "식재계획 및 기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LARC0331",
+    "name": "조경관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LARC0362",
+    "name": "조경지리정보시스템 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "LARC0340",
+    "name": "조경측량 및 적산",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LARC0265",
+    "name": "환경설계스튜디오(캡스톤디자인)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "LARC0264",
+    "name": "경관생태계획론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "LARC0356",
+    "name": "도시재생 및 단지계획론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "LARC0361",
+    "name": "생태복원공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "LARC0245",
+    "name": "작품세미나및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "LARC0363",
+    "name": "조경시설재료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "LARC0357",
+    "name": "지구단위 경관계획",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "LARC0333",
+    "name": "환경심리행태론",
+    "credit": "3-3-0"
+  }
+]

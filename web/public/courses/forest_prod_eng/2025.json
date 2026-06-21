@@ -1,0 +1,260 @@
+[
+  {
+    "grade": "1",
+    "code": "FPST0203",
+    "name": "목재과학의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FORE0213",
+    "name": "숲과 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FPST0202",
+    "name": "인간과 재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FORE0217",
+    "name": "임학의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "LARC0359",
+    "name": "조경제도 및 표현실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "LARC0211",
+    "name": "조경학원론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FPST0358",
+    "name": "고분자재료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FPST0355",
+    "name": "단위조작 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FPST0360",
+    "name": "목재물리학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FPST0323",
+    "name": "목재조직학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FPST0211",
+    "name": "목재화학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FPST0222",
+    "name": "목질재료역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FPST0319",
+    "name": "산림기초화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FPST0433",
+    "name": "세포벽생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FPST0542",
+    "name": "임산제조공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FPST0210",
+    "name": "임산통계학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FPST0213",
+    "name": "리그닌화학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FPST0447",
+    "name": "목구조론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FPST0212",
+    "name": "목재건조학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FPST0214",
+    "name": "목질분석화학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FPST0224",
+    "name": "목질재료학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FPST0223",
+    "name": "목질접착론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FPST0420",
+    "name": "바이오매스에너지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FPST0463",
+    "name": "임산공학실습 및 실무",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "FPST0217",
+    "name": "임산물 제조공정 전과정 평가",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "FPST0438",
+    "name": "임산천연물",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FPST0543",
+    "name": "제지공학 및 물성실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FPST0315",
+    "name": "제지화학 및 첨가제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FPST0412",
+    "name": "펄프공학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "FPST0567",
+    "name": "목재문화재 및 보존학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FPST0215",
+    "name": "목질바이오리파이너리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FPST0544",
+    "name": "목질환경과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FPST0219",
+    "name": "산림자원 직무 평가",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "FPST0216",
+    "name": "임산물 이용 기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FPST0541",
+    "name": "임산비즈니스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FPST0218",
+    "name": "임산업 국가직무능력표준",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "FPST0532",
+    "name": "종이재활용 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "FPST0458",
+    "name": "지류가공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FPST0515",
+    "name": "지류문화재 및 보존학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FPST0528",
+    "name": "지류포장 및 특수지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FPST0220",
+    "name": "지속가능소재의 환경과 법규",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "FPST0221",
+    "name": "지속가능한 바이오매스 초격차 기술",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "FPST0550",
+    "name": "지속가능환경신소재",
+    "credit": "3-3-0"
+  }
+]
