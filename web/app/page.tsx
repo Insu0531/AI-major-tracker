@@ -38,6 +38,7 @@ const MAX_SELECT = 10;
 export default function Home() {
   const [tab, setTab] = useState<"search" | "wizard" | "gyoyang" | "settings" | "feedback">("search");
   const [darkMode, setDarkMode] = useState(false);
+  const [refetchConfirm, setRefetchConfirm] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem("theme");
@@ -388,7 +389,7 @@ export default function Home() {
         {/* ── 과목 조회 탭 ── */}
         {tab === "search" && (
           <div className="flex flex-col flex-1 overflow-hidden p-4 gap-3">
-            <div className="flex items-center gap-3 flex-wrap" onKeyDown={(e) => { if (e.key === "Enter" && !loading && courses.length > 0) doFetch(); }}>
+            <div className="flex items-center gap-3 flex-wrap" onKeyDown={(e) => { if (e.key === "Enter" && !loading && courses.length > 0) { if (rows.length > 0) { setRefetchConfirm(true); return; } doFetch(); } }}>
               {/* 전공 드롭다운 (검색 가능) */}
               <div ref={majorDropRef} className="relative">
                 <button
@@ -484,7 +485,10 @@ export default function Home() {
                 <option value="w">겨울</option>
               </select>
               <button
-                onClick={doFetch}
+                onClick={() => {
+                  if (rows.length > 0) { setRefetchConfirm(true); return; }
+                  doFetch();
+                }}
                 disabled={loading || courses.length === 0}
                 title={courses.length === 0 ? "해당 학번의 이수체계 데이터가 없습니다" : undefined}
                 className="bg-blue-600 text-white text-sm px-4 py-1.5 rounded hover:bg-blue-700 disabled:opacity-50 transition-colors"
@@ -1071,6 +1075,29 @@ export default function Home() {
           </div>
         )}
       </main>
+
+      {refetchConfirm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30">
+          <div className="bg-white rounded-xl shadow-xl px-6 py-5 flex flex-col gap-4 w-72">
+            <p className="text-sm font-semibold text-gray-800 text-center">다시 조회하시겠습니까?</p>
+            <p className="text-xs text-gray-500 text-center">현재 조회 결과와 마법사 설정이 초기화됩니다.</p>
+            <div className="flex gap-2">
+              <button
+                onClick={() => setRefetchConfirm(false)}
+                className="flex-1 py-2 border border-gray-300 rounded-lg text-sm text-gray-600 hover:bg-gray-50"
+              >
+                취소
+              </button>
+              <button
+                onClick={() => { setRefetchConfirm(false); doFetch(); }}
+                className="flex-1 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg"
+              >
+                예
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <footer className="border-t border-gray-200 bg-white px-6 py-1.5 text-xs text-gray-400 flex gap-2 shrink-0">
         <span>insu0531@knu.ac.kr</span>

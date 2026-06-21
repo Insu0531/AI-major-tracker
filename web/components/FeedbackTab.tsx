@@ -9,16 +9,17 @@ const FORM_ACTION =
 const CATEGORIES = ["기능 추가 문의", "버그 신고", "UI/UX(디자인) 개선", "응원"] as const;
 
 export default function FeedbackTab() {
-  const [major, setMajor] = useState<Major>("ai");
+  const [major, setMajor] = useState<Major | null>(null);
   const [majorSearch, setMajorSearch] = useState("");
   const [majorDropOpen, setMajorDropOpen] = useState(false);
   const majorDropRef = useRef<HTMLDivElement>(null);
 
-  const [entryYear, setEntryYear] = useState(2026);
+  const [entryYear, setEntryYear] = useState<number | null>(null);
   const [category, setCategory] = useState<string>("");
   const [content, setContent] = useState("");
   const [agreed, setAgreed] = useState(false);
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -35,14 +36,21 @@ export default function FeedbackTab() {
     label.includes(majorSearch)
   ) as [Major, string][];
 
-  const handleSubmit = async () => {
-    if (!category) { alert("카테고리를 선택해주세요."); return; }
-    if (!agreed) { alert("개인정보 수집에 동의해주세요."); return; }
+  const [showConfirm, setShowConfirm] = useState(false);
 
+  const handleSubmitClick = () => {
+    if (!major) { setErrorMsg("전공을 선택해주세요."); return; }
+    if (!category) { setErrorMsg("카테고리를 선택해주세요."); return; }
+    if (!agreed) { setErrorMsg("개인정보 수집·이용에 동의해주세요."); return; }
+    setShowConfirm(true);
+  };
+
+  const handleConfirm = async () => {
+    setShowConfirm(false);
     setStatus("sending");
     const body = new FormData();
-    body.append("entry.431703091", MAJOR_LABELS[major]);
-    body.append("entry.308308418", String(entryYear));
+    if (major) body.append("entry.431703091", MAJOR_LABELS[major]);
+    if (entryYear) body.append("entry.308308418", String(entryYear));
     body.append("entry.879413792", category);
     body.append("entry.195170706", content);
 
@@ -74,7 +82,7 @@ export default function FeedbackTab() {
               onClick={() => setMajorDropOpen((v) => !v)}
               className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-left flex justify-between items-center hover:bg-gray-50"
             >
-              <span>{MAJOR_LABELS[major]}</span>
+              <span className={major ? "text-gray-800" : "text-gray-400"}>{major ? MAJOR_LABELS[major] : "선택"}</span>
               <span className="text-gray-400 text-xs">{majorDropOpen ? "▲" : "▼"}</span>
             </button>
             {majorDropOpen && (
@@ -108,10 +116,11 @@ export default function FeedbackTab() {
         <div className="flex flex-col gap-1">
           <label className="text-sm font-medium text-gray-700">학번 (입학년도)</label>
           <select
-            value={entryYear}
-            onChange={(e) => setEntryYear(Number(e.target.value))}
+            value={entryYear ?? ""}
+            onChange={(e) => setEntryYear(e.target.value ? Number(e.target.value) : null)}
             className="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
           >
+            <option value="">선택</option>
             {Array.from({ length: ENTRY_YEAR_MAX - ENTRY_YEAR_MIN + 1 }, (_, i) => ENTRY_YEAR_MIN + i)
               .map((y) => (
                 <option key={y} value={y}>{y}학번</option>
@@ -169,12 +178,22 @@ export default function FeedbackTab() {
 
         {/* 제출 버튼 */}
         {status === "done" ? (
-          <div className="text-center py-4 text-green-600 font-medium text-sm">
-            전송되었습니다. 감사합니다 🙇
+          <div className="flex flex-col items-center gap-2 py-6 animate-[fadeIn_0.4s_ease]">
+            <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center text-3xl animate-[bounceIn_0.5s_ease]">
+              ✓
+            </div>
+            <p className="text-green-600 font-semibold text-base">제출 완료!</p>
+            <p className="text-gray-400 text-sm">소중한 의견 감사합니다.</p>
+            <button
+              onClick={() => setStatus("idle")}
+              className="mt-2 text-xs text-gray-400 hover:text-gray-600 underline"
+            >
+              다시 작성하기
+            </button>
           </div>
         ) : (
           <button
-            onClick={handleSubmit}
+            onClick={handleSubmitClick}
             disabled={status === "sending"}
             className="w-full py-2.5 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors"
           >
@@ -183,6 +202,45 @@ export default function FeedbackTab() {
         )}
         {status === "error" && (
           <p className="text-xs text-red-500 text-center">전송에 실패했습니다. 다시 시도해주세요.</p>
+        )}
+
+        {/* 유효성 오류 모달 */}
+        {errorMsg && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30">
+            <div className="bg-white rounded-xl shadow-xl px-6 py-5 flex flex-col gap-4 w-72">
+              <p className="text-sm font-semibold text-gray-800 text-center">{errorMsg}</p>
+              <button
+                onClick={() => setErrorMsg(null)}
+                className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg"
+              >
+                확인
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* 제출 확인 모달 */}
+        {showConfirm && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30">
+            <div className="bg-white rounded-xl shadow-xl px-6 py-5 flex flex-col gap-4 w-72">
+              <p className="text-sm font-semibold text-gray-800 text-center">제출하시겠습니까?</p>
+              <p className="text-xs text-gray-500 text-center">제출 후에는 수정이 불가능합니다.</p>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setShowConfirm(false)}
+                  className="flex-1 py-2 border border-gray-300 rounded-lg text-sm text-gray-600 hover:bg-gray-50"
+                >
+                  취소
+                </button>
+                <button
+                  onClick={handleConfirm}
+                  className="flex-1 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg"
+                >
+                  예
+                </button>
+              </div>
+            </div>
+          </div>
         )}
       </div>
     </div>
