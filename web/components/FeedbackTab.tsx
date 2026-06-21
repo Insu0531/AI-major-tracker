@@ -207,7 +207,7 @@ export default function FeedbackTab() {
         {/* 유효성 오류 모달 */}
         {errorMsg && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30">
-            <div className="bg-white rounded-xl shadow-xl px-6 py-5 flex flex-col gap-4 w-72">
+            <div className="bg-white rounded-xl shadow-xl px-6 py-5 flex flex-col gap-4 w-80 max-w-[90vw]">
               <p className="text-sm font-semibold text-gray-800 text-center">{errorMsg}</p>
               <button
                 onClick={() => setErrorMsg(null)}
@@ -222,7 +222,7 @@ export default function FeedbackTab() {
         {/* 제출 확인 모달 */}
         {showConfirm && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30">
-            <div className="bg-white rounded-xl shadow-xl px-6 py-5 flex flex-col gap-4 w-72">
+            <div className="bg-white rounded-xl shadow-xl px-6 py-5 flex flex-col gap-4 w-80 max-w-[90vw]">
               <p className="text-sm font-semibold text-gray-800 text-center">제출하시겠습니까?</p>
               <p className="text-xs text-gray-500 text-center">제출 후에는 수정이 불가능합니다.</p>
               <div className="flex gap-2">

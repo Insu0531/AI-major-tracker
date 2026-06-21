@@ -18,6 +18,7 @@ type Row = {
   timeStr: string;
   rmrk: string;
   location: string;
+  majorTag?: string;
 };
 
 type SortState = { col: keyof Row; dir: "asc" | "desc" } | null;
@@ -39,6 +40,7 @@ export default function Home() {
   const [tab, setTab] = useState<"search" | "wizard" | "gyoyang" | "settings" | "feedback">("search");
   const [darkMode, setDarkMode] = useState(false);
   const [refetchConfirm, setRefetchConfirm] = useState(false);
+  const [showMajor2Tip, setShowMajor2Tip] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem("theme");
@@ -61,11 +63,20 @@ export default function Home() {
   const [majorSearch, setMajorSearch] = useState("");
   const [majorDropOpen, setMajorDropOpen] = useState(false);
   const majorDropRef = useRef<HTMLDivElement>(null);
+
+  const [major2, setMajor2] = useState<Major | null>(null);
+  const [majorSearch2, setMajorSearch2] = useState("");
+  const [majorDropOpen2, setMajorDropOpen2] = useState(false);
+  const majorDropRef2 = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (majorDropRef.current && !majorDropRef.current.contains(e.target as Node)) {
         setMajorDropOpen(false);
         setMajorSearch("");
+      }
+      if (majorDropRef2.current && !majorDropRef2.current.contains(e.target as Node)) {
+        setMajorDropOpen2(false);
+        setMajorSearch2("");
       }
     };
     document.addEventListener("mousedown", handler);
@@ -113,12 +124,46 @@ export default function Home() {
     fetchCoursesByYear(major, entryYear).then(setCourses);
   }, [major, entryYear]);
 
+  const isSangju = MAJOR_LABELS[major]?.startsWith("[상주]") ?? false;
+
   const abortRef = useRef<AbortController | null>(null);
+
+  const streamRows = useCallback(async (
+    majorKey: Major,
+    eyear: number,
+    tag: string,
+    signal: AbortSignal,
+    onRows: (rows: Row[]) => void,
+    onProgress: (name: string) => void,
+  ) => {
+    const res = await fetch(`/api/sections?sem=${encodeURIComponent(sem)}&major=${majorKey}&entryYear=${eyear}`, { signal });
+    if (!res.ok) { const err = await res.json(); throw new Error(err.error ?? "오류"); }
+    const reader = res.body!.getReader();
+    const decoder = new TextDecoder();
+    let buf = "";
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buf += decoder.decode(value, { stream: true });
+      const parts = buf.split("\n\n");
+      buf = parts.pop() ?? "";
+      for (const part of parts) {
+        const line = part.trim();
+        if (!line.startsWith("data:")) continue;
+        const json = JSON.parse(line.slice(5).trim());
+        if (json.type === "progress") {
+          onProgress(json.name);
+          if (json.rows?.length) onRows((json.rows as Row[]).map((r) => ({ ...r, majorTag: tag })));
+        }
+      }
+    }
+  }, [sem]);
 
   const doFetch = useCallback(async () => {
     if (loading) return;
     abortRef.current?.abort();
     abortRef.current = new AbortController();
+    const signal = abortRef.current.signal;
     setLoading(true);
     setRows([]);
     setExcludedRows(new Set());
@@ -129,62 +174,50 @@ export default function Home() {
     track("search", { major, entryYear, sem });
 
     try {
-      const res = await fetch(`/api/sections?sem=${encodeURIComponent(sem)}&major=${major}&entryYear=${entryYear}`, {
-        signal: abortRef.current.signal,
-      });
-      if (!res.ok) {
-        const err = await res.json();
-        setStatusText(err.error ?? "오류가 발생했습니다.");
-        return;
-      }
-
-      const reader = res.body!.getReader();
-      const decoder = new TextDecoder();
-      let buf = "";
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        buf += decoder.decode(value, { stream: true });
-        const parts = buf.split("\n\n");
-        buf = parts.pop() ?? "";
-        for (const part of parts) {
-          const line = part.trim();
-          if (!line.startsWith("data:")) continue;
-          const json = JSON.parse(line.slice(5).trim());
-          if (json.type === "progress") {
-            setProgress({ current: json.current, name: json.name });
-            if (json.rows?.length) {
-              setRows((prev) => [...prev, ...json.rows]);
-              // 상주 모드에 따라 반대 캠퍼스 분반 자동 제외
-              setExcludedRows((prev) => {
-                const next = new Set(prev);
-                for (const r of json.rows as Row[]) {
-                  const isSanjuRow = (r.rmrk ?? "").includes("상주캠퍼스");
-                  if (isSangju && !isSanjuRow) next.add(r.crseNo);
-                  if (!isSangju && isSanjuRow) next.add(r.crseNo);
-                }
-                return next;
-              });
-            }
-          } else if (json.type === "done") {
-            setStatusText(`총 ${json.totalRows}개 분반 개설됨 (${sem})`);
-            // 새 조회 시 wizard 초기화
-            setCheckMap(new Map());
-            setCombos([]);
-            setFilteredCombos([]);
+      const allRows: Row[] = [];
+      const tag1 = major2 ? "주전공" : "";
+      await streamRows(major, entryYear, tag1, signal, (rows) => {
+        allRows.push(...rows);
+        setRows((prev) => [...prev, ...rows]);
+        setExcludedRows((prev) => {
+          const next = new Set(prev);
+          for (const r of rows) {
+            const isSanjuRow = (r.rmrk ?? "").includes("상주캠퍼스");
+            if (isSangju && !isSanjuRow) next.add(r.crseNo);
+            if (!isSangju && isSanjuRow) next.add(r.crseNo);
           }
-        }
+          return next;
+        });
+      }, (name) => setProgress({ current: 0, name }));
+
+      if (major2) {
+        setProgress({ current: 0, name: "복수전공 조회 중..." });
+        await streamRows(major2, entryYear, "복수전공", signal, (rows) => {
+          allRows.push(...rows);
+          setRows((prev) => [...prev, ...rows]);
+          setExcludedRows((prev) => {
+            const next = new Set(prev);
+            for (const r of rows) {
+              const isSanjuRow = (r.rmrk ?? "").includes("상주캠퍼스");
+              if (isSangju && !isSanjuRow) next.add(r.crseNo);
+              if (!isSangju && isSanjuRow) next.add(r.crseNo);
+            }
+            return next;
+          });
+        }, (name) => setProgress({ current: 0, name }));
       }
+
+      setStatusText(`총 ${allRows.length}개 분반 개설됨 (${sem}${major2 ? " · 복수전공 포함" : ""})`);
+      setCheckMap(new Map());
+      setCombos([]);
+      setFilteredCombos([]);
     } catch (e: unknown) {
       if (e instanceof Error && e.name !== "AbortError") setStatusText("오류가 발생했습니다.");
     } finally {
       setLoading(false);
       setProgress(null);
     }
-  }, [sem, major, entryYear, loading]);
-
-  const isSangju = MAJOR_LABELS[major]?.startsWith("[상주]") ?? false;
+  }, [sem, major, major2, entryYear, loading, isSangju, streamRows]);
 
   const sortedRows = (() => {
     const base = rows;
@@ -207,10 +240,10 @@ export default function Home() {
   };
 
   const courseGroups = (() => {
-    const map = new Map<string, { name: string; grade: string; count: number }>();
+    const map = new Map<string, { name: string; grade: string; count: number; majorTag?: string }>();
     for (const row of rows) {
       const base = row.crseNo.replace(/-\d+$/, "");
-      if (!map.has(base)) map.set(base, { name: row.name, grade: row.grade, count: 0 });
+      if (!map.has(base)) map.set(base, { name: row.name, grade: row.grade, count: 0, majorTag: row.majorTag });
       map.get(base)!.count++;
     }
     return map;
@@ -450,6 +483,70 @@ export default function Home() {
                   </div>
                 )}
               </div>
+              {/* 복수전공 */}
+              {major2 === null ? (
+                <button
+                  type="button"
+                  onClick={() => { setMajor2("ai"); setMajorDropOpen2(true); }}
+                  className="text-xs text-blue-500 border border-blue-200 rounded px-2 py-1.5 hover:bg-blue-50 whitespace-nowrap"
+                >
+                  + 복수전공
+                </button>
+              ) : (
+                <div ref={majorDropRef2} className="relative flex items-center gap-1">
+                  <button
+                    type="button"
+                    disabled={loading}
+                    onClick={() => { setMajorDropOpen2((v) => !v); setMajorSearch2(""); }}
+                    className="border border-blue-300 rounded px-2 py-1.5 text-sm bg-blue-50 min-w-40 text-left flex items-center justify-between gap-2 disabled:opacity-50"
+                  >
+                    <span className="truncate text-blue-700">{MAJOR_LABELS[major2]}</span>
+                    <span className="text-blue-400 shrink-0">▾</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setMajor2(null)}
+                    className="text-gray-400 hover:text-red-500 text-sm px-1"
+                  >✕</button>
+                  {majorDropOpen2 && (
+                    <div className="absolute z-50 top-full left-0 mt-1 w-72 bg-white border border-gray-200 rounded shadow-lg flex flex-col" style={{ maxHeight: 320 }}>
+                      <div className="p-1.5 border-b border-gray-100 shrink-0">
+                        <input
+                          autoFocus
+                          type="text"
+                          value={majorSearch2}
+                          onChange={(e) => setMajorSearch2(e.target.value)}
+                          placeholder="복수전공 검색..."
+                          className="w-full border border-gray-300 rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+                        />
+                      </div>
+                      <div className="overflow-y-auto flex-1">
+                        {(Object.entries(MAJOR_LABELS) as [Major, string][])
+                          .sort(([ka, a], [kb, b]) => {
+                            if (ka === "ai") return -1;
+                            if (kb === "ai") return 1;
+                            const aS = a.startsWith("[상주]"), bS = b.startsWith("[상주]");
+                            if (aS !== bS) return aS ? 1 : -1;
+                            return a.localeCompare(b, "ko");
+                          })
+                          .filter(([, label]) => !majorSearch2 || label.includes(majorSearch2))
+                          .map(([key, label]) => (
+                            <button
+                              key={key}
+                              type="button"
+                              onClick={() => { setMajor2(key); setMajorDropOpen2(false); setMajorSearch2(""); }}
+                              className={`w-full text-left px-3 py-1.5 text-sm hover:bg-blue-50 transition-colors ${key === major2 ? "bg-blue-100 text-blue-700 font-medium" : "text-gray-700"}`}
+                            >
+                              {label}
+                            </button>
+                          ))
+                        }
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+
               {/* 입학연도 드롭다운 */}
               <select
                 className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
@@ -484,17 +581,28 @@ export default function Home() {
                 <option value="s">여름</option>
                 <option value="w">겨울</option>
               </select>
-              <button
-                onClick={() => {
-                  if (rows.length > 0) { setRefetchConfirm(true); return; }
-                  doFetch();
-                }}
-                disabled={loading || courses.length === 0}
-                title={courses.length === 0 ? "해당 학번의 이수체계 데이터가 없습니다" : undefined}
-                className="bg-blue-600 text-white text-sm px-4 py-1.5 rounded hover:bg-blue-700 disabled:opacity-50 transition-colors"
+              <div className="relative"
+                onMouseEnter={() => major2 && setShowMajor2Tip(true)}
+                onMouseLeave={() => setShowMajor2Tip(false)}
               >
-                {loading ? "조회 중..." : courses.length === 0 ? "데이터 없음" : "조회"}
-              </button>
+                <button
+                  onClick={() => {
+                    if (rows.length > 0) { setRefetchConfirm(true); return; }
+                    doFetch();
+                  }}
+                  disabled={loading || courses.length === 0}
+                  title={courses.length === 0 ? "해당 학번의 이수체계 데이터가 없습니다" : undefined}
+                  className="bg-blue-600 text-white text-sm px-4 py-1.5 rounded hover:bg-blue-700 disabled:opacity-50 transition-colors"
+                >
+                  {loading ? "조회 중..." : courses.length === 0 ? "데이터 없음" : "조회"}
+                </button>
+                {showMajor2Tip && major2 && (
+                  <div className="absolute z-50 top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-amber-50 border border-amber-200 rounded-lg shadow-lg px-3 py-2 text-xs text-amber-800 leading-relaxed pointer-events-none">
+                    <div className="absolute left-1/2 -translate-x-1/2 bottom-full w-2 h-2 bg-amber-50 border-t border-l border-amber-200 rotate-45 mb-[-1px]" />
+                    복수전공 과목을 추가로 표시하는 기능입니다. 실제 복수전공 이수 기준은 학교 포털에서 직접 확인하세요.
+                  </div>
+                )}
+              </div>
               {loading && (
                 <button
                   onClick={() => { abortRef.current?.abort(); setLoading(false); setProgress(null); }}
@@ -613,6 +721,19 @@ export default function Home() {
                               <div className="text-xs leading-tight">
                                 {row[c.key].split("\n").map((line, i) => <div key={i}>{line}</div>)}
                               </div>
+                            ) : c.key === "name" ? (
+                              <div className="flex items-center gap-1.5">
+                                <span>{row[c.key]}</span>
+                                {row.majorTag && (
+                                  <span className={`text-[10px] px-1.5 py-0.5 rounded font-medium shrink-0 ${
+                                    row.majorTag === "복수전공"
+                                      ? "bg-purple-100 text-purple-700"
+                                      : "bg-blue-100 text-blue-700"
+                                  }`}>
+                                    {row.majorTag}
+                                  </span>
+                                )}
+                              </div>
                             ) : row[c.key]}
                           </td>
                         ))}
@@ -676,65 +797,96 @@ export default function Home() {
                     >전체 해제</button>
                   </div>
                   <div className="overflow-y-auto flex-1 px-2 pb-1">
-                    {[...new Set([...courseGroups.values()].map((v) => v.grade))].sort().map((grade) => (
-                      <div key={grade}>
-                        <p className="text-xs text-gray-400 px-1 py-1 mt-1">── {grade}학년 ──</p>
-                        {[...courseGroups.entries()]
-                          .filter(([, v]) => v.grade === grade)
-                          .map(([base, v]) => {
-                            const pinnedForBase = [...pinnedRows.values()].filter((p) => p.crseNo.replace(/-\d+$/, "") === base);
-                            const isPinnedCourse = pinnedForBase.length > 0;
-                            const checked = isPinnedCourse || (checkMap.get(base) ?? false);
-                            const disabled = !checked && checkedCount >= MAX_SELECT;
-                            return (
-                              <div key={base}>
-                                <label
-                                  className={`flex items-center gap-2 px-1 py-1 rounded ${
-                                    isPinnedCourse ? "cursor-default" : disabled ? "opacity-40 cursor-not-allowed" : "hover:bg-gray-50 cursor-pointer"
-                                  }`}
-                                >
-                                  <input
-                                    type="checkbox"
-                                    checked={checked}
-                                    disabled={isPinnedCourse || disabled}
-                                    onChange={(e) => {
-                                      if (isPinnedCourse) return;
-                                      if (e.target.checked && checkedCount >= MAX_SELECT) return;
-                                      const next = new Map(checkMap);
-                                      next.set(base, e.target.checked);
-                                      setCheckMap(next);
-                                    }}
-                                  />
-                                  <span className="text-sm text-gray-700 leading-tight">
-                                    {v.name.replace(/\s*\(.*?\)\s*$/, "")}
-                                    {isPinnedCourse
-                                      ? <span className="text-amber-500 text-xs ml-1">★ 고정</span>
-                                      : <span className="text-gray-400 text-xs ml-1">({v.count}분반)</span>
-                                    }
-                                  </span>
-                                </label>
-                                {isPinnedCourse && (
-                                  <div className="ml-6 flex flex-col gap-0.5 mb-0.5">
-                                    {pinnedForBase.map((p) => (
-                                      <div key={p.crseNo} className="flex items-center justify-between text-xs text-amber-700 bg-amber-50 rounded px-1.5 py-0.5">
-                                        <span>{p.prof} · {p.timeStr}</span>
-                                        <button
-                                          onClick={() => {
-                                            const next = new Map(pinnedRows);
-                                            next.delete(p.crseNo);
-                                            setPinnedRows(next);
-                                          }}
-                                          className="ml-1 text-amber-400 hover:text-red-500"
-                                        >✕</button>
-                                      </div>
-                                    ))}
+                    {(() => {
+                      const renderCourseItem = (base: string, v: { name: string; grade: string; count: number; majorTag?: string }) => {
+                        const pinnedForBase = [...pinnedRows.values()].filter((p) => p.crseNo.replace(/-\d+$/, "") === base);
+                        const isPinnedCourse = pinnedForBase.length > 0;
+                        const checked = isPinnedCourse || (checkMap.get(base) ?? false);
+                        const disabled = !checked && checkedCount >= MAX_SELECT;
+                        return (
+                          <div key={base}>
+                            <label
+                              className={`flex items-center gap-2 px-1 py-1 rounded ${
+                                isPinnedCourse ? "cursor-default" : disabled ? "opacity-40 cursor-not-allowed" : "hover:bg-gray-50 cursor-pointer"
+                              }`}
+                            >
+                              <input
+                                type="checkbox"
+                                checked={checked}
+                                disabled={isPinnedCourse || disabled}
+                                onChange={(e) => {
+                                  if (isPinnedCourse) return;
+                                  if (e.target.checked && checkedCount >= MAX_SELECT) return;
+                                  const next = new Map(checkMap);
+                                  next.set(base, e.target.checked);
+                                  setCheckMap(next);
+                                }}
+                              />
+                              <span className="text-sm text-gray-700 leading-tight">
+                                {v.name.replace(/\s*\(.*?\)\s*$/, "")}
+                                {isPinnedCourse
+                                  ? <span className="text-amber-500 text-xs ml-1">★ 고정</span>
+                                  : <span className="text-gray-400 text-xs ml-1">({v.count}분반)</span>
+                                }
+                              </span>
+                            </label>
+                            {isPinnedCourse && (
+                              <div className="ml-6 flex flex-col gap-0.5 mb-0.5">
+                                {pinnedForBase.map((p) => (
+                                  <div key={p.crseNo} className="flex items-center justify-between text-xs text-amber-700 bg-amber-50 rounded px-1.5 py-0.5">
+                                    <span>{p.prof} · {p.timeStr}</span>
+                                    <button
+                                      onClick={() => {
+                                        const next = new Map(pinnedRows);
+                                        next.delete(p.crseNo);
+                                        setPinnedRows(next);
+                                      }}
+                                      className="ml-1 text-amber-400 hover:text-red-500"
+                                    >✕</button>
                                   </div>
-                                )}
+                                ))}
                               </div>
-                            );
-                          })}
-                      </div>
-                    ))}
+                            )}
+                          </div>
+                        );
+                      };
+
+                      const renderGradeGroups = (entries: [string, { name: string; grade: string; count: number; majorTag?: string }][]) => {
+                        const grades = [...new Set(entries.map(([, v]) => v.grade))].sort();
+                        return grades.map((grade) => (
+                          <div key={grade}>
+                            <p className="text-xs text-gray-400 px-1 py-1 mt-1">── {grade}학년 ──</p>
+                            {entries.filter(([, v]) => v.grade === grade).map(([base, v]) => renderCourseItem(base, v))}
+                          </div>
+                        ));
+                      };
+
+                      const allEntries = [...courseGroups.entries()];
+
+                      if (!major2) {
+                        return renderGradeGroups(allEntries);
+                      }
+
+                      const mainEntries = allEntries.filter(([, v]) => v.majorTag !== "복수전공");
+                      const doubleEntries = allEntries.filter(([, v]) => v.majorTag === "복수전공");
+
+                      return (
+                        <>
+                          {mainEntries.length > 0 && (
+                            <div>
+                              <p className="text-xs font-semibold text-blue-600 px-1 pt-2 pb-1 border-b border-blue-100 mb-1">주전공</p>
+                              {renderGradeGroups(mainEntries)}
+                            </div>
+                          )}
+                          {doubleEntries.length > 0 && (
+                            <div className="mt-2">
+                              <p className="text-xs font-semibold text-purple-600 px-1 pt-2 pb-1 border-b border-purple-100 mb-1">복수전공</p>
+                              {renderGradeGroups(doubleEntries)}
+                            </div>
+                          )}
+                        </>
+                      );
+                    })()}
                   </div>
                   <div className="p-2 border-t border-gray-100 shrink-0">
                     <button
@@ -1078,7 +1230,7 @@ export default function Home() {
 
       {refetchConfirm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30">
-          <div className="bg-white rounded-xl shadow-xl px-6 py-5 flex flex-col gap-4 w-72">
+          <div className="bg-white rounded-xl shadow-xl px-6 py-5 flex flex-col gap-4 w-80 max-w-[90vw]">
             <p className="text-sm font-semibold text-gray-800 text-center">다시 조회하시겠습니까?</p>
             <p className="text-xs text-gray-500 text-center">현재 조회 결과와 마법사 설정이 초기화됩니다.</p>
             <div className="flex gap-2">
