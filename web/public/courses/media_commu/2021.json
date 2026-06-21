@@ -1,0 +1,212 @@
+[
+  {
+    "grade": "1",
+    "code": "COMM0211",
+    "name": "신문방송학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "COMM0213",
+    "name": "언론의 사회사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "COMM0221",
+    "name": "콘텐츠 스토리텔링론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMM0446",
+    "name": "광고매체론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMM0445",
+    "name": "광고학원론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMM0438",
+    "name": "뉴미디어와 테크놀로지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMM0345",
+    "name": "뉴스모니터링 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "COMM0354",
+    "name": "매스컴통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMM0218",
+    "name": "미디어 글쓰기",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "COMM0325",
+    "name": "미디어와 정치",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMM0219",
+    "name": "미디어편성기획론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMM0217",
+    "name": "사회조사방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMM0220",
+    "name": "영상문화론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMM0591",
+    "name": "영상제작론",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "COMM0323",
+    "name": "인간커뮤니케이션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMM0314",
+    "name": "저널리즘의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMM0466",
+    "name": "PR홍보론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMM0529",
+    "name": "고급기사작성론",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "COMM0594",
+    "name": "글로컬문화콘텐츠론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMM0626",
+    "name": "매체사회학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMM0559",
+    "name": "매체와 시공간",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMM0439",
+    "name": "문화정치학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECO0203",
+    "name": "미디어 산업과 정보 경제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMM0584",
+    "name": "미디어 인간학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMM0627",
+    "name": "미디어효과론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMM0593",
+    "name": "방송뉴스제작론",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "COMM0334",
+    "name": "방송론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMM0539",
+    "name": "소통과 철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMM0417",
+    "name": "언론윤리와 시민사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMM0532",
+    "name": "조직생활과 커뮤니케이션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMM0586",
+    "name": "콘텐츠 마케팅론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECO0201",
+    "name": "데이터 저널리즘",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COMM0561",
+    "name": "문화 간 커뮤니케이션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COMM0531",
+    "name": "문화콘텐츠 기획론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECO0204",
+    "name": "빅데이터 수용자 분석",
+    "credit": "3-3-0"
+  }
+]
