@@ -223,7 +223,10 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
       if (filterSuEval && fetched && !suEvalCodes.has(c.code)) return false;
       if (filterRemote && fetched && !remoteCodes.has(c.code)) return false;
       if (filterIlban && c.code.startsWith("CLTR")) return false;
-      if (filterSangju === "exclude" && fetched && sanjuCodes.has(c.code)) return false;
+      if (filterSangju === "exclude" && fetched && sanjuCodes.has(c.code)) {
+        const rows = effectiveRows.filter((r) => r.code === c.code);
+        if (rows.length > 0 && rows.every((r) => r.rmrk.includes("상주캠퍼스"))) return false;
+      }
       if (filterSangju === "include" && fetched && !sanjuCodes.has(c.code)) return false;
       if (filterDayOff.size > 0 && fetched) {
         const rows = effectiveRows.filter((r) => r.code === c.code);

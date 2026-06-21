@@ -5,7 +5,7 @@
   credit: string;
 };
 
-export type Major = "ai" | "elec" | "mech" | "space" | "energy" | "energy_re" | "energy_cv" | "nursing" | "physics" | "math" | "chem" | "stat" | "geo_geol" | "geo_astro" | "geo_ocean" | "kor_lit" | "eng_lit" | "fre_lit" | "ger_lit" | "chi_lit" | "history" | "philosophy" | "anthro" | "jpn_lit" | "kor_clas" | "rus_lit" | "poli_sci" | "sociology" | "geography" | "doc_info" | "psychology" | "business" | "econ" | "polymer" | "env_eng" | "textile" | "metal_mat" | "agri_civil" | "plant_sci" | "env_life_chem" | "food_biotech" | "food_mat" | "food_app" | "plant_med" | "food_econ" | "smart_bio_mech" | "edu" | "kor_edu" | "eng_edu" | "ethics_edu" | "math_edu" | "home_edu" | "ger_edu" | "fre_edu" | "history_edu" | "geo_edu" | "social_edu" | "phys_edu" | "chem_edu" | "bio_edu" | "earth_edu" | "civic_edu" | "commerce_edu" | "geo2_edu" | "music_edu" | "art_edu" | "home_mgmt" | "child_family" | "clothing" | "food_nutrition" | "life_sci_a" | "life_sci_b" | "life_sci_c" | "eco_housing" | "child_dev" | "child_edu" | "pub_admin" | "pub_policy" | "bio_med_eng" | "robot_smart" | "h2_energy" | "smart_mobility" | "innov_pharma" | "bio_med_fusion" | "robotics" | "adv_tech_self1" | "adv_tech_self2" | "auto_fusion" | "ai_conv" | "bio_med_conv" | "robot_conv" | "h2_conv" | "mobility_conv" | "cs_know" | "cs_sw_conv" | "cs_sys_sw" | "cs_global_sw" | "cs_platform" | "cs_data" | "cs_human_ai" | "cs_ai_comp" | "cs_deep" | "cs_adv" | "bio_eng" | "new_mat" | "new_mat_div" | "new_mat_elec" | "bio_sum_sojae" | "sj_civil_disaster" | "sj_civil_env" | "sj_smart_auto" | "sj_mat_nano" | "sj_echem_nano" | "sj_aerospace" | "sj_plant_sys" | "sj_mat_energy" | "sj_echem_energy" | "sj_precision_mech" | "sj_food_service" | "sj_textile" | "sj_fashion" | "sj_ind_mech" | "sj_civil_disaster_dept" | "sj_env_safety" | "sj_dental_hyg" | "sj_sw" | "sj_gis" | "sj_smart_plant" | "sj_auto" | "sj_nano_mat" | "sj_energy_chem" | "sj_livestock" | "sj_bio_app" | "sj_eco_tour" | "sj_livestock_biotech" | "sj_insect" | "sj_tourism" | "sj_horse" | "sj_livestock_startup" | "sj_forest_eco" | "sj_plant_res" | "sj_phys_edu" | "sj_animal_biotech" | "sj_phys_edu_major" | "sj_health_sports" | "sj_eco_auto" | "chem_eng" | "social_welfare_micro" | "social_welfare_macro" | "social_welfare" | "appli_chem";
+export type Major = "ai" | "elec" | "mech" | "space" | "energy" | "energy_re" | "energy_cv" | "nursing" | "physics" | "math" | "chem" | "stat" | "geo_geol" | "geo_astro" | "geo_ocean" | "kor_lit" | "eng_lit" | "fre_lit" | "ger_lit" | "chi_lit" | "history" | "philosophy" | "anthro" | "jpn_lit" | "kor_clas" | "rus_lit" | "poli_sci" | "sociology" | "geography" | "doc_info" | "psychology" | "business" | "econ" | "polymer" | "env_eng" | "textile" | "metal_mat" | "agri_civil" | "plant_sci" | "env_life_chem" | "food_biotech" | "food_mat" | "food_app" | "plant_med" | "food_econ" | "smart_bio_mech" | "edu" | "kor_edu" | "eng_edu" | "ethics_edu" | "math_edu" | "home_edu" | "ger_edu" | "fre_edu" | "history_edu" | "geo_edu" | "social_edu" | "phys_edu" | "chem_edu" | "bio_edu" | "earth_edu" | "civic_edu" | "commerce_edu" | "geo2_edu" | "music_edu" | "art_edu" | "home_mgmt" | "child_family" | "clothing" | "food_nutrition" | "life_sci_a" | "life_sci_b" | "life_sci_c" | "eco_housing" | "child_dev" | "child_edu" | "pub_admin" | "pub_policy" | "bio_med_eng" | "robot_smart" | "h2_energy" | "smart_mobility" | "innov_pharma" | "bio_med_fusion" | "robotics" | "adv_tech_self1" | "adv_tech_self2" | "auto_fusion" | "ai_conv" | "bio_med_conv" | "robot_conv" | "h2_conv" | "mobility_conv" | "cs_know" | "cs_sw_conv" | "cs_sys_sw" | "cs_global_sw" | "cs_platform" | "cs_data" | "cs_human_ai" | "cs_ai_comp" | "cs_deep" | "cs_adv" | "bio_eng" | "new_mat" | "new_mat_div" | "new_mat_elec" | "bio_sum_sojae" | "sj_civil_disaster" | "sj_civil_env" | "sj_smart_auto" | "sj_mat_nano" | "sj_echem_nano" | "sj_aerospace" | "sj_plant_sys" | "sj_mat_energy" | "sj_echem_energy" | "sj_precision_mech" | "sj_food_service" | "sj_textile" | "sj_fashion" | "sj_ind_mech" | "sj_civil_disaster_dept" | "sj_env_safety" | "sj_dental_hyg" | "sj_sw" | "sj_gis" | "sj_smart_plant" | "sj_auto" | "sj_nano_mat" | "sj_energy_chem" | "sj_livestock" | "sj_bio_app" | "sj_eco_tour" | "sj_livestock_biotech" | "sj_insect" | "sj_tourism" | "sj_horse" | "sj_livestock_startup" | "sj_forest_eco" | "sj_plant_res" | "sj_phys_edu" | "sj_animal_biotech" | "sj_phys_edu_major" | "sj_health_sports" | "sj_eco_auto" | "chem_eng" | "social_welfare_micro" | "social_welfare_macro" | "social_welfare" | "appli_chem" | "media_commu" | "medical" | "medical-semi" | "dentist" | "dentist-semi";
 
 export const MAJOR_LABELS: Record<Major, string> = {
   ai: "전자공학부 인공지능전공",
@@ -30,6 +30,7 @@ export const MAJOR_LABELS: Record<Major, string> = {
   doc_info: "문헌정보학과",
   phys_edu: "물리교육과",
   physics: "물리학과",
+  media_commu: "미디어커뮤니케이션학과",
   art_edu: "미술교육과",
   bio_sum_sojae: "바이오섬유소재학과",
   fre_lit: "불어불문학과",
@@ -86,6 +87,8 @@ export const MAJOR_LABELS: Record<Major, string> = {
   bio_med_fusion: "의생명융합공학과",
   bio_med_eng: "의생명융합공학전공",
   eco_housing: "의생활학과",
+  "medical-semi": "의예과",
+  medical: "의학과",
   social_edu: "일반사회교육과",
   jpn_lit: "일어일문학과",
   auto_fusion: "자율시스템 융합전공",
@@ -101,6 +104,8 @@ export const MAJOR_LABELS: Record<Major, string> = {
   philosophy: "철학과",
   adv_tech_self1: "첨단기술융합대학 자율학부1",
   adv_tech_self2: "첨단기술융합대학 자율학부2",
+  "dentist-semi": "치의예과",
+  dentist: "치의학과",
   cs_global_sw: "컴퓨터학부-글로벌소프트웨어융합전공",
   cs_data: "컴퓨터학부-데이터과학전공",
   cs_sys_sw: "컴퓨터학부-시스템소프트웨어전공",
@@ -313,6 +318,11 @@ export const MAJOR_META: Record<Major, { deptCd: string; baseDeptCd?: string }> 
   social_welfare_macro: { deptCd: "120902", baseDeptCd: "1209" },
   social_welfare: { deptCd: "1209" },
   appli_chem: { deptCd: "1612" },
+  media_commu: { deptCd: "120D" },
+  medical: { deptCd: "1F01" },
+  "medical-semi": { deptCd: "1F04" },
+  dentist: { deptCd: "1G01" },
+  "dentist-semi": { deptCd: "1G02" },
 
 };
 
