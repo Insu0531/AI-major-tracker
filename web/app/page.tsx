@@ -6,6 +6,7 @@ import { buildSectionGroups, generateCombos, Section, NoTimeSection } from "@/li
 import { Major, MAJOR_LABELS, ENTRY_YEAR_MIN, ENTRY_YEAR_MAX, fetchCoursesByYear, Course } from "@/lib/courses";
 import TimetableGrid from "@/components/TimetableGrid";
 import GyoyangWizard from "@/components/GyoyangWizard";
+import FeedbackTab from "@/components/FeedbackTab";
 
 type Row = {
   grade: string;
@@ -35,7 +36,7 @@ const COLS: { key: keyof Row; label: string }[] = [
 const MAX_SELECT = 10;
 
 export default function Home() {
-  const [tab, setTab] = useState<"search" | "wizard" | "gyoyang" | "settings">("search");
+  const [tab, setTab] = useState<"search" | "wizard" | "gyoyang" | "settings" | "feedback">("search");
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
@@ -358,6 +359,7 @@ export default function Home() {
           { key: "wizard", label: "전공 마법사" },
           { key: "gyoyang", label: "교양 마법사" },
           { key: "settings", label: "설정" },
+          { key: "feedback", label: "응원/문의" },
         ] as const).map(({ key, label }) => {
           const disabled = key === "gyoyang" && !pinnedCombo;
           return (
@@ -1044,6 +1046,9 @@ export default function Home() {
             <GyoyangWizard pinnedCombo={pinnedCombo} pinnedNoTimeSections={noTimeSections} initialSem={sem} majorLabel={MAJOR_LABELS[major]} />
           )}
         </div>
+
+        {/* ── 응원/문의 탭 ── */}
+        {tab === "feedback" && <FeedbackTab />}
 
         {/* ── 설정 탭 ── */}
         {tab === "settings" && (
