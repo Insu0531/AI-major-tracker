@@ -109,7 +109,7 @@ def update_courses_ts(ts_path: str, key: str, label: str, dept_cd: str, base_cd:
     )
     if labels_match:
         entries: dict[str, str] = {}
-        for m in re.finditer(r'^\s+(\w+)\s*:\s*"([^"]+)"', labels_match.group(1), re.MULTILINE):
+        for m in re.finditer(r'^\s+"?([\w-]+)"?\s*:\s*"([^"]+)"', labels_match.group(1), re.MULTILINE):
             entries[m.group(1)] = m.group(2)
         added = key not in entries
         entries[key] = label
