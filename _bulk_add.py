@@ -178,13 +178,13 @@ majors = [
     # ("170S02", "forest_prod_eng","산림과학·조경학부-임산공학전공", "170S"),
     # ("170S03", "landscape_arch", "산림과학·조경학부-조경학전공",   "170S"),
     # 1800 예술대학
-    ("1801", "music",         "음악학과",           None),
-    ("1802", "korean_music",  "국악과",             None),
-    ("1803", "korean_music2", "국악학과",           None),
-    ("1804", "art",           "미술학과",           None),
-    ("1805", "visual_design", "시각정보디자인학과", None),
-    ("1806", "design",        "디자인학과",         None),
-    ("1807", "digital_art",   "디지털아트융합전공", None),
+    # ("1801", "music",         "음악학과",           None),
+    # ("1802", "korean_music",  "국악과",             None),
+    # ("1803", "korean_music2", "국악학과",           None),
+    # ("1804", "art",           "미술학과",           None),
+    # ("1805", "visual_design", "시각정보디자인학과", None),
+    # ("1806", "design",        "디자인학과",         None),
+    # ("1807", "digital_art",   "디지털아트융합전공", None),
  ]
 
 years = "2021,2022,2023,2024,2025,2026"
