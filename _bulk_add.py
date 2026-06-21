@@ -164,8 +164,9 @@ majors = [
     # ("1209","social_welfare","사회복지학부",None),
     # ("1F01", "medical", "의학과", None),
     # ("1F04", "medical-semi", "의예과", None),
-    ("1G01", 'dentist', '치의학과', None),
-    ("1G02", 'dentist-semi', '치의예과', None)
+    # ("1G01", 'dentist', '치의학과', None),
+    # ("1G02", 'dentist-semi', '치의예과', None)
+    ("1O03", 'eleceng', '전기공학과', None),
  ]
 
 years = "2021,2022,2023,2024,2025,2026"

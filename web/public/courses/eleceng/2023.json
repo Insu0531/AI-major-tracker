@@ -1,0 +1,260 @@
+[
+  {
+    "grade": "1",
+    "code": "EECS0201",
+    "name": "C프로그래밍과실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ELEE0215",
+    "name": "전기공학세미나 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ELEE0213",
+    "name": "전기물리학실험 1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "ELEE0214",
+    "name": "전기물리학실험 2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "EECS0446",
+    "name": "창의공학설계실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0212",
+    "name": "공학수학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEE0313",
+    "name": "기초전기공학실험설계 1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ELEE0314",
+    "name": "기초전기공학실험설계 2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0247",
+    "name": "논리회로",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MTED0231",
+    "name": "선형대수",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EECS0438",
+    "name": "전기물성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0241",
+    "name": "전자장1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0242",
+    "name": "전자장2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0245",
+    "name": "전자회로1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0206",
+    "name": "확률과정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0243",
+    "name": "회로이론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0244",
+    "name": "회로이론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEE0217",
+    "name": "문제해결기반 공학연수실습(심화전기공학)",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "ELEE0216",
+    "name": "문제해결기반 공학연수실습(전기공학)",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0452",
+    "name": "수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0321",
+    "name": "신호및시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0322",
+    "name": "에너지변환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0437",
+    "name": "응용전력전자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0332",
+    "name": "자동제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0432",
+    "name": "전기기계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEE0221",
+    "name": "전기기기및전력전자실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ELEE0220",
+    "name": "전기회로및전력공학실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0436",
+    "name": "전력계통공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0431",
+    "name": "전력공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0334",
+    "name": "전력전자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0246",
+    "name": "전자회로2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEE0218",
+    "name": "EV및배터리공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0403",
+    "name": "IT지식재산권",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EECS0410",
+    "name": "고전압공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0451",
+    "name": "마이크로파공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEE0501",
+    "name": "마이크로프로세서공학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0483",
+    "name": "센서와액츄에이터",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EECS0456",
+    "name": "신재생에너지공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEE0526",
+    "name": "응용계통공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EECS0457",
+    "name": "전기설비",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0401",
+    "name": "종합설계프로젝트1",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0402",
+    "name": "종합설계프로젝트2",
+    "credit": "4-3-2"
+  }
+]
