@@ -1,0 +1,224 @@
+[
+  {
+    "grade": "1",
+    "code": "CDEE0205",
+    "name": "건설CAD",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "CDEE0310",
+    "name": "재난관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "CDEE0209",
+    "name": "전산수학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "MECH0223",
+    "name": "정역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CDEE0420",
+    "name": "건설재료공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CVLE0321",
+    "name": "건설재료실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CDEE0318",
+    "name": "구조해석학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CDEE0311",
+    "name": "수리학 및 설계 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CDEE0312",
+    "name": "수리학 및 설계 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CDEE0315",
+    "name": "안전관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CDEE0320",
+    "name": "응용측량학 이론 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "META0231",
+    "name": "재료역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CDEE0314",
+    "name": "재해통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CIVL0234",
+    "name": "지반공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CDEE0309",
+    "name": "지반공학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CDEE0408",
+    "name": "지형측량학 이론 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CDEE0419",
+    "name": "강구조설계공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CDEE0505",
+    "name": "건설안전공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CDEE0319",
+    "name": "구조해석학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CDEE0417",
+    "name": "기초설계공학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CDEE0418",
+    "name": "기초설계공학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CDEE0427",
+    "name": "방재GIS 이론 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CIVL0214",
+    "name": "상하수도공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CDEE0412",
+    "name": "수리실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CDEE0511",
+    "name": "수문학 및 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CVLE0401",
+    "name": "철근콘크리트공학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CVLE0406",
+    "name": "철근콘크리트공학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CDEE0508",
+    "name": "토목시공계획및관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CDEE0422",
+    "name": "교량방재공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CDEE0423",
+    "name": "구조물안전진단",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CDEE0416",
+    "name": "도로설계공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CDEE0307",
+    "name": "도시방재학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CVLE0510",
+    "name": "매트릭스구조해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CDEE0426",
+    "name": "방재경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CDEE0323",
+    "name": "방재계획학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CDEE0509",
+    "name": "방재구조동역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CDEE0302",
+    "name": "지진방재론",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,158 @@
+[
+  {
+    "grade": "1",
+    "code": "THMM0202",
+    "name": "MICE경영의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "THMM0201",
+    "name": "관광경영의이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "THMM0205",
+    "name": "관광소비자행동론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "THMM0206",
+    "name": "인공지능과호스피탈리티",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "THMM0203",
+    "name": "호스피탈리티비즈니스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "THMM0204",
+    "name": "호스피탈리티서비스마케팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ECOT0419",
+    "name": "호텔경영의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "THMM0208",
+    "name": "관광경제학입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "THMM0211",
+    "name": "관광목적지마케팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "THMM0207",
+    "name": "관광비즈니스영어Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "THMM0212",
+    "name": "관광비즈니스영어Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "THMM0213",
+    "name": "관광자원개발론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "THMM0214",
+    "name": "글로벌호스피탈리티트렌드",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "THMM0209",
+    "name": "지속가능관광의이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "THMM0210",
+    "name": "호스피탈리티재무관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "THMM0219",
+    "name": "MICE기획운영론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "THMM0220",
+    "name": "관광법규와정책",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECOT0316",
+    "name": "관광연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "THMM0215",
+    "name": "문화관광콘텐츠의이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "THMM0218",
+    "name": "서비스경험디자인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "THMM0217",
+    "name": "축제이벤트경영론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "THMM0216",
+    "name": "호스피탈리티서비스경영",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "THMM0221",
+    "name": "관광통계분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "THMM0223",
+    "name": "여가와관광",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "THMM0222",
+    "name": "호스피탈리티경영전략",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "THMM0224",
+    "name": "호스피탈리티인적자원",
+    "credit": "3-3-0"
+  }
+]

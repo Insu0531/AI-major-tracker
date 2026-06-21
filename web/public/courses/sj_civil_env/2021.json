@@ -1,0 +1,224 @@
+[
+  {
+    "grade": "1",
+    "code": "CDEE0205",
+    "name": "건설CAD",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "CDEE0208",
+    "name": "건설방재공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "CDEE0351",
+    "name": "건설환경공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "MECH0223",
+    "name": "정역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CDEE0463",
+    "name": "건설환경 프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CDEE0331",
+    "name": "건설환경화학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CDEE0335",
+    "name": "기상자료 해석 및 예보 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CDEE0353",
+    "name": "기초수리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CDEE0333",
+    "name": "방재기상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CVLE0408",
+    "name": "상수도공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARUE0354",
+    "name": "상수도실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CDEE0354",
+    "name": "수리모형실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CDEE0357",
+    "name": "수질오염론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CVLE0328",
+    "name": "응용수리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENVI0361",
+    "name": "하수도공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARUE0358",
+    "name": "하수도실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CDEE0345",
+    "name": "건설환경통계및데이터 분석(캡스톤디자인)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ENVI0201",
+    "name": "대기오염론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CDEE0332",
+    "name": "대기오염방지공학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CVLE0313",
+    "name": "수문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CDEE0461",
+    "name": "수자원관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARUE0551",
+    "name": "수자원환경공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CDEE0459",
+    "name": "수질오염공정시험법",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CDEE0457",
+    "name": "수질오염방지실무",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ARUE0452",
+    "name": "응용상수도공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARUE0458",
+    "name": "응용하수도공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CDEE0338",
+    "name": "자원순환기술",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ARUE0454",
+    "name": "폐기물처리공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CDEE0342",
+    "name": "건설환경 공정 및 시스템 모델링",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CDEE0336",
+    "name": "건설환경 공정 및 시스템 설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CDEE0557",
+    "name": "건설환경세미나",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CDEE0341",
+    "name": "기상자료 분석 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CDEE0337",
+    "name": "대기환경 프로젝트 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CDEE0334",
+    "name": "막분리 및 수처리공정 설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CDEE0451",
+    "name": "수질오염방지기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CDEE0554",
+    "name": "전산HEC수문모델링",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CDEE0556",
+    "name": "전산관로시스템모델링",
+    "credit": "3-2-2"
+  }
+]

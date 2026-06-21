@@ -1,0 +1,290 @@
+[
+  {
+    "grade": "1",
+    "code": "MEDI0220",
+    "name": "공중보건학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "DEHY0273",
+    "name": "기초치위생학(구강조직발생)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "DEHY0275",
+    "name": "기초치위생학(두경부해부)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DEHY0274",
+    "name": "기초치위생학(치아형태학 및 실습)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "DEHY0278",
+    "name": "기초치위생학(해부생리)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "DEHY0220",
+    "name": "치위생학입문 II (치위생개론)",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "1",
+    "code": "DEHY0252",
+    "name": "치위생학입문Ⅰ(치아질환)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DEHY0251",
+    "name": "치의학용어",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "DEHY0336",
+    "name": "구강악안면영상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DEHY0337",
+    "name": "구강악안면영상학 실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "DEHY0272",
+    "name": "기초치위생학(구강미생물 및 면역)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DEHY0276",
+    "name": "기초치위생학(구강생리)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "DEHY0281",
+    "name": "예방치과학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DEHY0338",
+    "name": "임상전단계실습",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "DEHY0291",
+    "name": "임상치과학(구강악안면외과 및 응급처치)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "DEHY0289",
+    "name": "임상치과학(소아치과)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "DEHY0292",
+    "name": "임상치과학(치과보존)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "DEHY0284",
+    "name": "임상치과학(치주)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "DEHY0279",
+    "name": "임상치위생학 및 실습 1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DEHY0280",
+    "name": "임상치위생학 및 실습 2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DEHY0283",
+    "name": "치과재료학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DEHY0296",
+    "name": "기초치위생학(구강생화학)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "DEHY0293",
+    "name": "기초치위생학(치과약리)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "DEHY0297",
+    "name": "임상치과학(구강내과)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "DEHY0290",
+    "name": "임상치과학(치과교정)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "DEHY0288",
+    "name": "임상치과학(치과보철)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "DEHY0287",
+    "name": "임상치위생학 및 실습 3",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DEHY0294",
+    "name": "임상치위생학 및 실습 4",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DEHY0324",
+    "name": "지역사회치위생학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "DEHY0298",
+    "name": "치과영양학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "DEHY0233",
+    "name": "치과위생사 현장실습 Ⅰ",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "3",
+    "code": "DEHY0301",
+    "name": "치위생 행동과학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "DEHY0325",
+    "name": "치위생교육학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DEHY0327",
+    "name": "구강보건통계학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DEHY0329",
+    "name": "구강보건행정학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "DEHY0277",
+    "name": "기초치위생학(구강병리)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "DEHY0341",
+    "name": "디지털 치위생학 및 실습",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "4",
+    "code": "DEHY0304",
+    "name": "보건의료관계법규",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "DEHY0266",
+    "name": "보건프로그램개발 및 평가",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "DEHY0339",
+    "name": "임상치과학(임플란트)",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "DEHY0308",
+    "name": "임상치위생학 및 실습 5",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DEHY0310",
+    "name": "임상치위생학 및 실습 6",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DEHY0326",
+    "name": "지역사회치위생 실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "4",
+    "code": "DEHY0330",
+    "name": "치과건강보험 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DEHY0234",
+    "name": "치과위생사 현장실습 Ⅱ",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "4",
+    "code": "DEHY0307",
+    "name": "치위생 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DEHY0328",
+    "name": "치위생 연구조사방법론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "DEHY0305",
+    "name": "치위생 의료윤리",
+    "credit": "2-2-0"
+  }
+]

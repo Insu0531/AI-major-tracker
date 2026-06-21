@@ -1,0 +1,170 @@
+[
+  {
+    "grade": "1",
+    "code": "ECOT0307",
+    "name": "관광마케팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ECOT0201",
+    "name": "관광학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ECOT0530",
+    "name": "관광행동론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ECOT0422",
+    "name": "호텔관광서비스론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECOT0401",
+    "name": "관광계획론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECOT0531",
+    "name": "관광여가론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECOT0316",
+    "name": "관광연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECOT0212",
+    "name": "관광영어Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECOT0313",
+    "name": "관광영어Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECOT0317",
+    "name": "관광일본어Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECOT0315",
+    "name": "관광자원론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECOT0305",
+    "name": "관광정책론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECOT0421",
+    "name": "지속가능한 관광론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECOT0409",
+    "name": "호텔경영론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECOT0511",
+    "name": "관광개발론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECOT0408",
+    "name": "관광경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECOT0532",
+    "name": "관광재무회계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECOT0406",
+    "name": "도시관광론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECOT0304",
+    "name": "문화관광론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECOT0523",
+    "name": "식음료관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECOT0524",
+    "name": "외식산업론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECOT0509",
+    "name": "축제이벤트론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECOT0521",
+    "name": "컨벤션산업론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECOT0525",
+    "name": "항공업무론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECOT0534",
+    "name": "관광논문작성법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECOT0510",
+    "name": "관광법규",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECOT0533",
+    "name": "국제관광사례연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECOT0526",
+    "name": "컨벤션기획실무론",
+    "credit": "3-3-0"
+  }
+]

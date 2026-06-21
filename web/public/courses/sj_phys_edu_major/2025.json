@@ -1,0 +1,296 @@
+[
+  {
+    "grade": "1",
+    "code": "DOLS0211",
+    "name": "4차산업혁명과스포츠",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0309",
+    "name": "k-pop댄스",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "1",
+    "code": "PEED0516",
+    "name": "동계스포츠",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "1",
+    "code": "PEED0580",
+    "name": "스포츠사회학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "PEED0626",
+    "name": "스포츠심리학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0310",
+    "name": "스포츠테이핑및마사지",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "1",
+    "code": "PEED0622",
+    "name": "운동생리학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0305",
+    "name": "인체해부학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0525",
+    "name": "전공배드민턴",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0214",
+    "name": "전공볼링",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0301",
+    "name": "전공수영",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0306",
+    "name": "전공탁구",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "1",
+    "code": "PEED0619",
+    "name": "체육측정평가",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0311",
+    "name": "피트니스",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0207",
+    "name": "해양스포츠",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0314",
+    "name": "스포츠경제학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0402",
+    "name": "스포츠마케팅",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0313",
+    "name": "스포츠심리상담",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0325",
+    "name": "스포츠영상분석",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PEED0625",
+    "name": "스포츠영양학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0208",
+    "name": "에어로빅",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0203",
+    "name": "운동심리학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PEED0582",
+    "name": "운동역학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0500",
+    "name": "전공골프",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0524",
+    "name": "전공농구",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0307",
+    "name": "전공배구",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0526",
+    "name": "전공축구",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0308",
+    "name": "전공테니스",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0312",
+    "name": "체육사철학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0533",
+    "name": "트레이닝방법론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0320",
+    "name": "e스포츠비지니스",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0316",
+    "name": "스포츠데이터분석",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0326",
+    "name": "스포츠문화",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0315",
+    "name": "스포츠상해와재활",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0420",
+    "name": "스포츠지도론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0318",
+    "name": "신체컨디셔닝",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0317",
+    "name": "여가레크리에이션",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0520",
+    "name": "요가 및 필라테스",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0409",
+    "name": "운동제어 및 학습",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0405",
+    "name": "운동처방론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0327",
+    "name": "인체병리생리학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0221",
+    "name": "체육시설안전관리",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0319",
+    "name": "코칭심리학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOLS0322",
+    "name": "스포츠공학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOLS0415",
+    "name": "스포츠매스미디어",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOLS0323",
+    "name": "스포츠빅데이터의이해",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOLS0324",
+    "name": "스포츠와IT",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOLS0538",
+    "name": "스포츠인턴쉽",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOLS0321",
+    "name": "신소재산업과스포츠상품",
+    "credit": "2-2-0"
+  }
+]

@@ -1,0 +1,218 @@
+[
+  {
+    "grade": "1",
+    "code": "FOSE0216",
+    "name": "단체급식관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FSCI0203",
+    "name": "식생활과문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FOSE0220",
+    "name": "식품기초화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "MBIO0461",
+    "name": "식품미생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FOOD0325",
+    "name": "식품재료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FSFN0405",
+    "name": "외식산업학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FOSE0318",
+    "name": "호스피탈리티개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FOSE0323",
+    "name": "식음료관리 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FOOD0328",
+    "name": "식품가공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FOSE0329",
+    "name": "식품가공학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "BIOF0303",
+    "name": "식품미생물학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FOOD0585",
+    "name": "식품생물공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FSNU0323",
+    "name": "식품학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FSNU0325",
+    "name": "식품화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FOSE0326",
+    "name": "외식산업마케팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FOSE0322",
+    "name": "원가 및 재무관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FSNU0428",
+    "name": "조리원리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOSE0316",
+    "name": "건강기능성식품학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOSE0328",
+    "name": "메뉴관리 및 식공간연출",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FOSE0214",
+    "name": "발효식품학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOF0432",
+    "name": "브랜드경영 및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FOOD0571",
+    "name": "식품위생학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOSE0317",
+    "name": "식품품질관리 및 관능평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOF0433",
+    "name": "식품화학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FOSE0325",
+    "name": "외식문화론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOSE0345",
+    "name": "외식프렌차이즈 및 창업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOSE0347",
+    "name": "한식조리 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "FOSE0341",
+    "name": "HACCP 이론 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "BIOF0430",
+    "name": "식품기기분석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FSFN0310",
+    "name": "식품분석화학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "FOSE0343",
+    "name": "식품외식산업세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FOSE0337",
+    "name": "외국조리 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "FOSE0346",
+    "name": "외식비즈니스분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FOSE0327",
+    "name": "외식소비자 행동 분석 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "BIOF0431",
+    "name": "외식전략경영 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "FOSE0315",
+    "name": "제과제빵 및 실습",
+    "credit": "3-2-2"
+  }
+]

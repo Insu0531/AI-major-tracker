@@ -1,0 +1,248 @@
+[
+  {
+    "grade": "1",
+    "code": "SOFT0301",
+    "name": "ICT이해와 활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SOFT0311",
+    "name": "디지털논리회로",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "SOFT0314",
+    "name": "이산구조기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SOFT0321",
+    "name": "프로그래밍언어1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SOFT0322",
+    "name": "프로그래밍언어2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "SOFT0337",
+    "name": "JAVA1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "SOFT0338",
+    "name": "JAVA2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "SOFT0325",
+    "name": "객체지향언어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SOFT0341",
+    "name": "데이터구조론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SOFT0315",
+    "name": "디지털콘텐츠제작",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SOFT0357",
+    "name": "리눅스관리시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SOFT0355",
+    "name": "리눅스이론및실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SOFT0361",
+    "name": "소프트웨어공학론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SOFT0411",
+    "name": "웹프로그래밍1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SOFT0323",
+    "name": "프로그래밍언어3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SOFT0345",
+    "name": "데이터베이스개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SOFT0347",
+    "name": "데이터베이스활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SOFT0368",
+    "name": "소프트웨어개발환경",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "SOFT0365",
+    "name": "소프트웨어모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SOFT0471",
+    "name": "소프트웨어프로젝트1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "SOFT0352",
+    "name": "시스템소프트웨어기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SOFT0351",
+    "name": "운영체제론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SOFT0412",
+    "name": "웹프로그래밍2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SOFT0363",
+    "name": "응용소프트웨어설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SOFT0317",
+    "name": "인공지능개론",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "SOFT0343",
+    "name": "정보처리알고리즘",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "SOFT0443",
+    "name": "지능형소프트웨어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SOFT0313",
+    "name": "컴퓨터구조개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SOFT0371",
+    "name": "컴퓨터통신",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SOFT0349",
+    "name": "가상현실콘텐츠제작",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SOFT0452",
+    "name": "고급데이터베이스",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "SOFT0350",
+    "name": "기계학습응용",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "SOFT0425",
+    "name": "모바일소프트웨어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SOFT0358",
+    "name": "서버시스템구축및운영",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "SOFT0366",
+    "name": "소프트웨어개발방법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SOFT0472",
+    "name": "소프트웨어프로젝트2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "SOFT0421",
+    "name": "임베디드응용소프트웨어",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "SOFT0372",
+    "name": "정보보안기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SOFT0373",
+    "name": "지능로봇프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "SOFT0333",
+    "name": "컴파일러이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SOFT0435",
+    "name": "컴퓨터시뮬레이션이해",
+    "credit": "3-3-0"
+  }
+]

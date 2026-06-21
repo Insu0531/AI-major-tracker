@@ -1,0 +1,206 @@
+[
+  {
+    "grade": "1",
+    "code": "FSCI0202",
+    "name": "일반화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DPRE0229",
+    "name": "자원식물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ACHE0321",
+    "name": "토양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DPRE0242",
+    "name": "농약학 및 실험",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGRO0373",
+    "name": "농업기상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0411",
+    "name": "비료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DPRE0213",
+    "name": "식량작물학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DPRE0263",
+    "name": "식물 소기관 유전체학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DPRE0245",
+    "name": "식물유전자원학론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOL0221",
+    "name": "식물형태학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DPRE0237",
+    "name": "실험통계 및 R통계분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0504",
+    "name": "유기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DPRE0238",
+    "name": "일반작물생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DPRE0264",
+    "name": "작물 유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DPRE0208",
+    "name": "작물보호학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DPRE0201",
+    "name": "작물재배학원론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DPBS0319",
+    "name": "기초식물유전체학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DPRE0241",
+    "name": "농산물품질관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DPRE0236",
+    "name": "디지털 분자육종 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "MBIO0331",
+    "name": "분자생물학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOC0435",
+    "name": "생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DPRE0228",
+    "name": "식량작물학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DPRE0216",
+    "name": "식물기내배양학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AGRO0333",
+    "name": "작물생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DPRE0225",
+    "name": "작물영양학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DPRE0217",
+    "name": "작물육종학 I 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AGBL0553",
+    "name": "잡초방제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGRO0558",
+    "name": "종자생산학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DPRE0243",
+    "name": "종자학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "MBIO0332",
+    "name": "분자생물학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DPRE0244",
+    "name": "생물정보학론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DPRE0266",
+    "name": "스마트팜농업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DPRE0267",
+    "name": "졸업논문1(식물자원)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "DPRE0268",
+    "name": "졸업논문2(식물자원)",
+    "credit": "2-2-0"
+  }
+]

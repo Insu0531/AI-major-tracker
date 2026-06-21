@@ -1,0 +1,236 @@
+[
+  {
+    "grade": "1",
+    "code": "AERO0215",
+    "name": "GIS의 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "AERO0214",
+    "name": "공간정보학의이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PLEN0212",
+    "name": "기초CAD",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "AERO0212",
+    "name": "융복합공업수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PLEN0211",
+    "name": "플랜트공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AERO0219",
+    "name": "공간정보프로그래밍1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "AERO0224",
+    "name": "공간정보프로그래밍2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "AERO0218",
+    "name": "디지털지도학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AERO0221",
+    "name": "디지털측량실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "AERO0213",
+    "name": "원격탐사개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AERO0220",
+    "name": "위성영상정보처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AERO0225",
+    "name": "위성측위학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AERO0216",
+    "name": "지적정보론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AERO0222",
+    "name": "지적측량학실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "AERO0256",
+    "name": "측량 및 지형공간 정보분석 실습 1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "AERO0217",
+    "name": "측량정보공학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AERO0229",
+    "name": "GIS공간분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AERO0230",
+    "name": "WebGIS프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AERO0234",
+    "name": "도시정보체계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AERO0236",
+    "name": "시스템분석설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AERO0231",
+    "name": "지구환경원격탐사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AERO0252",
+    "name": "지적실무1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AERO0253",
+    "name": "지적실무2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AERO0227",
+    "name": "첨단위성영상분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AERO0257",
+    "name": "측량 및 지형공간 정보분석 실습 2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AERO0233",
+    "name": "측량조정계산론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AERO0235",
+    "name": "토지정보체계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AERO0228",
+    "name": "항공수치사진측량",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "AERO0226",
+    "name": "3차원GIS 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "AERO0243",
+    "name": "LBS 및 스마트시티",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AERO0223",
+    "name": "공간데이터베이스론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AERO0244",
+    "name": "공간정보응용시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AERO0237",
+    "name": "수치지형모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AERO0241",
+    "name": "전공실무영어1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AERO0246",
+    "name": "전공실무영어2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AERO0238",
+    "name": "지능형교통정보체계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AERO0248",
+    "name": "캡스톤디자인 1(위성정보공학과제 1)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "AERO0249",
+    "name": "캡스톤디자인 2(위성정보공학과제 2)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "AERO0232",
+    "name": "항공레이저측량",
+    "credit": "3-3-0"
+  }
+]

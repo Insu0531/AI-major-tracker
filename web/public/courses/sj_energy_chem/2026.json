@@ -1,0 +1,188 @@
+[
+  {
+    "grade": "1",
+    "code": "ECHE0208",
+    "name": "에너지화학공학입문 1",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "1",
+    "code": "ECHE0209",
+    "name": "에너지화학공학입문 2",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "ECHE0205",
+    "name": "고분자 합성 및 물성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACEN0211",
+    "name": "공업수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0502",
+    "name": "물리화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0503",
+    "name": "분석화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHME0226",
+    "name": "신재생에너지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECHE0206",
+    "name": "에너지소재 기기분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECHE0201",
+    "name": "에너지화학공학개론",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ECHE0203",
+    "name": "에너지화학공학실험 1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ECHE0204",
+    "name": "에너지화학공학실험 2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0504",
+    "name": "유기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECHE0207",
+    "name": "화공재료공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECHE0202",
+    "name": "화학공학양론",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ECHE0301",
+    "name": "반도체화학공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECHE0304",
+    "name": "분리정제기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECHE0309",
+    "name": "에너지전기화학공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECHE0308",
+    "name": "에너지화공 공정제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECHE0310",
+    "name": "에너지화공반응공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECHE0311",
+    "name": "에너지화공열역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECHE0306",
+    "name": "연구논문/특허 분석 및 실험 1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ECHE0307",
+    "name": "연구논문/특허 분석 및 실험 2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ECHE0305",
+    "name": "연료전지 및 배터리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECHE0302",
+    "name": "전달현상 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECHE0303",
+    "name": "전달현상 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECHE0402",
+    "name": "스마트센서 및 에너지시스템공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECHE0403",
+    "name": "에너지 정책 및 공학경제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECHE0404",
+    "name": "연구논문/특허 분석 및 실험 3",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ECHE0405",
+    "name": "연구논문/특허 분석 및 실험 4",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ECHE0401",
+    "name": "첨단나노바이오소재기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECHE0406",
+    "name": "환경 및 촉매 공학",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,200 @@
+[
+  {
+    "grade": "1",
+    "code": "AUCC0302",
+    "name": "자동차공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "MAAT0211",
+    "name": "전산기계제도",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ACEN0211",
+    "name": "공업수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0334",
+    "name": "기계재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AUTO0241",
+    "name": "기초열역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AUTO0224",
+    "name": "기초전기전자공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AUTO0242",
+    "name": "기초전자기학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AUTO0211",
+    "name": "에너지 및 환경공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0332",
+    "name": "유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AUTO0221",
+    "name": "유체역학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0351",
+    "name": "응용열역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AUTO0225",
+    "name": "자동차기전공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AUTO0212",
+    "name": "재료역학Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AUTO0213",
+    "name": "재료역학Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AUTO0243",
+    "name": "공학수치해석기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AUTO0311",
+    "name": "기계요소설계Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AUTO0317",
+    "name": "기계요소설계Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AUTO0318",
+    "name": "기관성능해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AUTO0319",
+    "name": "냉동시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0345",
+    "name": "열전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AUTO0244",
+    "name": "자동차섀시및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AUTO0323",
+    "name": "전기기기1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AUTO0325",
+    "name": "전기기기2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AUTO0314",
+    "name": "차량기관",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AUTO0352",
+    "name": "차량전자제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AUTO0246",
+    "name": "공학과제",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "AUTO0426",
+    "name": "엔진설계과제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0428",
+    "name": "연소공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AUTO0245",
+    "name": "자동차공조시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AUTO0424",
+    "name": "전기자동차",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AUTO0427",
+    "name": "전동기기초설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AUTO0425",
+    "name": "전산응력해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AUTO0422",
+    "name": "차량사고공학",
+    "credit": "3-3-0"
+  }
+]

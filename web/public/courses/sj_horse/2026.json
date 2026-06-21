@@ -1,0 +1,194 @@
+[
+  {
+    "grade": "1",
+    "code": "EQCO0225",
+    "name": "동물해부생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "EQCO0214",
+    "name": "말 생산학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "EQCO0223",
+    "name": "말과 레저 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "EQCO0211",
+    "name": "반려동물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FORE0571",
+    "name": "야생동물관리학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "EQCO0215",
+    "name": "야생동물구조 및 재활",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EQCO0213",
+    "name": "동물미생물학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "EQCO0226",
+    "name": "말/반려동물 유전육종학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EQCO0229",
+    "name": "반려동물 영양식품학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EQCO0228",
+    "name": "반려동물 행동학 및 훈련 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0360",
+    "name": "반려동물질병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIED0413",
+    "name": "생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EQCO0227",
+    "name": "승마 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "EQCO0224",
+    "name": "인마친화 말 조련 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "BIED0555",
+    "name": "환경생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0403",
+    "name": "동물간호학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0307",
+    "name": "동물발생공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EQCO0216",
+    "name": "동물임상병리학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "EQCO0230",
+    "name": "말 행동학 및 매개교육 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "EQCO0217",
+    "name": "말/특수동물 번식학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EQCO0222",
+    "name": "말/특수동물 영양 및 사료학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0406",
+    "name": "실험동물학및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "EQCO0234",
+    "name": "야생동물경관생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EQCO0235",
+    "name": "야생동물보전유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0504",
+    "name": "동물면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EQCO0237",
+    "name": "동물보건학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EQCO0232",
+    "name": "동물복지 및 법규",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EQCO0238",
+    "name": "말 질병학 및 장제 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "EQCO0219",
+    "name": "말/특수동물 인공수정 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "EQCO0231",
+    "name": "말/특수동물산업 경영학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EQCO0239",
+    "name": "생물실험통계 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "EQCO0236",
+    "name": "야생동물행동학",
+    "credit": "3-3-0"
+  }
+]

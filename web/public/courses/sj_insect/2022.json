@@ -1,0 +1,224 @@
+[
+  {
+    "grade": "1",
+    "code": "VEEN0201",
+    "name": "곤충과 인간 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "DOAB0201",
+    "name": "미생물의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DOAB0218",
+    "name": "산업곤충학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "DOAB0221",
+    "name": "생태환경 생명과학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DOAB0231",
+    "name": "생태환경 생명과학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DOAB0215",
+    "name": "일반곤충학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DOAB0222",
+    "name": "자원식물학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOAB0436",
+    "name": "곤충분류학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOAB0429",
+    "name": "곤충생리학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "VEEN0203",
+    "name": "곤충생명과학탐구",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOAB0315",
+    "name": "농업생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOAB0444",
+    "name": "분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOAB0322",
+    "name": "생명면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOAB0209",
+    "name": "선충학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOAB0232",
+    "name": "진드기 생물학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "VEEN0204",
+    "name": "곤충생명공학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "VEEN0207",
+    "name": "곤충생명과학창업",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOAB0224",
+    "name": "곤충행동학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAB0331",
+    "name": "기초세포생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAB0243",
+    "name": "매개체 생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAB0442",
+    "name": "세포생물학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOAB0223",
+    "name": "수서곤충학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOAB0241",
+    "name": "야외곤충학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "BIED0514",
+    "name": "위생곤충학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAB0208",
+    "name": "일반생명공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "VEEN0206",
+    "name": "해충관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAB0451",
+    "name": "환경곤충학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "VEEN0211",
+    "name": "곤충생명과학연구실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "VEEN0209",
+    "name": "곤충생화학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "VEEN0205",
+    "name": "곤충일반생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOAB0226",
+    "name": "기생벌생물학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOAB0234",
+    "name": "생명정보학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOAB0202",
+    "name": "생물검정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOAB0428",
+    "name": "생물적 방제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "VEEN0202",
+    "name": "양잠 및 양봉학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOAB0213",
+    "name": "일반바이러스학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOAB0452",
+    "name": "잔디병해충관리학 및 실험",
+    "credit": "3-1-4"
+  }
+]

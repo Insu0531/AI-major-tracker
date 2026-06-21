@@ -1,0 +1,194 @@
+[
+  {
+    "grade": "1",
+    "code": "TEXT0212",
+    "name": "섬유공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "TEXT0222",
+    "name": "섬유재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "TEXT0215",
+    "name": "유기화학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "TEXT0214",
+    "name": "고분자과학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "TEXT0227",
+    "name": "고분자과학2 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "TEXT0334",
+    "name": "고분자물성론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "TEXT0211",
+    "name": "섬유계면과학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "TEXT0318",
+    "name": "섬유고분자공정1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "TEXT0319",
+    "name": "섬유고분자시험법 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "TEXT0213",
+    "name": "섬유물리학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "TEXT0223",
+    "name": "섬유물리학2 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "TEXT0228",
+    "name": "섬유수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "TEXT0317",
+    "name": "염색공학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "TEXT0323",
+    "name": "니트공학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "TEXT0312",
+    "name": "섬유가공학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TEXT0327",
+    "name": "섬유가공학2 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "TEXT0331",
+    "name": "섬유고분자공정2  및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "TEXT0335",
+    "name": "섬유집합체공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TEXT0313",
+    "name": "섬유품질관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TEXT0337",
+    "name": "스마트텍스타일",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TEXT0324",
+    "name": "인조섬유",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TEXT0418",
+    "name": "직물구조학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "TEXT0314",
+    "name": "천연섬유고분자학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TEXT0336",
+    "name": "첨단플라스틱소재",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TEXT0414",
+    "name": "기기분석 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "TEXT0333",
+    "name": "바이오소재",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TEXT0423",
+    "name": "부직포공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TEXT0339",
+    "name": "섬유고분자나노기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TEXT0424",
+    "name": "섬유복합재료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TEXT0332",
+    "name": "직물분해설계 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "TEXT0338",
+    "name": "탄소융합소재 및 실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TEXT0417",
+    "name": "하이테크섬유",
+    "credit": "3-3-0"
+  }
+]

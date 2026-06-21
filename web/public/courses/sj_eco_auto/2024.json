@@ -1,0 +1,182 @@
+[
+  {
+    "grade": "1",
+    "code": "AUCC0302",
+    "name": "자동차공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "MAAT0211",
+    "name": "전산기계제도",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ACEN0211",
+    "name": "공업수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CVLE0201",
+    "name": "공업역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AUTO0254",
+    "name": "공업열역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AUTO0256",
+    "name": "공업열전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0332",
+    "name": "유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AUTO0221",
+    "name": "유체역학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AUTO0218",
+    "name": "자동차섀시",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AUTO0212",
+    "name": "재료역학Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AUTO0213",
+    "name": "재료역학Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0243",
+    "name": "회로이론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0244",
+    "name": "회로이론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AUTO0318",
+    "name": "기관성능해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AUTO0242",
+    "name": "기초전자기학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0322",
+    "name": "에너지변환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AUTO0255",
+    "name": "자동차재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AUTO0314",
+    "name": "차량기관",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AUTO0356",
+    "name": "차량메카트로닉스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AUTO0415",
+    "name": "차량소음진동",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AUTO0355",
+    "name": "차량요소설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AUTO0352",
+    "name": "차량전자제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AUTO0257",
+    "name": "프로그래밍응용수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0428",
+    "name": "연소공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0432",
+    "name": "전기기계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AUTO0424",
+    "name": "전기자동차",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AUTO0253",
+    "name": "지구온난화와자동차시장",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AUTO0249",
+    "name": "차량제조공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AUTO0250",
+    "name": "친환경차시스템공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AUTO0455",
+    "name": "하이브리드차량동역학",
+    "credit": "3-3-0"
+  }
+]

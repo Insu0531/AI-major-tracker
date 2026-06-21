@@ -1,0 +1,146 @@
+[
+  {
+    "grade": "3",
+    "code": "IMED0203",
+    "name": "공정개선",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "IMED0217",
+    "name": "공정지표",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "IMED0218",
+    "name": "공정품질",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "IMED0206",
+    "name": "기계공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "IMED0213",
+    "name": "생산 프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "IMED0202",
+    "name": "생산가용성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "IMED0207",
+    "name": "생산데이터",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "IMED0201",
+    "name": "생산지표",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "IMED0214",
+    "name": "센서 기술 및 활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "IMED0222",
+    "name": "종합설계 프로젝트 1 (산업기계)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "IMED0223",
+    "name": "종합설계 프로젝트 2 (산업기계)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "IMED0204",
+    "name": "기계 품질 공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "IMED0219",
+    "name": "기계품질개선",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "IMED0220",
+    "name": "기계품질검사",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "IMED0221",
+    "name": "기계품질평가",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "IMED0225",
+    "name": "메카트로닉스(산업기계)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "IMED0205",
+    "name": "생산 안전 관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "IMED0209",
+    "name": "생산계획",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "IMED0210",
+    "name": "생산설비",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "IMED0208",
+    "name": "생산요구관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "IMED0215",
+    "name": "열 및 응력 해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "IMED0211",
+    "name": "자재계획",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "IMED0212",
+    "name": "작업관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "IMED0224",
+    "name": "종합설계 프로젝트 3 (산업기계)",
+    "credit": "3-2-2"
+  }
+]

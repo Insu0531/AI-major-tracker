@@ -1,0 +1,278 @@
+[
+  {
+    "grade": "1",
+    "code": "DOLS0606",
+    "name": "CLX밴드트레이닝",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0611",
+    "name": "경혈트리거포인트마사지",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0224",
+    "name": "기능적운동실습",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "1",
+    "code": "PEED0516",
+    "name": "동계스포츠",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0605",
+    "name": "수중재활운동",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0609",
+    "name": "스포츠의학용어",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0601",
+    "name": "웨이트트레이닝",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "1",
+    "code": "PEED0510",
+    "name": "응급처치",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0600",
+    "name": "인체해부학1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0608",
+    "name": "인체해부학2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0604",
+    "name": "임상운동생리학 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0607",
+    "name": "임상운동생리학 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0602",
+    "name": "임상재활마사지",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0612",
+    "name": "재활퍼스널트레이닝",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0610",
+    "name": "재활필라테스",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "1",
+    "code": "DOLS0500",
+    "name": "전공골프",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0621",
+    "name": "교정운동학",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0613",
+    "name": "기능해부학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0618",
+    "name": "스포츠 PNF 스트레칭",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "PEED0625",
+    "name": "스포츠영양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0614",
+    "name": "운동병태생리학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0615",
+    "name": "운동손상측정및평가",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0405",
+    "name": "운동처방론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0603",
+    "name": "임상스포츠테이핑",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0619",
+    "name": "재활골프피지오트레이닝",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0617",
+    "name": "재활슈로스운동",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0620",
+    "name": "재활승마",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0637",
+    "name": "체형분석및평가",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0533",
+    "name": "트레이닝방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PEED0523",
+    "name": "하계스포츠",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0622",
+    "name": "건강체력평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0644",
+    "name": "근골격계운동재활총론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0623",
+    "name": "노인건강관리",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0648",
+    "name": "동적신경근안정화운동(DNS)",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0624",
+    "name": "슬링운동요법 1",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0628",
+    "name": "슬링운동요법 2",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0640",
+    "name": "신체교정학 1",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0649",
+    "name": "신체교정학 2",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0646",
+    "name": "암재활운동학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0222",
+    "name": "운동상해및치료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOLS0625",
+    "name": "운동재활총론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOLS0629",
+    "name": "ACSM 운동검사운동처방지침",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOLS0631",
+    "name": "건강운동관리세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOLS0632",
+    "name": "건강운동재활현장실습",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOLS0633",
+    "name": "메디컬트레이닝테라피",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOLS0634",
+    "name": "스포츠 캡스톤디자인",
+    "credit": "2-1-2"
+  }
+]

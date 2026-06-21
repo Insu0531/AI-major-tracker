@@ -1,0 +1,212 @@
+[
+  {
+    "grade": "1",
+    "code": "FASH0249",
+    "name": "기초패턴설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "FASH0203",
+    "name": "색채와조형",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "FASH0262",
+    "name": "섬유의 이해",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "FASH0228",
+    "name": "염색의원리",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "FASH0247",
+    "name": "의복구성과 테크니컬 디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "FASH0257",
+    "name": "패션 그래픽디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "FASH0210",
+    "name": "패션드로잉",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "FASH0205",
+    "name": "패션디자인원리",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FASH0211",
+    "name": "복식과심리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FASH0255",
+    "name": "서양복식사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FASH0218",
+    "name": "컴퓨터텍스타일디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FASH0214",
+    "name": "컴퓨터패턴디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FASH0251",
+    "name": "크리에이티브 패션일러스트레이션",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FASH0202",
+    "name": "패션섬유재료학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FASH0207",
+    "name": "패션섬유재료학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FASH0232",
+    "name": "패션칼라&코디네이션",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FASH0250",
+    "name": "패션페인팅",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FASH0209",
+    "name": "한국전통의상연구",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FASH0244",
+    "name": "드레이핑-캡스톤디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FASH0223",
+    "name": "섬유소재분석 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FASH0217",
+    "name": "신소재패션섬유",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FASH0260",
+    "name": "패션디자인 테크놀로지-캡스톤디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FASH0245",
+    "name": "패션디자인프로세스-캡스톤디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FASH0201",
+    "name": "패션마케팅론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FASH0263",
+    "name": "패션아트&디자인1-캡스톤디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FASH0261",
+    "name": "패션테일러링-캡스톤디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FASH0240",
+    "name": "하이테크 패션 패브릭",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "FASH0252",
+    "name": "패션 창업·실무",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FASH0264",
+    "name": "패션아트&디자인2-캡스톤디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "FASH0254",
+    "name": "패션이미지 & 포트폴리오 - 캡스톤디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "FASH0241",
+    "name": "패션컬렉션-캡스톤디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "FASH0265",
+    "name": "패턴디자인스튜디오1-캡스톤디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "FASH0266",
+    "name": "패턴디자인스튜디오2-캡스톤디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "FASH0225",
+    "name": "피복관리및위생학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "FASH0237",
+    "name": "한국복식문화사",
+    "credit": "3-3-0"
+  }
+]

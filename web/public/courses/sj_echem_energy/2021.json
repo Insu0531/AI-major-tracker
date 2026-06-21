@@ -1,0 +1,188 @@
+[
+  {
+    "grade": "2",
+    "code": "ACEN0211",
+    "name": "공업수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHME0219",
+    "name": "공업유기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHME0217",
+    "name": "공정기초양론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHME0248",
+    "name": "공정기초양론2 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CHME0227",
+    "name": "기초에너지공학실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CHME0221",
+    "name": "무기 에너지화학 및 소재",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0502",
+    "name": "물리화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHME0215",
+    "name": "바이오에너지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHME0226",
+    "name": "신재생에너지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHME0216",
+    "name": "에너지화공개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0504",
+    "name": "유기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHME0218",
+    "name": "태양에너지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0355",
+    "name": "고분자화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHME0246",
+    "name": "기능성고분자재료 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CHME0235",
+    "name": "물질단위조작",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHME0346",
+    "name": "에너지 변환 및 저장",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AMEN0433",
+    "name": "에너지공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHME0233",
+    "name": "열에너지전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHME0244",
+    "name": "열역학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHME0245",
+    "name": "열역학2 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CHME0342",
+    "name": "전기화학공학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CHME0243",
+    "name": "화공분석화학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CHME0341",
+    "name": "화공유체역학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CHME0236",
+    "name": "화학반응공학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CHME0238",
+    "name": "공학경제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHME0239",
+    "name": "단위조작실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CHME0345",
+    "name": "에너지 공정제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHME0347",
+    "name": "에너지 기기분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHME0234",
+    "name": "에너지기술정책",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHME0424",
+    "name": "화공장치실무",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CHME0348",
+    "name": "환경과 석유화학에너지",
+    "credit": "3-3-0"
+  }
+]

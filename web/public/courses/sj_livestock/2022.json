@@ -1,0 +1,296 @@
+[
+  {
+    "grade": "1",
+    "code": "AGRO0491",
+    "name": "실험통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DOAS0232",
+    "name": "축산생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DOAS0206",
+    "name": "축산학 개론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DOAS0384",
+    "name": "축산화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0448",
+    "name": "가축관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0233",
+    "name": "가축생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0310",
+    "name": "가축영양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0224",
+    "name": "가축유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0441",
+    "name": "가축질병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0423",
+    "name": "가축질병학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0223",
+    "name": "영양소 분석 및 평가",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0233",
+    "name": "전공골프1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0234",
+    "name": "전공골프2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0234",
+    "name": "초지학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0440",
+    "name": "축산폐기물 처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0383",
+    "name": "축산폐기물과 환경 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0305",
+    "name": "특수동물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0452",
+    "name": "가금학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0235",
+    "name": "가축관리학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0445",
+    "name": "가축번식학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0409",
+    "name": "가축번식학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0509",
+    "name": "가축사양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0222",
+    "name": "가축육종학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0444",
+    "name": "근육식품학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0379",
+    "name": "근육식품학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0446",
+    "name": "사료작물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0513",
+    "name": "사료작물학 및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ANSC0444",
+    "name": "사료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0449",
+    "name": "식육가공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0374",
+    "name": "식육가공학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0447",
+    "name": "초지학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0385",
+    "name": "축산경영학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0443",
+    "name": "한우학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0342",
+    "name": "한우학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0345",
+    "name": "가금학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0453",
+    "name": "낙농학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0354",
+    "name": "낙농학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0454",
+    "name": "양돈학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0343",
+    "name": "양돈학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOLS0520",
+    "name": "요가 및 필라테스",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0442",
+    "name": "유가공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ANSC0466",
+    "name": "유가공학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOLS0212",
+    "name": "임상마사지",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0436",
+    "name": "축산 창업 및 컨설팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0450",
+    "name": "축산경영학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0422",
+    "name": "축산법규",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0451",
+    "name": "축산시설학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0418",
+    "name": "축산시설학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0412",
+    "name": "축산식품위생학",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,200 @@
+[
+  {
+    "grade": "1",
+    "code": "AMSE0210",
+    "name": "신소재공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AMSE0222",
+    "name": "X-선회절 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "AMSE0214",
+    "name": "결정학개론 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "AMSE0221",
+    "name": "금속재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AMSE0223",
+    "name": "금속재료이론 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "AMSE0323",
+    "name": "박막재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AMSE0215",
+    "name": "세라믹물리화학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "AMSE0211",
+    "name": "세라믹재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AMSE0233",
+    "name": "신소재전기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AMSE0234",
+    "name": "신소재전기화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AMSE0213",
+    "name": "재료공학Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AMSE0232",
+    "name": "재료공학Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CIME0351",
+    "name": "재료열역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AMSE0235",
+    "name": "재료조직학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AMSE0425",
+    "name": "박막공학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AMSE0346",
+    "name": "반도체재료 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "META0312",
+    "name": "상변태",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AMSE0341",
+    "name": "세라믹공정 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AMSE0345",
+    "name": "센서 재료 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AMSE0433",
+    "name": "자성재료기초 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AMSE0324",
+    "name": "자성재료실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AMSE0226",
+    "name": "재료가공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AMSE0344",
+    "name": "재료강도방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "META0336",
+    "name": "재료강도학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AMSE0333",
+    "name": "재료분석기기 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "AMSE0428",
+    "name": "디스플레이 및 센서 공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AMSE0432",
+    "name": "비파괴공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AMSE0430",
+    "name": "스마트재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AMSE0217",
+    "name": "에너지재료발명(캡스톤디자인)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "AMSE0216",
+    "name": "이차전지공학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "AMSE0421",
+    "name": "전기전자재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AMSE0423",
+    "name": "철강신소재",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AMSE0434",
+    "name": "태양전지재료(캡스톤디자인)",
+    "credit": "3-2-2"
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "grade": "2",
+    "code": "DOAS0122",
+    "name": "가금 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0409",
+    "name": "가축번식학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0423",
+    "name": "가축질병학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0354",
+    "name": "낙농학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "EQCO0214",
+    "name": "말 생산학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0343",
+    "name": "양돈학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0121",
+    "name": "창업농 성공사례",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0383",
+    "name": "축산폐기물과 환경 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0342",
+    "name": "한우학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0513",
+    "name": "사료작물학 및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0123",
+    "name": "창업농 세미나 I",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0385",
+    "name": "축산경영학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0418",
+    "name": "축산시설학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0125",
+    "name": "마케팅 및 전자상거래",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0124",
+    "name": "인턴쉽 포트폴리오 작성",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0126",
+    "name": "창업농 세미나 II",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0436",
+    "name": "축산 창업 및 컨설팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0378",
+    "name": "친환경 유기축산",
+    "credit": "3-3-0"
+  }
+]

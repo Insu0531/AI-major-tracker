@@ -1,0 +1,212 @@
+[
+  {
+    "grade": "1",
+    "code": "PLEN0247",
+    "name": "구조재료 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "PLEN0272",
+    "name": "플랜트 공학수학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PLEN0285",
+    "name": "플랜트 공학수학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PLEN0217",
+    "name": "플랜트공업역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PLEN0273",
+    "name": "플랜트공학의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PLEN0284",
+    "name": "플랜트기초프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "PLEN0254",
+    "name": "마이크로컴퓨터 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "PLEN0253",
+    "name": "신호 및 시스템공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PLEN0219",
+    "name": "전기전자공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PLEN0274",
+    "name": "컴퓨터구조이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PLEN0251",
+    "name": "프로그래밍언어 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "PLEN0275",
+    "name": "플랜트구조역학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PLEN0276",
+    "name": "플랜트구조역학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PLEN0282",
+    "name": "플랜트유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PLEN0268",
+    "name": "플랜트재료역학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PLEN0269",
+    "name": "플랜트재료역학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PLEN0280",
+    "name": "강구조 및 PSC",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PLEN0278",
+    "name": "구조동역학 및 실험",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PLEN0277",
+    "name": "빅데이터분석 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "PLEN0231",
+    "name": "설비제어공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PLEN0264",
+    "name": "인공지능 및 기계학습 개론",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "PLEN0249",
+    "name": "임베디드시스템공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PLEN0248",
+    "name": "철근콘크리트공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PLEN0283",
+    "name": "플랜트수리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PLEN0237",
+    "name": "플랜트시공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PLEN0286",
+    "name": "플랜트열역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PLEN0281",
+    "name": "플랜트전기기기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PLEN0259",
+    "name": "로봇프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PLEN0288",
+    "name": "플랜트 졸업논문 I",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "PLEN0289",
+    "name": "플랜트 졸업논문 II",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "PLEN0227",
+    "name": "플랜트CAD",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "PLEN0236",
+    "name": "플랜트CAE",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "PLEN0279",
+    "name": "플랜트고급프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "PLEN0287",
+    "name": "플랜트열전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PLEN0238",
+    "name": "플랜트종합설계",
+    "credit": "3-2-2"
+  }
+]

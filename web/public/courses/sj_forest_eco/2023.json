@@ -1,0 +1,254 @@
+[
+  {
+    "grade": "1",
+    "code": "FREN0202",
+    "name": "보전생물과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FREN0326",
+    "name": "산림유전육종학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FREN0229",
+    "name": "산림환경미생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FREN0220",
+    "name": "수목조직세포학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FREN0431",
+    "name": "식물의 역사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FREN0201",
+    "name": "식물진화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FREN0413",
+    "name": "환경원격탐사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FREN0432",
+    "name": "기후변화와 산림환경",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FREN0227",
+    "name": "사방공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FREN0233",
+    "name": "산림병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FREN0241",
+    "name": "산림병리학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FREN0219",
+    "name": "산림식물번식학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FREN0217",
+    "name": "산림자원측정학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FREN0216",
+    "name": "산림치유학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FREN0234",
+    "name": "산림해충학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FREN0218",
+    "name": "산림환경보전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FREN0226",
+    "name": "산림휴양학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FREN0433",
+    "name": "수목번식학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FREN0224",
+    "name": "수목분류학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FORE0321",
+    "name": "수목생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0233",
+    "name": "전공골프1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOLS0234",
+    "name": "전공골프2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "FREN0436",
+    "name": "기초수목생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FREN0438",
+    "name": "도시림관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FREN0243",
+    "name": "산림문화관광학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FREN0244",
+    "name": "산림생태조사론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FREN0242",
+    "name": "산림자원경영학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FREN0230",
+    "name": "산림정책 및 법규",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FREN0314",
+    "name": "산림환경생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FREN0437",
+    "name": "수목건강관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FREN0257",
+    "name": "수목보호학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FREN0401",
+    "name": "수목치료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FREN0235",
+    "name": "임도공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FREN0402",
+    "name": "조림학해설",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FREN0315",
+    "name": "환경조림학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FREN0323",
+    "name": "산림작업시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FREN0253",
+    "name": "숲생태해설학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FREN0440",
+    "name": "숲해설학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FREN0439",
+    "name": "실용산림작업학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOLS0520",
+    "name": "요가 및 필라테스",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "4",
+    "code": "FREN0232",
+    "name": "인간과 야생동물",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOLS0212",
+    "name": "임상마사지",
+    "credit": "2-1-2"
+  }
+]

@@ -1,0 +1,212 @@
+[
+  {
+    "grade": "1",
+    "code": "DOAS0435",
+    "name": "동물복지와 생명윤리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DOAS0211",
+    "name": "축산BT개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0122",
+    "name": "가금 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0409",
+    "name": "가축번식학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0509",
+    "name": "가축사양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0403",
+    "name": "동물간호학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ANSC0432",
+    "name": "동물생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ANSC0443",
+    "name": "동물영양학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0362",
+    "name": "사료작물학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "BIOC0435",
+    "name": "생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0406",
+    "name": "실험동물학및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0504",
+    "name": "유기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0391",
+    "name": "일반분자생물학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0121",
+    "name": "창업농 성공사례",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0382",
+    "name": "축산신소재학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0222",
+    "name": "가축육종학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0321",
+    "name": "가축질병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ANSC0331",
+    "name": "동물내분비학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0504",
+    "name": "동물면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0366",
+    "name": "동물발생생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0394",
+    "name": "동물비교해부학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ANSC0312",
+    "name": "동물세포생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0367",
+    "name": "동물유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0392",
+    "name": "응용미생물학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0123",
+    "name": "창업농 세미나 I",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "DOAS0322",
+    "name": "축산경영학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ANSC0538",
+    "name": "동물발생공학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0368",
+    "name": "동물유전체학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0316",
+    "name": "동물줄기세포학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0125",
+    "name": "마케팅 및 전자상거래",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0371",
+    "name": "복제동물학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0393",
+    "name": "응용분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0124",
+    "name": "인턴쉽 포트폴리오 작성",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0126",
+    "name": "창업농 세미나 II",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "DOAS0372",
+    "name": "형질전환동물학및실험",
+    "credit": "3-2-2"
+  }
+]

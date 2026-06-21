@@ -1,0 +1,218 @@
+[
+  {
+    "grade": "1",
+    "code": "PMEN0301",
+    "name": "공학응용수학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PMEN0287",
+    "name": "공학프로그래밍및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "MECH0210",
+    "name": "기계공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ACEN0331",
+    "name": "재료역학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PMEN0302",
+    "name": "공학응용수학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PMEN0303",
+    "name": "기계공작법및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "PMEN0309",
+    "name": "기계열역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0225",
+    "name": "동역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0332",
+    "name": "유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACEN0332",
+    "name": "재료역학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PMEN0271",
+    "name": "전산수치해석및연습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "PMEN0263",
+    "name": "정밀금속재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PMEN0293",
+    "name": "정밀기전공학및실습1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "PMEN0294",
+    "name": "정밀기전공학및실습2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "PMEN0262",
+    "name": "컴퓨터이용정밀기계설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0354",
+    "name": "계측공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0335",
+    "name": "기계공학실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "PMEN0310",
+    "name": "기계진동학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PMEN0292",
+    "name": "미세열유체공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0345",
+    "name": "열전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PMEN0305",
+    "name": "유한요소법및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "PMEN0274",
+    "name": "재료거동학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PMEN0304",
+    "name": "정밀기계요소설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PMEN0288",
+    "name": "정밀기계창의설계1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "PMEN0265",
+    "name": "정밀센서공학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "PMEN0306",
+    "name": "제어및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "PMEN0291",
+    "name": "표면공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PMEN0307",
+    "name": "AI응용기계공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PMEN0279",
+    "name": "MEMS개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PMEN0278",
+    "name": "공업경영및생산관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PMEN0281",
+    "name": "로봇공학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "PMEN0308",
+    "name": "생체모방공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0484",
+    "name": "실험계획법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AMEN0433",
+    "name": "에너지공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0424",
+    "name": "유체기계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PMEN0290",
+    "name": "정밀기계창의설계 2",
+    "credit": "3-2-2"
+  }
+]
