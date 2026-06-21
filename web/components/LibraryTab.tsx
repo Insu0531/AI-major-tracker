@@ -6,11 +6,11 @@ import { Section, NoTimeSection } from "@/lib/timetable";
 import TimetableGrid from "@/components/TimetableGrid";
 
 // Matches TimetableGrid internals: LABEL_W=36, MIN_COL_W=52, 5 days, rowH=52, START_H=9
-const NATURAL_W = 296;
+const NATURAL_W = 360;   // wider than MIN_GRID_W=296 → wider columns, more readable
 const NATURAL_H = 730;   // enough for TimetableGrid h-full to not overflow-scroll
-const SCALE = 0.9;
-const THUMB_W = Math.round(NATURAL_W * SCALE);       // 266
-const THUMB_H = Math.round((28 + 10 * 52) * SCALE); // 493 — clips at ~7pm
+const SCALE = 1.0;
+const THUMB_W = 360;     // square thumbnail
+const THUMB_H = 360;
 
 export default function LibraryTab() {
   const [list, setList] = useState<SavedTimetable[]>([]);
