@@ -69,7 +69,7 @@ export default function Home() {
   }, []);
 
   const [semYear, setSemYear] = useState("2026");
-  const [semTerm, setSemTerm] = useState("2");
+  const [semTerm, setSemTerm] = useState("1");
   const [entryYear, setEntryYear] = useState(2026);
   const sem = `${semYear}-${semTerm}`;
   const [courses, setCourses] = useState<Course[]>([]);
@@ -393,7 +393,19 @@ export default function Home() {
                           <button
                             key={key}
                             type="button"
-                            onClick={() => { setMajor(key); setRows([]); setStatusText(""); setMajorDropOpen(false); setMajorSearch(""); }}
+                            onClick={() => {
+                              setMajor(key);
+                              setRows([]); setStatusText("");
+                              setMajorDropOpen(false); setMajorSearch("");
+                              // 전공 마법사 초기화
+                              setCheckMap(new Map()); setCombos([]); setFilteredCombos([]);
+                              setComboIdx(0); setFilterMap(new Map()); setMinCredit("");
+                              setDayOff(new Set()); setNoMorning(""); setNoEvening("");
+                              setIncludeProfs(new Set()); setExcludeProfs(new Set()); setIncludeDepts(new Set());
+                              setPinnedRows(new Map()); setExcludedRows(new Set()); setNoTimeSections([]);
+                              // 교양 마법사 초기화
+                              setPinnedCombo(null);
+                            }}
                             className={`w-full text-left px-3 py-1.5 text-sm hover:bg-blue-50 transition-colors ${key === major ? "bg-blue-100 text-blue-700 font-medium" : "text-gray-700"}`}
                           >
                             {label}
@@ -994,7 +1006,7 @@ export default function Home() {
         {/* ── 교양 마법사 탭 ── 항상 마운트, 탭 전환 시 숨기기만 해서 상태 유지 */}
         <div className={`flex flex-1 overflow-hidden ${tab === "gyoyang" ? "" : "hidden"}`}>
           {pinnedCombo !== null && (
-            <GyoyangWizard pinnedCombo={pinnedCombo} pinnedNoTimeSections={noTimeSections} initialSem={sem} />
+            <GyoyangWizard pinnedCombo={pinnedCombo} pinnedNoTimeSections={noTimeSections} initialSem={sem} majorLabel={MAJOR_LABELS[major]} />
           )}
         </div>
 
