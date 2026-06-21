@@ -1330,7 +1330,7 @@ export default function Home() {
                 취소
               </button>
               <button
-                onClick={() => { setRefetchConfirm(false); doFetch(); }}
+                onClick={() => { setRefetchConfirm(false); if (SEM_WARN_ACTIVE && !semWarnSeen) { setSemWarnConfirm(true); return; } doFetch(); }}
                 className="flex-1 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-lg"
               >
                 예
