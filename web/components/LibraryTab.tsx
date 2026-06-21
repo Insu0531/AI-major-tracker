@@ -41,7 +41,7 @@ export default function LibraryTab() {
       <div className="flex-1 flex flex-col items-center justify-center gap-3 text-gray-400">
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="6" width="32" height="36" rx="4" stroke="#d1d5db" strokeWidth="2.5"/><path d="M16 16h16M16 22h16M16 28h10" stroke="#d1d5db" strokeWidth="2" strokeLinecap="round"/></svg>
         <p className="text-sm">저장된 시간표가 없습니다.</p>
-        <p className="text-xs text-gray-300">교양 마법사에서 시간표를 저장해보세요.</p>
+        <p className="text-xs text-gray-300">마법사 탭에서 시간표를 저장해보세요.</p>
       </div>
     );
   }
@@ -63,15 +63,15 @@ export default function LibraryTab() {
         const totalCredit = allSections.reduce((s, sec) => s + sec.credit, 0);
 
         return (
-          <div key={t.id} className="bg-white border border-gray-200 rounded-xl p-4 flex flex-col gap-3 shadow-sm">
+          <div key={t.id} className="bg-white border border-gray-200 rounded-xl p-4 flex flex-col gap-3 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-start justify-between gap-2">
               <div className="flex-1 min-w-0">
                 {editingId === t.id ? (
                   <div className="flex gap-1.5">
                     <input autoFocus value={editName} onChange={(e) => setEditName(e.target.value)}
                       onKeyDown={(e) => { if (e.key === "Enter") handleRename(t.id); if (e.key === "Escape") setEditingId(null); }}
-                      className="border border-blue-300 rounded px-2 py-0.5 text-sm flex-1 focus:outline-none focus:ring-1 focus:ring-blue-400" />
-                    <button onClick={() => handleRename(t.id)} className="text-xs text-blue-600 hover:text-blue-800 px-1">저장</button>
+                      className="border border-indigo-300 rounded px-2 py-0.5 text-sm flex-1 focus:outline-none focus:ring-1 focus:ring-indigo-400" />
+                    <button onClick={() => handleRename(t.id)} className="text-xs text-indigo-600 hover:text-indigo-800 px-1">저장</button>
                     <button onClick={() => setEditingId(null)} className="text-xs text-gray-400 hover:text-gray-600 px-1">취소</button>
                   </div>
                 ) : (
@@ -85,7 +85,7 @@ export default function LibraryTab() {
               </div>
               <div className="flex gap-1.5 shrink-0">
                 <button onClick={() => setPreview(t)}
-                  className="text-xs px-2.5 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
+                  className="text-xs px-2.5 py-1 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition-colors">
                   보기
                 </button>
                 <button onClick={() => setDeleteConfirm(t.id)}
@@ -180,15 +180,15 @@ function PreviewModal({ timetable, onClose, semLabel }: { timetable: SavedTimeta
         <div className="flex-1 overflow-auto px-4 py-3 min-h-0">
           <div ref={timetableRef}>
             <TimetableGrid combo={fullCombo} />
+            {noTimeSections.length > 0 && (
+              <div className="mt-3 border border-orange-200 bg-orange-50 rounded-lg px-4 py-3 flex flex-wrap gap-x-4 gap-y-2">
+                <span className="text-sm font-semibold text-orange-600 w-full">시간 외</span>
+                {noTimeSections.map((s, i) => (
+                  <span key={i} className="text-sm text-orange-700">{s.name}{s.profs?.length === 1 && <span className="text-orange-500"> · {s.profs[0]}</span>} <span className="text-orange-400 text-xs">({s.credit}학점)</span></span>
+                ))}
+              </div>
+            )}
           </div>
-          {noTimeSections.length > 0 && (
-            <div className="mt-3 border border-orange-200 bg-orange-50 rounded-lg px-4 py-3 flex flex-wrap gap-x-4 gap-y-2">
-              <span className="text-sm font-semibold text-orange-600 w-full">시간 외</span>
-              {noTimeSections.map((s, i) => (
-                <span key={i} className="text-sm text-orange-700">{s.name} <span className="text-orange-400 text-xs">({s.credit}학점)</span></span>
-              ))}
-            </div>
-          )}
         </div>
 
         {/* 하단 버튼 */}
@@ -199,7 +199,7 @@ function PreviewModal({ timetable, onClose, semLabel }: { timetable: SavedTimeta
               {saving ? "저장 중..." : "이미지 저장"}
             </button>
             <button onClick={() => setRegOpen(true)}
-              className="flex-1 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-colors">
+              className="flex-1 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-lg transition-colors">
               수강신청하기
             </button>
           </div>
@@ -225,7 +225,7 @@ function PreviewModal({ timetable, onClose, semLabel }: { timetable: SavedTimeta
                   <div key={c.crseNo} className="flex items-center gap-3">
                     <button
                       onClick={() => { navigator.clipboard.writeText(code).then(() => { setCopiedCode(code); setTimeout(() => setCopiedCode(null), 2000); }); }}
-                      className={`shrink-0 w-28 py-1.5 rounded-lg text-sm font-mono font-bold transition-all duration-200 ${isCopied ? "bg-green-500 text-white" : "bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-200"}`}
+                      className={`shrink-0 w-28 py-1.5 rounded-lg text-sm font-mono font-bold transition-all duration-200 ${isCopied ? "bg-green-500 text-white" : "bg-indigo-50 hover:bg-indigo-100 text-indigo-600 border border-indigo-200"}`}
                     >
                       {isCopied ? "✓ 복사됨" : code}
                     </button>

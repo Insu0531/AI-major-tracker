@@ -102,7 +102,7 @@ export default function FeedbackTab() {
                     key={key}
                     type="button"
                     onClick={() => { setMajor(key); setMajorDropOpen(false); setMajorSearch(""); }}
-                    className={`w-full text-left px-3 py-1.5 text-sm hover:bg-blue-50 ${major === key ? "text-blue-600 font-medium" : "text-gray-700"}`}
+                    className={`w-full text-left px-3 py-1.5 text-sm hover:bg-indigo-50 ${major === key ? "text-indigo-600 font-medium" : "text-gray-700"}`}
                   >
                     {label}
                   </button>
@@ -118,7 +118,7 @@ export default function FeedbackTab() {
           <select
             value={entryYear ?? ""}
             onChange={(e) => setEntryYear(e.target.value ? Number(e.target.value) : null)}
-            className="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+            className="border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-400"
           >
             <option value="">선택</option>
             {Array.from({ length: ENTRY_YEAR_MAX - ENTRY_YEAR_MIN + 1 }, (_, i) => ENTRY_YEAR_MIN + i)
@@ -139,7 +139,7 @@ export default function FeedbackTab() {
                 onClick={() => setCategory(cat)}
                 className={`px-3 py-1.5 rounded-full text-sm border transition-colors ${
                   category === cat
-                    ? "bg-blue-600 text-white border-blue-600"
+                    ? "bg-indigo-600 text-white border-indigo-600"
                     : "border-gray-300 text-gray-600 hover:bg-gray-50"
                 }`}
               >
@@ -157,7 +157,7 @@ export default function FeedbackTab() {
             onChange={(e) => setContent(e.target.value)}
             placeholder="자유롭게 작성해주세요."
             rows={5}
-            className="border border-gray-300 rounded px-3 py-2 text-sm resize-none focus:outline-none focus:ring-1 focus:ring-blue-400"
+            className="border border-gray-300 rounded px-3 py-2 text-sm resize-none focus:outline-none focus:ring-1 focus:ring-indigo-400"
           />
         </div>
 
@@ -195,7 +195,7 @@ export default function FeedbackTab() {
           <button
             onClick={handleSubmitClick}
             disabled={status === "sending"}
-            className="w-full py-2.5 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors"
+            className="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors"
           >
             {status === "sending" ? "전송 중..." : "제출하기"}
           </button>
@@ -211,7 +211,7 @@ export default function FeedbackTab() {
               <p className="text-sm font-semibold text-gray-800 text-center">{errorMsg}</p>
               <button
                 onClick={() => setErrorMsg(null)}
-                className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg"
+                className="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-lg"
               >
                 확인
               </button>
@@ -234,7 +234,7 @@ export default function FeedbackTab() {
                 </button>
                 <button
                   onClick={handleConfirm}
-                  className="flex-1 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg"
+                  className="flex-1 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-lg"
                 >
                   예
                 </button>

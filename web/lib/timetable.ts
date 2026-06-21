@@ -32,7 +32,7 @@ export type Section = {
 
 export type SectionGroup = Section[];
 
-export type NoTimeSection = { name: string; credit: number; crseNo: string };
+export type NoTimeSection = { name: string; credit: number; crseNo: string; profs?: string[]; profToCrseNo?: Record<string, string> };
 
 export function buildSectionGroups(
   rows: { grade: string; credit: string; crseNo: string; name: string; dept: string; prof: string; timeStr: string; location?: string }[]
@@ -81,7 +81,16 @@ export function buildSectionGroups(
     } else {
       // 모든 분반에 강의시간이 없는 과목
       const base = groupRows[0]?.crseNo.replace(/-\d+$/, "") ?? "";
-      noTimeSections.push({ name, credit, crseNo: base });
+      const profs: string[] = [];
+      const profToCrseNo: Record<string, string> = {};
+      for (const row of groupRows) {
+        const p = row.prof?.trim();
+        if (p && !profs.includes(p)) {
+          profs.push(p);
+          profToCrseNo[p] = row.crseNo;
+        }
+      }
+      noTimeSections.push({ name, credit, crseNo: base, profs, profToCrseNo });
     }
   }
   return { groups, noTimeSections };

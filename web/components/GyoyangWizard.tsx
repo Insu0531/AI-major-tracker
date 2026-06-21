@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { buildSectionGroups, generateCombos, parseTimes, Section, SectionGroup, TimeSlot, NoTimeSection } from "@/lib/timetable";
 import TimetableGrid from "@/components/TimetableGrid";
-import ProfPickerModal, { ProfStep, getMultiProfSections, applyProfPicks } from "@/components/ProfPickerModal";
+import ProfPickerModal, { ProfStep, getMultiProfSections, applyProfPicks, getMultiProfNoTimeSections, applyProfPicksNoTime } from "@/components/ProfPickerModal";
 import GYOYANG_LIST from "@/lib/gyoyang.json";
 import { saveTimetable } from "@/lib/timetableStorage";
 
@@ -64,7 +64,7 @@ function summarizeDays(timeStrs: string[]): string {
   return [...patterns].join("/");
 }
 
-export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initialSem, majorLabel, majorLabel2, major, onFeedbackClick }: { pinnedCombo: Section[] | null; pinnedNoTimeSections?: NoTimeSection[]; initialSem?: string; majorLabel?: string; majorLabel2?: string; major?: string; onFeedbackClick?: () => void }) {
+export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initialSem, majorLabel, majorLabel2, major, onFeedbackClick, onGoToKyoshik }: { pinnedCombo: Section[] | null; pinnedNoTimeSections?: NoTimeSection[]; initialSem?: string; majorLabel?: string; majorLabel2?: string; major?: string; onFeedbackClick?: () => void; onGoToKyoshik?: (combo: Section[], noTimeSections: NoTimeSection[]) => void }) {
   const [semYear, setSemYear] = useState(() => initialSem?.split("-")[0] ?? "2026");
   const [semTerm, setSemTerm] = useState(() => initialSem?.split("-")[1] ?? "1");
   const sem = `${semYear}-${semTerm}`;
@@ -116,6 +116,17 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   const [slideDir, setSlideDir] = useState<"left" | "right">("left");
   const [saving, setSaving] = useState(false);
   const timetableRef = useRef<HTMLDivElement | null>(null);
+  const captureRef = useRef<HTMLDivElement | null>(null);
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+
+  // 시간 외 추가 시 자동 스크롤
+  useEffect(() => {
+    if (noTimeSections.length > 0) {
+      setTimeout(() => {
+        scrollContainerRef.current?.scrollTo({ top: scrollContainerRef.current.scrollHeight, behavior: "smooth" });
+      }, 150);
+    }
+  }, [noTimeSections]);
 
   // 이미지 저장 후 토스트
   const [saveToast, setSaveToast] = useState(false);
@@ -124,6 +135,8 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   // 시간표 저장
   const [gyoSavePrompt, setGyoSavePrompt] = useState(false);
   const [gyoSaveName, setGyoSaveName] = useState("");
+  const [pendingSaveCombo, setPendingSaveCombo] = useState<Section[] | null>(null);
+  const [pendingSaveNoTime, setPendingSaveNoTime] = useState<NoTimeSection[] | null>(null);
 
   // 수강신청 팝업
   const [regModal, setRegModal] = useState<{ courses: { crseNo: string; name: string; credit: number }[] } | null>(null);
@@ -372,8 +385,8 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   const isDark = () =>
     typeof document !== "undefined" && document.documentElement.classList.contains("dark");
 
-  const doCapture = async (comboToCapture: Section[], pinnedForReg?: Section[]) => {
-    if (!timetableRef.current) return;
+  const doCapture = async (comboToCapture: Section[], pinnedForReg?: Section[], resolvedNoTime?: NoTimeSection[]) => {
+    if (!captureRef.current) return;
     setSaving(true);
     try {
       const domtoimage = (await import("dom-to-image-more")).default;
@@ -387,7 +400,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
       // (교수 선택 반영은 displayComboForCapture state를 통해 TimetableGrid에 전달)
       void fullCombo; // fullCombo는 captureCombo state를 통해 이미 반영됨
 
-      const el = timetableRef.current;
+      const el = captureRef.current!
       const CAPTURE_W = 900;
       const dark = isDark();
       const bg = dark ? "#171717" : "#ffffff";
@@ -423,7 +436,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
 
       // 수강신청 팝업용 과목 목록 수집 (교수 선택이 반영된 버전 우선 사용)
       const fullComboForReg = [...(pinnedForReg ?? pinnedCombo ?? []), ...comboToCapture];
-      const noTimeForReg = [...(pinnedNoTimeSections ?? []), ...noTimeSections];
+      const noTimeForReg = resolvedNoTime ?? [...(pinnedNoTimeSections ?? []), ...noTimeSections];
       const courses = [
         ...fullComboForReg.map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),
         ...noTimeForReg.map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),
@@ -438,6 +451,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   // 교수가 선택된 시간표를 캡처용으로 잠깐 보여주기 위한 state
   const [captureCombo, setCaptureCombo] = useState<Section[] | null>(null);
   const [capturedPinnedCombo, setCapturedPinnedCombo] = useState<Section[] | null>(null);
+  const [captureNoTimeSections, setCaptureNoTimeSections] = useState<NoTimeSection[] | null>(null);
 
   // 실제로 시간표에 표시되는 combo (캡처 중일 땐 교수 선택 반영본 사용)
   const visibleCombo = captureCombo !== null
@@ -470,9 +484,12 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   };
 
   const saveAsImage = async () => {
-    // 전공(pinnedCombo) + 교양(currentCombo) 합쳐서 다중교수 스텝 수집
     const fullComboForPick = [...(pinnedCombo ?? []), ...currentCombo];
-    const steps = getMultiProfSections(fullComboForPick);
+    const allNoTime = [...(pinnedNoTimeSections ?? []), ...noTimeSections];
+    const steps = [
+      ...getMultiProfSections(fullComboForPick),
+      ...getMultiProfNoTimeSections(allNoTime),
+    ];
 
     if (steps.length === 0) {
       await doCapture(currentCombo);
@@ -484,16 +501,44 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
     setProfStepIdx(0);
 
     afterPickRef.current = async (picks) => {
-      // 전공/교양 각각에 교수 선택 반영
       const resolvedPinned = applyProfPicks(pinnedCombo ?? [], picks);
       const resolvedGyoyang = applyProfPicks(currentCombo, picks);
+      const resolvedNoTime = applyProfPicksNoTime(allNoTime, picks);
       setCaptureCombo(resolvedGyoyang);
-      // pinnedCombo는 visibleCombo 계산에서 captureCombo와 합쳐지므로 별도 state 필요
       setCapturedPinnedCombo(resolvedPinned);
+      setCaptureNoTimeSections(resolvedNoTime);
       await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
-      await doCapture(resolvedGyoyang, resolvedPinned);
+      await doCapture(resolvedGyoyang, resolvedPinned, resolvedNoTime);
       setCaptureCombo(null);
       setCapturedPinnedCombo(null);
+      setCaptureNoTimeSections(null);
+    };
+  };
+
+  const saveToLibrary = (defaultName: string) => {
+    const fullComboForPick = [...(pinnedCombo ?? []), ...currentCombo];
+    const allNoTime = [...(pinnedNoTimeSections ?? []), ...noTimeSections];
+    const steps = [
+      ...getMultiProfSections(fullComboForPick),
+      ...getMultiProfNoTimeSections(allNoTime),
+    ];
+    if (steps.length === 0) {
+      setPendingSaveCombo(currentCombo);
+      setPendingSaveNoTime(null);
+      setGyoSaveName(defaultName);
+      setGyoSavePrompt(true);
+      return;
+    }
+    profPickResults.current = new Map();
+    setProfSteps(steps);
+    setProfStepIdx(0);
+    afterPickRef.current = (picks) => {
+      const resolvedGyoyang = applyProfPicks(currentCombo, picks);
+      const resolvedAllNoTime = applyProfPicksNoTime(allNoTime, picks);
+      setPendingSaveCombo(resolvedGyoyang);
+      setPendingSaveNoTime(resolvedAllNoTime);
+      setGyoSaveName(defaultName);
+      setGyoSavePrompt(true);
     };
   };
 
@@ -504,6 +549,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
         <ProfPickerModal
           courseName={profSteps[profStepIdx].name}
           profs={profSteps[profStepIdx].profs}
+          isNoTime={profSteps[profStepIdx].isNoTime}
           stepIdx={profStepIdx}
           totalSteps={profSteps.length}
           onSelect={handleProfSelect}
@@ -519,7 +565,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
           {onFeedbackClick && (
             <button
               onClick={() => { setSaveToast(false); onFeedbackClick(); }}
-              className="shrink-0 text-xs text-blue-300 hover:text-blue-200 underline whitespace-nowrap"
+              className="shrink-0 text-xs text-indigo-300 hover:text-indigo-200 underline whitespace-nowrap"
             >
               응원/문의
             </button>
@@ -540,39 +586,41 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
               onChange={(e) => setGyoSaveName(e.target.value)}
               onKeyDown={(e) => {
                 if (e.key === "Enter" && gyoSaveName.trim()) {
+                  const pinnedNTLen = (pinnedNoTimeSections ?? []).length;
                   saveTimetable({
                     name: gyoSaveName.trim(),
                     sem: `${semYear}-${semTerm}`,
                     major: major ?? "",
                     majorLabel: majorLabel ?? "",
                     pinnedCombo: pinnedCombo ?? [],
-                    pinnedNoTimeSections: pinnedNoTimeSections ?? [],
-                    gyoyangCombo: currentCombo,
-                    gyoyangNoTimeSections: noTimeSections,
+                    pinnedNoTimeSections: pendingSaveNoTime ? pendingSaveNoTime.slice(0, pinnedNTLen) : (pinnedNoTimeSections ?? []),
+                    gyoyangCombo: pendingSaveCombo ?? currentCombo,
+                    gyoyangNoTimeSections: pendingSaveNoTime ? pendingSaveNoTime.slice(pinnedNTLen) : noTimeSections,
                   });
-                  setGyoSavePrompt(false);
+                  setGyoSavePrompt(false); setPendingSaveCombo(null); setPendingSaveNoTime(null);
                 }
               }}
-              className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+              className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-400"
             />
             <div className="flex gap-2">
-              <button onClick={() => setGyoSavePrompt(false)} className="flex-1 py-2 border border-gray-300 rounded-lg text-sm text-gray-600 hover:bg-gray-50">취소</button>
+              <button onClick={() => { setGyoSavePrompt(false); setPendingSaveCombo(null); setPendingSaveNoTime(null); }} className="flex-1 py-2 border border-gray-300 rounded-lg text-sm text-gray-600 hover:bg-gray-50">취소</button>
               <button
                 disabled={!gyoSaveName.trim()}
                 onClick={() => {
+                  const pinnedNTLen = (pinnedNoTimeSections ?? []).length;
                   saveTimetable({
                     name: gyoSaveName.trim(),
                     sem: `${semYear}-${semTerm}`,
                     major: major ?? "",
                     majorLabel: majorLabel ?? "",
                     pinnedCombo: pinnedCombo ?? [],
-                    pinnedNoTimeSections: pinnedNoTimeSections ?? [],
-                    gyoyangCombo: currentCombo,
-                    gyoyangNoTimeSections: noTimeSections,
+                    pinnedNoTimeSections: pendingSaveNoTime ? pendingSaveNoTime.slice(0, pinnedNTLen) : (pinnedNoTimeSections ?? []),
+                    gyoyangCombo: pendingSaveCombo ?? currentCombo,
+                    gyoyangNoTimeSections: pendingSaveNoTime ? pendingSaveNoTime.slice(pinnedNTLen) : noTimeSections,
                   });
-                  setGyoSavePrompt(false);
+                  setGyoSavePrompt(false); setPendingSaveCombo(null); setPendingSaveNoTime(null);
                 }}
-                className="flex-1 py-2 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg"
+                className="flex-1 py-2 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg"
               >
                 저장
               </button>
@@ -608,7 +656,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                       className={`shrink-0 w-28 py-1.5 rounded-lg text-sm font-mono font-bold transition-all duration-200 ${
                         isCopied
                           ? "bg-green-500 text-white"
-                          : "bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-200"
+                          : "bg-indigo-50 hover:bg-indigo-100 text-indigo-600 border border-indigo-200"
                       }`}
                     >
                       {isCopied ? "✓ 복사됨" : code}
@@ -644,7 +692,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
               <input
                 type="text" value={search} onChange={(e) => setSearch(e.target.value)}
                 placeholder="과목명 또는 과목코드 검색..."
-                className="flex-1 border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+                className="flex-1 border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-400"
               />
               <button onClick={() => setSortAsc((v) => !v)}
                 className="shrink-0 border border-gray-300 rounded px-2 py-1.5 text-xs text-gray-600 hover:bg-gray-50" title="이름 정렬">
@@ -660,7 +708,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                 <span>{filterPanelOpen ? "▾" : "▸"}</span>
                 <span>필터</span>
                 {(filterSdg || filterHmnts || filterSuEval || filterRemote || filterIlban || !filterHideConflict || filterDayOff.size > 0 || filterDayCombo || maxCredit > 0 || minGyoyangCredit > 0) && (
-                  <span className="ml-1 text-blue-500">●</span>
+                  <span className="ml-1 text-indigo-500">●</span>
                 )}
               </button>
               <div className="flex gap-2 items-center">
@@ -722,7 +770,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                       const next = new Set(filterDayOff);
                       next.has(i) ? next.delete(i) : next.add(i);
                       setFilterDayOff(next);
-                    }} className={`flex-1 py-1 text-xs rounded border transition-colors ${filterDayOff.has(i) ? "bg-blue-600 text-white border-blue-600" : "border-gray-300 text-gray-600 hover:bg-gray-50"}`}>
+                    }} className={`flex-1 py-1 text-xs rounded border transition-colors ${filterDayOff.has(i) ? "bg-indigo-600 text-white border-indigo-600" : "border-gray-300 text-gray-600 hover:bg-gray-50"}`}>
                       {d}
                     </button>
                   ))}
@@ -730,7 +778,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                 <div className="flex items-center gap-2">
                   <label className="text-xs text-gray-600 shrink-0">요일 조합</label>
                   <select value={filterDayCombo} onChange={(e) => setFilterDayCombo(e.target.value)}
-                    className="flex-1 border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-blue-400">
+                    className="flex-1 border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-indigo-400">
                     <option value="">전체</option>
                     {["월","화","수","목","금","월화","월수","월목","월금","화수","화목","화금","수목","수금","목금"].map((combo) => (
                       <option key={combo} value={combo}>{combo}</option>
@@ -740,7 +788,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                 <div className="flex items-center gap-2">
                   <label className="text-xs text-gray-600 shrink-0">최대 학점</label>
                   <select value={maxCredit} onChange={(e) => setMaxCredit(Number(e.target.value))}
-                    className="flex-1 border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-blue-400">
+                    className="flex-1 border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-indigo-400">
                     <option value={0}>제한 없음</option>
                     {Array.from({ length: 16 }, (_, i) => i + 12).map((v) => (
                       <option key={v} value={v}>{v}학점</option>
@@ -755,7 +803,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                 <div className="flex items-center gap-2">
                   <label className="text-xs text-gray-600 shrink-0">전체 최소</label>
                   <select value={minGyoyangCredit} onChange={(e) => setMinGyoyangCredit(Number(e.target.value))}
-                    className="flex-1 border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-blue-400">
+                    className="flex-1 border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-indigo-400">
                     <option value={0}>제한 없음</option>
                     {Array.from({ length: 17 }, (_, i) => i + 9).map((v) => (
                       <option key={v} value={v}>{v}학점 이상</option>
@@ -810,8 +858,8 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                 }
 
                 return (
-                  <div key={c.code} className={`mb-1 rounded ${isSelected ? "bg-blue-50" : ""}`}>
-                    <label className={`flex items-start gap-2 px-1 pt-1 pb-0.5 rounded ${disabled ? "opacity-40 cursor-not-allowed" : "cursor-pointer hover:bg-gray-50"} ${isSelected ? "hover:bg-blue-100" : ""}`}>
+                  <div key={c.code} className={`mb-1 rounded ${isSelected ? "bg-indigo-50" : ""}`}>
+                    <label className={`flex items-start gap-2 px-1 pt-1 pb-0.5 rounded ${disabled ? "opacity-40 cursor-not-allowed" : "cursor-pointer hover:bg-gray-50"} ${isSelected ? "hover:bg-indigo-100" : ""}`}>
                       <input type="checkbox" checked={isSelected} disabled={disabled}
                         onChange={(e) => {
                           if (e.target.checked && selected.size >= MAX_SELECT) return;
@@ -833,7 +881,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                           {c.sdg && <span className="ml-1 text-green-600">SDG</span>}
                           {c.hmnts && <span className="ml-1 text-purple-600">인문</span>}
                           {fetched && suEvalCodes.has(c.code) && <span className="ml-1 text-orange-500">SU평가</span>}
-                          {fetched && remoteCodes.has(c.code) && <span className="ml-1 text-blue-500">원격</span>}
+                          {fetched && remoteCodes.has(c.code) && <span className="ml-1 text-indigo-500">원격</span>}
                           {fetched && sanjuCodes.has(c.code) && <span className="ml-1 text-slate-500">상주</span>}
                         </p>
                         {fetched && dayPatterns.length > 0 && (
@@ -889,7 +937,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                           return (
                             <div key={idx} className={`text-xs px-1.5 py-0.5 rounded ${rowClass}`}>
                               <span className={(conflict || sanjuBlocked) ? "line-through" : ""}>{mark} {prof}</span>
-                              {isRemote && <span className="ml-1 text-blue-500">원격</span>}
+                              {isRemote && <span className="ml-1 text-indigo-500">원격</span>}
                               {isSanjuRow && <span className="ml-1 text-slate-500">상주</span>}
                               {timeStr && <span className={`block pl-3 ${subClass}`}>{timeStr}</span>}
                               {r.location && <span className={`block pl-3 ${conflict || sanjuBlocked ? subClass : "text-gray-500"}`}>{r.location}</span>}
@@ -921,10 +969,17 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
           </button>
           {(["timetable", "list"] as const).map((t) => (
             <button key={t} onClick={() => setLeftTab(t)}
-              className={`pb-2 px-1 text-sm border-b-2 transition-colors ${leftTab === t ? "border-blue-500 text-blue-600 font-semibold" : "border-transparent text-gray-400 hover:text-gray-600"}`}>
+              className={`pb-2 px-1 text-sm border-b-2 transition-colors ${leftTab === t ? "border-indigo-500 text-indigo-600 font-semibold" : "border-transparent text-gray-400 hover:text-gray-600"}`}>
               {t === "timetable" ? "시간표" : "전체 목록"}
             </button>
           ))}
+          {onGoToKyoshik && (
+            <button
+              onClick={() => onGoToKyoshik(currentCombo, noTimeSections)}
+              className="ml-auto shrink-0 self-start mb-1 text-xs px-3 py-1.5 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors">
+              현재 시간표 고정 후 교직 마법사로 →
+            </button>
+          )}
         </div>
 
         {/* 시간표 뷰 */}
@@ -936,29 +991,31 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                   <button onClick={() => { setSlideDir("right"); setComboIdx((i) => (i - 1 + visibleCombos.length) % visibleCombos.length); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm">◀</button>
                   <span className="text-sm text-gray-600 w-24 text-center">{comboIdx + 1} / {visibleCombos.length}</span>
                   <button onClick={() => { setSlideDir("left"); setComboIdx((i) => (i + 1) % visibleCombos.length); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm">▶</button>
-                  <span className="text-sm font-semibold text-blue-600">
+                  <span className="text-sm font-semibold text-indigo-600">
                     총 {totalCredit}학점 <span className="text-gray-400 font-normal text-xs">(전공 {pinnedCredit} + 교양 {gyoyangCredit})</span>
                   </span>
                 </div>
-                <div key={`${comboIdx}-${slideDir}`} className={`flex-1 overflow-auto min-h-0 ${slideDir === "left" ? "slide-left" : "slide-right"}`}>
-                  <TimetableGrid ref={timetableRef} combo={visibleCombo} />
-                </div>
-                {((pinnedNoTimeSections?.length ?? 0) > 0 || noTimeSections.length > 0) && (
-                  <div className="shrink-0 border border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-950/70 rounded-lg px-4 py-3 flex flex-wrap gap-x-4 gap-y-2">
-                    <span className="text-sm font-semibold text-orange-600 dark:text-orange-400 w-full">시간 외</span>
-                    {[...(pinnedNoTimeSections ?? []), ...noTimeSections].map((s) => (
-                      <span key={s.crseNo} className="text-sm text-orange-700 dark:text-orange-300">{s.name} <span className="text-orange-400 dark:text-orange-500 text-xs">({s.credit}학점)</span></span>
-                    ))}
+                <div ref={(el) => { scrollContainerRef.current = el; }} key={`${comboIdx}-${slideDir}`} className={`flex-1 overflow-auto min-h-0 ${slideDir === "left" ? "slide-left" : "slide-right"}`}>
+                  <div ref={captureRef}>
+                    <TimetableGrid ref={timetableRef} combo={visibleCombo} />
+                    {((pinnedNoTimeSections?.length ?? 0) > 0 || noTimeSections.length > 0) && (
+                      <div className="border border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-950/70 rounded-lg px-4 py-3 flex flex-wrap gap-x-4 gap-y-2 mt-2">
+                        <span className="text-sm font-semibold text-orange-600 dark:text-orange-400 w-full">시간 외</span>
+                        {(captureNoTimeSections ?? [...(pinnedNoTimeSections ?? []), ...noTimeSections]).map((s) => (
+                          <span key={s.crseNo} className="text-sm text-orange-700 dark:text-orange-300">{s.name}{s.profs?.length === 1 && <span className="text-orange-500 dark:text-orange-400"> · {s.profs[0]}</span>} <span className="text-orange-400 dark:text-orange-500 text-xs">({s.credit}학점)</span></span>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                )}
+                </div>
                 <div className="shrink-0 pt-1 flex flex-col gap-1.5">
                   <div className="flex gap-2">
                     <button onClick={saveAsImage} disabled={saving} className="flex-1 py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors">
                       {saving ? "저장 중..." : "이미지 저장"}
                     </button>
                     <button
-                      onClick={() => { const termLabel = semTerm === "s" ? "여름" : semTerm === "w" ? "겨울" : `${semTerm}학기`; const majorPart = majorLabel2 ? `${majorLabel ?? ""}·${majorLabel2}` : (majorLabel ?? ""); setGyoSaveName(`${majorPart} ${semYear}년 ${termLabel} 시간표`.trim()); setGyoSavePrompt(true); }}
-                      className="flex-1 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-colors"
+                      onClick={() => { const termLabel = semTerm === "s" ? "여름" : semTerm === "w" ? "겨울" : `${semTerm}학기`; const majorPart = majorLabel2 ? `${majorLabel ?? ""}·${majorLabel2}` : (majorLabel ?? ""); saveToLibrary(`${majorPart} ${semYear}년 ${termLabel} 시간표`.trim()); }}
+                      className="flex-1 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-lg transition-colors"
                     >
                       라이브러리에 저장
                     </button>
@@ -966,7 +1023,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                   {regSaved && (
                     <button
                       onClick={() => setRegModal({ courses: regSaved })}
-                      className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-colors"
+                      className="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-lg transition-colors"
                     >
                       수강신청하기
                     </button>
@@ -975,12 +1032,20 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
               </>
             ) : (
               <>
-                <div className="flex-1 overflow-auto min-h-0">
-                  {pinnedCombo && pinnedCombo.length > 0 && (
-                    <div className="px-1 pt-1">
+                <div ref={(el) => { scrollContainerRef.current = el; }} className="flex-1 overflow-auto min-h-0">
+                  <div ref={captureRef} className="px-1 pt-1">
+                    {pinnedCombo && pinnedCombo.length > 0 && (
                       <TimetableGrid ref={timetableRef} combo={pinnedCombo} />
-                    </div>
-                  )}
+                    )}
+                    {((pinnedNoTimeSections?.length ?? 0) > 0 || noTimeSections.length > 0) && (
+                      <div className="border border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-950/70 rounded-lg px-4 py-3 flex flex-wrap gap-x-4 gap-y-2 mt-2">
+                        <span className="text-sm font-semibold text-orange-600 dark:text-orange-400 w-full">시간 외</span>
+                        {(captureNoTimeSections ?? [...(pinnedNoTimeSections ?? []), ...noTimeSections]).map((s) => (
+                          <span key={s.crseNo} className="text-sm text-orange-700 dark:text-orange-300">{s.name}{s.profs?.length === 1 && <span className="text-orange-500 dark:text-orange-400"> · {s.profs[0]}</span>} <span className="text-orange-400 dark:text-orange-500 text-xs">({s.credit}학점)</span></span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                   <div className="flex items-center justify-center text-gray-400 text-sm py-4">
                     {combos.length > 0 ? (
                       <p>최소 학점 조건을 만족하는 조합이 없습니다</p>
@@ -999,9 +1064,9 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                       {saving ? "저장 중..." : "이미지 저장"}
                     </button>
                     <button
-                      onClick={() => { const termLabel = semTerm === "s" ? "여름" : semTerm === "w" ? "겨울" : `${semTerm}학기`; const majorPart = majorLabel2 ? `${majorLabel ?? ""}·${majorLabel2}` : (majorLabel ?? ""); setGyoSaveName(`${majorPart} ${semYear}년 ${termLabel} 시간표`.trim()); setGyoSavePrompt(true); }}
+                      onClick={() => { const termLabel = semTerm === "s" ? "여름" : semTerm === "w" ? "겨울" : `${semTerm}학기`; const majorPart = majorLabel2 ? `${majorLabel ?? ""}·${majorLabel2}` : (majorLabel ?? ""); saveToLibrary(`${majorPart} ${semYear}년 ${termLabel} 시간표`.trim()); }}
                       disabled={!pinnedCombo?.length}
-                      className="flex-1 py-2 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors"
+                      className="flex-1 py-2 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors"
                     >
                       라이브러리에 저장
                     </button>
@@ -1009,7 +1074,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                   {regSaved && (
                     <button
                       onClick={() => setRegModal({ courses: regSaved })}
-                      className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-colors"
+                      className="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-lg transition-colors"
                     >
                       수강신청하기
                     </button>
@@ -1046,7 +1111,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                 <input
                   type="text" value={listSearch} onChange={(e) => setListSearch(e.target.value)}
                   placeholder="과목명·교수·강좌번호 검색..."
-                  className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400 w-60"
+                  className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-400 w-60"
                 />
                 {fetched && <span className="text-xs text-gray-400 ml-auto">{listSorted.length}건</span>}
               </div>
@@ -1071,9 +1136,9 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                     <tbody>
                       {listSorted.map((r, i) => {
                         const displayTag = r.crseNo.startsWith("CLTR") ? "교양" : "일반선택";
-                        const displayTagColor = displayTag === "교양" ? "text-blue-700 bg-blue-50" : "text-amber-700 bg-amber-50";
+                        const displayTagColor = displayTag === "교양" ? "text-indigo-700 bg-indigo-50" : "text-amber-700 bg-amber-50";
                         return (
-                          <tr key={i} className={`border-b border-gray-100 hover:bg-blue-50 transition-colors ${i % 2 === 0 ? "bg-white" : "bg-gray-50/60"}`}>
+                          <tr key={i} className={`border-b border-gray-100 hover:bg-indigo-50 transition-colors ${i % 2 === 0 ? "bg-white" : "bg-gray-50/60"}`}>
                             <td className="px-1.5 py-1.5 whitespace-nowrap">
                               <span className={`px-1 py-0.5 rounded text-xs font-medium ${displayTagColor}`}>{displayTag}</span>
                             </td>

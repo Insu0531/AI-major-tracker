@@ -5,7 +5,7 @@
   credit: string;
 };
 
-export type Major = "ai" | "elec" | "mech" | "space" | "energy" | "energy_re" | "energy_cv" | "nursing" | "physics" | "math" | "chem" | "stat" | "geo_geol" | "geo_astro" | "geo_ocean" | "kor_lit" | "eng_lit" | "fre_lit" | "ger_lit" | "chi_lit" | "history" | "philosophy" | "anthro" | "jpn_lit" | "kor_clas" | "rus_lit" | "poli_sci" | "sociology" | "geography" | "doc_info" | "psychology" | "business" | "econ" | "polymer" | "env_eng" | "textile" | "metal_mat" | "agri_civil" | "plant_sci" | "env_life_chem" | "food_biotech" | "food_mat" | "food_app" | "plant_med" | "food_econ" | "smart_bio_mech" | "edu" | "kor_edu" | "eng_edu" | "ethics_edu" | "math_edu" | "home_edu" | "ger_edu" | "fre_edu" | "history_edu" | "geo_edu" | "social_edu" | "phys_edu" | "chem_edu" | "bio_edu" | "earth_edu" | "civic_edu" | "commerce_edu" | "geo2_edu" | "music_edu" | "art_edu" | "home_mgmt" | "child_family" | "clothing" | "food_nutrition" | "life_sci_a" | "life_sci_b" | "life_sci_c" | "eco_housing" | "child_dev" | "child_edu" | "pub_admin" | "pub_policy" | "bio_med_eng" | "robot_smart" | "h2_energy" | "smart_mobility" | "innov_pharma" | "bio_med_fusion" | "robotics" | "adv_tech_self1" | "adv_tech_self2" | "auto_fusion" | "ai_conv" | "bio_med_conv" | "robot_conv" | "h2_conv" | "mobility_conv" | "cs_know" | "cs_sw_conv" | "cs_sys_sw" | "cs_global_sw" | "cs_platform" | "cs_data" | "cs_human_ai" | "cs_ai_comp" | "cs_deep" | "cs_adv" | "bio_eng" | "new_mat" | "new_mat_div" | "new_mat_elec" | "bio_sum_sojae" | "sj_civil_disaster" | "sj_civil_env" | "sj_smart_auto" | "sj_mat_nano" | "sj_echem_nano" | "sj_aerospace" | "sj_plant_sys" | "sj_mat_energy" | "sj_echem_energy" | "sj_precision_mech" | "sj_food_service" | "sj_textile" | "sj_fashion" | "sj_ind_mech" | "sj_civil_disaster_dept" | "sj_env_safety" | "sj_dental_hyg" | "sj_sw" | "sj_gis" | "sj_smart_plant" | "sj_auto" | "sj_nano_mat" | "sj_energy_chem" | "sj_livestock" | "sj_bio_app" | "sj_eco_tour" | "sj_livestock_biotech" | "sj_insect" | "sj_tourism" | "sj_horse" | "sj_livestock_startup" | "sj_forest_eco" | "sj_plant_res" | "sj_phys_edu" | "sj_animal_biotech" | "sj_phys_edu_major" | "sj_health_sports" | "sj_eco_auto" | "chem_eng" | "social_welfare_micro" | "social_welfare_macro" | "social_welfare" | "appli_chem" | "media_commu" | "medical" | "medical-semi" | "dentist" | "dentist-semi" | "eleceng" | "appli_chem_a" | "appli_chem_b" | "appli_chem_major" | "appli_chem_eng" | "computer_edu" | "forestry" | "forest_prod_eng" | "landscape_arch";
+export type Major = "ai" | "elec" | "mech" | "space" | "energy" | "energy_re" | "energy_cv" | "nursing" | "physics" | "math" | "chem" | "stat" | "geo_geol" | "geo_astro" | "geo_ocean" | "kor_lit" | "eng_lit" | "fre_lit" | "ger_lit" | "chi_lit" | "history" | "philosophy" | "anthro" | "jpn_lit" | "kor_clas" | "rus_lit" | "poli_sci" | "sociology" | "geography" | "doc_info" | "psychology" | "business" | "econ" | "polymer" | "env_eng" | "textile" | "metal_mat" | "agri_civil" | "plant_sci" | "env_life_chem" | "food_biotech" | "food_mat" | "food_app" | "plant_med" | "food_econ" | "smart_bio_mech" | "edu" | "kor_edu" | "eng_edu" | "ethics_edu" | "math_edu" | "home_edu" | "ger_edu" | "fre_edu" | "history_edu" | "geo_edu" | "social_edu" | "phys_edu" | "chem_edu" | "bio_edu" | "earth_edu" | "civic_edu" | "commerce_edu" | "geo2_edu" | "music_edu" | "art_edu" | "home_mgmt" | "child_family" | "clothing" | "food_nutrition" | "life_sci_a" | "life_sci_b" | "life_sci_c" | "eco_housing" | "child_dev" | "child_edu" | "pub_admin" | "pub_policy" | "bio_med_eng" | "robot_smart" | "h2_energy" | "smart_mobility" | "innov_pharma" | "bio_med_fusion" | "robotics" | "adv_tech_self1" | "adv_tech_self2" | "auto_fusion" | "ai_conv" | "bio_med_conv" | "robot_conv" | "h2_conv" | "mobility_conv" | "cs_know" | "cs_sw_conv" | "cs_sys_sw" | "cs_global_sw" | "cs_platform" | "cs_data" | "cs_human_ai" | "cs_ai_comp" | "cs_deep" | "cs_adv" | "bio_eng" | "new_mat" | "new_mat_div" | "new_mat_elec" | "bio_sum_sojae" | "sj_civil_disaster" | "sj_civil_env" | "sj_smart_auto" | "sj_mat_nano" | "sj_echem_nano" | "sj_aerospace" | "sj_plant_sys" | "sj_mat_energy" | "sj_echem_energy" | "sj_precision_mech" | "sj_food_service" | "sj_textile" | "sj_fashion" | "sj_ind_mech" | "sj_civil_disaster_dept" | "sj_env_safety" | "sj_dental_hyg" | "sj_sw" | "sj_gis" | "sj_smart_plant" | "sj_auto" | "sj_nano_mat" | "sj_energy_chem" | "sj_livestock" | "sj_bio_app" | "sj_eco_tour" | "sj_livestock_biotech" | "sj_insect" | "sj_tourism" | "sj_horse" | "sj_livestock_startup" | "sj_forest_eco" | "sj_plant_res" | "sj_phys_edu" | "sj_animal_biotech" | "sj_phys_edu_major" | "sj_health_sports" | "sj_eco_auto" | "chem_eng" | "social_welfare_micro" | "social_welfare_macro" | "social_welfare" | "appli_chem" | "media_commu" | "medical" | "medical-semi" | "dentist" | "dentist-semi" | "eleceng" | "appli_chem_a" | "appli_chem_b" | "appli_chem_major" | "appli_chem_eng" | "computer_edu" | "forestry" | "forest_prod_eng" | "landscape_arch" | "music" | "korean_music2" | "art" | "design" | "digital_art";
 
 export const MAJOR_LABELS: Record<Major, string> = {
   ai: "전자공학부 인공지능전공",
@@ -18,6 +18,7 @@ export const MAJOR_LABELS: Record<Major, string> = {
   polymer: "고분자공학과",
   edu: "교육학과",
   civic_edu: "국민윤리교육과",
+  korean_music2: "국악학과",
   kor_edu: "국어교육과",
   kor_lit: "국어국문학과",
   metal_mat: "금속재료공학과",
@@ -25,6 +26,8 @@ export const MAJOR_LABELS: Record<Major, string> = {
   rus_lit: "노어노문학과",
   agri_civil: "농업토목공학과",
   ger_lit: "독어독문학과",
+  design: "디자인학과",
+  digital_art: "디지털아트융합전공",
   robotics: "로봇공학과",
   robot_smart: "로봇및스마트시스템공학전공",
   doc_info: "문헌정보학과",
@@ -32,6 +35,7 @@ export const MAJOR_LABELS: Record<Major, string> = {
   physics: "물리학과",
   media_commu: "미디어커뮤니케이션학과",
   art_edu: "미술교육과",
+  art: "미술학과",
   bio_sum_sojae: "바이오섬유소재학과",
   fre_lit: "불어불문학과",
   history: "사학과",
@@ -83,6 +87,7 @@ export const MAJOR_LABELS: Record<Major, string> = {
   bio_med_conv: "융합학부-의생명융합공학전공",
   ai_conv: "융합학부-인공지능전공",
   music_edu: "음악교육과",
+  music: "음악학과",
   plant_sci: "응용생명과학부-식물생명과학전공",
   env_life_chem: "응용생명과학부-환경생명화학전공",
   appli_chem: "응용화학공학부",
@@ -341,6 +346,11 @@ export const MAJOR_META: Record<Major, { deptCd: string; baseDeptCd?: string }> 
   forestry: { deptCd: "170S01", baseDeptCd: "170S" },
   forest_prod_eng: { deptCd: "170S02", baseDeptCd: "170S" },
   landscape_arch: { deptCd: "170S03", baseDeptCd: "170S" },
+  music: { deptCd: "1801" },
+  korean_music2: { deptCd: "1803" },
+  art: { deptCd: "1804" },
+  design: { deptCd: "1806" },
+  digital_art: { deptCd: "1807" },
 
 };
 

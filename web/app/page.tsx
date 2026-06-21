@@ -6,6 +6,7 @@ import { buildSectionGroups, generateCombos, Section, NoTimeSection } from "@/li
 import { Major, MAJOR_LABELS, ENTRY_YEAR_MIN, ENTRY_YEAR_MAX, fetchCoursesByYear, Course } from "@/lib/courses";
 import TimetableGrid from "@/components/TimetableGrid";
 import GyoyangWizard from "@/components/GyoyangWizard";
+import KyoshikWizard from "@/components/KyoshikWizard";
 import FeedbackTab from "@/components/FeedbackTab";
 import LibraryTab from "@/components/LibraryTab";
 
@@ -38,7 +39,7 @@ const COLS: { key: keyof Row; label: string }[] = [
 const MAX_SELECT = 10;
 
 export default function Home() {
-  const [tab, setTab] = useState<"search" | "wizard" | "gyoyang" | "settings" | "feedback" | "library">("search");
+  const [tab, setTab] = useState<"search" | "wizard" | "gyoyang" | "kyoshik" | "settings" | "feedback" | "library">("search");
   const [darkMode, setDarkMode] = useState(false);
   const [refetchConfirm, setRefetchConfirm] = useState(false);
   const [showMajor2Tip, setShowMajor2Tip] = useState(false);
@@ -60,6 +61,8 @@ export default function Home() {
     }
   };
   const [pinnedCombo, setPinnedCombo] = useState<Section[] | null>(null);
+  const [kyoshikPinnedCombo, setKyoshikPinnedCombo] = useState<Section[] | null>(null);
+  const [kyoshikPinnedNoTime, setKyoshikPinnedNoTime] = useState<NoTimeSection[]>([]);
   const [major, setMajor] = useState<Major>("ai");
   const [majorSearch, setMajorSearch] = useState("");
   const [majorDropOpen, setMajorDropOpen] = useState(false);
@@ -372,7 +375,7 @@ export default function Home() {
   return (
     <div className="h-screen flex flex-col bg-gray-50 overflow-hidden">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 px-6 py-3 flex items-center gap-2.5 shrink-0">
+      <header className="bg-white border-b border-gray-100 shadow-sm px-6 py-3 flex items-center gap-2.5 shrink-0">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-6 h-6 shrink-0">
           <circle cx="16" cy="16" r="16" fill="#e53e3e"/>
           <g fill="#ffb3cc" stroke="#e07090" strokeWidth="0.4">
@@ -394,16 +397,19 @@ export default function Home() {
           { key: "search", label: "전공 조회" },
           { key: "wizard", label: "전공 마법사" },
           { key: "gyoyang", label: "교양 마법사" },
+          { key: "kyoshik", label: "교직 마법사" },
           { key: "library", label: "라이브러리" },
           { key: "settings", label: "설정" },
           { key: "feedback", label: "응원/문의" },
         ] as const).map(({ key, label }) => {
           const disabled =
             (key === "wizard" && rows.length === 0) ||
-            (key === "gyoyang" && !pinnedCombo);
+            (key === "gyoyang" && !pinnedCombo) ||
+            (key === "kyoshik" && !pinnedCombo);
           const disabledTitle =
             key === "wizard" ? "전공 조회 후 사용할 수 있습니다" :
-            key === "gyoyang" ? "시간표 마법사에서 ★ 교양 마법사로 이동을 먼저 선택하세요" : undefined;
+            key === "gyoyang" ? "전공 마법사에서 ★ 버튼을 눌러 이동하세요" :
+            key === "kyoshik" ? "교양 마법사에서 '교직 마법사로 →' 버튼을 눌러 이동하세요" : undefined;
           return (
             <button
               key={key}
@@ -411,14 +417,14 @@ export default function Home() {
               title={disabled ? disabledTitle : undefined}
               className={`px-4 py-2 text-sm border-b-2 transition-colors ${
                 tab === key
-                  ? "border-blue-500 text-blue-600 font-semibold"
+                  ? "border-indigo-500 text-indigo-600 font-semibold"
                   : disabled
                   ? "border-transparent text-gray-300 cursor-not-allowed"
                   : "border-transparent text-gray-500 hover:text-gray-700"
               }`}
             >
               {label}
-              {key === "gyoyang" && pinnedCombo && (
+              {(key === "gyoyang" || key === "kyoshik") && pinnedCombo && (
                 <span className="ml-1 text-xs text-amber-500">★</span>
               )}
             </button>
@@ -437,7 +443,7 @@ export default function Home() {
                   type="button"
                   disabled={loading}
                   onClick={() => { setMajorDropOpen((v) => !v); setMajorSearch(""); }}
-                  className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400 bg-white min-w-48 text-left flex items-center justify-between gap-2 disabled:opacity-50"
+                  className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-400 bg-white min-w-48 text-left flex items-center justify-between gap-2 disabled:opacity-50"
                 >
                   <span className="truncate">{MAJOR_LABELS[major]}</span>
                   <span className="text-gray-400 shrink-0">▾</span>
@@ -451,7 +457,7 @@ export default function Home() {
                         value={majorSearch}
                         onChange={(e) => setMajorSearch(e.target.value)}
                         placeholder="전공 검색..."
-                        className="w-full border border-gray-300 rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+                        className="w-full border border-gray-300 rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-400"
                       />
                     </div>
                     <div className="overflow-y-auto flex-1">
@@ -481,7 +487,7 @@ export default function Home() {
                               // 교양 마법사 초기화
                               setPinnedCombo(null);
                             }}
-                            className={`w-full text-left px-3 py-1.5 text-sm hover:bg-blue-50 transition-colors ${key === major ? "bg-blue-100 text-blue-700 font-medium" : "text-gray-700"}`}
+                            className={`w-full text-left px-3 py-1.5 text-sm hover:bg-indigo-50 transition-colors ${key === major ? "bg-indigo-100 text-indigo-700 font-medium" : "text-gray-700"}`}
                           >
                             {label}
                           </button>
@@ -499,10 +505,10 @@ export default function Home() {
                       type="button"
                       disabled={loading}
                       onClick={() => { setOpenExtraIdx(openExtraIdx === idx ? null : idx); setExtraSearch(""); }}
-                      className="border border-blue-300 rounded px-2 py-1.5 text-sm bg-blue-50 min-w-40 text-left flex items-center justify-between gap-2 disabled:opacity-50"
+                      className="border border-indigo-200 rounded px-2 py-1.5 text-sm bg-indigo-50 min-w-40 text-left flex items-center justify-between gap-2 disabled:opacity-50"
                     >
-                      <span className="truncate text-blue-700">{MAJOR_LABELS[em]}</span>
-                      <span className="text-blue-400 shrink-0">▾</span>
+                      <span className="truncate text-indigo-700">{MAJOR_LABELS[em]}</span>
+                      <span className="text-indigo-400 shrink-0">▾</span>
                     </button>
                     <button
                       type="button"
@@ -518,7 +524,7 @@ export default function Home() {
                             value={extraSearch}
                             onChange={(e) => setExtraSearch(e.target.value)}
                             placeholder="복수전공 검색..."
-                            className="w-full border border-gray-300 rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+                            className="w-full border border-gray-300 rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-400"
                           />
                         </div>
                         <div className="overflow-y-auto flex-1">
@@ -540,7 +546,7 @@ export default function Home() {
                                   setOpenExtraIdx(null);
                                   setExtraSearch("");
                                 }}
-                                className={`w-full text-left px-3 py-1.5 text-sm hover:bg-blue-50 transition-colors ${key === em ? "bg-blue-100 text-blue-700 font-medium" : "text-gray-700"}`}
+                                className={`w-full text-left px-3 py-1.5 text-sm hover:bg-indigo-50 transition-colors ${key === em ? "bg-indigo-100 text-indigo-700 font-medium" : "text-gray-700"}`}
                               >
                                 {label}
                               </button>
@@ -555,7 +561,7 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() => { setExtraMajors([...extraMajors, "ai"]); setOpenExtraIdx(extraMajors.length); setExtraSearch(""); }}
-                    className="text-xs text-blue-500 border border-blue-200 rounded px-2 py-1.5 hover:bg-blue-50 whitespace-nowrap"
+                    className="text-xs text-indigo-500 border border-indigo-200 rounded px-2 py-1.5 hover:bg-indigo-50 whitespace-nowrap"
                   >
                     + 복수전공
                   </button>
@@ -564,7 +570,7 @@ export default function Home() {
 
               {/* 입학연도 드롭다운 */}
               <select
-                className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+                className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-400"
                 value={entryYear}
                 onChange={(e) => { setEntryYear(Number(e.target.value)); setRows([]); setStatusText(""); }}
                 disabled={loading}
@@ -575,7 +581,7 @@ export default function Home() {
               </select>
               {/* 조회학기 연도 드롭다운 */}
               <select
-                className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+                className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-400"
                 value={semYear}
                 onChange={(e) => setSemYear(e.target.value)}
                 disabled={loading}
@@ -586,7 +592,7 @@ export default function Home() {
               </select>
               {/* 학기 드롭다운 */}
               <select
-                className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+                className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-400"
                 value={semTerm}
                 onChange={(e) => setSemTerm(e.target.value)}
                 disabled={loading}
@@ -607,7 +613,7 @@ export default function Home() {
                   }}
                   disabled={loading || courses.length === 0}
                   title={courses.length === 0 ? "해당 학번의 이수체계 데이터가 없습니다" : undefined}
-                  className="bg-blue-600 text-white text-sm px-4 py-1.5 rounded hover:bg-blue-700 disabled:opacity-50 transition-colors"
+                  className="bg-indigo-600 text-white text-sm px-4 py-1.5 rounded hover:bg-indigo-700 disabled:opacity-50 transition-colors"
                 >
                   {loading ? "조회 중..." : courses.length === 0 ? "데이터 없음" : "조회"}
                 </button>
@@ -642,7 +648,7 @@ export default function Home() {
                 <div className="flex items-center gap-2">
                   <div className="flex-1 bg-gray-200 rounded-full h-2 overflow-hidden">
                     <div
-                      className="bg-blue-500 h-2 rounded-full transition-all duration-300"
+                      className="bg-indigo-500 h-2 rounded-full transition-all duration-300"
                       style={{ width: `${progress.current === 0 ? 2 : (progress.current / TOTAL) * 100}%` }}
                     />
                   </div>
@@ -680,7 +686,7 @@ export default function Home() {
                     return (
                       <tr
                         key={row.crseNo + i}
-                        className={`border-b border-gray-100 hover:bg-blue-50 transition-colors ${
+                        className={`border-b border-gray-100 hover:bg-indigo-50 transition-colors ${
                           isPinned ? "bg-amber-50" : isExcluded ? "bg-red-50 opacity-60" : i % 2 === 0 ? "bg-white" : "bg-gray-50/60"
                         } ${loading ? "row-animate" : ""}`}
                         style={loading ? { animationDelay: `${(i % 20) * 18}ms` } : undefined}
@@ -743,7 +749,7 @@ export default function Home() {
                                   <span className={`text-[10px] px-1.5 py-0.5 rounded font-medium shrink-0 ${
                                     row.majorTag === "복수전공"
                                       ? "bg-purple-100 text-purple-700"
-                                      : "bg-blue-100 text-blue-700"
+                                      : "bg-indigo-100 text-indigo-700"
                                   }`}>
                                     {row.majorTag}
                                   </span>
@@ -780,7 +786,7 @@ export default function Home() {
                   onClick={() => setLeftTab("select")}
                   className={`flex-1 py-2 text-sm font-medium transition-colors ${
                     leftTab === "select"
-                      ? "border-b-2 border-blue-500 text-blue-600"
+                      ? "border-b-2 border-indigo-500 text-indigo-600"
                       : "text-gray-500 hover:text-gray-700"
                   }`}
                 >
@@ -793,7 +799,7 @@ export default function Home() {
                   onClick={() => setLeftTab("filter")}
                   className={`flex-1 py-2 text-sm font-medium transition-colors ${
                     leftTab === "filter"
-                      ? "border-b-2 border-blue-500 text-blue-600"
+                      ? "border-b-2 border-indigo-500 text-indigo-600"
                       : "text-gray-500 hover:text-gray-700"
                   }`}
                 >
@@ -889,7 +895,7 @@ export default function Home() {
                         <>
                           {mainEntries.length > 0 && (
                             <div>
-                              <p className="text-xs font-semibold text-blue-600 px-1 pt-2 pb-1 border-b border-blue-100 mb-1">주전공</p>
+                              <p className="text-xs font-semibold text-indigo-600 px-1 pt-2 pb-1 border-b border-indigo-100 mb-1">주전공</p>
                               {renderGradeGroups(mainEntries)}
                             </div>
                           )}
@@ -907,7 +913,7 @@ export default function Home() {
                     <button
                       onClick={generateWizard}
                       disabled={checkedCount === 0 && pinnedRows.size === 0}
-                      className="w-full bg-blue-600 text-white text-sm py-2 rounded hover:bg-blue-700 disabled:opacity-40 transition-colors"
+                      className="w-full bg-indigo-600 text-white text-sm py-2 rounded hover:bg-indigo-700 disabled:opacity-40 transition-colors"
                     >
                       조합 생성
                     </button>
@@ -959,7 +965,7 @@ export default function Home() {
                                         next.set(name, e.target.value === "" ? true : e.target.value);
                                         setFilterMap(next);
                                       }}
-                                      className="ml-6 mt-0.5 w-[calc(100%-1.5rem)] border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-blue-400"
+                                      className="ml-6 mt-0.5 w-[calc(100%-1.5rem)] border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-indigo-400"
                                     >
                                       <option value="">교수 무관</option>
                                       {profs.map((p) => <option key={p} value={p}>{p}</option>)}
@@ -985,7 +991,7 @@ export default function Home() {
                                 }}
                                 className={`flex-1 py-1.5 text-sm rounded border transition-colors ${
                                   dayOff.has(i)
-                                    ? "bg-blue-600 text-white border-blue-600"
+                                    ? "bg-indigo-600 text-white border-indigo-600"
                                     : "border-gray-300 text-gray-600 hover:bg-gray-50"
                                 }`}
                               >
@@ -1001,7 +1007,7 @@ export default function Home() {
                           <select
                             value={noMorning}
                             onChange={(e) => setNoMorning(e.target.value)}
-                            className="w-full border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+                            className="w-full border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-400"
                           >
                             <option value="">제한 없음</option>
                             {["9", "10", "11", "12"].map((h) => (
@@ -1016,7 +1022,7 @@ export default function Home() {
                           <select
                             value={noEvening}
                             onChange={(e) => setNoEvening(e.target.value)}
-                            className="w-full border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+                            className="w-full border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-400"
                           >
                             <option value="">제한 없음</option>
                             {["17", "18", "19", "20", "21"].map((h) => (
@@ -1031,7 +1037,7 @@ export default function Home() {
                           <select
                             value={minCredit}
                             onChange={(e) => setMinCredit(e.target.value)}
-                            className="w-full border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+                            className="w-full border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-400"
                           >
                             <option value="">제한 없음</option>
                             {Array.from({ length: 18 }, (_, i) => String(i + 6)).map((n) => (
@@ -1048,7 +1054,7 @@ export default function Home() {
                             value={profSearch}
                             onChange={(e) => setProfSearch(e.target.value)}
                             placeholder="교수 검색..."
-                            className="w-full border border-gray-300 rounded px-2 py-1 text-sm mb-1.5 focus:outline-none focus:ring-1 focus:ring-blue-400"
+                            className="w-full border border-gray-300 rounded px-2 py-1 text-sm mb-1.5 focus:outline-none focus:ring-1 focus:ring-indigo-400"
                           />
                           <div className="max-h-36 overflow-y-auto flex flex-col gap-0.5 border border-gray-100 rounded p-1">
                             {filteredProfs.length === 0 && (
@@ -1069,7 +1075,7 @@ export default function Home() {
                                         else { next.add(prof); excl.delete(prof); }
                                         setIncludeProfs(next); setExcludeProfs(excl);
                                       }}
-                                      className={`text-[11px] px-1.5 py-0.5 rounded border transition-colors ${isInclude ? "bg-blue-600 text-white border-blue-600" : "border-gray-300 text-gray-500 hover:bg-gray-100"}`}
+                                      className={`text-[11px] px-1.5 py-0.5 rounded border transition-colors ${isInclude ? "bg-indigo-600 text-white border-indigo-600" : "border-gray-300 text-gray-500 hover:bg-gray-100"}`}
                                     >포함</button>
                                     <button
                                       onClick={() => {
@@ -1089,7 +1095,7 @@ export default function Home() {
                           {(includeProfs.size > 0 || excludeProfs.size > 0) && (
                             <div className="mt-1 flex flex-wrap gap-1">
                               {[...includeProfs].map((p) => (
-                                <span key={p} className="text-[11px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded">{p} ✓</span>
+                                <span key={p} className="text-[11px] bg-indigo-100 text-indigo-700 px-1.5 py-0.5 rounded">{p} ✓</span>
                               ))}
                               {[...excludeProfs].map((p) => (
                                 <span key={p} className="text-[11px] bg-red-100 text-red-600 px-1.5 py-0.5 rounded">{p} ✗</span>
@@ -1156,7 +1162,7 @@ export default function Home() {
                       onClick={() => { setSlideDir("left"); setComboIdx((i) => (i + 1) % filteredCombos.length); }}
                       className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm"
                     >▶</button>
-                    <span className="text-sm font-semibold text-blue-600">
+                    <span className="text-sm font-semibold text-indigo-600">
                       총 {totalCredit}학점
                     </span>
                     <span className="text-xs text-gray-400 ml-auto truncate max-w-sm">
@@ -1222,7 +1228,16 @@ export default function Home() {
         {/* ── 교양 마법사 탭 ── 항상 마운트, 탭 전환 시 숨기기만 해서 상태 유지 */}
         <div className={`flex flex-1 overflow-hidden ${tab === "gyoyang" ? "" : "hidden"}`}>
           {pinnedCombo !== null && (
-            <GyoyangWizard pinnedCombo={pinnedCombo} pinnedNoTimeSections={noTimeSections} initialSem={sem} majorLabel={MAJOR_LABELS[major]} majorLabel2={extraMajors.length > 0 ? extraMajors.map((m) => MAJOR_LABELS[m]).join("·") : undefined} major={major} onFeedbackClick={() => setTab("feedback")} />
+            <GyoyangWizard pinnedCombo={pinnedCombo} pinnedNoTimeSections={noTimeSections} initialSem={sem} majorLabel={MAJOR_LABELS[major]} majorLabel2={extraMajors.length > 0 ? extraMajors.map((m) => MAJOR_LABELS[m]).join("·") : undefined} major={major} onFeedbackClick={() => setTab("feedback")}
+              onGoToKyoshik={(combo, nts) => { setKyoshikPinnedCombo([...(pinnedCombo ?? []), ...combo]); setKyoshikPinnedNoTime([...noTimeSections, ...nts]); setTab("kyoshik"); }}
+            />
+          )}
+        </div>
+
+        {/* ── 교직 마법사 탭 ── */}
+        <div className={`flex flex-1 overflow-hidden ${tab === "kyoshik" ? "" : "hidden"}`}>
+          {kyoshikPinnedCombo !== null && (
+            <KyoshikWizard pinnedCombo={kyoshikPinnedCombo} pinnedNoTimeSections={kyoshikPinnedNoTime} initialSem={sem} majorLabel={MAJOR_LABELS[major]} majorLabel2={extraMajors.length > 0 ? extraMajors.map((m) => MAJOR_LABELS[m]).join("·") : undefined} major={major} onFeedbackClick={() => setTab("feedback")} />
           )}
         </div>
 
@@ -1244,7 +1259,7 @@ export default function Home() {
                 </div>
                 <button
                   onClick={toggleDark}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${darkMode ? "bg-blue-600" : "bg-gray-300"}`}
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${darkMode ? "bg-indigo-600" : "bg-gray-300"}`}
                 >
                   <span className={`inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform ${darkMode ? "translate-x-6" : "translate-x-1"}`} />
                 </button>
@@ -1268,7 +1283,7 @@ export default function Home() {
               </button>
               <button
                 onClick={() => { setRefetchConfirm(false); doFetch(); }}
-                className="flex-1 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg"
+                className="flex-1 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-lg"
               >
                 예
               </button>
