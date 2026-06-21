@@ -223,10 +223,10 @@ export default function Home() {
     const base = rows;
     if (!sortState) return base;
     return [...base].sort((a, b) => {
-      const av = a[sortState.col];
-      const bv = b[sortState.col];
+      const av = a[sortState.col] ?? "";
+      const bv = b[sortState.col] ?? "";
       const an = Number(av), bn = Number(bv);
-      const cmp = !isNaN(an) && !isNaN(bn) ? an - bn : av.localeCompare(bv, "ko");
+      const cmp = !isNaN(an) && !isNaN(bn) ? an - bn : String(av).localeCompare(String(bv), "ko");
       return sortState.dir === "asc" ? cmp : -cmp;
     });
   })();

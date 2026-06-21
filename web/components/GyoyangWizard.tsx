@@ -116,6 +116,10 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   const [saving, setSaving] = useState(false);
   const timetableRef = useRef<HTMLDivElement | null>(null);
 
+  // 수강신청 팝업
+  const [regModal, setRegModal] = useState<{ courses: { crseNo: string; name: string; credit: number }[] } | null>(null);
+  const [regSaved, setRegSaved] = useState<{ crseNo: string; name: string; credit: number }[] | null>(null);
+
   // 교수 선택 팝업 상태
   const [profSteps, setProfSteps] = useState<ProfStep[]>([]);
   const [profStepIdx, setProfStepIdx] = useState(0);
@@ -401,6 +405,16 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
       const prefix = majorLabel ? `${majorLabel} ` : "";
       link.download = `${prefix}${semYear}년 ${termLabel} 시간표.png`;
       document.body.appendChild(link); link.click(); document.body.removeChild(link);
+
+      // 수강신청 팝업용 과목 목록 수집
+      const fullComboForReg = [...(capturedPinnedCombo ?? pinnedCombo ?? []), ...comboToCapture];
+      const noTimeForReg = [...(pinnedNoTimeSections ?? []), ...noTimeSections];
+      const courses = [
+        ...fullComboForReg.map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),
+        ...noTimeForReg.map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),
+      ];
+      setRegSaved(courses);
+      setRegModal({ courses });
     } finally {
       setSaving(false);
     }
@@ -480,6 +494,33 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
           onSelect={handleProfSelect}
           onSkip={handleProfSkip}
         />
+      )}
+
+      {/* 수강신청 팝업 */}
+      {regModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+          <div className="bg-white rounded-2xl shadow-2xl flex flex-col max-w-lg w-[92vw] max-h-[80vh]">
+            <div className="px-6 pt-5 pb-3 border-b border-gray-100 flex items-center justify-between shrink-0">
+              <div>
+                <p className="text-base font-bold text-gray-800">수강신청 과목 목록</p>
+                <p className="text-xs text-gray-400 mt-0.5">텍스트를 선택해 복사하세요</p>
+              </div>
+              <button onClick={() => setRegModal(null)} className="text-gray-400 hover:text-gray-600 text-xl px-1">✕</button>
+            </div>
+            <div className="overflow-y-auto flex-1 px-6 py-4 flex flex-col gap-3">
+              {regModal.courses.map((c) => (
+                <div key={c.crseNo} className="flex items-baseline gap-3 select-text">
+                  <span className="text-lg font-mono font-bold text-blue-600 shrink-0">{c.crseNo}</span>
+                  <span className="text-lg font-semibold text-gray-800">{c.name}</span>
+                  <span className="text-sm text-gray-400 shrink-0">{c.credit}학점</span>
+                </div>
+              ))}
+            </div>
+            <div className="px-6 py-4 border-t border-gray-100 shrink-0">
+              <p className="text-xs text-gray-400 text-center">실수로 닫아도 이미지 저장 버튼 아래 수강신청하기로 다시 볼 수 있어요.</p>
+            </div>
+          </div>
+        </div>
       )}
 
       {/* Left panel */}
@@ -807,10 +848,18 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                     ))}
                   </div>
                 )}
-                <div className="shrink-0 pt-1">
+                <div className="shrink-0 pt-1 flex flex-col gap-1.5">
                   <button onClick={saveAsImage} disabled={saving} className="w-full py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors">
                     {saving ? "저장 중..." : "최종 시간표 이미지 저장"}
                   </button>
+                  {regSaved && (
+                    <button
+                      onClick={() => setRegModal({ courses: regSaved })}
+                      className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-colors"
+                    >
+                      수강신청하기
+                    </button>
+                  )}
                 </div>
               </>
             ) : (
@@ -833,10 +882,18 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                     )}
                   </div>
                 </div>
-                <div className="shrink-0 pt-1">
+                <div className="shrink-0 pt-1 flex flex-col gap-1.5">
                   <button onClick={saveAsImage} disabled={saving || !pinnedCombo?.length} className="w-full py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors">
                     {saving ? "저장 중..." : "최종 시간표 이미지 저장"}
                   </button>
+                  {regSaved && (
+                    <button
+                      onClick={() => setRegModal({ courses: regSaved })}
+                      className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-colors"
+                    >
+                      수강신청하기
+                    </button>
+                  )}
                 </div>
               </>
             )}
