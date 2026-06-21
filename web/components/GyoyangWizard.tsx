@@ -497,7 +497,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                 className="flex-1 border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-blue-400"
               >
                 <option value="">전체</option>
-                {(["월화","월수","월목","월금","화수","화목","화금","수목","수금","목금"]).map((combo) => (
+                {(["월","화","수","목","금","월화","월수","월목","월금","화수","화목","화금","수목","수금","목금"]).map((combo) => (
                   <option key={combo} value={combo}>{combo}</option>
                 ))}
               </select>
