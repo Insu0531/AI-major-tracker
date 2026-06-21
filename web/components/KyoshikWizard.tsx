@@ -290,9 +290,15 @@ export default function KyoshikWizard({ pinnedCombo, pinnedNoTimeSections, initi
     try {
       const domtoimage = (await import("dom-to-image-more")).default;
       void comboToCapture;
-      const el = captureRef.current!
-      const CAPTURE_W = 810;
       const bg = isDark() ? "#171717" : "#ffffff";
+
+      // 크롭 지점 계산 (클론 생성 전에 먼저 확정)
+      const maxEnd = displayCombo.flatMap(s => s.times).reduce((mx, t) => Math.max(mx, t.end), 0);
+      const cutoffH = (maxEnd > 0 && maxEnd <= 18) ? 18 : 22;
+      const gridBodyH = (cutoffH - 9) * 52; // 468 or 676
+      const CAPTURE_W = 28 + gridBodyH; // CAPTURE_W ≈ content height → 자연스러운 정사각형
+
+      const el = captureRef.current!
       const clone = el.cloneNode(true) as HTMLElement;
       clone.style.cssText = `position:fixed;left:-9999px;top:0;width:${CAPTURE_W}px;height:auto;overflow:visible;`;
       document.body.appendChild(clone);
@@ -310,8 +316,36 @@ export default function KyoshikWizard({ pinnedCombo, pinnedNoTimeSections, initi
         }
       });
 
-      const dataUrl = await domtoimage.toPng(clone, { bgcolor: bg, scale: 3, width: CAPTURE_W, height: clone.scrollHeight });
+      // 18시 크롭: 그리드 바디를 cutoffH까지만 표시
+      if (cutoffH < 22) {
+        const gridBody = clone.querySelector<HTMLElement>('[style*="height: 676px"]');
+        if (gridBody) {
+          gridBody.style.height = `${gridBodyH}px`;
+          let anc: HTMLElement | null = gridBody.parentElement;
+          while (anc && anc !== clone) {
+            if (anc.style.height && parseInt(anc.style.height) >= 600) {
+              anc.style.height = `${28 + gridBodyH}px`;
+              break;
+            }
+            anc = anc.parentElement;
+          }
+        }
+      }
+
+      const rawUrl = await domtoimage.toPng(clone, { bgcolor: bg, scale: 3, width: CAPTURE_W, height: clone.scrollHeight });
       document.body.removeChild(clone);
+
+      // 정사각형 보정
+      const img = new Image();
+      await new Promise<void>(r => { img.onload = () => r(); img.src = rawUrl; });
+      const sq = Math.max(img.width, img.height);
+      const canvas = document.createElement("canvas");
+      canvas.width = sq; canvas.height = sq;
+      const ctx = canvas.getContext("2d")!;
+      ctx.fillStyle = bg; ctx.fillRect(0, 0, sq, sq);
+      ctx.drawImage(img, 0, 0);
+      const dataUrl = canvas.toDataURL("image/png");
+
       const link = document.createElement("a");
       link.href = dataUrl;
       const termLabel = semTerm === "s" ? "여름계절" : semTerm === "w" ? "겨울계절" : `${semTerm}학기`;

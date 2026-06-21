@@ -399,13 +399,17 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
       // 현재 표시된 timetableRef를 그대로 씀 (이미 applyProfPicks 반영된 상태라면)
       // → 여기선 간단히 현재 timetableRef DOM을 클론해 찍음
       // (교수 선택 반영은 displayComboForCapture state를 통해 TimetableGrid에 전달)
-      void fullCombo; // fullCombo는 captureCombo state를 통해 이미 반영됨
-
-      const el = captureRef.current!
-      const CAPTURE_W = 810;
       const dark = isDark();
       const bg = dark ? "#171717" : "#ffffff";
 
+      // 크롭 지점 계산 (클론 생성 전에 먼저 확정)
+      const maxEnd = fullCombo.flatMap(s => s.times).reduce((mx, t) => Math.max(mx, t.end), 0);
+      const cutoffH = (maxEnd > 0 && maxEnd <= 18) ? 18 : 22;
+      const gridBodyH = (cutoffH - 9) * 52; // 468 or 676
+      // CAPTURE_W ≈ content height → 자연스러운 정사각형
+      const CAPTURE_W = 28 + gridBodyH; // 496 or 704
+
+      const el = captureRef.current!
       const clone = el.cloneNode(true) as HTMLElement;
       clone.style.position = "fixed";
       clone.style.left = "-9999px";
@@ -428,13 +432,40 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
         }
       });
 
-      const dataUrl = await domtoimage.toPng(clone, {
+      // 18시 크롭: 그리드 바디를 cutoffH까지만 표시
+      if (cutoffH < 22) {
+        const gridBody = clone.querySelector<HTMLElement>('[style*="height: 676px"]');
+        if (gridBody) {
+          gridBody.style.height = `${gridBodyH}px`;
+          let anc: HTMLElement | null = gridBody.parentElement;
+          while (anc && anc !== clone) {
+            if (anc.style.height && parseInt(anc.style.height) >= 600) {
+              anc.style.height = `${28 + gridBodyH}px`;
+              break;
+            }
+            anc = anc.parentElement;
+          }
+        }
+      }
+
+      const rawUrl = await domtoimage.toPng(clone, {
         bgcolor: bg,
         scale: 3,
         width: CAPTURE_W,
         height: clone.scrollHeight,
       });
       document.body.removeChild(clone);
+
+      // 정사각형 보정: 시간 외 블록 등으로 높이가 약간 다를 수 있으므로 canvas로 맞춤
+      const img = new Image();
+      await new Promise<void>(r => { img.onload = () => r(); img.src = rawUrl; });
+      const sq = Math.max(img.width, img.height);
+      const canvas = document.createElement("canvas");
+      canvas.width = sq; canvas.height = sq;
+      const ctx = canvas.getContext("2d")!;
+      ctx.fillStyle = bg; ctx.fillRect(0, 0, sq, sq);
+      ctx.drawImage(img, 0, 0);
+      const dataUrl = canvas.toDataURL("image/png");
 
       const link = document.createElement("a");
       link.href = dataUrl;
