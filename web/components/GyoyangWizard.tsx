@@ -5,6 +5,7 @@ import { buildSectionGroups, generateCombos, parseTimes, Section, SectionGroup, 
 import TimetableGrid from "@/components/TimetableGrid";
 import ProfPickerModal, { ProfStep, getMultiProfSections, applyProfPicks } from "@/components/ProfPickerModal";
 import GYOYANG_LIST from "@/lib/gyoyang.json";
+import { saveTimetable } from "@/lib/timetableStorage";
 
 type GyoyangCourse = { code: string; name: string; credit: string; sdg: boolean; hmnts: boolean };
 const ALL_COURSES: GyoyangCourse[] = GYOYANG_LIST as GyoyangCourse[];
@@ -63,7 +64,7 @@ function summarizeDays(timeStrs: string[]): string {
   return [...patterns].join("/");
 }
 
-export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initialSem, majorLabel }: { pinnedCombo: Section[] | null; pinnedNoTimeSections?: NoTimeSection[]; initialSem?: string; majorLabel?: string }) {
+export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initialSem, majorLabel, major }: { pinnedCombo: Section[] | null; pinnedNoTimeSections?: NoTimeSection[]; initialSem?: string; majorLabel?: string; major?: string }) {
   const [semYear, setSemYear] = useState(() => initialSem?.split("-")[0] ?? "2026");
   const [semTerm, setSemTerm] = useState(() => initialSem?.split("-")[1] ?? "1");
   const sem = `${semYear}-${semTerm}`;
@@ -116,9 +117,14 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   const [saving, setSaving] = useState(false);
   const timetableRef = useRef<HTMLDivElement | null>(null);
 
+  // 시간표 저장
+  const [gyoSavePrompt, setGyoSavePrompt] = useState(false);
+  const [gyoSaveName, setGyoSaveName] = useState("");
+
   // 수강신청 팝업
   const [regModal, setRegModal] = useState<{ courses: { crseNo: string; name: string; credit: number }[] } | null>(null);
   const [regSaved, setRegSaved] = useState<{ crseNo: string; name: string; credit: number }[] | null>(null);
+  const [copiedCode, setCopiedCode] = useState<string | null>(null);
 
   // 교수 선택 팝업 상태
   const [profSteps, setProfSteps] = useState<ProfStep[]>([]);
@@ -362,7 +368,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   const isDark = () =>
     typeof document !== "undefined" && document.documentElement.classList.contains("dark");
 
-  const doCapture = async (comboToCapture: Section[]) => {
+  const doCapture = async (comboToCapture: Section[], pinnedForReg?: Section[]) => {
     if (!timetableRef.current) return;
     setSaving(true);
     try {
@@ -406,8 +412,8 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
       link.download = `${prefix}${semYear}년 ${termLabel} 시간표.png`;
       document.body.appendChild(link); link.click(); document.body.removeChild(link);
 
-      // 수강신청 팝업용 과목 목록 수집
-      const fullComboForReg = [...(capturedPinnedCombo ?? pinnedCombo ?? []), ...comboToCapture];
+      // 수강신청 팝업용 과목 목록 수집 (교수 선택이 반영된 버전 우선 사용)
+      const fullComboForReg = [...(pinnedForReg ?? pinnedCombo ?? []), ...comboToCapture];
       const noTimeForReg = [...(pinnedNoTimeSections ?? []), ...noTimeSections];
       const courses = [
         ...fullComboForReg.map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),
@@ -476,7 +482,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
       // pinnedCombo는 visibleCombo 계산에서 captureCombo와 합쳐지므로 별도 state 필요
       setCapturedPinnedCombo(resolvedPinned);
       await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
-      await doCapture(resolvedGyoyang);
+      await doCapture(resolvedGyoyang, resolvedPinned);
       setCaptureCombo(null);
       setCapturedPinnedCombo(null);
     };
@@ -496,6 +502,59 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
         />
       )}
 
+      {/* 시간표 저장 이름 입력 모달 */}
+      {gyoSavePrompt && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30">
+          <div className="bg-white rounded-xl shadow-xl px-6 py-5 flex flex-col gap-4 w-80 max-w-[90vw]">
+            <p className="text-sm font-semibold text-gray-800">시간표 이름</p>
+            <input
+              autoFocus
+              type="text"
+              value={gyoSaveName}
+              onChange={(e) => setGyoSaveName(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && gyoSaveName.trim()) {
+                  saveTimetable({
+                    name: gyoSaveName.trim(),
+                    sem: `${semYear}-${semTerm}`,
+                    major: major ?? "",
+                    majorLabel: majorLabel ?? "",
+                    pinnedCombo: pinnedCombo ?? [],
+                    pinnedNoTimeSections: pinnedNoTimeSections ?? [],
+                    gyoyangCombo: currentCombo,
+                    gyoyangNoTimeSections: noTimeSections,
+                  });
+                  setGyoSavePrompt(false);
+                }
+              }}
+              className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400"
+            />
+            <div className="flex gap-2">
+              <button onClick={() => setGyoSavePrompt(false)} className="flex-1 py-2 border border-gray-300 rounded-lg text-sm text-gray-600 hover:bg-gray-50">취소</button>
+              <button
+                disabled={!gyoSaveName.trim()}
+                onClick={() => {
+                  saveTimetable({
+                    name: gyoSaveName.trim(),
+                    sem: `${semYear}-${semTerm}`,
+                    major: major ?? "",
+                    majorLabel: majorLabel ?? "",
+                    pinnedCombo: pinnedCombo ?? [],
+                    pinnedNoTimeSections: pinnedNoTimeSections ?? [],
+                    gyoyangCombo: currentCombo,
+                    gyoyangNoTimeSections: noTimeSections,
+                  });
+                  setGyoSavePrompt(false);
+                }}
+                className="flex-1 py-2 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg"
+              >
+                저장
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* 수강신청 팝업 */}
       {regModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
@@ -503,21 +562,39 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
             <div className="px-6 pt-5 pb-3 border-b border-gray-100 flex items-center justify-between shrink-0">
               <div>
                 <p className="text-base font-bold text-gray-800">수강신청 과목 목록</p>
-                <p className="text-xs text-gray-400 mt-0.5">텍스트를 선택해 복사하세요</p>
+                <p className="text-xs text-gray-400 mt-0.5">과목코드를 클립보드에 복사하세요</p>
               </div>
-              <button onClick={() => setRegModal(null)} className="text-gray-400 hover:text-gray-600 text-xl px-1">✕</button>
+              <button onClick={() => { setRegModal(null); setCopiedCode(null); }} className="text-gray-400 hover:text-gray-600 text-xl px-1">✕</button>
             </div>
-            <div className="overflow-y-auto flex-1 px-6 py-4 flex flex-col gap-3">
-              {regModal.courses.map((c) => (
-                <div key={c.crseNo} className="flex items-baseline gap-3 select-text">
-                  <span className="text-lg font-mono font-bold text-blue-600 shrink-0">{c.crseNo}</span>
-                  <span className="text-lg font-semibold text-gray-800">{c.name}</span>
-                  <span className="text-sm text-gray-400 shrink-0">{c.credit}학점</span>
-                </div>
-              ))}
+            <div className="overflow-y-auto flex-1 px-6 py-4 flex flex-col gap-2">
+              {regModal.courses.map((c) => {
+                const code = c.crseNo.replace(/-/g, "");
+                const isCopied = copiedCode === code;
+                return (
+                  <div key={c.crseNo} className="flex items-center gap-3">
+                    <button
+                      onClick={() => {
+                        navigator.clipboard.writeText(code).then(() => {
+                          setCopiedCode(code);
+                          setTimeout(() => setCopiedCode(null), 2000);
+                        });
+                      }}
+                      className={`shrink-0 w-28 py-1.5 rounded-lg text-sm font-mono font-bold transition-all duration-200 ${
+                        isCopied
+                          ? "bg-green-500 text-white"
+                          : "bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-200"
+                      }`}
+                    >
+                      {isCopied ? "✓ 복사됨" : code}
+                    </button>
+                    <span className="text-base font-semibold text-gray-800 leading-tight">{c.name}</span>
+                    <span className="text-xs text-gray-400 shrink-0 ml-auto">{c.credit}학점</span>
+                  </div>
+                );
+              })}
             </div>
             <div className="px-6 py-4 border-t border-gray-100 shrink-0">
-              <p className="text-xs text-gray-400 text-center">실수로 닫아도 이미지 저장 버튼 아래 수강신청하기로 다시 볼 수 있어요.</p>
+              <p className="text-xs text-gray-400 text-center">실수로 닫아도 수강신청하기 버튼으로 다시 볼 수 있어요.</p>
             </div>
           </div>
         </div>
@@ -849,9 +926,17 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                   </div>
                 )}
                 <div className="shrink-0 pt-1 flex flex-col gap-1.5">
-                  <button onClick={saveAsImage} disabled={saving} className="w-full py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors">
-                    {saving ? "저장 중..." : "최종 시간표 이미지 저장"}
-                  </button>
+                  <div className="flex gap-2">
+                    <button onClick={saveAsImage} disabled={saving} className="flex-1 py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors">
+                      {saving ? "저장 중..." : "이미지 저장"}
+                    </button>
+                    <button
+                      onClick={() => { setGyoSaveName(`${majorLabel ?? ""} ${semYear}년 ${semTerm === "s" ? "여름" : semTerm === "w" ? "겨울" : `${semTerm}학기`} 시간표`.trim()); setGyoSavePrompt(true); }}
+                      className="flex-1 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-colors"
+                    >
+                      라이브러리에 저장
+                    </button>
+                  </div>
                   {regSaved && (
                     <button
                       onClick={() => setRegModal({ courses: regSaved })}
@@ -883,9 +968,18 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                   </div>
                 </div>
                 <div className="shrink-0 pt-1 flex flex-col gap-1.5">
-                  <button onClick={saveAsImage} disabled={saving || !pinnedCombo?.length} className="w-full py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors">
-                    {saving ? "저장 중..." : "최종 시간표 이미지 저장"}
-                  </button>
+                  <div className="flex gap-2">
+                    <button onClick={saveAsImage} disabled={saving || !pinnedCombo?.length} className="flex-1 py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors">
+                      {saving ? "저장 중..." : "이미지 저장"}
+                    </button>
+                    <button
+                      onClick={() => { setGyoSaveName(`${majorLabel ?? ""} ${semYear}년 ${semTerm === "s" ? "여름" : semTerm === "w" ? "겨울" : `${semTerm}학기`} 시간표`.trim()); setGyoSavePrompt(true); }}
+                      disabled={!pinnedCombo?.length}
+                      className="flex-1 py-2 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors"
+                    >
+                      라이브러리에 저장
+                    </button>
+                  </div>
                   {regSaved && (
                     <button
                       onClick={() => setRegModal({ courses: regSaved })}

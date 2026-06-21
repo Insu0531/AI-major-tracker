@@ -7,6 +7,7 @@ import { Major, MAJOR_LABELS, ENTRY_YEAR_MIN, ENTRY_YEAR_MAX, fetchCoursesByYear
 import TimetableGrid from "@/components/TimetableGrid";
 import GyoyangWizard from "@/components/GyoyangWizard";
 import FeedbackTab from "@/components/FeedbackTab";
+import LibraryTab from "@/components/LibraryTab";
 
 type Row = {
   grade: string;
@@ -37,7 +38,7 @@ const COLS: { key: keyof Row; label: string }[] = [
 const MAX_SELECT = 10;
 
 export default function Home() {
-  const [tab, setTab] = useState<"search" | "wizard" | "gyoyang" | "settings" | "feedback">("search");
+  const [tab, setTab] = useState<"search" | "wizard" | "gyoyang" | "settings" | "feedback" | "library">("search");
   const [darkMode, setDarkMode] = useState(false);
   const [refetchConfirm, setRefetchConfirm] = useState(false);
   const [showMajor2Tip, setShowMajor2Tip] = useState(false);
@@ -392,15 +393,21 @@ export default function Home() {
           { key: "search", label: "전공 조회" },
           { key: "wizard", label: "전공 마법사" },
           { key: "gyoyang", label: "교양 마법사" },
+          { key: "library", label: "라이브러리" },
           { key: "settings", label: "설정" },
           { key: "feedback", label: "응원/문의" },
         ] as const).map(({ key, label }) => {
-          const disabled = key === "gyoyang" && !pinnedCombo;
+          const disabled =
+            (key === "wizard" && rows.length === 0) ||
+            (key === "gyoyang" && !pinnedCombo);
+          const disabledTitle =
+            key === "wizard" ? "전공 조회 후 사용할 수 있습니다" :
+            key === "gyoyang" ? "시간표 마법사에서 ★ 교양 마법사로 이동을 먼저 선택하세요" : undefined;
           return (
             <button
               key={key}
               onClick={() => { if (!disabled) setTab(key); }}
-              title={disabled ? "시간표 마법사에서 ★ 교양 마법사로 이동을 먼저 선택하세요" : undefined}
+              title={disabled ? disabledTitle : undefined}
               className={`px-4 py-2 text-sm border-b-2 transition-colors ${
                 tab === key
                   ? "border-blue-500 text-blue-600 font-semibold"
@@ -1159,7 +1166,7 @@ export default function Home() {
                       ))}
                     </div>
                   )}
-                  <div className="flex gap-3 shrink-0 pt-1">
+                  <div className="flex gap-2 shrink-0 pt-1">
                     <button
                       onClick={() => { setPinnedCombo(currentCombo); setTab("gyoyang"); }}
                       className="w-full py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded-lg transition-colors"
@@ -1199,12 +1206,15 @@ export default function Home() {
         {/* ── 교양 마법사 탭 ── 항상 마운트, 탭 전환 시 숨기기만 해서 상태 유지 */}
         <div className={`flex flex-1 overflow-hidden ${tab === "gyoyang" ? "" : "hidden"}`}>
           {pinnedCombo !== null && (
-            <GyoyangWizard pinnedCombo={pinnedCombo} pinnedNoTimeSections={noTimeSections} initialSem={sem} majorLabel={MAJOR_LABELS[major]} />
+            <GyoyangWizard pinnedCombo={pinnedCombo} pinnedNoTimeSections={noTimeSections} initialSem={sem} majorLabel={MAJOR_LABELS[major]} major={major} />
           )}
         </div>
 
         {/* ── 응원/문의 탭 ── */}
         {tab === "feedback" && <FeedbackTab />}
+
+        {/* ── 라이브러리 탭 ── */}
+        {tab === "library" && <LibraryTab />}
 
         {/* ── 설정 탭 ── */}
         {tab === "settings" && (
@@ -1250,6 +1260,7 @@ export default function Home() {
           </div>
         </div>
       )}
+
 
       <footer className="border-t border-gray-200 bg-white px-6 py-1.5 text-xs text-gray-400 flex gap-2 shrink-0">
         <span>insu0531@knu.ac.kr</span>

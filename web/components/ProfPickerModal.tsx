@@ -14,7 +14,8 @@ export function applyProfPicks(combo: Section[], picks: Map<string, string>): Se
   return combo.map((sec) => {
     const picked = picks.get(sec.name);
     if (!picked || sec.profs.length <= 1) return sec;
-    return { ...sec, profs: [picked] };
+    const crseNo = sec.profToCrseNo?.[picked] ?? sec.crseNo;
+    return { ...sec, profs: [picked], crseNo };
   });
 }
 

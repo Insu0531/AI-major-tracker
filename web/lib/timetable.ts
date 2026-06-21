@@ -27,6 +27,7 @@ export type Section = {
   credit: number;
   crseNo: string;
   location: string;
+  profToCrseNo?: Record<string, string>;
 };
 
 export type SectionGroup = Section[];
@@ -65,10 +66,14 @@ export function buildSectionGroups(
           credit,
           crseNo: row.crseNo,
           location: row.location ?? "",
+          profToCrseNo: { [row.prof]: row.crseNo },
         });
       } else {
         const sec = slotMap.get(key)!;
-        if (!sec.profs.includes(row.prof)) sec.profs.push(row.prof);
+        if (!sec.profs.includes(row.prof)) {
+          sec.profs.push(row.prof);
+          if (sec.profToCrseNo) sec.profToCrseNo[row.prof] = row.crseNo;
+        }
       }
     }
     if (slotMap.size > 0) {
