@@ -69,7 +69,7 @@ export default function Home() {
   }, []);
 
   const [semYear, setSemYear] = useState("2026");
-  const [semTerm, setSemTerm] = useState("1");
+  const [semTerm, setSemTerm] = useState("2");
   const [entryYear, setEntryYear] = useState(2026);
   const sem = `${semYear}-${semTerm}`;
   const [courses, setCourses] = useState<Course[]>([]);
