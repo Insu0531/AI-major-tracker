@@ -10,7 +10,7 @@ type GyoyangCourse = { code: string; name: string; credit: string; sdg: boolean;
 const ALL_COURSES: GyoyangCourse[] = GYOYANG_LIST as GyoyangCourse[];
 const MAX_SELECT = 6;
 
-type Row = { grade: string; crseNo: string; name: string; code: string; credit: string; dept: string; prof: string; timeStr: string; rmrk: string; tag?: string };
+type Row = { grade: string; crseNo: string; name: string; code: string; credit: string; dept: string; prof: string; timeStr: string; rmrk: string; location: string; tag?: string };
 
 function slotsOverlap(a: TimeSlot[], b: TimeSlot[]): boolean {
   for (const x of a) for (const y of b) {
@@ -72,6 +72,16 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   const [search, setSearch] = useState("");
   const [filterSdg, setFilterSdg] = useState(false);
   const [filterHmnts, setFilterHmnts] = useState(false);
+  const [filterSuEval, setFilterSuEval] = useState(false);
+  const [filterRemote, setFilterRemote] = useState(false);
+  const [filterIlban, setFilterIlban] = useState(false);
+  const [filterHideConflict, setFilterHideConflict] = useState(true);
+  const [filterSangju, setFilterSangju] = useState<"exclude" | "include" | "all">("exclude");
+  const [filterPanelOpen, setFilterPanelOpen] = useState(true);
+
+  const isSangju = majorLabel?.startsWith("[상주]") ?? false;
+  // 상주 모드 변경 시 필터 기본값 리셋
+  useEffect(() => { setFilterSangju(isSangju ? "include" : "exclude"); }, [isSangju]);
   const [filterDayOff, setFilterDayOff] = useState<Set<number>>(new Set());
   const [filterDayCombo, setFilterDayCombo] = useState<string>("");
   const [sortAsc, setSortAsc] = useState(true);
@@ -83,8 +93,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
 
   // 전체 조회 결과 (학기 전체 교양)
   const [allRows, setAllRows] = useState<Row[]>([]);
-  const isSangju = majorLabel?.startsWith("[상주]") ?? false;
-  const effectiveRows = isSangju ? allRows.filter((r) => r.rmrk.includes("상주캠퍼스")) : allRows;
+  const effectiveRows = allRows; // 상주 필터는 filteredList/filteredSangju 로 처리
   const [loading, setLoading] = useState(false);
   const [fetched, setFetched] = useState(false);
 
@@ -162,7 +171,24 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sem]);
 
+  // 일반선택 과목은 gyoyang.json에 없으므로 effectiveRows에서 동적으로 보완
+  const allCourses = useMemo(() => {
+    const known = new Set(ALL_COURSES.map((c) => c.code));
+    const seen = new Set<string>();
+    const extras: GyoyangCourse[] = [];
+    for (const r of effectiveRows) {
+      if (!known.has(r.code) && !seen.has(r.code)) {
+        seen.add(r.code);
+        extras.push({ code: r.code, name: r.name, credit: r.credit, sdg: false, hmnts: false });
+      }
+    }
+    return [...ALL_COURSES, ...extras];
+  }, [effectiveRows]);
+
   const openCodes = new Set(effectiveRows.map((r) => r.code));
+  const suEvalCodes = new Set(effectiveRows.filter((r) => r.rmrk.includes("SU평가")).map((r) => r.code));
+  const remoteCodes = new Set(effectiveRows.filter((r) => r.rmrk.includes("원격강좌")).map((r) => r.code));
+  const sanjuCodes = new Set(effectiveRows.filter((r) => r.rmrk.includes("상주캠퍼스")).map((r) => r.code));
 
   const pinnedSlots = pinnedCombo?.flatMap((s) => s.times) ?? [];
   const conflictCodes = new Set(
@@ -179,11 +205,16 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   );
 
   const filteredList = useMemo(() => {
-    const list = ALL_COURSES.filter((c) => {
+    const list = allCourses.filter((c) => {
       if (fetched && !openCodes.has(c.code)) return false;
-      if (fetched && conflictCodes.has(c.code)) return false;
+      if (filterHideConflict && fetched && conflictCodes.has(c.code)) return false;
       if (filterSdg && !c.sdg) return false;
       if (filterHmnts && !c.hmnts) return false;
+      if (filterSuEval && fetched && !suEvalCodes.has(c.code)) return false;
+      if (filterRemote && fetched && !remoteCodes.has(c.code)) return false;
+      if (filterIlban && c.code.startsWith("CLTR")) return false;
+      if (filterSangju === "exclude" && fetched && sanjuCodes.has(c.code)) return false;
+      if (filterSangju === "include" && fetched && !sanjuCodes.has(c.code)) return false;
       if (filterDayOff.size > 0 && fetched) {
         const rows = effectiveRows.filter((r) => r.code === c.code);
         const hasMatchingSection = rows.some((r) => {
@@ -214,7 +245,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
     const sel = list.filter((c) => selected.has(c.code));
     const rest = list.filter((c) => !selected.has(c.code));
     return [...sel, ...rest];
-  }, [ALL_COURSES, fetched, openCodes, conflictCodes, filterSdg, filterHmnts, filterDayOff, filterDayCombo, effectiveRows, search, sortAsc, selected]);
+  }, [allCourses, fetched, openCodes, conflictCodes, filterSdg, filterHmnts, filterSuEval, filterRemote, filterIlban, filterHideConflict, filterSangju, suEvalCodes, remoteCodes, sanjuCodes, filterDayOff, filterDayCombo, effectiveRows, search, sortAsc, selected]);
 
   useEffect(() => {
     if (effectiveRows.length === 0 || selected.size === 0) { setCombos([]); setNoTimeSections([]); return; }
@@ -457,84 +488,119 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                 ㄱ{sortAsc ? "▲" : "▼"}
               </button>
             </div>
-            <div className="flex gap-3 items-center">
-              <label className="flex items-center gap-1 text-xs text-gray-600 cursor-pointer">
-                <input type="checkbox" checked={filterSdg} onChange={(e) => setFilterSdg(e.target.checked)} />
-                SDG교양
-              </label>
-              <label className="flex items-center gap-1 text-xs text-gray-600 cursor-pointer">
-                <input type="checkbox" checked={filterHmnts} onChange={(e) => setFilterHmnts(e.target.checked)} />
-                인문교양
-              </label>
-              {fetched && (
-                <span className="text-xs text-gray-400 ml-auto">
-                  {filteredList.length}과목 ·{" "}
-                  {filteredList.reduce((s, c) => s + effectiveRows.filter((r) => r.code === c.code).length, 0)}분반
+            {/* 필터 접기/펼치기 헤더 */}
+            <div className="flex items-center justify-between">
+              <button
+                onClick={() => setFilterPanelOpen((v) => !v)}
+                className="flex items-center gap-1 text-xs text-gray-500 hover:text-gray-700 w-fit"
+              >
+                <span>{filterPanelOpen ? "▾" : "▸"}</span>
+                <span>필터</span>
+                {(filterSdg || filterHmnts || filterSuEval || filterRemote || filterIlban || !filterHideConflict || filterDayOff.size > 0 || filterDayCombo || maxCredit > 0 || minGyoyangCredit > 0) && (
+                  <span className="ml-1 text-blue-500">●</span>
+                )}
+              </button>
+              <div className="flex gap-2 items-center">
+                {fetched && (
+                  <span className="text-xs text-gray-400">
+                    {filteredList.length}과목 ·{" "}
+                    {filteredList.reduce((s, c) => s + effectiveRows.filter((r) => r.code === c.code).length, 0)}분반
+                  </span>
+                )}
+                <span className={`text-xs ${selected.size >= MAX_SELECT ? "text-red-500 font-bold" : "text-gray-400"}`}>
+                  {selected.size}/{MAX_SELECT}
                 </span>
-              )}
-              <span className={`text-xs ${selected.size >= MAX_SELECT ? "text-red-500 font-bold" : "text-gray-400"}`}>
-                {selected.size}/{MAX_SELECT}
-              </span>
-              {selected.size > 0 && (
-                <button onClick={() => setSelected(new Set())} className="text-xs text-gray-400 hover:text-red-500">전체 해제</button>
-              )}
+                {selected.size > 0 && (
+                  <button onClick={() => setSelected(new Set())} className="text-xs text-gray-400 hover:text-red-500">전체 해제</button>
+                )}
+              </div>
             </div>
-            <div className="flex items-center gap-1">
-              <span className="text-xs text-gray-600 shrink-0">포함 요일</span>
-              {["월","화","수","목","금"].map((d, i) => (
-                <button key={i} onClick={() => {
-                  const next = new Set(filterDayOff);
-                  next.has(i) ? next.delete(i) : next.add(i);
-                  setFilterDayOff(next);
-                }} className={`flex-1 py-1 text-xs rounded border transition-colors ${filterDayOff.has(i) ? "bg-blue-600 text-white border-blue-600" : "border-gray-300 text-gray-600 hover:bg-gray-50"}`}>
-                  {d}
-                </button>
-              ))}
-            </div>
-            <div className="flex items-center gap-2">
-              <label className="text-xs text-gray-600 shrink-0">요일 조합</label>
-              <select
-                value={filterDayCombo}
-                onChange={(e) => setFilterDayCombo(e.target.value)}
-                className="flex-1 border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-blue-400"
-              >
-                <option value="">전체</option>
-                {(["월","화","수","목","금","월화","월수","월목","월금","화수","화목","화금","수목","수금","목금"]).map((combo) => (
-                  <option key={combo} value={combo}>{combo}</option>
-                ))}
-              </select>
-            </div>
-            <div className="flex items-center gap-2">
-              <label className="text-xs text-gray-600 shrink-0">최대 학점</label>
-              <select
-                value={maxCredit}
-                onChange={(e) => setMaxCredit(Number(e.target.value))}
-                className="flex-1 border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-blue-400"
-              >
-                <option value={0}>제한 없음</option>
-                {Array.from({ length: 16 }, (_, i) => i + 12).map((v) => (
-                  <option key={v} value={v}>{v}학점</option>
-                ))}
-              </select>
-              {maxCredit > 0 && (
-                <span className="text-xs text-gray-400 shrink-0">
-                  전공 {(pinnedCombo ?? []).reduce((s, sec) => s + sec.credit, 0)}학점
-                </span>
-              )}
-            </div>
-            <div className="flex items-center gap-2">
-              <label className="text-xs text-gray-600 shrink-0">전체 최소</label>
-              <select
-                value={minGyoyangCredit}
-                onChange={(e) => setMinGyoyangCredit(Number(e.target.value))}
-                className="flex-1 border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-blue-400"
-              >
-                <option value={0}>제한 없음</option>
-                {Array.from({ length: 17 }, (_, i) => i + 9).map((v) => (
-                  <option key={v} value={v}>{v}학점 이상</option>
-                ))}
-              </select>
-            </div>
+            {/* 필터 내용 (접기/펼치기) */}
+            {filterPanelOpen && (
+              <div className="flex flex-col gap-2">
+                <div className="flex flex-wrap gap-x-3 gap-y-1">
+                  <label className="flex items-center gap-1 text-xs text-gray-600 cursor-pointer">
+                    <input type="checkbox" checked={filterSdg} onChange={(e) => setFilterSdg(e.target.checked)} />
+                    SDG교양
+                  </label>
+                  <label className="flex items-center gap-1 text-xs text-gray-600 cursor-pointer">
+                    <input type="checkbox" checked={filterHmnts} onChange={(e) => setFilterHmnts(e.target.checked)} />
+                    인문교양
+                  </label>
+                  <label className="flex items-center gap-1 text-xs text-gray-600 cursor-pointer">
+                    <input type="checkbox" checked={filterSuEval} onChange={(e) => setFilterSuEval(e.target.checked)} />
+                    SU평가
+                  </label>
+                  <label className="flex items-center gap-1 text-xs text-gray-600 cursor-pointer">
+                    <input type="checkbox" checked={filterRemote} onChange={(e) => setFilterRemote(e.target.checked)} />
+                    원격강좌
+                  </label>
+                  <label className="flex items-center gap-1 text-xs text-gray-600 cursor-pointer">
+                    <input type="checkbox" checked={filterIlban} onChange={(e) => setFilterIlban(e.target.checked)} />
+                    일반선택
+                  </label>
+                  <label className="flex items-center gap-1 text-xs text-gray-600 cursor-pointer">
+                    <input type="checkbox" checked={filterHideConflict} onChange={(e) => setFilterHideConflict(e.target.checked)} />
+                    시간불가 숨기기
+                  </label>
+                  <label className="flex items-center gap-1 text-xs text-gray-600 cursor-pointer">
+                    <input type="checkbox" checked={filterSangju === "exclude"} onChange={(e) => setFilterSangju(e.target.checked ? "exclude" : "all")} />
+                    상주제외
+                  </label>
+                  <label className="flex items-center gap-1 text-xs text-gray-600 cursor-pointer">
+                    <input type="checkbox" checked={filterSangju === "include"} onChange={(e) => setFilterSangju(e.target.checked ? "include" : "all")} />
+                    상주만
+                  </label>
+                </div>
+                <div className="flex items-center gap-1">
+                  <span className="text-xs text-gray-600 shrink-0">포함 요일</span>
+                  {["월","화","수","목","금"].map((d, i) => (
+                    <button key={i} onClick={() => {
+                      const next = new Set(filterDayOff);
+                      next.has(i) ? next.delete(i) : next.add(i);
+                      setFilterDayOff(next);
+                    }} className={`flex-1 py-1 text-xs rounded border transition-colors ${filterDayOff.has(i) ? "bg-blue-600 text-white border-blue-600" : "border-gray-300 text-gray-600 hover:bg-gray-50"}`}>
+                      {d}
+                    </button>
+                  ))}
+                </div>
+                <div className="flex items-center gap-2">
+                  <label className="text-xs text-gray-600 shrink-0">요일 조합</label>
+                  <select value={filterDayCombo} onChange={(e) => setFilterDayCombo(e.target.value)}
+                    className="flex-1 border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-blue-400">
+                    <option value="">전체</option>
+                    {["월","화","수","목","금","월화","월수","월목","월금","화수","화목","화금","수목","수금","목금"].map((combo) => (
+                      <option key={combo} value={combo}>{combo}</option>
+                    ))}
+                  </select>
+                </div>
+                <div className="flex items-center gap-2">
+                  <label className="text-xs text-gray-600 shrink-0">최대 학점</label>
+                  <select value={maxCredit} onChange={(e) => setMaxCredit(Number(e.target.value))}
+                    className="flex-1 border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-blue-400">
+                    <option value={0}>제한 없음</option>
+                    {Array.from({ length: 16 }, (_, i) => i + 12).map((v) => (
+                      <option key={v} value={v}>{v}학점</option>
+                    ))}
+                  </select>
+                  {maxCredit > 0 && (
+                    <span className="text-xs text-gray-400 shrink-0">
+                      전공 {(pinnedCombo ?? []).reduce((s, sec) => s + sec.credit, 0)}학점
+                    </span>
+                  )}
+                </div>
+                <div className="flex items-center gap-2">
+                  <label className="text-xs text-gray-600 shrink-0">전체 최소</label>
+                  <select value={minGyoyangCredit} onChange={(e) => setMinGyoyangCredit(Number(e.target.value))}
+                    className="flex-1 border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-blue-400">
+                    <option value={0}>제한 없음</option>
+                    {Array.from({ length: 17 }, (_, i) => i + 9).map((v) => (
+                      <option key={v} value={v}>{v}학점 이상</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            )}
           </div>
           <div className="overflow-y-auto px-2 py-1 flex-1 min-h-0">
             {!fetched ? (
@@ -589,14 +655,23 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                           const next = new Set(selected);
                           e.target.checked ? next.add(c.code) : next.delete(c.code);
                           setSelected(next);
+                          setExpandedCodes((prev) => {
+                            const nextExp = new Set(prev);
+                            e.target.checked ? nextExp.add(c.code) : nextExp.delete(c.code);
+                            return nextExp;
+                          });
                         }}
                         className="mt-0.5 shrink-0"
                       />
                       <div className="flex-1 min-w-0">
                         <p className="text-sm text-gray-700 leading-tight">{c.name}</p>
                         <p className="text-xs text-gray-400">{c.code} · {c.credit}학점
+                          {!c.code.startsWith("CLTR") && <span className="ml-1 text-amber-700">일반선택</span>}
                           {c.sdg && <span className="ml-1 text-green-600">SDG</span>}
                           {c.hmnts && <span className="ml-1 text-purple-600">인문</span>}
+                          {fetched && suEvalCodes.has(c.code) && <span className="ml-1 text-orange-500">SU평가</span>}
+                          {fetched && remoteCodes.has(c.code) && <span className="ml-1 text-blue-500">원격</span>}
+                          {fetched && sanjuCodes.has(c.code) && <span className="ml-1 text-slate-500">상주</span>}
                         </p>
                         {fetched && dayPatterns.length > 0 && (
                           <p className="text-xs mt-0.5">
@@ -624,17 +699,23 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                         </button>
                       )}
                     </label>
-                    {fetched && profMap.size > 0 && isExpanded && (
+                    {fetched && courseRows.length > 0 && isExpanded && (
                       <div className="ml-6 mb-1 flex flex-col gap-0.5">
-                        {[...profMap.entries()].map(([prof, { timeStrs, conflict }]) => {
+                        {courseRows.map((r, idx) => {
+                          const sec = buildSectionGroups([r]).groups.flat()[0];
+                          const conflict = sec ? slotsOverlap(sec.times, pinnedSlots) : false;
                           const ok = !conflict;
-                          const timeLines = [...timeStrs].map(formatTimeStr).filter(Boolean);
+                          const timeStr = r.timeStr ? formatTimeStr(r.timeStr) : "";
+                          const isRemote = r.rmrk.includes("원격강좌");
+                          const isSanjuRow = r.rmrk.includes("상주캠퍼스");
+                          const prof = r.prof || "미정";
                           return (
-                            <div key={prof} className={`text-xs px-1.5 py-0.5 rounded ${ok ? "text-green-700 bg-green-50" : "text-red-400 bg-red-50"}`}>
+                            <div key={idx} className={`text-xs px-1.5 py-0.5 rounded ${ok ? "text-green-700 bg-green-50" : "text-red-400 bg-red-50"}`}>
                               <span className={ok ? "" : "line-through"}>{ok ? "✓" : "✗"} {prof}</span>
-                              {timeLines.map((t, i) => (
-                                <span key={i} className={`block pl-3 ${ok ? "text-green-600" : "text-red-300"}`}>{t}</span>
-                              ))}
+                              {isRemote && <span className="ml-1 text-blue-500">원격</span>}
+                              {isSanjuRow && <span className="ml-1 text-slate-500">상주</span>}
+                              {timeStr && <span className={`block pl-3 ${ok ? "text-green-600" : "text-red-300"}`}>{timeStr}</span>}
+                              {r.location && <span className={`block pl-3 ${ok ? "text-gray-500" : "text-red-300"}`}>{r.location}</span>}
                             </div>
                           );
                         })}
@@ -658,8 +739,8 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
         {/* 오른쪽 상단 탭바 */}
         <div className="flex items-center gap-2 px-4 pt-3 pb-0 shrink-0 border-b border-gray-200 bg-white">
           <button onClick={() => setPanelOpen((v) => !v)}
-            className="flex items-center gap-1 text-xs text-gray-500 border border-gray-300 rounded px-2 py-1 hover:bg-gray-50 mr-2">
-            {panelOpen ? "◀" : "▶"}
+            className="self-start flex items-center gap-1 text-xs text-gray-500 border border-gray-300 rounded px-2 py-1 hover:bg-gray-50 mr-2 shrink-0">
+            {panelOpen ? "◀ 패널 닫기" : "▶ 패널 열기"}
           </button>
           {(["timetable", "list"] as const).map((t) => (
             <button key={t} onClick={() => setLeftTab(t)}
@@ -700,24 +781,31 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                 </div>
               </>
             ) : (
-              <div className="flex-1 flex flex-col overflow-auto min-h-0 gap-2 pb-2">
-                {pinnedCombo && pinnedCombo.length > 0 && (
-                  <div className="shrink-0 px-1 pt-1">
-                    <TimetableGrid combo={pinnedCombo} />
-                  </div>
-                )}
-                <div className="flex items-center justify-center text-gray-400 text-sm py-4">
-                  {combos.length > 0 ? (
-                    <p>최소 학점 조건을 만족하는 조합이 없습니다</p>
-                  ) : !fetched ? (
-                    <p>왼쪽에서 조회 후 과목을 선택하면 조합이 자동 생성됩니다</p>
-                  ) : selected.size === 0 ? (
-                    <p>과목을 선택하면 조합이 자동 생성됩니다</p>
-                  ) : (
-                    <p>선택한 과목 조합이 없습니다 (전공 시간표와 모두 충돌)</p>
+              <>
+                <div className="flex-1 overflow-auto min-h-0">
+                  {pinnedCombo && pinnedCombo.length > 0 && (
+                    <div className="px-1 pt-1">
+                      <TimetableGrid ref={timetableRef} combo={pinnedCombo} />
+                    </div>
                   )}
+                  <div className="flex items-center justify-center text-gray-400 text-sm py-4">
+                    {combos.length > 0 ? (
+                      <p>최소 학점 조건을 만족하는 조합이 없습니다</p>
+                    ) : !fetched ? (
+                      <p>왼쪽에서 조회 후 과목을 선택하면 조합이 자동 생성됩니다</p>
+                    ) : selected.size === 0 ? (
+                      <p>과목을 선택하면 조합이 자동 생성됩니다</p>
+                    ) : (
+                      <p>선택한 과목 조합이 없습니다 (전공 시간표와 모두 충돌)</p>
+                    )}
+                  </div>
                 </div>
-              </div>
+                <div className="shrink-0 pt-1">
+                  <button onClick={saveAsImage} disabled={saving || !timetableRef.current} className="w-full py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors">
+                    {saving ? "저장 중..." : "최종 시간표 이미지 저장"}
+                  </button>
+                </div>
+              </>
             )}
           </div>
         )}
@@ -725,13 +813,14 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
         {/* 전체 목록 뷰 */}
         {leftTab === "list" && (() => {
           const LIST_COLS: { key: keyof Row | "tag"; label: string }[] = [
-            { key: "tag",     label: "교과구분" },
-            { key: "crseNo",  label: "강좌번호" },
-            { key: "name",    label: "교과목명" },
-            { key: "credit",  label: "학점" },
-            { key: "prof",    label: "담당교수" },
-            { key: "timeStr", label: "강의시간" },
-            { key: "rmrk",   label: "비고" },
+            { key: "tag",      label: "교과구분" },
+            { key: "crseNo",   label: "강좌번호" },
+            { key: "name",     label: "교과목명" },
+            { key: "credit",   label: "학점" },
+            { key: "prof",     label: "담당교수" },
+            { key: "timeStr",  label: "강의시간" },
+            { key: "location", label: "강의실" },
+            { key: "rmrk",    label: "비고" },
           ];
           const toggleListSort = (col: keyof Row | "tag") => {
             setListSortState((prev) => {
@@ -762,7 +851,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                       <tr>
                         {LIST_COLS.map((c) => (
                           <th key={c.key} onClick={() => toggleListSort(c.key)}
-                            className="text-left px-3 py-2 font-semibold text-gray-600 border-b border-gray-200 cursor-pointer select-none whitespace-nowrap hover:bg-gray-100">
+                            className="text-left px-2 py-2 font-semibold text-gray-600 border-b border-gray-200 cursor-pointer select-none whitespace-nowrap hover:bg-gray-100">
                             {c.label}
                             {listSortState?.col === c.key ? (listSortState.dir === "asc" ? " ▲" : " ▼") : ""}
                           </th>
@@ -775,21 +864,24 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                         const displayTagColor = displayTag === "교양" ? "text-blue-700 bg-blue-50" : "text-amber-700 bg-amber-50";
                         return (
                           <tr key={i} className={`border-b border-gray-100 hover:bg-blue-50 transition-colors ${i % 2 === 0 ? "bg-white" : "bg-gray-50/60"}`}>
-                            <td className="px-2 py-1.5 whitespace-nowrap">
-                              <span className={`px-1.5 py-0.5 rounded text-xs font-medium ${displayTagColor}`}>{displayTag}</span>
+                            <td className="px-1.5 py-1.5 whitespace-nowrap">
+                              <span className={`px-1 py-0.5 rounded text-xs font-medium ${displayTagColor}`}>{displayTag}</span>
                             </td>
-                            <td className="px-2 py-1.5 whitespace-nowrap text-gray-700 text-xs">{r.crseNo}</td>
-                            <td className="px-2 py-1.5 text-gray-700 max-w-45">
+                            <td className="px-1.5 py-1.5 whitespace-nowrap text-gray-400 text-xs">{r.crseNo}</td>
+                            <td className="px-2 py-1.5 text-gray-700 max-w-44">
                               <div className="truncate" title={r.name}>{r.name}</div>
                             </td>
-                            <td className="px-2 py-1.5 text-center whitespace-nowrap text-gray-700">{r.credit}</td>
-                            <td className="px-2 py-1.5 text-gray-700 max-w-25">
+                            <td className="px-1.5 py-1.5 text-center whitespace-nowrap text-gray-500 text-xs">{r.credit.split("-")[0]}</td>
+                            <td className="px-2 py-1.5 text-gray-700 max-w-20">
                               <div className="truncate" title={r.prof}>{r.prof}</div>
                             </td>
-                            <td className="px-2 py-1.5 text-gray-700 max-w-30">
-                              <div className="truncate" title={r.timeStr}>{r.timeStr}</div>
+                            <td className="px-2 py-1.5 text-gray-700 text-xs">
+                              {r.timeStr.split(",").map((t, i) => <div key={i} className="whitespace-nowrap">{t.trim()}</div>)}
                             </td>
-                            <td className="px-2 py-1.5 text-gray-400 max-w-25">
+                            <td className="px-2 py-1.5 text-gray-700 text-xs">
+                              {r.location ? r.location.split("\n").map((line, i) => <div key={i} className="whitespace-nowrap">{line}</div>) : ""}
+                            </td>
+                            <td className="px-1.5 py-1.5 text-gray-400 text-xs max-w-20">
                               <div className="truncate" title={r.rmrk}>{r.rmrk}</div>
                             </td>
                           </tr>

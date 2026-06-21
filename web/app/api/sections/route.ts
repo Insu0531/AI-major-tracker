@@ -61,6 +61,7 @@ async function fetchCourse(year: string, semCode: string, course: Course) {
       prof: row.totalPrfssNm ?? "",
       timeStr: row.lssnsRealTimeInfo ?? "",
       rmrk: row.rmrk ? String(row.rmrk).replace(/<[^>]*>/g, "").trim() : "",
+      location: [row.lctrmInfo, row.rmnmCd ? `${row.rmnmCd}호` : ""].filter((v) => v && String(v).trim()).join("\n"),
     }));
   } catch {
     return [];
@@ -100,7 +101,7 @@ export async function GET(req: NextRequest) {
     );
   }
 
-  const cacheKey = `sections:${majorParam}:${entryYear}:${sem}`;
+  const cacheKey = `sections:v4:${majorParam}:${entryYear}:${sem}`;
 
   try {
     const cached = await redis.get<object[]>(cacheKey);

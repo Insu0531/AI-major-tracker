@@ -157,7 +157,11 @@ majors = [
     # ("1L15","sj_animal_biotech","[상주]동물생명공학과",None),
     # ("1L1601","sj_phys_edu_major","[상주]체육학전공",None),
     # ("1L1602","sj_health_sports","[상주]건강운동관리전공",None),
-    ("1604","chem_eng","화학공학과",None),
+    # ("1604","chem_eng","화학공학과",None),
+    # 1209 사회복지학부
+    ("120901","social_welfare_micro","사회복지미시전공","1209"),
+    ("120902","social_welfare_macro","사회복지거시전공","1209"),
+    ("1209","social_welfare","사회복지학부",None),
  ]
 
 years = "2021,2022,2023,2024,2025,2026"

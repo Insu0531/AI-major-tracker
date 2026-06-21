@@ -26,6 +26,7 @@ export type Section = {
   times: TimeSlot[];
   credit: number;
   crseNo: string;
+  location: string;
 };
 
 export type SectionGroup = Section[];
@@ -33,7 +34,7 @@ export type SectionGroup = Section[];
 export type NoTimeSection = { name: string; credit: number; crseNo: string };
 
 export function buildSectionGroups(
-  rows: { grade: string; credit: string; crseNo: string; name: string; dept: string; prof: string; timeStr: string }[]
+  rows: { grade: string; credit: string; crseNo: string; name: string; dept: string; prof: string; timeStr: string; location?: string }[]
 ): { groups: SectionGroup[]; noTimeSections: NoTimeSection[] } {
   const groupMap = new Map<string, { name: string; credit: number; rows: typeof rows }>();
   for (const row of rows) {
@@ -63,6 +64,7 @@ export function buildSectionGroups(
           times,
           credit,
           crseNo: row.crseNo,
+          location: row.location ?? "",
         });
       } else {
         const sec = slotMap.get(key)!;

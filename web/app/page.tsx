@@ -16,6 +16,7 @@ type Row = {
   prof: string;
   timeStr: string;
   rmrk: string;
+  location: string;
 };
 
 type SortState = { col: keyof Row; dir: "asc" | "desc" } | null;
@@ -27,6 +28,7 @@ const COLS: { key: keyof Row; label: string }[] = [
   { key: "dept", label: "개설학과" },
   { key: "prof", label: "교수" },
   { key: "timeStr", label: "강의시간" },
+  { key: "location", label: "강의실" },
   { key: "rmrk", label: "비고" },
 ];
 
@@ -117,6 +119,8 @@ export default function Home() {
     abortRef.current = new AbortController();
     setLoading(true);
     setRows([]);
+    setExcludedRows(new Set());
+    setPinnedRows(new Map());
     setProgress({ current: 0, name: "서버에 요청 중..." });
     setStatusText("");
     setSortState(null);
@@ -150,6 +154,16 @@ export default function Home() {
             setProgress({ current: json.current, name: json.name });
             if (json.rows?.length) {
               setRows((prev) => [...prev, ...json.rows]);
+              // 상주 모드에 따라 반대 캠퍼스 분반 자동 제외
+              setExcludedRows((prev) => {
+                const next = new Set(prev);
+                for (const r of json.rows as Row[]) {
+                  const isSanjuRow = (r.rmrk ?? "").includes("상주캠퍼스");
+                  if (isSangju && !isSanjuRow) next.add(r.crseNo);
+                  if (!isSangju && isSanjuRow) next.add(r.crseNo);
+                }
+                return next;
+              });
             }
           } else if (json.type === "done") {
             setStatusText(`총 ${json.totalRows}개 분반 개설됨 (${sem})`);
@@ -157,8 +171,6 @@ export default function Home() {
             setCheckMap(new Map());
             setCombos([]);
             setFilteredCombos([]);
-            setPinnedRows(new Map());
-            setExcludedRows(new Set());
           }
         }
       }
@@ -173,7 +185,7 @@ export default function Home() {
   const isSangju = MAJOR_LABELS[major]?.startsWith("[상주]") ?? false;
 
   const sortedRows = (() => {
-    const base = isSangju ? rows.filter((r) => r.rmrk.includes("상주캠퍼스")) : rows;
+    const base = rows;
     if (!sortState) return base;
     return [...base].sort((a, b) => {
       const av = a[sortState.col];
@@ -391,7 +403,9 @@ export default function Home() {
                     </div>
                     <div className="overflow-y-auto flex-1">
                       {(Object.entries(MAJOR_LABELS) as [Major, string][])
-                        .sort(([, a], [, b]) => {
+                        .sort(([ka, a], [kb, b]) => {
+                          if (ka === "ai") return -1;
+                          if (kb === "ai") return 1;
                           const aS = a.startsWith("[상주]"), bS = b.startsWith("[상주]");
                           if (aS !== bS) return aS ? 1 : -1;
                           return a.localeCompare(b, "ko");
@@ -579,6 +593,10 @@ export default function Home() {
                             {c.key === "timeStr" ? (
                               <div className="overflow-x-auto max-w-40" style={{ scrollbarWidth: "none" }}>
                                 {row[c.key]}
+                              </div>
+                            ) : c.key === "location" ? (
+                              <div className="text-xs leading-tight">
+                                {row[c.key].split("\n").map((line, i) => <div key={i}>{line}</div>)}
                               </div>
                             ) : row[c.key]}
                           </td>

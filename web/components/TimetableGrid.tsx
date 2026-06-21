@@ -18,6 +18,7 @@ type Block = {
   name: string;
   prof: string;
   timeStr: string;
+  location: string;
   color: string;
 };
 
@@ -48,6 +49,7 @@ function comboToBlocks(combo: Section[]): Block[] {
           name: sec.name,
           prof: sec.profs.join(" / "),
           timeStr: sec.timeStr,
+          location: sec.location,
           color: BLOCK_COLORS[si % BLOCK_COLORS.length],
         });
       }
@@ -145,6 +147,11 @@ const TimetableGrid = forwardRef<HTMLDivElement, { combo: Section[] }>(function 
                 <p className="text-white text-[11px] px-1 truncate opacity-90" style={{ WebkitFontSmoothing: "antialiased" }}>
                   {profs.length > 1 ? `(${profs.length}개 분반)` : profs[0]}
                 </p>
+                {b.location && b.location.split("\n").map((line, i) => (
+                  <p key={i} className="text-white text-[10px] px-1 truncate opacity-75 leading-tight" style={{ WebkitFontSmoothing: "antialiased" }}>
+                    {line}
+                  </p>
+                ))}
               </div>
             );
           })}

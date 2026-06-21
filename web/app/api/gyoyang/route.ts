@@ -69,7 +69,7 @@ export async function GET(req: NextRequest) {
   }
   const { year, semCode } = parsed;
 
-  const cacheKey = `gyoyang:v2:${sem}`;
+  const cacheKey = `gyoyang:v5:${sem}`;
   const encoder = new TextEncoder();
 
   // 캐시 히트
@@ -114,6 +114,7 @@ export async function GET(req: NextRequest) {
           prof: r.totalPrfssNm ?? "",
           timeStr: r.lssnsRealTimeInfo ?? "",
           rmrk: r.rmrk ? String(r.rmrk).replace(/<[^>]*>/g, "").trim() : "",
+          location: [r.lctrmInfo, r.rmnmCd ? `${r.rmnmCd}호` : ""].filter((v) => v && String(v).trim()).join("\n"),
           tag: getTag(r, isFuture),
         });
 
