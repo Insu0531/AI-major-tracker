@@ -26,6 +26,7 @@ import json
 import re
 import os
 import argparse
+import time
 import requests
 
 sys.stdout.reconfigure(encoding="utf-8")
@@ -112,9 +113,9 @@ def update_courses_ts(ts_path: str, key: str, label: str, dept_cd: str, base_cd:
             entries[m.group(1)] = m.group(2)
         added = key not in entries
         entries[key] = label
-        # ai 맨 위, 나머지 label 기준 가나다 정렬
+        # ai 맨 위, [상주] 맨 아래, 나머지 label 기준 가나다 정렬
         ai_entry = {"ai": entries.pop("ai")} if "ai" in entries else {}
-        sorted_rest = dict(sorted(entries.items(), key=lambda x: x[1]))
+        sorted_rest = dict(sorted(entries.items(), key=lambda x: (x[1].startswith("[상주]"), x[1])))
         sorted_entries = {**ai_entry, **sorted_rest}
         lines = "".join(f'  {k}: "{v}",\n' for k, v in sorted_entries.items())
         content = re.sub(
@@ -177,28 +178,22 @@ def main():
     print(f"학과코드: {args.dept_cd}" + (f"  공통코드: {args.base}" if args.base else ""))
     print(f"연도: {years}")
 
-    # courses.ts 메타 업데이트
-    print(f"\n[courses.ts 업데이트]")
-    update_courses_ts(ts_path, args.key, args.label, args.dept_cd, args.base)
-
-    # 연도별 JSON 생성
-    print(f"\n[JSON 파일 생성] → {out_dir}/{args.key}/")
+    # 연도별 데이터 사전 수집
+    print(f"\n[데이터 수집 중...]")
+    year_data: list[tuple[int, list[dict]]] = []
     for year in years:
-        print(f"\n  {year}년 입학 조회 중...", end="", flush=True)
+        print(f"  {year}년 입학 조회 중...", end="", flush=True)
 
-        # 공통 이수체계가 있으면 먼저 조회
         base_courses = []
         if args.base:
             base_rows = fetch_rows(args.base, year)
             base_courses = parse_courses(base_rows)
             print(f" 공통 {len(base_courses)}개", end="", flush=True)
 
-        # 전공 과목 조회
         rows = fetch_rows(args.dept_cd, year)
         major_courses = parse_courses(rows)
         print(f" + 전공 {len(major_courses)}개", end="", flush=True)
 
-        # 합치기 (공통 → 전공 순, 중복 코드 제거)
         seen = set()
         merged = []
         for c in base_courses + major_courses:
@@ -206,10 +201,34 @@ def main():
                 seen.add(c["code"])
                 merged.append(c)
 
-        path = save_json(merged, args.key, year, out_dir)
-        print(f" → {len(merged)}개 저장: {path}")
+        print(f" = {len(merged)}개")
+        year_data.append((year, merged))
 
-    print(f"\n완료! '{args.label}({args.key})' {len(years)}개 연도 추가되었습니다.")
+    # 모든 연도가 비어있으면 추가하지 않음
+    if all(len(courses) == 0 for _, courses in year_data):
+        print(f"\n⚠ 전체 연도({years[0]}~{years[-1]})에 과목 데이터가 없어 추가를 건너뜁니다: {args.label}({args.key})")
+        return
+
+    # 마지막으로 데이터가 있는 연도 탐색 → 뒷부분이 비어있으면 라벨에 (~XX학번) 접미사 추가
+    last_year_with_data = max(y for y, courses in year_data if len(courses) > 0)
+    label = args.label
+    if last_year_with_data < years[-1]:
+        suffix = f"(~{str(last_year_with_data)[2:]}학번)"
+        # 이미 (~XX학번) 형태 접미사가 있으면 교체, 없으면 추가
+        label = re.sub(r'\(~\d{2}학번\)$', '', label).rstrip() + suffix
+        print(f"\n  ℹ {last_year_with_data}년 이후 데이터 없음 → 라벨: '{label}'")
+
+    # courses.ts 메타 업데이트
+    print(f"\n[courses.ts 업데이트]")
+    update_courses_ts(ts_path, args.key, label, args.dept_cd, args.base)
+
+    # 연도별 JSON 저장
+    print(f"\n[JSON 파일 저장] → {out_dir}/{args.key}/")
+    for year, merged in year_data:
+        path = save_json(merged, args.key, year, out_dir)
+        print(f"  {year}년: {len(merged)}개 → {path}")
+
+    print(f"\n완료! '{label}({args.key})' {len(years)}개 연도 추가되었습니다.")
     print("web/public/courses/ 폴더를 git add 해주세요.")
 
 

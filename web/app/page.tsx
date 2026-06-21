@@ -170,9 +170,12 @@ export default function Home() {
     }
   }, [sem, major, entryYear, loading]);
 
+  const isSangju = MAJOR_LABELS[major]?.startsWith("[상주]") ?? false;
+
   const sortedRows = (() => {
-    if (!sortState) return rows;
-    return [...rows].sort((a, b) => {
+    const base = isSangju ? rows.filter((r) => r.rmrk.includes("상주캠퍼스")) : rows;
+    if (!sortState) return base;
+    return [...base].sort((a, b) => {
       const av = a[sortState.col];
       const bv = b[sortState.col];
       const an = Number(av), bn = Number(bv);
@@ -388,6 +391,11 @@ export default function Home() {
                     </div>
                     <div className="overflow-y-auto flex-1">
                       {(Object.entries(MAJOR_LABELS) as [Major, string][])
+                        .sort(([, a], [, b]) => {
+                          const aS = a.startsWith("[상주]"), bS = b.startsWith("[상주]");
+                          if (aS !== bS) return aS ? 1 : -1;
+                          return a.localeCompare(b, "ko");
+                        })
                         .filter(([, label]) => !majorSearch || label.includes(majorSearch))
                         .map(([key, label]) => (
                           <button

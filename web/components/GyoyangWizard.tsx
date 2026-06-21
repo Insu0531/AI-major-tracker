@@ -83,6 +83,8 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
 
   // 전체 조회 결과 (학기 전체 교양)
   const [allRows, setAllRows] = useState<Row[]>([]);
+  const isSangju = majorLabel?.startsWith("[상주]") ?? false;
+  const effectiveRows = isSangju ? allRows.filter((r) => r.rmrk.includes("상주캠퍼스")) : allRows;
   const [loading, setLoading] = useState(false);
   const [fetched, setFetched] = useState(false);
 
@@ -160,13 +162,13 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sem]);
 
-  const openCodes = new Set(allRows.map((r) => r.code));
+  const openCodes = new Set(effectiveRows.map((r) => r.code));
 
   const pinnedSlots = pinnedCombo?.flatMap((s) => s.times) ?? [];
   const conflictCodes = new Set(
     fetched && pinnedSlots.length > 0
       ? [...openCodes].filter((code) =>
-          allRows
+          effectiveRows
             .filter((r) => r.code === code)
             .every((r) => {
               const sec = buildSectionGroups([r]).groups.flat()[0];
@@ -183,7 +185,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
       if (filterSdg && !c.sdg) return false;
       if (filterHmnts && !c.hmnts) return false;
       if (filterDayOff.size > 0 && fetched) {
-        const rows = allRows.filter((r) => r.code === c.code);
+        const rows = effectiveRows.filter((r) => r.code === c.code);
         const hasMatchingSection = rows.some((r) => {
           const slots = parseTimes(r.timeStr);
           return slots.some((s) => filterDayOff.has(s.day));
@@ -192,7 +194,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
       }
       if (filterDayCombo && fetched) {
         const comboChars = new Set([...filterDayCombo]);
-        const rows = allRows.filter((r) => r.code === c.code);
+        const rows = effectiveRows.filter((r) => r.code === c.code);
         const hasMatch = rows.some((r) => {
           const days = new Set(parseTimes(r.timeStr).map((s) => DAY_NAMES[s.day]));
           return [...comboChars].every((ch) => days.has(ch));
@@ -212,12 +214,12 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
     const sel = list.filter((c) => selected.has(c.code));
     const rest = list.filter((c) => !selected.has(c.code));
     return [...sel, ...rest];
-  }, [ALL_COURSES, fetched, openCodes, conflictCodes, filterSdg, filterHmnts, filterDayOff, filterDayCombo, allRows, search, sortAsc, selected]);
+  }, [ALL_COURSES, fetched, openCodes, conflictCodes, filterSdg, filterHmnts, filterDayOff, filterDayCombo, effectiveRows, search, sortAsc, selected]);
 
   useEffect(() => {
-    if (allRows.length === 0 || selected.size === 0) { setCombos([]); setNoTimeSections([]); return; }
+    if (effectiveRows.length === 0 || selected.size === 0) { setCombos([]); setNoTimeSections([]); return; }
 
-    const selectedRows = allRows.filter((r) => selected.has(r.code));
+    const selectedRows = effectiveRows.filter((r) => selected.has(r.code));
     const { groups, noTimeSections: nts } = buildSectionGroups(selectedRows);
     setNoTimeSections(nts);
 
@@ -264,7 +266,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
     setComboIdx(0);
     setFlashKey((k) => k + 1);
     if (typeof window !== "undefined" && window.innerWidth < 768) setPanelOpen(false);
-  }, [allRows, selected, pinnedCombo, maxCredit]);
+  }, [effectiveRows, selected, pinnedCombo, maxCredit]);
 
   useEffect(() => { setComboIdx(0); }, [minGyoyangCredit]);
 
@@ -286,7 +288,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   const getTag = (r: Row) => r.crseNo.startsWith("CLTR") ? "교양" : "일반선택";
   const listSorted = useMemo(() => {
     const q = listSearch.toLowerCase();
-    const filtered = allRows.filter((r) => {
+    const filtered = effectiveRows.filter((r) => {
       if (q && !r.name.toLowerCase().includes(q) && !r.prof.toLowerCase().includes(q) && !r.crseNo.toLowerCase().includes(q)) return false;
       return true;
     });
@@ -300,7 +302,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
       return listSortState.dir === "asc" ? cmp : -cmp;
     });
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [allRows, listSearch, listSortState]);
+  }, [effectiveRows, listSearch, listSortState]);
 
   // 현재 다크모드 여부
   const isDark = () =>
@@ -437,7 +439,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
           <span className="text-sm font-medium text-gray-700">{semYear}년 {semTerm === "s" ? "여름" : semTerm === "w" ? "겨울" : `${semTerm}학기`}</span>
           {loading && <span className="text-gray-400 text-xs animate-pulse">불러오는 중...</span>}
           {fetched && !loading && (
-            <span className="text-xs text-gray-400">{new Set(allRows.map((r) => r.code)).size}과목 · {allRows.length}분반</span>
+            <span className="text-xs text-gray-400">{new Set(effectiveRows.map((r) => r.code)).size}과목 · {effectiveRows.length}분반</span>
           )}
         </div>
 
@@ -467,7 +469,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
               {fetched && (
                 <span className="text-xs text-gray-400 ml-auto">
                   {filteredList.length}과목 ·{" "}
-                  {filteredList.reduce((s, c) => s + allRows.filter((r) => r.code === c.code).length, 0)}분반
+                  {filteredList.reduce((s, c) => s + effectiveRows.filter((r) => r.code === c.code).length, 0)}분반
                 </span>
               )}
               <span className={`text-xs ${selected.size >= MAX_SELECT ? "text-red-500 font-bold" : "text-gray-400"}`}>
@@ -543,7 +545,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
               filteredList.map((c) => {
                 const isSelected = selected.has(c.code);
                 const disabled = !isSelected && selected.size >= MAX_SELECT;
-                const courseRows = allRows.filter((r) => r.code === c.code);
+                const courseRows = effectiveRows.filter((r) => r.code === c.code);
 
                 // 교수별로 묶기: prof → { timeStrs, conflict }
                 const profMap = new Map<string, { timeStrs: Set<string>; conflict: boolean }>();
