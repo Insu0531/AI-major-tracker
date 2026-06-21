@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { buildSectionGroups, generateCombos, Section, SectionGroup, TimeSlot, NoTimeSection } from "@/lib/timetable";
 import TimetableGrid from "@/components/TimetableGrid";
 import ProfPickerModal, { ProfStep, getMultiProfSections, applyProfPicks } from "@/components/ProfPickerModal";
@@ -211,6 +211,25 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   const gyoyangNoTimeCredit = noTimeSections.reduce((s, sec) => s + sec.credit, 0);
   const gyoyangCredit = currentCombo.reduce((s, sec) => s + sec.credit, 0) + gyoyangNoTimeCredit;
   const totalCredit = displayCombo.reduce((s, sec) => s + sec.credit, 0) + pinnedNoTimeCredit + gyoyangNoTimeCredit;
+
+  const getTag = (r: Row) => r.crseNo.startsWith("CLTR") ? "교양" : "일반선택";
+  const listSorted = useMemo(() => {
+    const q = listSearch.toLowerCase();
+    const filtered = allRows.filter((r) => {
+      if (q && !r.name.toLowerCase().includes(q) && !r.prof.toLowerCase().includes(q) && !r.crseNo.toLowerCase().includes(q)) return false;
+      return true;
+    });
+    if (!listSortState) return filtered;
+    return [...filtered].sort((a, b) => {
+      const col = listSortState.col as keyof Row;
+      const av = col === "tag" ? getTag(a) : a[col] ?? "";
+      const bv = col === "tag" ? getTag(b) : b[col] ?? "";
+      const an = Number(av), bn = Number(bv);
+      const cmp = !isNaN(an) && !isNaN(bn) ? an - bn : av.localeCompare(bv, "ko");
+      return listSortState.dir === "asc" ? cmp : -cmp;
+    });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allRows, listSearch, listSortState]);
 
   // 현재 다크모드 여부
   const isDark = () =>
@@ -557,19 +576,6 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
               return null;
             });
           };
-          const q = listSearch.toLowerCase();
-          const filtered = allRows.filter((r) => {
-            if (q && !r.name.toLowerCase().includes(q) && !r.prof.toLowerCase().includes(q) && !r.crseNo.toLowerCase().includes(q)) return false;
-            return true;
-          });
-          const sorted = listSortState ? [...filtered].sort((a, b) => {
-            const col = listSortState.col as keyof Row;
-            const av = col === "tag" ? (a.tag ?? "") : a[col] ?? "";
-            const bv = col === "tag" ? (b.tag ?? "") : b[col] ?? "";
-            const an = Number(av), bn = Number(bv);
-            const cmp = !isNaN(an) && !isNaN(bn) ? an - bn : av.localeCompare(bv, "ko");
-            return listSortState.dir === "asc" ? cmp : -cmp;
-          }) : filtered;
 
           return (
             <div className="flex-1 flex flex-col overflow-hidden min-h-0">
@@ -579,12 +585,12 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                   placeholder="과목명·교수·강좌번호 검색..."
                   className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-blue-400 w-60"
                 />
-                {fetched && <span className="text-xs text-gray-400 ml-auto">{sorted.length}건</span>}
+                {fetched && <span className="text-xs text-gray-400 ml-auto">{listSorted.length}건</span>}
               </div>
               <div className="flex-1 overflow-auto border border-gray-200 rounded-none bg-white min-h-0">
                 {!fetched ? (
                   <p className="text-sm text-gray-400 text-center py-16">{loading ? "불러오는 중..." : "조회 후 표시됩니다"}</p>
-                ) : sorted.length === 0 ? (
+                ) : listSorted.length === 0 ? (
                   <p className="text-sm text-gray-400 text-center py-16">검색 결과 없음</p>
                 ) : (
                   <table className="text-sm w-full border-collapse min-w-max">
@@ -600,7 +606,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                       </tr>
                     </thead>
                     <tbody>
-                      {sorted.map((r, i) => {
+                      {listSorted.map((r, i) => {
                         const displayTag = r.crseNo.startsWith("CLTR") ? "교양" : "일반선택";
                         const displayTagColor = displayTag === "교양" ? "text-blue-700 bg-blue-50" : "text-amber-700 bg-amber-50";
                         return (
