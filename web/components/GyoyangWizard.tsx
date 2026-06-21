@@ -64,7 +64,7 @@ function summarizeDays(timeStrs: string[]): string {
   return [...patterns].join("/");
 }
 
-export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initialSem, majorLabel, major }: { pinnedCombo: Section[] | null; pinnedNoTimeSections?: NoTimeSection[]; initialSem?: string; majorLabel?: string; major?: string }) {
+export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initialSem, majorLabel, majorLabel2, major, onFeedbackClick }: { pinnedCombo: Section[] | null; pinnedNoTimeSections?: NoTimeSection[]; initialSem?: string; majorLabel?: string; majorLabel2?: string; major?: string; onFeedbackClick?: () => void }) {
   const [semYear, setSemYear] = useState(() => initialSem?.split("-")[0] ?? "2026");
   const [semTerm, setSemTerm] = useState(() => initialSem?.split("-")[1] ?? "1");
   const sem = `${semYear}-${semTerm}`;
@@ -116,6 +116,10 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   const [slideDir, setSlideDir] = useState<"left" | "right">("left");
   const [saving, setSaving] = useState(false);
   const timetableRef = useRef<HTMLDivElement | null>(null);
+
+  // 이미지 저장 후 토스트
+  const [saveToast, setSaveToast] = useState(false);
+  const saveToastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // 시간표 저장
   const [gyoSavePrompt, setGyoSavePrompt] = useState(false);
@@ -412,6 +416,11 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
       link.download = `${prefix}${semYear}년 ${termLabel} 시간표.png`;
       document.body.appendChild(link); link.click(); document.body.removeChild(link);
 
+      // 이미지 저장 완료 토스트
+      if (saveToastTimer.current) clearTimeout(saveToastTimer.current);
+      setSaveToast(true);
+      saveToastTimer.current = setTimeout(() => setSaveToast(false), 4000);
+
       // 수강신청 팝업용 과목 목록 수집 (교수 선택이 반영된 버전 우선 사용)
       const fullComboForReg = [...(pinnedForReg ?? pinnedCombo ?? []), ...comboToCapture];
       const noTimeForReg = [...(pinnedNoTimeSections ?? []), ...noTimeSections];
@@ -500,6 +509,23 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
           onSelect={handleProfSelect}
           onSkip={handleProfSkip}
         />
+      )}
+
+      {/* 이미지 저장 완료 토스트 */}
+      {saveToast && (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 bg-gray-900 text-white text-sm px-4 py-3 rounded-xl shadow-xl animate-[fadeIn_0.3s_ease] max-w-sm w-[90vw]">
+          <span className="text-green-400 text-base shrink-0">✓</span>
+          <span className="flex-1 leading-snug">시간표 저장 완료! 도움이 됐다면 한 마디 남겨주세요.</span>
+          {onFeedbackClick && (
+            <button
+              onClick={() => { setSaveToast(false); onFeedbackClick(); }}
+              className="shrink-0 text-xs text-blue-300 hover:text-blue-200 underline whitespace-nowrap"
+            >
+              응원/문의
+            </button>
+          )}
+          <button onClick={() => setSaveToast(false)} className="shrink-0 text-gray-500 hover:text-gray-300 text-base leading-none">✕</button>
+        </div>
       )}
 
       {/* 시간표 저장 이름 입력 모달 */}
@@ -931,7 +957,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                       {saving ? "저장 중..." : "이미지 저장"}
                     </button>
                     <button
-                      onClick={() => { setGyoSaveName(`${majorLabel ?? ""} ${semYear}년 ${semTerm === "s" ? "여름" : semTerm === "w" ? "겨울" : `${semTerm}학기`} 시간표`.trim()); setGyoSavePrompt(true); }}
+                      onClick={() => { const termLabel = semTerm === "s" ? "여름" : semTerm === "w" ? "겨울" : `${semTerm}학기`; const majorPart = majorLabel2 ? `${majorLabel ?? ""}·${majorLabel2}` : (majorLabel ?? ""); setGyoSaveName(`${majorPart} ${semYear}년 ${termLabel} 시간표`.trim()); setGyoSavePrompt(true); }}
                       className="flex-1 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-colors"
                     >
                       라이브러리에 저장
@@ -973,7 +999,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                       {saving ? "저장 중..." : "이미지 저장"}
                     </button>
                     <button
-                      onClick={() => { setGyoSaveName(`${majorLabel ?? ""} ${semYear}년 ${semTerm === "s" ? "여름" : semTerm === "w" ? "겨울" : `${semTerm}학기`} 시간표`.trim()); setGyoSavePrompt(true); }}
+                      onClick={() => { const termLabel = semTerm === "s" ? "여름" : semTerm === "w" ? "겨울" : `${semTerm}학기`; const majorPart = majorLabel2 ? `${majorLabel ?? ""}·${majorLabel2}` : (majorLabel ?? ""); setGyoSaveName(`${majorPart} ${semYear}년 ${termLabel} 시간표`.trim()); setGyoSavePrompt(true); }}
                       disabled={!pinnedCombo?.length}
                       className="flex-1 py-2 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors"
                     >

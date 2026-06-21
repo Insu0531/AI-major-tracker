@@ -1214,7 +1214,7 @@ export default function Home() {
         {/* ── 교양 마법사 탭 ── 항상 마운트, 탭 전환 시 숨기기만 해서 상태 유지 */}
         <div className={`flex flex-1 overflow-hidden ${tab === "gyoyang" ? "" : "hidden"}`}>
           {pinnedCombo !== null && (
-            <GyoyangWizard pinnedCombo={pinnedCombo} pinnedNoTimeSections={noTimeSections} initialSem={sem} majorLabel={MAJOR_LABELS[major]} major={major} />
+            <GyoyangWizard pinnedCombo={pinnedCombo} pinnedNoTimeSections={noTimeSections} initialSem={sem} majorLabel={MAJOR_LABELS[major]} majorLabel2={major2 ? MAJOR_LABELS[major2] : undefined} major={major} onFeedbackClick={() => setTab("feedback")} />
           )}
         </div>
 
