@@ -1,0 +1,170 @@
+[
+  {
+    "grade": "1",
+    "code": "COED0205",
+    "name": "정보윤리교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "COED0201",
+    "name": "컴퓨터 프로그래밍 1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "COED0202",
+    "name": "컴퓨터 프로그래밍 2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "COED0204",
+    "name": "컴퓨터수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0247",
+    "name": "논리회로",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COME0427",
+    "name": "데이터베이스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0325",
+    "name": "알고리즘",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COME0331",
+    "name": "자료구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COED0207",
+    "name": "정보보안 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COED0203",
+    "name": "컴퓨터 프로그래밍 3",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "TCHR0593",
+    "name": "컴퓨터교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0411",
+    "name": "컴퓨터구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COED0206",
+    "name": "피지컬 컴퓨팅",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "COED0209",
+    "name": "AI융합 프로그래밍 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "COED0211",
+    "name": "IoT 프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "MOBI0224",
+    "name": "딥러닝",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MOBI0222",
+    "name": "머신러닝",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COED0208",
+    "name": "빅데이터 분석 개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0422",
+    "name": "소프트웨어공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0312",
+    "name": "운영체제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COED0212",
+    "name": "인공지능 융합교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0597",
+    "name": "컴퓨터 교육과정과 평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COED0210",
+    "name": "컴퓨터 네트워크 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COED0214",
+    "name": "교육용 멀티미디어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COED0216",
+    "name": "교육용 소프트웨어 개발",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COED0213",
+    "name": "수업과 소프트웨어 활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COED0215",
+    "name": "인공지능 융합수업 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TCHR0594",
+    "name": "컴퓨터교재연구및지도법",
+    "credit": "3-3-0"
+  }
+]
