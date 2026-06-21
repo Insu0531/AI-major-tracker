@@ -81,7 +81,11 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
 
   const isSangju = majorLabel?.startsWith("[상주]") ?? false;
   // 상주 모드 변경 시 필터 기본값 리셋
-  useEffect(() => { setFilterSangju(isSangju ? "include" : "exclude"); }, [isSangju]);
+  useEffect(() => {
+    setFilterSangju(isSangju ? "include" : "exclude");
+    setSelected(new Set());
+    setExpandedCodes(new Set());
+  }, [isSangju]);
   const [filterDayOff, setFilterDayOff] = useState<Set<number>>(new Set());
   const [filterDayCombo, setFilterDayCombo] = useState<string>("");
   const [sortAsc, setSortAsc] = useState(true);
@@ -193,14 +197,20 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   const pinnedSlots = pinnedCombo?.flatMap((s) => s.times) ?? [];
   const conflictCodes = new Set(
     fetched && pinnedSlots.length > 0
-      ? [...openCodes].filter((code) =>
-          effectiveRows
-            .filter((r) => r.code === code)
-            .every((r) => {
-              const sec = buildSectionGroups([r]).groups.flat()[0];
-              return sec ? slotsOverlap(sec.times, pinnedSlots) : false;
-            })
-        )
+      ? [...openCodes].filter((code) => {
+          const rows = effectiveRows.filter((r) => {
+            if (r.code !== code) return false;
+            const isSanjuRow = r.rmrk.includes("상주캠퍼스");
+            if (filterSangju === "include" && !isSanjuRow) return false;
+            if (filterSangju === "exclude" && isSanjuRow) return false;
+            return true;
+          });
+          if (rows.length === 0) return false;
+          return rows.every((r) => {
+            const sec = buildSectionGroups([r]).groups.flat()[0];
+            return sec ? slotsOverlap(sec.times, pinnedSlots) : false;
+          });
+        })
       : []
   );
 
@@ -250,7 +260,13 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   useEffect(() => {
     if (effectiveRows.length === 0 || selected.size === 0) { setCombos([]); setNoTimeSections([]); return; }
 
-    const selectedRows = effectiveRows.filter((r) => selected.has(r.code));
+    const selectedRows = effectiveRows.filter((r) => {
+      if (!selected.has(r.code)) return false;
+      const isSanjuRow = r.rmrk.includes("상주캠퍼스");
+      if (filterSangju === "include" && !isSanjuRow) return false;
+      if (filterSangju === "exclude" && isSanjuRow) return false;
+      return true;
+    });
     const { groups, noTimeSections: nts } = buildSectionGroups(selectedRows);
     setNoTimeSections(nts);
 
@@ -297,7 +313,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
     setComboIdx(0);
     setFlashKey((k) => k + 1);
     if (typeof window !== "undefined" && window.innerWidth < 768) setPanelOpen(false);
-  }, [effectiveRows, selected, pinnedCombo, maxCredit]);
+  }, [effectiveRows, selected, pinnedCombo, maxCredit, filterSangju]);
 
   useEffect(() => { setComboIdx(0); }, [minGyoyangCredit]);
 
@@ -704,18 +720,32 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                         {courseRows.map((r, idx) => {
                           const sec = buildSectionGroups([r]).groups.flat()[0];
                           const conflict = sec ? slotsOverlap(sec.times, pinnedSlots) : false;
-                          const ok = !conflict;
+                          const isSanjuRow = r.rmrk.includes("상주캠퍼스");
+                          const sanjuBlocked = fetched && (
+                            (filterSangju === "include" && !isSanjuRow) ||
+                            (filterSangju === "exclude" && isSanjuRow)
+                          );
                           const timeStr = r.timeStr ? formatTimeStr(r.timeStr) : "";
                           const isRemote = r.rmrk.includes("원격강좌");
-                          const isSanjuRow = r.rmrk.includes("상주캠퍼스");
                           const prof = r.prof || "미정";
+                          const rowClass = conflict
+                            ? "text-red-400 bg-red-50"
+                            : sanjuBlocked
+                            ? "text-orange-500 bg-orange-50"
+                            : "text-green-700 bg-green-50";
+                          const subClass = conflict
+                            ? "text-red-300"
+                            : sanjuBlocked
+                            ? "text-orange-400"
+                            : "text-green-600";
+                          const mark = conflict ? "✗" : sanjuBlocked ? "✗" : "✓";
                           return (
-                            <div key={idx} className={`text-xs px-1.5 py-0.5 rounded ${ok ? "text-green-700 bg-green-50" : "text-red-400 bg-red-50"}`}>
-                              <span className={ok ? "" : "line-through"}>{ok ? "✓" : "✗"} {prof}</span>
+                            <div key={idx} className={`text-xs px-1.5 py-0.5 rounded ${rowClass}`}>
+                              <span className={(conflict || sanjuBlocked) ? "line-through" : ""}>{mark} {prof}</span>
                               {isRemote && <span className="ml-1 text-blue-500">원격</span>}
                               {isSanjuRow && <span className="ml-1 text-slate-500">상주</span>}
-                              {timeStr && <span className={`block pl-3 ${ok ? "text-green-600" : "text-red-300"}`}>{timeStr}</span>}
-                              {r.location && <span className={`block pl-3 ${ok ? "text-gray-500" : "text-red-300"}`}>{r.location}</span>}
+                              {timeStr && <span className={`block pl-3 ${subClass}`}>{timeStr}</span>}
+                              {r.location && <span className={`block pl-3 ${conflict || sanjuBlocked ? subClass : "text-gray-500"}`}>{r.location}</span>}
                             </div>
                           );
                         })}
