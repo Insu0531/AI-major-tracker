@@ -1,0 +1,110 @@
+[
+  {
+    "grade": "1",
+    "code": "PREM0211",
+    "name": "의대생 세미나",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "PREM0254",
+    "name": "의료신호처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "MEDE0336",
+    "name": "의학세포분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PREM0213",
+    "name": "의학입문Ⅰ",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREM0256",
+    "name": "의사와 윤리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREM0226",
+    "name": "의생명과학실험Ⅰ",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "PREM0231",
+    "name": "의학 행동과학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREM0236",
+    "name": "의학물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0334",
+    "name": "의학생화학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0335",
+    "name": "의학생화학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "NURS0218",
+    "name": "의학유전학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREM0228",
+    "name": "의학의 역사",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREM0224",
+    "name": "의학통계학및연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0213",
+    "name": "인체 조직학",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0211",
+    "name": "인체 해부학 I",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0212",
+    "name": "인체 해부학 II",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "PREM0255",
+    "name": "핵심 유기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0318",
+    "name": "환자-의사-사회 1",
+    "credit": "3-3-0"
+  }
+]

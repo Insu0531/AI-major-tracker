@@ -1,0 +1,566 @@
+[
+  {
+    "grade": "1",
+    "code": "MEDE0323",
+    "name": "기초의학종합 및 평가",
+    "credit": "2-30-12"
+  },
+  {
+    "grade": "1",
+    "code": "MEDE0326",
+    "name": "사례바탕의료인문 1",
+    "credit": "2-18-36"
+  },
+  {
+    "grade": "1",
+    "code": "MEDE0338",
+    "name": "생리학: 인체의 기능과 조절",
+    "credit": "6-102-12"
+  },
+  {
+    "grade": "1",
+    "code": "MEDE0325",
+    "name": "신경학",
+    "credit": "4-54-36"
+  },
+  {
+    "grade": "1",
+    "code": "MEDE0220",
+    "name": "약리학 총론",
+    "credit": "3-38-32"
+  },
+  {
+    "grade": "1",
+    "code": "MEDE0320",
+    "name": "인체 면역학",
+    "credit": "2-30-12"
+  },
+  {
+    "grade": "1",
+    "code": "MEDE0322",
+    "name": "인체 병리학",
+    "credit": "3-41-26"
+  },
+  {
+    "grade": "1",
+    "code": "MEDE0321",
+    "name": "인체 병원체학",
+    "credit": "5-80-20"
+  },
+  {
+    "grade": "1",
+    "code": "MEDE0337",
+    "name": "인체 해부학 3",
+    "credit": "3-18-72"
+  },
+  {
+    "grade": "1",
+    "code": "MEDE0339",
+    "name": "인체감염학",
+    "credit": "3-40-28"
+  },
+  {
+    "grade": "1",
+    "code": "MEDE0230",
+    "name": "정신건강의학",
+    "credit": "3-42-24"
+  },
+  {
+    "grade": "1",
+    "code": "MEDE0316",
+    "name": "진단의 기본",
+    "credit": "4-54-36"
+  },
+  {
+    "grade": "1",
+    "code": "MEDE0317",
+    "name": "치료의 기본",
+    "credit": "4-54-36"
+  },
+  {
+    "grade": "1",
+    "code": "MEDE0229",
+    "name": "호흡기·알레르기 병학",
+    "credit": "4-54-36"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0235",
+    "name": "류마티스·근골격계병학",
+    "credit": "3-42-24"
+  },
+  {
+    "grade": "2",
+    "code": "MEDI0416",
+    "name": "법의학",
+    "credit": "1-18-0"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0275",
+    "name": "병원경영학 개요",
+    "credit": "1-18-0"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0327",
+    "name": "사례바탕의료인문 2",
+    "credit": "2-18-36"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0328",
+    "name": "사례바탕의료인문 3",
+    "credit": "1-9-18"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0236",
+    "name": "생식·성장·발달 I",
+    "credit": "3-42-24"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0237",
+    "name": "생식·성장·발달 II",
+    "credit": "3-42-24"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0233",
+    "name": "소화기계병학",
+    "credit": "4-54-36"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0234",
+    "name": "신장·요로계병학",
+    "credit": "3-42-24"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0232",
+    "name": "심장·혈관병학",
+    "credit": "4-54-36"
+  },
+  {
+    "grade": "2",
+    "code": "MEDI0304",
+    "name": "예방의학 및 실습",
+    "credit": "3-48-12"
+  },
+  {
+    "grade": "2",
+    "code": "MEDI0206",
+    "name": "의공학",
+    "credit": "1-18-0"
+  },
+  {
+    "grade": "2",
+    "code": "MEDI0261",
+    "name": "의료정보학",
+    "credit": "1-18-0"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0340",
+    "name": "의학 연구 1",
+    "credit": "4-18-108"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0277",
+    "name": "의학교육학 개요",
+    "credit": "1-18-0"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0225",
+    "name": "인체 내분비·대사병학",
+    "credit": "2-36-10(시)"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0252",
+    "name": "임상약리학 개요",
+    "credit": "1-18-0"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0240",
+    "name": "임상연구 I",
+    "credit": "1-10-16"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0251",
+    "name": "임상의학영양학",
+    "credit": "1-18-0"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0329",
+    "name": "임상의학종합 및 평가 1",
+    "credit": "2-30-0"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0226",
+    "name": "종양 · 혈액병학",
+    "credit": "3-45-18"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0276",
+    "name": "죽음학 개요",
+    "credit": "1-18-0"
+  },
+  {
+    "grade": "2",
+    "code": "MEDI0311",
+    "name": "지역사회의학",
+    "credit": "2-36-0"
+  },
+  {
+    "grade": "2",
+    "code": "MEDE0238",
+    "name": "피부·감각계병학",
+    "credit": "3-42-24"
+  },
+  {
+    "grade": "3",
+    "code": "MEDE0257",
+    "name": "*가정의학과 임상실습",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "3",
+    "code": "MEDE0241",
+    "name": "*내과 임상실습",
+    "credit": "12-0-432"
+  },
+  {
+    "grade": "3",
+    "code": "MEDE0244",
+    "name": "*산부인과 임상실습",
+    "credit": "4-0-144"
+  },
+  {
+    "grade": "3",
+    "code": "MEDE0294",
+    "name": "*성형외과 임상실습",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "3",
+    "code": "MEDE0243",
+    "name": "*소아과 임상실습",
+    "credit": "4-0-144"
+  },
+  {
+    "grade": "3",
+    "code": "MEDE0247",
+    "name": "*신경과 임상실습",
+    "credit": "2-0-72"
+  },
+  {
+    "grade": "3",
+    "code": "MEDE0293",
+    "name": "*신경외과 임상실습",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "3",
+    "code": "MEDE0248",
+    "name": "*영상의학과 임상실습",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "3",
+    "code": "MEDE0256",
+    "name": "*예방의학·지역사회의학 임상실습",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "3",
+    "code": "MEDI0452",
+    "name": "*외과학실습",
+    "credit": "4-0-144"
+  },
+  {
+    "grade": "3",
+    "code": "MEDE0246",
+    "name": "*응급의학과 임상실습",
+    "credit": "2-0-72"
+  },
+  {
+    "grade": "3",
+    "code": "MEDE0245",
+    "name": "*정신건강의학과 임상실습",
+    "credit": "4-0-144"
+  },
+  {
+    "grade": "3",
+    "code": "MEDE0291",
+    "name": "*정형외과 임상실습",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "3",
+    "code": "MEDE0249",
+    "name": "*진단검사의학과 임상실습",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "3",
+    "code": "MEDE0292",
+    "name": "*흉부외과 임상실습",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "3",
+    "code": "MEDE0331",
+    "name": "임상의학종합 및 평가 2",
+    "credit": "2-30-0"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0297",
+    "name": "기본의학종합평가",
+    "credit": "5-75-0"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0288",
+    "name": "기생충학 선택연구",
+    "credit": "3-0-108"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0266",
+    "name": "마취통증의학과 임상실습",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0287",
+    "name": "면역학 선택연구",
+    "credit": "3-0-108"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0315",
+    "name": "모의환자를 이용한 임상수행실습",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0332",
+    "name": "미래의학",
+    "credit": "1-18-0"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0284",
+    "name": "미생물학 선택연구",
+    "credit": "3-0-108"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0260",
+    "name": "방사선종양학과 임상실습",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0278",
+    "name": "법의학 선택실습",
+    "credit": "2-0-72"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0261",
+    "name": "병리과 임상실습",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0285",
+    "name": "병리학 선택연구",
+    "credit": "3-0-108"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0267",
+    "name": "보건의료관리학",
+    "credit": "1-18-0"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0289",
+    "name": "분자의학 선택연구",
+    "credit": "3-0-108"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0281",
+    "name": "분자형태학 선택연구",
+    "credit": "3-0-108"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0263",
+    "name": "비뇨기과 임상실습",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0283",
+    "name": "생리학 선택연구",
+    "credit": "3-0-108"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0282",
+    "name": "생화학 ·세포생물학 선택연구",
+    "credit": "3-0-108"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0253",
+    "name": "서브인턴 I",
+    "credit": "2-0-72"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0272",
+    "name": "서브인턴 II",
+    "credit": "2-0-72"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0290",
+    "name": "신경과학 선택연구",
+    "credit": "3-0-108"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0341",
+    "name": "심화의학연구",
+    "credit": "2-0-72"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0264",
+    "name": "안과 임상실습",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0286",
+    "name": "약리학 선택연구",
+    "credit": "3-0-108"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0279",
+    "name": "의공학 선택실습",
+    "credit": "2-0-72"
+  },
+  {
+    "grade": "4",
+    "code": "MEDI0323",
+    "name": "의료법규",
+    "credit": "1-18-0"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0280",
+    "name": "의료정보학 선택실습",
+    "credit": "2-0-72"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0296",
+    "name": "의학리뷰",
+    "credit": "4-72-0"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0265",
+    "name": "이비인후과 임상실습",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0298",
+    "name": "임상수행능력종합평가",
+    "credit": "3-0-90"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0258",
+    "name": "재활의학과 임상실습",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0301",
+    "name": "특수클리닉 실습 I",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0304",
+    "name": "특수클리닉 실습 IV",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0309",
+    "name": "특수클리닉 실습 IX",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0307",
+    "name": "특수클리닉 실습 VII",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0308",
+    "name": "특수클리닉 실습 VIII",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0310",
+    "name": "특수클리닉 실습 X",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0311",
+    "name": "특수클리닉 실습 XI",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0262",
+    "name": "피부과 임상실습",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0259",
+    "name": "핵의학과 임상실습",
+    "credit": "1-0-36"
+  },
+  {
+    "grade": "4",
+    "code": "MEDE0333",
+    "name": "환자-의사-사회 2",
+    "credit": "1-14-8"
+  }
+]
