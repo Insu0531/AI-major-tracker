@@ -1,0 +1,188 @@
+[
+  {
+    "grade": "1",
+    "code": "CHEM0503",
+    "name": "분석화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FIER0211",
+    "name": "섬유학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "CHEM0506",
+    "name": "일반화학실험",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0502",
+    "name": "물리화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FIER0482",
+    "name": "바이오섬유소재 및 제품관리 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FIER0475",
+    "name": "바이오섬유소재화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOC0435",
+    "name": "생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FIER0462",
+    "name": "섬유고분자 3D프린팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FIER0222",
+    "name": "섬유신소재공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FIER0231",
+    "name": "셀룰로오스소재공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0203",
+    "name": "유기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0204",
+    "name": "유기화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FIER0221",
+    "name": "합성섬유공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0355",
+    "name": "고분자화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLY0325",
+    "name": "고분자화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "INDC0213",
+    "name": "기기분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FIER0508",
+    "name": "바이오 부직포공학 창의적 종합설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FIER0477",
+    "name": "바이오응용소재학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FIER0493",
+    "name": "섬유고분자물리학론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FIER0480",
+    "name": "섬유분석시험법 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FIER0490",
+    "name": "섬유형성체공학 창의종합설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "FIER0504",
+    "name": "지속가능 바이오 소재공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FIER0506",
+    "name": "코스메틱 소재공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FIER0494",
+    "name": "광기능성 고분자소재 및 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FIER0503",
+    "name": "나노바이오복합섬유공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FIER0461",
+    "name": "나노소재공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FIER0501",
+    "name": "단백질섬유소재공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FIER0511",
+    "name": "메디컬융합소재공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FIER0509",
+    "name": "바이오섬유소재 창의종합설계 1",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "4",
+    "code": "FIER0510",
+    "name": "바이오섬유소재 창의종합설계 2",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "4",
+    "code": "FIER0505",
+    "name": "바이오소재공학 기업의 이해 및 실무",
+    "credit": "3-2-2"
+  }
+]
