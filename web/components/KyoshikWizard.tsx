@@ -508,12 +508,13 @@ export default function KyoshikWizard({ pinnedCombo, pinnedNoTimeSections, initi
       )}
 
       {/* Left panel: 교직 과목 목록 */}
-      <div className={`${panelOpen ? "w-80" : "w-0"} shrink-0 border-r border-gray-200 bg-white flex flex-col overflow-hidden transition-all duration-200 h-full`}>
-        <div className="px-3 pt-3 pb-2 shrink-0 flex items-center justify-between border-b border-gray-100">
-          <span className="text-sm font-medium text-gray-700">교직 과목</span>
-          {loading && <span className="text-gray-400 text-xs animate-pulse">불러오는 중...</span>}
+      <div className={`${panelOpen ? "w-80 max-w-full" : "w-0"} shrink-0 border-r border-gray-200 bg-white flex flex-col overflow-hidden transition-all duration-200 h-full`}>
+        <div className="px-3 pt-3 pb-2 shrink-0 flex items-center gap-2 border-b border-gray-100">
+          <button onClick={() => setPanelOpen(false)} className="shrink-0 text-gray-400 hover:text-gray-700 text-base leading-none px-1" title="패널 닫기">←</button>
+          <span className="text-sm font-medium text-gray-700 flex-1">교직 과목</span>
+          {loading && <span className="text-gray-400 text-xs animate-pulse shrink-0">불러오는 중...</span>}
           {fetched && !loading && (
-            <span className="text-xs text-gray-400">{allCourses.length}과목 · {allRows.length}분반</span>
+            <span className="text-xs text-gray-400 shrink-0">{allCourses.length}과목</span>
           )}
         </div>
 
@@ -715,10 +716,12 @@ export default function KyoshikWizard({ pinnedCombo, pinnedNoTimeSections, initi
       {/* Right area: 시간표 */}
       <div className="flex-1 flex flex-col overflow-hidden min-w-0 min-h-0">
         <div className="flex items-center gap-2 px-4 pt-3 pb-3 shrink-0 border-b border-gray-200 bg-white">
-          <button onClick={() => setPanelOpen((v) => !v)}
-            className="flex items-center gap-1 text-xs text-gray-500 border border-gray-300 rounded px-2 py-1 hover:bg-gray-50 shrink-0">
-            {panelOpen ? "◀ 패널 닫기" : "▶ 패널 열기"}
-          </button>
+          {!panelOpen && (
+            <button onClick={() => setPanelOpen(true)}
+              className="flex items-center gap-1 text-xs font-semibold text-indigo-600 bg-indigo-50 border border-indigo-300 rounded-lg px-3 py-1.5 hover:bg-indigo-100 shrink-0 transition-colors">
+              ▶ 과목 선택
+            </button>
+          )}
         </div>
 
         <div key={flashKey} className="flex-1 flex flex-col overflow-hidden p-4 gap-2 animate-[fadeIn_0.4s_ease] min-h-0">

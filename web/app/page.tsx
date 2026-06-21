@@ -44,6 +44,7 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const [refetchConfirm, setRefetchConfirm] = useState(false);
   const [showMajor2Tip, setShowMajor2Tip] = useState(false);
+  const [gyoyangDirectConfirm, setGyoyangDirectConfirm] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem("theme");
@@ -1197,7 +1198,7 @@ export default function Home() {
                     ? <>
                         <span>과목을 선택하고 조합 생성을 눌러주세요</span>
                         <button
-                          onClick={() => { setPinnedCombo([]); setTab("gyoyang"); }}
+                          onClick={() => setGyoyangDirectConfirm(true)}
                           className="mt-1 px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded-lg transition-colors"
                         >
                           전공 없이 교양 마법사로 바로가기
@@ -1273,6 +1274,20 @@ export default function Home() {
           </div>
         )}
       </main>
+
+      {/* 전공 없이 교양 바로가기 확인 */}
+      {gyoyangDirectConfirm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30">
+          <div className="bg-white rounded-xl shadow-xl px-6 py-5 flex flex-col gap-3 w-80 max-w-[90vw]">
+            <p className="text-sm font-bold text-gray-800 text-center">전공 없이 교양 마법사로 이동합니다</p>
+            <p className="text-xs text-gray-500 text-center leading-relaxed">전공 시간표가 고정되지 않은 상태로 시작됩니다.<br/>교양 과목만 선택할 수 있습니다.</p>
+            <div className="flex gap-2 mt-1">
+              <button onClick={() => setGyoyangDirectConfirm(false)} className="flex-1 py-2 border border-gray-300 rounded-lg text-sm text-gray-600 hover:bg-gray-50">취소</button>
+              <button onClick={() => { setGyoyangDirectConfirm(false); setPinnedCombo([]); setTab("gyoyang"); }} className="flex-1 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded-lg">이동</button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {refetchConfirm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30">

@@ -130,6 +130,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
 
   // 이미지 저장 후 토스트
   const [saveToast, setSaveToast] = useState(false);
+  const [kyoshikTip, setKyoshikTip] = useState(false);
   const saveToastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // 시간표 저장
@@ -570,6 +571,20 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
         />
       )}
 
+      {/* 교직 이동 안내 모달 */}
+      {kyoshikTip && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30">
+          <div className="bg-white rounded-xl shadow-xl px-6 py-5 flex flex-col gap-3 w-80 max-w-[90vw]">
+            <p className="text-sm font-bold text-gray-800 text-center">교직 마법사로 이동합니다</p>
+            <p className="text-xs text-gray-500 text-center leading-relaxed">교직 과목을 선택하지 않아도 됩니다.<br/>그냥 저장 버튼을 눌러도 됩니다.</p>
+            <div className="flex gap-2 mt-1">
+              <button onClick={() => setKyoshikTip(false)} className="flex-1 py-2 border border-gray-300 rounded-lg text-sm text-gray-600 hover:bg-gray-50">취소</button>
+              <button onClick={() => { setKyoshikTip(false); onGoToKyoshik!(currentCombo, noTimeSections); }} className="flex-1 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold rounded-lg">계속</button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* 이미지 저장 완료 토스트 */}
       {saveToast && (
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 bg-gray-900 text-white text-sm px-4 py-3 rounded-xl shadow-xl animate-[fadeIn_0.3s_ease] max-w-sm w-[90vw]">
@@ -688,13 +703,14 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
       )}
 
       {/* Left panel */}
-      <div className={`${panelOpen ? "w-96" : "w-0"} shrink-0 border-r border-gray-200 bg-white flex flex-col overflow-hidden transition-all duration-200 h-full`}>
-        {/* 학기 표시 + 로딩 */}
-        <div className="px-3 pt-3 pb-2 shrink-0 flex items-center justify-between border-b border-gray-100">
-          <span className="text-sm font-medium text-gray-700">{semYear}년 {semTerm === "s" ? "여름" : semTerm === "w" ? "겨울" : `${semTerm}학기`}</span>
-          {loading && <span className="text-gray-400 text-xs animate-pulse">불러오는 중...</span>}
+      <div className={`${panelOpen ? "w-96 max-w-full" : "w-0"} shrink-0 border-r border-gray-200 bg-white flex flex-col overflow-hidden transition-all duration-200 h-full`}>
+        {/* 학기 표시 + 로딩 + 닫기 */}
+        <div className="px-3 pt-3 pb-2 shrink-0 flex items-center gap-2 border-b border-gray-100">
+          <button onClick={() => setPanelOpen(false)} className="shrink-0 text-gray-400 hover:text-gray-700 text-base leading-none px-1" title="패널 닫기">←</button>
+          <span className="text-sm font-medium text-gray-700 flex-1 truncate">{semYear}년 {semTerm === "s" ? "여름" : semTerm === "w" ? "겨울" : `${semTerm}학기`}</span>
+          {loading && <span className="text-gray-400 text-xs animate-pulse shrink-0">불러오는 중...</span>}
           {fetched && !loading && (
-            <span className="text-xs text-gray-400">{new Set(effectiveRows.map((r) => r.code)).size}과목 · {effectiveRows.length}분반</span>
+            <span className="text-xs text-gray-400 shrink-0">{new Set(effectiveRows.map((r) => r.code)).size}과목</span>
           )}
         </div>
 
@@ -976,10 +992,12 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
       <div className="flex-1 flex flex-col overflow-hidden min-w-0 min-h-0">
         {/* 오른쪽 상단 탭바 */}
         <div className="flex items-center gap-2 px-4 pt-3 pb-0 shrink-0 border-b border-gray-200 bg-white">
-          <button onClick={() => setPanelOpen((v) => !v)}
-            className="self-start flex items-center gap-1 text-xs text-gray-500 border border-gray-300 rounded px-2 py-1 hover:bg-gray-50 mr-2 shrink-0">
-            {panelOpen ? "◀ 패널 닫기" : "▶ 패널 열기"}
-          </button>
+          {!panelOpen && (
+            <button onClick={() => setPanelOpen(true)}
+              className="self-start flex items-center gap-1 text-xs font-semibold text-indigo-600 bg-indigo-50 border border-indigo-300 rounded-lg px-3 py-1.5 hover:bg-indigo-100 mr-2 shrink-0 transition-colors">
+              ▶ 과목 선택
+            </button>
+          )}
           {(["timetable", "list"] as const).map((t) => (
             <button key={t} onClick={() => setLeftTab(t)}
               className={`pb-2 px-1 text-sm border-b-2 transition-colors ${leftTab === t ? "border-indigo-500 text-indigo-600 font-semibold" : "border-transparent text-gray-400 hover:text-gray-600"}`}>
@@ -988,7 +1006,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
           ))}
           {onGoToKyoshik && (
             <button
-              onClick={() => onGoToKyoshik(currentCombo, noTimeSections)}
+              onClick={() => setKyoshikTip(true)}
               className="ml-auto shrink-0 self-start mb-1 text-xs px-3 py-1.5 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors">
               현재 시간표 고정 후 교직 마법사로 →
             </button>
