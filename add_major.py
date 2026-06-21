@@ -117,7 +117,9 @@ def update_courses_ts(ts_path: str, key: str, label: str, dept_cd: str, base_cd:
         ai_entry = {"ai": entries.pop("ai")} if "ai" in entries else {}
         sorted_rest = dict(sorted(entries.items(), key=lambda x: (x[1].startswith("[상주]"), x[1])))
         sorted_entries = {**ai_entry, **sorted_rest}
-        lines = "".join(f'  {k}: "{v}",\n' for k, v in sorted_entries.items())
+        def fmt_key(k: str) -> str:
+            return f'"{k}"' if not k.isidentifier() else k
+        lines = "".join(f'  {fmt_key(k)}: "{v}",\n' for k, v in sorted_entries.items())
         content = re.sub(
             r'(export const MAJOR_LABELS[^{]*\{).*?(\n\};)',
             lambda m: m.group(1) + "\n" + lines + m.group(2),
