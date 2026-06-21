@@ -1,0 +1,188 @@
+[
+  {
+    "grade": "1",
+    "code": "ENGR0351",
+    "name": "공학화학실험 I",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "ENGR0352",
+    "name": "공학화학실험 II",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "META0211",
+    "name": "재료과학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0212",
+    "name": "공학수학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "META0243",
+    "name": "재료결정학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "META0212",
+    "name": "재료과학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CIME0315",
+    "name": "재료물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CIME0331",
+    "name": "재료물리화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CIME0225",
+    "name": "재료상태도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CIME0351",
+    "name": "재료열역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEN0293",
+    "name": "창의기초설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CIME0330",
+    "name": "X-선 회절분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CIME0325",
+    "name": "결정결함",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CIME0316",
+    "name": "계면공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CIME0329",
+    "name": "고체확산",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CIME0416",
+    "name": "반도체공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CIME0418",
+    "name": "세라믹공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CIME0332",
+    "name": "재료공정실험",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "CIME0431",
+    "name": "재료박막공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CIME0328",
+    "name": "재료분석실험",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "CIME0442",
+    "name": "재료분석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "META0316",
+    "name": "재료의기계적성질",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CIME0333",
+    "name": "재료콜로퀴엄",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "3",
+    "code": "META0320",
+    "name": "전자재료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CIME0451",
+    "name": "캡스톤디자인1",
+    "credit": "3-1-4"
+  },
+  {
+    "grade": "4",
+    "code": "CIME0429",
+    "name": "디스플레이공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CIME0428",
+    "name": "에너지복합소재",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CIME0447",
+    "name": "재료전기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CIME0341",
+    "name": "전자세라믹공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CIME0452",
+    "name": "캡스톤디자인2",
+    "credit": "3-1-4"
+  }
+]

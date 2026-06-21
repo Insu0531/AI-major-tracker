@@ -67,6 +67,7 @@ export default function Home() {
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
   }, []);
+
   const [semYear, setSemYear] = useState("2026");
   const [semTerm, setSemTerm] = useState("1");
   const [entryYear, setEntryYear] = useState(2026);
@@ -228,6 +229,7 @@ export default function Home() {
     const all = generateCombos(groups);
     setCombos(all);
     setFilteredCombos(all);
+    setPinnedCombo(null);
     setComboIdx(0);
     setFilterMap(new Map());
     setMinCredit("");
@@ -244,6 +246,19 @@ export default function Home() {
     // 모바일에서는 조합 생성 후 패널 닫기
     if (typeof window !== "undefined" && window.innerWidth < 768) setPanelOpen(false);
   };
+
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key !== "Enter") return;
+      const tag = (e.target as HTMLElement).tagName;
+      if (tag === "BUTTON" || tag === "SELECT" || tag === "TEXTAREA") return;
+      if (tab === "search" && !loading && courses.length > 0) doFetch();
+      if (tab === "wizard" && leftTab === "select" && checkedCount > 0) generateWizard();
+    };
+    document.addEventListener("keydown", handler);
+    return () => document.removeEventListener("keydown", handler);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tab, leftTab, loading, courses.length, checkedCount]);
 
   useEffect(() => {
     if (combos.length === 0) { setFilteredCombos([]); return; }
@@ -347,7 +362,7 @@ export default function Home() {
         {/* ── 과목 조회 탭 ── */}
         {tab === "search" && (
           <div className="flex flex-col flex-1 overflow-hidden p-4 gap-3">
-            <div className="flex items-center gap-3 flex-wrap">
+            <div className="flex items-center gap-3 flex-wrap" onKeyDown={(e) => { if (e.key === "Enter" && !loading && courses.length > 0) doFetch(); }}>
               {/* 전공 드롭다운 (검색 가능) */}
               <div ref={majorDropRef} className="relative">
                 <button
@@ -568,7 +583,7 @@ export default function Home() {
         {tab === "wizard" && (
           <div className="flex flex-1 overflow-hidden relative">
             {/* Left panel */}
-            <div className={`${panelOpen ? "w-72" : "w-0"} shrink-0 border-r border-gray-200 bg-white flex flex-col overflow-hidden transition-all duration-200`}>
+            <div className={`${panelOpen ? "w-72" : "w-0"} shrink-0 border-r border-gray-200 bg-white flex flex-col overflow-hidden transition-all duration-200`} onKeyDown={(e) => { if (e.key === "Enter" && leftTab === "select" && checkedCount > 0) generateWizard(); }}>
 
               {/* 내부 탭 */}
               <div className="flex border-b border-gray-200 shrink-0">
@@ -949,10 +964,27 @@ export default function Home() {
                   </div>
                 </>
               ) : (
-                <div className="flex-1 flex items-center justify-center text-gray-400 text-sm">
+                <div className="flex-1 flex flex-col items-center justify-center gap-2 text-gray-400 text-sm">
                   {combos.length === 0
                     ? "과목을 선택하고 조합 생성을 눌러주세요"
-                    : "필터 조건에 맞는 조합이 없습니다"}
+                    : <>
+                        <span>필터 조건에 맞는 조합이 없습니다</span>
+                        {(() => {
+                          const hints: string[] = [];
+                          if (filterMap.size > 0) hints.push(`필수과목 (${[...filterMap.keys()].map((n) => n.replace(/\s*\(.*?\)\s*$/, "")).join(", ")})`);
+                          if (dayOff.size > 0) hints.push(`공강 (${["월","화","수","목","금"].filter((_, i) => dayOff.has(i)).join("")})`);
+                          if (noMorning) hints.push(`${noMorning}시 이전 없음`);
+                          if (noEvening) hints.push(`${noEvening}시 이후 없음`);
+                          if (minCredit) hints.push(`최소 ${minCredit}학점`);
+                          if (includeProfs.size > 0) hints.push(`교수 포함 (${[...includeProfs].join(", ")})`);
+                          if (excludeProfs.size > 0) hints.push(`교수 제외 (${[...excludeProfs].join(", ")})`);
+                          if (includeDepts.size > 0) hints.push(`전공 (${[...includeDepts].join(", ")})`);
+                          return hints.length > 0
+                            ? <span className="text-xs text-red-400 text-center px-4">{hints.join(" · ")}</span>
+                            : null;
+                        })()}
+                      </>
+                  }
                 </div>
               )}
             </div>
