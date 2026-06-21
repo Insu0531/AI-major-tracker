@@ -1,1 +1,446 @@
-[]
+[
+  {
+    "grade": "1",
+    "code": "COMP0205",
+    "name": "기초창의공학설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "COMP0210",
+    "name": "대화형 프로그래밍기초",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "COMP0209",
+    "name": "소프트웨어와 문제해결",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "COME0301",
+    "name": "이산수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ITEC0201",
+    "name": "컴퓨터학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "COMP0204",
+    "name": "프로그래밍기초",
+    "credit": "6-4-4"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0329",
+    "name": "SW융합커뮤니케이션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0247",
+    "name": "논리회로",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0225",
+    "name": "디지털설계및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "MTED0231",
+    "name": "선형대수",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0432",
+    "name": "소프트웨어 특강",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0224",
+    "name": "소프트웨어설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0462",
+    "name": "시스템프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0315",
+    "name": "오토마타및형식언어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COME0331",
+    "name": "자료구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0216",
+    "name": "자료구조응용",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ITEC0423",
+    "name": "자료구조프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0217",
+    "name": "자바프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0411",
+    "name": "컴퓨터구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0417",
+    "name": "컴퓨터윤리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COME0311",
+    "name": "확률및통계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0330",
+    "name": "SW프로젝트관리기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EECS0312",
+    "name": "네트워크프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0322",
+    "name": "데이타베이스",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0323",
+    "name": "데이타통신",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ITEC0419",
+    "name": "데이터과학기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0328",
+    "name": "모바일앱프로그래밍1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0422",
+    "name": "소프트웨어공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0452",
+    "name": "수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0319",
+    "name": "알고리즘1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0320",
+    "name": "알고리즘2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0312",
+    "name": "운영체제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ITEC0401",
+    "name": "종합설계프로젝트1",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0321",
+    "name": "컴파일러",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0423",
+    "name": "프로그래밍언어론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "GLSO0211",
+    "name": "SW실용영어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "GLSO0212",
+    "name": "소프트웨어수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "GLSO0213",
+    "name": "창의융합설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "GLSO0214",
+    "name": "SW진로설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GLSO0216",
+    "name": "알고리즘실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "GLSO0215",
+    "name": "오픈소스프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "GLSO0217",
+    "name": "컴퓨터망프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GLSO0219",
+    "name": "SW공학및테스팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GLSO0230",
+    "name": "SW융합설계1(캡스톤디자인)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GLSO0231",
+    "name": "SW융합설계2(캡스톤디자인)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ITEC0417",
+    "name": "기계학습개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0460",
+    "name": "문제해결기반 공학연수실습(컴퓨터학)",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "GLSO0220",
+    "name": "소프트웨어융합특강1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "3",
+    "code": "GLSO0222",
+    "name": "소프트웨어융합특강2",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0414",
+    "name": "컴퓨터망",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0428",
+    "name": "IT기술경영개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0403",
+    "name": "IT지식재산권",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GLSO0229",
+    "name": "SW창업프로젝트",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0415",
+    "name": "고급문제해결",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0416",
+    "name": "고급웹프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0418",
+    "name": "대규모병렬컴퓨팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MOBI0224",
+    "name": "딥러닝",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0420",
+    "name": "모바일로봇프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0420",
+    "name": "모바일앱프로그래밍2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0461",
+    "name": "문제해결기반 공학연수실습(심화컴퓨터학)",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "4",
+    "code": "GLSO0224",
+    "name": "사물인터넷",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0421",
+    "name": "소프트웨어디자인패턴",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GLSO0225",
+    "name": "소프트웨어융합특강3",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "GLSO0228",
+    "name": "소프트웨어융합특강4",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "GLSO0223",
+    "name": "스타트업설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0457",
+    "name": "의료인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0413",
+    "name": "인간과 컴퓨터 상호작용 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0324",
+    "name": "인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COME0368",
+    "name": "정보보호론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0425",
+    "name": "컴퓨터게임제작",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0413",
+    "name": "컴퓨터그래픽스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0424",
+    "name": "컴퓨터비전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GLSO0227",
+    "name": "클라우드컴퓨팅",
+    "credit": "3-3-0"
+  }
+]

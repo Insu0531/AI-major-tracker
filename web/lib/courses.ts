@@ -5,7 +5,7 @@
   credit: string;
 };
 
-export type Major = "ai" | "elec" | "mech" | "space" | "energy" | "energy_re" | "energy_cv" | "nursing" | "physics" | "math" | "chem" | "stat" | "geo_geol" | "geo_astro" | "geo_ocean" | "kor_lit" | "eng_lit" | "fre_lit" | "ger_lit" | "chi_lit" | "history" | "philosophy" | "anthro" | "jpn_lit" | "kor_clas" | "rus_lit" | "poli_sci" | "sociology" | "geography" | "doc_info" | "psychology" | "business" | "econ" | "polymer" | "env_eng" | "textile" | "metal_mat" | "agri_civil" | "plant_sci" | "env_life_chem" | "food_biotech" | "food_mat" | "food_app" | "plant_med" | "food_econ" | "smart_bio_mech" | "edu" | "kor_edu" | "eng_edu" | "ethics_edu" | "math_edu" | "home_edu" | "ger_edu" | "fre_edu" | "history_edu" | "geo_edu" | "social_edu" | "phys_edu" | "chem_edu" | "bio_edu" | "earth_edu" | "civic_edu" | "commerce_edu" | "geo2_edu" | "music_edu" | "art_edu" | "home_mgmt" | "child_family" | "clothing" | "food_nutrition" | "life_sci_a" | "life_sci_b" | "life_sci_c" | "eco_housing" | "child_dev" | "child_edu" | "pub_admin" | "pub_policy" | "bio_med_eng" | "robot_smart" | "h2_energy" | "smart_mobility" | "innov_pharma" | "bio_med_fusion" | "robotics" | "adv_tech_self1" | "adv_tech_self2" | "auto_fusion" | "ai_conv" | "bio_med_conv" | "robot_conv" | "h2_conv" | "mobility_conv" | "cs_know" | "cs_sw_conv" | "cs_sys_sw" | "cs_global_sw" | "cs_platform" | "cs_data" | "cs_human_ai" | "cs_ai_comp" | "cs_deep" | "cs_adv";
+export type Major = "ai" | "elec" | "mech" | "space" | "energy" | "energy_re" | "energy_cv" | "nursing" | "physics" | "math" | "chem" | "stat" | "geo_geol" | "geo_astro" | "geo_ocean" | "kor_lit" | "eng_lit" | "fre_lit" | "ger_lit" | "chi_lit" | "history" | "philosophy" | "anthro" | "jpn_lit" | "kor_clas" | "rus_lit" | "poli_sci" | "sociology" | "geography" | "doc_info" | "psychology" | "business" | "econ" | "polymer" | "env_eng" | "textile" | "metal_mat" | "agri_civil" | "plant_sci" | "env_life_chem" | "food_biotech" | "food_mat" | "food_app" | "plant_med" | "food_econ" | "smart_bio_mech" | "edu" | "kor_edu" | "eng_edu" | "ethics_edu" | "math_edu" | "home_edu" | "ger_edu" | "fre_edu" | "history_edu" | "geo_edu" | "social_edu" | "phys_edu" | "chem_edu" | "bio_edu" | "earth_edu" | "civic_edu" | "commerce_edu" | "geo2_edu" | "music_edu" | "art_edu" | "home_mgmt" | "child_family" | "clothing" | "food_nutrition" | "life_sci_a" | "life_sci_b" | "life_sci_c" | "eco_housing" | "child_dev" | "child_edu" | "pub_admin" | "pub_policy" | "bio_med_eng" | "robot_smart" | "h2_energy" | "smart_mobility" | "innov_pharma" | "bio_med_fusion" | "robotics" | "adv_tech_self1" | "adv_tech_self2" | "auto_fusion" | "ai_conv" | "bio_med_conv" | "robot_conv" | "h2_conv" | "mobility_conv" | "cs_know" | "cs_sw_conv" | "cs_sys_sw" | "cs_global_sw" | "cs_platform" | "cs_data" | "cs_human_ai" | "cs_ai_comp" | "cs_deep" | "cs_adv" | "bio_eng";
 
 export const MAJOR_LABELS: Record<Major, string> = {
   ai: "전자공학부 인공지능전공",
@@ -35,6 +35,7 @@ export const MAJOR_LABELS: Record<Major, string> = {
   history: "사학과",
   sociology: "사회학과",
   commerce_edu: "상업교육과",
+  bio_eng: "생명공학부",
   bio_edu: "생물교육과",
   life_sci_a: "생활과학과군A",
   life_sci_b: "생활과학과군B",
@@ -111,6 +112,7 @@ export const MAJOR_LABELS: Record<Major, string> = {
   chem: "화학과",
   chem_edu: "화학교육과",
   env_eng: "환경공학과",
+
 };
 
 export const MAJOR_META: Record<Major, { deptCd: string; baseDeptCd?: string }> = {
@@ -216,7 +218,8 @@ export const MAJOR_META: Record<Major, { deptCd: string; baseDeptCd?: string }> 
   cs_human_ai: { deptCd: "100207", baseDeptCd: "1002" },
   cs_ai_comp: { deptCd: "100208", baseDeptCd: "1002" },
   cs_deep: { deptCd: "100209", baseDeptCd: "1002" },
-  cs_adv: { deptCd: "100210", baseDeptCd: "1002" },
+  cs_adv: { deptCd: "100210", baseDeptCd: "1002" },  bio_eng: { deptCd: "130M" },
+
 };
 
 /** /public/courses/{major}/{entryYear}.json 에서 과목 목록 fetch (클라이언트용) */

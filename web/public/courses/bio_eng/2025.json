@@ -1,0 +1,332 @@
+[
+  {
+    "grade": "1",
+    "code": "BIOT0216",
+    "name": "기초생명공학 탐구 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "BIOT0201",
+    "name": "생명과학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "BIOT0202",
+    "name": "생명과학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "BIED0521",
+    "name": "생물화학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "BIED0522",
+    "name": "생물화학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOT0211",
+    "name": "동물조직해부학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GENE0230",
+    "name": "미생물학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GENE0232",
+    "name": "미생물학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOT0209",
+    "name": "바이오분석화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOT0214",
+    "name": "생체분자과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOC0431",
+    "name": "생화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MBIO0231",
+    "name": "세포생물학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0203",
+    "name": "유기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0204",
+    "name": "유기화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GENE0251",
+    "name": "유전학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GENE0252",
+    "name": "유전학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOT0215",
+    "name": "창의적 생물구조기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOT0333",
+    "name": "구조생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MBIO0263",
+    "name": "균학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MEDI0205",
+    "name": "면역학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MEDI0219",
+    "name": "면역학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MBIO0621",
+    "name": "바이러스학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIED0631",
+    "name": "발생학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MBIO0451",
+    "name": "병원미생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MBIO0331",
+    "name": "분자생물학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MBIO0332",
+    "name": "분자생물학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOT0207",
+    "name": "생명공학과 생명윤리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOT0217",
+    "name": "생명공학실험",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "3",
+    "code": "GENE0430",
+    "name": "생물공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOT0206",
+    "name": "생물노화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOT0511",
+    "name": "생물정보학입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOC0432",
+    "name": "생화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MBIO0241",
+    "name": "세균학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MBIO0232",
+    "name": "세포생물학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIED0411",
+    "name": "식물생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOT0353",
+    "name": "의학바이러스학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOT0210",
+    "name": "첨단바이오신약개발",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOT0208",
+    "name": "첨단발생유전기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MBIO0531",
+    "name": "항생물질학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GENE0611",
+    "name": "효소학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIOF0206",
+    "name": "기기분석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIOT0205",
+    "name": "기초후성유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIOT0218",
+    "name": "바이오 빅데이터 분석",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "MBIO0401",
+    "name": "산업미생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIOT0594",
+    "name": "생명공학 연구 및 실험(캡스톤디자인)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "BIOT0458",
+    "name": "신경생물학 입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ANSC0582",
+    "name": "실험동물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIOT0531",
+    "name": "암세포생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIOT0482",
+    "name": "유도줄기세포학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MBIO0403",
+    "name": "유전체학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIED0513",
+    "name": "인체생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIOT0219",
+    "name": "진화발생생명공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIOT0491",
+    "name": "천연물화학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "BIOT0212",
+    "name": "합성생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MBIO0622",
+    "name": "환경미생물학",
+    "credit": "3-3-0"
+  }
+]

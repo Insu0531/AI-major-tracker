@@ -101,10 +101,14 @@ def update_courses_ts(ts_path: str, key: str, label: str, dept_cd: str, base_cd:
             print(f"  - Major 타입에 '{key}' 이미 존재")
 
     # 2. MAJOR_LABELS에 항목 추가 후 ai 맨 위 + 나머지 ㄱㄴㄷ 정렬로 재작성
-    labels_match = re.search(r'export const MAJOR_LABELS[^{]*\{(.*?)\};', content, re.DOTALL)
+    # MAJOR_LABELS 블록만 정확히 잡기 위해 export const 경계로 종료
+    labels_match = re.search(
+        r'export const MAJOR_LABELS[^{]*\{(.*?)\n\};',
+        content, re.DOTALL
+    )
     if labels_match:
         entries: dict[str, str] = {}
-        for m in re.finditer(r'(\w+)\s*:\s*"([^"]+)"', labels_match.group(1)):
+        for m in re.finditer(r'^\s+(\w+)\s*:\s*"([^"]+)"', labels_match.group(1), re.MULTILINE):
             entries[m.group(1)] = m.group(2)
         added = key not in entries
         entries[key] = label
@@ -114,7 +118,7 @@ def update_courses_ts(ts_path: str, key: str, label: str, dept_cd: str, base_cd:
         sorted_entries = {**ai_entry, **sorted_rest}
         lines = "".join(f'  {k}: "{v}",\n' for k, v in sorted_entries.items())
         content = re.sub(
-            r'(export const MAJOR_LABELS[^{]*\{).*?(\};)',
+            r'(export const MAJOR_LABELS[^{]*\{).*?(\n\};)',
             lambda m: m.group(1) + "\n" + lines + m.group(2),
             content, flags=re.DOTALL,
         )
@@ -128,7 +132,7 @@ def update_courses_ts(ts_path: str, key: str, label: str, dept_cd: str, base_cd:
     # 3. MAJOR_META에 deptCd / baseDeptCd 추가
     meta_entry = f'  {key}: {{ deptCd: "{dept_cd}"' + (f', baseDeptCd: "{base_cd}"' if base_cd else "") + " },"
     # 기존 항목 존재 여부: MAJOR_META 블록 안에서만 확인 (정확한 패턴으로)
-    meta_block_match = re.search(r'export const MAJOR_META[^{]*\{(.*?)\};', content, re.DOTALL)
+    meta_block_match = re.search(r'export const MAJOR_META[^{]*\{(.*?)\n\};', content, re.DOTALL)
     if "MAJOR_META" not in content:
         # MAJOR_META 블록 자체가 없으면 MAJOR_LABELS 뒤에 추가
         meta_block = f"\nexport const MAJOR_META: Record<Major, {{ deptCd: string; baseDeptCd?: string }}> = {{\n{meta_entry}\n}};\n"
@@ -138,7 +142,7 @@ def update_courses_ts(ts_path: str, key: str, label: str, dept_cd: str, base_cd:
         print(f"  - MAJOR_META에 '{key}' 이미 존재")
     else:
         content = re.sub(
-            r'(export const MAJOR_META[^{]*\{)(.*?)(};)',
+            r'(export const MAJOR_META[^{]*\{)(.*?)(\n\};)',
             lambda m: m.group(1) + m.group(2) + f"{meta_entry}\n" + m.group(3),
             content, flags=re.DOTALL,
         )
