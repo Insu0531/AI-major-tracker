@@ -291,11 +291,25 @@ export default function KyoshikWizard({ pinnedCombo, pinnedNoTimeSections, initi
       const domtoimage = (await import("dom-to-image-more")).default;
       void comboToCapture;
       const el = captureRef.current!
-      const CAPTURE_W = 900;
+      const CAPTURE_W = 810;
       const bg = isDark() ? "#171717" : "#ffffff";
       const clone = el.cloneNode(true) as HTMLElement;
       clone.style.cssText = `position:fixed;left:-9999px;top:0;width:${CAPTURE_W}px;height:auto;overflow:visible;`;
       document.body.appendChild(clone);
+
+      // 스크롤바 제거
+      clone.querySelectorAll<HTMLElement>("*").forEach((child) => {
+        const cs = window.getComputedStyle(child);
+        if (cs.overflowY === "auto" || cs.overflowY === "scroll") {
+          child.style.height = `${child.scrollHeight}px`;
+          child.style.overflowY = "hidden";
+        }
+        if (cs.overflowX === "auto" || cs.overflowX === "scroll") {
+          child.style.width = `${child.scrollWidth}px`;
+          child.style.overflowX = "hidden";
+        }
+      });
+
       const dataUrl = await domtoimage.toPng(clone, { bgcolor: bg, scale: 3, width: CAPTURE_W, height: clone.scrollHeight });
       document.body.removeChild(clone);
       const link = document.createElement("a");

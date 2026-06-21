@@ -9,6 +9,7 @@ import GyoyangWizard from "@/components/GyoyangWizard";
 import KyoshikWizard from "@/components/KyoshikWizard";
 import FeedbackTab from "@/components/FeedbackTab";
 import LibraryTab from "@/components/LibraryTab";
+import AcademicCalendarTab from "@/components/AcademicCalendarTab";
 
 type Row = {
   grade: string;
@@ -39,7 +40,7 @@ const COLS: { key: keyof Row; label: string }[] = [
 const MAX_SELECT = 10;
 
 export default function Home() {
-  const [tab, setTab] = useState<"search" | "wizard" | "gyoyang" | "kyoshik" | "settings" | "feedback" | "library">("search");
+  const [tab, setTab] = useState<"search" | "wizard" | "gyoyang" | "kyoshik" | "settings" | "feedback" | "library" | "calendar">("search");
   const [darkMode, setDarkMode] = useState(false);
   const [refetchConfirm, setRefetchConfirm] = useState(false);
   const [showMajor2Tip, setShowMajor2Tip] = useState(false);
@@ -399,6 +400,7 @@ export default function Home() {
           { key: "gyoyang", label: "교양 마법사" },
           { key: "kyoshik", label: "교직 마법사" },
           { key: "library", label: "라이브러리" },
+          { key: "calendar", label: "학사일정(개발중)" },
           { key: "settings", label: "설정" },
           { key: "feedback", label: "응원/문의" },
         ] as const).map(({ key, label }) => {
@@ -1246,6 +1248,9 @@ export default function Home() {
 
         {/* ── 라이브러리 탭 ── */}
         {tab === "library" && <LibraryTab />}
+
+        {/* ── 학사일정 탭 ── */}
+        {tab === "calendar" && <AcademicCalendarTab />}
 
         {/* ── 설정 탭 ── */}
         {tab === "settings" && (

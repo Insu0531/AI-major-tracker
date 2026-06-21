@@ -401,7 +401,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
       void fullCombo; // fullCombo는 captureCombo state를 통해 이미 반영됨
 
       const el = captureRef.current!
-      const CAPTURE_W = 900;
+      const CAPTURE_W = 810;
       const dark = isDark();
       const bg = dark ? "#171717" : "#ffffff";
 
@@ -413,6 +413,19 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
       clone.style.height = "auto";
       clone.style.overflow = "visible";
       document.body.appendChild(clone);
+
+      // 스크롤바 제거: overflow-auto/scroll 요소를 scrollHeight로 고정
+      clone.querySelectorAll<HTMLElement>("*").forEach((child) => {
+        const cs = window.getComputedStyle(child);
+        if (cs.overflowY === "auto" || cs.overflowY === "scroll") {
+          child.style.height = `${child.scrollHeight}px`;
+          child.style.overflowY = "hidden";
+        }
+        if (cs.overflowX === "auto" || cs.overflowX === "scroll") {
+          child.style.width = `${child.scrollWidth}px`;
+          child.style.overflowX = "hidden";
+        }
+      });
 
       const dataUrl = await domtoimage.toPng(clone, {
         bgcolor: bg,

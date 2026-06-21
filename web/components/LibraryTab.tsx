@@ -247,9 +247,23 @@ function PreviewModal({ timetable, onClose, semLabel }: { timetable: SavedTimeta
       const el = timetableRef.current;
       const isDark = document.documentElement.classList.contains("dark");
       const clone = el.cloneNode(true) as HTMLElement;
-      clone.style.cssText = "position:fixed;left:-9999px;top:0;width:900px;height:auto;overflow:visible;";
+      clone.style.cssText = "position:fixed;left:-9999px;top:0;width:810px;height:auto;overflow:visible;";
       document.body.appendChild(clone);
-      const dataUrl = await domtoimage.toPng(clone, { bgcolor: isDark ? "#171717" : "#ffffff", scale: 3, width: 900, height: clone.scrollHeight });
+
+      // 스크롤바 제거
+      clone.querySelectorAll<HTMLElement>("*").forEach((child) => {
+        const cs = window.getComputedStyle(child);
+        if (cs.overflowY === "auto" || cs.overflowY === "scroll") {
+          child.style.height = `${child.scrollHeight}px`;
+          child.style.overflowY = "hidden";
+        }
+        if (cs.overflowX === "auto" || cs.overflowX === "scroll") {
+          child.style.width = `${child.scrollWidth}px`;
+          child.style.overflowX = "hidden";
+        }
+      });
+
+      const dataUrl = await domtoimage.toPng(clone, { bgcolor: isDark ? "#171717" : "#ffffff", scale: 3, width: 810, height: clone.scrollHeight });
       document.body.removeChild(clone);
       const link = document.createElement("a");
       link.href = dataUrl;
