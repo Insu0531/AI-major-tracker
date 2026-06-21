@@ -1,0 +1,338 @@
+[
+  {
+    "grade": "1",
+    "code": "DETI0203",
+    "name": "성장발육학",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "1",
+    "code": "DETI0222",
+    "name": "영상치의학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "DETI0229",
+    "name": "의학생리학 및 실습",
+    "credit": "6-5-2"
+  },
+  {
+    "grade": "1",
+    "code": "DETI0263",
+    "name": "인문사회치의학1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "1",
+    "code": "DETI0232",
+    "name": "인체미생물학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "DETI0231",
+    "name": "인체병리학 및 실습",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "1",
+    "code": "DETI0228",
+    "name": "인체세포분자생물학 및 실습",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "1",
+    "code": "DETI0234",
+    "name": "인체약리학 및 실습",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "1",
+    "code": "DETI0227",
+    "name": "인체형태학 및 실습",
+    "credit": "9-7-4"
+  },
+  {
+    "grade": "1",
+    "code": "DETI0236",
+    "name": "임상실습입문 A",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "DETI0237",
+    "name": "치과고정성수복학",
+    "credit": "4-4-0"
+  },
+  {
+    "grade": "1",
+    "code": "DETI0230",
+    "name": "치과생체재료학 및 실습",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "1",
+    "code": "DETI0262",
+    "name": "치과의사학으로 배우는 인문학 Ⅱ",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "1",
+    "code": "DETI0202",
+    "name": "치아질환",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "1",
+    "code": "DETI0210",
+    "name": "치의학연구방법론",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "2",
+    "code": "DETI0264",
+    "name": "가철성보철수복 Ⅰ",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "DETI0265",
+    "name": "가철성보철수복Ⅱ및실습",
+    "credit": "7-3-8"
+  },
+  {
+    "grade": "2",
+    "code": "DETI0238",
+    "name": "고정성보철학실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "DETI0215",
+    "name": "교정실습",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "2",
+    "code": "DETI0205",
+    "name": "구강보건학 및 실습",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "DETI0212",
+    "name": "구강악안면손상",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "DETI0211",
+    "name": "구강안면통증",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DETI0209",
+    "name": "구강연조직질환",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "DETI0214",
+    "name": "부정교합",
+    "credit": "4-4-0"
+  },
+  {
+    "grade": "2",
+    "code": "DETI0213",
+    "name": "소아고정성수복실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "DETI0260",
+    "name": "소아구강질환",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "2",
+    "code": "DETI0267",
+    "name": "인문사회치의학2",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "2",
+    "code": "DETI0208",
+    "name": "전신질환",
+    "credit": "7-7-0"
+  },
+  {
+    "grade": "2",
+    "code": "DETI0239",
+    "name": "치과교합학 및 실습",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "DETI0207",
+    "name": "치과보존수복학실습",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "2",
+    "code": "DETI0233",
+    "name": "치근관치료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DETI0206",
+    "name": "치주질환",
+    "credit": "4-4-0"
+  },
+  {
+    "grade": "2",
+    "code": "DETI0255",
+    "name": "통합임상전단계실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "DETI0242",
+    "name": "기초심층연구실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "DETI0216",
+    "name": "악골질환",
+    "credit": "4-4-0"
+  },
+  {
+    "grade": "3",
+    "code": "DETI0244",
+    "name": "임상증례토론A",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "DETI0268",
+    "name": "임상행동조절및의사소통",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "3",
+    "code": "DETI0221",
+    "name": "치과근관치료실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "DETI0271",
+    "name": "치과임플란트학",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "3",
+    "code": "DETI0274",
+    "name": "치의학임상실습 Ⅱ",
+    "credit": "15-0-30"
+  },
+  {
+    "grade": "3",
+    "code": "DETI0273",
+    "name": "치의학임상실습Ⅰ",
+    "credit": "10-0-20"
+  },
+  {
+    "grade": "4",
+    "code": "DETI0259",
+    "name": "구강악안면병리학",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "DETI0253",
+    "name": "노년치과학",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "DETI0254",
+    "name": "심미치과학",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "DETI0217",
+    "name": "의료법학과 윤리",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "DETI0258",
+    "name": "인문사회와자원봉사Ⅱ",
+    "credit": "1-0-30"
+  },
+  {
+    "grade": "4",
+    "code": "DETI0247",
+    "name": "임상증례토론B",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "DETI0249",
+    "name": "임상증례토론C",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "DETI0223",
+    "name": "장애인치과학",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "DETI0269",
+    "name": "최신치의학강의 Ⅰ",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "DETI0270",
+    "name": "최신치의학강의 Ⅱ",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "DETI0218",
+    "name": "치과법의학",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "DETI0219",
+    "name": "치과의료관리학과 의료산업창업",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "DETI0272",
+    "name": "치과임플란트학실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "DETI0275",
+    "name": "치의학임상실습 Ⅲ",
+    "credit": "15-0-30"
+  },
+  {
+    "grade": "4",
+    "code": "DETI0251",
+    "name": "치의학종합이해실습",
+    "credit": "4-0-8"
+  }
+]

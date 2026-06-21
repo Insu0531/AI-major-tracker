@@ -1,0 +1,110 @@
+[
+  {
+    "grade": "1",
+    "code": "PRED0201",
+    "name": "생명현상의 이해Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PRED0202",
+    "name": "생명현상의 이해Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PRED0203",
+    "name": "세포분자생물학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PRED0206",
+    "name": "기초구강생물학 실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "PRED0207",
+    "name": "기초미생물 및 면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0392",
+    "name": "기초생화학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PRED0218",
+    "name": "생활법률과 세무",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PRED0219",
+    "name": "예술의 이해와 감상",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PRED0210",
+    "name": "우리몸의 이해",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PRED0204",
+    "name": "유기화학Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DETI0257",
+    "name": "인문사회와자원봉사Ⅰ",
+    "credit": "1-0-30(h)"
+  },
+  {
+    "grade": "2",
+    "code": "PRED0205",
+    "name": "인체 발생 및 유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PRED0216",
+    "name": "치과의사학으로 배우는 인문치의학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PRED0212",
+    "name": "치과재료물성학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "DETI0261",
+    "name": "치아형태학및실습",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "PRED0211",
+    "name": "치의과학연구",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "PRED0209",
+    "name": "치의학통계학 및 실습",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "PMED0201",
+    "name": "행동과학",
+    "credit": "2-2-0"
+  }
+]
