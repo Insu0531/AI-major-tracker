@@ -272,10 +272,12 @@ export default function Home() {
       if (extraMajors[0]) p["entry.1271474438"] = MAJOR_LABELS[extraMajors[0]];
       if (extraMajors[1]) p["entry.1291630679"] = MAJOR_LABELS[extraMajors[1]];
       if (extraMajors[2]) p["entry.1358298387"] = MAJOR_LABELS[extraMajors[2]];
-      navigator.sendBeacon(
+      const beaconBody = new FormData();
+      Object.entries(p).forEach(([k, v]) => beaconBody.append(k, v));
+      fetch(
         "https://docs.google.com/forms/d/e/1FAIpQLScaPJZeS2kq6xLaIGxNA99gnocC6mk7yRWuAu2YJfHlhFxtiA/formResponse",
-        new URLSearchParams(p)
-      );
+        { method: "POST", body: beaconBody, mode: "no-cors" }
+      ).catch(() => {});
     }
     try {
       const allRows: Row[] = [];
