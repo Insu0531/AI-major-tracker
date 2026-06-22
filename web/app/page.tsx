@@ -261,10 +261,21 @@ export default function Home() {
     setIncludeProfs(new Set()); setExcludeProfs(new Set()); setIncludeDepts(new Set());
     setNoTimeSections([]);
     setPinnedCombo(null);
-    navigator.sendBeacon(
-      "https://docs.google.com/forms/d/e/1FAIpQLScaPJZeS2kq6xLaIGxNA99gnocC6mk7yRWuAu2YJfHlhFxtiA/formResponse",
-      new URLSearchParams({ "entry.1215157076": MAJOR_LABELS[major], "entry.2002464997": String(entryYear) })
-    );
+    {
+      const p: Record<string, string> = {
+        "entry.1215157076": MAJOR_LABELS[major],
+        "entry.2002464997": String(entryYear),
+        "entry.142817375": semYear,
+        "entry.490094442": semTerm,
+      };
+      if (extraMajors[0]) p["entry.1271474438"] = MAJOR_LABELS[extraMajors[0]];
+      if (extraMajors[1]) p["entry.1291630679"] = MAJOR_LABELS[extraMajors[1]];
+      if (extraMajors[2]) p["entry.1358298387"] = MAJOR_LABELS[extraMajors[2]];
+      navigator.sendBeacon(
+        "https://docs.google.com/forms/d/e/1FAIpQLScaPJZeS2kq6xLaIGxNA99gnocC6mk7yRWuAu2YJfHlhFxtiA/formResponse",
+        new URLSearchParams(p)
+      );
+    }
     try {
       const allRows: Row[] = [];
       const tag1 = extraMajors.length > 0 ? "주전공" : "";
