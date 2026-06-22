@@ -75,6 +75,7 @@ const EVENTS: CalEvent[] = [
 
   // 7월
   { date: "2026-07-01", label: "복학원 접수시작" },
+  { date: "2026-07-14", label: "2학기 시간표 공개", color: "green"},
   { date: "2026-07-17", label: "제헌절", color: "red" },
   { date: "2026-07-22", endDate: "2026-07-24", label: "2학기 수강꾸러미 신청", color: "green" },
 
@@ -179,6 +180,8 @@ export default function AcademicCalendarTab() {
   const [month, setMonth] = useState(today.getMonth());
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const [showGrad, setShowGrad] = useState(false);
+  // 전체화면: 달력 또는 목록을 화면 가득 크게 보기 (모바일용)
+  const [fullscreen, setFullscreen] = useState<"calendar" | "list" | null>(null);
 
   const daysInMonth = new Date(year, month + 1, 0).getDate();
   const firstDay = new Date(year, month, 1).getDay();
@@ -223,9 +226,18 @@ export default function AcademicCalendarTab() {
   const list = selectedDate ? eventsOnDate(selectedDate, showGrad) : monthEvents;
 
   return (
-    <div className="flex-1 flex overflow-hidden p-4 gap-4">
+    <div className="flex-1 flex flex-col md:flex-row overflow-hidden p-2 md:p-4 gap-2 md:gap-4">
       {/* ── 왼쪽: 달력 (65%) ── */}
-      <div className="flex flex-col bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden" style={{ flex: "0 0 65%" }}>
+      <div
+        className={`flex flex-col bg-white border border-gray-200 shadow-sm overflow-hidden ${
+          fullscreen === "calendar"
+            ? "fixed inset-0 z-[100] rounded-none"
+            : fullscreen === "list"
+            ? "hidden"
+            : "rounded-xl"
+        }`}
+        style={fullscreen ? undefined : { flex: "0 0 65%" }}
+      >
         {/* Header */}
         <div className="flex items-center justify-between px-5 py-3 border-b border-gray-100 shrink-0">
           <button onClick={prevMonth} className="p-1.5 rounded hover:bg-gray-100 text-gray-500">◀</button>
@@ -247,6 +259,13 @@ export default function AcademicCalendarTab() {
               title="대학원 일정 표시/숨김"
             >
               대학원 {showGrad ? "표시" : "숨김"}
+            </button>
+            <button
+              onClick={() => setFullscreen((v) => (v === "calendar" ? null : "calendar"))}
+              className="text-sm px-2 py-1 border border-gray-300 rounded hover:bg-gray-50 text-gray-500"
+              title={fullscreen === "calendar" ? "전체화면 닫기" : "달력 전체화면"}
+            >
+              {fullscreen === "calendar" ? "✕ 닫기" : "⛶ 전체화면"}
             </button>
           </div>
           <button onClick={nextMonth} className="p-1.5 rounded hover:bg-gray-100 text-gray-500">▶</button>
@@ -341,13 +360,28 @@ export default function AcademicCalendarTab() {
       </div>
 
       {/* ── 오른쪽: 일정 목록 (35%) ── */}
-      <div className="flex flex-col bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden flex-1">
-        <div className="px-4 py-3 border-b border-gray-100 shrink-0">
+      <div
+        className={`flex flex-col bg-white border border-gray-200 shadow-sm overflow-hidden ${
+          fullscreen === "list"
+            ? "fixed inset-0 z-[100] rounded-none"
+            : fullscreen === "calendar"
+            ? "hidden"
+            : "rounded-xl flex-1"
+        }`}
+      >
+        <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100 shrink-0">
           <h3 className="text-base font-semibold text-gray-700">
             {selectedDate
               ? `${parseInt(selectedDate.split("-")[1])}월 ${parseInt(selectedDate.split("-")[2])}일`
               : `${MONTHS[month]} 일정`}
           </h3>
+          <button
+            onClick={() => setFullscreen((v) => (v === "list" ? null : "list"))}
+            className="text-sm px-2 py-1 border border-gray-300 rounded hover:bg-gray-50 text-gray-500"
+            title={fullscreen === "list" ? "전체화면 닫기" : "목록 전체화면"}
+          >
+            {fullscreen === "list" ? "✕ 닫기" : "⛶ 전체화면"}
+          </button>
         </div>
 
         <div className="flex-1 overflow-y-auto px-3 py-2">

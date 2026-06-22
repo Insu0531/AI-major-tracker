@@ -26,9 +26,12 @@ export default function GuideTour({
   const [idx, setIdx] = useState(0);
   const [rect, setRect] = useState<Rect | null>(null);
 
-  // 투어를 새로 켤 때마다 첫 단계로
+  // 투어를 새로 켤 때마다 첫 단계로 + 포커스 해제(포커스된 버튼이 Enter로 재실행되는 것 방지)
   useEffect(() => {
-    if (run) setIdx(0);
+    if (run) {
+      setIdx(0);
+      (document.activeElement as HTMLElement | null)?.blur();
+    }
   }, [run]);
 
   const measure = useCallback(() => {
@@ -60,22 +63,26 @@ export default function GuideTour({
     };
   }, [run, measure]);
 
-  // 키보드 조작
+  // 키보드 조작 (캡처 단계에서 가로채 페이지 전역 핸들러/포커스된 버튼 재실행 방지)
   useEffect(() => {
     if (!run) return;
+    const last = steps.length - 1;
     const handler = (e: KeyboardEvent) => {
+      if (e.key !== "Escape" && e.key !== "Enter" && e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+      e.preventDefault();
+      e.stopPropagation();
       if (e.key === "Escape") {
         // 마지막(안내) 단계가 아니면 건너뛰기 → 마지막 단계로 이동
-        setIdx((i) => (i >= steps.length - 1 ? (onClose(), i) : steps.length - 1));
-      } else if (e.key === "ArrowRight" || e.key === "Enter") {
-        setIdx((i) => (i >= steps.length - 1 ? (onClose(), i) : i + 1));
+        if (idx >= last) onClose(); else setIdx(last);
+      } else if (e.key === "Enter" || e.key === "ArrowRight") {
+        if (idx >= last) onClose(); else setIdx((i) => i + 1);
       } else if (e.key === "ArrowLeft") {
         setIdx((i) => Math.max(0, i - 1));
       }
     };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, [run, steps.length, onClose]);
+    window.addEventListener("keydown", handler, true);
+    return () => window.removeEventListener("keydown", handler, true);
+  }, [run, idx, steps.length, onClose]);
 
   if (!run || steps.length === 0) return null;
 
