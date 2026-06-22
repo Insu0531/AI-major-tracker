@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback, useEffect } from "react";
 import { track } from "@vercel/analytics";
-import { buildSectionGroups, generateCombos, Section, NoTimeSection } from "@/lib/timetable";
+import { buildSectionGroups, generateCombos, formatTimeStr, Section, NoTimeSection } from "@/lib/timetable";
 import { Major, MAJOR_LABELS, ENTRY_YEAR_MIN, ENTRY_YEAR_MAX, fetchCoursesByYear, Course } from "@/lib/courses";
 import TimetableGrid from "@/components/TimetableGrid";
 import GyoyangWizard from "@/components/GyoyangWizard";
@@ -839,10 +839,7 @@ export default function Home() {
                           <td key={c.key} className="px-3 py-1.5 text-gray-700 whitespace-nowrap">
                             {c.key === "timeStr" ? (
                               <div className="leading-tight">
-                                {row[c.key].split(",").map((t) => t.trim()).sort((a, b) => {
-                                  const order: Record<string, number> = { 월: 0, 화: 1, 수: 2, 목: 3, 금: 4, 토: 5, 일: 6 };
-                                  return (order[a[0]] ?? 9) - (order[b[0]] ?? 9);
-                                }).map((t, i) => <div key={i}>{t}</div>)}
+                                {(formatTimeStr(row[c.key]) || row[c.key] || "").split(",").map((t) => t.trim()).filter(Boolean).map((t, i) => <div key={i}>{t}</div>)}
                               </div>
                             ) : c.key === "location" ? (
                               <div className="text-xs leading-tight">

@@ -18,6 +18,38 @@ export function parseTimes(timeStr: string): TimeSlot[] {
   return slots;
 }
 
+const DAY_NAMES = ["월", "화", "수", "목", "금", "토"];
+function fmtHour(h: number): string {
+  const hh = Math.floor(h);
+  const mm = Math.round((h - hh) * 60);
+  return `${hh}:${String(mm).padStart(2, "0")}`;
+}
+
+// 강의시간 문자열을 요일순 정렬 + 같은 요일의 연속 슬롯 병합
+// 예: "화 14:00~15:00, 화 15:00~16:00, 화 16:00~18:00" → "화 14:00~18:00"
+export function formatTimeStr(timeStr: string): string {
+  const slots = parseTimes(timeStr);
+  const byDay = new Map<number, { start: number; end: number }[]>();
+  for (const s of slots) {
+    if (!byDay.has(s.day)) byDay.set(s.day, []);
+    byDay.get(s.day)!.push({ start: s.start, end: s.end });
+  }
+  const parts: string[] = [];
+  for (const [day, segs] of [...byDay.entries()].sort((a, b) => a[0] - b[0])) {
+    segs.sort((a, b) => a.start - b.start);
+    const merged: { start: number; end: number }[] = [];
+    for (const seg of segs) {
+      if (merged.length && seg.start <= merged[merged.length - 1].end) {
+        merged[merged.length - 1].end = Math.max(merged[merged.length - 1].end, seg.end);
+      } else {
+        merged.push({ ...seg });
+      }
+    }
+    for (const m of merged) parts.push(`${DAY_NAMES[day]} ${fmtHour(m.start)}~${fmtHour(m.end)}`);
+  }
+  return parts.join(", ");
+}
+
 export type Section = {
   name: string;
   profs: string[];

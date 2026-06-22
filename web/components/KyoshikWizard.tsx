@@ -923,10 +923,7 @@ export default function KyoshikWizard({ pinnedCombo, pinnedNoTimeSections, initi
                             <div className="truncate" title={r.prof}>{r.prof}</div>
                           </td>
                           <td className="px-2 py-1.5 text-gray-700 text-xs">
-                            {r.timeStr.split(",").map((t) => t.trim()).sort((a, b) => {
-                              const order: Record<string, number> = { 월: 0, 화: 1, 수: 2, 목: 3, 금: 4, 토: 5, 일: 6 };
-                              return (order[a[0]] ?? 9) - (order[b[0]] ?? 9);
-                            }).map((t, idx) => <div key={idx} className="whitespace-nowrap">{t}</div>)}
+                            {(formatTimeStr(r.timeStr) || r.timeStr || "").split(",").map((t) => t.trim()).filter(Boolean).map((t, idx) => <div key={idx} className="whitespace-nowrap">{t}</div>)}
                           </td>
                           <td className="px-2 py-1.5 text-gray-700 text-xs">
                             {r.location ? r.location.split("\n").map((line, idx) => <div key={idx} className="whitespace-nowrap">{line}</div>) : ""}
