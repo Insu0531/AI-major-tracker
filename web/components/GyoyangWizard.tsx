@@ -78,7 +78,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   const [filterIlban, setFilterIlban] = useState(false);
   const [filterHideConflict, setFilterHideConflict] = useState(true);
   const [filterSangju, setFilterSangju] = useState<"exclude" | "include" | "all">("exclude");
-  const [filterPanelOpen, setFilterPanelOpen] = useState(true);
+  const [filterPanelOpen, setFilterPanelOpen] = useState(false);
 
   const isSangju = majorLabel?.startsWith("[상주]") ?? false;
   // 상주 모드 변경 시 필터 기본값 리셋
@@ -104,6 +104,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
 
   // 조합
   const [combos, setCombos] = useState<Section[][]>([]);
+  const [filteredCombos, setFilteredCombos] = useState<Section[][]>([]);
   const [comboIdx, setComboIdx] = useState(0);
   const [panelOpen, setPanelOpen] = useState(() => typeof window !== "undefined" && window.innerWidth >= 768);
   const [leftTab, setLeftTab] = useState<"timetable" | "list">("timetable");
@@ -114,6 +115,14 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   const [noTimeSections, setNoTimeSections] = useState<NoTimeSection[]>([]);
   const [flashKey, setFlashKey] = useState(0);
   const [slideDir, setSlideDir] = useState<"left" | "right">("left");
+  const [panelTab, setPanelTab] = useState<"courses" | "filter">("courses");
+  const [gyoDayOff, setGyoDayOff] = useState<Set<number>>(new Set());
+  const [gyoNoMorning, setGyoNoMorning] = useState("");
+  const [gyoNoEvening, setGyoNoEvening] = useState("");
+  const [gyoFilterMap, setGyoFilterMap] = useState<Map<string, true | string>>(new Map());
+  const [gyoExcludeProfs, setGyoExcludeProfs] = useState<Set<string>>(new Set());
+  const [gyoIncludeProfs, setGyoIncludeProfs] = useState<Set<string>>(new Set());
+  const [gyoProfSearch, setGyoProfSearch] = useState("");
   const [saving, setSaving] = useState(false);
   const timetableRef = useRef<HTMLDivElement | null>(null);
   const captureRef = useRef<HTMLDivElement | null>(null);
@@ -348,20 +357,54 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
 
   useEffect(() => { setComboIdx(0); }, [minGyoyangCredit]);
 
+  useEffect(() => {
+    if (combos.length === 0) { setFilteredCombos([]); return; }
+    const required = [...gyoFilterMap.entries()];
+    const morningLimit = parseInt(gyoNoMorning);
+    const eveningLimit = parseInt(gyoNoEvening);
+    setFilteredCombos(
+      combos.filter((combo) => {
+        if (required.length && !required.every(([name, prof]) =>
+          combo.some((sec) => sec.name === name && (prof === true || sec.profs.includes(prof as string)))
+        )) return false;
+        if (gyoExcludeProfs.size > 0 && combo.some((sec) => sec.profs.some((p) => gyoExcludeProfs.has(p)))) return false;
+        if (gyoIncludeProfs.size > 0 && ![...gyoIncludeProfs].every((p) => combo.some((sec) => sec.profs.includes(p)))) return false;
+        const allSlots = combo.flatMap((sec) => sec.times);
+        if (gyoDayOff.size > 0) {
+          const usedDays = new Set(allSlots.map((t) => t.day));
+          if ([...gyoDayOff].some((d) => usedDays.has(d))) return false;
+        }
+        if (!isNaN(morningLimit) && morningLimit > 0 && allSlots.some((t) => t.start < morningLimit)) return false;
+        if (!isNaN(eveningLimit) && eveningLimit > 0 && allSlots.some((t) => t.end > eveningLimit)) return false;
+        return true;
+      })
+    );
+    setComboIdx(0);
+  }, [combos, gyoFilterMap, gyoDayOff, gyoNoMorning, gyoNoEvening, gyoExcludeProfs, gyoIncludeProfs]);
+
   const pinnedNoTimeCredit = (pinnedNoTimeSections ?? []).reduce((s, sec) => s + sec.credit, 0);
   const pinnedCredit = (pinnedCombo ?? []).reduce((s, sec) => s + sec.credit, 0) + pinnedNoTimeCredit;
   // 전체 학점(전공+교양) 기준 필터
   const visibleCombos = minGyoyangCredit > 0
-    ? combos.filter((c) => {
+    ? filteredCombos.filter((c) => {
         const gyoyang = c.reduce((s, sec) => s + sec.credit, 0);
         return pinnedCredit + gyoyang >= minGyoyangCredit;
       })
-    : combos;
+    : filteredCombos;
   const currentCombo = visibleCombos[comboIdx] ?? [];
   const displayCombo = [...(pinnedCombo ?? []), ...currentCombo];
   const gyoyangNoTimeCredit = noTimeSections.reduce((s, sec) => s + sec.credit, 0);
   const gyoyangCredit = currentCombo.reduce((s, sec) => s + sec.credit, 0) + gyoyangNoTimeCredit;
   const totalCredit = displayCombo.reduce((s, sec) => s + sec.credit, 0) + pinnedNoTimeCredit + gyoyangNoTimeCredit;
+
+  const namesInCombos = [...new Set(combos.flatMap((c) => c.map((s) => s.name)))];
+  const profsByName = new Map<string, string[]>();
+  for (const name of namesInCombos) {
+    const profs = [...new Set(combos.flatMap((c) => c.filter((s) => s.name === name).flatMap((s) => s.profs)))].sort((a, b) => a.localeCompare(b, "ko"));
+    profsByName.set(name, profs);
+  }
+  const profsInCombos = [...new Set(combos.flatMap((c) => c.flatMap((s) => s.profs)))].sort((a, b) => a.localeCompare(b, "ko"));
+  const filteredGyoProfs = gyoProfSearch ? profsInCombos.filter((p) => p.includes(gyoProfSearch)) : profsInCombos;
 
   const getTag = (r: Row) => r.crseNo.startsWith("CLTR") ? "교양" : "일반선택";
   const listSorted = useMemo(() => {
@@ -745,8 +788,22 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
           )}
         </div>
 
-        {/* 과목 선택 */}
-        {(<>
+        {/* 내부 탭 */}
+        <div className="flex border-b border-gray-200 shrink-0">
+          {(["courses", "filter"] as const).map((t) => (
+            <button key={t} onClick={() => setPanelTab(t)}
+              className={`flex-1 py-2 text-sm font-medium transition-colors ${panelTab === t ? "border-b-2 border-indigo-500 text-indigo-600" : "text-gray-500 hover:text-gray-700"}`}>
+              {t === "courses" ? (
+                <span>과목 선택 <span className={`text-xs ${selected.size >= MAX_SELECT ? "text-red-500 font-bold" : "text-gray-400"}`}>({selected.size}/{MAX_SELECT})</span></span>
+              ) : (
+                <span>시간표 필터 {(gyoFilterMap.size > 0 || gyoDayOff.size > 0 || gyoNoMorning || gyoNoEvening || gyoExcludeProfs.size > 0 || gyoIncludeProfs.size > 0 || maxCredit > 0 || minGyoyangCredit > 0) && <span className="text-indigo-500">●</span>}</span>
+              )}
+            </button>
+          ))}
+        </div>
+
+        {/* ── 과목 선택 탭 ── */}
+        {panelTab === "courses" && (<>
           <div className="px-3 py-2 shrink-0 flex flex-col gap-1.5 border-b border-gray-100">
             <div className="flex gap-1.5">
               <input
@@ -766,26 +823,21 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                 className="flex items-center gap-1 text-xs text-gray-500 hover:text-gray-700 w-fit"
               >
                 <span>{filterPanelOpen ? "▾" : "▸"}</span>
-                <span>필터</span>
-                {(filterSdg || filterHmnts || filterSuEval || filterRemote || filterIlban || !filterHideConflict || filterDayOff.size > 0 || filterDayCombo || maxCredit > 0 || minGyoyangCredit > 0) && (
+                <span>검색 필터</span>
+                {(filterSdg || filterHmnts || filterSuEval || filterRemote || filterIlban || !filterHideConflict || filterDayOff.size > 0 || filterDayCombo) && (
                   <span className="ml-1 text-indigo-500">●</span>
                 )}
               </button>
-              <div className="flex gap-2 items-center">
-                {fetched && (
-                  <span className="text-xs text-gray-400">
-                    {filteredList.length}과목 ·{" "}
-                    {filteredList.reduce((s, c) => s + effectiveRows.filter((r) => r.code === c.code).length, 0)}분반
-                  </span>
-                )}
-                <span className={`text-xs ${selected.size >= MAX_SELECT ? "text-red-500 font-bold" : "text-gray-400"}`}>
-                  {selected.size}/{MAX_SELECT}
+              {fetched && (
+                <span className="text-xs text-gray-400">
+                  {filteredList.length}과목 ·{" "}
+                  {filteredList.reduce((s, c) => s + effectiveRows.filter((r) => r.code === c.code).length, 0)}분반
                 </span>
-                {selected.size > 0 && (
-                  <button onClick={() => setSelected(new Set())} className="text-xs text-gray-400 hover:text-red-500">전체 해제</button>
-                )}
-              </div>
+              )}
             </div>
+            {selected.size > 0 && (
+              <button onClick={() => setSelected(new Set())} className="text-xs text-gray-400 hover:text-red-500 text-left">전체 과목 선택 해제</button>
+            )}
             {/* 필터 내용 (접기/펼치기) */}
             {filterPanelOpen && (
               <div className="flex flex-col gap-2">
@@ -842,31 +894,6 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                     <option value="">전체</option>
                     {["월","화","수","목","금","월화","월수","월목","월금","화수","화목","화금","수목","수금","목금"].map((combo) => (
                       <option key={combo} value={combo}>{combo}</option>
-                    ))}
-                  </select>
-                </div>
-                <div className="flex items-center gap-2">
-                  <label className="text-xs text-gray-600 shrink-0">최대 학점</label>
-                  <select value={maxCredit} onChange={(e) => setMaxCredit(Number(e.target.value))}
-                    className="flex-1 border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-indigo-400">
-                    <option value={0}>제한 없음</option>
-                    {Array.from({ length: 16 }, (_, i) => i + 12).map((v) => (
-                      <option key={v} value={v}>{v}학점</option>
-                    ))}
-                  </select>
-                  {maxCredit > 0 && (
-                    <span className="text-xs text-gray-400 shrink-0">
-                      전공 {(pinnedCombo ?? []).reduce((s, sec) => s + sec.credit, 0)}학점
-                    </span>
-                  )}
-                </div>
-                <div className="flex items-center gap-2">
-                  <label className="text-xs text-gray-600 shrink-0">전체 최소</label>
-                  <select value={minGyoyangCredit} onChange={(e) => setMinGyoyangCredit(Number(e.target.value))}
-                    className="flex-1 border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-indigo-400">
-                    <option value={0}>제한 없음</option>
-                    {Array.from({ length: 17 }, (_, i) => i + 9).map((v) => (
-                      <option key={v} value={v}>{v}학점 이상</option>
                     ))}
                   </select>
                 </div>
@@ -1013,10 +1040,167 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
           </div>
           {fetched && selected.size > 0 && combos.length > 0 && (
             <p className="text-xs text-gray-500 text-center pb-2">
-              조합 {visibleCombos.length}개{minGyoyangCredit > 0 && combos.length !== visibleCombos.length ? ` / 전체 ${combos.length}개` : ""}
+              조합 {visibleCombos.length}개{filteredCombos.length !== combos.length || (minGyoyangCredit > 0 && combos.length !== visibleCombos.length) ? ` / 전체 ${combos.length}개` : ""}
             </p>
           )}
         </>)}
+
+        {/* ── 시간표 필터 탭 ── */}
+        {panelTab === "filter" && (
+          <div className="overflow-y-auto flex-1 px-2 pt-2 pb-1 flex flex-col gap-4 min-h-0">
+            {namesInCombos.length === 0 ? (
+              <div className="flex-1 flex items-center justify-center text-xs text-gray-400 px-4 text-center">
+                과목을 선택하면 시간표 필터를 사용할 수 있습니다
+              </div>
+            ) : (
+              <>
+                {/* 필수 포함 과목 */}
+                <div className="px-1">
+                  <p className="text-xs text-gray-400 mb-1.5">필수 포함 과목 <span className="text-gray-300">(교수 지정 가능)</span></p>
+                  <div className="flex flex-col gap-1">
+                    {namesInCombos.map((name) => {
+                      const val = gyoFilterMap.get(name);
+                      const checked = val !== undefined;
+                      const profs = profsByName.get(name) ?? [];
+                      return (
+                        <div key={name}>
+                          <label className="flex items-center gap-2 px-1 py-0.5 hover:bg-gray-50 rounded cursor-pointer">
+                            <input type="checkbox" checked={checked}
+                              onChange={(e) => {
+                                const next = new Map(gyoFilterMap);
+                                if (e.target.checked) next.set(name, true); else next.delete(name);
+                                setGyoFilterMap(next);
+                              }}
+                            />
+                            <span className="text-sm text-gray-700 leading-tight">{name.replace(/\s*\(.*?\)\s*$/, "")}</span>
+                          </label>
+                          {checked && profs.length > 1 && (
+                            <select
+                              value={val === true ? "" : val}
+                              onChange={(e) => {
+                                const next = new Map(gyoFilterMap);
+                                next.set(name, e.target.value === "" ? true : e.target.value);
+                                setGyoFilterMap(next);
+                              }}
+                              className="ml-6 mt-0.5 w-[calc(100%-1.5rem)] border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-indigo-400"
+                            >
+                              <option value="">교수 무관</option>
+                              {profs.map((p) => <option key={p} value={p}>{p}</option>)}
+                            </select>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* 공강 요일 */}
+                <div className="px-1">
+                  <p className="text-xs text-gray-400 mb-1.5">공강 요일 <span className="text-gray-300">(중복 선택)</span></p>
+                  <div className="flex gap-1">
+                    {["월","화","수","목","금"].map((d, i) => (
+                      <button key={i}
+                        onClick={() => { const next = new Set(gyoDayOff); next.has(i) ? next.delete(i) : next.add(i); setGyoDayOff(next); }}
+                        className={`flex-1 py-1.5 text-sm rounded border transition-colors ${gyoDayOff.has(i) ? "bg-indigo-600 text-white border-indigo-600" : "border-gray-300 text-gray-600 hover:bg-gray-50"}`}
+                      >{d}</button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 아침 수업 없음 */}
+                <div className="px-1">
+                  <p className="text-xs text-gray-400 mb-1">아침 수업 없음</p>
+                  <select value={gyoNoMorning} onChange={(e) => setGyoNoMorning(e.target.value)}
+                    className="w-full border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-400">
+                    <option value="">제한 없음</option>
+                    {["9","10","11","12"].map((h) => <option key={h} value={h}>{h}시 이전 수업 없음</option>)}
+                  </select>
+                </div>
+
+                {/* 저녁 수업 없음 */}
+                <div className="px-1">
+                  <p className="text-xs text-gray-400 mb-1">저녁 수업 없음</p>
+                  <select value={gyoNoEvening} onChange={(e) => setGyoNoEvening(e.target.value)}
+                    className="w-full border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-400">
+                    <option value="">제한 없음</option>
+                    {["17","18","19","20","21"].map((h) => <option key={h} value={h}>{h}시 이후 수업 없음</option>)}
+                  </select>
+                </div>
+
+                {/* 최대 학점 */}
+                <div className="px-1">
+                  <p className="text-xs text-gray-400 mb-1">최대 학점</p>
+                  <div className="flex items-center gap-2">
+                    <select value={maxCredit} onChange={(e) => setMaxCredit(Number(e.target.value))}
+                      className="flex-1 border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-400">
+                      <option value={0}>제한 없음</option>
+                      {Array.from({ length: 16 }, (_, i) => i + 12).map((v) => <option key={v} value={v}>{v}학점</option>)}
+                    </select>
+                    {maxCredit > 0 && (
+                      <span className="text-xs text-gray-400 shrink-0">전공 {(pinnedCombo ?? []).reduce((s, sec) => s + sec.credit, 0)}학점</span>
+                    )}
+                  </div>
+                </div>
+
+                {/* 전체 최소 */}
+                <div className="px-1">
+                  <p className="text-xs text-gray-400 mb-1">전체 최소</p>
+                  <select value={minGyoyangCredit} onChange={(e) => setMinGyoyangCredit(Number(e.target.value))}
+                    className="w-full border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-400">
+                    <option value={0}>제한 없음</option>
+                    {Array.from({ length: 17 }, (_, i) => i + 9).map((v) => <option key={v} value={v}>{v}학점 이상</option>)}
+                  </select>
+                </div>
+
+                {/* 교수 필터 */}
+                <div className="px-1">
+                  <p className="text-xs text-gray-400 mb-1.5">교수 필터</p>
+                  <input type="text" value={gyoProfSearch} onChange={(e) => setGyoProfSearch(e.target.value)}
+                    placeholder="교수 검색..."
+                    className="w-full border border-gray-300 rounded px-2 py-1 text-sm mb-1.5 focus:outline-none focus:ring-1 focus:ring-indigo-400"
+                  />
+                  <div className="max-h-36 overflow-y-auto flex flex-col gap-0.5 border border-gray-100 rounded p-1">
+                    {filteredGyoProfs.length === 0 && <p className="text-xs text-gray-300 px-1 py-1">결과 없음</p>}
+                    {filteredGyoProfs.map((prof) => {
+                      const isExclude = gyoExcludeProfs.has(prof);
+                      const isInclude = gyoIncludeProfs.has(prof);
+                      return (
+                        <div key={prof} className="flex items-center justify-between px-1 py-0.5 hover:bg-gray-50 rounded">
+                          <span className="text-sm text-gray-700 truncate flex-1">{prof}</span>
+                          <div className="flex gap-1 shrink-0 ml-1">
+                            <button onClick={() => {
+                              const next = new Set(gyoIncludeProfs); const excl = new Set(gyoExcludeProfs);
+                              if (isInclude) { next.delete(prof); } else { next.add(prof); excl.delete(prof); }
+                              setGyoIncludeProfs(next); setGyoExcludeProfs(excl);
+                            }} className={`text-[11px] px-1.5 py-0.5 rounded border transition-colors ${isInclude ? "bg-indigo-600 text-white border-indigo-600" : "border-gray-300 text-gray-500 hover:bg-gray-100"}`}>포함</button>
+                            <button onClick={() => {
+                              const next = new Set(gyoExcludeProfs); const incl = new Set(gyoIncludeProfs);
+                              if (isExclude) { next.delete(prof); } else { next.add(prof); incl.delete(prof); }
+                              setGyoExcludeProfs(next); setGyoIncludeProfs(incl);
+                            }} className={`text-[11px] px-1.5 py-0.5 rounded border transition-colors ${isExclude ? "bg-red-500 text-white border-red-500" : "border-gray-300 text-gray-500 hover:bg-gray-100"}`}>제외</button>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  {(gyoIncludeProfs.size > 0 || gyoExcludeProfs.size > 0) && (
+                    <div className="mt-1 flex flex-wrap gap-1">
+                      {[...gyoIncludeProfs].map((p) => <span key={p} className="text-[11px] bg-indigo-100 text-indigo-700 px-1.5 py-0.5 rounded">{p} ✓</span>)}
+                      {[...gyoExcludeProfs].map((p) => <span key={p} className="text-[11px] bg-red-100 text-red-600 px-1.5 py-0.5 rounded">{p} ✗</span>)}
+                    </div>
+                  )}
+                </div>
+              </>
+            )}
+            {combos.length > 0 && (
+              <div className="px-1 pb-2 border-t border-gray-100 pt-2 mt-auto shrink-0">
+                <p className="text-xs text-gray-500 text-center">
+                  {visibleCombos.length}개 / 전체 {combos.length}개
+                </p>
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Right area */}
@@ -1046,7 +1230,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
 
         {/* 시간표 뷰 */}
         {leftTab === "timetable" && (
-          <div key={flashKey} className="flex-1 flex flex-col overflow-hidden p-4 gap-2 animate-[fadeIn_0.4s_ease] min-h-0">
+          <div key={`${flashKey}-${leftTab}`} className="flex-1 flex flex-col overflow-hidden p-4 gap-2 animate-[fadeIn_0.4s_ease] min-h-0">
             {visibleCombos.length > 0 ? (
               <>
                 <div className="flex items-center gap-3 flex-wrap shrink-0">
@@ -1168,7 +1352,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
           };
 
           return (
-            <div className="flex-1 flex flex-col overflow-hidden min-h-0">
+                        <div className="flex-1 flex flex-col overflow-hidden min-h-0">
               <div className="px-4 py-2 shrink-0 flex gap-2 flex-wrap items-center border-b border-gray-100">
                 <input
                   type="text" value={listSearch} onChange={(e) => setListSearch(e.target.value)}
