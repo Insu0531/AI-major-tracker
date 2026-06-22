@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { SavedTimetable, loadSavedTimetables, deleteTimetable, renameTimetable } from "@/lib/timetableStorage";
 import { Section, NoTimeSection } from "@/lib/timetable";
+import { captureTimetableImage } from "@/lib/captureTimetable";
 import TimetableGrid from "@/components/TimetableGrid";
 
 // Matches TimetableGrid internals: LABEL_W=36, MIN_COL_W=52, 5 days, rowH=52, START_H=9
@@ -243,68 +244,7 @@ function PreviewModal({ timetable, onClose, semLabel }: { timetable: SavedTimeta
     if (!timetableRef.current) return;
     setSaving(true);
     try {
-      const domtoimage = (await import("dom-to-image-more")).default;
-      const el = timetableRef.current;
-      const isDark = document.documentElement.classList.contains("dark");
-      const imgBg = isDark ? "#171717" : "#ffffff";
-
-      // 크롭 지점 계산 (클론 생성 전에 먼저 확정)
-      const maxEnd = fullCombo.flatMap(s => s.times).reduce((mx, t) => Math.max(mx, t.end), 0);
-      const cutoffH = (maxEnd > 0 && maxEnd <= 18) ? 18 : 22;
-      const gridBodyH = (cutoffH - 9) * 52; // 468 or 676
-      const CAPTURE_W = 28 + gridBodyH; // CAPTURE_W ≈ content height → 자연스러운 정사각형
-
-      const clone = el.cloneNode(true) as HTMLElement;
-      clone.style.cssText = `position:fixed;left:-9999px;top:0;width:${CAPTURE_W}px;height:auto;overflow:visible;`;
-      document.body.appendChild(clone);
-
-      // 스크롤바 제거
-      clone.querySelectorAll<HTMLElement>("*").forEach((child) => {
-        const cs = window.getComputedStyle(child);
-        if (cs.overflowY === "auto" || cs.overflowY === "scroll") {
-          child.style.height = `${child.scrollHeight}px`;
-          child.style.overflowY = "hidden";
-        }
-        if (cs.overflowX === "auto" || cs.overflowX === "scroll") {
-          child.style.width = `${child.scrollWidth}px`;
-          child.style.overflowX = "hidden";
-        }
-      });
-
-      // 18시 크롭: 그리드 바디를 cutoffH까지만 표시
-      if (cutoffH < 22) {
-        const gridBody = clone.querySelector<HTMLElement>('[style*="height: 676px"]');
-        if (gridBody) {
-          gridBody.style.height = `${gridBodyH}px`;
-          let anc: HTMLElement | null = gridBody.parentElement;
-          while (anc && anc !== clone) {
-            if (anc.style.height && parseInt(anc.style.height) >= 600) {
-              anc.style.height = `${28 + gridBodyH}px`;
-              break;
-            }
-            anc = anc.parentElement;
-          }
-        }
-      }
-
-      const rawUrl = await domtoimage.toPng(clone, { bgcolor: imgBg, scale: 3, width: CAPTURE_W, height: clone.scrollHeight });
-      document.body.removeChild(clone);
-
-      // 정사각형 보정
-      const img = new Image();
-      await new Promise<void>(r => { img.onload = () => r(); img.src = rawUrl; });
-      const sq = Math.max(img.width, img.height);
-      const canvas = document.createElement("canvas");
-      canvas.width = sq; canvas.height = sq;
-      const ctx = canvas.getContext("2d")!;
-      ctx.fillStyle = imgBg; ctx.fillRect(0, 0, sq, sq);
-      ctx.drawImage(img, 0, 0);
-      const dataUrl = canvas.toDataURL("image/png");
-
-      const link = document.createElement("a");
-      link.href = dataUrl;
-      link.download = `${timetable.name}.png`;
-      document.body.appendChild(link); link.click(); document.body.removeChild(link);
+      await captureTimetableImage({ el: timetableRef.current, combo: fullCombo, fileName: timetable.name });
     } finally {
       setSaving(false);
     }

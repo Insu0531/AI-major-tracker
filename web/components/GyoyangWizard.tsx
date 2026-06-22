@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { buildSectionGroups, generateCombos, parseTimes, Section, SectionGroup, TimeSlot, NoTimeSection } from "@/lib/timetable";
+import { captureTimetableImage } from "@/lib/captureTimetable";
 import TimetableGrid from "@/components/TimetableGrid";
 import ProfPickerModal, { ProfStep, getMultiProfSections, applyProfPicks, getMultiProfNoTimeSections, applyProfPicksNoTime } from "@/components/ProfPickerModal";
 import GYOYANG_LIST from "@/lib/gyoyang.json";
@@ -425,97 +426,19 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [effectiveRows, listSearch, listSortState]);
 
-  // 현재 다크모드 여부
-  const isDark = () =>
-    typeof document !== "undefined" && document.documentElement.classList.contains("dark");
-
   const doCapture = async (comboToCapture: Section[], pinnedForReg?: Section[], resolvedNoTime?: NoTimeSection[]) => {
     if (!captureRef.current) return;
     setSaving(true);
     try {
-      const domtoimage = (await import("dom-to-image-more")).default;
-
-      // 캡처 대상 combo를 displayCombo 형태로 만들기
-      const fullCombo = [...(pinnedCombo ?? []), ...comboToCapture];
-
-      // 임시 TimetableGrid DOM 없이 캡처하려면 ref를 직접 쓰고
-      // 현재 표시된 timetableRef를 그대로 씀 (이미 applyProfPicks 반영된 상태라면)
-      // → 여기선 간단히 현재 timetableRef DOM을 클론해 찍음
-      // (교수 선택 반영은 displayComboForCapture state를 통해 TimetableGrid에 전달)
-      const dark = isDark();
-      const bg = dark ? "#171717" : "#ffffff";
-
-      // 크롭 지점 계산 (클론 생성 전에 먼저 확정)
-      const maxEnd = fullCombo.flatMap(s => s.times).reduce((mx, t) => Math.max(mx, t.end), 0);
-      const cutoffH = (maxEnd > 0 && maxEnd <= 18) ? 18 : 22;
-      const gridBodyH = (cutoffH - 9) * 52; // 468 or 676
-      // CAPTURE_W ≈ content height → 자연스러운 정사각형
-      const CAPTURE_W = 28 + gridBodyH; // 496 or 704
-
-      const el = captureRef.current!
-      const clone = el.cloneNode(true) as HTMLElement;
-      clone.style.position = "fixed";
-      clone.style.left = "-9999px";
-      clone.style.top = "0";
-      clone.style.width = `${CAPTURE_W}px`;
-      clone.style.height = "auto";
-      clone.style.overflow = "visible";
-      document.body.appendChild(clone);
-
-      // 스크롤바 제거: overflow-auto/scroll 요소를 scrollHeight로 고정
-      clone.querySelectorAll<HTMLElement>("*").forEach((child) => {
-        const cs = window.getComputedStyle(child);
-        if (cs.overflowY === "auto" || cs.overflowY === "scroll") {
-          child.style.height = `${child.scrollHeight}px`;
-          child.style.overflowY = "hidden";
-        }
-        if (cs.overflowX === "auto" || cs.overflowX === "scroll") {
-          child.style.width = `${child.scrollWidth}px`;
-          child.style.overflowX = "hidden";
-        }
-      });
-
-      // 18시 크롭: 그리드 바디를 cutoffH까지만 표시
-      if (cutoffH < 22) {
-        const gridBody = clone.querySelector<HTMLElement>('[style*="height: 676px"]');
-        if (gridBody) {
-          gridBody.style.height = `${gridBodyH}px`;
-          let anc: HTMLElement | null = gridBody.parentElement;
-          while (anc && anc !== clone) {
-            if (anc.style.height && parseInt(anc.style.height) >= 600) {
-              anc.style.height = `${28 + gridBodyH}px`;
-              break;
-            }
-            anc = anc.parentElement;
-          }
-        }
-      }
-
-      const rawUrl = await domtoimage.toPng(clone, {
-        bgcolor: bg,
-        scale: 3,
-        width: CAPTURE_W,
-        height: clone.scrollHeight,
-      });
-      document.body.removeChild(clone);
-
-      // 정사각형 보정: 시간 외 블록 등으로 높이가 약간 다를 수 있으므로 canvas로 맞춤
-      const img = new Image();
-      await new Promise<void>(r => { img.onload = () => r(); img.src = rawUrl; });
-      const sq = Math.max(img.width, img.height);
-      const canvas = document.createElement("canvas");
-      canvas.width = sq; canvas.height = sq;
-      const ctx = canvas.getContext("2d")!;
-      ctx.fillStyle = bg; ctx.fillRect(0, 0, sq, sq);
-      ctx.drawImage(img, 0, 0);
-      const dataUrl = canvas.toDataURL("image/png");
-
-      const link = document.createElement("a");
-      link.href = dataUrl;
+      // captureRef 안에 실제로 렌더된 combo (= visibleCombo) 기준으로 크롭
+      const renderedCombo = [...(pinnedForReg ?? pinnedCombo ?? []), ...comboToCapture];
       const termLabel = semTerm === "s" ? "여름계절" : semTerm === "w" ? "겨울계절" : `${semTerm}학기`;
       const prefix = majorLabel ? `${majorLabel} ` : "";
-      link.download = `${prefix}${semYear}년 ${termLabel} 시간표.png`;
-      document.body.appendChild(link); link.click(); document.body.removeChild(link);
+      await captureTimetableImage({
+        el: captureRef.current,
+        combo: renderedCombo,
+        fileName: `${prefix}${semYear}년 ${termLabel} 시간표`,
+      });
 
       // 이미지 저장 완료 토스트
       if (saveToastTimer.current) clearTimeout(saveToastTimer.current);

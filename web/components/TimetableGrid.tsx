@@ -61,7 +61,6 @@ function comboToBlocks(combo: Section[]): Block[] {
 // 모바일 세로에서도 읽을 수 있는 최소 열 너비
 const MIN_COL_W = 52;
 const LABEL_W = 36;
-const MIN_GRID_W = LABEL_W + DAY_LABELS.length * MIN_COL_W;
 
 const TimetableGrid = forwardRef<HTMLDivElement, { combo: Section[] }>(function TimetableGrid({ combo }, ref) {
   const [tooltip, setTooltip] = useState<{ x: number; y: number; text: string } | null>(null);
@@ -71,14 +70,19 @@ const TimetableGrid = forwardRef<HTMLDivElement, { combo: Section[] }>(function 
   const rowH = 52;
   const blocks = comboToBlocks(combo);
 
+  // 토요일 과목이 있으면 토 열 추가 (없으면 월~금)
+  const hasSaturday = combo.some((s) => s.times.some((t) => t.day === 5));
+  const dayLabels = hasSaturday ? [...DAY_LABELS, "토"] : DAY_LABELS;
+  const minGridW = LABEL_W + dayLabels.length * MIN_COL_W;
+
   return (
     <div ref={(el) => { containerRef.current = el; if (typeof ref === "function") ref(el); else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = el; }} className="relative overflow-auto border border-gray-200 rounded bg-white select-none h-full">
       {/* 최소 너비 래퍼 — 세로 모드에서 가로 스크롤 */}
-      <div style={{ minWidth: MIN_GRID_W }}>
+      <div style={{ minWidth: minGridW }}>
         {/* Header row */}
         <div className="flex sticky top-0 z-10 bg-white border-b border-gray-200">
           <div style={{ minWidth: LABEL_W }} className="text-xs text-gray-400 flex items-center justify-center py-1 shrink-0" />
-          {DAY_LABELS.map((d) => (
+          {dayLabels.map((d) => (
             <div key={d} className="flex-1 text-center text-xs font-bold py-1.5 text-gray-700 border-l border-gray-100">
               {d}
             </div>
@@ -101,7 +105,7 @@ const TimetableGrid = forwardRef<HTMLDivElement, { combo: Section[] }>(function 
           </div>
 
           {/* Day columns */}
-          {DAY_LABELS.map((_, dayIdx) => (
+          {dayLabels.map((_, dayIdx) => (
             <div key={dayIdx} className="flex-1 relative border-l border-gray-100">
               {Array.from({ length: totalHours }, (_, i) => (
                 <div key={i} className="absolute w-full border-t border-gray-100" style={{ top: i * rowH }} />
@@ -114,10 +118,10 @@ const TimetableGrid = forwardRef<HTMLDivElement, { combo: Section[] }>(function 
 
           {/* Blocks overlay */}
           {blocks.map((b, i) => {
-            const colW = `calc((100% - ${LABEL_W}px) / ${DAY_LABELS.length})`;
+            const colW = `calc((100% - ${LABEL_W}px) / ${dayLabels.length})`;
             const top = (b.start - START_H) * rowH;
             const height = (b.end - b.start) * rowH;
-            const left = `calc(${LABEL_W}px + ${b.day} * (100% - ${LABEL_W}px) / ${DAY_LABELS.length} + 2px)`;
+            const left = `calc(${LABEL_W}px + ${b.day} * (100% - ${LABEL_W}px) / ${dayLabels.length} + 2px)`;
             const shortName = b.name.replace(/\s*\(.*?\)\s*$/, "").trim();
             const profs = b.prof.split(" / ");
 
