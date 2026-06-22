@@ -18,10 +18,12 @@ export default function GuideTour({
   steps,
   run,
   onClose,
+  onClose3Days,
 }: {
   steps: TourStep[];
   run: boolean;
   onClose: () => void;
+  onClose3Days?: () => void;
 }) {
   const [idx, setIdx] = useState(0);
   const [rect, setRect] = useState<Rect | null>(null);
@@ -187,6 +189,13 @@ export default function GuideTour({
             {isLast ? "시작하기" : "다음"}
           </button>
         </div>
+        {isLast && onClose3Days && (
+          <p className="text-center mt-1">
+            <button onClick={onClose3Days} className="text-xs text-gray-400 hover:text-gray-500 underline">
+              3일간 다시보지 않기
+            </button>
+          </p>
+        )}
       </div>
     </div>
   );

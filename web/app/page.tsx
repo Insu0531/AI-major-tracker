@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useCallback, useEffect } from "react";
-import { track } from "@vercel/analytics";
 import { buildSectionGroups, generateCombos, formatTimeStr, Section, NoTimeSection } from "@/lib/timetable";
 import { captureTimetableImage } from "@/lib/captureTimetable";
 import { Major, MAJOR_LABELS, ENTRY_YEAR_MIN, ENTRY_YEAR_MAX, fetchCoursesByYear, Course } from "@/lib/courses";
@@ -108,15 +107,18 @@ export default function Home() {
   useEffect(() => {
     const stored = localStorage.getItem("theme");
     setDarkMode(stored === "dark");
-    // 첫 방문 시 사용법 투어 자동 실행
-    if (!localStorage.getItem("tourSeen")) {
+    // 3일 이내에 닫은 기록이 없으면 투어 자동 실행
+    const tourSeen = localStorage.getItem("tourSeen");
+    const THREE_DAYS = 3 * 24 * 60 * 60 * 1000;
+    if (!tourSeen || Date.now() - Number(tourSeen) > THREE_DAYS) {
       setTab("search");
       setRunTour(true);
     }
   }, []);
 
   const startTour = () => { setTab("search"); setRunTour(true); };
-  const closeTour = () => { setRunTour(false); localStorage.setItem("tourSeen", "1"); };
+  const closeTour = () => { setRunTour(false); };
+  const closeTourFor3Days = () => { setRunTour(false); localStorage.setItem("tourSeen", String(Date.now())); };
 
   const toggleDark = () => {
     const next = !darkMode;
@@ -259,8 +261,10 @@ export default function Home() {
     setIncludeProfs(new Set()); setExcludeProfs(new Set()); setIncludeDepts(new Set());
     setNoTimeSections([]);
     setPinnedCombo(null);
-    track("search", { major, entryYear, sem });
-
+    navigator.sendBeacon(
+      "https://docs.google.com/forms/d/e/1FAIpQLScaPJZeS2kq6xLaIGxNA99gnocC6mk7yRWuAu2YJfHlhFxtiA/formResponse",
+      new URLSearchParams({ "entry.1215157076": MAJOR_LABELS[major], "entry.2002464997": String(entryYear) })
+    );
     try {
       const allRows: Row[] = [];
       const tag1 = extraMajors.length > 0 ? "주전공" : "";
@@ -1504,7 +1508,7 @@ export default function Home() {
         </div>
       )}
 
-      <GuideTour steps={TOUR_STEPS} run={runTour} onClose={closeTour} />
+      <GuideTour steps={TOUR_STEPS} run={runTour} onClose={closeTour} onClose3Days={closeTourFor3Days} />
 
       <footer className="border-t border-gray-200 bg-white px-6 py-1.5 text-xs text-gray-400 flex gap-2 shrink-0">
         <span>insu0531@knu.ac.kr</span>

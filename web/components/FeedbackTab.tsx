@@ -39,7 +39,6 @@ export default function FeedbackTab() {
   const [showConfirm, setShowConfirm] = useState(false);
 
   const handleSubmitClick = () => {
-    if (!major) { setErrorMsg("전공을 선택해주세요."); return; }
     if (!category) { setErrorMsg("카테고리를 선택해주세요."); return; }
     if (!agreed) { setErrorMsg("개인정보 수집·이용에 동의해주세요."); return; }
     setShowConfirm(true);
@@ -75,7 +74,7 @@ export default function FeedbackTab() {
 
         {/* 전공 */}
         <div className="flex flex-col gap-1">
-          <label className="text-sm font-medium text-gray-700">전공 <span className="text-red-400">*</span></label>
+          <label className="text-sm font-medium text-gray-700">전공</label>
           <div className="relative" ref={majorDropRef}>
             <button
               type="button"
