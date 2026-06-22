@@ -467,16 +467,32 @@ export default function Home() {
                       />
                     </div>
                     <div className="overflow-y-auto flex-1">
-                      {(Object.entries(MAJOR_LABELS) as [Major, string][])
-                        .sort(([ka, a], [kb, b]) => {
-                          if (ka === "ai") return -1;
-                          if (kb === "ai") return 1;
-                          const aS = a.startsWith("[상주]"), bS = b.startsWith("[상주]");
-                          if (aS !== bS) return aS ? 1 : -1;
-                          return a.localeCompare(b, "ko");
-                        })
-                        .filter(([, label]) => !majorSearch || label.includes(majorSearch))
-                        .map(([key, label]) => (
+                      {(() => {
+                        const filtered = (Object.entries(MAJOR_LABELS) as [Major, string][])
+                          .sort(([ka, a], [kb, b]) => {
+                            if (ka === "ai") return -1;
+                            if (kb === "ai") return 1;
+                            const aS = a.startsWith("[상주]"), bS = b.startsWith("[상주]");
+                            if (aS !== bS) return aS ? 1 : -1;
+                            return a.localeCompare(b, "ko");
+                          })
+                          .filter(([, label]) => !majorSearch || label.includes(majorSearch));
+                        if (majorSearch && filtered.length === 0) {
+                          return (
+                            <div className="flex flex-col items-center gap-2 px-3 py-5 text-center">
+                              <p className="text-sm text-gray-400">검색 결과가 없습니다</p>
+                              <p className="text-xs text-gray-400 leading-relaxed">원하는 전공이 없다면</p>
+                              <button
+                                type="button"
+                                onClick={() => { setMajorDropOpen(false); setMajorSearch(""); setTab("feedback"); }}
+                                className="text-xs px-3 py-1.5 bg-indigo-50 text-indigo-600 border border-indigo-200 rounded-lg hover:bg-indigo-100 transition-colors"
+                              >
+                                응원/문의에서 추가 요청하기 →
+                              </button>
+                            </div>
+                          );
+                        }
+                        return filtered.map(([key, label]) => (
                           <button
                             key={key}
                             type="button"
@@ -497,8 +513,8 @@ export default function Home() {
                           >
                             {label}
                           </button>
-                        ))
-                      }
+                        ));
+                      })()}
                     </div>
                   </div>
                 )}
