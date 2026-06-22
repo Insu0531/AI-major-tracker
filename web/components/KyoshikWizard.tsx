@@ -75,6 +75,9 @@ export default function KyoshikWizard({ pinnedCombo, pinnedNoTimeSections, initi
   const [noTimeSections, setNoTimeSections] = useState<NoTimeSection[]>([]);
   const [flashKey, setFlashKey] = useState(0);
   const [slideDir, setSlideDir] = useState<"left" | "right">("left");
+  const [leftTab, setLeftTab] = useState<"timetable" | "list">("timetable");
+  const [listSearch, setListSearch] = useState("");
+  const [listSortState, setListSortState] = useState<{ col: keyof Row; dir: "asc" | "desc" } | null>(null);
   const [saving, setSaving] = useState(false);
   const timetableRef = useRef<HTMLDivElement | null>(null);
   const captureRef = useRef<HTMLDivElement | null>(null);
@@ -281,6 +284,23 @@ export default function KyoshikWizard({ pinnedCombo, pinnedNoTimeSections, initi
   const kyoshikNoTimeCredit = noTimeSections.reduce((s, sec) => s + sec.credit, 0);
   const kyoshikCredit = currentCombo.reduce((s, sec) => s + sec.credit, 0) + kyoshikNoTimeCredit;
   const totalCredit = displayCombo.reduce((s, sec) => s + sec.credit, 0) + pinnedNoTimeCredit + kyoshikNoTimeCredit;
+
+  const listSorted = useMemo(() => {
+    const q = listSearch.toLowerCase();
+    const filtered = allRows.filter((r) => {
+      if (q && !r.name.toLowerCase().includes(q) && !r.prof.toLowerCase().includes(q) && !r.crseNo.toLowerCase().includes(q)) return false;
+      return true;
+    });
+    if (!listSortState) return filtered;
+    return [...filtered].sort((a, b) => {
+      const col = listSortState.col as keyof Row;
+      const av = a[col] ?? "";
+      const bv = b[col] ?? "";
+      const an = Number(av), bn = Number(bv);
+      const cmp = !isNaN(an) && !isNaN(bn) ? an - bn : av.localeCompare(bv, "ko");
+      return listSortState.dir === "asc" ? cmp : -cmp;
+    });
+  }, [allRows, listSearch, listSortState]);
 
   const isDark = () => typeof document !== "undefined" && document.documentElement.classList.contains("dark");
 
@@ -747,89 +767,182 @@ export default function KyoshikWizard({ pinnedCombo, pinnedNoTimeSections, initi
         )}
       </div>
 
-      {/* Right area: 시간표 */}
+      {/* Right area */}
       <div className="flex-1 flex flex-col overflow-hidden min-w-0 min-h-0">
-        <div className="flex items-center gap-2 px-4 pt-3 pb-3 shrink-0 border-b border-gray-200 bg-white">
+        {/* 오른쪽 상단 탭바 */}
+        <div className="flex items-center gap-2 px-4 pt-3 pb-0 shrink-0 border-b border-gray-200 bg-white">
           {!panelOpen && (
             <button onClick={() => setPanelOpen(true)}
-              className="flex items-center gap-1 text-xs font-semibold text-indigo-600 bg-indigo-50 border border-indigo-300 rounded-lg px-3 py-1.5 hover:bg-indigo-100 shrink-0 transition-colors">
+              className="self-start flex items-center gap-1 text-xs font-semibold text-indigo-600 bg-indigo-50 border border-indigo-300 rounded-lg px-3 py-1.5 hover:bg-indigo-100 mr-2 shrink-0 transition-colors">
               ▶ 과목 선택
             </button>
           )}
+          {(["timetable", "list"] as const).map((t) => (
+            <button key={t} onClick={() => setLeftTab(t)}
+              className={`pb-2 px-1 text-sm border-b-2 transition-colors ${leftTab === t ? "border-indigo-500 text-indigo-600 font-semibold" : "border-transparent text-gray-400 hover:text-gray-600"}`}>
+              {t === "timetable" ? "시간표" : "전체 목록"}
+            </button>
+          ))}
         </div>
 
-        <div key={flashKey} className="flex-1 flex flex-col overflow-hidden p-4 gap-2 animate-[fadeIn_0.4s_ease] min-h-0">
-          {visibleCombos.length > 0 ? (
-            <>
-              <div className="flex items-center gap-3 flex-wrap shrink-0">
-                <button onClick={() => { setSlideDir("right"); setComboIdx((i) => (i - 1 + visibleCombos.length) % visibleCombos.length); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm">◀</button>
-                <span className="text-sm text-gray-600 w-24 text-center">{comboIdx + 1} / {visibleCombos.length}</span>
-                <button onClick={() => { setSlideDir("left"); setComboIdx((i) => (i + 1) % visibleCombos.length); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm">▶</button>
-                <span className="text-sm font-semibold text-indigo-600">
-                  총 {totalCredit}학점 <span className="text-gray-400 font-normal text-xs">(전공+교양 {pinnedCredit} + 교직 {kyoshikCredit})</span>
-                </span>
-              </div>
-              <div ref={(el) => { scrollContainerRef.current = el; }} key={`${comboIdx}-${slideDir}`} className={`flex-1 overflow-auto min-h-0 ${slideDir === "left" ? "slide-left" : "slide-right"}`}>
-                <div ref={captureRef}>
-                  <TimetableGrid ref={timetableRef} combo={visibleCombo} />
-                  {((pinnedNoTimeSections?.length ?? 0) > 0 || noTimeSections.length > 0) && (
-                    <div className="border border-orange-200 bg-orange-50 rounded-lg px-4 py-3 flex flex-wrap gap-x-4 gap-y-2 mt-2">
-                      <span className="text-sm font-semibold text-orange-600 w-full">시간 외</span>
-                      {(captureNoTimeSections ?? [...(pinnedNoTimeSections ?? []), ...noTimeSections]).map((s) => (
-                        <span key={s.crseNo} className="text-sm text-orange-700">{s.name}{s.profs?.length === 1 && <span className="text-orange-500"> · {s.profs[0]}</span>} <span className="text-orange-400 text-xs">({s.credit}학점)</span></span>
-                      ))}
-                    </div>
-                  )}
+        {/* 시간표 뷰 */}
+        {leftTab === "timetable" && (
+          <div key={flashKey} className="flex-1 flex flex-col overflow-hidden p-4 gap-2 animate-[fadeIn_0.4s_ease] min-h-0">
+            {visibleCombos.length > 0 ? (
+              <>
+                <div className="flex items-center gap-3 flex-wrap shrink-0">
+                  <button onClick={() => { setSlideDir("right"); setComboIdx((i) => (i - 1 + visibleCombos.length) % visibleCombos.length); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm">◀</button>
+                  <span className="text-sm text-gray-600 w-24 text-center">{comboIdx + 1} / {visibleCombos.length}</span>
+                  <button onClick={() => { setSlideDir("left"); setComboIdx((i) => (i + 1) % visibleCombos.length); }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm">▶</button>
+                  <span className="text-sm font-semibold text-indigo-600">
+                    총 {totalCredit}학점 <span className="text-gray-400 font-normal text-xs">(전공+교양 {pinnedCredit} + 교직 {kyoshikCredit})</span>
+                  </span>
                 </div>
-              </div>
-            </>
-          ) : (
-            <>
-              <div ref={(el) => { scrollContainerRef.current = el; }} className="flex-1 overflow-auto min-h-0">
-                <div ref={captureRef}>
-                  {pinnedCombo && pinnedCombo.length > 0 && (
-                    <TimetableGrid ref={timetableRef} combo={pinnedCombo} />
-                  )}
-                  {((pinnedNoTimeSections?.length ?? 0) > 0 || noTimeSections.length > 0) && (
-                    <div className="border border-orange-200 bg-orange-50 rounded-lg px-4 py-3 flex flex-wrap gap-x-4 gap-y-2 mt-2">
-                      <span className="text-sm font-semibold text-orange-600 w-full">시간 외</span>
-                      {(captureNoTimeSections ?? [...(pinnedNoTimeSections ?? []), ...noTimeSections]).map((s) => (
-                        <span key={s.crseNo} className="text-sm text-orange-700">{s.name}{s.profs?.length === 1 && <span className="text-orange-500"> · {s.profs[0]}</span>} <span className="text-orange-400 text-xs">({s.credit}학점)</span></span>
-                      ))}
-                    </div>
-                  )}
-                </div>
-                {(!pinnedCombo || pinnedCombo.length === 0) && !noTimeSections.length && !(pinnedNoTimeSections?.length) && (
-                  <div className="flex items-center justify-center h-full text-gray-400 text-sm">
-                    {!fetched ? "교직 과목 불러오는 중..." : combos.length > 0 ? "최소 학점 조건을 만족하는 조합이 없습니다" : "왼쪽에서 교직 과목을 선택하세요"}
+                <div ref={(el) => { scrollContainerRef.current = el; }} key={`${comboIdx}-${slideDir}`} className={`flex-1 overflow-auto min-h-0 ${slideDir === "left" ? "slide-left" : "slide-right"}`}>
+                  <div ref={captureRef}>
+                    <TimetableGrid ref={timetableRef} combo={visibleCombo} />
+                    {((pinnedNoTimeSections?.length ?? 0) > 0 || noTimeSections.length > 0) && (
+                      <div className="border border-orange-200 bg-orange-50 rounded-lg px-4 py-3 flex flex-wrap gap-x-4 gap-y-2 mt-2">
+                        <span className="text-sm font-semibold text-orange-600 w-full">시간 외</span>
+                        {(captureNoTimeSections ?? [...(pinnedNoTimeSections ?? []), ...noTimeSections]).map((s) => (
+                          <span key={s.crseNo} className="text-sm text-orange-700">{s.name}{s.profs?.length === 1 && <span className="text-orange-500"> · {s.profs[0]}</span>} <span className="text-orange-400 text-xs">({s.credit}학점)</span></span>
+                        ))}
+                      </div>
+                    )}
                   </div>
+                </div>
+              </>
+            ) : (
+              <>
+                <div ref={(el) => { scrollContainerRef.current = el; }} className="flex-1 overflow-auto min-h-0">
+                  <div ref={captureRef}>
+                    {pinnedCombo && pinnedCombo.length > 0 && (
+                      <TimetableGrid ref={timetableRef} combo={pinnedCombo} />
+                    )}
+                    {((pinnedNoTimeSections?.length ?? 0) > 0 || noTimeSections.length > 0) && (
+                      <div className="border border-orange-200 bg-orange-50 rounded-lg px-4 py-3 flex flex-wrap gap-x-4 gap-y-2 mt-2">
+                        <span className="text-sm font-semibold text-orange-600 w-full">시간 외</span>
+                        {(captureNoTimeSections ?? [...(pinnedNoTimeSections ?? []), ...noTimeSections]).map((s) => (
+                          <span key={s.crseNo} className="text-sm text-orange-700">{s.name}{s.profs?.length === 1 && <span className="text-orange-500"> · {s.profs[0]}</span>} <span className="text-orange-400 text-xs">({s.credit}학점)</span></span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  {(!pinnedCombo || pinnedCombo.length === 0) && !noTimeSections.length && !(pinnedNoTimeSections?.length) && (
+                    <div className="flex items-center justify-center h-full text-gray-400 text-sm">
+                      {!fetched ? "교직 과목 불러오는 중..." : combos.length > 0 ? "최소 학점 조건을 만족하는 조합이 없습니다" : "왼쪽에서 교직 과목을 선택하세요"}
+                    </div>
+                  )}
+                </div>
+              </>
+            )}
+            <div className="shrink-0 pt-1 flex gap-2">
+              <button onClick={saveAsImage} disabled={saving || (!currentCombo.length && !pinnedCombo?.length && !noTimeSections.length)}
+                className="flex-1 py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors">
+                {saving ? "저장 중..." : "이미지 저장"}
+              </button>
+              <button
+                onClick={() => {
+                  const termLabel = semTerm === "s" ? "여름" : semTerm === "w" ? "겨울" : `${semTerm}학기`;
+                  const majorPart = majorLabel2 ? `${majorLabel ?? ""}·${majorLabel2}` : (majorLabel ?? "");
+                  saveToLibrary(`${majorPart} ${semYear}년 ${termLabel} 교직 시간표`.trim());
+                }}
+                disabled={!pinnedCombo?.length && !currentCombo.length && !noTimeSections.length}
+                className="flex-1 py-2 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors">
+                라이브러리에 저장
+              </button>
+            </div>
+            {regSaved && (
+              <button onClick={() => setRegModal({ courses: regSaved })}
+                className="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-lg transition-colors">
+                수강신청하기
+              </button>
+            )}
+          </div>
+        )}
+
+        {/* 전체 목록 뷰 */}
+        {leftTab === "list" && (() => {
+          const LIST_COLS: { key: keyof Row; label: string }[] = [
+            { key: "crseNo",   label: "강좌번호" },
+            { key: "name",     label: "교과목명" },
+            { key: "credit",   label: "학점" },
+            { key: "dept",     label: "개설학과" },
+            { key: "prof",     label: "담당교수" },
+            { key: "timeStr",  label: "강의시간" },
+            { key: "location", label: "강의실" },
+            { key: "rmrk",    label: "비고" },
+          ];
+          const toggleListSort = (col: keyof Row) => {
+            setListSortState((prev) => {
+              if (!prev || prev.col !== col) return { col, dir: "asc" };
+              if (prev.dir === "asc") return { col, dir: "desc" };
+              return null;
+            });
+          };
+          return (
+            <div className="flex-1 flex flex-col overflow-hidden min-h-0">
+              <div className="px-4 py-2 shrink-0 flex gap-2 flex-wrap items-center border-b border-gray-100">
+                <input
+                  type="text" value={listSearch} onChange={(e) => setListSearch(e.target.value)}
+                  placeholder="과목명·교수·강좌번호 검색..."
+                  className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-400 w-60"
+                />
+                {fetched && <span className="text-xs text-gray-400 ml-auto">{listSorted.length}건</span>}
+              </div>
+              <div className="flex-1 overflow-auto border border-gray-200 rounded-none bg-white min-h-0">
+                {!fetched ? (
+                  <p className="text-sm text-gray-400 text-center py-16">{loading ? "불러오는 중..." : "조회 후 표시됩니다"}</p>
+                ) : listSorted.length === 0 ? (
+                  <p className="text-sm text-gray-400 text-center py-16">검색 결과 없음</p>
+                ) : (
+                  <table className="text-sm w-full border-collapse min-w-max">
+                    <thead className="sticky top-0 bg-gray-50 z-10">
+                      <tr>
+                        {LIST_COLS.map((c) => (
+                          <th key={c.key} onClick={() => toggleListSort(c.key)}
+                            className="text-left px-2 py-2 font-semibold text-gray-600 border-b border-gray-200 cursor-pointer select-none whitespace-nowrap hover:bg-gray-100">
+                            {c.label}
+                            {listSortState?.col === c.key ? (listSortState.dir === "asc" ? " ▲" : " ▼") : ""}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {listSorted.map((r, i) => (
+                        <tr key={i} className={`border-b border-gray-100 hover:bg-indigo-50 transition-colors ${i % 2 === 0 ? "bg-white" : "bg-gray-50/60"}`}>
+                          <td className="px-1.5 py-1.5 whitespace-nowrap text-gray-400 text-xs">{r.crseNo}</td>
+                          <td className="px-2 py-1.5 text-gray-700 max-w-44">
+                            <div className="truncate" title={r.name}>{r.name}</div>
+                          </td>
+                          <td className="px-1.5 py-1.5 text-center whitespace-nowrap text-gray-500 text-xs">{r.credit.split("-")[0]}</td>
+                          <td className="px-2 py-1.5 text-gray-700 max-w-24">
+                            <div className="truncate" title={r.dept}>{r.dept}</div>
+                          </td>
+                          <td className="px-2 py-1.5 text-gray-700 max-w-20">
+                            <div className="truncate" title={r.prof}>{r.prof}</div>
+                          </td>
+                          <td className="px-2 py-1.5 text-gray-700 text-xs">
+                            {r.timeStr.split(",").map((t) => t.trim()).sort((a, b) => {
+                              const order: Record<string, number> = { 월: 0, 화: 1, 수: 2, 목: 3, 금: 4, 토: 5, 일: 6 };
+                              return (order[a[0]] ?? 9) - (order[b[0]] ?? 9);
+                            }).map((t, idx) => <div key={idx} className="whitespace-nowrap">{t}</div>)}
+                          </td>
+                          <td className="px-2 py-1.5 text-gray-700 text-xs">
+                            {r.location ? r.location.split("\n").map((line, idx) => <div key={idx} className="whitespace-nowrap">{line}</div>) : ""}
+                          </td>
+                          <td className="px-1.5 py-1.5 text-gray-400 text-xs max-w-20">
+                            <div className="truncate" title={r.rmrk}>{r.rmrk}</div>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 )}
               </div>
-            </>
-          )}
-          <div className="shrink-0 pt-1 flex gap-2">
-            <button onClick={saveAsImage} disabled={saving || (!currentCombo.length && !pinnedCombo?.length && !noTimeSections.length)}
-              className="flex-1 py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors">
-              {saving ? "저장 중..." : "이미지 저장"}
-            </button>
-            <button
-              onClick={() => {
-                const termLabel = semTerm === "s" ? "여름" : semTerm === "w" ? "겨울" : `${semTerm}학기`;
-                const majorPart = majorLabel2 ? `${majorLabel ?? ""}·${majorLabel2}` : (majorLabel ?? "");
-                saveToLibrary(`${majorPart} ${semYear}년 ${termLabel} 교직 시간표`.trim());
-              }}
-              disabled={!pinnedCombo?.length && !currentCombo.length && !noTimeSections.length}
-              className="flex-1 py-2 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors">
-              라이브러리에 저장
-            </button>
-          </div>
-          {regSaved && (
-            <button onClick={() => setRegModal({ courses: regSaved })}
-              className="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-lg transition-colors">
-              수강신청하기
-            </button>
-          )}
-        </div>
+            </div>
+          );
+        })()}
       </div>
     </div>
   );
