@@ -170,6 +170,16 @@ body {
 .slide-left  { animation: slideLeft  0.22s ease forwards; }
 .slide-right { animation: slideRight 0.22s ease forwards; }
 
+@keyframes slideOutToLeft  { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+@keyframes slideOutToRight { from { transform: translateX(0); } to { transform: translateX(100%); } }
+@keyframes slideInFromRight { from { transform: translateX(100%); } to { transform: translateX(0); } }
+@keyframes slideInFromLeft  { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+
+.slide-out-to-left   { animation: slideOutToLeft   0.25s ease forwards; }
+.slide-out-to-right  { animation: slideOutToRight  0.25s ease forwards; }
+.slide-in-from-right { animation: slideInFromRight 0.25s ease forwards; }
+.slide-in-from-left  { animation: slideInFromLeft  0.25s ease forwards; }
+
 @keyframes rowIn {
   from { opacity: 0; transform: translateY(-4px); background-color: #eef2ff; }
   to   { opacity: 1; transform: translateY(0);    background-color: transparent; }
@@ -177,4 +187,15 @@ body {
 
 .row-animate {
   animation: rowIn 0.35s ease forwards;
+}
+
+/* 새로 추가된 시간표 블럭만 등장 애니메이션 */
+@keyframes blockPop {
+  0%   { opacity: 0; transform: scale(0.8); }
+  60%  { transform: scale(1.04); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.block-pop {
+  animation: blockPop 0.3s ease;
 }

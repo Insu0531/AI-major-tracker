@@ -1,7 +1,7 @@
 "use client";
 
 import { Section } from "@/lib/timetable";
-import { useRef, useState, forwardRef } from "react";
+import { useRef, useState, useEffect, forwardRef } from "react";
 
 const DAY_LABELS = ["월", "화", "수", "목", "금"];
 const START_H = 9;
@@ -75,6 +75,14 @@ const TimetableGrid = forwardRef<HTMLDivElement, { combo: Section[] }>(function 
   const dayLabels = hasSaturday ? [...DAY_LABELS, "토"] : DAY_LABELS;
   const minGridW = LABEL_W + dayLabels.length * MIN_COL_W;
 
+  // 새로 추가된 블럭만 등장 애니메이션 (마운트 시에는 애니메이션 없음)
+  const blockKey = (b: Block) => `${b.name}|${b.day}|${b.start}|${b.end}`;
+  const prevKeysRef = useRef<Set<string> | null>(null);
+  const prevKeys = prevKeysRef.current;
+  useEffect(() => {
+    prevKeysRef.current = new Set(blocks.map(blockKey));
+  });
+
   return (
     <div ref={(el) => { containerRef.current = el; if (typeof ref === "function") ref(el); else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = el; }} className="relative overflow-auto border border-gray-200 rounded bg-white select-none h-full">
       {/* 최소 너비 래퍼 — 세로 모드에서 가로 스크롤 */}
@@ -124,11 +132,12 @@ const TimetableGrid = forwardRef<HTMLDivElement, { combo: Section[] }>(function 
             const left = `calc(${LABEL_W}px + ${b.day} * (100% - ${LABEL_W}px) / ${dayLabels.length} + 2px)`;
             const shortName = b.name.replace(/\s*\(.*?\)\s*$/, "").trim();
             const profs = b.prof.split(" / ");
+            const isNew = prevKeys !== null && !prevKeys.has(blockKey(b));
 
             return (
               <div
                 key={i}
-                className="absolute rounded overflow-hidden cursor-pointer"
+                className={`absolute rounded overflow-hidden cursor-pointer ${isNew ? "block-pop" : ""}`}
                 style={{ top: top + 1, height: height - 2, left, width: `calc(${colW} - 4px)`, backgroundColor: b.color }}
                 onMouseEnter={(e) => {
                   const rect = containerRef.current?.getBoundingClientRect();

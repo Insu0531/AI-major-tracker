@@ -5,6 +5,7 @@ import { SavedTimetable, loadSavedTimetables, deleteTimetable, renameTimetable }
 import { Section, NoTimeSection } from "@/lib/timetable";
 import { captureTimetableImage } from "@/lib/captureTimetable";
 import TimetableGrid from "@/components/TimetableGrid";
+import SugangLink from "@/components/SugangLink";
 
 // Matches TimetableGrid internals: LABEL_W=36, MIN_COL_W=52, 5 days, rowH=52, START_H=9
 const NATURAL_W = 360;   // wider than MIN_GRID_W=296 → wider columns, more readable
@@ -13,7 +14,7 @@ const SCALE = 1.0;
 const THUMB_W = 360;     // square thumbnail
 const THUMB_H = 360;
 
-export default function LibraryTab() {
+export default function LibraryTab({ onFeedbackClick }: { onFeedbackClick?: () => void }) {
   const [list, setList] = useState<SavedTimetable[]>([]);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editName, setEditName] = useState("");
@@ -218,12 +219,12 @@ export default function LibraryTab() {
       )}
 
       {/* 시간표 미리보기 모달 */}
-      {preview && <PreviewModal timetable={preview} onClose={() => setPreview(null)} semLabel={semLabel} />}
+      {preview && <PreviewModal timetable={preview} onClose={() => setPreview(null)} semLabel={semLabel} onFeedbackClick={onFeedbackClick} />}
     </div>
   );
 }
 
-function PreviewModal({ timetable, onClose, semLabel }: { timetable: SavedTimetable; onClose: () => void; semLabel: (s: string) => string }) {
+function PreviewModal({ timetable, onClose, semLabel, onFeedbackClick }: { timetable: SavedTimetable; onClose: () => void; semLabel: (s: string) => string; onFeedbackClick?: () => void }) {
   const timetableRef = useRef<HTMLDivElement | null>(null);
   const [saving, setSaving] = useState(false);
   const [regOpen, setRegOpen] = useState(false);
@@ -245,6 +246,7 @@ function PreviewModal({ timetable, onClose, semLabel }: { timetable: SavedTimeta
     setSaving(true);
     try {
       await captureTimetableImage({ el: timetableRef.current, combo: fullCombo, fileName: timetable.name });
+      setRegOpen(true);
     } finally {
       setSaving(false);
     }
@@ -324,8 +326,14 @@ function PreviewModal({ timetable, onClose, semLabel }: { timetable: SavedTimeta
                 );
               })}
             </div>
-            <div className="px-6 py-4 border-t border-gray-100 shrink-0">
+            <div className="px-6 py-4 border-t border-gray-100 shrink-0 flex flex-col gap-2">
+              <SugangLink />
               <p className="text-xs text-gray-400 text-center">코드를 눌러 하나씩 복사하세요.</p>
+              {onFeedbackClick && (
+                <p className="text-xs text-center">
+                  <button onClick={() => { setRegOpen(false); setCopiedCode(null); onClose(); onFeedbackClick(); }} className="text-indigo-500 hover:text-indigo-600 underline">피드백/응원 남기기 →</button>
+                </p>
+              )}
             </div>
           </div>
         </div>

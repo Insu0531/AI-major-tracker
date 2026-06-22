@@ -3,6 +3,7 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { track } from "@vercel/analytics";
 import { buildSectionGroups, generateCombos, formatTimeStr, Section, NoTimeSection } from "@/lib/timetable";
+import { captureTimetableImage } from "@/lib/captureTimetable";
 import { Major, MAJOR_LABELS, ENTRY_YEAR_MIN, ENTRY_YEAR_MAX, fetchCoursesByYear, Course } from "@/lib/courses";
 import TimetableGrid from "@/components/TimetableGrid";
 import GyoyangWizard from "@/components/GyoyangWizard";
@@ -11,6 +12,7 @@ import FeedbackTab from "@/components/FeedbackTab";
 import LibraryTab from "@/components/LibraryTab";
 import AcademicCalendarTab from "@/components/AcademicCalendarTab";
 import GuideTour, { TourStep } from "@/components/GuideTour";
+import SugangLink from "@/components/SugangLink";
 
 const TOUR_STEPS: TourStep[] = [
   {
@@ -41,12 +43,12 @@ const TOUR_STEPS: TourStep[] = [
   {
     selector: '[data-tour="tab-gyoyang"]',
     title: "⑥ 교양 · 교직 마법사",
-    body: "전공 조합을 전공 마법사에서 '★이 시간표로 교양 마법사 시작'으로 고정한 뒤, 남는 시간에 맞춰 교양/교직 과목을 추가로 배치합니다.",
+    body: "전공 조합을 전공 마법사에서 '★교양 마법사 시작'으로 고정한 뒤, 남는 시간에 맞춰 교양/교직 과목을 추가로 배치합니다.",
   },
   {
     selector: '[data-tour="tab-library"]',
     title: "⑦ 라이브러리",
-    body: "완성한 시간표를 저장해 두고 나중에 다시 불러올 수 있어요.",
+    body: "완성한 시간표를 저장해 두고 나중에 다시 볼 수 있어요.",
   },
   {
     selector: '[data-tour="tab-calendar"]',
@@ -56,12 +58,12 @@ const TOUR_STEPS: TourStep[] = [
   {
     selector: '[data-tour="tab-feedback"]',
     title: "⑨ 피드백 · 응원",
-    body: "버그 신고, 원하는 전공 추가 요청, 기능 제안, 응원 메시지를 남길 수 있어요. 여러분의 한 마디가 큰 힘이 됩니다!",
+    body: "버그 신고, 원하는 전공 추가 요청, 기능 제안, 응원 메시지를 남길 수 있어요.",
   },
   {
     selector: '[data-tour="help-btn"]',
     title: "언제든 다시 볼 수 있어요",
-    body: "사용법이 다시 필요하면 오른쪽 위 '💡 사용법' 버튼을 누르세요. 그럼 즐거운 수강신청 되세요! 🎉",
+    body: "사용법이 다시 필요하면 이 '💡 사용법' 버튼을 누르세요.",
   },
 ];
 
@@ -160,10 +162,9 @@ export default function Home() {
   const sem = `${semYear}-${semTerm}`;
   const SEM_WARN_ACTIVE = semYear === "2026" && semTerm === "2" && new Date() < new Date("2026-07-11");
   const [courses, setCourses] = useState<Course[]>([]);
-  const TOTAL = courses.length;
   const [rows, setRows] = useState<Row[]>([]);
   const [loading, setLoading] = useState(false);
-  const [progress, setProgress] = useState<{ current: number; name: string } | null>(null);
+  const [progress, setProgress] = useState<{ current: number; total: number; name: string; cached?: boolean } | null>(null);
   const [sortState, setSortState] = useState<SortState>(null);
   const [statusText, setStatusText] = useState("");
 
@@ -184,12 +185,20 @@ export default function Home() {
   const [profSearch, setProfSearch] = useState<string>("");
   const [leftTab, setLeftTab] = useState<"select" | "filter">("select");
   const [panelOpen, setPanelOpen] = useState(() => typeof window !== "undefined" && window.innerWidth >= 768);
-  const [flashKey, setFlashKey] = useState(0);
   const [slideDir, setSlideDir] = useState<"left" | "right">("left");
+  // 슬라이드 애니메이션 재생 키 (조합 화살표 이동 시에만 증가 → 과목 추가 시엔 시간표가 remount되지 않아 블럭별 애니메이션 유지)
+  const [navTick, setNavTick] = useState(0);
+  const [slideOutCombo, setSlideOutCombo] = useState<Section[] | null>(null);
+  const slideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   // 고정 분반: crseNo → Row / 제외 분반: crseNo Set
   const [pinnedRows, setPinnedRows] = useState<Map<string, Row>>(new Map());
   const [excludedRows, setExcludedRows] = useState<Set<string>>(new Set());
   const [noTimeSections, setNoTimeSections] = useState<NoTimeSection[]>([]);
+  // 전공 마법사 이미지 저장
+  const wizardCaptureRef = useRef<HTMLDivElement | null>(null);
+  const [wizardSaving, setWizardSaving] = useState(false);
+  const [wizardRegModal, setWizardRegModal] = useState<{ courses: { crseNo: string; name: string; credit: number }[] } | null>(null);
+  const [wizardRegCopiedCode, setWizardRegCopiedCode] = useState<string | null>(null);
 
   // 전공+입학연도 변경 시 과목 목록 fetch
   useEffect(() => {
@@ -206,7 +215,7 @@ export default function Home() {
     tag: string,
     signal: AbortSignal,
     onRows: (rows: Row[]) => void,
-    onProgress: (name: string) => void,
+    onProgress: (p: { current: number; total: number; name: string; cached: boolean }) => void,
   ) => {
     const res = await fetch(`/api/sections?sem=${encodeURIComponent(sem)}&major=${majorKey}&entryYear=${eyear}`, { signal });
     if (!res.ok) { const err = await res.json(); throw new Error(err.error ?? "오류"); }
@@ -224,7 +233,7 @@ export default function Home() {
         if (!line.startsWith("data:")) continue;
         const json = JSON.parse(line.slice(5).trim());
         if (json.type === "progress") {
-          onProgress(json.name);
+          onProgress({ current: json.current ?? 0, total: json.total ?? 0, name: json.name ?? "", cached: !!json.cached });
           if (json.rows?.length) onRows((json.rows as Row[]).map((r) => ({ ...r, majorTag: tag })));
         }
       }
@@ -240,7 +249,7 @@ export default function Home() {
     setRows([]);
     setExcludedRows(new Set());
     setPinnedRows(new Map());
-    setProgress({ current: 0, name: "서버에 요청 중..." });
+    setProgress({ current: 0, total: 0, name: "서버에 요청 중..." });
     setStatusText("");
     setSortState(null);
     setCheckMap(new Map());
@@ -267,11 +276,11 @@ export default function Home() {
           }
           return next;
         });
-      }, (name) => setProgress({ current: 0, name }));
+      }, (p) => setProgress(p));
 
       for (let i = 0; i < extraMajors.length; i++) {
         const label = `복수전공${extraMajors.length > 1 ? i + 1 : ""}`;
-        setProgress({ current: 0, name: `${label} 조회 중...` });
+        setProgress({ current: 0, total: 0, name: `${label} 조회 중...` });
         await streamRows(extraMajors[i], entryYear, "복수전공", signal, (rows) => {
           allRows.push(...rows);
           setRows((prev) => [...prev, ...rows]);
@@ -284,7 +293,7 @@ export default function Home() {
             }
             return next;
           });
-        }, (name) => setProgress({ current: 0, name }));
+        }, (p) => setProgress(p));
       }
 
       setStatusText(`총 ${allRows.length}개 분반 개설됨 (${sem}${extraMajors.length > 0 ? " · 복수전공 포함" : ""})`);
@@ -331,24 +340,42 @@ export default function Home() {
 
   const checkedCount = [...checkMap.values()].filter(Boolean).length;
 
-  const generateWizard = () => {
-    const selected = [...courseGroups.entries()]
-      .filter(([base]) => checkMap.get(base))
-      .map(([base]) => base);
-    // 고정 분반의 과목도 자동 포함
-    for (const row of pinnedRows.values()) {
-      const base = row.crseNo.replace(/-\d+$/, "");
-      if (!selected.includes(base)) selected.push(base);
+  // 전공 마법사 시간표 이미지 저장
+  const saveWizardImage = async () => {
+    if (!wizardCaptureRef.current) return;
+    setWizardSaving(true);
+    try {
+      const termLabel = semTerm === "s" ? "여름계절" : semTerm === "w" ? "겨울계절" : `${semTerm}학기`;
+      const prefix = MAJOR_LABELS[major] ? `${MAJOR_LABELS[major]} ` : "";
+      await captureTimetableImage({
+        el: wizardCaptureRef.current,
+        combo: currentCombo,
+        fileName: `${prefix}${semYear}년 ${termLabel} 전공 시간표`,
+      });
+      const courses = [
+        ...currentCombo.map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),
+        ...noTimeSections.map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),
+      ];
+      setWizardRegModal({ courses });
+    } finally {
+      setWizardSaving(false);
     }
-    if (!selected.length) {
-      alert("과목을 하나 이상 선택해주세요.");
+  };
+
+  // 과목 선택/고정/제외가 바뀌면 조합 자동 계산 (교양·교직 마법사처럼 즉시 경우의 수 표시)
+  useEffect(() => {
+    const selected = new Set<string>();
+    for (const [base, on] of checkMap) if (on) selected.add(base);
+    for (const row of pinnedRows.values()) selected.add(row.crseNo.replace(/-\d+$/, ""));
+    if (selected.size === 0) {
+      setCombos([]);
+      setNoTimeSections([]);
       return;
     }
-    // 고정 분반이 있는 과목은 해당 분반만, 제외 분반은 제거, 없는 과목은 전체 분반 사용
     const pinnedCrseNos = new Set(pinnedRows.keys());
     const selectedRows = rows.filter((r) => {
       const base = r.crseNo.replace(/-\d+$/, "");
-      if (!selected.includes(base)) return false;
+      if (!selected.has(base)) return false;
       if (excludedRows.has(r.crseNo)) return false;
       const hasPinned = [...pinnedRows.values()].some((p) => p.crseNo.replace(/-\d+$/, "") === base);
       if (hasPinned) return pinnedCrseNos.has(r.crseNo);
@@ -356,26 +383,8 @@ export default function Home() {
     });
     const { groups, noTimeSections: nts } = buildSectionGroups(selectedRows);
     setNoTimeSections(nts);
-    const all = generateCombos(groups);
-    setCombos(all);
-    setFilteredCombos(all);
-    setPinnedCombo(null);
-    setComboIdx(0);
-    setFilterMap(new Map());
-    setMinCredit("");
-    setDayOff(new Set());
-    setNoMorning("");
-    setNoEvening("");
-    setExcludeProfs(new Set());
-    setIncludeProfs(new Set());
-    setIncludeDepts(new Set());
-    setProfSearch("");
-    setFlashKey((k) => k + 1);
-    setTab("wizard");
-    setLeftTab("filter");
-    // 모바일에서는 조합 생성 후 패널 닫기
-    if (typeof window !== "undefined" && window.innerWidth < 768) setPanelOpen(false);
-  };
+    setCombos(generateCombos(groups));
+  }, [rows, checkMap, pinnedRows, excludedRows]);
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
@@ -383,7 +392,6 @@ export default function Home() {
       const tag = (e.target as HTMLElement).tagName;
       if (tag === "BUTTON" || tag === "SELECT" || tag === "TEXTAREA") return;
       if (tab === "search" && !loading && courses.length > 0) doFetch();
-      if (tab === "wizard" && leftTab === "select" && checkedCount > 0) generateWizard();
     };
     document.addEventListener("keydown", handler);
     return () => document.removeEventListener("keydown", handler);
@@ -488,7 +496,7 @@ export default function Home() {
           const disabled =
             (key === "wizard" && rows.length === 0) ||
             (key === "gyoyang" && !pinnedCombo) ||
-            (key === "kyoshik" && !pinnedCombo);
+            (key === "kyoshik" && !kyoshikPinnedCombo);
           const disabledTitle =
             key === "wizard" ? "전공 조회 후 사용할 수 있습니다" :
             key === "gyoyang" ? "전공 마법사에서 ★ 버튼을 눌러 이동하세요" :
@@ -746,24 +754,30 @@ export default function Home() {
               <span className="text-xs text-gray-500">{statusText}</span>
             </div>
 
-            {loading && progress && (
-              <div className="flex flex-col gap-1">
-                <div className="flex items-center gap-2">
-                  <div className="flex-1 bg-gray-200 rounded-full h-2 overflow-hidden">
-                    <div
-                      className="bg-indigo-500 h-2 rounded-full transition-all duration-300"
-                      style={{ width: `${progress.current === 0 ? 2 : (progress.current / TOTAL) * 100}%` }}
-                    />
+            {loading && progress && (() => {
+              const pct = progress.total > 0
+                ? Math.max(5, Math.round((progress.current / progress.total) * 100))
+                : 6;
+              const label = progress.cached
+                ? "저장된 데이터 불러오는 중..."
+                : progress.total > 0
+                ? progress.name || "분반 정보 가져오는 중..."
+                : "서버에 연결 중...";
+              return (
+                <div className="flex flex-col gap-1">
+                  <div className="flex items-center gap-2">
+                    <div className="flex-1 bg-gray-200 rounded-full h-2 overflow-hidden">
+                      <div
+                        className="bg-indigo-500 h-2 rounded-full transition-[width] duration-200 ease-out"
+                        style={{ width: `${pct}%` }}
+                      />
+                    </div>
+                    <span className="text-xs text-gray-500 shrink-0 tabular-nums">{pct}%</span>
                   </div>
-                  <span className="text-xs text-gray-500 shrink-0">
-                    ({progress.current}/{TOTAL})
-                  </span>
+                  <span className="text-xs text-gray-400 truncate">{label}</span>
                 </div>
-                <span className="text-xs text-gray-400 truncate">
-                  {progress.current === 0 ? "서버에 연결 중..." : progress.name}
-                </span>
-              </div>
-            )}
+              );
+            })()}
 
             <div className="flex-1 overflow-auto border border-gray-200 rounded bg-white">
               <table className="text-sm w-full border-collapse min-w-max">
@@ -881,7 +895,7 @@ export default function Home() {
         {tab === "wizard" && (
           <div className="flex flex-1 overflow-hidden relative">
             {/* Left panel */}
-            <div className={`${panelOpen ? "w-72" : "w-0"} shrink-0 border-r border-gray-200 bg-white flex flex-col overflow-hidden transition-all duration-200`} onKeyDown={(e) => { if (e.key === "Enter" && leftTab === "select" && checkedCount > 0) generateWizard(); }}>
+            <div className={`${panelOpen ? "w-72" : "w-0"} shrink-0 border-r border-gray-200 bg-white flex flex-col overflow-hidden transition-all duration-200`}>
 
               {/* 내부 탭 */}
               <div className="flex border-b border-gray-200 shrink-0">
@@ -1012,16 +1026,13 @@ export default function Home() {
                       );
                     })()}
                   </div>
-                  <div className="p-2 border-t border-gray-100 shrink-0">
-                    <button
-                      onClick={generateWizard}
-                      disabled={checkedCount === 0 && pinnedRows.size === 0}
-                      className="w-full bg-indigo-600 text-white text-sm py-2 rounded hover:bg-indigo-700 disabled:opacity-40 transition-colors"
-                    >
-                      조합 생성
-                    </button>
-                    {combos.length > 0 && (
-                      <p className="text-xs text-gray-500 text-center mt-1">전체 조합: {combos.length}개</p>
+                  <div className="p-2 border-t border-gray-100 shrink-0 text-center">
+                    {combos.length > 0 ? (
+                      <p className="text-xs text-gray-500">
+                        전체 조합 <span className="font-semibold text-indigo-600">{combos.length}</span>개 · 오른쪽에서 확인하세요
+                      </p>
+                    ) : (
+                      <p className="text-xs text-gray-400">과목을 선택하면 자동으로 조합이 만들어집니다</p>
                     )}
                   </div>
                 </>
@@ -1084,7 +1095,7 @@ export default function Home() {
                         <div className="px-1">
                           <p className="text-xs text-gray-400 mb-1.5">공강 요일 <span className="text-gray-300">(중복 선택)</span></p>
                           <div className="flex gap-1">
-                            {["월", "화", "수", "목", "금"].map((d, i) => (
+                            {["월", "화", "수", "목", "금", "토"].map((d, i) => (
                               <button
                                 key={i}
                                 onClick={() => {
@@ -1243,7 +1254,7 @@ export default function Home() {
             </div>
 
             {/* Right: timetable */}
-            <div key={flashKey} className="flex-1 flex flex-col overflow-hidden p-4 gap-2 animate-[fadeIn_0.4s_ease] min-w-0 min-h-0">
+            <div className="flex-1 flex flex-col overflow-hidden p-4 gap-2 min-w-0 min-h-0">
               {/* 패널 토글 버튼 */}
               <button
                 onClick={() => setPanelOpen((v) => !v)}
@@ -1255,14 +1266,14 @@ export default function Home() {
                 <>
                   <div className="flex items-center gap-3 flex-wrap shrink-0">
                     <button
-                      onClick={() => { setSlideDir("right"); setComboIdx((i) => (i - 1 + filteredCombos.length) % filteredCombos.length); }}
+                      onClick={() => { if (slideTimerRef.current) clearTimeout(slideTimerRef.current); setSlideOutCombo(currentCombo); setSlideDir("right"); setNavTick((t) => t + 1); setComboIdx((i) => (i - 1 + filteredCombos.length) % filteredCombos.length); slideTimerRef.current = setTimeout(() => setSlideOutCombo(null), 280); }}
                       className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm"
                     >◀</button>
                     <span className="text-sm text-gray-600 w-20 text-center">
                       {comboIdx + 1} / {filteredCombos.length}
                     </span>
                     <button
-                      onClick={() => { setSlideDir("left"); setComboIdx((i) => (i + 1) % filteredCombos.length); }}
+                      onClick={() => { if (slideTimerRef.current) clearTimeout(slideTimerRef.current); setSlideOutCombo(currentCombo); setSlideDir("left"); setNavTick((t) => t + 1); setComboIdx((i) => (i + 1) % filteredCombos.length); slideTimerRef.current = setTimeout(() => setSlideOutCombo(null), 280); }}
                       className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-50 text-sm"
                     >▶</button>
                     <span className="text-sm font-semibold text-indigo-600">
@@ -1272,23 +1283,39 @@ export default function Home() {
                       {currentCombo.map((s) => s.name.replace(/\s*\(.*?\)\s*$/, "")).join(" · ")}
                     </span>
                   </div>
-                  <div key={`${comboIdx}-${slideDir}`} className={`flex-1 overflow-auto min-h-0 ${slideDir === "left" ? "slide-left" : "slide-right"}`}>
-                    <TimetableGrid combo={currentCombo} />
-                  </div>
-                  {noTimeSections.length > 0 && (
-                    <div className="shrink-0 border border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-950/70 rounded-lg px-4 py-3 flex flex-wrap gap-x-4 gap-y-2">
-                      <span className="text-sm font-semibold text-orange-600 dark:text-orange-400 w-full">시간 외</span>
-                      {noTimeSections.map((s) => (
-                        <span key={s.crseNo} className="text-sm text-orange-700 dark:text-orange-300">{s.name} <span className="text-orange-400 dark:text-orange-500 text-xs">({s.credit}학점)</span></span>
-                      ))}
+                  <div className="flex-1 min-h-0 relative overflow-hidden">
+                    {slideOutCombo !== null && (
+                      <div className={`absolute inset-0 overflow-auto pointer-events-none ${slideDir === "left" ? "slide-out-to-left" : "slide-out-to-right"}`}>
+                        <TimetableGrid combo={slideOutCombo} />
+                      </div>
+                    )}
+                    <div className={`absolute inset-0 overflow-auto ${slideOutCombo !== null ? (slideDir === "left" ? "slide-in-from-right" : "slide-in-from-left") : ""}`}>
+                      <div ref={wizardCaptureRef}>
+                        <TimetableGrid key={navTick} combo={currentCombo} />
+                        {noTimeSections.length > 0 && (
+                          <div className="mt-2 border border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-950/70 rounded-lg px-4 py-3 flex flex-wrap gap-x-4 gap-y-2">
+                            <span className="text-sm font-semibold text-orange-600 dark:text-orange-400 w-full">시간 외</span>
+                            {noTimeSections.map((s) => (
+                              <span key={s.crseNo} className="text-sm text-orange-700 dark:text-orange-300">{s.name} <span className="text-orange-400 dark:text-orange-500 text-xs">({s.credit}학점)</span></span>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     </div>
-                  )}
+                  </div>
                   <div className="flex gap-2 shrink-0 pt-1">
                     <button
-                      onClick={() => { setPinnedCombo(currentCombo); setTab("gyoyang"); }}
-                      className="w-full py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded-lg transition-colors"
+                      onClick={saveWizardImage}
+                      disabled={wizardSaving}
+                      className="flex-1 py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors"
                     >
-                      ★ 이 시간표로 교양 마법사 시작
+                      {wizardSaving ? "저장 중..." : "이미지 저장"}
+                    </button>
+                    <button
+                      onClick={() => { setPinnedCombo(currentCombo); setTab("gyoyang"); }}
+                      className="flex-1 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded-lg transition-colors"
+                    >
+                      ★ 교양 마법사 시작
                     </button>
                   </div>
                 </>
@@ -1296,7 +1323,7 @@ export default function Home() {
                 <div className="flex-1 flex flex-col items-center justify-center gap-3 text-gray-400 text-sm">
                   {combos.length === 0
                     ? <>
-                        <span>과목을 선택하고 조합 생성을 눌러주세요</span>
+                        <span>과목을 선택하면 조합이 자동 생성됩니다</span>
                         <button
                           onClick={() => setGyoyangDirectConfirm(true)}
                           className="mt-1 px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded-lg transition-colors"
@@ -1309,7 +1336,7 @@ export default function Home() {
                         {(() => {
                           const hints: string[] = [];
                           if (filterMap.size > 0) hints.push(`필수과목 (${[...filterMap.keys()].map((n) => n.replace(/\s*\(.*?\)\s*$/, "")).join(", ")})`);
-                          if (dayOff.size > 0) hints.push(`공강 (${["월","화","수","목","금"].filter((_, i) => dayOff.has(i)).join("")})`);
+                          if (dayOff.size > 0) hints.push(`공강 (${["월","화","수","목","금","토"].filter((_, i) => dayOff.has(i)).join("")})`);
                           if (noMorning) hints.push(`${noMorning}시 이전 없음`);
                           if (noEvening) hints.push(`${noEvening}시 이후 없음`);
                           if (minCredit) hints.push(`최소 ${minCredit}학점`);
@@ -1348,7 +1375,7 @@ export default function Home() {
         {tab === "feedback" && <FeedbackTab />}
 
         {/* ── 라이브러리 탭 ── */}
-        {tab === "library" && <LibraryTab />}
+        {tab === "library" && <LibraryTab onFeedbackClick={() => setTab("feedback")} />}
 
         {/* ── 학사일정 탭 ── */}
         {tab === "calendar" && <AcademicCalendarTab />}
@@ -1436,6 +1463,46 @@ export default function Home() {
         </div>
       )}
 
+
+      {/* 전공 마법사 수강신청 모달 */}
+      {wizardRegModal && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/40">
+          <div className="bg-white rounded-2xl shadow-2xl flex flex-col max-w-lg w-[92vw] max-h-[80vh]">
+            <div className="px-6 pt-5 pb-3 border-b border-gray-100 flex items-center justify-between shrink-0">
+              <div>
+                <p className="text-base font-bold text-gray-800">수강신청 과목 목록</p>
+                <p className="text-xs text-gray-400 mt-0.5">과목코드를 클립보드에 복사하세요</p>
+              </div>
+              <button onClick={() => { setWizardRegModal(null); setWizardRegCopiedCode(null); }} className="text-gray-400 hover:text-gray-600 text-xl px-1">✕</button>
+            </div>
+            <div className="overflow-y-auto flex-1 px-6 py-4 flex flex-col gap-2">
+              {wizardRegModal.courses.map((c) => {
+                const code = c.crseNo.replace(/-/g, "");
+                const isCopied = wizardRegCopiedCode === code;
+                return (
+                  <div key={c.crseNo} className="flex items-center gap-3">
+                    <button
+                      onClick={() => { navigator.clipboard.writeText(code).then(() => { setWizardRegCopiedCode(code); setTimeout(() => setWizardRegCopiedCode(null), 2000); }); }}
+                      className={`shrink-0 w-28 py-1.5 rounded-lg text-sm font-mono font-bold transition-all duration-200 ${isCopied ? "bg-green-500 text-white" : "bg-indigo-50 hover:bg-indigo-100 text-indigo-600 border border-indigo-200"}`}
+                    >
+                      {isCopied ? "✓ 복사됨" : code}
+                    </button>
+                    <span className="text-base font-semibold text-gray-800 leading-tight">{c.name}</span>
+                    <span className="text-xs text-gray-400 shrink-0 ml-auto">{c.credit}학점</span>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="px-6 py-4 border-t border-gray-100 shrink-0 flex flex-col gap-2">
+              <SugangLink />
+              <p className="text-xs text-gray-400 text-center">
+                도움이 됐다면{" "}
+                <button onClick={() => { setWizardRegModal(null); setTab("feedback"); }} className="text-indigo-500 hover:text-indigo-600 underline">피드백/응원 남기기 →</button>
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       <GuideTour steps={TOUR_STEPS} run={runTour} onClose={closeTour} />
 
