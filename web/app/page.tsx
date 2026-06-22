@@ -411,7 +411,7 @@ export default function Home() {
           { key: "gyoyang", label: "교양 마법사" },
           { key: "kyoshik", label: "교직 마법사" },
           { key: "library", label: "라이브러리" },
-          { key: "calendar", label: "학사일정(개발중)" },
+          { key: "calendar", label: "학사일정" },
           { key: "settings", label: "설정" },
           { key: "feedback", label: "응원/문의" },
         ] as const).map(({ key, label }) => {
