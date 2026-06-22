@@ -14,6 +14,7 @@ import AcademicCalendarTab from "@/components/AcademicCalendarTab";
 import GuideTour, { TourStep } from "@/components/GuideTour";
 import SugangLink from "@/components/SugangLink";
 import { trackSave } from "@/lib/trackSave";
+import { saveTimetable } from "@/lib/timetableStorage";
 
 const TOUR_STEPS: TourStep[] = [
   {
