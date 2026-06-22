@@ -4,6 +4,7 @@ import { useState, useRef, useCallback, useEffect } from "react";
 import { buildSectionGroups, generateCombos, formatTimeStr, Section, NoTimeSection } from "@/lib/timetable";
 import { captureTimetableImage } from "@/lib/captureTimetable";
 import { Major, MAJOR_LABELS, ENTRY_YEAR_MIN, ENTRY_YEAR_MAX, fetchCoursesByYear, Course } from "@/lib/courses";
+import ProfPickerModal, { ProfStep, getMultiProfSections, applyProfPicks, getMultiProfNoTimeSections, applyProfPicksNoTime } from "@/components/ProfPickerModal";
 import TimetableGrid from "@/components/TimetableGrid";
 import GyoyangWizard from "@/components/GyoyangWizard";
 import KyoshikWizard from "@/components/KyoshikWizard";
@@ -202,6 +203,16 @@ export default function Home() {
   const [wizardSaving, setWizardSaving] = useState(false);
   const [wizardRegModal, setWizardRegModal] = useState<{ courses: { crseNo: string; name: string; credit: number }[] } | null>(null);
   const [wizardRegCopiedCode, setWizardRegCopiedCode] = useState<string | null>(null);
+  const [wizardSavePrompt, setWizardSavePrompt] = useState(false);
+  const [wizardSaveName, setWizardSaveName] = useState("");
+  const [pendingWizardCombo, setPendingWizardCombo] = useState<Section[] | null>(null);
+  const [pendingWizardNoTime, setPendingWizardNoTime] = useState<NoTimeSection[] | null>(null);
+  const [wizardCaptureCombo, setWizardCaptureCombo] = useState<Section[] | null>(null);
+  const [wizardCaptureNoTime, setWizardCaptureNoTime] = useState<NoTimeSection[] | null>(null);
+  const [wizardProfSteps, setWizardProfSteps] = useState<ProfStep[]>([]);
+  const [wizardProfStepIdx, setWizardProfStepIdx] = useState(0);
+  const wizardProfPickResults = useRef<Map<string, string>>(new Map());
+  const wizardAfterPickRef = useRef<((picks: Map<string, string>) => void) | null>(null);
 
   // 전공+입학연도 변경 시 과목 목록 fetch
   useEffect(() => {
@@ -358,8 +369,26 @@ export default function Home() {
 
   const checkedCount = [...checkMap.values()].filter(Boolean).length;
 
-  // 전공 마법사 시간표 이미지 저장
-  const saveWizardImage = async () => {
+  // 전공 마법사 교수 선택 핸들러
+  const advanceWizardProfStep = useCallback(() => {
+    setWizardProfStepIdx((idx) => {
+      const next = idx + 1;
+      if (next < wizardProfSteps.length) return next;
+      const picks = new Map(wizardProfPickResults.current);
+      setWizardProfSteps([]);
+      wizardAfterPickRef.current?.(picks);
+      wizardAfterPickRef.current = null;
+      return 0;
+    });
+  }, [wizardProfSteps.length]);
+
+  const handleWizardProfSelect = (prof: string) => {
+    wizardProfPickResults.current.set(wizardProfSteps[wizardProfStepIdx].name, prof);
+    advanceWizardProfStep();
+  };
+
+  // 전공 마법사 이미지 실제 캡처
+  const doWizardCapture = async (combo: Section[], noTime: NoTimeSection[]) => {
     if (!wizardCaptureRef.current) return;
     setWizardSaving(true);
     try {
@@ -367,23 +396,54 @@ export default function Home() {
       const prefix = MAJOR_LABELS[major] ? `${MAJOR_LABELS[major]} ` : "";
       await captureTimetableImage({
         el: wizardCaptureRef.current,
-        combo: currentCombo,
+        combo,
         fileName: `${prefix}${semYear}년 ${termLabel} 전공 시간표`,
       });
-      trackSave({
-        event: "이미지 저장",
-        majorLabel: MAJOR_LABELS[major],
-        extraMajorLabels: extraMajors.map((m) => MAJOR_LABELS[m]),
-        entryYear,
-      });
+      trackSave({ event: "이미지 저장", majorLabel: MAJOR_LABELS[major], extraMajorLabels: extraMajors.map((m) => MAJOR_LABELS[m]), entryYear });
       const courses = [
-        ...currentCombo.map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),
-        ...noTimeSections.map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),
+        ...combo.map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),
+        ...noTime.map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),
       ];
       setWizardRegModal({ courses });
     } finally {
       setWizardSaving(false);
     }
+  };
+
+  // 전공 마법사 시간표 이미지 저장
+  const saveWizardImage = async () => {
+    const steps = [...getMultiProfSections(currentCombo), ...getMultiProfNoTimeSections(noTimeSections)];
+    if (steps.length === 0) { await doWizardCapture(currentCombo, noTimeSections); return; }
+    wizardProfPickResults.current = new Map();
+    setWizardProfSteps(steps);
+    setWizardProfStepIdx(0);
+    wizardAfterPickRef.current = async (picks) => {
+      const resolvedCombo = applyProfPicks(currentCombo, picks);
+      const resolvedNoTime = applyProfPicksNoTime(noTimeSections, picks);
+      setWizardCaptureCombo(resolvedCombo);
+      setWizardCaptureNoTime(resolvedNoTime);
+      await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+      await doWizardCapture(resolvedCombo, resolvedNoTime);
+      setWizardCaptureCombo(null);
+      setWizardCaptureNoTime(null);
+    };
+  };
+
+  // 전공 마법사 라이브러리 저장
+  const handleWizardLibrarySave = () => {
+    const steps = [...getMultiProfSections(currentCombo), ...getMultiProfNoTimeSections(noTimeSections)];
+    if (steps.length === 0) {
+      setPendingWizardCombo(currentCombo); setPendingWizardNoTime(null);
+      setWizardSaveName(""); setWizardSavePrompt(true); return;
+    }
+    wizardProfPickResults.current = new Map();
+    setWizardProfSteps(steps);
+    setWizardProfStepIdx(0);
+    wizardAfterPickRef.current = (picks) => {
+      setPendingWizardCombo(applyProfPicks(currentCombo, picks));
+      setPendingWizardNoTime(applyProfPicksNoTime(noTimeSections, picks));
+      setWizardSaveName(""); setWizardSavePrompt(true);
+    };
   };
 
   // 과목 선택/고정/제외가 바뀌면 조합 자동 계산 (교양·교직 마법사처럼 즉시 경우의 수 표시)
@@ -1315,7 +1375,7 @@ export default function Home() {
                     )}
                     <div className={`absolute inset-0 overflow-auto ${slideOutCombo !== null ? (slideDir === "left" ? "slide-in-from-right" : "slide-in-from-left") : ""}`}>
                       <div ref={wizardCaptureRef}>
-                        <TimetableGrid key={navTick} combo={currentCombo} />
+                        <TimetableGrid key={navTick} combo={wizardCaptureCombo ?? currentCombo} />
                         {noTimeSections.length > 0 && (
                           <div className="mt-2 border border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-950/70 rounded-lg px-4 py-3 flex flex-wrap gap-x-4 gap-y-2">
                             <span className="text-sm font-semibold text-orange-600 dark:text-orange-400 w-full">시간 외</span>
@@ -1327,17 +1387,35 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="flex gap-2 shrink-0 pt-1">
+                  <div className="grid grid-cols-2 gap-2 shrink-0 pt-1">
                     <button
                       onClick={saveWizardImage}
                       disabled={wizardSaving}
-                      className="flex-1 py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors"
+                      className="py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors"
                     >
                       {wizardSaving ? "저장 중..." : "이미지 저장"}
                     </button>
                     <button
+                      onClick={handleWizardLibrarySave}
+                      className="py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-lg transition-colors"
+                    >
+                      라이브러리 저장
+                    </button>
+                    <button
+                      onClick={() => {
+                        const courses = [
+                          ...currentCombo.map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),
+                          ...noTimeSections.map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),
+                        ];
+                        setWizardRegModal({ courses });
+                      }}
+                      className="py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-colors"
+                    >
+                      수강신청하기
+                    </button>
+                    <button
                       onClick={() => { setPinnedCombo(currentCombo); setTab("gyoyang"); }}
-                      className="flex-1 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded-lg transition-colors"
+                      className="py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded-lg transition-colors"
                     >
                       ★ 교양 마법사 시작
                     </button>
@@ -1489,6 +1567,56 @@ export default function Home() {
 
 
       {/* 전공 마법사 수강신청 모달 */}
+      {wizardProfSteps.length > 0 && wizardProfStepIdx < wizardProfSteps.length && (
+        <ProfPickerModal
+          courseName={wizardProfSteps[wizardProfStepIdx].name}
+          profs={wizardProfSteps[wizardProfStepIdx].profs}
+          isNoTime={wizardProfSteps[wizardProfStepIdx].isNoTime}
+          stepIdx={wizardProfStepIdx}
+          totalSteps={wizardProfSteps.length}
+          onSelect={handleWizardProfSelect}
+          onSkip={advanceWizardProfStep}
+        />
+      )}
+
+      {wizardSavePrompt && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30">
+          <div className="bg-white rounded-xl shadow-xl px-6 py-5 flex flex-col gap-4 w-80 max-w-[90vw]">
+            <p className="text-sm font-semibold text-gray-800 text-center">라이브러리에 저장</p>
+            <input
+              autoFocus
+              type="text"
+              value={wizardSaveName}
+              onChange={(e) => setWizardSaveName(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && wizardSaveName.trim()) {
+                  saveTimetable({ name: wizardSaveName.trim(), sem: `${semYear}-${semTerm}`, major, majorLabel: MAJOR_LABELS[major], entryYear, extraMajorLabels: extraMajors.map((m) => MAJOR_LABELS[m]), pinnedCombo: pendingWizardCombo ?? currentCombo, pinnedNoTimeSections: pendingWizardNoTime ?? noTimeSections });
+                  trackSave({ event: "라이브러리 저장", majorLabel: MAJOR_LABELS[major], extraMajorLabels: extraMajors.map((m) => MAJOR_LABELS[m]), entryYear });
+                  setWizardSavePrompt(false);
+                }
+                if (e.key === "Escape") setWizardSavePrompt(false);
+              }}
+              placeholder="시간표 이름 입력"
+              className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-400"
+            />
+            <div className="flex gap-2">
+              <button onClick={() => setWizardSavePrompt(false)} className="flex-1 py-2 border border-gray-300 rounded-lg text-sm text-gray-600 hover:bg-gray-50">취소</button>
+              <button
+                disabled={!wizardSaveName.trim()}
+                onClick={() => {
+                  saveTimetable({ name: wizardSaveName.trim(), sem: `${semYear}-${semTerm}`, major, majorLabel: MAJOR_LABELS[major], entryYear, extraMajorLabels: extraMajors.map((m) => MAJOR_LABELS[m]), pinnedCombo: pendingWizardCombo ?? currentCombo, pinnedNoTimeSections: pendingWizardNoTime ?? noTimeSections });
+                  trackSave({ event: "라이브러리 저장", majorLabel: MAJOR_LABELS[major], extraMajorLabels: extraMajors.map((m) => MAJOR_LABELS[m]), entryYear });
+                  setWizardSavePrompt(false);
+                }}
+                className="flex-1 py-2 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white text-sm font-semibold rounded-lg"
+              >
+                저장
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {wizardRegModal && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/40">
           <div className="bg-white rounded-2xl shadow-2xl flex flex-col max-w-lg w-[92vw] max-h-[80vh]">

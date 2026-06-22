@@ -439,6 +439,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
         combo: renderedCombo,
         fileName: `${prefix}${semYear}년 ${termLabel} 시간표`,
       });
+      trackSave({ event: "이미지 저장", majorLabel: majorLabel ?? "", extraMajorLabels, entryYear });
 
       // 수강신청 팝업용 과목 목록 수집 (교수 선택이 반영된 버전 우선 사용)
       const fullComboForReg = [...(pinnedForReg ?? pinnedCombo ?? []), ...comboToCapture];

@@ -318,6 +318,7 @@ export default function KyoshikWizard({ pinnedCombo, pinnedNoTimeSections, initi
         combo: renderedCombo,
         fileName: `${prefix}${semYear}년 ${termLabel} 교직 시간표`,
       });
+      trackSave({ event: "이미지 저장", majorLabel: majorLabel ?? "", extraMajorLabels, entryYear });
 
       const fullComboForReg = [...(pinnedForReg ?? pinnedCombo ?? []), ...comboToCapture];
       const noTimeForReg = resolvedNoTime ?? [...(pinnedNoTimeSections ?? []), ...noTimeSections];
