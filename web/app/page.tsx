@@ -180,6 +180,13 @@ export default function Home() {
     setProgress({ current: 0, name: "서버에 요청 중..." });
     setStatusText("");
     setSortState(null);
+    setCheckMap(new Map());
+    setCombos([]); setFilteredCombos([]);
+    setComboIdx(0); setFilterMap(new Map()); setMinCredit("");
+    setDayOff(new Set()); setNoMorning(""); setNoEvening("");
+    setIncludeProfs(new Set()); setExcludeProfs(new Set()); setIncludeDepts(new Set());
+    setNoTimeSections([]);
+    setPinnedCombo(null);
     track("search", { major, entryYear, sem });
 
     try {
@@ -758,8 +765,11 @@ export default function Home() {
                         {COLS.map((c) => (
                           <td key={c.key} className="px-3 py-1.5 text-gray-700 whitespace-nowrap">
                             {c.key === "timeStr" ? (
-                              <div className="overflow-x-auto max-w-40" style={{ scrollbarWidth: "none" }}>
-                                {row[c.key]}
+                              <div className="leading-tight">
+                                {row[c.key].split(",").map((t) => t.trim()).sort((a, b) => {
+                                  const order: Record<string, number> = { 월: 0, 화: 1, 수: 2, 목: 3, 금: 4, 토: 5, 일: 6 };
+                                  return (order[a[0]] ?? 9) - (order[b[0]] ?? 9);
+                                }).map((t, i) => <div key={i}>{t}</div>)}
                               </div>
                             ) : c.key === "location" ? (
                               <div className="text-xs leading-tight">

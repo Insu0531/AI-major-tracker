@@ -149,7 +149,7 @@ const TimetableGrid = forwardRef<HTMLDivElement, { combo: Section[] }>(function 
                 </p>
                 {b.location && b.location.split("\n").map((line, i) => (
                   <p key={i} className="text-white text-[10px] font-semibold px-1 break-keep opacity-75 leading-tight" style={{ WebkitFontSmoothing: "antialiased" }}>
-                    {line}
+                    {line.replace(/^(산격동 캠퍼스|상주캠퍼스|동인동 캠퍼스)\s*/, "")}
                   </p>
                 ))}
               </div>
