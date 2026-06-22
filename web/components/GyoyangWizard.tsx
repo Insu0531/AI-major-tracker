@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { buildSectionGroups, generateCombos, parseTimes, Section, SectionGroup, TimeSlot, NoTimeSection } from "@/lib/timetable";
@@ -8,6 +8,7 @@ import TimetableGrid from "@/components/TimetableGrid";
 import ProfPickerModal, { ProfStep, getMultiProfSections, applyProfPicks, getMultiProfNoTimeSections, applyProfPicksNoTime } from "@/components/ProfPickerModal";
 import GYOYANG_LIST from "@/lib/gyoyang.json";
 import { saveTimetable } from "@/lib/timetableStorage";
+import { trackSave } from "@/lib/trackSave";
 
 type GyoyangCourse = { code: string; name: string; credit: string; sdg: boolean; hmnts: boolean };
 const ALL_COURSES: GyoyangCourse[] = GYOYANG_LIST as GyoyangCourse[];
@@ -66,7 +67,7 @@ function summarizeDays(timeStrs: string[]): string {
   return [...patterns].join("/");
 }
 
-export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initialSem, majorLabel, majorLabel2, major, onFeedbackClick, onGoToKyoshik }: { pinnedCombo: Section[] | null; pinnedNoTimeSections?: NoTimeSection[]; initialSem?: string; majorLabel?: string; majorLabel2?: string; major?: string; onFeedbackClick?: () => void; onGoToKyoshik?: (combo: Section[], noTimeSections: NoTimeSection[]) => void }) {
+export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initialSem, majorLabel, majorLabel2, major, entryYear, extraMajorLabels, onFeedbackClick, onGoToKyoshik }: { pinnedCombo: Section[] | null; pinnedNoTimeSections?: NoTimeSection[]; initialSem?: string; majorLabel?: string; majorLabel2?: string; major?: string; entryYear?: number; extraMajorLabels?: string[]; onFeedbackClick?: () => void; onGoToKyoshik?: (combo: Section[], noTimeSections: NoTimeSection[]) => void }) {
   const [semYear, setSemYear] = useState(() => initialSem?.split("-")[0] ?? "2026");
   const [semTerm, setSemTerm] = useState(() => initialSem?.split("-")[1] ?? "1");
   const sem = `${semYear}-${semTerm}`;
@@ -597,11 +598,14 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                     sem: `${semYear}-${semTerm}`,
                     major: major ?? "",
                     majorLabel: majorLabel ?? "",
+                    entryYear,
+                    extraMajorLabels,
                     pinnedCombo: pinnedCombo ?? [],
                     pinnedNoTimeSections: pinnedNTSaved,
                     gyoyangCombo: gyoComboSaved,
                     gyoyangNoTimeSections: gyoNTSaved,
                   });
+                  trackSave({ event: "라이브러리 저장", majorLabel: majorLabel ?? "", extraMajorLabels, entryYear });
                   const savedCourses = [
                     ...[...(pinnedCombo ?? []), ...gyoComboSaved].map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),
                     ...[...pinnedNTSaved, ...gyoNTSaved].map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),
@@ -627,11 +631,14 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
                     sem: `${semYear}-${semTerm}`,
                     major: major ?? "",
                     majorLabel: majorLabel ?? "",
+                    entryYear,
+                    extraMajorLabels,
                     pinnedCombo: pinnedCombo ?? [],
                     pinnedNoTimeSections: pinnedNTSaved,
                     gyoyangCombo: gyoComboSaved,
                     gyoyangNoTimeSections: gyoNTSaved,
                   });
+                  trackSave({ event: "라이브러리 저장", majorLabel: majorLabel ?? "", extraMajorLabels, entryYear });
                   const savedCourses = [
                     ...[...(pinnedCombo ?? []), ...gyoComboSaved].map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),
                     ...[...pinnedNTSaved, ...gyoNTSaved].map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),

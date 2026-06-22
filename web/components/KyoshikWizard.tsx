@@ -7,6 +7,7 @@ import SugangLink from "@/components/SugangLink";
 import TimetableGrid from "@/components/TimetableGrid";
 import ProfPickerModal, { ProfStep, getMultiProfSections, applyProfPicks, getMultiProfNoTimeSections, applyProfPicksNoTime } from "@/components/ProfPickerModal";
 import { saveTimetable } from "@/lib/timetableStorage";
+import { trackSave } from "@/lib/trackSave";
 
 type Row = { grade: string; crseNo: string; name: string; code: string; credit: string; dept: string; prof: string; timeStr: string; rmrk: string; location: string; tag?: string };
 
@@ -44,13 +45,15 @@ function formatTimeStr(timeStr: string): string {
   return parts.join(", ");
 }
 
-export default function KyoshikWizard({ pinnedCombo, pinnedNoTimeSections, initialSem, majorLabel, majorLabel2, major, onFeedbackClick }: {
+export default function KyoshikWizard({ pinnedCombo, pinnedNoTimeSections, initialSem, majorLabel, majorLabel2, major, entryYear, extraMajorLabels, onFeedbackClick }: {
   pinnedCombo: Section[] | null;
   pinnedNoTimeSections?: NoTimeSection[];
   initialSem?: string;
   majorLabel?: string;
   majorLabel2?: string;
   major?: string;
+  entryYear?: number;
+  extraMajorLabels?: string[];
   onFeedbackClick?: () => void;
 }) {
   const [semYear] = useState(() => initialSem?.split("-")[0] ?? "2026");
@@ -433,7 +436,8 @@ export default function KyoshikWizard({ pinnedCombo, pinnedNoTimeSections, initi
                   const kyoComboSaved = pendingSaveCombo ?? currentCombo;
                   const pinnedNTSaved = pendingSaveNoTime ? pendingSaveNoTime.slice(0, pinnedNTLen) : (pinnedNoTimeSections ?? []);
                   const kyoNTSaved = pendingSaveNoTime ? pendingSaveNoTime.slice(pinnedNTLen) : noTimeSections;
-                  saveTimetable({ name: gyoSaveName.trim(), sem: `${semYear}-${semTerm}`, major: major ?? "", majorLabel: majorLabel ?? "", pinnedCombo: pinnedCombo ?? [], pinnedNoTimeSections: pinnedNTSaved, gyoyangCombo: kyoComboSaved, gyoyangNoTimeSections: kyoNTSaved });
+                  saveTimetable({ name: gyoSaveName.trim(), sem: `${semYear}-${semTerm}`, major: major ?? "", majorLabel: majorLabel ?? "", entryYear, extraMajorLabels, pinnedCombo: pinnedCombo ?? [], pinnedNoTimeSections: pinnedNTSaved, gyoyangCombo: kyoComboSaved, gyoyangNoTimeSections: kyoNTSaved });
+                  trackSave({ event: "라이브러리 저장", majorLabel: majorLabel ?? "", extraMajorLabels, entryYear });
                   const savedCourses = [
                     ...[...(pinnedCombo ?? []), ...kyoComboSaved].map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),
                     ...[...pinnedNTSaved, ...kyoNTSaved].map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),
@@ -453,7 +457,8 @@ export default function KyoshikWizard({ pinnedCombo, pinnedNoTimeSections, initi
                   const kyoComboSaved = pendingSaveCombo ?? currentCombo;
                   const pinnedNTSaved = pendingSaveNoTime ? pendingSaveNoTime.slice(0, pinnedNTLen) : (pinnedNoTimeSections ?? []);
                   const kyoNTSaved = pendingSaveNoTime ? pendingSaveNoTime.slice(pinnedNTLen) : noTimeSections;
-                  saveTimetable({ name: gyoSaveName.trim(), sem: `${semYear}-${semTerm}`, major: major ?? "", majorLabel: majorLabel ?? "", pinnedCombo: pinnedCombo ?? [], pinnedNoTimeSections: pinnedNTSaved, gyoyangCombo: kyoComboSaved, gyoyangNoTimeSections: kyoNTSaved });
+                  saveTimetable({ name: gyoSaveName.trim(), sem: `${semYear}-${semTerm}`, major: major ?? "", majorLabel: majorLabel ?? "", entryYear, extraMajorLabels, pinnedCombo: pinnedCombo ?? [], pinnedNoTimeSections: pinnedNTSaved, gyoyangCombo: kyoComboSaved, gyoyangNoTimeSections: kyoNTSaved });
+                  trackSave({ event: "라이브러리 저장", majorLabel: majorLabel ?? "", extraMajorLabels, entryYear });
                   const savedCourses = [
                     ...[...(pinnedCombo ?? []), ...kyoComboSaved].map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),
                     ...[...pinnedNTSaved, ...kyoNTSaved].map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),

@@ -7,6 +7,8 @@ export type SavedTimetable = {
   sem: string;     // e.g. "2026-1"
   major: string;
   majorLabel: string;
+  entryYear?: number;
+  extraMajorLabels?: string[];
   pinnedCombo: Section[];
   pinnedNoTimeSections: NoTimeSection[];
   gyoyangCombo?: Section[];

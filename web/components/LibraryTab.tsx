@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { SavedTimetable, loadSavedTimetables, deleteTimetable, renameTimetable } from "@/lib/timetableStorage";
 import { Section, NoTimeSection } from "@/lib/timetable";
 import { captureTimetableImage } from "@/lib/captureTimetable";
+import { trackSave } from "@/lib/trackSave";
 import TimetableGrid from "@/components/TimetableGrid";
 import SugangLink from "@/components/SugangLink";
 
@@ -246,6 +247,12 @@ function PreviewModal({ timetable, onClose, semLabel, onFeedbackClick }: { timet
     setSaving(true);
     try {
       await captureTimetableImage({ el: timetableRef.current, combo: fullCombo, fileName: timetable.name });
+      trackSave({
+        event: "이미지 저장",
+        majorLabel: timetable.majorLabel,
+        extraMajorLabels: timetable.extraMajorLabels,
+        entryYear: timetable.entryYear,
+      });
       setRegOpen(true);
     } finally {
       setSaving(false);

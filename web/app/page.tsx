@@ -12,6 +12,7 @@ import LibraryTab from "@/components/LibraryTab";
 import AcademicCalendarTab from "@/components/AcademicCalendarTab";
 import GuideTour, { TourStep } from "@/components/GuideTour";
 import SugangLink from "@/components/SugangLink";
+import { trackSave } from "@/lib/trackSave";
 
 const TOUR_STEPS: TourStep[] = [
   {
@@ -366,6 +367,12 @@ export default function Home() {
         el: wizardCaptureRef.current,
         combo: currentCombo,
         fileName: `${prefix}${semYear}년 ${termLabel} 전공 시간표`,
+      });
+      trackSave({
+        event: "이미지 저장",
+        majorLabel: MAJOR_LABELS[major],
+        extraMajorLabels: extraMajors.map((m) => MAJOR_LABELS[m]),
+        entryYear,
       });
       const courses = [
         ...currentCombo.map((s) => ({ crseNo: s.crseNo, name: s.name, credit: s.credit })),
@@ -1373,7 +1380,7 @@ export default function Home() {
         {/* ── 교양 마법사 탭 ── 항상 마운트, 탭 전환 시 숨기기만 해서 상태 유지 */}
         <div className={`flex flex-1 overflow-hidden ${tab === "gyoyang" ? "" : "hidden"}`}>
           {pinnedCombo !== null && (
-            <GyoyangWizard pinnedCombo={pinnedCombo} pinnedNoTimeSections={noTimeSections} initialSem={sem} majorLabel={MAJOR_LABELS[major]} majorLabel2={extraMajors.length > 0 ? extraMajors.map((m) => MAJOR_LABELS[m]).join("·") : undefined} major={major} onFeedbackClick={() => setTab("feedback")}
+            <GyoyangWizard pinnedCombo={pinnedCombo} pinnedNoTimeSections={noTimeSections} initialSem={sem} majorLabel={MAJOR_LABELS[major]} majorLabel2={extraMajors.length > 0 ? extraMajors.map((m) => MAJOR_LABELS[m]).join("·") : undefined} major={major} entryYear={entryYear} extraMajorLabels={extraMajors.map((m) => MAJOR_LABELS[m])} onFeedbackClick={() => setTab("feedback")}
               onGoToKyoshik={(combo, nts) => { setKyoshikPinnedCombo([...(pinnedCombo ?? []), ...combo]); setKyoshikPinnedNoTime([...noTimeSections, ...nts]); setTab("kyoshik"); }}
             />
           )}
@@ -1382,7 +1389,7 @@ export default function Home() {
         {/* ── 교직 마법사 탭 ── */}
         <div className={`flex flex-1 overflow-hidden ${tab === "kyoshik" ? "" : "hidden"}`}>
           {kyoshikPinnedCombo !== null && (
-            <KyoshikWizard pinnedCombo={kyoshikPinnedCombo} pinnedNoTimeSections={kyoshikPinnedNoTime} initialSem={sem} majorLabel={MAJOR_LABELS[major]} majorLabel2={extraMajors.length > 0 ? extraMajors.map((m) => MAJOR_LABELS[m]).join("·") : undefined} major={major} onFeedbackClick={() => setTab("feedback")} />
+            <KyoshikWizard pinnedCombo={kyoshikPinnedCombo} pinnedNoTimeSections={kyoshikPinnedNoTime} initialSem={sem} majorLabel={MAJOR_LABELS[major]} majorLabel2={extraMajors.length > 0 ? extraMajors.map((m) => MAJOR_LABELS[m]).join("·") : undefined} major={major} entryYear={entryYear} extraMajorLabels={extraMajors.map((m) => MAJOR_LABELS[m])} onFeedbackClick={() => setTab("feedback")} />
           )}
         </div>
 
