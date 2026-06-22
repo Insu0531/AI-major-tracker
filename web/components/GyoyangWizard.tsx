@@ -669,7 +669,7 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
               onClick={() => { setSaveToast(false); onFeedbackClick(); }}
               className="shrink-0 text-xs text-indigo-300 hover:text-indigo-200 underline whitespace-nowrap"
             >
-              응원/문의
+              피드백/응원
             </button>
           )}
           <button onClick={() => setSaveToast(false)} className="shrink-0 text-gray-500 hover:text-gray-300 text-base leading-none">✕</button>

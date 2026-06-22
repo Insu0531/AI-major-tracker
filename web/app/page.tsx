@@ -10,6 +10,60 @@ import KyoshikWizard from "@/components/KyoshikWizard";
 import FeedbackTab from "@/components/FeedbackTab";
 import LibraryTab from "@/components/LibraryTab";
 import AcademicCalendarTab from "@/components/AcademicCalendarTab";
+import GuideTour, { TourStep } from "@/components/GuideTour";
+
+const TOUR_STEPS: TourStep[] = [
+  {
+    selector: '[data-tour="major"]',
+    title: "① 전공 선택",
+    body: "먼저 본인 전공을 고르세요. 검색으로 빠르게 찾을 수 있고, 옆에서 복수전공도 최대 3개까지 추가할 수 있어요.",
+  },
+  {
+    selector: '[data-tour="entry"]',
+    title: "② 학번 · 학기",
+    body: "입학 학번과 조회할 학기를 선택하세요. 학번에 맞는 이수체계가 자동으로 적용됩니다.",
+  },
+  {
+    selector: '[data-tour="fetch"]',
+    title: "③ 조회",
+    body: "조회를 누르면 해당 학기에 개설된 모든 분반이 아래 표에 나타납니다.",
+  },
+  {
+    selector: '[data-tour="pin"]',
+    title: "④ 분반 고정 / 제외",
+    body: "표에서 ☆를 누르면 꼭 듣고 싶은 분반을 고정(★)하고, 한 번 더 누르면 제외(✕)할 수 있어요.\n고정한 분반은 시간표에 반드시 포함됩니다.",
+  },
+  {
+    selector: '[data-tour="tab-wizard"]',
+    title: "⑤ 전공 마법사",
+    body: "선택한 과목들로 가능한 모든 시간표 조합을 자동으로 만들어 줍니다. 필터를 이용해 공강 요일·교수·시간대 등으로 원하는 조합만 걸러낼 수 있어요.",
+  },
+  {
+    selector: '[data-tour="tab-gyoyang"]',
+    title: "⑥ 교양 · 교직 마법사",
+    body: "전공 조합을 전공 마법사에서 '★이 시간표로 교양 마법사 시작'으로 고정한 뒤, 남는 시간에 맞춰 교양/교직 과목을 추가로 배치합니다.",
+  },
+  {
+    selector: '[data-tour="tab-library"]',
+    title: "⑦ 라이브러리",
+    body: "완성한 시간표를 저장해 두고 나중에 다시 불러올 수 있어요.",
+  },
+  {
+    selector: '[data-tour="tab-calendar"]',
+    title: "⑧ 학사일정",
+    body: "수강신청·시험·방학 등 학사 일정을 달력으로 한눈에 확인하세요.",
+  },
+  {
+    selector: '[data-tour="tab-feedback"]',
+    title: "⑨ 피드백 · 응원",
+    body: "버그 신고, 원하는 전공 추가 요청, 기능 제안, 응원 메시지를 남길 수 있어요. 여러분의 한 마디가 큰 힘이 됩니다!",
+  },
+  {
+    selector: '[data-tour="help-btn"]',
+    title: "언제든 다시 볼 수 있어요",
+    body: "사용법이 다시 필요하면 오른쪽 위 '💡 사용법' 버튼을 누르세요. 그럼 즐거운 수강신청 되세요! 🎉",
+  },
+];
 
 type Row = {
   grade: string;
@@ -47,11 +101,20 @@ export default function Home() {
   const [gyoyangDirectConfirm, setGyoyangDirectConfirm] = useState(false);
   const [semWarnConfirm, setSemWarnConfirm] = useState(false);
   const [semWarnSeen, setSemWarnSeen] = useState(false);
+  const [runTour, setRunTour] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem("theme");
     setDarkMode(stored === "dark");
+    // 첫 방문 시 사용법 투어 자동 실행
+    if (!localStorage.getItem("tourSeen")) {
+      setTab("search");
+      setRunTour(true);
+    }
   }, []);
+
+  const startTour = () => { setTab("search"); setRunTour(true); };
+  const closeTour = () => { setRunTour(false); localStorage.setItem("tourSeen", "1"); };
 
   const toggleDark = () => {
     const next = !darkMode;
@@ -401,6 +464,13 @@ export default function Home() {
           <circle cx="16" cy="16" r="1.1" fill="#ffd700"/>
         </svg>
         <h1 className="text-base font-bold text-gray-800">경북대학교 시간표 마법사</h1>
+        <button
+          data-tour="help-btn"
+          onClick={startTour}
+          className="ml-auto flex items-center gap-1 text-sm text-indigo-600 border border-indigo-200 rounded-lg px-3 py-1 hover:bg-indigo-50 transition-colors shrink-0"
+        >
+          <span>💡</span> 사용법
+        </button>
       </header>
 
       {/* Tabs */}
@@ -413,7 +483,7 @@ export default function Home() {
           { key: "library", label: "라이브러리" },
           { key: "calendar", label: "학사일정" },
           { key: "settings", label: "설정" },
-          { key: "feedback", label: "응원/문의" },
+          { key: "feedback", label: "피드백/응원" },
         ] as const).map(({ key, label }) => {
           const disabled =
             (key === "wizard" && rows.length === 0) ||
@@ -426,6 +496,7 @@ export default function Home() {
           return (
             <button
               key={key}
+              data-tour={`tab-${key}`}
               onClick={() => { if (!disabled) setTab(key); }}
               title={disabled ? disabledTitle : undefined}
               className={`px-4 py-2 text-sm border-b-2 transition-colors ${
@@ -451,7 +522,7 @@ export default function Home() {
           <div className="flex flex-col flex-1 overflow-hidden p-4 gap-3">
             <div className="flex items-center gap-3 flex-wrap" onKeyDown={(e) => { if (e.key === "Enter" && !loading && courses.length > 0) { if (rows.length > 0) { setRefetchConfirm(true); return; } if (SEM_WARN_ACTIVE && !semWarnSeen) { setSemWarnConfirm(true); return; } doFetch(); } }}>
               {/* 전공 드롭다운 (검색 가능) */}
-              <div ref={majorDropRef} className="relative">
+              <div ref={majorDropRef} className="relative" data-tour="major">
                 <button
                   type="button"
                   disabled={loading}
@@ -494,7 +565,7 @@ export default function Home() {
                                 onClick={() => { setMajorDropOpen(false); setMajorSearch(""); setTab("feedback"); }}
                                 className="text-xs px-3 py-1.5 bg-indigo-50 text-indigo-600 border border-indigo-200 rounded-lg hover:bg-indigo-100 transition-colors"
                               >
-                                응원/문의에서 추가 요청하기 →
+                                피드백/응원에서 추가 요청하기 →
                               </button>
                             </div>
                           );
@@ -599,6 +670,7 @@ export default function Home() {
 
               {/* 입학연도 드롭다운 */}
               <select
+                data-tour="entry"
                 className="border border-gray-300 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-400"
                 value={entryYear}
                 onChange={(e) => { setEntryYear(Number(e.target.value)); setRows([]); setStatusText(""); }}
@@ -636,6 +708,7 @@ export default function Home() {
                 onMouseLeave={() => setShowMajor2Tip(false)}
               >
                 <button
+                  data-tour="fetch"
                   onClick={() => {
                     if (rows.length > 0) { setRefetchConfirm(true); return; }
                     if (SEM_WARN_ACTIVE && !semWarnSeen) { setSemWarnConfirm(true); return; }
@@ -696,7 +769,7 @@ export default function Home() {
               <table className="text-sm w-full border-collapse min-w-max">
                 <thead className="sticky top-0 bg-gray-50 z-10">
                   <tr>
-                    <th className="px-2 py-2 border-b border-gray-200 text-gray-400 font-medium whitespace-nowrap">고정</th>
+                    <th data-tour="pin" className="px-2 py-2 border-b border-gray-200 text-gray-400 font-medium whitespace-nowrap">고정</th>
                     {COLS.map((c) => (
                       <th
                         key={c.key}
@@ -1274,7 +1347,7 @@ export default function Home() {
           )}
         </div>
 
-        {/* ── 응원/문의 탭 ── */}
+        {/* ── 피드백/응원 탭 ── */}
         {tab === "feedback" && <FeedbackTab />}
 
         {/* ── 라이브러리 탭 ── */}
@@ -1366,6 +1439,8 @@ export default function Home() {
         </div>
       )}
 
+
+      <GuideTour steps={TOUR_STEPS} run={runTour} onClose={closeTour} />
 
       <footer className="border-t border-gray-200 bg-white px-6 py-1.5 text-xs text-gray-400 flex gap-2 shrink-0">
         <span>insu0531@knu.ac.kr</span>

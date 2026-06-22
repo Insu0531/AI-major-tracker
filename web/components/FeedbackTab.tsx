@@ -69,7 +69,7 @@ export default function FeedbackTab() {
     <div className="flex-1 overflow-auto p-6 flex justify-center">
       <div className="w-full max-w-lg flex flex-col gap-5">
         <div>
-          <h2 className="text-lg font-semibold text-gray-800">응원/문의</h2>
+          <h2 className="text-lg font-semibold text-gray-800">피드백/응원</h2>
           <p className="text-xs text-gray-400 mt-0.5">버그 신고, 기능 제안, 응원 메시지를 보내주세요.</p>
         </div>
 
