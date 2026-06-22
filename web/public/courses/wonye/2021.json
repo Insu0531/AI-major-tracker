@@ -1,0 +1,236 @@
+[
+  {
+    "grade": "1",
+    "code": "HORT0422",
+    "name": "국제원예산업",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "ACHE0391",
+    "name": "기초유기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "AGRO0361",
+    "name": "식물유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DPBS0352",
+    "name": "원예과학기초실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "HORT0221",
+    "name": "원예작물 이해 및 재배 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "HORT0292",
+    "name": "원예토양비료학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "HORT0427",
+    "name": "일반식물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "AGRO0292",
+    "name": "재배학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HORT0545",
+    "name": "과수생산학총론 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0392",
+    "name": "기초생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HORT0335",
+    "name": "논문설계 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "AGRO0479",
+    "name": "식물생장조절론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGRO0491",
+    "name": "실험통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HORT0556",
+    "name": "영농창업설계 1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "HORT0557",
+    "name": "영농창업설계 2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "HORT0312",
+    "name": "원예작물생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HORT0416",
+    "name": "원예작물육종학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HORT0542",
+    "name": "채소생산학총론 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "HORT0543",
+    "name": "화훼생산학총론 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "HORT0539",
+    "name": "과수원예학각론 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "HORT0239",
+    "name": "관상식물학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DPBS0357",
+    "name": "기능성식물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HORT0237",
+    "name": "수경재배학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "HORT0548",
+    "name": "시설원예학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "HORT0423",
+    "name": "식물분자생물학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "HORT0431",
+    "name": "식물조직배양학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "HORT0558",
+    "name": "영농창업포트폴리오",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "HORT0232",
+    "name": "영농창업현장실습",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "3",
+    "code": "HORT0428",
+    "name": "원예작물수확후생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HORT0234",
+    "name": "원예종묘학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "HORT0432",
+    "name": "창업영농세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HORT0533",
+    "name": "채소원예학각론 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "HORT0231",
+    "name": "기능성물질분석학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "HORT0549",
+    "name": "농산물 마케팅 및 유통관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HORT0238",
+    "name": "식물공장학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "HORT0421",
+    "name": "식물분자육종학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HORT0451",
+    "name": "원예병해충관리 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "HORT0430",
+    "name": "원예작물생명공학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "HORT0235",
+    "name": "원예작물품질관리학 및 실습",
+    "credit": "3-2-2"
+  }
+]
