@@ -1,0 +1,206 @@
+[
+  {
+    "grade": "1",
+    "code": "BIOL0202",
+    "name": "전공 및 진로탐색",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOL0294",
+    "name": "계통 · 분류학실험",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "BIED0331",
+    "name": "동물계통학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOL0212",
+    "name": "동물해부학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0631",
+    "name": "분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOC0435",
+    "name": "생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOC0622",
+    "name": "세포생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIED0313",
+    "name": "식물계통학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOL0244",
+    "name": "식물보전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOL0291",
+    "name": "식물야외실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "BIED0532",
+    "name": "식물형태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0203",
+    "name": "유기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOL0295",
+    "name": "해부·형태학실험",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "BIED0555",
+    "name": "환경생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOL0378",
+    "name": "기관발생학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ANSC0432",
+    "name": "동물생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOL0395",
+    "name": "동물야외실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "BIOL0301",
+    "name": "발생 · 유전학실험",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "BIED0631",
+    "name": "발생학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOL0302",
+    "name": "생리 · 생태학실험",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "BIED0413",
+    "name": "생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOL0374",
+    "name": "식물발생학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIED0411",
+    "name": "식물생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOL0380",
+    "name": "식물호르몬학입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MEDI0318",
+    "name": "신경과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MBIO0403",
+    "name": "유전체학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOC0621",
+    "name": "유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOL0386",
+    "name": "조류학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIOL0461",
+    "name": "바이오캡스톤디자인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "STAT0542",
+    "name": "생물통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIOL0402",
+    "name": "생물학 연구 및 실험(종합설계)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "BIOL0497",
+    "name": "수서생물실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "4",
+    "code": "BIED0513",
+    "name": "인체생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIOL0479",
+    "name": "진화생물학",
+    "credit": "3-3-0"
+  }
+]

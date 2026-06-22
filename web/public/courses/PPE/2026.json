@@ -1,0 +1,110 @@
+[
+  {
+    "grade": "1",
+    "code": "POLI0414",
+    "name": "현대정치이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECON0312",
+    "name": "공공경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHIL0322",
+    "name": "논리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECON0613",
+    "name": "미시경제학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHIL0342",
+    "name": "윤리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "POLI0501",
+    "name": "한국 좋은 정부론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "POLI0498",
+    "name": "한국민주주의론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0642",
+    "name": "게임이론과 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHIL0344",
+    "name": "과학철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PUAD0485",
+    "name": "법경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PPEC0202",
+    "name": "시장, 국가, 그리고 정의",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLI0326",
+    "name": "정치와 법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLI0466",
+    "name": "정치제도론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PPEC0201",
+    "name": "합리적 의사결정 이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECON0563",
+    "name": "경제윤리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHIL0333",
+    "name": "법과철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PPEC0203",
+    "name": "정치 경제 철학 연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHIL0545",
+    "name": "정치사회철학",
+    "credit": "3-3-0"
+  }
+]
