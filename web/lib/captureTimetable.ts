@@ -37,6 +37,11 @@ export async function captureTimetableImage({
   try {
     // 스크롤바 제거: overflow-auto/scroll 요소를 scrollHeight/scrollWidth로 고정
     clone.querySelectorAll<HTMLElement>("*").forEach((child) => {
+      // 등장 애니메이션(block-pop 등) 중간 프레임(scale 축소)이 캡처돼 글자가 잘리는 문제 방지:
+      // 클론에서는 애니메이션/트랜지션/트랜스폼을 제거해 항상 최종 상태로 캡처
+      child.style.animation = "none";
+      child.style.transition = "none";
+      child.style.transform = "none";
       const cs = window.getComputedStyle(child);
       if (cs.overflowY === "auto" || cs.overflowY === "scroll") {
         child.style.height = `${child.scrollHeight}px`;

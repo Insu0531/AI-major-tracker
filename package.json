@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "dev": "npm --prefix web run dev",
+    "build": "npm --prefix web run build",
+    "start": "npm --prefix web run start",
+    "lint": "npm --prefix web run lint"
+  },
   "dependencies": {
     "@vercel/analytics": "^2.0.1"
   }

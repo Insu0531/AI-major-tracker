@@ -30,7 +30,8 @@ export function applyProfPicks(combo: Section[], picks: Map<string, string>): Se
     const picked = picks.get(sec.name);
     if (!picked || sec.profs.length <= 1) return sec;
     const crseNo = sec.profToCrseNo?.[picked] ?? sec.crseNo;
-    return { ...sec, profs: [picked], crseNo };
+    const location = sec.profToLocation?.[picked] ?? sec.location;
+    return { ...sec, profs: [picked], crseNo, location };
   });
 }
 

@@ -60,6 +60,7 @@ export type Section = {
   crseNo: string;
   location: string;
   profToCrseNo?: Record<string, string>;
+  profToLocation?: Record<string, string>;
 };
 
 export type SectionGroup = Section[];
@@ -99,12 +100,14 @@ export function buildSectionGroups(
           crseNo: row.crseNo,
           location: row.location ?? "",
           profToCrseNo: { [row.prof]: row.crseNo },
+          profToLocation: { [row.prof]: row.location ?? "" },
         });
       } else {
         const sec = slotMap.get(key)!;
         if (!sec.profs.includes(row.prof)) {
           sec.profs.push(row.prof);
           if (sec.profToCrseNo) sec.profToCrseNo[row.prof] = row.crseNo;
+          if (sec.profToLocation) sec.profToLocation[row.prof] = row.location ?? "";
         }
       }
     }

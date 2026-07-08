@@ -9,7 +9,7 @@ const redis = new Redis({
   token: process.env.KV_REST_API_TOKEN!,
 });
 
-const CACHE_TTL = 60 * 60 * 24 * 180; // 6개월
+const CACHE_TTL = 60 * 60 * 6; // 6시간
 
 const KNU_API =
   "https://knuin.knu.ac.kr/public/web/stddm/lsspr/syllabus/lectPlnInqr/selectListLectPlnInqr";
@@ -101,7 +101,7 @@ export async function GET(req: NextRequest) {
     );
   }
 
-  const cacheKey = `sections:v4:${majorParam}:${entryYear}:${sem}`;
+  const cacheKey = `sections:v5:${majorParam}:${entryYear}:${sem}`;
 
   try {
     const cached = await redis.get<object[]>(cacheKey);

@@ -430,6 +430,38 @@ export default function Home() {
     };
   };
 
+  // 전공 마법사 모든 조합 이미지 저장 (교수 선택 없이 현재 표시 그대로 일괄 저장)
+  const saveAllWizardImages = async () => {
+    if (!wizardCaptureRef.current || filteredCombos.length === 0) return;
+    if (filteredCombos.length > 20 &&
+      !window.confirm(`${filteredCombos.length}개의 시간표를 모두 이미지로 저장합니다. 계속할까요?`)) return;
+    setWizardSaving(true);
+    try {
+      const termLabel = semTerm === "s" ? "여름계절" : semTerm === "w" ? "겨울계절" : `${semTerm}학기`;
+      const prefix = MAJOR_LABELS[major] ? `${MAJOR_LABELS[major]} ` : "";
+      const pad = String(filteredCombos.length).length;
+      for (let i = 0; i < filteredCombos.length; i++) {
+        const combo = filteredCombos[i];
+        setWizardCaptureCombo(combo);
+        setWizardCaptureNoTime(noTimeSections);
+        await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+        if (!wizardCaptureRef.current) break;
+        await captureTimetableImage({
+          el: wizardCaptureRef.current,
+          combo,
+          fileName: `${prefix}${semYear}년 ${termLabel} 전공 시간표 ${String(i + 1).padStart(pad, "0")}`,
+        });
+        // 브라우저 다중 다운로드 차단 방지용 간격
+        await new Promise((r) => setTimeout(r, 400));
+      }
+      trackSave({ event: "이미지 저장", majorLabel: MAJOR_LABELS[major], extraMajorLabels: extraMajors.map((m) => MAJOR_LABELS[m]), entryYear });
+    } finally {
+      setWizardCaptureCombo(null);
+      setWizardCaptureNoTime(null);
+      setWizardSaving(false);
+    }
+  };
+
   // 전공 마법사 라이브러리 저장
   const handleWizardLibrarySave = () => {
     const steps = [...getMultiProfSections(currentCombo), ...getMultiProfNoTimeSections(noTimeSections)];
@@ -1420,6 +1452,15 @@ export default function Home() {
                     >
                       ★ 교양 마법사 시작
                     </button>
+                    {filteredCombos.length > 1 && (
+                      <button
+                        onClick={saveAllWizardImages}
+                        disabled={wizardSaving}
+                        className="col-span-2 py-2 bg-green-700 hover:bg-green-800 disabled:opacity-50 text-white text-sm font-semibold rounded-lg transition-colors"
+                      >
+                        {wizardSaving ? "저장 중..." : `모든 시간표 이미지 저장 (${filteredCombos.length}개)`}
+                      </button>
+                    )}
                   </div>
                 </>
               ) : (
