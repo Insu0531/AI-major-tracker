@@ -157,18 +157,18 @@ export function generateCombos(selectedGroups: SectionGroup[]): Section[][] {
   const n = selectedGroups.length;
 
   // 크기별로 유효 조합 수집
-  // 크기 k의 유효 조합이 하나라도 있으면, 크기 k보다 작은 조합은 해당 과목 인덱스 집합이
-  // 크기 k 조합의 부분집합인 경우에만 제외 (다른 인덱스 조합은 독립적으로 포함)
-  const validBySize: Map<number, { idxSet: Set<number>; combo: Section[] }[]> = new Map();
+  // 크기 k의 유효 조합이 하나라도 있으면, 크기 k보다 작은 조합은 "실제 분반(crseNo) 집합"이
+  // 어떤 최대 크기 조합의 부분집합인 경우에만 제외한다.
+  // (과목 인덱스가 아니라 분반 단위로 판정 — 같은 과목이라도 최대 조합에 들어가지 못하는
+  //  다른 분반은 독립적인 경우의 수로 남겨야 하기 때문)
+  const validBySize: Map<number, Section[][]> = new Map();
 
   for (let size = n; size >= 1; size--) {
-    const found: { idxSet: Set<number>; combo: Section[] }[] = [];
+    const found: Section[][] = [];
     for (const idxSubset of combinations(n, size)) {
       const sub = idxSubset.map((i) => selectedGroups[i]);
       for (const combo of cartesian(sub)) {
-        if (!hasOverlap(combo)) {
-          found.push({ idxSet: new Set(idxSubset), combo });
-        }
+        if (!hasOverlap(combo)) found.push(combo);
       }
     }
     if (found.length > 0) validBySize.set(size, found);
@@ -180,18 +180,18 @@ export function generateCombos(selectedGroups: SectionGroup[]): Section[][] {
   const result: Section[][] = [];
 
   // 최대 크기 조합은 전부 포함
-  for (const { combo } of validBySize.get(maxSize)!) {
+  for (const combo of validBySize.get(maxSize)!) {
     result.push(combo);
   }
 
-  // 작은 크기는 최대 크기 조합의 부분집합 인덱스가 아닌 경우에만 포함
-  const maxIdxSets = validBySize.get(maxSize)!.map((v) => v.idxSet);
+  // 작은 크기는 분반 집합이 어떤 최대 크기 조합의 부분집합이 아닌 경우에만 포함
+  const maxCrseSets = validBySize.get(maxSize)!.map((c) => new Set(c.map((s) => s.crseNo)));
   for (let size = maxSize - 1; size >= 1; size--) {
     const entries = validBySize.get(size);
     if (!entries) continue;
-    for (const { idxSet, combo } of entries) {
-      const subsumed = maxIdxSets.some((maxSet) =>
-        [...idxSet].every((i) => maxSet.has(i))
+    for (const combo of entries) {
+      const subsumed = maxCrseSets.some((maxSet) =>
+        combo.every((s) => maxSet.has(s.crseNo))
       );
       if (!subsumed) result.push(combo);
     }
