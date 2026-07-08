@@ -1,0 +1,578 @@
+[
+  {
+    "grade": "1",
+    "code": "PHAR0339",
+    "name": "약학윤리",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "PHAR0211",
+    "name": "약학입문",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHAR0289",
+    "name": "물리약학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHAR0296",
+    "name": "물리약학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHAR0216",
+    "name": "약품분석학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHAR0222",
+    "name": "약품분석학 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHAR0288",
+    "name": "약품생화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHAR0295",
+    "name": "약품생화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHAR0341",
+    "name": "약학기초실험 1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "PHAR0343",
+    "name": "약학기초실험 2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "PHAR0221",
+    "name": "약학통계",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHAR0340",
+    "name": "약화학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHAR0342",
+    "name": "약화학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHAR0286",
+    "name": "인체해부생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHAR0231",
+    "name": "천연물약품학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GENE0612",
+    "name": "면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHAR0232",
+    "name": "보건의료제도론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHAR0209",
+    "name": "생약학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHAR0292",
+    "name": "생약학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHAR0229",
+    "name": "약제학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHAR0236",
+    "name": "약제학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHAR0360",
+    "name": "약품기기분석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHAR0287",
+    "name": "약품미생물학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHAR0290",
+    "name": "약품미생물학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHAR0224",
+    "name": "약품제조화학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHAR0227",
+    "name": "약품제조화학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHAR0344",
+    "name": "약학기초실험 3",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "PHAR0345",
+    "name": "약학기초실험 4",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "PHAR0210",
+    "name": "예방약학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHAR0293",
+    "name": "예방약학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIOT0471",
+    "name": "독성학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHAR0208",
+    "name": "병태생리학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHAR0291",
+    "name": "병태생리학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHAR0230",
+    "name": "약동학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHAR0362",
+    "name": "약리학1 (약학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHAR0363",
+    "name": "약리학2 (약학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHAR0332",
+    "name": "약무행정과 경영관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHAR0294",
+    "name": "약전및의약품품질관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHAR0301",
+    "name": "약제학3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHAR0361",
+    "name": "약품분자생물학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHAR0346",
+    "name": "약학융합실험 1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "PHAR0348",
+    "name": "약학융합실험 2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "PHAR0305",
+    "name": "의약화학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHAR0297",
+    "name": "의약화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHAR0238",
+    "name": "임상약학 개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHAR0347",
+    "name": "한약제제학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHAR0302",
+    "name": "한약학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0252",
+    "name": "건강기능식품학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0298",
+    "name": "기초약무실습",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0256",
+    "name": "나노약과학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0364",
+    "name": "내분비약리학(약학)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0329",
+    "name": "동물약품학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0328",
+    "name": "무기방사성의약품학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0349",
+    "name": "바이오의약품학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0270",
+    "name": "사회행태약학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0312",
+    "name": "생물리약학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0254",
+    "name": "생약제제학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0315",
+    "name": "세포치료학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0307",
+    "name": "신경약학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0303",
+    "name": "약물신호전달학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0309",
+    "name": "약물역학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0367",
+    "name": "약물유전체학(약학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0246",
+    "name": "약물치료학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0247",
+    "name": "약물치료학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0271",
+    "name": "약물치료학 3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0272",
+    "name": "약물치료학 4",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0354",
+    "name": "약물치료학 PBL",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0350",
+    "name": "약사법규",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0304",
+    "name": "약품대사체학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0317",
+    "name": "약품유전체학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0266",
+    "name": "약학보건행정학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0357",
+    "name": "약학빅데이터학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0351",
+    "name": "약학융합실험 3",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0366",
+    "name": "약학융합실험 4",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0259",
+    "name": "약효와약물대사",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0330",
+    "name": "의약분자생화학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0318",
+    "name": "의약품경제성 평가",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0264",
+    "name": "의약품생물정보학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0352",
+    "name": "일반의약품개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0255",
+    "name": "임상시험설계",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0356",
+    "name": "임상실무약학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0353",
+    "name": "저분자의약품 합성학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0358",
+    "name": "저분자의약품개발론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0260",
+    "name": "제약공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0310",
+    "name": "제약산업학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0308",
+    "name": "종양치료학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0359",
+    "name": "중분자 약품화학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "PHAR0365",
+    "name": "통합 특수집단 약리학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "5",
+    "code": "MBIO0531",
+    "name": "항생물질학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "6",
+    "code": "PHAR0324",
+    "name": "심화약학실무실습 1",
+    "credit": "4-0-200(h)"
+  },
+  {
+    "grade": "6",
+    "code": "PHAR0325",
+    "name": "심화약학실무실습 2",
+    "credit": "4-0-200(h)"
+  },
+  {
+    "grade": "6",
+    "code": "PHAR0326",
+    "name": "심화약학실무실습 3",
+    "credit": "4-0-200(h)"
+  },
+  {
+    "grade": "6",
+    "code": "PHAR0320",
+    "name": "필수약학실무실습-병원 I",
+    "credit": "4-0-200(h)"
+  },
+  {
+    "grade": "6",
+    "code": "PHAR0321",
+    "name": "필수약학실무실습-병원 II",
+    "credit": "4-0-200(h)"
+  },
+  {
+    "grade": "6",
+    "code": "PHAR0323",
+    "name": "필수약학실무실습: 제약/행정",
+    "credit": "3-0-140(h)"
+  },
+  {
+    "grade": "6",
+    "code": "PHAR0322",
+    "name": "필수약학실무실습: 지역약국",
+    "credit": "4-0-200(h)"
+  }
+]
