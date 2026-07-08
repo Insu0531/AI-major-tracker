@@ -1,0 +1,248 @@
+[
+  {
+    "grade": "1",
+    "code": "ARCH0229",
+    "name": "건축구법 및 재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ARCH0226",
+    "name": "건축문화와 공간",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ARCH0267",
+    "name": "건축표현및제도",
+    "credit": "4-0-8"
+  },
+  {
+    "grade": "1",
+    "code": "ARCH0219",
+    "name": "건축학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ARCH0218",
+    "name": "기초디자인",
+    "credit": "4-0-8"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0342",
+    "name": "건축계획",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0227",
+    "name": "건축과 테크놀로지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0401",
+    "name": "건축구조디자인1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0333",
+    "name": "건축구조역학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0325",
+    "name": "건축디자인1",
+    "credit": "6-3-6"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0326",
+    "name": "건축디자인2",
+    "credit": "6-3-6"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0322",
+    "name": "건축의장학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0375",
+    "name": "건축환경계획",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0344",
+    "name": "서양건축사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0402",
+    "name": "건축구조디자인2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0455",
+    "name": "건축디자인3",
+    "credit": "6-3-6"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0456",
+    "name": "건축디자인4",
+    "credit": "6-3-6"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0551",
+    "name": "건축법규",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0446",
+    "name": "건축설계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0461",
+    "name": "건축시공",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0423",
+    "name": "근대건축사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0230",
+    "name": "디지털건축디자인",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0453",
+    "name": "주거단지계획",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0422",
+    "name": "한국건축사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0403",
+    "name": "건물시스템계획",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0407",
+    "name": "건물시스템계획1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0408",
+    "name": "건물시스템계획2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0543",
+    "name": "건축디자인5",
+    "credit": "6-3-6"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0544",
+    "name": "건축디자인6",
+    "credit": "6-3-6"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0215",
+    "name": "경관과 장소성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0552",
+    "name": "도시설계및계획",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0524",
+    "name": "실내건축",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0214",
+    "name": "인공지능과 건축",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARUE0432",
+    "name": "현대건축",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0555",
+    "name": "환경친화건축",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "5",
+    "code": "ARCH0681",
+    "name": "건축디자인7",
+    "credit": "6-3-6"
+  },
+  {
+    "grade": "5",
+    "code": "ARCH0682",
+    "name": "건축디자인8",
+    "credit": "4-0-8"
+  },
+  {
+    "grade": "5",
+    "code": "ARCH0684",
+    "name": "건축설계실습",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "5",
+    "code": "ARCH0569",
+    "name": "건축실무",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "5",
+    "code": "ARCH0683",
+    "name": "역사환경보전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "5",
+    "code": "ARCH0523",
+    "name": "조경계획및설계",
+    "credit": "3-3-0"
+  }
+]
