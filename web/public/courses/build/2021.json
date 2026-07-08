@@ -1,0 +1,260 @@
+[
+  {
+    "grade": "1",
+    "code": "ARCH0221",
+    "name": "건축재료역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "COME0311",
+    "name": "확률및통계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0220",
+    "name": "건축계획 및 법규",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0336",
+    "name": "건축구법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0333",
+    "name": "건축구조역학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0332",
+    "name": "건축구조역학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0471",
+    "name": "건축설계1",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0362",
+    "name": "건축재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0318",
+    "name": "건축전산및캐드",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0375",
+    "name": "건축환경계획",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0311",
+    "name": "공업수학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0312",
+    "name": "공업수학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0211",
+    "name": "세계 속의 건축문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0217",
+    "name": "창의적 기본설계",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "2",
+    "code": "ARCH0465",
+    "name": "콘크리트공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CVLE0314",
+    "name": "강구조공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0566",
+    "name": "건설공정관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0489",
+    "name": "건설정보공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0434",
+    "name": "건축구조동역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0472",
+    "name": "건축설계2",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0462",
+    "name": "건축설비",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0461",
+    "name": "건축시공",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0469",
+    "name": "건축시공설계",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0486",
+    "name": "건축전기및조명",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0452",
+    "name": "수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0518",
+    "name": "열유체공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0454",
+    "name": "철근콘크리트구조해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0212",
+    "name": "철근콘크리트캡스톤디자인",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "3",
+    "code": "ARCH0482",
+    "name": "현장인턴쉽교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0535",
+    "name": "강구조설계",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0458",
+    "name": "건물공조및에너지공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0562",
+    "name": "건설관리및경제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0568",
+    "name": "건축견적 및 입찰",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0213",
+    "name": "건축물인증 및 평가",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0468",
+    "name": "건축설비설계",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0466",
+    "name": "건축재료및구조실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0512",
+    "name": "그린리모델링실무",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0576",
+    "name": "생태환경시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0583",
+    "name": "졸업논문1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0584",
+    "name": "졸업논문2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0475",
+    "name": "종합설계",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0563",
+    "name": "토질및기초공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARCH0574",
+    "name": "환경과감성",
+    "credit": "3-3-0"
+  }
+]
