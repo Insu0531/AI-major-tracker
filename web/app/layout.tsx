@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import KakaoInit from "@/components/KakaoInit";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ export default function RootLayout({
           } catch(e) {}
         ` }} />
       </head>
-      <body className="min-h-full flex flex-col">{children}<Analytics /></body>
+      <body className="min-h-full flex flex-col">{children}<Analytics /><KakaoInit /></body>
     </html>
   );
 }

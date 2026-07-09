@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { buildSectionGroups, generateCombos, parseTimes, Section, SectionGroup, TimeSlot, NoTimeSection } from "@/lib/timetable";
 import { captureTimetableImage } from "@/lib/captureTimetable";
 import SugangLink from "@/components/SugangLink";
+import KakaoShareButton from "@/components/KakaoShareButton";
 import TimetableGrid from "@/components/TimetableGrid";
 import ProfPickerModal, { ProfStep, getMultiProfSections, applyProfPicks, getMultiProfNoTimeSections, applyProfPicksNoTime } from "@/components/ProfPickerModal";
 import GYOYANG_LIST from "@/lib/gyoyang.json";
@@ -696,7 +697,10 @@ export default function GyoyangWizard({ pinnedCombo, pinnedNoTimeSections, initi
               })}
             </div>
             <div className="px-6 py-4 border-t border-gray-100 shrink-0 flex flex-col gap-2">
-              <SugangLink />
+              <div className="flex gap-2">
+                <div className="flex-1"><SugangLink /></div>
+                <KakaoShareButton className="flex-1 justify-center py-2.5" />
+              </div>
               <p className="text-xs text-gray-400 text-center">실수로 닫아도 수강신청하기 버튼으로 다시 볼 수 있어요.</p>
               {onFeedbackClick && (
                 <p className="text-xs text-center">
