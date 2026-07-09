@@ -1,7 +1,7 @@
 "use client";
 
 import { Section } from "@/lib/timetable";
-import { useRef, useState, useEffect, forwardRef } from "react";
+import { useRef, useState, useEffect, useLayoutEffect, forwardRef } from "react";
 
 const DAY_LABELS = ["월", "화", "수", "목", "금"];
 const START_H = 9;
@@ -61,6 +61,44 @@ function comboToBlocks(combo: Section[]): Block[] {
 // 모바일 세로에서도 읽을 수 있는 최소 열 너비
 const MIN_COL_W = 52;
 const LABEL_W = 36;
+
+// 블럭 안 글자가 넘치면 다 보이도록 자동으로 폰트를 축소(스케일)하는 래퍼.
+// scrollHeight는 transform의 영향을 받지 않으므로, 매번 "실제 크기 기준" 높이를 그대로 잴 수 있다.
+const MIN_FIT_SCALE = 0.55;
+
+function FitBlockLabel({
+  height,
+  children,
+  deps,
+}: {
+  height: number;
+  children: React.ReactNode;
+  deps: unknown[];
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(1);
+
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const fit = () => {
+      const natural = el.scrollHeight;
+      if (natural <= 0) return;
+      setScale(Math.max(MIN_FIT_SCALE, Math.min(1, height / natural)));
+    };
+    fit();
+    const ro = new ResizeObserver(fit);
+    ro.observe(el);
+    return () => ro.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [height, ...deps]);
+
+  return (
+    <div ref={ref} data-autofit className="w-full" style={{ transform: `scale(${scale})`, transformOrigin: "top left" }}>
+      {children}
+    </div>
+  );
+}
 
 const TimetableGrid = forwardRef<HTMLDivElement, { combo: Section[] }>(function TimetableGrid({ combo }, ref) {
   const [tooltip, setTooltip] = useState<{ x: number; y: number; text: string } | null>(null);
@@ -154,17 +192,19 @@ const TimetableGrid = forwardRef<HTMLDivElement, { combo: Section[] }>(function 
                 }}
                 onMouseLeave={() => setTooltip(null)}
               >
-                <p className="text-white text-xs font-semibold leading-tight px-1 pt-0.5 break-keep" style={{ WebkitFontSmoothing: "antialiased" }}>
-                  {shortName}
-                </p>
-                <p className="text-white text-[11px] font-semibold px-1 break-keep opacity-90" style={{ WebkitFontSmoothing: "antialiased" }}>
-                  {profs.length > 1 ? `(${profs.length}개 분반)` : profs[0]}
-                </p>
-                {profs.length === 1 && b.location && b.location.split("\n").map((line, i) => (
-                  <p key={i} className="text-white text-[10px] font-semibold px-1 break-all opacity-75 leading-tight" style={{ WebkitFontSmoothing: "antialiased" }}>
-                    {line.replace(/^(산격동 캠퍼스|상주캠퍼스|동인동 캠퍼스)\s*/, "")}
+                <FitBlockLabel height={height - 2} deps={[b.name, b.prof, b.location]}>
+                  <p className="text-white text-xs font-semibold leading-tight px-1 pt-0.5 break-keep break-words" style={{ WebkitFontSmoothing: "antialiased" }}>
+                    {shortName}
                   </p>
-                ))}
+                  <p className="text-white text-[11px] font-semibold px-1 break-keep break-words opacity-90" style={{ WebkitFontSmoothing: "antialiased" }}>
+                    {profs.length > 1 ? `(${profs.length}개 분반)` : profs[0]}
+                  </p>
+                  {profs.length === 1 && b.location && b.location.split("\n").map((line, i) => (
+                    <p key={i} className="text-white text-[10px] font-semibold px-1 break-all opacity-75 leading-tight" style={{ WebkitFontSmoothing: "antialiased" }}>
+                      {line.replace(/^(산격동 캠퍼스|상주캠퍼스|동인동 캠퍼스)\s*/, "")}
+                    </p>
+                  ))}
+                </FitBlockLabel>
               </div>
             );
           })}
