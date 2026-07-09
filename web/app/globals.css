@@ -199,3 +199,14 @@ body {
 .block-pop {
   animation: blockPop 0.3s ease;
 }
+
+/* 상단 공지사항 전광판 */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  width: max-content;
+  animation: marquee 18s linear infinite;
+}
