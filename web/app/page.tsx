@@ -18,53 +18,23 @@ import { saveTimetable } from "@/lib/timetableStorage";
 
 const TOUR_STEPS: TourStep[] = [
   {
-    selector: '[data-tour="major"]',
-    title: "① 전공 선택",
-    body: "먼저 본인 전공을 고르세요. 검색으로 빠르게 찾을 수 있고, 옆에서 복수전공도 최대 3개까지 추가할 수 있어요.\n 상주캠퍼스는 [상주], 대학원은 [대학원]으로 검색할 수 있어요.",
-  },
-  {
-    selector: '[data-tour="entry"]',
-    title: "② 학번 · 학기",
-    body: "입학 학번과 조회할 학기를 선택하세요. 학번에 맞는 이수체계가 자동으로 적용됩니다.",
-  },
-  {
-    selector: '[data-tour="fetch"]',
-    title: "③ 조회",
-    body: "조회를 누르면 해당 학기에 개설된 모든 분반이 아래 표에 나타납니다.",
+    selector: '[data-tour="search-controls"]',
+    title: "① 전공 · 학번 · 조회",
+    body: "• 전공: 검색으로 빠르게 찾을 수 있고, 복수전공도 최대 3개까지 추가할 수 있어요. 상주캠퍼스는 [상주], 대학원은 [대학원]으로 검색하세요.\n• 학번 · 학기: 입학 학번과 조회할 학기를 선택하세요. 학번에 맞는 이수체계가 자동으로 적용됩니다.\n• 조회: 누르면 해당 학기에 개설된 모든 분반이 아래 표에 나타납니다.",
   },
   {
     selector: '[data-tour="pin"]',
-    title: "④ 분반 고정 / 제외",
+    title: "② 분반 고정 / 제외",
     body: "표에서 ☆를 누르면 꼭 듣고 싶은 분반을 고정(★)하고, 한 번 더 누르면 제외(✕)할 수 있어요.\n고정한 분반은 시간표에 반드시 포함됩니다.",
   },
   {
-    selector: '[data-tour="tab-wizard"]',
-    title: "⑤ 전공 마법사",
-    body: "선택한 과목들로 가능한 모든 시간표 조합을 자동으로 만들어 줍니다. 필터를 이용해 공강 요일·교수·시간대 등으로 원하는 조합만 걸러낼 수 있어요.",
-  },
-  {
-    selector: '[data-tour="tab-gyoyang"]',
-    title: "⑥ 교양 · 교직 마법사",
-    body: "전공 조합을 전공 마법사에서 '★교양 마법사 시작'으로 고정한 뒤, 남는 시간에 맞춰 교양/교직 과목을 추가로 배치합니다.",
-  },
-  {
-    selector: '[data-tour="tab-library"]',
-    title: "⑦ 라이브러리",
-    body: "완성한 시간표를 저장해 두고 나중에 다시 볼 수 있어요.",
-  },
-  {
-    selector: '[data-tour="tab-calendar"]',
-    title: "⑧ 학사일정",
-    body: "수강신청·시험·방학 등 학사 일정을 달력으로 한눈에 확인하세요.",
-  },
-  {
-    selector: '[data-tour="tab-feedback"]',
-    title: "⑨ 피드백 · 응원",
-    body: "버그 신고, 원하는 전공 추가 요청, 기능 제안, 응원 메시지를 남길 수 있어요.",
+    selector: '[data-tour="tabs"]',
+    title: "③ 탭 둘러보기",
+    body: "• 전공 마법사: 선택한 과목들로 가능한 모든 시간표 조합을 자동으로 만들고, 필터로 원하는 조합만 걸러낼 수 있어요.\n• 교양 · 교직 마법사: 전공 조합을 '★교양 마법사 시작'으로 고정한 뒤, 남는 시간에 교양/교직 과목을 추가 배치합니다.\n• 라이브러리: 완성한 시간표를 저장해 두고 나중에 다시 볼 수 있어요.\n• 학사일정: 수강신청·시험·방학 등 학사 일정을 달력으로 확인하세요.\n• 피드백 · 응원: 버그 신고, 전공 추가 요청, 기능 제안, 응원 메시지를 남길 수 있어요.",
   },
   {
     selector: '[data-tour="help-btn"]',
-    title: "언제든 다시 볼 수 있어요",
+    title: "④ 언제든 다시 볼 수 있어요",
     body: "사용법이 다시 필요하면 이 '💡 사용법' 버튼을 누르세요.",
   },
 ];
@@ -599,7 +569,7 @@ export default function Home() {
       </header>
 
       {/* Tabs */}
-      <div className="bg-white border-b border-gray-200 px-6 flex shrink-0">
+      <div className="bg-white border-b border-gray-200 px-6 flex shrink-0" data-tour="tabs">
         {([
           { key: "search", label: "전공 조회" },
           { key: "wizard", label: "전공 마법사" },
@@ -645,7 +615,7 @@ export default function Home() {
         {/* ── 과목 조회 탭 ── */}
         {tab === "search" && (
           <div className="flex flex-col flex-1 overflow-hidden p-4 gap-3">
-            <div className="flex items-center gap-3 flex-wrap" onKeyDown={(e) => { if (e.key === "Enter" && !loading && courses.length > 0) { if (rows.length > 0) { setRefetchConfirm(true); return; } if (SEM_WARN_ACTIVE && !semWarnSeen) { setSemWarnConfirm(true); return; } doFetch(); } }}>
+            <div className="flex items-center gap-3 flex-wrap" data-tour="search-controls" onKeyDown={(e) => { if (e.key === "Enter" && !loading && courses.length > 0) { if (rows.length > 0) { setRefetchConfirm(true); return; } if (SEM_WARN_ACTIVE && !semWarnSeen) { setSemWarnConfirm(true); return; } doFetch(); } }}>
               {/* 전공 드롭다운 (검색 가능) */}
               <div ref={majorDropRef} className="relative" data-tour="major">
                 <button
