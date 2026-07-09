@@ -12,9 +12,13 @@ import FeedbackTab from "@/components/FeedbackTab";
 import LibraryTab from "@/components/LibraryTab";
 import AcademicCalendarTab from "@/components/AcademicCalendarTab";
 import GuideTour, { TourStep } from "@/components/GuideTour";
+import NoticeTicker from "@/components/NoticeTicker";
 import SugangLink from "@/components/SugangLink";
 import { trackSave } from "@/lib/trackSave";
 import { saveTimetable } from "@/lib/timetableStorage";
+
+const NOTICE_TEXT =
+  "📢 에브리타임에 올린 홍보 글이 '유사 서비스 홍보 금지' 정책으로 삭제되었어요 😥 이 서비스가 도움이 되셨다면 주변 친구들에게 꼭 알려주세요! 여러분의 홍보가 큰 힘이 됩니다 🙏";
 
 const TOUR_STEPS: TourStep[] = [
   {
@@ -544,6 +548,7 @@ export default function Home() {
   const filteredProfs = profSearch ? profsInCombos.filter((p) => p.includes(profSearch)) : profsInCombos;
   return (
     <div className="h-screen flex flex-col bg-gray-50 overflow-hidden">
+      <NoticeTicker text={NOTICE_TEXT} />
       {/* Header */}
       <header className="bg-white border-b border-gray-100 shadow-sm px-6 py-3 flex items-center gap-2.5 shrink-0">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-6 h-6 shrink-0">
