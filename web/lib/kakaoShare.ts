@@ -1,5 +1,5 @@
-// Vercel 프로젝트 환경변수(및 로컬 .env.local)에 NEXT_PUBLIC_KAKAO_JS_KEY로 설정
-export const KAKAO_JS_KEY = process.env.NEXT_PUBLIC_KAKAO_JS_KEY;
+// 카카오 JS 키는 REST API 키와 달리 브라우저에 노출되도록 설계된 값이라 그대로 커밋해도 안전함
+export const KAKAO_JS_KEY = "07a79b3fad293703357001660a68ce13";
 
 // 실제 배포 도메인과 다르면 이 상수만 수정
 export const SITE_URL = "https://knu-class-wizard.vercel.app";
