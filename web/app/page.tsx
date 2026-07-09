@@ -14,6 +14,7 @@ import AcademicCalendarTab from "@/components/AcademicCalendarTab";
 import GuideTour, { TourStep } from "@/components/GuideTour";
 import NoticeTicker from "@/components/NoticeTicker";
 import SugangLink from "@/components/SugangLink";
+import KakaoShareButton from "@/components/KakaoShareButton";
 import { trackSave } from "@/lib/trackSave";
 import { saveTimetable } from "@/lib/timetableStorage";
 
@@ -564,6 +565,7 @@ export default function Home() {
           <circle cx="16" cy="16" r="1.1" fill="#ffd700"/>
         </svg>
         <h1 className="text-base font-bold text-gray-800">경북대학교 시간표 마법사</h1>
+        <KakaoShareButton />
         <button
           data-tour="help-btn"
           onClick={startTour}
@@ -1663,7 +1665,10 @@ export default function Home() {
               })}
             </div>
             <div className="px-6 py-4 border-t border-gray-100 shrink-0 flex flex-col gap-2">
-              <SugangLink />
+              <div className="flex gap-2">
+                <div className="flex-1"><SugangLink /></div>
+                <KakaoShareButton className="flex-1 justify-center py-2.5" />
+              </div>
               <p className="text-xs text-gray-400 text-center">
                 도움이 됐다면{" "}
                 <button onClick={() => { setWizardRegModal(null); setTab("feedback"); }} className="text-indigo-500 hover:text-indigo-600 underline">피드백/응원 남기기 →</button>
