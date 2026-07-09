@@ -21,7 +21,7 @@ export function shareToKakao() {
   if (!kakao?.isInitialized?.()) return;
   kakao.Share.sendDefault({
     objectType: "text",
-    text: "전공 시간표 짜느라 매 학기 고생하셨나요? 경북대학교 시간표 마법사로 전공 조합을 자동으로 만들고, 마음에 드는 시간표를 골라 저장까지 한 번에 끝내보세요.",
+    text: "경북대학교 시간표 마법사\n\n전공, 교양 조합을 자동으로 만들고,\n마음에 드는 시간표를 저장할 수 있어요.",
     link: { mobileWebUrl: SITE_URL, webUrl: SITE_URL },
   });
 }
