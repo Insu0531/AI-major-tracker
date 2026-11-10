@@ -1,0 +1,38 @@
+[
+  {
+    "grade": "1",
+    "code": "MGMT0209",
+    "name": "경영수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ECON0211",
+    "name": "경제원론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ECON0212",
+    "name": "경제원론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ECON0645",
+    "name": "경제통상통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ECON0204",
+    "name": "무역학원론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "MGMT0227",
+    "name": "회계의이해",
+    "credit": "3-3-0"
+  }
+]

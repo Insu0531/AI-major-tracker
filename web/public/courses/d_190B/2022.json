@@ -1,0 +1,200 @@
+[
+  {
+    "grade": "1",
+    "code": "HOED0375",
+    "name": "가정생활문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "HOED0403",
+    "name": "아동학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DENT0491",
+    "name": "영양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HOED0405",
+    "name": "건설기술",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "TCHR0466",
+    "name": "기술 논리 및 논술지도",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "TCHR0695",
+    "name": "기술교재연구및지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HOED0408",
+    "name": "생명기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HOED0254",
+    "name": "생애발달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HOED0406",
+    "name": "수송기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HOED0413",
+    "name": "식품과조리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HOED0401",
+    "name": "의복디자인과구성",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "HOED0350",
+    "name": "의복소재 및 환경지도",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "HOED0404",
+    "name": "제조기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HOED0241",
+    "name": "주거학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "HOED0367",
+    "name": "가족자원관리교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHFA0231",
+    "name": "가족학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HOED0223",
+    "name": "디자인과 교육(캡스톤디자인)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "HOED0371",
+    "name": "생리학및임상영양",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "HOED0365",
+    "name": "소비자학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HOED0357",
+    "name": "식품가공저장및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "HOED0344",
+    "name": "실내디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "HOED0345",
+    "name": "실내디자인지도",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "HOED0423",
+    "name": "의복설계 및 제작실무(캡스톤디자인)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "HOED0407",
+    "name": "통신기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HOED0374",
+    "name": "가정생활과복지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HOED0376",
+    "name": "가정생활과진로",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HOED0415",
+    "name": "가족생활설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HOED0422",
+    "name": "부모교육 프로그램 개발과 평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HOED0419",
+    "name": "생활기기관리및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "HOED0421",
+    "name": "에너지기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HOED0412",
+    "name": "인터넷기술이론및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "HOED0411",
+    "name": "정보기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HOED0410",
+    "name": "컴퓨터기술",
+    "credit": "3-3-0"
+  }
+]

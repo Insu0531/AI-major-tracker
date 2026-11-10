@@ -1,0 +1,110 @@
+[
+  {
+    "grade": "1",
+    "code": "PSYC0218",
+    "name": "심리통계 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "PSYC0355",
+    "name": "인지신경과학의 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ITEC0201",
+    "name": "컴퓨터학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "COMP0453",
+    "name": "컴퓨팅사고와 SW코딩",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ITEC0419",
+    "name": "데이터과학기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PSYC0220",
+    "name": "심리설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0324",
+    "name": "인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CGSC0201",
+    "name": "인지과학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COME0331",
+    "name": "자료구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PSYC0442",
+    "name": "고급인지신경과학 및 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ITEC0417",
+    "name": "기계학습개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PSYC0224",
+    "name": "심리측정 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CGSC0203",
+    "name": "인지과학논문강독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CGSC0202",
+    "name": "인지과학자료분석",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "PSYC0598",
+    "name": "인지심리학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "PSYC0492",
+    "name": "고급심리통계 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CGSC0204",
+    "name": "인지과학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PSYC0225",
+    "name": "창의성과 문제해결",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,200 @@
+[
+  {
+    "grade": "1",
+    "code": "ENGR0311",
+    "name": "공학물리실험 I",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "ENGR0312",
+    "name": "공학물리실험 II",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "MECH0223",
+    "name": "정역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACEN0351",
+    "name": "건설재료학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ACEN0211",
+    "name": "공업수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACEN0230",
+    "name": "농업생산기반조성개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACEN0280",
+    "name": "농업지형설계프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ACEN0269",
+    "name": "농업토목기초설계",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "2",
+    "code": "ACEN0339",
+    "name": "수리학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0332",
+    "name": "유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACEN0331",
+    "name": "재료역학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACEN0332",
+    "name": "재료역학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CVLE0403",
+    "name": "구조역학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CVLE0410",
+    "name": "구조역학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ACEN0546",
+    "name": "농촌상하수도공학및설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ACEN0456",
+    "name": "보강콘크리트공학 및 설계Ⅰ",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ACEN0457",
+    "name": "보강콘크리트공학 및 설계Ⅱ",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ACEN0422",
+    "name": "응용수문학 및 설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AGRO0292",
+    "name": "재배학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ACEN0415",
+    "name": "저수지공학및설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ACEN0423",
+    "name": "지반공학 및 실험1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ACEN0424",
+    "name": "지반공학 및 실험2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ACEN0262",
+    "name": "측량정보공학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ACEN0347",
+    "name": "관개배수공학및설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ACEN0338",
+    "name": "기초공학 및 설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ACEN0467",
+    "name": "농업시설공학 및 설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ACEN0375",
+    "name": "농업토목시스템공학및설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ACEN0561",
+    "name": "농업토목종합설계",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "4",
+    "code": "ACEN0518",
+    "name": "농지공학 및 설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ACEN0527",
+    "name": "도로교통공학 및 설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ACEN0435",
+    "name": "생물환경조절공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ACEN0348",
+    "name": "수자원방재공학 및 설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ACEN0571",
+    "name": "토목시공학의 이해 및 실무",
+    "credit": "3-3-0"
+  }
+]

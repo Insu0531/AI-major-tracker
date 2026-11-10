@@ -1,0 +1,32 @@
+[
+  {
+    "grade": "1",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "COME0301",
+    "name": "이산수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "COMP0454",
+    "name": "인공지능수학기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ITEC0201",
+    "name": "컴퓨터학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "EECS0201",
+    "name": "C프로그래밍과실습",
+    "credit": "3-2-2"
+  }
+]

@@ -1,0 +1,266 @@
+[
+  {
+    "grade": "1",
+    "code": "AGIN0280",
+    "name": "농산물전자상거래 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "AGIN0217",
+    "name": "농업기계의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "AGIN0293",
+    "name": "농업기관 견학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "AGIN0215",
+    "name": "농촌경제의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "AGIN0283",
+    "name": "선진농장체험 및 실습1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "AGIN0292",
+    "name": "선진농장체험 및 실습2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "AGIN0297",
+    "name": "작물재배 신기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGIN0287",
+    "name": "과수재배신기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGIN0284",
+    "name": "농작물 병해충 관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGIN0288",
+    "name": "농작물 영양관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGIN0235",
+    "name": "농작물 품종개량",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGIN0208",
+    "name": "농장경영 및 실습1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "AGIN0209",
+    "name": "농장경영 및 실습2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "AGIN0229",
+    "name": "동물과 가축",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGIN0281",
+    "name": "작물생산론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGIN0236",
+    "name": "기능성작물 생산 및 산업화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGIN0220",
+    "name": "농산물 수확후 관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGIN0231",
+    "name": "농업기상과 재해예방",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGIN0223",
+    "name": "농장경영 및 실습3",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AGIN0237",
+    "name": "농장경영 및 실습4",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AGIN0251",
+    "name": "농촌관광학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AGIN0286",
+    "name": "동물육종 기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGIN0302",
+    "name": "수도작 이론 및 실무",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGIN0301",
+    "name": "식물기내배양신기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOOD0328",
+    "name": "식품가공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGIN0242",
+    "name": "원예작물생장조절기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGIN0294",
+    "name": "임산학원론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGIN0232",
+    "name": "주요가축질병 및 처치",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGIN0285",
+    "name": "채소재배신기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGIN0255",
+    "name": "해외의 선진농업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGIN0245",
+    "name": "화훼조경의 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGIN0291",
+    "name": "고품질축산물 생산기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGIN0259",
+    "name": "글로벌 농업의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGIN0221",
+    "name": "농업경영의 이론과 실무",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGIN0258",
+    "name": "농업정책의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGIN0246",
+    "name": "농장경영 및 실습5",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "AGIN0304",
+    "name": "농장경영 및 실습6",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "AGIN0296",
+    "name": "농축산물브랜드화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGIN0260",
+    "name": "생명공학과 농업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGIN0261",
+    "name": "시설원예기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGIN0247",
+    "name": "식물산업 및 벤처창업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGIN0253",
+    "name": "작물 신소재 개발",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGIN0303",
+    "name": "전특작 이론 및 실무",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGIN0290",
+    "name": "친환경농업 이론",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "grade": "2",
+    "code": "INPR0201",
+    "name": "저작권의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0253",
+    "name": "전기전자일반",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "INPR0203",
+    "name": "지식재산과 e-비즈니스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "INPR0202",
+    "name": "특허권의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0520",
+    "name": "파이썬프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0327",
+    "name": "경영데이터분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMK0201",
+    "name": "융합기술특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMK0203",
+    "name": "인공지능융합개론Ⅰ",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "INPR0207",
+    "name": "지식재산 경영",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "INPR0204",
+    "name": "창업기업가치 평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "INPR0205",
+    "name": "특허명세서 일반",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0489",
+    "name": "품질 및 신뢰성공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "INPR0206",
+    "name": "IP 창업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0592",
+    "name": "공학응용인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0208",
+    "name": "기술경영론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0258",
+    "name": "기술사업화론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0211",
+    "name": "산학협동공학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "INPR0208",
+    "name": "지식재산 캡스톤",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0586",
+    "name": "최신기계공학기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0403",
+    "name": "IT지식재산권",
+    "credit": "3-3-0"
+  }
+]

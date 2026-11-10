@@ -1,0 +1,278 @@
+[
+  {
+    "grade": "2",
+    "code": "MECH0331",
+    "name": "고체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0211",
+    "name": "공학수학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGR0212",
+    "name": "공학수학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0359",
+    "name": "기계공작법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0334",
+    "name": "기계재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0356",
+    "name": "기구학및기계역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0345",
+    "name": "기초전기전자실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0225",
+    "name": "동역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0226",
+    "name": "열역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0332",
+    "name": "유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0343",
+    "name": "응용고체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0351",
+    "name": "응용열역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0341",
+    "name": "전기전자공학기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0349",
+    "name": "창의공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0354",
+    "name": "계측공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0335",
+    "name": "기계공학실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0336",
+    "name": "기계요소설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0486",
+    "name": "마이크로컨트롤러",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0358",
+    "name": "메카트로닉스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0452",
+    "name": "수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0482",
+    "name": "시스템제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0357",
+    "name": "열전달1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0424",
+    "name": "유체기계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0426",
+    "name": "응용유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0474",
+    "name": "진동공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0483",
+    "name": "창의설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0489",
+    "name": "품질 및 신뢰성공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0522",
+    "name": "CAD",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0592",
+    "name": "공학응용인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0583",
+    "name": "로봇시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0591",
+    "name": "마이크로/나노기계공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0588",
+    "name": "메카트로닉스실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0211",
+    "name": "산학협동공학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0473",
+    "name": "생산시스템개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0589",
+    "name": "샤시 및 차량동역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0575",
+    "name": "소성역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0422",
+    "name": "유한요소해석기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0574",
+    "name": "자동화설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0475",
+    "name": "정밀가공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0476",
+    "name": "제어시스템설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0587",
+    "name": "졸업과제 2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0586",
+    "name": "최신기계공학기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0585",
+    "name": "최적설계기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0531",
+    "name": "친환경배터리소재",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0478",
+    "name": "트라이볼로지개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0582",
+    "name": "피로및파괴역학",
+    "credit": "3-3-0"
+  }
+]

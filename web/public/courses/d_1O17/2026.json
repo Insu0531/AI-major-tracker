@@ -1,0 +1,110 @@
+[
+  {
+    "grade": "2",
+    "code": "ELEC0311",
+    "name": "물리전자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0245",
+    "name": "전자회로1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0243",
+    "name": "회로이론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0244",
+    "name": "회로이론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0229",
+    "name": "양자물리1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0363",
+    "name": "전자계측및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0333",
+    "name": "전자소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0246",
+    "name": "전자회로2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0421",
+    "name": "집적회로공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0431",
+    "name": "현대광학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0499",
+    "name": "반도체 및 디스플레이 물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0428",
+    "name": "반도체소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0235",
+    "name": "양자나노소자실험",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0243",
+    "name": "양자정보입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0402",
+    "name": "집적회로공정실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "9",
+    "code": "ADSE0201",
+    "name": "인공지능 첨단반도체 융합개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "ADSE0202",
+    "name": "PBL 기반 첨단 반도체  공정프로젝트",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "9",
+    "code": "ADSE0203",
+    "name": "PBL 기반 첨단 반도체 융합  프로젝트",
+    "credit": "3-2-2"
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "grade": "1",
+    "code": "SPIF0203",
+    "name": "공간데이터마이닝",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "AERO0219",
+    "name": "공간정보프로그래밍1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "SPIF0201",
+    "name": "딥러닝과 원격탐사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SPIF0202",
+    "name": "컴퓨터비전 및 패턴인식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ITEC0201",
+    "name": "컴퓨터학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "COMP0453",
+    "name": "컴퓨팅사고와 SW코딩",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "AERO0224",
+    "name": "공간정보프로그래밍2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "AERO0218",
+    "name": "디지털지도학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACEN0362",
+    "name": "응용측량학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "COME0331",
+    "name": "자료구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0217",
+    "name": "자바프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ACEN0261",
+    "name": "측량학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AERO0223",
+    "name": "공간데이터베이스론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AERO0228",
+    "name": "항공수치사진측량",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AERO0229",
+    "name": "GIS공간분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CVLE0531",
+    "name": "공간정보공학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0414",
+    "name": "컴퓨터망",
+    "credit": "3-3-0"
+  }
+]
