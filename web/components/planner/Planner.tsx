@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { ENTRY_YEAR_MIN } from "@/lib/courses";
 import { BASE_MAJORS, isSangjuLabel, loadMajors, type MajorInfo } from "@/lib/planner/majors";
 import { buildCourses, buildEngineGroups, colorAt, loadCurriculum, loadIndex, loadSnapshot, type SectionFilter } from "@/lib/planner/data";
-import { exportTimetable, type TimetableItem } from "@/lib/planner/exportImage";
+import { exportTimetable, renderTimetablePng, type TimetableItem } from "@/lib/planner/exportImage";
 import { deletePlan, loadPlans, markMigrated, readLocal, renamePlan, savePlan, writeLocal, type SavedPlan } from "@/lib/planner/storage";
 import { accountsEnabled } from "@/lib/supabase";
 import {
@@ -16,7 +16,7 @@ import { trackSave } from "@/lib/trackSave";
 import { recommendFill, type Recommendation } from "@/lib/planner/recommend";
 import { analyticsEnabled, initAnalytics, isOptedOut, setOptOut, track } from "@/lib/analytics";
 import { pickDefaultSem, recommendedSem, semLabel, sortSems } from "@/lib/planner/semester";
-import { shareToKakao } from "@/lib/kakaoShare";
+import { shareTimetableImage, shareToKakao } from "@/lib/kakaoShare";
 import GuideTour, { type TourStep } from "@/components/GuideTour";
 import AcademicCalendarTab from "@/components/AcademicCalendarTab";
 import FeedbackTab from "@/components/FeedbackTab";
@@ -61,7 +61,7 @@ type Persisted = {
 
 const INITIAL: Persisted = {
   sem: null,
-  major: null,
+  major: "ai", // 처음 방문하면 전자공학부 인공지능전공이 기본
   extras: [],
   entryYear: ENTRY_YEAR_LAST,
   cart: [],
@@ -100,6 +100,7 @@ export default function Planner() {
   const [running, setRunning] = useState(false);
   const [selIdx, setSelIdx] = useState(0);
   const [profPick, setProfPick] = useState<Record<string, string>>({});
+  const [pickFor, setPickFor] = useState<"image" | "kakao">("image");
   const [modal, setModal] = useState<null | "codes" | "save" | "saved" | "cart" | "bulk" | "friends" | "invite" | "pick">(null);
   /* ── 계정 (구글 로그인 · 보관함 동기화 · 친구) ── */
   const { session } = useSession();
@@ -360,6 +361,27 @@ export default function Planner() {
 
   const majorLabel = st.major ? labelOf(st.major) : "";
   const title = st.sem ? `${semLabel(st.sem)} 시간표` : "시간표";
+  /** 지금 시간표 이미지를 카카오톡 피드 카드로 공유 (안 되면 기본 공유 창 → 그것도 안 되면 이미지 저장) */
+  const doKakao = async () => {
+    const items = view?.items ?? [];
+    if (!items.length) return;
+    const credit = items.reduce((s, i) => s + i.credit, 0);
+    const off = ["월", "화", "수", "목", "금"].filter((_, d) => !items.some((it) => it.slots.some(([dd]) => dd === d)));
+    flash("공유할 이미지를 만드는 중이에요");
+    try {
+      const png = await renderTimetablePng(items);
+      const how = await shareTimetableImage(png, {
+        title: `${title} (${credit}학점)`,
+        description: [majorLabel, off.length ? `공강 ${off.join("·")}` : "", "KNU 시간표에서 만들었어요"].filter(Boolean).join(" · "),
+        fileName: title,
+      });
+      track("timetable_shared", { how, courses: items.length });
+      if (how === "download") { await doImage(items); flash("공유할 수 없어 이미지로 저장했어요"); }
+    } catch {
+      flash("공유하지 못했어요. 이미지 저장을 이용해 주세요");
+    }
+  };
+
   const doImage = async (items: TimetableItem[] = view?.items ?? [], t = title) => {
     if (!items.length) return;
     const credit = items.reduce((s, i) => s + i.credit, 0);
@@ -670,7 +692,8 @@ export default function Planner() {
               onSelect={setSelIdx}
               view={view}
               names={names}
-              onImage={() => (view?.items.some((i) => i.options.length > 1 && !i.decided) ? setModal("pick") : doImage())}
+              onImage={() => (view?.items.some((i) => i.options.length > 1 && !i.decided) ? (setPickFor("image"), setModal("pick")) : doImage())}
+              onKakao={() => (view?.items.some((i) => i.options.length > 1 && !i.decided) ? (setPickFor("kakao"), setModal("pick")) : doKakao())}
               onSave={() => { setSaveName(""); setModal("save"); }}
               onCodes={() => { setModal("codes"); track("codes_opened"); }}
               onBulk={results.length > 1 ? () => (results.length > 20 ? setModal("bulk") : doBulkImages()) : undefined}
@@ -689,7 +712,7 @@ export default function Planner() {
           <div className="pl-modal" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
             {modal === "pick" && view && (
               <>
-                <div className="pl-modal-head"><h3>분반 고르고 저장</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-head"><h3>{pickFor === "kakao" ? "분반 고르고 공유" : "분반 고르고 저장"}</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
                 <div className="pl-modal-body">
                   <div className="pl-hint">같은 시간에 교수님이 다른 분반이 있어요. 고르면 이미지에 교수님·강의실이 들어가요.</div>
                   {view.items.filter((i) => i.options.length > 1).map((it) => (
@@ -706,8 +729,8 @@ export default function Planner() {
                     </div>
                   ))}
                   <div style={{ display: "flex", gap: 6, marginTop: 4 }}>
-                    <button className="pl-btn" style={{ flex: 1 }} onClick={() => { setModal(null); void doImage(); }}>고르지 않고 저장</button>
-                    <button className="pl-btn primary" style={{ flex: 1 }} onClick={() => { setModal(null); void doImage(); }}>이미지 저장</button>
+                    <button className="pl-btn" style={{ flex: 1 }} onClick={() => { setModal(null); void (pickFor === "kakao" ? doKakao() : doImage()); }}>고르지 않고 {pickFor === "kakao" ? "공유" : "저장"}</button>
+                    <button className="pl-btn primary" style={{ flex: 1 }} onClick={() => { setModal(null); void (pickFor === "kakao" ? doKakao() : doImage()); }}>{pickFor === "kakao" ? "카톡 공유" : "이미지 저장"}</button>
                   </div>
                 </div>
               </>

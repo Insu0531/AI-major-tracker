@@ -19,6 +19,7 @@ export default function ResultPanel({
   view,
   names,
   onImage,
+  onKakao,
   onSave,
   onCodes,
   onBulk,
@@ -36,6 +37,7 @@ export default function ResultPanel({
   view: ResultView | null;
   names: (i: number) => string[];
   onImage: () => void;
+  onKakao: () => void;
   onSave: () => void;
   onCodes: () => void;
   onBulk?: () => void;
@@ -82,6 +84,7 @@ export default function ResultPanel({
         </div>
         <div className="pl-actions" data-tour="actions">
           <button className="pl-btn primary" onClick={onImage}>이미지 저장</button>
+          <button className="pl-btn pl-kakao" onClick={onKakao}>카톡 공유</button>
           <button className="pl-btn" onClick={onSave}>보관함에 저장</button>
           <button className="pl-btn" onClick={onCodes}>수강신청 코드</button>
           {onBulk && (
