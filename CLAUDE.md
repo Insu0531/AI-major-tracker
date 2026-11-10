@@ -284,7 +284,7 @@ SavedTimetable = { id, name, savedAt, sem: "2026-1", major, majorLabel, entryYea
 
 ### 카톡 공유 (시간표 이미지)
 - 결과 화면 [카톡 공유]: `renderTimetablePng()`(exportImage.ts, 이미지 저장과 같은 그림) → `shareTimetableImage()`(kakaoShare.ts)
-  1) Kakao SDK `Share.uploadImage`로 카카오 서버에 올리고 `sendDefault` feed 카드(제목 "2026년 2학기 시간표" · 설명 "전공 · KNU 시간표 마법사에서 만들었어요" · "나도 시간표 짜기" 버튼)
+  1) Kakao SDK `Share.uploadImage`로 카카오 서버에 올리고 `sendDefault` feed 카드(제목 "2026년 2학기 시간표" · 설명 두 줄 "전공" / "KNU 시간표 마법사에서 만들었어요" · "나도 시간표 짜기" 버튼)
   2) 실패 시 `navigator.share({files})`(휴대폰 공유 창) 3) 그것도 안 되면 이미지 다운로드.
 - 분반 미선택 과목이 있으면 이미지 저장처럼 "분반 고르고 공유" 창 먼저. 카카오 개발자 콘솔에 사이트 도메인이 등록돼 있어야 함(기존 공유 버튼과 같은 앱 키). 메뉴의 "카카오톡으로 공유"는 사이트 소개(텍스트) 공유.
 
