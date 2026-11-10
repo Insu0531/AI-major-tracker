@@ -4,7 +4,8 @@
 
 ## 1. Supabase 프로젝트 만들기
 1. https://supabase.com 가입 → **New project**
-2. Region: **Northeast Asia (Seoul)** · DB 비밀번호는 아무 강한 값(이후 거의 안 씀)
+2. Region: **Asia-Pacific** (실제 배정: Northeast Asia (Tokyo)) · DB 비밀번호는 아무 강한 값(이후 거의 안 씀)
+   - 지역이 바뀌면 `web/app/privacy/page.tsx`의 국외 이전 표도 같이 고칠 것
 3. 만들어지면 왼쪽 **SQL Editor** → 이 폴더의 `schema.sql` 내용을 통째로 붙여 넣고 **Run**
    (여러 번 실행해도 안전하다. 표 3개 · 권한 규칙 · 함수 7개가 생긴다)
 

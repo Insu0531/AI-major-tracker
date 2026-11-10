@@ -99,7 +99,7 @@ export default function PrivacyPage() {
           <table className="pl-doc-table">
             <thead><tr><th>업체</th><th>위탁 업무</th><th>이전 국가</th><th>이전 항목</th></tr></thead>
             <tbody>
-              <tr><td>Supabase Inc.</td><td>로그인, 계정·보관함·친구 데이터 저장</td><td>대한민국(서울 리전) 서버 · 미국 법인</td><td>계정, 보관함·친구 정보</td></tr>
+              <tr><td>Supabase Inc.</td><td>로그인, 계정·보관함·친구 데이터 저장</td><td>일본(도쿄 리전) 서버 · 미국 법인</td><td>계정, 보관함·친구 정보</td></tr>
               <tr><td>Google LLC</td><td>구글 계정 로그인 인증</td><td>미국</td><td>로그인 시 인증 정보</td></tr>
               <tr><td>Vercel Inc.</td><td>웹사이트 호스팅, 방문 통계</td><td>미국</td><td>접속 기록, 방문 통계</td></tr>
               <tr><td>PostHog Inc.</td><td>이용 통계 분석</td><td>EU(독일)</td><td>이용 통계 항목</td></tr>

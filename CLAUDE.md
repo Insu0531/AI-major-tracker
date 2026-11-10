@@ -266,7 +266,7 @@ SavedTimetable = { id, name, savedAt, sem: "2026-1", major, majorLabel, entryYea
 - 수집기는 내용이 같으면 파일을 다시 쓰지 않음(불필요한 커밋 방지).
 
 ### 계정 · 친구 (Supabase, 2026-11-11)
-- 설정: `supabase/README.md` (Supabase 서울 리전 + 구글 OAuth + Vercel 환경변수 `NEXT_PUBLIC_SUPABASE_URL`/`NEXT_PUBLIC_SUPABASE_ANON_KEY`). 환경변수 없으면 계정 기능 전체가 숨겨짐.
+- 설정: `supabase/README.md` (Supabase 도쿄 리전(Asia-Pacific로 생성) + 구글 OAuth + Vercel 환경변수 `NEXT_PUBLIC_SUPABASE_URL`/`NEXT_PUBLIC_SUPABASE_ANON_KEY`). 환경변수 없으면 계정 기능 전체가 숨겨짐.
 - DB: `supabase/schema.sql` — profiles(이름·초대 코드), plans(보관함, 학기별 featured 1개), friendships(양방향 2행). RLS로 내 것만, 친구 데이터는 security definer 함수로만:
   set_featured, accept_invite, remove_friend, get_friends, get_friend_timetable(강의실·분반 번호 제거), regenerate_invite, delete_account.
   로컬 PostgreSQL 16 + auth 스키마 흉내로 권한 시나리오 검증함(타인 데이터·비친구·초대코드 조작·탈퇴 cascade).
