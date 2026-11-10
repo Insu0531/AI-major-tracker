@@ -78,9 +78,9 @@ export default function CourseBrowser(p: Props) {
       <div className="pl-browse-head">
         <div className="pl-step-head">
           <h1>어떤 과목을 들을까요?</h1>
-          <p><b>필수</b>는 꼭 넣을 과목, <b>후보</b>는 시간·학점이 맞으면 넣을 과목이에요.</p>
+          <p>들을 만한 과목을 넉넉히 담아 두세요. 시간이 겹치지 않게 최대한 많이 넣은 시간표를 만들어 드려요.</p>
         </div>
-        <div className="pl-search">
+        <div className="pl-search" data-tour="search">
           <input
             className="pl-field"
             placeholder="과목명, 코드, 교수, 학과로 검색"
@@ -91,7 +91,7 @@ export default function CourseBrowser(p: Props) {
             필터{activeExtra ? ` ${activeExtra}` : ""}
           </button>
         </div>
-        <div className="pl-chips" aria-label="구분">
+        <div className="pl-chips" aria-label="구분" data-tour="cats">
           {CATS.filter((c) => (c === "major" ? p.hasMajor : c === "major2" ? p.hasExtra : true)).map((c) => (
             <button key={c} className="pl-chip" aria-pressed={cats.includes(c)} disabled={!!q.trim()} onClick={() => { setCats(toggle(cats, c)); setLimit(PAGE); }}>
               {CATEGORY_LABEL[c]}
@@ -176,7 +176,7 @@ const CourseRow = memo(function CourseRow({
 }) {
   const secs = c.sections.filter((s) => sectionAllowed(s, sectionFilter));
   const days = dayPatterns(secs.map((s) => s.slots)) || "시간 미정";
-  const setMode = (m: CartMode) => onSetMode(c.code, item?.mode === m ? null : m);
+  const toggle = () => onSetMode(c.code, item ? null : "maybe");
 
   return (
     <div className="pl-course">
@@ -193,8 +193,7 @@ const CourseRow = memo(function CourseRow({
           <div className="pl-course-meta">{days} <span className="pl-muted">· 분반 {secs.length}개 {open ? "▴" : "▾"}</span></div>
         </button>
         <div className="pl-add">
-          <button className="pl-btn sm" aria-pressed={item?.mode === "must"} onClick={() => setMode("must")} title="반드시 넣을 과목">필수</button>
-          <button className="pl-btn sm" aria-pressed={item?.mode === "maybe"} onClick={() => setMode("maybe")} title="넣을 수 있으면 넣을 과목">후보</button>
+          <button className="pl-btn sm" aria-pressed={!!item} onClick={toggle} style={{ minWidth: 64 }}>{item ? "담음 ✓" : "담기"}</button>
         </div>
       </div>
       {open && (
@@ -219,7 +218,7 @@ const CourseRow = memo(function CourseRow({
               </div>
             );
           })}
-          {!item && <div className="pl-muted pl-small">필수나 후보로 담으면 분반을 고정하거나 제외할 수 있어요.</div>}
+          {!item && <div className="pl-hint">담으면 원하는 분반만 고정하거나, 싫은 분반을 뺄 수 있어요.</div>}
         </div>
       )}
     </div>

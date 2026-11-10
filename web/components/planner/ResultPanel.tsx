@@ -20,6 +20,8 @@ export default function ResultPanel({
   onImage,
   onSave,
   onCodes,
+  onBulk,
+  bulkProgress,
   onBack,
 }: {
   response: EngineResponse | null;
@@ -32,6 +34,8 @@ export default function ResultPanel({
   onImage: () => void;
   onSave: () => void;
   onCodes: () => void;
+  onBulk?: () => void;
+  bulkProgress: number | null;
   onBack: () => void;
 }) {
   const results = response?.results ?? [];
@@ -71,10 +75,15 @@ export default function ResultPanel({
             {m.competition > 0 && <span>경쟁률 <b>{m.competition.toFixed(2)}</b></span>}
           </div>
         </div>
-        <div className="pl-actions">
+        <div className="pl-actions" data-tour="actions">
           <button className="pl-btn primary" onClick={onImage}>이미지 저장</button>
           <button className="pl-btn" onClick={onSave}>보관함에 저장</button>
           <button className="pl-btn" onClick={onCodes}>수강신청 코드</button>
+          {onBulk && (
+            <button className="pl-btn ghost" onClick={onBulk} disabled={bulkProgress !== null}>
+              {bulkProgress !== null ? `저장 중 ${bulkProgress}/${results.length}` : `전체 이미지 저장 (${results.length})`}
+            </button>
+          )}
         </div>
         {response?.truncated && (
           <div className="pl-hint">조합이 너무 많아 일부만 살펴봤어요. 학점 범위를 좁히면 더 정확해져요.</div>

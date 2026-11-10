@@ -255,3 +255,8 @@
   .pl-pop-panel { position: fixed; top: 120px; left: 12px; right: 12px; width: auto; }
   .pl-row { grid-template-columns: 1fr; }
 }
+
+/* 학사일정 · 피드백 (기존 컴포넌트를 그대로 띄우는 큰 창) */
+.pl-modal.pl-sheet { width: min(1100px, 100%); height: min(860px, 92dvh); max-height: none; }
+.pl-sheet-body { flex: 1; min-height: 0; display: flex; flex-direction: column; overflow: auto; }
+.pl-menu .pl-pop-list button, .pl-menu .pl-pop-list a { font-size: 15px; }

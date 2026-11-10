@@ -11,7 +11,7 @@ export function cartCredit(items: CartItem[], courseByCode: Map<string, Course>)
   return items.reduce((s, i) => s + (courseByCode.get(i.code)?.credit ?? 0), 0);
 }
 
-/** 담은 과목 목록 (필수/후보 전환, 빼기) */
+/** 담은 과목 목록 (빼기만. "꼭 넣기"는 3단계 조건에서) */
 export function CartList({
   cart,
   courseByCode,
@@ -23,46 +23,29 @@ export function CartList({
   onSetMode: (code: string, mode: CartMode | null) => void;
   onClear?: () => void;
 }) {
-  const must = cart.filter((i) => i.mode === "must");
-  const maybe = cart.filter((i) => i.mode === "maybe");
-
-  const item = (i: CartItem) => {
-    const course = courseByCode.get(i.code);
-    if (!course) return null;
-    const note = i.pinned ? " · 분반 고정" : i.excluded.length ? ` · ${i.excluded.length}개 분반 제외` : "";
-    return (
-      <div key={i.code} className="pl-cart-item">
-        <span className="pl-swatch" style={{ background: colorFor(i.code) }} />
-        <div className="pl-cart-name">
-          <div title={course.name}>{course.name}</div>
-          <div className="pl-hint">{course.credit}학점{note}</div>
-        </div>
-        <div className="pl-mode" role="group" aria-label="담기 방식">
-          <button aria-pressed={i.mode === "must"} onClick={() => onSetMode(i.code, "must")}>필수</button>
-          <button aria-pressed={i.mode === "maybe"} onClick={() => onSetMode(i.code, "maybe")}>후보</button>
-        </div>
-        <button className="pl-x" aria-label={`${course.name} 빼기`} onClick={() => onSetMode(i.code, null)}>×</button>
-      </div>
-    );
-  };
-
   if (cart.length === 0) {
-    return <div className="pl-empty">아직 담은 과목이 없어요.<br />목록에서 <b>필수</b>나 <b>후보</b>를 눌러 담아 보세요.</div>;
+    return <div className="pl-empty">아직 담은 과목이 없어요.<br />목록에서 <b>담기</b>를 눌러 보세요.</div>;
   }
   return (
-    <>
-      <div className="pl-cart-group">
-        <div className="pl-label">필수 {must.length}과목 · {cartCredit(must, courseByCode)}학점</div>
-        {must.length ? must.map(item) : <div className="pl-hint">반드시 넣을 과목이 없어요</div>}
-      </div>
-      <div className="pl-cart-group">
-        <div className="pl-label">후보 {maybe.length}과목</div>
-        {maybe.length ? maybe.map(item) : <div className="pl-hint">시간이 맞으면 넣을 과목이 없어요</div>}
-      </div>
-      {onClear && (
-        <div className="pl-cart-group"><button className="pl-link" onClick={onClear}>모두 비우기</button></div>
-      )}
-    </>
+    <div className="pl-cart-group">
+      <div className="pl-label">{cart.length}과목 · 최대 {cartCredit(cart, courseByCode)}학점</div>
+      {cart.map((i) => {
+        const course = courseByCode.get(i.code);
+        if (!course) return null;
+        const notes = [i.mode === "must" ? "꼭 넣기" : "", i.pinned ? "분반 고정" : "", i.excluded.length ? `${i.excluded.length}개 분반 제외` : ""].filter(Boolean);
+        return (
+          <div key={i.code} className="pl-cart-item">
+            <span className="pl-swatch" style={{ background: colorFor(i.code) }} />
+            <div className="pl-cart-name">
+              <div title={course.name}>{course.name}</div>
+              <div className="pl-hint">{[`${course.credit}학점`, ...notes].join(" · ")}</div>
+            </div>
+            <button className="pl-x" aria-label={`${course.name} 빼기`} onClick={() => onSetMode(i.code, null)}>×</button>
+          </div>
+        );
+      })}
+      {onClear && <button className="pl-link" style={{ marginTop: 8 }} onClick={onClear}>모두 비우기</button>}
+    </div>
   );
 }
 
@@ -72,11 +55,13 @@ export function ConditionsPanel({
   courseByCode,
   conditions: c,
   onConditions,
+  onSetMode,
 }: {
   cart: CartItem[];
   courseByCode: Map<string, Course>;
   conditions: Conditions;
   onConditions: (c: Conditions) => void;
+  onSetMode: (code: string, mode: CartMode | null) => void;
 }) {
   const [allProfs, setAllProfs] = useState(false);
   const set = (patch: Partial<Conditions>) => onConditions({ ...c, ...patch });
@@ -89,7 +74,23 @@ export function ConditionsPanel({
 
   return (
     <>
-      <div className="pl-cond-block">
+      <div className="pl-cond-block" data-tour="must">
+        <div className="pl-label">꼭 넣을 과목</div>
+        <div className="pl-hint" style={{ marginBottom: 8 }}>고르면 이 과목이 들어간 시간표만 보여 줘요.</div>
+        <div className="pl-chips">
+          {cart.map((i) => {
+            const course = courseByCode.get(i.code);
+            if (!course) return null;
+            return (
+              <button key={i.code} className="pl-chip" aria-pressed={i.mode === "must"} onClick={() => onSetMode(i.code, i.mode === "must" ? "maybe" : "must")}>
+                {course.name.replace(/\s*\(.*?\)\s*$/, "")}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="pl-cond-block" data-tour="sort">
         <div className="pl-label">정렬</div>
         <div className="pl-chips">
           {(Object.keys(SORT_LABEL) as SortKey[]).map((k) => (

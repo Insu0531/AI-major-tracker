@@ -5,7 +5,12 @@ import Link from "next/link";
 import { MAJOR_LABELS, ENTRY_YEAR_MIN, type Major } from "@/lib/courses";
 import { buildCourses, buildEngineGroups, colorFor, loadCurriculum, loadIndex, loadSnapshot, type SectionFilter } from "@/lib/planner/data";
 import { exportTimetable, type TimetableItem } from "@/lib/planner/exportImage";
-import { deletePlan, loadPlans, readLocal, savePlan, writeLocal, type SavedPlan } from "@/lib/planner/storage";
+import { deletePlan, loadPlans, readLocal, renamePlan, savePlan, writeLocal, type SavedPlan } from "@/lib/planner/storage";
+import { trackSave } from "@/lib/trackSave";
+import { shareToKakao } from "@/lib/kakaoShare";
+import GuideTour, { type TourStep } from "@/components/GuideTour";
+import AcademicCalendarTab from "@/components/AcademicCalendarTab";
+import FeedbackTab from "@/components/FeedbackTab";
 import { DEFAULT_CONDITIONS, type CartItem, type CartMode, type Conditions, type EngineGroup, type EngineResponse, type Slot, type Snapshot, type SnapshotIndex } from "@/lib/planner/types";
 import MajorPicker from "@/components/planner/MajorPicker";
 import CourseBrowser from "@/components/planner/CourseBrowser";
@@ -14,6 +19,18 @@ import ResultPanel, { type ResultView } from "@/components/planner/ResultPanel";
 import Timetable from "@/components/planner/Timetable";
 
 const STATE_KEY = "knu_planner_state_v1";
+const TOUR_KEY = "knu_planner_tour_v1";
+const TOUR_2: TourStep[] = [
+  { selector: '[data-tour="search"]', title: "과목 찾기", body: "과목명·코드·교수·학과로 검색하거나, 오른쪽 '필터'로 학년·학점·SDG·캠퍼스 등을 고를 수 있어요." },
+  { selector: '[data-tour="cats"]', title: "구분", body: "내 전공(학과·학번 이수체계), 교양, 교직 등으로 나눠 볼 수 있어요. 여러 개를 같이 켜도 돼요." },
+  { selector: ".pl-course", title: "담기", body: "들을 만한 과목을 넉넉히 담으세요. 과목 이름을 누르면 분반이 펼쳐지고, 원하는 분반만 고정하거나 싫은 분반을 뺄 수 있어요." },
+  { selector: '[data-tour="next"]', title: "시간표 보기", body: "담은 과목으로 시간이 겹치지 않게 최대한 많이 넣은 시간표를 만들어 드려요." },
+];
+const TOUR_3: TourStep[] = [
+  { selector: '[data-tour="must"]', title: "꼭 넣을 과목", body: "반드시 들어가야 하는 과목을 고르면 그 과목이 들어간 시간표만 보여 줘요." },
+  { selector: '[data-tour="sort"]', title: "정렬 · 조건", body: "공강 많은 순, 늦게 시작 등으로 정렬하고, 아래에서 학점·공강 요일·수업 시간·피할 교수를 정할 수 있어요." },
+  { selector: '[data-tour="actions"]', title: "저장 · 수강신청", body: "이미지로 저장하거나 보관함에 넣고, 수강신청 코드를 복사할 수 있어요. ← → 키로 시간표를 넘길 수 있어요." },
+];
 const ENTRY_YEAR_LAST = 2026; // 이수체계 데이터가 있는 마지막 학번
 const TERM_LABEL: Record<string, string> = { "1": "1학기", "2": "2학기", s: "여름학기", w: "겨울학기" };
 const fmtDate = (iso: string) => new Date(iso).toLocaleString("ko-KR", { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
@@ -65,7 +82,13 @@ export default function Planner() {
   const [running, setRunning] = useState(false);
   const [selIdx, setSelIdx] = useState(0);
   const [profPick, setProfPick] = useState<Record<string, string>>({});
-  const [modal, setModal] = useState<null | "codes" | "save" | "saved" | "cart">(null);
+  const [modal, setModal] = useState<null | "codes" | "save" | "saved" | "cart" | "bulk">(null);
+  const [sheet, setSheet] = useState<null | "calendar" | "feedback">(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [dark, setDark] = useState(() => document.documentElement.classList.contains("dark"));
+  const [tour, setTour] = useState(false);
+  const [renaming, setRenaming] = useState<{ id: string; name: string } | null>(null);
+  const [bulkProgress, setBulkProgress] = useState<number | null>(null);
   const [saveName, setSaveName] = useState("");
   const [plans, setPlans] = useState<SavedPlan[]>(loadPlans);
   const [preview, setPreview] = useState<SavedPlan | null>(null);
@@ -168,9 +191,9 @@ export default function Planner() {
 
   /* ── 선택된 결과 → 화면/이미지용 데이터 ── */
   const results = useMemo(() => shown?.results ?? [], [shown]);
-  const view: ResultView | null = useMemo(() => {
-    const r = results[selIdx];
-    if (!r) return null;
+  const itemsFor = useCallback((idx: number): ResultView["items"] => {
+    const r = results[idx];
+    if (!r) return [];
     const items: ResultView["items"] = [];
     resGroups.forEach((g, gi) => {
       const pi = r.picks[gi] ?? -1;
@@ -193,8 +216,22 @@ export default function Planner() {
         chosen: chosen.id,
       });
     });
-    return { items };
-  }, [results, selIdx, resGroups, profPick, st.conditions.excludeProfs]);
+    return items;
+  }, [results, resGroups, profPick, st.conditions.excludeProfs]);
+  const view: ResultView | null = useMemo(() => (results[selIdx] ? { items: itemsFor(selIdx) } : null), [results, selIdx, itemsFor]);
+
+  /* 3단계: ← → 키로 시간표 넘기기 */
+  useEffect(() => {
+    if (st.step !== 3 || results.length < 2) return;
+    const onKey = (e: KeyboardEvent) => {
+      const t = e.target as HTMLElement;
+      if (t.tagName === "INPUT" || t.tagName === "SELECT" || t.tagName === "TEXTAREA") return;
+      if (e.key === "ArrowRight") setSelIdx((i) => (i + 1) % results.length);
+      if (e.key === "ArrowLeft") setSelIdx((i) => (i - 1 + results.length) % results.length);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [st.step, results.length]);
 
   const names = useCallback((i: number) => resGroups.filter((_, gi) => (results[i]?.picks[gi] ?? -1) >= 0).map((g) => g.name), [resGroups, results]);
   const busySlots: Slot[] = useMemo(() => view?.items.flatMap((i) => i.slots) ?? [], [view]);
@@ -210,6 +247,38 @@ export default function Planner() {
       items,
       dark: document.documentElement.classList.contains("dark"),
     });
+    track("이미지 저장");
+  };
+
+  const track = (event: "이미지 저장" | "라이브러리 저장") =>
+    trackSave({ event, majorLabel, extraMajorLabels: st.extras.map((m) => MAJOR_LABELS[m]), entryYear: st.entryYear });
+
+  /* 모든 결과 이미지 일괄 저장 (기존 "모든 시간표 이미지 저장") */
+  const doBulkImages = async () => {
+    setModal(null);
+    const pad = String(results.length).length;
+    for (let i = 0; i < results.length; i++) {
+      setBulkProgress(i + 1);
+      const items = itemsFor(i);
+      const credit = items.reduce((s, it) => s + it.credit, 0);
+      await exportTimetable({
+        title,
+        subtitle: [majorLabel, `${credit}학점`, `${i + 1}번`].filter(Boolean).join(" · "),
+        items,
+        fileName: `${title} ${String(i + 1).padStart(pad, "0")}`,
+        dark: document.documentElement.classList.contains("dark"),
+      });
+      await new Promise((r) => setTimeout(r, 400)); // 브라우저 다중 다운로드 차단 방지
+    }
+    setBulkProgress(null);
+    track("이미지 저장");
+  };
+
+  const toggleDark = () => {
+    const next = !dark;
+    setDark(next);
+    document.documentElement.classList.toggle("dark", next);
+    try { localStorage.setItem("theme", next ? "dark" : "light"); } catch { /* 저장 실패해도 화면은 바뀜 */ }
   };
 
   const doSave = () => {
@@ -217,6 +286,7 @@ export default function Planner() {
     const name = saveName.trim() || `${title} ${plans.length + 1}`;
     const saved = savePlan({ name, sem: st.sem, items: view.items.map((i) => ({ code: i.code, name: i.name, prof: i.prof, room: i.room, credit: i.credit, slots: i.slots, color: i.color, sectionIds: i.sectionIds })) });
     if (!saved) { flash("저장 공간이 부족해요"); return; }
+    track("라이브러리 저장");
     setPlans(loadPlans());
     setModal(null);
     setSaveName("");
@@ -230,9 +300,10 @@ export default function Planner() {
   const sems = index ? Object.keys(index.semesters).sort() : [];
   const collectedAt = st.sem ? index?.semesters[st.sem]?.collectedAt : undefined;
   const step = st.step;
-  const goStep = (n: 1 | 2 | 3) => update({ step: n });
-  const mustCount = cart.filter((i) => i.mode === "must").length;
-  const mustCredit = cartCredit(cart.filter((i) => i.mode === "must"), courseByCode);
+  const goStep = (n: 1 | 2 | 3) => {
+    update({ step: n });
+    if (n === 2 && !readLocal<number>(TOUR_KEY, 0)) setTour(true);
+  };
 
   return (
     <div className="pl">
@@ -250,6 +321,24 @@ export default function Planner() {
         </nav>
         <div className="pl-top-right">
           <button className="pl-btn ghost" onClick={() => { setPlans(loadPlans()); setModal("saved"); }}>보관함{plans.length ? ` ${plans.length}` : ""}</button>
+          <div className="pl-pop">
+            <button className="pl-btn ghost" aria-expanded={menuOpen} aria-label="메뉴" onClick={() => setMenuOpen((v) => !v)}>메뉴</button>
+            {menuOpen && (
+              <>
+                <div style={{ position: "fixed", inset: 0, zIndex: 29 }} onClick={() => setMenuOpen(false)} />
+                <div className="pl-pop-panel pl-menu" style={{ left: "auto", right: 0, width: 220 }}>
+                  <div className="pl-pop-list">
+                    {step > 1 && <button onClick={() => { setMenuOpen(false); setTour(true); }}>사용법 보기</button>}
+                    <button onClick={() => { setMenuOpen(false); setSheet("calendar"); }}>학사일정</button>
+                    <button onClick={() => { setMenuOpen(false); setSheet("feedback"); }}>피드백 · 응원</button>
+                    <button onClick={() => { setMenuOpen(false); shareToKakao(); }}>카카오톡으로 공유</button>
+                    <button onClick={toggleDark}>다크 모드 {dark ? "끄기" : "켜기"}</button>
+                    <Link href="/" style={{ display: "block", padding: "10px 14px", color: "inherit", textDecoration: "none" }}>기존 화면으로</Link>
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
         </div>
       </header>
 
@@ -327,10 +416,10 @@ export default function Planner() {
               </div>
             </aside>
           </div>
-          <div className="pl-bar">
+          <div className="pl-bar" data-tour="next">
             <button className="pl-bar-summary" onClick={() => setModal("cart")}>
               <b>{cart.length}과목 담음</b>
-              <div className="pl-hint">필수 {mustCount}과목 {mustCredit}학점 · 후보 {cart.length - mustCount}과목</div>
+              <div className="pl-hint">최대 {cartCredit(cart, courseByCode)}학점 · 겹치지 않게 최대한 넣어 드려요</div>
             </button>
             <button className="pl-btn primary lg" disabled={cart.length === 0} onClick={() => goStep(3)}>시간표 보기</button>
           </div>
@@ -342,14 +431,11 @@ export default function Planner() {
               <span>조건 · 정렬</span><span className="pl-muted">{condOpen ? "접기 ▴" : "펼치기 ▾"}</span>
             </button>
             <div className="pl-scroll">
-              <ConditionsPanel cart={cart} courseByCode={courseByCode} conditions={st.conditions} onConditions={(c) => update({ conditions: c })} />
-              <div className="pl-cond-block">
-                <div className="pl-label" style={{ display: "flex", justifyContent: "space-between" }}>
-                  담은 과목 {cart.length}
-                  <button className="pl-link" onClick={() => goStep(2)}>더 담기</button>
-                </div>
+              <div className="pl-cond-block" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <span><b>{cart.length}과목</b> <span className="pl-muted">담음</span></span>
+                <button className="pl-link" onClick={() => goStep(2)}>과목 더 담기 · 빼기</button>
               </div>
-              <CartList cart={cart} courseByCode={courseByCode} onSetMode={setMode} />
+              <ConditionsPanel cart={cart} courseByCode={courseByCode} conditions={st.conditions} onConditions={(c) => update({ conditions: c })} onSetMode={setMode} />
             </div>
           </aside>
           <section>
@@ -364,6 +450,8 @@ export default function Planner() {
               onImage={() => doImage()}
               onSave={() => { setSaveName(""); setModal("save"); }}
               onCodes={() => setModal("codes")}
+              onBulk={results.length > 1 ? () => (results.length > 20 ? setModal("bulk") : doBulkImages()) : undefined}
+              bulkProgress={bulkProgress}
               onBack={() => goStep(2)}
             />
           </section>
@@ -407,6 +495,15 @@ export default function Planner() {
                 </div>
               </>
             )}
+            {modal === "bulk" && (
+              <>
+                <div className="pl-modal-head"><h3>이미지 {results.length}장 저장</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-body">
+                  <div>결과 {results.length}개를 모두 이미지로 저장해요. 브라우저가 여러 파일 다운로드를 물어보면 허용해 주세요.</div>
+                  <button className="pl-btn primary" onClick={doBulkImages}>모두 저장</button>
+                </div>
+              </>
+            )}
             {modal === "save" && (
               <>
                 <div className="pl-modal-head"><h3>보관함에 저장</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
@@ -438,11 +535,24 @@ export default function Planner() {
                   ) : (
                     plans.map((p) => (
                       <div key={p.id} className="pl-code-row">
-                        <button className="pl-course-main" onClick={() => setPreview(p)}>
-                          <div style={{ fontWeight: 600 }}>{p.name}</div>
-                          <div className="pl-muted pl-small">{semLabel(p.sem)} · {p.items.reduce((s, i) => s + i.credit, 0)}학점 · {p.items.length}과목</div>
-                        </button>
-                        <button className="pl-btn sm" onClick={() => { deletePlan(p.id); setPlans(loadPlans()); }}>삭제</button>
+                        {renaming?.id === p.id ? (
+                          <input autoFocus className="pl-field" value={renaming.name}
+                            onChange={(e) => setRenaming({ id: p.id, name: e.target.value })}
+                            onKeyDown={(e) => {
+                              if (e.key === "Enter" && renaming.name.trim()) { renamePlan(p, renaming.name.trim()); setRenaming(null); setPlans(loadPlans()); }
+                              if (e.key === "Escape") setRenaming(null);
+                            }}
+                            onBlur={() => { if (renaming.name.trim()) renamePlan(p, renaming.name.trim()); setRenaming(null); setPlans(loadPlans()); }} />
+                        ) : (
+                          <button className="pl-course-main" onClick={() => setPreview(p)}>
+                            <div style={{ fontWeight: 600 }}>{p.name} {p.legacy && <span className="pl-badge">기존 사이트</span>}</div>
+                            <div className="pl-hint">{semLabel(p.sem)} · {p.items.reduce((s, i) => s + i.credit, 0)}학점 · {p.items.length}과목</div>
+                          </button>
+                        )}
+                        <div style={{ display: "flex", gap: 4 }}>
+                          <button className="pl-btn sm" onClick={() => setRenaming({ id: p.id, name: p.name })}>이름</button>
+                          <button className="pl-btn sm" onClick={() => { if (window.confirm(`'${p.name}'을(를) 삭제할까요?`)) { deletePlan(p); setPlans(loadPlans()); } }}>삭제</button>
+                        </div>
                       </div>
                     ))
                   )}
@@ -452,6 +562,15 @@ export default function Planner() {
           </div>
         </div>
       )}
+      {sheet && (
+        <div className="pl-modal-bg" onClick={() => setSheet(null)}>
+          <div className="pl-modal pl-sheet" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
+            <div className="pl-modal-head"><h3>{sheet === "calendar" ? "학사일정" : "피드백 · 응원"}</h3><button className="pl-x" aria-label="닫기" onClick={() => setSheet(null)}>×</button></div>
+            <div className="pl-sheet-body">{sheet === "calendar" ? <AcademicCalendarTab /> : <FeedbackTab />}</div>
+          </div>
+        </div>
+      )}
+      <GuideTour steps={step === 3 ? TOUR_3 : TOUR_2} run={tour && step > 1} onClose={() => { setTour(false); writeLocal(TOUR_KEY, Date.now()); }} />
       {toast && <div className="pl-toast" role="status">{toast}</div>}
     </div>
   );
