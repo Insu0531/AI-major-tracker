@@ -1,8 +1,8 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { ENTRY_YEAR_MIN } from "@/lib/courses";
-import { BASE_MAJORS, isSangjuLabel, loadMajors, type MajorInfo } from "@/lib/planner/majors";
+import { BASE_MAJORS, isGradMajor, isSangjuLabel, loadMajors, type MajorInfo } from "@/lib/planner/majors";
 import { buildCourses, buildEngineGroups, colorAt, loadCurriculum, loadIndex, loadSnapshot, type SectionFilter } from "@/lib/planner/data";
 import { exportTimetable, renderTimetablePng, type TimetableItem } from "@/lib/planner/exportImage";
 import { deletePlan, loadPlans, markMigrated, readLocal, renamePlan, savePlan, writeLocal, type SavedPlan } from "@/lib/planner/storage";
@@ -55,6 +55,8 @@ type Persisted = {
   campuses: string[];
   includeGrad: boolean;
   onlyOpen: boolean;
+  /** 1단계 학과 목록: 학부 / 대학원 */
+  level: "ug" | "grad";
   /** 학기를 직접 고른 시점의 추천 학기 (추천 학기가 바뀌면 다시 자동 선택) */
   semChosenFor: string | null;
   step: 1 | 2 | 3;
@@ -70,6 +72,7 @@ const INITIAL: Persisted = {
   campuses: ["산격동", "동인동"],
   includeGrad: false,
   onlyOpen: false,
+  level: "ug",
   semChosenFor: null,
   step: 1,
 };
@@ -78,7 +81,7 @@ const INITIAL: Persisted = {
  * 새로고침하면 담은 과목·조건·단계는 처음부터 (사용자 요청).
  * 내 정보(학기·학과·학번·복수전공·캠퍼스 설정)만 기억해서 매번 다시 고르지 않게 한다.
  */
-const KEEP_ON_RELOAD = ["sem", "semChosenFor", "major", "extras", "entryYear", "campuses", "includeGrad", "onlyOpen"] as const;
+const KEEP_ON_RELOAD = ["sem", "semChosenFor", "major", "extras", "entryYear", "campuses", "includeGrad", "onlyOpen", "level"] as const;
 const pickProfile = (s: Partial<Persisted>) =>
   Object.fromEntries(KEEP_ON_RELOAD.filter((k) => k in s).map((k) => [k, s[k]])) as Partial<Persisted>;
 
@@ -121,6 +124,15 @@ export default function Planner() {
   useEffect(() => { loadMajors().then(setMajors); }, []);
   const majorByKey = useMemo(() => new Map(majors.map((m) => [m.key, m])), [majors]);
   const labelOf = useCallback((key: string) => majorByKey.get(key)?.label ?? key, [majorByKey]);
+  // 1단계 학부 / 대학원 탭: 고른 과정의 학과만 보여 준다
+  const levelMajors = useMemo(() => majors.filter((m) => isGradMajor(m) === (st.level === "grad")), [majors, st.level]);
+  const gradCount = useMemo(() => majors.filter(isGradMajor).length, [majors]);
+  const chooseLevel = (level: "ug" | "grad") => {
+    if (level === st.level) return;
+    const fits = (k: string | null) => !!k && isGradMajor(majorByKey.get(k)) === (level === "grad");
+    update({ level, major: fits(st.major) ? st.major : null, extras: st.extras.filter(fits), includeGrad: level === "grad" });
+    track("level_changed", { level });
+  };
   const [saveName, setSaveName] = useState("");
   const [plans, setPlans] = useState<SavedPlan[]>(loadPlans);
   const [toastMsg, setToastMsg] = useState("");
@@ -665,10 +677,20 @@ export default function Planner() {
                   <div className="pl-hint" style={{ marginTop: 6 }}>{semLabel(st.sem)} 개설 정보가 아직 없어요. 학교에 강의가 열리면 자동으로 채워져요.</div>
                 )}
               </div>
+              <div>
+                <div className="pl-tabs pl-level-tabs" role="tablist" aria-label="과정">
+                  {(["ug", "grad"] as const).map((l) => (
+                    <button key={l} role="tab" type="button" className="pl-tab" aria-selected={st.level === l} style={{ "--c": "var(--accent)" } as CSSProperties} onClick={() => chooseLevel(l)}>
+                      {l === "ug" ? "학부" : "대학원"}
+                      <span className="pl-tab-count">{l === "ug" ? majors.length - gradCount : gradCount}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
               <div className="pl-row">
                 <div>
                   <div className="pl-label">학과</div>
-                  <MajorPicker options={majors} value={st.major} onChange={(m) => { update({ major: m, campuses: defaultCampuses(labelOf(m)) }); track("major_selected", { major: labelOf(m) }); }} />
+                  <MajorPicker options={levelMajors} value={st.major} onChange={(m) => { update({ major: m, campuses: defaultCampuses(labelOf(m)), ...(isGradMajor(majorByKey.get(m)) ? { includeGrad: true } : {}) }); track("major_selected", { major: labelOf(m) }); }} />
                 </div>
                 <div>
                   <div className="pl-label">학번</div>
@@ -682,9 +704,9 @@ export default function Planner() {
                   <div className="pl-label">복수전공 · 부전공 <span className="pl-muted" style={{ fontWeight: 500 }}>(선택, 최대 3개)</span></div>
                   <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                     {st.extras.map((m, i) => (
-                      <MajorPicker options={majors} key={i} value={m} onChange={(nm) => update({ extras: st.extras.map((x, j) => (j === i ? nm : x)) })} onRemove={() => update({ extras: st.extras.filter((_, j) => j !== i) })} />
+                      <MajorPicker options={levelMajors} key={i} value={m} onChange={(nm) => update({ extras: st.extras.map((x, j) => (j === i ? nm : x)) })} onRemove={() => update({ extras: st.extras.filter((_, j) => j !== i) })} />
                     ))}
-                    {st.extras.length < 3 && <MajorPicker options={majors} value={null} placeholder="+ 학과 추가" onChange={(m) => update({ extras: [...st.extras, m] })} />}
+                    {st.extras.length < 3 && <MajorPicker options={levelMajors} value={null} placeholder="+ 학과 추가" onChange={(m) => update({ extras: [...st.extras, m] })} />}
                   </div>
                 </div>
               )}
