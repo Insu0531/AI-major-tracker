@@ -1,7 +1,7 @@
 // 학기 표기·순서·기본 학기 (scripts/collect-sections.mjs의 defaultSems와 같은 규칙)
 
-const TERMS = ["1", "s", "2", "w"] as const;
-const TERM_LABEL: Record<string, string> = { "1": "1학기", s: "여름계절", "2": "2학기", w: "겨울계절" };
+export const TERMS = ["1", "s", "2", "w"] as const;
+export const TERM_LABEL: Record<string, string> = { "1": "1학기", s: "여름계절", "2": "2학기", w: "겨울계절" };
 
 export const semLabel = (sem: string) => {
   const [y, t] = sem.split("-");
