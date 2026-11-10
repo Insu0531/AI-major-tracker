@@ -247,15 +247,18 @@ SavedTimetable = { id, name, savedAt, sem: "2026-1", major, majorLabel, entryYea
 - 정렬 기준 후보: 공강일 수, 첫 수업 시작 시각, 마지막 수업 종료 시각, 우주공강(빈 시간) 총합, 총 학점/목표 학점 근접, 하루 최대 연강, 경쟁률(신청/정원).
 
 ### `/new` 통합 시간표 검색 (1차 구현, 2026-11-10)
-기존 화면(`/`)은 그대로 두고 새 화면을 `/new`에 병행. 전공/교양/교직 마법사 3단계 → **한 화면 + 필수/후보 담기**.
+기존 화면(`/`)은 그대로 두고 새 화면을 `/new`에 병행. 전공/교양/교직 마법사 3개 → **데이터는 하나로 합치고, 화면은 3단계**
+(① 내 정보 → ② 과목 담기(필수/후보) → ③ 시간표(조건·정렬·결과)). 처음엔 3단 한 화면이었으나 "가독성이 떨어짐 / 한 화면에 너무 많음" 피드백으로 단계형으로 변경 (2026-11-10).
+- 가독성 기준: 본문 15px, 보조 텍스트 14px, 회색은 `--ink-2`(#45443f) 이상으로 진하게. 한 단계에 한 가지 일만.
+- 학교 데이터는 연강을 `토 9:00~10:30, 토 10:30~12:00`처럼 쪼개 준다 → 표시·이미지·시간 문자열은 `mergeSlots()`로 합쳐서 그린다.
 ```
 web/app/new/page.tsx            ssr:false로 Planner 로드 (localStorage 초기값 사용 때문)
 web/app/new/layout.tsx          메타데이터 + Pretendard(CDN)
 web/app/new/planner.css         전용 디자인 토큰(.pl 스코프, 다크 = html.dark), 기존 globals.css의 !important 다크 오버라이드와 분리
 web/components/planner/
-  Planner.tsx       상태(학기·학과·학번·복수전공·장바구니·조건 → localStorage `knu_planner_state_v1`), Worker 호출, 모달(코드/저장/보관함)
+  Planner.tsx       단계 전환 + 상태(학기·학과·학번·복수전공·장바구니·조건·현재 단계 → localStorage `knu_planner_state_v1`), Worker 호출, 모달(코드/저장/보관함)
   CourseBrowser.tsx 과목 담기: 검색 + 구분칩(내 전공/복수전공/교양/교직/일반선택/타학과) + 필터(학년·학점·특성·캠퍼스·대학원) + "빈 시간에 맞는 것만"
-  CartPanel.tsx     담은 과목(필수/후보 전환) + 학점 범위·공강 요일·시간대·피할 교수 + 정렬
+  CartPanel.tsx     CartList(담은 과목, 2단계 사이드·모바일 모달·3단계) / ConditionsPanel(3단계 정렬·학점·공강·시간대·피할 교수)
   ResultPanel.tsx   결과 목록 + 선택 시간표 + 이미지/보관함/수강신청 코드
   Timetable.tsx, MajorPicker.tsx
 web/lib/planner/

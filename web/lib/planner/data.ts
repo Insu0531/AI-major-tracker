@@ -96,13 +96,35 @@ export function buildEngineGroups(cart: CartItem[], courseByCode: Map<string, Co
 
 export const DAY_NAMES = ["월", "화", "수", "목", "금", "토", "일"];
 
+/** 같은 요일에 붙어 있거나 겹치는 시간을 하나로 합침 (학교 데이터는 연강을 여러 칸으로 나눠 줌) */
+export function mergeSlots(slots: [number, number, number][]): [number, number, number][] {
+  const sorted = [...slots].sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+  const out: [number, number, number][] = [];
+  for (const [d, s, e] of sorted) {
+    const last = out[out.length - 1];
+    if (last && last[0] === d && s <= last[2]) last[2] = Math.max(last[2], e);
+    else out.push([d, s, e]);
+  }
+  return out;
+}
+
+/** 요일 패턴 요약: 분반들의 시간 → "월수 · 화목" */
+export function dayPatterns(slotLists: [number, number, number][][]): string {
+  const pats = new Set<string>();
+  for (const sl of slotLists) {
+    if (!sl.length) continue;
+    pats.add([...new Set(sl.map(([d]) => d))].sort().map((d) => DAY_NAMES[d]).join(""));
+  }
+  return [...pats].join(" · ");
+}
+
 export const fmtMin = (m: number) => `${Math.floor(m / 60)}:${String(Math.round(m % 60)).padStart(2, "0")}`;
 
 /** [[0,540,630],[2,540,630]] → "월·수 9:00~10:30" (같은 시간대는 요일을 묶음) */
 export function formatSlots(slots: [number, number, number][]): string {
   if (!slots.length) return "시간 미정";
   const byTime = new Map<string, number[]>();
-  for (const [d, s, e] of slots) {
+  for (const [d, s, e] of mergeSlots(slots)) {
     const k = `${fmtMin(s)}~${fmtMin(e)}`;
     if (!byTime.has(k)) byTime.set(k, []);
     byTime.get(k)!.push(d);

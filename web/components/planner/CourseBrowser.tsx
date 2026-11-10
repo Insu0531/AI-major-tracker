@@ -1,7 +1,7 @@
 "use client";
 
 import { memo, useMemo, useState } from "react";
-import { formatSlots, sectionAllowed, type SectionFilter } from "@/lib/planner/data";
+import { dayPatterns, formatSlots, sectionAllowed, type SectionFilter } from "@/lib/planner/data";
 import { CATEGORY_LABEL, type CartItem, type CartMode, type Category, type Conditions, type Course, type RawSection, type Slot } from "@/lib/planner/types";
 
 const CATS: Category[] = ["major", "major2", "gyoyang", "kyoshik", "ilban", "other"];
@@ -75,16 +75,15 @@ export default function CourseBrowser(p: Props) {
 
   return (
     <>
-      <div className="pl-pane-head">
-        <div className="pl-pane-title">
-          <h2>과목 담기</h2>
-          <span className="pl-muted pl-small">{filtered.length.toLocaleString()}과목</span>
+      <div className="pl-browse-head">
+        <div className="pl-step-head">
+          <h1>어떤 과목을 들을까요?</h1>
+          <p><b>필수</b>는 꼭 넣을 과목, <b>후보</b>는 시간·학점이 맞으면 넣을 과목이에요.</p>
         </div>
-        <div className="pl-filter-row">
+        <div className="pl-search">
           <input
             className="pl-field"
-            style={{ flex: 1, minWidth: 0 }}
-            placeholder="과목명, 코드, 교수, 학과"
+            placeholder="과목명, 코드, 교수, 학과로 검색"
             value={q}
             onChange={(e) => { setQ(e.target.value); setLimit(PAGE); }}
           />
@@ -98,9 +97,11 @@ export default function CourseBrowser(p: Props) {
               {CATEGORY_LABEL[c]}
             </button>
           ))}
-          <button className="pl-chip" aria-pressed={onlyFree} onClick={() => setOnlyFree((v) => !v)} title="지금 보고 있는 시간표의 빈 시간과 결과 조건에 맞는 분반이 있는 과목만">
-            빈 시간에 맞는 것만
-          </button>
+          {p.busySlots.length > 0 && (
+            <button className="pl-chip" aria-pressed={onlyFree} onClick={() => setOnlyFree((v) => !v)} title="지금 고른 시간표의 빈 시간과 조건에 맞는 분반이 있는 과목만">
+              빈 시간에 맞는 것만
+            </button>
+          )}
         </div>
         {more && (
           <div className="pl-filter-more">
@@ -132,6 +133,7 @@ export default function CourseBrowser(p: Props) {
         )}
       </div>
       <div className="pl-scroll">
+        <div className="pl-hint" style={{ padding: "10px 24px 4px" }}>{filtered.length.toLocaleString()}과목{q.trim() ? " · 전체에서 검색 중" : ""}</div>
         {filtered.length === 0 && <div className="pl-empty">조건에 맞는 과목이 없어요.<br />구분이나 필터를 바꿔 보세요.</div>}
         {filtered.slice(0, limit).map((c) => (
           <CourseRow
@@ -173,7 +175,7 @@ const CourseRow = memo(function CourseRow({
   onSection: Props["onSection"];
 }) {
   const secs = c.sections.filter((s) => sectionAllowed(s, sectionFilter));
-  const times = [...new Set(secs.map((s) => formatSlots(s.slots)))];
+  const days = dayPatterns(secs.map((s) => s.slots)) || "시간 미정";
   const setMode = (m: CartMode) => onSetMode(c.code, item?.mode === m ? null : m);
 
   return (
@@ -186,9 +188,9 @@ const CourseRow = memo(function CourseRow({
             {c.tags.filter((t) => t === "SDG" || t === "인문교양").map((t) => <span key={t} className="pl-badge">{t}</span>)}
           </div>
           <div className="pl-course-meta">
-            {[c.grade && c.grade !== "*" ? `${c.grade}학년` : "", `${c.credit}학점`, c.dept, `분반 ${secs.length}`].filter(Boolean).join(" · ")}
+            {[c.grade && c.grade !== "*" ? `${c.grade}학년` : "", `${c.credit}학점`, c.dept].filter(Boolean).join(" · ")}
           </div>
-          <div className="pl-course-meta">{times.length > 2 ? `${times.slice(0, 2).join(" / ")} 외 ${times.length - 2}` : times.join(" / ")}</div>
+          <div className="pl-course-meta">{days} <span className="pl-muted">· 분반 {secs.length}개 {open ? "▴" : "▾"}</span></div>
         </button>
         <div className="pl-add">
           <button className="pl-btn sm" aria-pressed={item?.mode === "must"} onClick={() => setMode("must")} title="반드시 넣을 과목">필수</button>

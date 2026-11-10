@@ -1,4 +1,5 @@
 import type { Slot } from "./types";
+import { mergeSlots } from "./data";
 
 export type TimetableItem = {
   code: string;
@@ -104,7 +105,7 @@ export async function exportTimetable({
   // 블록
   ctx.textAlign = "left";
   for (const it of items) {
-    for (const [d, s, e] of it.slots) {
+    for (const [d, s, e] of mergeSlots(it.slots)) {
       const x = left + colW * d + 3;
       const y = top + ((s - h0 * 60) / 60) * rowH + 2;
       const w = colW - 6;

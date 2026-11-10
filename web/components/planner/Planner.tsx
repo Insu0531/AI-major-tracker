@@ -9,13 +9,14 @@ import { deletePlan, loadPlans, readLocal, savePlan, writeLocal, type SavedPlan 
 import { DEFAULT_CONDITIONS, type CartItem, type CartMode, type Conditions, type EngineGroup, type EngineResponse, type Slot, type Snapshot, type SnapshotIndex } from "@/lib/planner/types";
 import MajorPicker from "@/components/planner/MajorPicker";
 import CourseBrowser from "@/components/planner/CourseBrowser";
-import CartPanel from "@/components/planner/CartPanel";
+import { CartList, ConditionsPanel, cartCredit } from "@/components/planner/CartPanel";
 import ResultPanel, { type ResultView } from "@/components/planner/ResultPanel";
 import Timetable from "@/components/planner/Timetable";
 
 const STATE_KEY = "knu_planner_state_v1";
 const ENTRY_YEAR_LAST = 2026; // 이수체계 데이터가 있는 마지막 학번
 const TERM_LABEL: Record<string, string> = { "1": "1학기", "2": "2학기", s: "여름학기", w: "겨울학기" };
+const fmtDate = (iso: string) => new Date(iso).toLocaleString("ko-KR", { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
 const semLabel = (sem: string) => { const [y, t] = sem.split("-"); return `${y}년 ${TERM_LABEL[t] ?? t}`; };
 const defaultCampuses = (m: Major | null) => (m && MAJOR_LABELS[m].startsWith("[상주]") ? ["상주"] : ["산격동", "동인동"]);
 
@@ -28,6 +29,7 @@ type Persisted = {
   conditions: Conditions;
   campuses: string[];
   includeGrad: boolean;
+  step: 1 | 2 | 3;
 };
 
 const INITIAL: Persisted = {
@@ -39,9 +41,8 @@ const INITIAL: Persisted = {
   conditions: DEFAULT_CONDITIONS,
   campuses: ["산격동", "동인동"],
   includeGrad: false,
+  step: 1,
 };
-
-type Pane = "courses" | "cart" | "result";
 
 function loadPersisted(): Persisted {
   const saved = readLocal<Partial<Persisted>>(STATE_KEY, {});
@@ -58,13 +59,13 @@ export default function Planner() {
   const [loadError, setLoadError] = useState(false);
   const [mineCur, setMineCur] = useState<{ key: string; map: Map<string, string> } | null>(null);
   const [extra, setExtra] = useState<Map<string, string>>(new Map());
-  const [pane, setPane] = useState<Pane>("courses");
+  const [condOpen, setCondOpen] = useState(false);
   // 결과는 계산에 쓴 groups와 함께 보관 (담은 과목이 바뀌는 사이 이전 결과와 섞이지 않도록)
   const [resp, setResp] = useState<{ data: EngineResponse; groups: EngineGroup[] } | null>(null);
   const [running, setRunning] = useState(false);
   const [selIdx, setSelIdx] = useState(0);
   const [profPick, setProfPick] = useState<Record<string, string>>({});
-  const [modal, setModal] = useState<null | "codes" | "save" | "saved">(null);
+  const [modal, setModal] = useState<null | "codes" | "save" | "saved" | "cart">(null);
   const [saveName, setSaveName] = useState("");
   const [plans, setPlans] = useState<SavedPlan[]>(loadPlans);
   const [preview, setPreview] = useState<SavedPlan | null>(null);
@@ -227,72 +228,131 @@ export default function Planner() {
   };
 
   const sems = index ? Object.keys(index.semesters).sort() : [];
-  const collectedAt = st.sem && index?.semesters[st.sem]?.collectedAt;
+  const collectedAt = st.sem ? index?.semesters[st.sem]?.collectedAt : undefined;
+  const step = st.step;
+  const goStep = (n: 1 | 2 | 3) => update({ step: n });
+  const mustCount = cart.filter((i) => i.mode === "must").length;
+  const mustCredit = cartCredit(cart.filter((i) => i.mode === "must"), courseByCode);
 
   return (
     <div className="pl">
       <header className="pl-top">
-        <div className="pl-brand">시간표 검색 <small>KNU</small></div>
-        <div className="pl-profile">
-          <select className="pl-select" value={st.sem ?? ""} onChange={(e) => update({ sem: e.target.value })} aria-label="학기">
-            {sems.map((s) => <option key={s} value={s}>{semLabel(s)}</option>)}
-          </select>
-          <MajorPicker value={st.major} onChange={(m) => update({ major: m, campuses: defaultCampuses(m) })} />
-          <select className="pl-select" value={st.entryYear} onChange={(e) => update({ entryYear: +e.target.value })} aria-label="학번">
-            {Array.from({ length: ENTRY_YEAR_LAST - ENTRY_YEAR_MIN + 1 }, (_, i) => ENTRY_YEAR_LAST - i).map((y) => <option key={y} value={y}>{y}학번</option>)}
-          </select>
-          {st.extras.map((m, i) => (
-            <MajorPicker key={i} value={m} onChange={(nm) => update({ extras: st.extras.map((x, j) => (j === i ? nm : x)) })} onRemove={() => update({ extras: st.extras.filter((_, j) => j !== i) })} />
+        <div className="pl-brand">KNU 시간표</div>
+        <nav className="pl-steps" aria-label="단계">
+          {([[1, "내 정보"], [2, "과목 담기"], [3, "시간표"]] as const).map(([n, label], i) => (
+            <div key={n} style={{ display: "flex", alignItems: "center" }}>
+              {i > 0 && <span className="pl-step-sep" />}
+              <button className="pl-step" aria-current={step === n ? "step" : undefined} disabled={n > 1 && !snapshot} onClick={() => goStep(n)}>
+                <b>{n}</b><span>{label}</span>
+              </button>
+            </div>
           ))}
-          {st.major && st.extras.length < 3 && (
-            <MajorPicker value={null} placeholder="+ 복수전공" onChange={(m) => update({ extras: [...st.extras, m] })} />
-          )}
-        </div>
+        </nav>
         <div className="pl-top-right">
-          <button className="pl-btn ghost" onClick={() => { setPlans(loadPlans()); setModal("saved"); }}>보관함 {plans.length || ""}</button>
-          <Link className="pl-btn ghost" href="/" style={{ display: "inline-flex", alignItems: "center", textDecoration: "none" }}>기존 화면</Link>
+          <button className="pl-btn ghost" onClick={() => { setPlans(loadPlans()); setModal("saved"); }}>보관함{plans.length ? ` ${plans.length}` : ""}</button>
         </div>
       </header>
 
-      {loadError && !snapshot ? (
-        <div className="pl-loading">강의 데이터를 불러오지 못했어요. 잠시 후 새로고침해 주세요.</div>
-      ) : !snapshot ? (
-        <div className="pl-loading">{st.sem ? `${semLabel(st.sem)} 강의 불러오는 중…` : "학기 정보 불러오는 중…"}</div>
-      ) : (
-        <main className="pl-main">
-          <section className="pl-pane" data-active={pane === "courses"}>
-            <CourseBrowser
-              key={`${st.sem}-${st.major ?? ""}`}
-              courses={courses}
-              cart={cart}
-              hasMajor={!!st.major}
-              hasExtra={st.extras.length > 0}
-              sectionFilter={sectionFilter}
-              onCampusesChange={(c) => update({ campuses: c })}
-              includeGrad={st.includeGrad}
-              onIncludeGradChange={(v) => update({ includeGrad: v })}
-              conditions={st.conditions}
-              busySlots={busySlots}
-              onSetMode={setMode}
-              onSection={onSection}
-            />
-            {collectedAt && (
-              <div className="pl-muted pl-small" style={{ padding: "6px 14px", borderTop: "1px solid var(--line)" }}>
-                {new Date(collectedAt).toLocaleString("ko-KR", { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" })} 기준 개설 정보 · 정원/신청 인원은 그 시점 값이에요
+      {step === 1 ? (
+        <div className="pl-scroll">
+          <div className="pl-intro">
+            <div className="pl-step-head">
+              <h1>먼저 알려 주세요</h1>
+              <p>학과와 학번에 맞는 전공 과목을 먼저 보여 드려요. 이 브라우저에 기억해 둘게요.</p>
+            </div>
+            <div>
+              <div className="pl-label">학기</div>
+              <select className="pl-select" value={st.sem ?? ""} onChange={(e) => update({ sem: e.target.value })} aria-label="학기">
+                {sems.map((s) => <option key={s} value={s}>{semLabel(s)}</option>)}
+              </select>
+            </div>
+            <div className="pl-row">
+              <div>
+                <div className="pl-label">학과</div>
+                <MajorPicker value={st.major} onChange={(m) => update({ major: m, campuses: defaultCampuses(m) })} />
+              </div>
+              <div>
+                <div className="pl-label">학번</div>
+                <select className="pl-select" value={st.entryYear} onChange={(e) => update({ entryYear: +e.target.value })} aria-label="학번">
+                  {Array.from({ length: ENTRY_YEAR_LAST - ENTRY_YEAR_MIN + 1 }, (_, i) => ENTRY_YEAR_LAST - i).map((y) => <option key={y} value={y}>{y}학번</option>)}
+                </select>
+              </div>
+            </div>
+            {st.major && (
+              <div>
+                <div className="pl-label">복수전공 · 부전공 <span className="pl-muted" style={{ fontWeight: 500 }}>(선택, 최대 3개)</span></div>
+                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                  {st.extras.map((m, i) => (
+                    <MajorPicker key={i} value={m} onChange={(nm) => update({ extras: st.extras.map((x, j) => (j === i ? nm : x)) })} onRemove={() => update({ extras: st.extras.filter((_, j) => j !== i) })} />
+                  ))}
+                  {st.extras.length < 3 && <MajorPicker value={null} placeholder="+ 학과 추가" onChange={(m) => update({ extras: [...st.extras, m] })} />}
+                </div>
               </div>
             )}
-          </section>
-          <section className="pl-pane" data-active={pane === "cart"}>
-            <CartPanel
-              cart={cart}
-              courseByCode={courseByCode}
-              conditions={st.conditions}
-              onConditions={(c) => update({ conditions: c })}
-              onSetMode={setMode}
-              onClear={() => update({ cart: [] })}
-            />
-          </section>
-          <section className="pl-pane" data-active={pane === "result"}>
+            <button className="pl-btn primary lg" disabled={!snapshot} onClick={() => goStep(2)}>
+              {snapshot ? (st.major ? "과목 담으러 가기" : "학과 없이 계속하기") : loadError ? "강의 데이터를 불러오지 못했어요" : "강의 정보 불러오는 중…"}
+            </button>
+            <div className="pl-hint" style={{ textAlign: "center" }}>
+              {collectedAt && `${fmtDate(collectedAt)} 기준 개설 정보예요. `}
+              <Link href="/" className="pl-link">기존 화면으로</Link>
+            </div>
+          </div>
+        </div>
+      ) : !snapshot ? (
+        <div className="pl-loading">{loadError ? "강의 데이터를 불러오지 못했어요. 잠시 후 새로고침해 주세요." : "강의 정보 불러오는 중…"}</div>
+      ) : step === 2 ? (
+        <div className="pl-body">
+          <div className="pl-split">
+            <div>
+              <CourseBrowser
+                key={`${st.sem}-${st.major ?? ""}`}
+                courses={courses}
+                cart={cart}
+                hasMajor={!!st.major}
+                hasExtra={st.extras.length > 0}
+                sectionFilter={sectionFilter}
+                onCampusesChange={(c) => update({ campuses: c })}
+                includeGrad={st.includeGrad}
+                onIncludeGradChange={(v) => update({ includeGrad: v })}
+                conditions={st.conditions}
+                busySlots={busySlots}
+                onSetMode={setMode}
+                onSection={onSection}
+              />
+            </div>
+            <aside className="pl-cart-side">
+              <div className="pl-cart-head"><h2>담은 과목</h2></div>
+              <div className="pl-scroll">
+                <CartList cart={cart} courseByCode={courseByCode} onSetMode={setMode} onClear={() => update({ cart: [] })} />
+              </div>
+            </aside>
+          </div>
+          <div className="pl-bar">
+            <button className="pl-bar-summary" onClick={() => setModal("cart")}>
+              <b>{cart.length}과목 담음</b>
+              <div className="pl-hint">필수 {mustCount}과목 {mustCredit}학점 · 후보 {cart.length - mustCount}과목</div>
+            </button>
+            <button className="pl-btn primary lg" disabled={cart.length === 0} onClick={() => goStep(3)}>시간표 보기</button>
+          </div>
+        </div>
+      ) : (
+        <div className="pl-plan">
+          <aside className="pl-cond" data-open={condOpen}>
+            <button className="pl-cond-toggle" onClick={() => setCondOpen((v) => !v)} aria-expanded={condOpen}>
+              <span>조건 · 정렬</span><span className="pl-muted">{condOpen ? "접기 ▴" : "펼치기 ▾"}</span>
+            </button>
+            <div className="pl-scroll">
+              <ConditionsPanel cart={cart} courseByCode={courseByCode} conditions={st.conditions} onConditions={(c) => update({ conditions: c })} />
+              <div className="pl-cond-block">
+                <div className="pl-label" style={{ display: "flex", justifyContent: "space-between" }}>
+                  담은 과목 {cart.length}
+                  <button className="pl-link" onClick={() => goStep(2)}>더 담기</button>
+                </div>
+              </div>
+              <CartList cart={cart} courseByCode={courseByCode} onSetMode={setMode} />
+            </div>
+          </aside>
+          <section>
             <ResultPanel
               response={shown}
               running={busy}
@@ -304,16 +364,11 @@ export default function Planner() {
               onImage={() => doImage()}
               onSave={() => { setSaveName(""); setModal("save"); }}
               onCodes={() => setModal("codes")}
+              onBack={() => goStep(2)}
             />
           </section>
-        </main>
+        </div>
       )}
-
-      <nav className="pl-tabs" role="tablist">
-        <button role="tab" aria-selected={pane === "courses"} onClick={() => setPane("courses")}>과목 담기</button>
-        <button role="tab" aria-selected={pane === "cart"} onClick={() => setPane("cart")}>담은 과목 {cart.length || ""}</button>
-        <button role="tab" aria-selected={pane === "result"} onClick={() => setPane("result")}>시간표 {shown ? shown.results.length : ""}</button>
-      </nav>
 
       {modal && (
         <div className="pl-modal-bg" onClick={() => { setModal(null); setPreview(null); }}>
@@ -341,6 +396,14 @@ export default function Planner() {
                     <button className="pl-btn" style={{ flex: 1 }} onClick={() => copy(view.items.map((i) => i.chosen).join("\n"))}>전체 복사</button>
                     <a className="pl-btn primary" style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", textDecoration: "none" }} href="https://sugang.knu.ac.kr" target="_blank" rel="noopener noreferrer">수강신청 사이트</a>
                   </div>
+                </div>
+              </>
+            )}
+            {modal === "cart" && (
+              <>
+                <div className="pl-modal-head"><h3>담은 과목 {cart.length}</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-body" style={{ padding: 0 }}>
+                  <CartList cart={cart} courseByCode={courseByCode} onSetMode={setMode} onClear={() => update({ cart: [] })} />
                 </div>
               </>
             )}

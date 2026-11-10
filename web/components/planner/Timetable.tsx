@@ -1,7 +1,7 @@
 "use client";
 
 import { dayCount, hourRange, type TimetableItem } from "@/lib/planner/exportImage";
-import { DAY_NAMES } from "@/lib/planner/data";
+import { DAY_NAMES, mergeSlots } from "@/lib/planner/data";
 
 const LABEL_W = 34;
 
@@ -29,7 +29,7 @@ export default function Timetable({ items }: { items: TimetableItem[] }) {
             <div key={d} className="pl-tt-col">
               {hours.map((h, i) => <div key={h} className="pl-tt-line" style={{ top: `calc(var(--hour) * ${i})` }} />)}
               {items.flatMap((it) =>
-                it.slots
+                mergeSlots(it.slots)
                   .filter(([day]) => day === d)
                   .map(([, s, e]) => (
                     <div
