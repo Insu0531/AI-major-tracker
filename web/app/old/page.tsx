@@ -565,7 +565,7 @@ export default function Home() {
           <circle cx="16" cy="16" r="2.8" fill="#b82020"/>
           <circle cx="16" cy="16" r="1.1" fill="#ffd700"/>
         </svg>
-        <h1 className="text-base font-bold text-gray-800">경북대학교 시간표 마법사</h1>
+        <h1 className="text-base font-bold text-gray-800">KNU 시간표 마법사</h1>
         <KakaoShareButton />
         <Link
           href="/"

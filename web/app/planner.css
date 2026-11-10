@@ -495,3 +495,111 @@
 /* 카톡 공유 (카카오 노랑은 버튼 하나에만) */
 .pl-btn.pl-kakao { background: #fee500; color: #191600; }
 .pl-btn.pl-kakao:hover:not(:disabled) { background: #f5dc00; }
+
+/* 추천: 머리줄 · 넣은 과목 */
+.pl-recs-title { display: flex; align-items: center; justify-content: space-between; gap: var(--s3); flex-wrap: wrap; }
+.pl-rec.added { background: var(--pick-weak); }
+.pl-rec.added .pl-btn[aria-pressed="true"] { background: var(--pick); color: #fff; }
+
+/* 3단계 검색해서 넣기 (2단계 표의 미니 버전) */
+.pl-quick { margin: var(--s4) var(--s5) var(--s2); padding: var(--s4); border-radius: var(--radius-lg); background: var(--surface); box-shadow: var(--shadow); }
+.pl-quick-head { display: flex; align-items: center; gap: var(--s3); flex-wrap: wrap; }
+.pl-quick-head .pl-field { flex: 1; min-width: 220px; }
+.pl-quick-results { margin-top: var(--s3); animation: pl-in 0.18s ease-out both; }
+.pl-table-mini { font-size: 13px; }
+.pl-table-mini td { padding: var(--s2) var(--s2); }
+.pl-table-mini td:first-child { padding-left: 0; }
+.pl-table-mini td:last-child { padding-right: 0; }
+.pl-table-mini .c-dept, .pl-table-mini .c-secs, .pl-table-mini .c-note { display: none; }
+.pl-table-mini .pl-cname { font-size: 14px; }
+.pl-table-mini .pl-tr-sub td { padding: 0 0 var(--s2); }
+@media (max-width: 720px) { .pl-quick { margin-left: var(--s4); margin-right: var(--s4); } }
+
+/* ── 모바일 사용감 (2026-11-11) ── */
+.pl-show-mobile { display: none !important; }
+@media (max-width: 720px) {
+  .pl-hide-mobile { display: none !important; }
+  .pl-show-mobile { display: block !important; }
+
+  /* iPhone은 16px 미만 입력칸을 누르면 화면을 확대함 → 16px */
+  .pl .pl-field, .pl .pl-select { font-size: 16px; }
+
+  /* 상단: 버튼 간격 줄이기 */
+  .pl-top-right { gap: 0; }
+  .pl-top-right .pl-btn { padding: 0 10px; }
+
+  /* 2단계: 머리말까지 한 번에 스크롤 → 과목 표가 바로 보이게 */
+  .pl-split > div:first-child { overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  .pl-split > div:first-child > .pl-scroll { overflow: visible; flex: none; }
+  .pl-browse-head { padding-top: var(--s4); gap: var(--s3); }
+  .pl-browse-head .pl-step-head p { display: none; }
+  .pl-browse-head .pl-step-head h1 { font-size: 22px; }
+  .pl-search .pl-field { height: 44px; }
+  .pl-add-btn { width: 36px; height: 36px; }
+  .pl-tr td { padding-top: var(--s3); padding-bottom: var(--s3); }
+  .pl-bar { gap: var(--s2); }
+  .pl-bar .pl-btn.lg { height: 46px; padding: 0 var(--s4); }
+
+  /* 3단계: 결과 머리와 시간표를 한 번에 스크롤, 버튼은 2열 */
+  .pl-plan > section { overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  .pl-plan > section > .pl-scroll { overflow: visible; flex: none; }
+  .pl-actions { display: grid; grid-template-columns: 1fr 1fr; }
+  .pl-actions .pl-btn { width: 100%; padding: 0 var(--s2); }
+  .pl-result-bar { gap: var(--s3); }
+  .pl-recs-title { flex-direction: column; align-items: flex-start; }
+  .pl-rec { gap: var(--s3); }
+  .pl-rec .pl-btn { flex-shrink: 0; }
+
+  /* 팝업: 아래에서 올라오는 시트 */
+  .pl-modal-bg { align-items: flex-end; padding: 0; }
+  .pl-modal { width: 100%; max-height: 88dvh; border-radius: 18px 18px 0 0; padding-bottom: env(safe-area-inset-bottom); animation: pl-sheet 0.24s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .pl-modal.pl-sheet { height: 92dvh; }
+  .pl-modal-head { padding-top: var(--s5); position: relative; }
+  .pl-modal-head::before { content: ""; position: absolute; top: 8px; left: 50%; width: 40px; height: 4px; margin-left: -20px; border-radius: 2px; background: var(--sunken-2); }
+  .pl-code-row { grid-template-columns: 1fr; }
+  .pl-code-row > div:last-child { justify-content: flex-start !important; }
+
+  /* 시간표 블록의 분반 고르기 창도 화면 아래 시트로 */
+  .pl-tt-picker { position: fixed; left: 8px !important; right: 8px !important; top: auto !important; bottom: calc(8px + env(safe-area-inset-bottom)); transform: none !important; max-width: none; z-index: 60; }
+  .pl-tt-picker button { padding: var(--s3); }
+}
+@keyframes pl-sheet { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (max-width: 720px) {
+  /* 표가 화면 폭을 넘지 않게 (보이는 칸: 담기 · 과목명 · 펼침). 펼친 분반 줄은 colspan이라 table-layout: fixed를 쓰면 과목명 칸이 좁아짐 */
+  .pl-table .c-add { width: 52px; }
+  .pl-table .c-chev { width: 32px; }
+  .pl-table .c-name { min-width: 0; width: 100%; }
+  .pl-tr-sub td { overflow-wrap: anywhere; }
+  .pl-sections { max-width: calc(100vw - 2 * var(--s4)); }
+
+  /* 펼친 분반: 위에서 아래로 쌓기 (교수 → 시간 → 강의실·정원 → 버튼 두 개) */
+  .pl-sec { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px var(--s2); padding: var(--s3); }
+  .pl-sec-time, .pl-sec-room, .pl-sec-cap, .pl-sec-note { flex-basis: 100%; }
+  .pl-sec-note { margin-top: 0; }
+  .pl-sec-actions { flex-basis: 100%; flex-direction: row !important; margin-top: var(--s2); }
+  .pl-sec-actions .pl-btn { flex: 1; height: 36px; font-size: 13px; }
+}
+
+/* 사용법 투어 (새 화면 디자인) */
+.pl-tour {
+  position: fixed; display: flex; flex-direction: column; gap: var(--s2); padding: var(--s4) var(--s5);
+  background: var(--surface); border-radius: 16px; box-shadow: var(--shadow); color: var(--ink);
+  animation: pl-in 0.2s ease-out both;
+}
+.pl-tour-count { font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: 0.02em; }
+.pl-tour-skip { border: none; background: none; font-size: 13px; color: var(--ink-3); }
+.pl-tour-skip:hover { color: var(--ink); }
+.pl-tour-title { margin: 2px 0 0; font-family: var(--font-head); font-weight: 800; font-size: 18px; letter-spacing: -0.02em; }
+.pl-tour-body { margin: 0; font-size: 14px; line-height: 1.65; color: var(--ink-2); white-space: pre-line; }
+.pl-tour-dot { height: 6px; width: 6px; border-radius: 3px; background: var(--sunken-2); transition: width 0.2s, background-color 0.2s; }
+.pl-tour-dot.on { width: 18px; background: var(--accent); }
+.pl-tour-prev:disabled { opacity: 0; }
+/* 분반 줄 안 버튼은 배경과 구분되게 흰 바탕 */
+.pl-sec-actions .pl-btn:not([aria-pressed="true"]) { background: var(--surface); }
+.pl-sec-actions .pl-btn:not([aria-pressed="true"]):hover { background: var(--sunken-2); }
+
+/* 시간표 위 바로가기 버튼들 (추천 · 검색해서 넣기) */
+.pl-jumps { display: flex; flex-wrap: wrap; gap: var(--s2); }
+.pl-jumps .pl-rec-jump { align-self: auto; }
+.pl-jumps .pl-rec-jump + .pl-rec-jump span { animation: none; }
+.pl-quick { scroll-margin: var(--s6); }

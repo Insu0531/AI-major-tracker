@@ -23,7 +23,7 @@ function sectionMeetsConditions(s: RawSection, c: Conditions) {
 }
 
 /** 개설학과가 내 학과인지 (학과명 앞부분 기준: "전자공학부 인공지능전공" ↔ "전자공학부") */
-function isMyDept(dept: string, labels: string[]) {
+export function isMyDept(dept: string, labels: string[]) {
   const d = dept.replace(/\s/g, "");
   return labels.some((l) => {
     const head = l.replace(/^\[[^\]]+\]/, "").split(/[-\s(]/)[0];
@@ -74,7 +74,8 @@ export default function CourseBrowser(p: Props) {
   const [tags, setTags] = useState<string[]>([]);
   const [credits, setCredits] = useState<number[]>([]);
   const [onlyFree, setOnlyFree] = useState(false);
-  const [filtersOpen, setFiltersOpen] = useState(true);
+  // 넓은 화면은 필터를 펼쳐 두고, 휴대폰은 과목 표가 먼저 보이게 접어 둔다
+  const [filtersOpen, setFiltersOpen] = useState(() => typeof window === "undefined" || window.innerWidth > 720);
   const [limit, setLimit] = useState(PAGE);
   const [openCode, setOpenCode] = useState<string | null>(null);
   const [sort, setSort] = useState<Sort>(null);
@@ -272,7 +273,7 @@ export default function CourseBrowser(p: Props) {
   );
 }
 
-const CourseRow = memo(function CourseRow({
+export const CourseRow = memo(function CourseRow({
   course: c,
   item,
   open,
@@ -353,7 +354,7 @@ const CourseRow = memo(function CourseRow({
                   </div>
                 );
               })}
-              <div className="pl-hint">‘이 분반으로 고정’하면 시간표에 이 분반만 쓰고, ‘이 분반 제외’하면 이 분반은 빼고 만들어요. 아직 안 담은 과목이면 자동으로 담겨요.</div>
+              <div className="pl-hint">‘이 분반으로 고정’하면 이 과목은 시간표에 <b>반드시 이 분반으로</b> 들어가고, ‘이 분반 제외’하면 이 분반은 빼고 만들어요. 아직 안 담은 과목이면 자동으로 담겨요.</div>
             </div>
           </td>
         </tr>

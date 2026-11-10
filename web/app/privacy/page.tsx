@@ -3,8 +3,8 @@ import Link from "next/link";
 import "../planner.css";
 
 export const metadata: Metadata = {
-  title: "개인정보처리방침 · KNU 시간표",
-  description: "KNU 시간표(경북대학교 시간표 마법사)의 개인정보처리방침",
+  title: "개인정보처리방침 · KNU 시간표 마법사",
+  description: "KNU 시간표 마법사의 개인정보처리방침",
 };
 
 const CONTACT = "insu0531@knu.ac.kr";
@@ -26,7 +26,7 @@ export default function PrivacyPage() {
           <p className="pl-hint">시행일: {EFFECTIVE}</p>
 
           <p>
-            KNU 시간표(이하 “서비스”)는 경북대학교 학생이 개설 강좌를 찾아 시간표를 짜도록 돕는 개인 운영 서비스입니다.
+            KNU 시간표 마법사(이하 “서비스”)는 경북대학교 학생이 개설 강좌를 찾아 시간표를 짜도록 돕는 개인 운영 서비스입니다.
             서비스는 로그인 없이 쓸 수 있고, 이 경우 이름·학번·연락처처럼 개인을 직접 알아볼 수 있는 정보를 받지 않습니다.
             <b>구글 계정으로 로그인(선택)</b>하면 보관함 동기화와 친구 기능을 위해 아래 1항의 계정 정보를 처리합니다.
             이 방침은 서비스 이용 중 어떤 정보가 어디에 저장되고 어떻게 쓰이는지 알려 드립니다.

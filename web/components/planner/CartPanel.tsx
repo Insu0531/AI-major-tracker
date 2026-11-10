@@ -90,8 +90,10 @@ export function ConditionsPanel({
             const course = courseByCode.get(i.code);
             if (!course) return null;
             return (
-              <button key={i.code} className="pl-chip" aria-pressed={i.mode === "must"} onClick={() => onSetMode(i.code, i.mode === "must" ? "maybe" : "must")}>
-                {course.name.replace(/\s*\(.*?\)\s*$/, "")}
+              <button key={i.code} className="pl-chip" aria-pressed={i.mode === "must" || !!i.pinned}
+                title={i.pinned ? "분반을 고정한 과목은 항상 들어가요. 빼려면 과목 담기에서 고정을 해제하세요" : undefined}
+                onClick={() => { if (!i.pinned) onSetMode(i.code, i.mode === "must" ? "maybe" : "must"); }}>
+                {course.name.replace(/\s*\(.*?\)\s*$/, "")}{i.pinned ? " · 고정" : ""}
               </button>
             );
           })}

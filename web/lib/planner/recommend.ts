@@ -126,3 +126,29 @@ export function recommendFill({
 }
 
 export const daysText = (slots: Slot[]) => [...new Set(slots.map(([d]) => DAY[d]))].join("");
+
+/**
+ * 후보(점수순) 중에서 n개를 무작위로 고른다. 순위가 높을수록 뽑힐 확률이 높고(가중치 1/(순위+3)),
+ * 같은 seed면 같은 결과 → 화면이 다시 그려질 때마다 바뀌지 않고, "다른 추천 보기"를 눌렀을 때만 바뀐다.
+ */
+export function sampleRecs(pool: Recommendation[], n: number, seed: number): Recommendation[] {
+  let a = seed >>> 0;
+  const rand = () => {
+    a = (a + 0x6d2b79f5) >>> 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+  const left = pool.map((r, i) => ({ r, w: 1 / (i + 3) }));
+  const out: Recommendation[] = [];
+  while (out.length < n && left.length) {
+    let x = rand() * left.reduce((s, o) => s + o.w, 0);
+    let k = 0;
+    while (k < left.length - 1 && (x -= left[k].w) > 0) k++;
+    out.push(left[k].r);
+    left.splice(k, 1);
+  }
+  // 고른 것들은 다시 점수순으로 보여 줌
+  return out.sort((p, q) => q.score - p.score);
+}
