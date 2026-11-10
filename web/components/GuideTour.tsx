@@ -19,12 +19,16 @@ export default function GuideTour({
   run,
   onClose,
   onClose3Days,
+  variant = "classic",
 }: {
   steps: TourStep[];
   run: boolean;
   onClose: () => void;
   onClose3Days?: () => void;
+  /** "planner" = 새 화면(/) 디자인(KNU 레드·사이트 토큰), "classic" = 구버전 그대로 */
+  variant?: "classic" | "planner";
 }) {
+  const pl = variant === "planner";
   const [idx, setIdx] = useState(0);
   const [rect, setRect] = useState<Rect | null>(null);
 
@@ -130,8 +134,9 @@ export default function GuideTour({
             left: rect.left - PAD,
             width: rect.width + PAD * 2,
             height: rect.height + PAD * 2,
-            boxShadow: "0 0 0 9999px rgba(17,24,39,0.62)",
-            border: "2px solid #818cf8",
+            boxShadow: pl ? "0 0 0 9999px oklch(20% 0.01 60 / 0.6)" : "0 0 0 9999px rgba(17,24,39,0.62)",
+            border: pl ? "2px solid var(--accent)" : "2px solid #818cf8",
+            borderRadius: pl ? 12 : undefined,
           }}
         />
       )}
@@ -140,18 +145,18 @@ export default function GuideTour({
 
       {/* 말풍선 */}
       <div
-        className="fixed bg-white rounded-xl shadow-2xl border border-gray-100 p-4 flex flex-col gap-2"
+        className={pl ? "pl-tour" : "fixed bg-white rounded-xl shadow-2xl border border-gray-100 p-4 flex flex-col gap-2"}
         style={{ top: tipTop, left: tipLeft, width: TIP_W }}
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between">
-          <span className="text-xs font-medium text-indigo-500">
+          <span className={pl ? "pl-tour-count" : "text-xs font-medium text-indigo-500"}>
             {idx + 1} / {steps.length}
           </span>
           {!isLast && (
             <button
               onClick={skip}
-              className="text-gray-300 hover:text-gray-500 text-sm leading-none"
+              className={pl ? "pl-tour-skip" : "text-gray-300 hover:text-gray-500 text-sm leading-none"}
               title="건너뛰기 (Esc)"
             >
               건너뛰기 ✕
@@ -159,15 +164,15 @@ export default function GuideTour({
           )}
         </div>
 
-        <h4 className="text-base font-bold text-gray-800">{step.title}</h4>
-        <p className="text-sm text-gray-600 leading-relaxed whitespace-pre-line">{step.body}</p>
+        <h4 className={pl ? "pl-tour-title" : "text-base font-bold text-gray-800"}>{step.title}</h4>
+        <p className={pl ? "pl-tour-body" : "text-sm text-gray-600 leading-relaxed whitespace-pre-line"}>{step.body}</p>
 
         {/* 진행 점 */}
         <div className="flex items-center gap-1 mt-1">
           {steps.map((_, i) => (
             <span
               key={i}
-              className={`h-1.5 rounded-full transition-all ${
+              className={pl ? `pl-tour-dot${i === idx ? " on" : ""}` : `h-1.5 rounded-full transition-all ${
                 i === idx ? "w-4 bg-indigo-500" : "w-1.5 bg-gray-200"
               }`}
             />
@@ -178,13 +183,13 @@ export default function GuideTour({
           <button
             onClick={prev}
             disabled={isFirst}
-            className="text-sm px-3 py-1.5 rounded border border-gray-200 text-gray-500 hover:bg-gray-50 disabled:opacity-0 disabled:cursor-default transition"
+            className={pl ? "pl-btn sm pl-tour-prev" : "text-sm px-3 py-1.5 rounded border border-gray-200 text-gray-500 hover:bg-gray-50 disabled:opacity-0 disabled:cursor-default transition"}
           >
             이전
           </button>
           <button
             onClick={next}
-            className="text-sm px-4 py-1.5 rounded bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition"
+            className={pl ? "pl-btn sm primary" : "text-sm px-4 py-1.5 rounded bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition"}
           >
             {isLast ? "시작하기" : "다음"}
           </button>

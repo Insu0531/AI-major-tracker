@@ -383,17 +383,16 @@ export default function Planner() {
   const majorLabel = st.major ? labelOf(st.major) : "";
   const title = st.sem ? `${semLabel(st.sem)} 시간표` : "시간표";
   /** 지금 시간표 이미지를 카카오톡 피드 카드로 공유 (안 되면 기본 공유 창 → 그것도 안 되면 이미지 저장) */
-  const doKakao = async (items: TimetableItem[] = view?.items ?? [], t = title) => {
+  const doKakao = async (items: TimetableItem[] = view?.items ?? [], cardTitle = title, fileName = title) => {
     if (!items.length) return;
-    const credit = items.reduce((s, i) => s + i.credit, 0);
-    const off = ["월", "화", "수", "목", "금"].filter((_, d) => !items.some((it) => it.slots.some(([dd]) => dd === d)));
     flash("공유할 이미지를 만드는 중이에요");
     try {
       const png = await renderTimetablePng(items);
       const how = await shareTimetableImage(png, {
-        title: `${t} (${credit}학점)`,
-        description: [majorLabel, off.length ? `공강 ${off.join("·")}` : "", "KNU 시간표에서 만들었어요"].filter(Boolean).join(" · "),
-        fileName: t,
+        // 카드: "2026년 2학기 시간표" / "전공 · KNU 시간표 마법사에서 만들었어요"
+        title: cardTitle,
+        description: [majorLabel, "KNU 시간표 마법사에서 만들었어요"].filter(Boolean).join(" · "),
+        fileName,
       });
       track("timetable_shared", { how, courses: items.length });
       if (how === "download") { await doImage(items); flash("공유할 수 없어 이미지로 저장했어요"); }
@@ -545,7 +544,7 @@ export default function Planner() {
         )}
         <button className="pl-btn sm" onClick={() => setPreview(p)}>보기</button>
         <button className="pl-btn sm" onClick={() => setRenaming({ id: p.id, name: p.name })}>이름 수정</button>
-        <button className="pl-btn sm pl-kakao" onClick={() => { track("saved_shared"); void doKakao(p.items, p.name); }}>카톡 공유</button>
+        <button className="pl-btn sm pl-kakao" onClick={() => { track("saved_shared"); void doKakao(p.items, `${semLabel(p.sem)} 시간표`, p.name); }}>카톡 공유</button>
         <button className="pl-btn sm" onClick={() => doDelete(p)}>삭제</button>
       </div>
     </div>
@@ -561,7 +560,7 @@ export default function Planner() {
   return (
     <div className="pl">
       <header className="pl-top">
-        <div className="pl-brand">KNU <span>시간표</span></div>
+        <div className="pl-brand">KNU <span>시간표 마법사</span></div>
         <nav className="pl-steps" aria-label="단계">
           {([[1, "내 정보"], [2, "과목 담기"], [3, "시간표"]] as const).map(([n, label], i) => (
             <div key={n} style={{ display: "flex", alignItems: "center" }}>
@@ -577,7 +576,7 @@ export default function Planner() {
             ? <button className="pl-btn ghost" onClick={() => { setModal("friends"); track("friends_opened"); }}>친구</button>
             : <button className="pl-btn ghost" onClick={() => { track("login_clicked"); void signInWithGoogle(); }}>구글 로그인</button>)
             : (
-              <button className="pl-btn ghost pl-soon" aria-disabled="true" title="구글 로그인 · 친구 시간표 기능을 준비하고 있어요"
+              <button className="pl-btn ghost pl-soon pl-hide-mobile" aria-disabled="true" title="구글 로그인 · 친구 시간표 기능을 준비하고 있어요"
                 onClick={() => { flash("구글 로그인과 친구 기능은 준비 중이에요"); track("soon_clicked", { feature: "account" }); }}>
                 로그인 · 친구 <span className="pl-soon-badge">준비 중</span>
               </button>
@@ -597,6 +596,9 @@ export default function Planner() {
                       </div>
                     )}
                     {step > 1 && <button onClick={() => { setMenuOpen(false); setTour(true); }}>사용법 보기</button>}
+                    {!accountsEnabled() && (
+                      <button className="pl-show-mobile" onClick={() => { setMenuOpen(false); flash("구글 로그인과 친구 기능은 준비 중이에요"); }}>로그인 · 친구 (준비 중)</button>
+                    )}
                     <button onClick={() => { setMenuOpen(false); setSheet("calendar"); track("menu_calendar"); }}>학사일정</button>
                     <button onClick={() => { setMenuOpen(false); setSheet("feedback"); track("menu_feedback"); }}>피드백 · 응원</button>
                     <button onClick={() => { setMenuOpen(false); shareToKakao(); track("kakao_share"); }}>카카오톡으로 공유</button>
@@ -707,7 +709,7 @@ export default function Planner() {
           <div className="pl-bar" data-tour="next">
             <button className="pl-bar-summary" onClick={() => setModal("cart")}>
               <b>{cart.length}과목 담음</b>
-              <div className="pl-hint">최대 {cartCredit(cart, courseByCode)}학점 · 겹치지 않게 최대한 넣어 드려요</div>
+              <div className="pl-hint">최대 {cartCredit(cart, courseByCode)}학점<span className="pl-hide-mobile"> · 겹치지 않게 최대한 넣어 드려요</span></div>
             </button>
             <button className="pl-btn primary lg" disabled={cart.length === 0} onClick={() => goStep(3)}>시간표 보기</button>
           </div>
@@ -907,7 +909,7 @@ export default function Planner() {
                       <div style={{ display: "flex", gap: 6 }}>
                         <button className="pl-btn" onClick={() => setPreview(null)}>목록</button>
                         <button className="pl-btn primary" style={{ flex: 1 }} onClick={() => doImage(preview.items, preview.name)}>이미지 저장</button>
-                        <button className="pl-btn pl-kakao" style={{ flex: 1 }} onClick={() => { track("saved_shared"); void doKakao(preview.items, preview.name); }}>카톡 공유</button>
+                        <button className="pl-btn pl-kakao" style={{ flex: 1 }} onClick={() => { track("saved_shared"); void doKakao(preview.items, `${semLabel(preview.sem)} 시간표`, preview.name); }}>카톡 공유</button>
                       </div>
                     </>
                   ) : plans.length + cloudPlans.length === 0 ? (
@@ -943,7 +945,7 @@ export default function Planner() {
           </div>
         </div>
       )}
-      <GuideTour steps={step === 3 ? TOUR_3 : TOUR_2} run={tour && step > 1} onClose={() => { setTour(false); writeLocal(TOUR_KEY, Date.now()); }} />
+      <GuideTour variant="planner" steps={step === 3 ? TOUR_3 : TOUR_2} run={tour && step > 1} onClose={() => { setTour(false); writeLocal(TOUR_KEY, Date.now()); }} />
       {toastMsg && <div className="pl-toast" role="status">{toastMsg}</div>}
     </div>
   );

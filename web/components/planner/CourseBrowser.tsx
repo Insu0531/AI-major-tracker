@@ -74,7 +74,8 @@ export default function CourseBrowser(p: Props) {
   const [tags, setTags] = useState<string[]>([]);
   const [credits, setCredits] = useState<number[]>([]);
   const [onlyFree, setOnlyFree] = useState(false);
-  const [filtersOpen, setFiltersOpen] = useState(true);
+  // 넓은 화면은 필터를 펼쳐 두고, 휴대폰은 과목 표가 먼저 보이게 접어 둔다
+  const [filtersOpen, setFiltersOpen] = useState(() => typeof window === "undefined" || window.innerWidth > 720);
   const [limit, setLimit] = useState(PAGE);
   const [openCode, setOpenCode] = useState<string | null>(null);
   const [sort, setSort] = useState<Sort>(null);

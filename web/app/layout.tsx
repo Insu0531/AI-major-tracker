@@ -4,8 +4,8 @@ import KakaoInit from "@/components/KakaoInit";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "경북대학교 시간표 마법사",
-  description: "경북대학교 시간표 마법사",
+  title: "KNU 시간표 마법사",
+  description: "경북대학교 학생을 위한 시간표 자동 생성 서비스, KNU 시간표 마법사",
 };
 
 export default function RootLayout({

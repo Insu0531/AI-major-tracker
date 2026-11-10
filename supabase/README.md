@@ -12,7 +12,7 @@
 
 ## 2. 구글 로그인 키 만들기 (Google Cloud Console)
 1. https://console.cloud.google.com → 프로젝트 만들기 (예: knu-timetable)
-2. **API 및 서비스 → OAuth 동의 화면**: 외부(External), 앱 이름 "KNU 시간표", 지원 이메일, 개발자 연락처 입력 → 저장
+2. **API 및 서비스 → OAuth 동의 화면**: 외부(External), 앱 이름 "KNU 시간표 마법사", 지원 이메일, 개발자 연락처 입력 → 저장
    - 범위(Scopes)는 기본(email, profile, openid)만
    - 게시 상태를 **프로덕션으로 게시**해야 아무 구글 계정이나 로그인 가능 (테스트 상태면 등록한 테스트 사용자만)
 3. **사용자 인증 정보 → 사용자 인증 정보 만들기 → OAuth 클라이언트 ID**

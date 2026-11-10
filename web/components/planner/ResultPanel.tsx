@@ -96,7 +96,7 @@ export default function ResultPanel({
           <button className="pl-btn" onClick={onSave}>보관함에 저장</button>
           <button className="pl-btn" onClick={onCodes}>수강신청 코드</button>
           {onBulk && (
-            <button className="pl-btn ghost" onClick={onBulk} disabled={bulkProgress !== null}>
+            <button className="pl-btn ghost pl-hide-mobile" onClick={onBulk} disabled={bulkProgress !== null}>
               {bulkProgress !== null ? `저장 중 ${bulkProgress}/${results.length}` : `전체 이미지 저장 (${results.length})`}
             </button>
           )}
