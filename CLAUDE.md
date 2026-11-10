@@ -246,6 +246,31 @@ SavedTimetable = { id, name, savedAt, sem: "2026-1", major, majorLabel, entryYea
 - Web Worker로 이동, 30분 단위 요일 비트마스크 충돌검사, 백트래킹 + 필터 조기 가지치기, 정렬 점수 기준 상위 K개만 유지(전수 보관 금지).
 - 정렬 기준 후보: 공강일 수, 첫 수업 시작 시각, 마지막 수업 종료 시각, 우주공강(빈 시간) 총합, 총 학점/목표 학점 근접, 하루 최대 연강, 경쟁률(신청/정원).
 
+### `/new` 통합 시간표 검색 (1차 구현, 2026-11-10)
+기존 화면(`/`)은 그대로 두고 새 화면을 `/new`에 병행. 전공/교양/교직 마법사 3단계 → **한 화면 + 필수/후보 담기**.
+```
+web/app/new/page.tsx            ssr:false로 Planner 로드 (localStorage 초기값 사용 때문)
+web/app/new/layout.tsx          메타데이터 + Pretendard(CDN)
+web/app/new/planner.css         전용 디자인 토큰(.pl 스코프, 다크 = html.dark), 기존 globals.css의 !important 다크 오버라이드와 분리
+web/components/planner/
+  Planner.tsx       상태(학기·학과·학번·복수전공·장바구니·조건 → localStorage `knu_planner_state_v1`), Worker 호출, 모달(코드/저장/보관함)
+  CourseBrowser.tsx 과목 담기: 검색 + 구분칩(내 전공/복수전공/교양/교직/일반선택/타학과) + 필터(학년·학점·특성·캠퍼스·대학원) + "빈 시간에 맞는 것만"
+  CartPanel.tsx     담은 과목(필수/후보 전환) + 학점 범위·공강 요일·시간대·피할 교수 + 정렬
+  ResultPanel.tsx   결과 목록 + 선택 시간표 + 이미지/보관함/수강신청 코드
+  Timetable.tsx, MajorPicker.tsx
+web/lib/planner/
+  types.ts          RawSection/Course/CartItem/Conditions/Engine* 타입
+  data.ts           스냅샷·이수체계 로드, 과목 분류(categorize), 엔진 입력 생성(같은 시간 분반 = 1 선택지), 과목코드별 고정 색
+  engine.ts         조합 엔진: 요일별 32bit 마스크(07~23시, 30분 단위), 백트래킹, 학점 가지치기, "더 넣을 수 있는 후보가 남은 조합" 제외, 정렬 기준 상위 300개 힙, 노드 400만 상한(truncated)
+  engine.worker.ts  Web Worker 래퍼
+  exportImage.ts    exportTimetable({title, items}) — 캔버스로 직접 그려 PNG 저장 (DOM 캡처 없음)
+  storage.ts        localStorage 래퍼(try/catch), 보관함 `knu_planner_saved_v1`
+```
+- 규칙: 대학원 과목·상주/동인동 캠퍼스는 필터(기본: 대학원 숨김, 상주 학과면 상주만·아니면 산격동+동인동). 기본 최대 21학점.
+- 결과는 계산에 쓴 groups와 함께 저장한다 (담은 과목이 바뀌는 사이 이전 결과의 picks가 새 groups와 어긋나 크래시 났던 버그 방지).
+- 검증: `npx next build` 후 `next start` + Playwright로 담기→결과→정렬→공강필터→이미지→새로고침 유지, 데스크톱 1440/모바일 390 확인.
+- 남은 일: 이수체계 전 학과 자동 수집, GitHub Actions 수집 cron, PostHog, 보관함 이전(기존 `knu_saved_timetables`), 학사일정/피드백 이식, `/new` → `/` 교체.
+
 ### 기타
 - 이미지 저장: DOM 캡처 대신 데이터로 직접 그리는 단일 `exportTimetable(combo, options)` 함수. 교수 선택은 저장 시 모달이 아니라 과목 담을 때 처리.
 - 레이아웃: PC/태블릿 3패널(조건 | 과목 풀 | 결과), 모바일은 "담기 → 결과" 2단계 + 바텀시트.
