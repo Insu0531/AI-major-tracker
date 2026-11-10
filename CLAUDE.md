@@ -274,6 +274,12 @@ SavedTimetable = { id, name, savedAt, sem: "2026-1", major, majorLabel, entryYea
   초대 링크 `/?invite=코드` → localStorage `knu_pending_invite`에 기억 → 로그인 후 자동 수락. 이 브라우저 보관함은 "계정으로 옮기기"(기존 사이트 저장본은 원본 유지, `knu_planner_migrated_v1`로 숨김).
 - 범위: 로그인·동기화·대표 시간표·친구 추가/보기/삭제·탈퇴. 공강 맞추기는 이번 범위 아님. 친구에게는 과목명·시간·교수님만(사용자 결정).
 
+### 카톡 공유 (시간표 이미지)
+- 결과 화면 [카톡 공유]: `renderTimetablePng()`(exportImage.ts, 이미지 저장과 같은 그림) → `shareTimetableImage()`(kakaoShare.ts)
+  1) Kakao SDK `Share.uploadImage`로 카카오 서버에 올리고 `sendDefault` feed 카드(제목·학점·공강·"나도 시간표 짜기" 버튼)
+  2) 실패 시 `navigator.share({files})`(휴대폰 공유 창) 3) 그것도 안 되면 이미지 다운로드.
+- 분반 미선택 과목이 있으면 이미지 저장처럼 "분반 고르고 공유" 창 먼저. 카카오 개발자 콘솔에 사이트 도메인이 등록돼 있어야 함(기존 공유 버튼과 같은 앱 키). 메뉴의 "카카오톡으로 공유"는 사이트 소개(텍스트) 공유.
+
 ### 빈 시간 교양 추천 (`lib/planner/recommend.ts`)
 - 3단계 시간표 아래 "이 시간표 빈 시간에 넣기 좋은 교양" 최대 8개. 규칙 점수: 공강 요일 유지 +30(새 평일 -15, 새 주말 -25), 앞뒤 수업과 이어짐 +10, 2시간 넘는 공강 생기면 -10, 9시 전 -8/18시 후 -6, 정원 여유 (1-신청/정원)×10, SDG·인문교양 +3. 같은 시간대는 최대 2개.
 - "이 분반 넣기" = 그 분반으로 고정 + 꼭 넣을 과목으로 담음. 이벤트 `rec_added`.

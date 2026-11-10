@@ -492,3 +492,6 @@
 .pl-rec-jump b { font-weight: 800; }
 @keyframes pl-nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
 .pl-recs { scroll-margin-top: var(--s4); }
+/* 카톡 공유 (카카오 노랑은 버튼 하나에만) */
+.pl-btn.pl-kakao { background: #fee500; color: #191600; }
+.pl-btn.pl-kakao:hover:not(:disabled) { background: #f5dc00; }

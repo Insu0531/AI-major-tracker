@@ -43,19 +43,9 @@ function wrap(ctx: CanvasRenderingContext2D, text: string, width: number): strin
  *   요일 머리줄 60 · 시간 열 62 · 요일 칸 214 · 1시간 135 → 월~금, 9~18시면 1132 × 1275
  *   토요일 수업이 있으면 칸이 하나 늘고, 9시 이전·18시 이후 수업이 있으면 위아래로 늘어난다.
  * 모양(색·서체·블록)은 사이트 화면과 같게: 밝은 배경, 옅은 격자, 둥근 블록, Pretendard.
- * 시간 미정 과목이 있으면 아래에 한 줄씩 덧붙인다. title은 파일 이름에만 쓴다.
+ * 시간 미정 과목이 있으면 아래에 한 줄씩 덧붙인다. (이미지에 제목은 넣지 않는다 — 규격 유지)
  */
-export async function exportTimetable({
-  title,
-  items,
-  fileName,
-}: {
-  title: string;
-  subtitle?: string;
-  items: TimetableItem[];
-  fileName?: string;
-  dark?: boolean;
-}): Promise<void> {
+export async function renderTimetablePng(items: TimetableItem[]): Promise<Blob> {
   const HEAD = 60, LABEL = 62, COL = 214, HOUR = 135, GAP = 3, RADIUS = 12;
   // 사이트 토큰과 같은 색 (planner.css: --surface, --line, --ink-2, --ink-3)
   const C = { bg: "#fdfcfa", line: "#e6e3dc", half: "#f0eee9", head: "#4b4842", hour: "#7c7973", text: "#ffffff", sub: "#4b4842" };
@@ -149,6 +139,22 @@ export async function exportTimetable({
 
   const blob = await new Promise<Blob | null>((r) => canvas.toBlob(r, "image/png"));
   if (!blob) throw new Error("이미지를 만들지 못했어요");
+  return blob;
+}
+
+/** 이미지 저장(다운로드). exportTimetable({ title, items }) 한 줄이면 끝. */
+export async function exportTimetable({
+  title,
+  items,
+  fileName,
+}: {
+  title: string;
+  subtitle?: string;
+  items: TimetableItem[];
+  fileName?: string;
+  dark?: boolean;
+}): Promise<void> {
+  const blob = await renderTimetablePng(items);
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
