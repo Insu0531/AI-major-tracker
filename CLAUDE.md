@@ -3,7 +3,7 @@
 > 서비스명은 **KNU 시간표 마법사** (2026-11-11 통일). 헤더·메타데이터·개인정보처리방침·카톡 공유·구버전 헤더 모두 이 이름.
 
 KNU 학생이 **전공·학번·학기**를 고르면 개설 분반을 조회하고, 선택한 과목으로 **충돌 없는 시간표 조합을 자동 생성**해 주는 웹앱.
-전공 → 교양 → 교직 순으로 "고정 후 빈 시간 채우기" 단계형 마법사 구조. 배포: https://knu-class-wizard.vercel.app (Vercel)
+전공 → 교양 → 교직 순으로 "고정 후 빈 시간 채우기" 단계형 마법사 구조. 배포: https://knuclass.vercel.app (Vercel)
 
 > 레포 이름(AI-major-tracker)과 루트 README는 초기 Python/Tk 버전("인공지능전공 개설 여부 확인") 시절 이름이다. 실제 서비스 코드는 `web/` 아래에 있다.
 > `web/CLAUDE.md` → `web/AGENTS.md`: **Next.js 16은 학습 데이터와 API가 다를 수 있으니, 코드 작성 전에 `web/node_modules/next/dist/docs/`를 확인할 것.**
@@ -286,7 +286,7 @@ SavedTimetable = { id, name, savedAt, sem: "2026-1", major, majorLabel, entryYea
 - 결과 화면 [카톡 공유]: `renderTimetablePng()`(exportImage.ts, 이미지 저장과 같은 그림) → `shareTimetableImage()`(kakaoShare.ts)
   1) Kakao SDK `Share.uploadImage`로 카카오 서버에 올리고 `sendDefault` feed 카드(제목 "2026년 2학기 시간표" · 설명 두 줄 "전공" / "KNU 시간표 마법사에서 만들었어요" · "나도 시간표 짜기" 버튼)
   2) 실패 시 `navigator.share({files})`(휴대폰 공유 창) 3) 그것도 안 되면 이미지 다운로드.
-- 분반 미선택 과목이 있으면 이미지 저장처럼 "분반 고르고 공유" 창 먼저. 카카오 개발자 콘솔에 사이트 도메인이 등록돼 있어야 함(기존 공유 버튼과 같은 앱 키). 메뉴의 "카카오톡으로 공유"는 사이트 소개(텍스트) 공유.
+- 분반 미선택 과목이 있으면 이미지 저장처럼 "분반 고르고 공유" 창 먼저. 카카오 개발자 콘솔에 사이트 도메인(`https://knuclass.vercel.app`)이 등록돼 있어야 함(기존 공유 버튼과 같은 앱 키). 공유 링크 주소는 `kakaoShare.ts`의 `SITE_URL`. 메뉴의 "카카오톡으로 공유"는 사이트 소개(텍스트) 공유.
 
 ### 새로고침 · 저장 상태 (2026-11-11, 사용자 요청)
 - 새로고침하면 **담은 과목·조건·단계는 초기화**, 내 정보(학기·학과·학번·복수전공·캠퍼스·대학원·정원 필터)만 localStorage에 남김(`KEEP_ON_RELOAD`/`pickProfile`).

@@ -24,8 +24,8 @@
 ## 3. Supabase에 구글 연결
 1. Supabase → **Authentication → Providers → Google** → Enable, 위 ID·비밀번호 붙여 넣기 → Save
 2. **Authentication → URL Configuration**
-   - Site URL: `https://knu-class-wizard.vercel.app`
-   - Redirect URLs에 추가: `https://knu-class-wizard.vercel.app/`, `http://localhost:3000/`, `https://*-insu0531.vercel.app/` (미리보기 배포용)
+   - Site URL: `https://knuclass.vercel.app`
+   - Redirect URLs에 추가: `https://knuclass.vercel.app/`, `http://localhost:3000/`, `https://*-insu0531.vercel.app/` (미리보기 배포용)
 
 ## 4. Vercel 환경변수
 Supabase → **Project Settings → API** 에서 복사해 Vercel → Settings → Environment Variables 에 추가 → Redeploy

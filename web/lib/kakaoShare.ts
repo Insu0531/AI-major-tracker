@@ -2,7 +2,7 @@
 export const KAKAO_JS_KEY = "07a79b3fad293703357001660a68ce13";
 
 // 실제 배포 도메인과 다르면 이 상수만 수정
-export const SITE_URL = "https://knu-class-wizard.vercel.app";
+export const SITE_URL = "https://knuclass.vercel.app";
 
 declare global {
   interface Window {
