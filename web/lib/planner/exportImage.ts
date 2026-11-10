@@ -1,5 +1,5 @@
 import type { Slot } from "./types";
-import { mergeSlots } from "./data";
+import { mergeSlots, textOn } from "./data";
 
 export type TimetableItem = {
   code: string;
@@ -114,7 +114,7 @@ export async function exportTimetable({
       ctx.beginPath(); ctx.roundRect(x, y, w, h, 4); ctx.fill();
       ctx.save();
       ctx.beginPath(); ctx.rect(x, y, w, h); ctx.clip();
-      ctx.fillStyle = "#ffffff";
+      ctx.fillStyle = textOn(it.color);
       ctx.font = font(700, 15);
       let ty = y + 8;
       for (const line of wrap(ctx, it.name, w - 14).slice(0, 3)) { ctx.fillText(line, x + 7, ty); ty += 19; }

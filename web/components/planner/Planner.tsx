@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { MAJOR_LABELS, ENTRY_YEAR_MIN, type Major } from "@/lib/courses";
-import { buildCourses, buildEngineGroups, colorFor, loadCurriculum, loadIndex, loadSnapshot, type SectionFilter } from "@/lib/planner/data";
+import { buildCourses, buildEngineGroups, colorAt, loadCurriculum, loadIndex, loadSnapshot, type SectionFilter } from "@/lib/planner/data";
 import { exportTimetable, type TimetableItem } from "@/lib/planner/exportImage";
 import { deletePlan, loadPlans, readLocal, renamePlan, savePlan, writeLocal, type SavedPlan } from "@/lib/planner/storage";
 import { trackSave } from "@/lib/trackSave";
@@ -11,7 +11,7 @@ import { shareToKakao } from "@/lib/kakaoShare";
 import GuideTour, { type TourStep } from "@/components/GuideTour";
 import AcademicCalendarTab from "@/components/AcademicCalendarTab";
 import FeedbackTab from "@/components/FeedbackTab";
-import { DEFAULT_CONDITIONS, type CartItem, type CartMode, type Conditions, type EngineGroup, type EngineResponse, type Slot, type Snapshot, type SnapshotIndex } from "@/lib/planner/types";
+import { DEFAULT_CONDITIONS, SORT_LABEL, type CartItem, type CartMode, type Conditions, type EngineGroup, type EngineResponse, type Slot, type Snapshot, type SnapshotIndex } from "@/lib/planner/types";
 import MajorPicker from "@/components/planner/MajorPicker";
 import CourseBrowser from "@/components/planner/CourseBrowser";
 import { CartList, ConditionsPanel, cartCredit } from "@/components/planner/CartPanel";
@@ -63,7 +63,12 @@ const INITIAL: Persisted = {
 
 function loadPersisted(): Persisted {
   const saved = readLocal<Partial<Persisted>>(STATE_KEY, {});
-  return { ...INITIAL, ...saved, conditions: { ...DEFAULT_CONDITIONS, ...saved.conditions } };
+  const conditions = { ...DEFAULT_CONDITIONS, ...saved.conditions };
+  // 화면에서 뺀 조건(수업 시간대·경쟁률 정렬)이 예전 저장값으로 몰래 걸려 있지 않게 초기화
+  conditions.startAfter = 0;
+  conditions.endBefore = 0;
+  if (!(conditions.sort in SORT_LABEL)) conditions.sort = "recommended";
+  return { ...INITIAL, ...saved, conditions };
 }
 
 const EMPTY_MAP = new Map<string, string>();
@@ -135,6 +140,9 @@ export default function Planner() {
   const sectionFilter: SectionFilter = useMemo(() => ({ campuses: st.campuses }), [st.campuses]);
   const cart = useMemo(() => st.cart.filter((i) => courseByCode.has(i.code)), [st.cart, courseByCode]);
   const groups = useMemo(() => buildEngineGroups(cart, courseByCode, sectionFilter), [cart, courseByCode, sectionFilter]);
+  // 색은 담은 순서대로 (한 시간표 안에서 같은 색이 나오지 않게)
+  const colorIndex = useMemo(() => new Map(st.cart.map((c, i) => [c.code, i])), [st.cart]);
+  const colorOf = useCallback((code: string) => colorAt(colorIndex.get(code) ?? 0), [colorIndex]);
 
   /* ── 조합 계산 (Web Worker) ── */
   const workerRef = useRef<Worker | null>(null);
@@ -208,7 +216,7 @@ export default function Planner() {
         name: g.name,
         credit: g.credit,
         slots: opt.slots,
-        color: colorFor(g.code),
+        color: colorOf(g.code),
         prof: decided ? chosen.profs.join(", ") : `${chosen.profs[0] ?? ""} 외 ${list.length - 1}분반`,
         room: decided ? chosen.room : "",
         sectionIds: decided ? [chosen.id] : list.map((s) => s.id),
@@ -217,7 +225,7 @@ export default function Planner() {
       });
     });
     return items;
-  }, [results, resGroups, profPick, st.conditions.excludeProfs]);
+  }, [results, resGroups, profPick, st.conditions.excludeProfs, colorOf]);
   const view: ResultView | null = useMemo(() => (results[selIdx] ? { items: itemsFor(selIdx) } : null), [results, selIdx, itemsFor]);
 
   /* 3단계: ← → 키로 시간표 넘기기 */
@@ -412,7 +420,7 @@ export default function Planner() {
             <aside className="pl-cart-side">
               <div className="pl-cart-head"><h2>담은 과목</h2></div>
               <div className="pl-scroll">
-                <CartList cart={cart} courseByCode={courseByCode} onSetMode={setMode} onClear={() => update({ cart: [] })} />
+                <CartList cart={cart} courseByCode={courseByCode} colorOf={colorOf} onSetMode={setMode} onClear={() => update({ cart: [] })} />
               </div>
             </aside>
           </div>
@@ -491,7 +499,7 @@ export default function Planner() {
               <>
                 <div className="pl-modal-head"><h3>담은 과목 {cart.length}</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
                 <div className="pl-modal-body" style={{ padding: 0 }}>
-                  <CartList cart={cart} courseByCode={courseByCode} onSetMode={setMode} onClear={() => update({ cart: [] })} />
+                  <CartList cart={cart} courseByCode={courseByCode} colorOf={colorOf} onSetMode={setMode} onClear={() => update({ cart: [] })} />
                 </div>
               </>
             )}

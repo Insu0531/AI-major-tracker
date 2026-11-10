@@ -76,7 +76,7 @@ export type CartItem = {
   excluded: string[];
 };
 
-export type SortKey = "recommended" | "freeDays" | "lateStart" | "earlyEnd" | "gaps" | "competition" | "credit";
+export type SortKey = "recommended" | "freeDays" | "lateStart" | "earlyEnd" | "gaps" | "credit";
 
 export const SORT_LABEL: Record<SortKey, string> = {
   recommended: "추천순",
@@ -84,7 +84,6 @@ export const SORT_LABEL: Record<SortKey, string> = {
   lateStart: "늦게 시작",
   earlyEnd: "일찍 끝남",
   gaps: "빈 시간 적은 순",
-  competition: "경쟁률 낮은 순",
   credit: "학점 높은 순",
 };
 

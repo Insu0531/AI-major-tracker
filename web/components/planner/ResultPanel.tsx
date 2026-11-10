@@ -1,6 +1,6 @@
 "use client";
 
-import { DAY_NAMES, fmtMin } from "@/lib/planner/data";
+import { DAY_NAMES } from "@/lib/planner/data";
 import type { TimetableItem } from "@/lib/planner/exportImage";
 import type { EngineResponse } from "@/lib/planner/types";
 import Timetable from "./Timetable";
@@ -71,8 +71,6 @@ export default function ResultPanel({
           <div className="pl-stats">
             <span><b>{m.credit}</b>학점</span>
             <span>공강 <b>{offDays.length ? offDays.join("·") : "없음"}</b></span>
-            <span><b>{fmtMin(m.avgStart)}~{fmtMin(m.avgEnd)}</b> (평균)</span>
-            {m.competition > 0 && <span>경쟁률 <b>{m.competition.toFixed(2)}</b></span>}
           </div>
         </div>
         <div className="pl-actions" data-tour="actions">

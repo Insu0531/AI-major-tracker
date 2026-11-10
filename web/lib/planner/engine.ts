@@ -89,7 +89,6 @@ export function compareMetrics(a: ComboMetrics, b: ComboMetrics, sort: SortKey):
     case "lateStart": return by(b.avgStart - a.avgStart, a.gapMinutes - b.gapMinutes);
     case "earlyEnd": return by(a.avgEnd - b.avgEnd, a.gapMinutes - b.gapMinutes);
     case "gaps": return by(a.gapMinutes - b.gapMinutes, b.freeDays - a.freeDays);
-    case "competition": return by(a.competition - b.competition, b.credit - a.credit);
     case "credit": return by(b.credit - a.credit, b.freeDays - a.freeDays, a.gapMinutes - b.gapMinutes);
     case "recommended":
     default: return by(recommendScore(b) - recommendScore(a));

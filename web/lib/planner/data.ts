@@ -132,8 +132,24 @@ export function formatSlots(slots: [number, number, number][]): string {
   return [...byTime.entries()].map(([t, ds]) => `${ds.map((d) => DAY_NAMES[d]).join("·")} ${t}`).join(", ");
 }
 
-/** 과목코드별 고정 색 (조합이 바뀌어도 같은 과목은 같은 색) */
-const PALETTE = ["#4f6d8f", "#b0703a", "#9c4b48", "#55827a", "#6a7a3f", "#a88f3d", "#76607e", "#b8737d", "#6f5c4c", "#56697a", "#83864a", "#4d6857"];
+/** 시간표 블록 색: 밝고 선명하되 형광은 피한 12색. 담은 순서대로 배정해 한 시간표 안에서 겹치지 않게 한다. */
+export const PALETTE = [
+  "#f0715d", "#f4a23a", "#f2cd4f", "#82c96f", "#3fbc9f", "#4cb2e6",
+  "#5d88ee", "#8f7bea", "#c879dc", "#ee7ba8", "#a9bf4b", "#e9935e",
+];
+export const colorAt = (i: number) => PALETTE[((i % PALETTE.length) + PALETTE.length) % PALETTE.length];
+
+/** 배경색에 맞는 글자색 (밝은 블록은 어두운 글씨) */
+export function textOn(hex: string): string {
+  const n = parseInt(hex.slice(1), 16);
+  const [r, g, b] = [(n >> 16) & 255, (n >> 8) & 255, n & 255].map((v) => {
+    const c = v / 255;
+    return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
+  });
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b > 0.42 ? "#2a2722" : "#ffffff";
+}
+
+/** 담은 순서가 없을 때(보관함 등) 쓰는 과목코드 기반 색 */
 export function colorFor(code: string): string {
   let h = 0;
   for (let i = 0; i < code.length; i++) h = (h * 31 + code.charCodeAt(i)) >>> 0;

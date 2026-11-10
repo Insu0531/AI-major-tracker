@@ -4,9 +4,6 @@ import { useMemo, useState } from "react";
 import { colorFor, DAY_NAMES } from "@/lib/planner/data";
 import { SORT_LABEL, type CartItem, type CartMode, type Conditions, type Course, type SortKey } from "@/lib/planner/types";
 
-const HOURS_START = [0, 9, 10, 11, 12, 13];
-const HOURS_END = [0, 15, 16, 17, 18, 19, 20];
-
 export function cartCredit(items: CartItem[], courseByCode: Map<string, Course>) {
   return items.reduce((s, i) => s + (courseByCode.get(i.code)?.credit ?? 0), 0);
 }
@@ -17,11 +14,13 @@ export function CartList({
   courseByCode,
   onSetMode,
   onClear,
+  colorOf = colorFor,
 }: {
   cart: CartItem[];
   courseByCode: Map<string, Course>;
   onSetMode: (code: string, mode: CartMode | null) => void;
   onClear?: () => void;
+  colorOf?: (code: string) => string;
 }) {
   if (cart.length === 0) {
     return <div className="pl-empty">아직 담은 과목이 없어요.<br />목록에서 <b>담기</b>를 눌러 보세요.</div>;
@@ -35,7 +34,7 @@ export function CartList({
         const notes = [i.mode === "must" ? "꼭 넣기" : "", i.pinned ? "분반 고정" : "", i.excluded.length ? `${i.excluded.length}개 분반 제외` : ""].filter(Boolean);
         return (
           <div key={i.code} className="pl-cart-item">
-            <span className="pl-swatch" style={{ background: colorFor(i.code) }} />
+            <span className="pl-swatch" style={{ background: colorOf(i.code) }} />
             <div className="pl-cart-name">
               <div title={course.name}>{course.name}</div>
               <div className="pl-hint">{[`${course.credit}학점`, ...notes].join(" · ")}</div>
@@ -120,18 +119,6 @@ export function ConditionsPanel({
             <button key={d} className="pl-chip" aria-pressed={c.daysOff.includes(i)}
               onClick={() => set({ daysOff: c.daysOff.includes(i) ? c.daysOff.filter((x) => x !== i) : [...c.daysOff, i] })}>{d}</button>
           ))}
-        </div>
-      </div>
-
-      <div className="pl-cond-block">
-        <div className="pl-label">수업 시간</div>
-        <div className="pl-grid2">
-          <select className="pl-select" value={c.startAfter} onChange={(e) => set({ startAfter: +e.target.value })} aria-label="시작 시각">
-            {HOURS_START.map((h) => <option key={h} value={h * 60}>{h ? `${h}시 이후 시작` : "시작 제한 없음"}</option>)}
-          </select>
-          <select className="pl-select" value={c.endBefore} onChange={(e) => set({ endBefore: +e.target.value })} aria-label="종료 시각">
-            {HOURS_END.map((h) => <option key={h} value={h * 60}>{h ? `${h}시 전에 끝` : "종료 제한 없음"}</option>)}
-          </select>
         </div>
       </div>
 
