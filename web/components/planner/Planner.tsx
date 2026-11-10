@@ -389,9 +389,9 @@ export default function Planner() {
     try {
       const png = await renderTimetablePng(items);
       const how = await shareTimetableImage(png, {
-        // 카드: "2026년 2학기 시간표" / "전공 · KNU 시간표 마법사에서 만들었어요"
+        // 카드: 제목 "2026년 2학기 시간표", 설명은 두 줄 — "전자공학부 인공지능전공" / "KNU 시간표 마법사에서 만들었어요"
         title: cardTitle,
-        description: [majorLabel, "KNU 시간표 마법사에서 만들었어요"].filter(Boolean).join(" · "),
+        description: [majorLabel, "KNU 시간표 마법사에서 만들었어요"].filter(Boolean).join("\n"),
         fileName,
       });
       track("timetable_shared", { how, courses: items.length });
