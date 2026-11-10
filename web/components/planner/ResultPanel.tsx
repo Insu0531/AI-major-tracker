@@ -7,7 +7,7 @@ import type { EngineResponse } from "@/lib/planner/types";
 import Timetable from "./Timetable";
 
 export type ResultView = {
-  items: (TimetableItem & { sectionIds: string[]; options: { id: string; prof: string }[]; chosen: string })[];
+  items: (TimetableItem & { sectionIds: string[]; options: { id: string; prof: string; room: string }[]; chosen: string; decided: boolean })[];
 };
 
 export default function ResultPanel({
@@ -26,6 +26,7 @@ export default function ResultPanel({
   onBack,
   recs,
   onAddRec,
+  onChoose,
 }: {
   response: EngineResponse | null;
   running: boolean;
@@ -42,6 +43,7 @@ export default function ResultPanel({
   onBack: () => void;
   recs: Recommendation[];
   onAddRec: (r: Recommendation) => void;
+  onChoose: (code: string, sectionId: string) => void;
 }) {
   const results = response?.results ?? [];
   const m = results[selIdx]?.metrics;
@@ -88,14 +90,28 @@ export default function ResultPanel({
             </button>
           )}
         </div>
+        {recs.length > 0 && (
+          <button className="pl-rec-jump" onClick={() => document.getElementById("pl-recs")?.scrollIntoView({ behavior: "smooth", block: "start" })}>
+            <span aria-hidden>↓</span> 빈 시간에 넣기 좋은 교양 <b>{recs.length}개</b> 추천이 아래에 있어요
+          </button>
+        )}
         {response?.truncated && (
           <div className="pl-hint">조합이 너무 많아 일부만 살펴봤어요. 학점 범위를 좁히면 더 정확해져요.</div>
         )}
       </div>
       <div className="pl-scroll">
-        <div className="pl-tt-wrap" key={selIdx}><Timetable items={view.items} /></div>
+        <div className="pl-tt-wrap" key={selIdx}>
+          <Timetable
+            items={view.items}
+            choices={Object.fromEntries(view.items.map((i) => [i.code, { options: i.options, chosen: i.chosen, decided: i.decided }]))}
+            onChoose={onChoose}
+          />
+          {view.items.some((i) => i.options.length > 1 && !i.decided) && (
+            <div className="pl-hint" style={{ marginTop: 8 }}>‘교수님 선택 ▾’이 붙은 과목은 블록에 마우스를 올리거나 눌러 분반을 고를 수 있어요.</div>
+          )}
+        </div>
         {recs.length > 0 && (
-          <div className="pl-recs" data-tour="recs">
+          <div className="pl-recs" id="pl-recs" data-tour="recs">
             <div className="pl-list-title">
               이 시간표 빈 시간에 넣기 좋은 교양
               <span className="pl-muted" style={{ fontWeight: 500 }}> · 공강 유지·빈 시간 채움·정원 여유 순으로 골랐어요</span>

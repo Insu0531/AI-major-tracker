@@ -265,9 +265,19 @@ SavedTimetable = { id, name, savedAt, sem: "2026-1", major, majorLabel, entryYea
   수동 실행(Run workflow)에서 학기 지정·이수체계 포함 선택 가능. **워크플로 파일이 main에 있어야 예약 실행됨.**
 - 수집기는 내용이 같으면 파일을 다시 쓰지 않음(불필요한 커밋 방지).
 
+### 계정 · 친구 (Supabase, 2026-11-11)
+- 설정: `supabase/README.md` (Supabase 도쿄 리전(Asia-Pacific로 생성) + 구글 OAuth + Vercel 환경변수 `NEXT_PUBLIC_SUPABASE_URL`/`NEXT_PUBLIC_SUPABASE_ANON_KEY`). `NEXT_PUBLIC_ACCOUNTS_LIVE=1`까지 있어야 켜짐. 그 전엔 상단에 "로그인 · 친구 [준비 중]" 버튼만(누르면 토스트), 초대 링크도 무시.
+- DB: `supabase/schema.sql` — profiles(이름·초대 코드), plans(보관함, 학기별 featured 1개), friendships(양방향 2행). RLS로 내 것만, 친구 데이터는 security definer 함수로만:
+  set_featured, accept_invite, remove_friend, get_friends, get_friend_timetable(강의실·분반 번호 제거), regenerate_invite, delete_account.
+  로컬 PostgreSQL 16 + auth 스키마 흉내로 권한 시나리오 검증함(타인 데이터·비친구·초대코드 조작·탈퇴 cascade).
+- 클라이언트: `lib/supabase.ts`(PKCE), `lib/account.ts`(useSession·보관함 CRUD·친구 RPC), `components/planner/FriendsPanel.tsx`.
+  초대 링크 `/?invite=코드` → localStorage `knu_pending_invite`에 기억 → 로그인 후 자동 수락. 이 브라우저 보관함은 "계정으로 옮기기"(기존 사이트 저장본은 원본 유지, `knu_planner_migrated_v1`로 숨김).
+- 범위: 로그인·동기화·대표 시간표·친구 추가/보기/삭제·탈퇴. 공강 맞추기는 이번 범위 아님. 친구에게는 과목명·시간·교수님만(사용자 결정).
+
 ### 빈 시간 교양 추천 (`lib/planner/recommend.ts`)
 - 3단계 시간표 아래 "이 시간표 빈 시간에 넣기 좋은 교양" 최대 8개. 규칙 점수: 공강 요일 유지 +30(새 평일 -15, 새 주말 -25), 앞뒤 수업과 이어짐 +10, 2시간 넘는 공강 생기면 -10, 9시 전 -8/18시 후 -6, 정원 여유 (1-신청/정원)×10, SDG·인문교양 +3. 같은 시간대는 최대 2개.
 - "이 분반 넣기" = 그 분반으로 고정 + 꼭 넣을 과목으로 담음. 이벤트 `rec_added`.
+- 결과 머리에 "↓ 빈 시간에 넣기 좋은 교양 N개 추천이 아래에 있어요" 버튼 → `#pl-recs`로 부드럽게 스크롤 (추천이 아래에 있는지 모르는 문제).
 
 ### `/new` 통합 시간표 검색 (1차 구현, 2026-11-10)
 기존 화면(`/`)은 그대로 두고 새 화면을 `/new`에 병행. 전공/교양/교직 마법사 3개 → **데이터는 하나로 합치고, 화면은 3단계**
@@ -289,7 +299,7 @@ SavedTimetable = { id, name, savedAt, sem: "2026-1", major, majorLabel, entryYea
 - 시간표 블록 색은 OKLCH L0.605·C0.11 12색(주변 뉴트럴과 톤 맞춤, 전부 흰 글씨).
 - 3단계 "하루 일정" 조건: 점심시간(12~13시) 비우기 / 3시간 넘는 연강 없음 / 2시간 넘는 공강 없음 / 하루 3과목 이하 / 원격강좌 빼기.
   엔진 `dayRulesOk()` — 연강·과목 수는 탐색 중 가지치기, 공강은 완성 시 검사. "더 넣을 수 있는 후보" 판정에도 같은 규칙을 적용해야 결과가 사라지지 않음.
-- 이미지 저장 규격(사용자가 준 시간표 앱 캡처 기준): 요일 머리줄 60 · 시간 열 62 · 요일 칸 214 · 1시간 135px, 어두운 배경(#121212)·회색 격자,
+- 이미지 저장 규격(사용자가 준 시간표 앱 캡처 기준): 요일 머리줄 60 · 시간 열 62 · 요일 칸 214 · 1시간 135px (크기만 맞추고 색·서체·둥근 블록·24시간제는 사이트와 같게, 사용자 요청),
   한글 요일, 12시간제 시각, 블록은 칸을 꽉 채우고 과목명(굵게)+강의실. 월~금 9~18시면 1132×1275.
 - 학기: 계절학기 포함, 시간순(1→여름→2→겨울). `lib/planner/semester.ts`의 `recommendedSem()`이 날짜로 기본 학기 선택(4~6월 여름, 7~9월 2학기, 10~11월 겨울, 12~3월 1학기; 데이터 없으면 직전 학기). 직접 고른 학기는 같은 시기 동안만 유지(`semChosenFor`).
 - 문의 이메일 insu0531@knu.ac.kr (1단계 하단·메뉴), 개인정보처리방침 `/privacy` (`app/privacy/page.tsx`, 수집 항목이 바뀌면 같이 고칠 것).
