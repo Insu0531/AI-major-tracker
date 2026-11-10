@@ -1,0 +1,116 @@
+[
+  {
+    "grade": "1",
+    "code": "PREV0212",
+    "name": "동물행동과학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "STAT0542",
+    "name": "생물통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PREV0211",
+    "name": "수의윤리학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0209",
+    "name": "수의학개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "PREV0213",
+    "name": "수의학과 사회",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0221",
+    "name": "일반생물학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0222",
+    "name": "일반생물학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PREV0219",
+    "name": "축산학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0312",
+    "name": "가축번식학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREV0221",
+    "name": "동물매개치료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0367",
+    "name": "동물유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREV0214",
+    "name": "반려동물사양 및 영양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREV0220",
+    "name": "생태학개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "GENE0501",
+    "name": "세포·분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREV0215",
+    "name": "수의학 전공봉사 I",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREV0225",
+    "name": "수의학 전공봉사 II",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREV0217",
+    "name": "야생 및 특수동물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0601",
+    "name": "의학영어",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0240",
+    "name": "축산식품학",
+    "credit": "2-2-0"
+  }
+]

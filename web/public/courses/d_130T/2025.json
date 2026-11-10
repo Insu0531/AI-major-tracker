@@ -1,0 +1,20 @@
+[
+  {
+    "grade": "1",
+    "code": "BIOT0201",
+    "name": "생명과학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "BIOT0202",
+    "name": "생명과학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "EASC0211",
+    "name": "지구시스템과학",
+    "credit": "1-1-0"
+  }
+]

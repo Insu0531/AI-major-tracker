@@ -1,0 +1,110 @@
+[
+  {
+    "grade": "3",
+    "code": "COMP0311",
+    "name": "논리회로설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0323",
+    "name": "마이크로프로세서",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MATH0231",
+    "name": "선형대수학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0422",
+    "name": "소프트웨어공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0321",
+    "name": "신호및시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0319",
+    "name": "알고리즘1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0312",
+    "name": "운영체제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0324",
+    "name": "인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EECS0420",
+    "name": "임베디드시스템설계실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0504",
+    "name": "기계학습시스템설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "MATH0428",
+    "name": "대수학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0513",
+    "name": "사물컴퓨팅시스템설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0518",
+    "name": "전자공학종합설계1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0519",
+    "name": "전자공학종합설계2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "9",
+    "code": "ICAB0203",
+    "name": "블록체인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "9",
+    "code": "ICAB0204",
+    "name": "빅데이터응용",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "9",
+    "code": "ICAB0202",
+    "name": "인공지능프로그래밍 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "9",
+    "code": "ICAB0201",
+    "name": "ICT-ABB PBL",
+    "credit": "3-2-2"
+  }
+]

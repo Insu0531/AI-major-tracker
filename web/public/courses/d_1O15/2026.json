@@ -1,0 +1,128 @@
+[
+  {
+    "grade": "3",
+    "code": "COMP0323",
+    "name": "데이타통신",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COME0427",
+    "name": "데이터베이스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0340",
+    "name": "모바일컴퓨팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0422",
+    "name": "소프트웨어공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0462",
+    "name": "시스템프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GLSO0216",
+    "name": "알고리즘실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0312",
+    "name": "운영체제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0324",
+    "name": "인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CAIB0223",
+    "name": "인공지능프로그래밍실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "GLSO0227",
+    "name": "클라우드컴퓨팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ICTD0201",
+    "name": "SW특강1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "3",
+    "code": "ICTD0202",
+    "name": "SW특강2",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0416",
+    "name": "고급웹프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0462",
+    "name": "데이터마이닝이론및응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MOBI0224",
+    "name": "딥러닝",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ICTD0203",
+    "name": "산학프로젝트1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ICTD0204",
+    "name": "산학프로젝트2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0341",
+    "name": "웹보안",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0342",
+    "name": "인공지능융합응용특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "EECS0442",
+    "name": "임베디드소프트웨어설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0428",
+    "name": "IT기술경영개론",
+    "credit": "3-3-0"
+  }
+]

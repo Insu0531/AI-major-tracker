@@ -1,0 +1,194 @@
+[
+  {
+    "grade": "1",
+    "code": "SSED0512",
+    "name": "경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ETED0347",
+    "name": "동양윤리사상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "HIED0437",
+    "name": "서양사교재론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "GEED0240",
+    "name": "세계지리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "HIED0427",
+    "name": "아시아사교재론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ETED0326",
+    "name": "윤리학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "GEED0223",
+    "name": "인문지리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "GEED0212",
+    "name": "자연지리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "HIED0241",
+    "name": "한국사개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "HIED0417",
+    "name": "한국사교재론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "GEED0340",
+    "name": "한국지리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOG0319",
+    "name": "경제지리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SSED0256",
+    "name": "법학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SSED0255",
+    "name": "사회학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ETED0327",
+    "name": "서양윤리사상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIED0252",
+    "name": "세계문화사교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIED0210",
+    "name": "역사학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SSED0511",
+    "name": "정치와사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SSED0250",
+    "name": "정치학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEED0545",
+    "name": "지도학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOG0311",
+    "name": "지형학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "TCHR0442",
+    "name": "통합사회교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "TCHR0443",
+    "name": "통합사회교재연구및지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIED0219",
+    "name": "한국사학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ETED0351",
+    "name": "한국윤리사상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SSED0514",
+    "name": "경제와사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SSED0521",
+    "name": "문화와사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SSED0513",
+    "name": "법과사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ETED0325",
+    "name": "사회윤리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0441",
+    "name": "통합사회 논리 및 논술지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SSED0602",
+    "name": "통합사회과교육연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0600",
+    "name": "통합사회교육과정",
+    "credit": "3-3-0"
+  }
+]

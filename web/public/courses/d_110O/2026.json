@@ -1,0 +1,152 @@
+[
+  {
+    "grade": "1",
+    "code": "GEOG0536",
+    "name": "아시아 지역과 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KLCC0352",
+    "name": "한국한시강독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEED0331",
+    "name": "데이터기반 도시의 미래탐구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KLCC0560",
+    "name": "영남기록유산과 지역사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEED0330",
+    "name": "이주, 다문화 그리고 지역",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "JPNL0409",
+    "name": "일본소설과 콘텐츠개발",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHIL0364",
+    "name": "중국소설의세계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRAN0361",
+    "name": "프랑스어권 지역의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KORL0452",
+    "name": "한국구비문학과 문화콘텐츠",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FRAN0359",
+    "name": "한불지역문화콘텐츠비교",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHIL0434",
+    "name": "현대중국의탐색",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "KORL0505",
+    "name": "국어정보처리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HUSL0201",
+    "name": "생성형AI와 지역문화데이터",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "GEOG0537",
+    "name": "장소마케팅의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HUSJ0203",
+    "name": "Local C-nergy 현장실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "LCCN0201",
+    "name": "글로컬리즘과 세계지역연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "HUSL0202",
+    "name": "길 위에서 만나는 강원도의 문화예술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "LCCN0204",
+    "name": "다언어사회와 지역공동체",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "LCCN0202",
+    "name": "문화경관과 장소 재발견",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "HUSD0201",
+    "name": "숏폼콘텐츠 기획제작",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "HUSN0201",
+    "name": "스토리텔링과 융합콘텐츠 제작",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "LCCN0205",
+    "name": "일본지역커뮤니티",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "LCCN0203",
+    "name": "지역문제조사 및 실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "LCCN0206",
+    "name": "지역의 혁신가치",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "9",
+    "code": "HUSJ0202",
+    "name": "DX 스토리텔링",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "grade": "1",
+    "code": "ARTS0308",
+    "name": "서양미술사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "COMM0221",
+    "name": "콘텐츠 스토리텔링론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0283",
+    "name": "삼국유사의세계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0209",
+    "name": "소프트웨어와 문제해결",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0600",
+    "name": "소프트웨어융합프로젝트",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0235",
+    "name": "역사와 픽션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMM0220",
+    "name": "영상문화론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CUCD0302",
+    "name": "영화와 문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0234",
+    "name": "전쟁과 인간",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CUCD0301",
+    "name": "한국어문화론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARAN0329",
+    "name": "관광과 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARAN0434",
+    "name": "글로벌시대의 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HICC0206",
+    "name": "문화와 상징",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "GEOG0337",
+    "name": "문화콘텐츠 산업론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARAN0415",
+    "name": "박물관학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CUCD0303",
+    "name": "유럽문화콘텐츠",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "KORL0505",
+    "name": "국어정보처리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARAN0432",
+    "name": "문화정책과 지역개발",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COMM0531",
+    "name": "문화콘텐츠 기획론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARAN0331",
+    "name": "문화콘텐츠 특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "KORL0555",
+    "name": "한국문학사상론",
+    "credit": "3-3-0"
+  }
+]

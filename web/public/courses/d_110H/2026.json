@@ -1,0 +1,110 @@
+[
+  {
+    "grade": "1",
+    "code": "ARAN0319",
+    "name": "문화콘텐츠 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ITEC0201",
+    "name": "컴퓨터학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CUCD0305",
+    "name": "기록문화 콘텐츠의 발굴과 활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0452",
+    "name": "빅데이터융합개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0283",
+    "name": "삼국유사의세계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0235",
+    "name": "역사와 픽션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CUCD0302",
+    "name": "영화와 문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHIL0587",
+    "name": "예술철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HIST0234",
+    "name": "전쟁과 인간",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CUCD0301",
+    "name": "한국어문화론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARAN0329",
+    "name": "관광과 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARAN0434",
+    "name": "글로벌시대의 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CUCD0304",
+    "name": "독일언어 문화콘텐츠",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ARAN0415",
+    "name": "박물관학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "KORL0505",
+    "name": "국어정보처리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHIL0522",
+    "name": "문화와 매체철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ARAN0432",
+    "name": "문화정책과 지역개발",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "KORL0500",
+    "name": "지역한문학현장론",
+    "credit": "3-3-0"
+  }
+]

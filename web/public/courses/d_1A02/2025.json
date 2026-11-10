@@ -1,0 +1,140 @@
+[
+  {
+    "grade": "1",
+    "code": "PREV0222",
+    "name": "동물복지학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "PREV0212",
+    "name": "동물행동과학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "PREV0223",
+    "name": "반려동물영양학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "PREV0224",
+    "name": "산업동물사양학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "STAT0542",
+    "name": "생물통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PREV0211",
+    "name": "수의윤리학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0209",
+    "name": "수의학개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0221",
+    "name": "일반생물학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0222",
+    "name": "일반생물학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PREV0219",
+    "name": "축산학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREV0221",
+    "name": "동물매개치료학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "DOAS0367",
+    "name": "동물유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREV0220",
+    "name": "생태학개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "GENE0501",
+    "name": "세포·분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREV0232",
+    "name": "소아 및 노령동물학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREV0231",
+    "name": "수의생명정보학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREV0229",
+    "name": "수의신경과학개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREV0230",
+    "name": "수의학의 현재와 미래",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREV0217",
+    "name": "야생 및 특수동물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREV0227",
+    "name": "원헬스의 이해",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0601",
+    "name": "의학영어",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREV0228",
+    "name": "임상수의학의 이해",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "PREV0226",
+    "name": "조직공학",
+    "credit": "2-2-0"
+  }
+]

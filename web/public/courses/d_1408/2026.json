@@ -1,0 +1,110 @@
+[
+  {
+    "grade": "1",
+    "code": "ITEC0201",
+    "name": "컴퓨터학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "COMP0453",
+    "name": "컴퓨팅사고와 SW코딩",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "MGMT0216",
+    "name": "금융학원론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COME0331",
+    "name": "자료구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0217",
+    "name": "자바프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FITE0201",
+    "name": "핀테크 융합프로젝트",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "FITE0202",
+    "name": "핀테크와 금융시장",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0327",
+    "name": "경영데이터분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0213",
+    "name": "금융파생상품론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FITE0203",
+    "name": "블록체인과 암호화화폐 비즈니스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0215",
+    "name": "금융기관경영론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0249",
+    "name": "금융리스크관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0434",
+    "name": "자본시장론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0436",
+    "name": "전자금융의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0419",
+    "name": "정보검색",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0414",
+    "name": "컴퓨터망",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0428",
+    "name": "IT기술경영개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0435",
+    "name": "IT프로젝트관리",
+    "credit": "3-3-0"
+  }
+]

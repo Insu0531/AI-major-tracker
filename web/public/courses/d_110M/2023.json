@@ -1,0 +1,110 @@
+[
+  {
+    "grade": "1",
+    "code": "ENGL0246",
+    "name": "사고와 언어, 그리고 과학과 창의성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ITEC0201",
+    "name": "컴퓨터학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "COMP0453",
+    "name": "컴퓨팅사고와 SW코딩",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGL0272",
+    "name": "디지털 인문학 개관",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0452",
+    "name": "빅데이터융합개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENGL0245",
+    "name": "영문법1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DHSS0204",
+    "name": "음성분석과 컴퓨터",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0451",
+    "name": "인공지능융합기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "POLI0312",
+    "name": "정치학방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "KORL0338",
+    "name": "한국어문법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLI0216",
+    "name": "국제정치와 데이터",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ENGL0313",
+    "name": "영어음성음운론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DHSS0202",
+    "name": "인문 디지털 아카이빙",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DHSS0203",
+    "name": "한국어 역사 문헌 데이터 아카이빙의 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KORL0412",
+    "name": "한국어음운론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "KORL0443",
+    "name": "한국어의미론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "KORL0505",
+    "name": "국어정보처리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DHSS0201",
+    "name": "디지털 인문학 실습",
+    "credit": "3-3-0"
+  }
+]

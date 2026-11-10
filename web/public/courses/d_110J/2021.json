@@ -1,0 +1,110 @@
+[
+  {
+    "grade": "1",
+    "code": "ECON0204",
+    "name": "무역학원론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "CHIL0254",
+    "name": "초급중국어회화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "RUSS0334",
+    "name": "러시아어 강독1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECON0381",
+    "name": "무역상무론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "NOCT0212",
+    "name": "북방학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHIL0351",
+    "name": "중급중국어회화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "RUSS0345",
+    "name": "현대 러시아 사회의 이해 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0482",
+    "name": "국제물류론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGEC0418",
+    "name": "농산물무역의 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "RUSS0417",
+    "name": "러시아어와 문화컨텍스트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "NOCT0213",
+    "name": "북방지역 경제분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHTR0301",
+    "name": "중국문화와통상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "NOCT0211",
+    "name": "중러문화콘텐츠론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHIL0434",
+    "name": "현대중국의탐색",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGEC0510",
+    "name": "경제발전의이론과실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "RUSS0518",
+    "name": "러시아 정치와 경제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "NOCT0214",
+    "name": "북방무역과 클레임 관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ECON0683",
+    "name": "FTA의 이론과 실제",
+    "credit": "3-3-0"
+  }
+]

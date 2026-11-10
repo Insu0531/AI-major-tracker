@@ -1,0 +1,188 @@
+[
+  {
+    "grade": "2",
+    "code": "MGMT0243",
+    "name": "경영정보론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MGMT0201",
+    "name": "경영조직론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0206",
+    "name": "기초프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "STAT0221",
+    "name": "기초확률론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MGMT0221",
+    "name": "마케팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "STAT0259",
+    "name": "수리통계학1 및 연습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "MGMT0238",
+    "name": "운영관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COME0301",
+    "name": "이산수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COME0331",
+    "name": "자료구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0217",
+    "name": "자바프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "MGMT0211",
+    "name": "재무관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ITEC0201",
+    "name": "컴퓨터학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "STAT0212",
+    "name": "통계적방법 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "STAT0254",
+    "name": "회귀분석 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "STAT0248",
+    "name": "R 프로그래밍 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0232",
+    "name": "경영과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0327",
+    "name": "경영데이터분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BUIN0211",
+    "name": "경영데이터시각화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0436",
+    "name": "다변량자료분석 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0401",
+    "name": "데이터베이스입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0328",
+    "name": "모바일앱프로그래밍1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0312",
+    "name": "운영체제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0320",
+    "name": "원가관리회계원론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0310",
+    "name": "재무회계원론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MGMT0431",
+    "name": "중급회계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0549",
+    "name": "통계계산 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "STAT0424",
+    "name": "데이터마이닝 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "BUIN0213",
+    "name": "데이터분석 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BUIN0212",
+    "name": "비즈니스인텔리전스 사례연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0324",
+    "name": "인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MGMT0312",
+    "name": "재무제표분석",
+    "credit": "3-3-0"
+  }
+]

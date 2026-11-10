@@ -1,0 +1,542 @@
+[
+  {
+    "grade": "1",
+    "code": "VETE0342",
+    "name": "수의면역학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0305",
+    "name": "수의미생물학1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0335",
+    "name": "수의미생물학2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0306",
+    "name": "수의미생물학실습1",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0336",
+    "name": "수의미생물학실습2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0210",
+    "name": "수의발생학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0205",
+    "name": "수의생리학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0235",
+    "name": "수의생리학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0206",
+    "name": "수의생리학실습1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0236",
+    "name": "수의생리학실습2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0203",
+    "name": "수의조직학1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0233",
+    "name": "수의조직학2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0204",
+    "name": "수의조직학실습1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0234",
+    "name": "수의조직학실습2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0201",
+    "name": "수의해부학1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0231",
+    "name": "수의해부학2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0202",
+    "name": "수의해부학실습1",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0232",
+    "name": "수의해부학실습2",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0207",
+    "name": "수의화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0237",
+    "name": "수의화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0208",
+    "name": "수의화학실습1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0238",
+    "name": "수의화학실습2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "VETE0239",
+    "name": "환경위생학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0409",
+    "name": "가금질병학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0410",
+    "name": "가금질병학실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0401",
+    "name": "수의공중보건학1",
+    "credit": "4-4-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0431",
+    "name": "수의공중보건학2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0402",
+    "name": "수의공중보건학실습1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0432",
+    "name": "수의공중보건학실습2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0309",
+    "name": "수의기생충학1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0339",
+    "name": "수의기생충학2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0310",
+    "name": "수의기생충학실습1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0340",
+    "name": "수의기생충학실습2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0303",
+    "name": "수의독성학1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0333",
+    "name": "수의독성학2",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0304",
+    "name": "수의독성학실습1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0334",
+    "name": "수의독성학실습2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0307",
+    "name": "수의병리학1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0337",
+    "name": "수의병리학2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0308",
+    "name": "수의병리학실습1",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0338",
+    "name": "수의병리학실습2",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0301",
+    "name": "수의약리학1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0331",
+    "name": "수의약리학2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0302",
+    "name": "수의약리학실습1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0332",
+    "name": "수의약리학실습2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0403",
+    "name": "수의전염병학1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0433",
+    "name": "수의전염병학2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0434",
+    "name": "수의전염병학실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0313",
+    "name": "실험동물의학1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0343",
+    "name": "실험동물의학2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0211",
+    "name": "야생동물의학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "2",
+    "code": "VETE0212",
+    "name": "야생동물의학실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "VETE0541",
+    "name": "말의학1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "VETE0443",
+    "name": "수생생물의학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "VETE0501",
+    "name": "수의내과학1",
+    "credit": "4-4-0"
+  },
+  {
+    "grade": "3",
+    "code": "VETE0531",
+    "name": "수의내과학2",
+    "credit": "4-4-0"
+  },
+  {
+    "grade": "3",
+    "code": "VETE0502",
+    "name": "수의내과학실습1",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "VETE0532",
+    "name": "수의내과학실습2",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "VETE0442",
+    "name": "수의마취학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "VETE0505",
+    "name": "수의산과학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "VETE0535",
+    "name": "수의산과학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "VETE0506",
+    "name": "수의산과학실습1",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "VETE0536",
+    "name": "수의산과학실습2",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "VETE0414",
+    "name": "수의영상의학 1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "VETE0415",
+    "name": "수의영상의학실습 1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "VETE0503",
+    "name": "수의외과학1",
+    "credit": "4-4-0"
+  },
+  {
+    "grade": "3",
+    "code": "VETE0533",
+    "name": "수의외과학2",
+    "credit": "4-4-0"
+  },
+  {
+    "grade": "3",
+    "code": "VETE0504",
+    "name": "수의외과학실습1",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "VETE0534",
+    "name": "수의외과학실습2",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "3",
+    "code": "VETE0447",
+    "name": "수의임상병리학1",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "3",
+    "code": "VETE0407",
+    "name": "수의진단병리학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "VETE0542",
+    "name": "말의학2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "VETE0451",
+    "name": "말의학실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "VETE0454",
+    "name": "수의과학심화프로그램 1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "VETE0455",
+    "name": "수의과학심화프로그램 2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "VETE0460",
+    "name": "수의과학심화프로그램 3",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "4",
+    "code": "VETE0437",
+    "name": "수의법규",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "VETE0537",
+    "name": "수의안과학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "VETE0445",
+    "name": "수의영상의학 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "VETE0446",
+    "name": "수의영상의학실습 2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "VETE0448",
+    "name": "수의임상병리학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "VETE0449",
+    "name": "수의임상병리학실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "VETE0507",
+    "name": "수의피부병학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "VETE0508",
+    "name": "응급수의학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "4",
+    "code": "VETE0453",
+    "name": "임상심화프로그램 2",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "4",
+    "code": "VETE0456",
+    "name": "임상심화프로그램 3",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "VETE0457",
+    "name": "임상심화프로그램 4",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "4",
+    "code": "VETE0458",
+    "name": "임상심화프로그램 5",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "VETE0459",
+    "name": "임상심화프로그램 6",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "VETE0452",
+    "name": "임상심화프로그램1",
+    "credit": "1-0-2"
+  }
+]

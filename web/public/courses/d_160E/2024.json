@@ -1,0 +1,248 @@
+[
+  {
+    "grade": "1",
+    "code": "CVLE0207",
+    "name": "공업역학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "CVLE0205",
+    "name": "선형대수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "CVLE0318",
+    "name": "응용전산프로그래밍 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "CVLE0221",
+    "name": "토목공학창의설계 및 지식재산",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "COME0311",
+    "name": "확률및통계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CVLE0271",
+    "name": "건설가치공학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CVLE0215",
+    "name": "건설재료및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "MATH0205",
+    "name": "미분방정식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CVLE0327",
+    "name": "응용수치해석 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CVLE0301",
+    "name": "응용역학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CVLE0308",
+    "name": "응용역학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACEN0362",
+    "name": "응용측량학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CVLE0428",
+    "name": "철근콘크리트구조설계1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ACEN0261",
+    "name": "측량학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CVLE0339",
+    "name": "토목유체역학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CVLE0425",
+    "name": "토목CAD 및 BIM",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CVLE0325",
+    "name": "토질역학 및 실험 1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CVLE0323",
+    "name": "강구조공학 및 설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CVLE0422",
+    "name": "건설시공및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ACEN0463",
+    "name": "구조역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CVLE0503",
+    "name": "기초공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CVLE0520",
+    "name": "도로및철도공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CVLE0418",
+    "name": "상수도공학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ACEN0241",
+    "name": "수리학및실험1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ACEN0342",
+    "name": "수리학및실험2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CVLE0426",
+    "name": "수문학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CVLE0309",
+    "name": "암반공학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CVLE0429",
+    "name": "철근콘크리트구조설계2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CVLE0419",
+    "name": "토질역학 및 실험 2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CVLE0322",
+    "name": "하수처리공학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CVLE0519",
+    "name": "PS콘크리트구조설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CVLE0416",
+    "name": "건설관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CVLE0531",
+    "name": "공간정보공학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CVLE0424",
+    "name": "구조동역학 및 내진설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CVLE0513",
+    "name": "수공설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CVLE0216",
+    "name": "스마트건설재료공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CVLE0218",
+    "name": "스마트수질관리 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CVLE0514",
+    "name": "지반구조물설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CVLE0561",
+    "name": "토목공학종합설계 및 기술사업화",
+    "credit": "4-2-4"
+  },
+  {
+    "grade": "4",
+    "code": "CVLE0559",
+    "name": "하천공학및설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "CVLE0536",
+    "name": "SOC종합설계 및 기술사업화",
+    "credit": "4-2-4"
+  }
+]

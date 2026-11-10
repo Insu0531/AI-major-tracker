@@ -1,0 +1,110 @@
+[
+  {
+    "grade": "2",
+    "code": "ELEC0311",
+    "name": "물리전자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CIME0315",
+    "name": "재료물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0245",
+    "name": "전자회로1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CIME0329",
+    "name": "고체확산",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0229",
+    "name": "양자물리1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CIME0431",
+    "name": "재료박막공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0363",
+    "name": "전자계측및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0333",
+    "name": "전자소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0428",
+    "name": "반도체소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0422",
+    "name": "반도체재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0238",
+    "name": "응집물질물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0421",
+    "name": "집적회로공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0402",
+    "name": "집적회로공정실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "9",
+    "code": "SMCS0202",
+    "name": "반도체 산업현장실무이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "SMCS0201",
+    "name": "반도체 특성화 융합 전공 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "SMCS0204",
+    "name": "반도체융합 소재공정 실험실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "9",
+    "code": "SMCS0205",
+    "name": "양자나노반도체실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "9",
+    "code": "SMCS0203",
+    "name": "PBL기반 반도체 특성화 프로젝트",
+    "credit": "3-2-2"
+  }
+]

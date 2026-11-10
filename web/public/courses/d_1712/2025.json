@@ -1,0 +1,20 @@
+[
+  {
+    "grade": "1",
+    "code": "AGRI0203",
+    "name": "학과(전공)탐색",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "1",
+    "code": "AGRI0201",
+    "name": "CALS입문 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "AGRI0202",
+    "name": "CALS입문 2",
+    "credit": "3-3-0"
+  }
+]

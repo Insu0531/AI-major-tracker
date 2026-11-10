@@ -1,0 +1,302 @@
+[
+  {
+    "grade": "1",
+    "code": "PEED0555",
+    "name": "배드민턴",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "PEED0323",
+    "name": "수영기초",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "PEED0201",
+    "name": "육상경기1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "PEED0202",
+    "name": "육상경기2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "PEED0306",
+    "name": "체육교육과정과 평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PEED0305",
+    "name": "체육사 · 철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PEED0611",
+    "name": "체육원리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PEED0211",
+    "name": "체조1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "PEED0212",
+    "name": "체조2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "PEED0225",
+    "name": "축구(남)",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "PEED0226",
+    "name": "축구지도법(남)",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "PEED0523",
+    "name": "하계스포츠",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "PEED0333",
+    "name": "학교무용",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "PEED0693",
+    "name": "학교보건교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PEED0313",
+    "name": "배구",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "PEED0314",
+    "name": "배구 지도법",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "PEED0503",
+    "name": "수상스포츠",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "PEED0524",
+    "name": "수영지도법",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "PEED0622",
+    "name": "운동생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PEED0621",
+    "name": "운동학습법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PEED0361",
+    "name": "육상경기3",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "PEED0501",
+    "name": "육상경기지도법",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "PEED0233",
+    "name": "창작무용(여)",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "PEED0619",
+    "name": "체육측정평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PEED0371",
+    "name": "체조3",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "PEED0502",
+    "name": "체조지도법",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "PEED0334",
+    "name": "학교무용지도법",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "PEED0252",
+    "name": "해부학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PEED0433",
+    "name": "농구",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "PEED0434",
+    "name": "농구지도법",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "PEED0513",
+    "name": "뉴스포츠",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "PEED0516",
+    "name": "동계스포츠",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "PEED0580",
+    "name": "스포츠사회학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PEED0626",
+    "name": "스포츠심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PEED0511",
+    "name": "야외교육",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "PEED0582",
+    "name": "운동역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PEED0510",
+    "name": "응급처치",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0651",
+    "name": "체육교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0691",
+    "name": "체육교재연구및지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PEED0553",
+    "name": "테니스",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "PEED0623",
+    "name": "트레이닝론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PEED0423",
+    "name": "핸드볼",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "PEED0424",
+    "name": "핸드볼 지도법",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "PEED0518",
+    "name": "골프지도법",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "PEED0625",
+    "name": "스포츠영양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PEED0522",
+    "name": "스포츠의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "TCHR0477",
+    "name": "체육 논리 및 논술지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PEED0514",
+    "name": "태권도",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "4",
+    "code": "PEED0629",
+    "name": "특수체육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PEED0620",
+    "name": "학교체육실무",
+    "credit": "3-3-0"
+  }
+]

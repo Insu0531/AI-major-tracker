@@ -1,0 +1,212 @@
+[
+  {
+    "grade": "1",
+    "code": "SCED0201",
+    "name": "일반물리학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0202",
+    "name": "일반물리학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0203",
+    "name": "일반물리학실험",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0221",
+    "name": "일반생물학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0222",
+    "name": "일반생물학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0223",
+    "name": "일반생물학실험",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0231",
+    "name": "일반지구과학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0232",
+    "name": "일반지구과학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0233",
+    "name": "일반지구과학실험",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0211",
+    "name": "일반화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0212",
+    "name": "일반화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "SCED0213",
+    "name": "일반화학실험",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "BIED0335",
+    "name": "계통분류학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ESED0352",
+    "name": "대기과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0205",
+    "name": "물리화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0201",
+    "name": "분석화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOC0622",
+    "name": "세포생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHED0221",
+    "name": "역학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0203",
+    "name": "유기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHED0312",
+    "name": "전기자기학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SCED0241",
+    "name": "전자기학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GEOL0212",
+    "name": "지질학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "TCHR0445",
+    "name": "통합과학교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ESED0364",
+    "name": "해양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "SCED0242",
+    "name": "현대물리학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ESED0514",
+    "name": "광물·암석학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0301",
+    "name": "무기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ACHE0631",
+    "name": "분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHED0430",
+    "name": "중등물리실험지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ESED0432",
+    "name": "천문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0444",
+    "name": "통합과학 논리 및 논술지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "TCHR0446",
+    "name": "통합과학교재연구및지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ESED0453",
+    "name": "현대기후학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIOC0621",
+    "name": "유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ASAT0205",
+    "name": "태양계천문학",
+    "credit": "3-3-0"
+  }
+]

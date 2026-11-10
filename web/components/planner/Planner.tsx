@@ -1,0 +1,652 @@
+"use client";
+
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { ENTRY_YEAR_MIN } from "@/lib/courses";
+import { BASE_MAJORS, isSangjuLabel, loadMajors, type MajorInfo } from "@/lib/planner/majors";
+import { buildCourses, buildEngineGroups, colorAt, loadCurriculum, loadIndex, loadSnapshot, type SectionFilter } from "@/lib/planner/data";
+import { exportTimetable, type TimetableItem } from "@/lib/planner/exportImage";
+import { deletePlan, loadPlans, readLocal, renamePlan, savePlan, writeLocal, type SavedPlan } from "@/lib/planner/storage";
+import { trackSave } from "@/lib/trackSave";
+import { recommendFill, type Recommendation } from "@/lib/planner/recommend";
+import { analyticsEnabled, initAnalytics, isOptedOut, setOptOut, track } from "@/lib/analytics";
+import { pickDefaultSem, recommendedSem, semLabel, sortSems } from "@/lib/planner/semester";
+import { shareToKakao } from "@/lib/kakaoShare";
+import GuideTour, { type TourStep } from "@/components/GuideTour";
+import AcademicCalendarTab from "@/components/AcademicCalendarTab";
+import FeedbackTab from "@/components/FeedbackTab";
+import { DEFAULT_CONDITIONS, SORT_LABEL, type CartItem, type CartMode, type Conditions, type EngineGroup, type EngineResponse, type Slot, type Snapshot, type SnapshotIndex } from "@/lib/planner/types";
+import MajorPicker from "@/components/planner/MajorPicker";
+import CourseBrowser from "@/components/planner/CourseBrowser";
+import { CartList, ConditionsPanel, cartCredit } from "@/components/planner/CartPanel";
+import ResultPanel, { type ResultView } from "@/components/planner/ResultPanel";
+import Timetable from "@/components/planner/Timetable";
+
+const STATE_KEY = "knu_planner_state_v1";
+const TOUR_KEY = "knu_planner_tour_v1";
+const TOUR_2: TourStep[] = [
+  { selector: '[data-tour="search"]', title: "과목 찾기", body: "과목명·코드·교수·학과로 검색하거나, 오른쪽 '필터'로 학년·학점·SDG·캠퍼스 등을 고를 수 있어요." },
+  { selector: '[data-tour="cats"]', title: "구분", body: "내 전공(학과·학번 이수체계), 교양, 교직 등으로 나눠 볼 수 있어요. 여러 개를 같이 켜도 돼요." },
+  { selector: ".pl-course", title: "담기", body: "들을 만한 과목을 넉넉히 담으세요. 과목 이름을 누르면 분반이 펼쳐지고, 원하는 분반만 고정하거나 싫은 분반을 뺄 수 있어요." },
+  { selector: '[data-tour="next"]', title: "시간표 보기", body: "담은 과목으로 시간이 겹치지 않게 최대한 많이 넣은 시간표를 만들어 드려요." },
+];
+const TOUR_3: TourStep[] = [
+  { selector: '[data-tour="must"]', title: "꼭 넣을 과목", body: "반드시 들어가야 하는 과목을 고르면 그 과목이 들어간 시간표만 보여 줘요." },
+  { selector: '[data-tour="sort"]', title: "정렬 · 조건", body: "공강 많은 순, 늦게 시작 등으로 정렬하고, 아래에서 학점·공강 요일·수업 시간·피할 교수를 정할 수 있어요." },
+  { selector: '[data-tour="actions"]', title: "저장 · 수강신청", body: "이미지로 저장하거나 보관함에 넣고, 수강신청 코드를 복사할 수 있어요. ← → 키로 시간표를 넘길 수 있어요." },
+];
+const ENTRY_YEAR_LAST = 2026; // 이수체계 데이터가 있는 마지막 학번
+const fmtDate = (iso: string) => new Date(iso).toLocaleString("ko-KR", { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
+const defaultCampuses = (label: string) => (isSangjuLabel(label) ? ["상주"] : ["산격동", "동인동"]);
+
+type Persisted = {
+  sem: string | null;
+  major: string | null;
+  extras: string[];
+  entryYear: number;
+  cart: CartItem[];
+  conditions: Conditions;
+  campuses: string[];
+  includeGrad: boolean;
+  onlyOpen: boolean;
+  /** 학기를 직접 고른 시점의 추천 학기 (추천 학기가 바뀌면 다시 자동 선택) */
+  semChosenFor: string | null;
+  step: 1 | 2 | 3;
+};
+
+const INITIAL: Persisted = {
+  sem: null,
+  major: null,
+  extras: [],
+  entryYear: ENTRY_YEAR_LAST,
+  cart: [],
+  conditions: DEFAULT_CONDITIONS,
+  campuses: ["산격동", "동인동"],
+  includeGrad: false,
+  onlyOpen: false,
+  semChosenFor: null,
+  step: 1,
+};
+
+function loadPersisted(): Persisted {
+  const saved = readLocal<Partial<Persisted>>(STATE_KEY, {});
+  const conditions = { ...DEFAULT_CONDITIONS, ...saved.conditions };
+  // 화면에서 뺀 조건(수업 시간대·경쟁률 정렬)이 예전 저장값으로 몰래 걸려 있지 않게 초기화
+  conditions.startAfter = 0;
+  conditions.endBefore = 0;
+  if (!(conditions.sort in SORT_LABEL)) conditions.sort = "recommended";
+  conditions.includeProfs = conditions.includeProfs ?? [];
+  return { ...INITIAL, ...saved, conditions };
+}
+
+const EMPTY_MAP = new Map<string, string>();
+
+/** 브라우저 전용 (localStorage 초기값을 쓰므로 page.tsx에서 ssr:false로 불러온다) */
+export default function Planner() {
+  const [st, setSt] = useState<Persisted>(loadPersisted);
+  const [index, setIndex] = useState<SnapshotIndex | null>(null);
+  const [loaded, setLoaded] = useState<Snapshot | null>(null);
+  const [loadError, setLoadError] = useState(false);
+  const [mineCur, setMineCur] = useState<{ key: string; map: Map<string, string> } | null>(null);
+  const [extra, setExtra] = useState<Map<string, string>>(new Map());
+  const [condOpen, setCondOpen] = useState(false);
+  // 결과는 계산에 쓴 groups와 함께 보관 (담은 과목이 바뀌는 사이 이전 결과와 섞이지 않도록)
+  const [resp, setResp] = useState<{ data: EngineResponse; groups: EngineGroup[] } | null>(null);
+  const [running, setRunning] = useState(false);
+  const [selIdx, setSelIdx] = useState(0);
+  const [profPick, setProfPick] = useState<Record<string, string>>({});
+  const [modal, setModal] = useState<null | "codes" | "save" | "saved" | "cart" | "bulk">(null);
+  const [sheet, setSheet] = useState<null | "calendar" | "feedback">(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [tour, setTour] = useState(false);
+  const [renaming, setRenaming] = useState<{ id: string; name: string } | null>(null);
+  const [bulkProgress, setBulkProgress] = useState<number | null>(null);
+  const [optOut, setOptOutState] = useState(isOptedOut);
+  const [majors, setMajors] = useState<MajorInfo[]>(BASE_MAJORS);
+  useEffect(() => { loadMajors().then(setMajors); }, []);
+  const majorByKey = useMemo(() => new Map(majors.map((m) => [m.key, m])), [majors]);
+  const labelOf = useCallback((key: string) => majorByKey.get(key)?.label ?? key, [majorByKey]);
+  const [saveName, setSaveName] = useState("");
+  const [plans, setPlans] = useState<SavedPlan[]>(loadPlans);
+  const [preview, setPreview] = useState<SavedPlan | null>(null);
+  const [toast, setToast] = useState("");
+
+  const update = useCallback((patch: Partial<Persisted>) => setSt((s) => ({ ...s, ...patch })), []);
+  const flash = (msg: string) => { setToast(msg); setTimeout(() => setToast(""), 1800); };
+
+  /* ── 초기화: 저장된 상태 + 학기 목록 ── */
+  useEffect(() => {
+    void initAnalytics();
+    loadIndex().then((idx) => {
+      if (!idx) { setLoadError(true); return; }
+      setIndex(idx);
+      // 날짜에 맞는 학기를 기본 선택. 직접 고른 학기는 같은 수강신청 시기 동안만 유지
+      const rec = recommendedSem();
+      setSt((s) => (s.sem && idx.semesters[s.sem] && s.semChosenFor === rec ? s : { ...s, sem: pickDefaultSem(Object.keys(idx.semesters)), semChosenFor: null }));
+    });
+  }, []);
+
+  useEffect(() => { writeLocal(STATE_KEY, st); }, [st]);
+
+  useEffect(() => {
+    if (!st.sem) return;
+    loadSnapshot(st.sem).then((s) => (s ? setLoaded(s) : setLoadError(true)));
+  }, [st.sem]);
+  const snapshot = loaded && loaded.sem === st.sem ? loaded : null;
+
+  useEffect(() => {
+    if (!st.major) return;
+    const key = `${st.major}-${st.entryYear}`;
+    loadCurriculum(st.major, st.entryYear, majorByKey.get(st.major)?.years).then((map) => setMineCur({ key, map }));
+  }, [st.major, st.entryYear, majorByKey]);
+  const mine = st.major && mineCur?.key === `${st.major}-${st.entryYear}` ? mineCur.map : EMPTY_MAP;
+
+  useEffect(() => {
+    Promise.all(st.extras.map((m) => loadCurriculum(m, st.entryYear, majorByKey.get(m)?.years))).then((maps) => {
+      const merged = new Map<string, string>();
+      for (const m of maps) for (const [k, v] of m) if (!merged.has(k)) merged.set(k, v);
+      setExtra(merged);
+    });
+  }, [st.extras, st.entryYear, majorByKey]);
+
+  const courses = useMemo(() => (snapshot ? buildCourses(snapshot.sections, mine, extra) : []), [snapshot, mine, extra]);
+  const courseByCode = useMemo(() => new Map(courses.map((c) => [c.code, c])), [courses]);
+  const sectionFilter: SectionFilter = useMemo(() => ({ campuses: st.campuses, onlyOpen: st.onlyOpen }), [st.campuses, st.onlyOpen]);
+  const cart = useMemo(() => st.cart.filter((i) => courseByCode.has(i.code)), [st.cart, courseByCode]);
+  const groups = useMemo(() => buildEngineGroups(cart, courseByCode, sectionFilter), [cart, courseByCode, sectionFilter]);
+  // 색은 담은 순서대로 (한 시간표 안에서 같은 색이 나오지 않게)
+  const colorIndex = useMemo(() => new Map(st.cart.map((c, i) => [c.code, i])), [st.cart]);
+  const colorOf = useCallback((code: string) => colorAt(colorIndex.get(code) ?? 0), [colorIndex]);
+
+  /* ── 조합 계산 (Web Worker) ── */
+  const workerRef = useRef<Worker | null>(null);
+  const reqId = useRef(0);
+  const pending = useRef<EngineGroup[]>([]);
+  useEffect(() => {
+    const w = new Worker(new URL("../../lib/planner/engine.worker.ts", import.meta.url));
+    w.onmessage = (e: MessageEvent<EngineResponse>) => {
+      if (e.data.id !== reqId.current) return;
+      setResp({ data: e.data, groups: pending.current });
+      track("results_computed", { total: e.data.total, kept: e.data.results.length, courses: pending.current.length, truncated: e.data.truncated, ms: e.data.ms });
+      setSelIdx(0);
+      setRunning(false);
+    };
+    workerRef.current = w;
+    return () => w.terminate();
+  }, []);
+
+  useEffect(() => {
+    if (!groups.length) return;
+    const t = setTimeout(() => {
+      setRunning(true);
+      reqId.current += 1;
+      pending.current = groups;
+      workerRef.current?.postMessage({ id: reqId.current, groups, cond: st.conditions });
+    }, 150);
+    return () => clearTimeout(t);
+  }, [groups, st.conditions]);
+
+  const shown = groups.length ? resp?.data ?? null : null;
+  const resGroups = useMemo(() => resp?.groups ?? [], [resp]);
+  const busy = groups.length > 0 && running;
+
+  /* ── 장바구니 조작 ── */
+  const courseRef = useRef(courseByCode);
+  useEffect(() => { courseRef.current = courseByCode; }, [courseByCode]);
+  const setMode = useCallback((code: string, mode: CartMode | null) => {
+    const c = courseRef.current.get(code);
+    track(mode === null ? "course_removed" : mode === "must" ? "course_must" : "course_added", { code, name: c?.name, category: c?.category });
+    setSt((s) => {
+      const exists = s.cart.find((i) => i.code === code);
+      if (!mode) return { ...s, cart: s.cart.filter((i) => i.code !== code) };
+      if (exists) return { ...s, cart: s.cart.map((i) => (i.code === code ? { ...i, mode } : i)) };
+      return { ...s, cart: [...s.cart, { code, mode, pinned: null, excluded: [] }] };
+    });
+  }, []);
+
+  const onSection = useCallback((code: string, id: string, action: "pin" | "exclude") => {
+    setSt((s) => ({
+      ...s,
+      // 아직 안 담은 과목이면 담으면서 적용
+      cart: (s.cart.some((i) => i.code === code) ? s.cart : [...s.cart, { code, mode: "maybe" as const, pinned: null, excluded: [] }]).map((i) => {
+        if (i.code !== code) return i;
+        if (action === "pin") return { ...i, pinned: i.pinned === id ? null : id, excluded: i.excluded.filter((x) => x !== id) };
+        const excluded = i.excluded.includes(id) ? i.excluded.filter((x) => x !== id) : [...i.excluded, id];
+        return { ...i, excluded, pinned: i.pinned === id ? null : i.pinned };
+      }),
+    }));
+  }, []);
+
+  /* ── 선택된 결과 → 화면/이미지용 데이터 ── */
+  const results = useMemo(() => shown?.results ?? [], [shown]);
+  const itemsFor = useCallback((idx: number): ResultView["items"] => {
+    const r = results[idx];
+    if (!r) return [];
+    const items: ResultView["items"] = [];
+    resGroups.forEach((g, gi) => {
+      const pi = r.picks[gi] ?? -1;
+      if (pi < 0 || !g.options[pi]) return;
+      const opt = g.options[pi];
+      const secs = opt.sections.filter((s) => !s.profs.some((p) => st.conditions.excludeProfs.includes(p)));
+      const list = secs.length ? secs : opt.sections;
+      const picked = list.find((s) => s.id === profPick[g.code]);
+      const wanted = list.find((s) => s.profs.some((p) => (st.conditions.includeProfs ?? []).includes(p)));
+      const chosen = picked ?? wanted ?? list[0];
+      // 직접 고른 분반이나 '꼭 들어야 하는 교수님' 분반이면 그 교수님으로 확정해서 보여 줌
+      const decided = list.length === 1 || !!picked || !!wanted;
+      items.push({
+        code: g.code,
+        name: g.name,
+        credit: g.credit,
+        slots: opt.slots,
+        color: colorOf(g.code),
+        prof: decided ? chosen.profs.join(", ") : `${chosen.profs[0] ?? ""} 외 ${list.length - 1}분반`,
+        // 교수님 미정이어도 분반들 강의실이 모두 같으면 보여 줌
+        room: decided || list.every((x) => x.room === chosen.room) ? chosen.room : "",
+        sectionIds: decided ? [chosen.id] : list.map((s) => s.id),
+        options: list.map((s) => ({ id: s.id, prof: s.profs.join(", ") || "교수 미정" })),
+        chosen: chosen.id,
+      });
+    });
+    return items;
+  }, [results, resGroups, profPick, st.conditions.excludeProfs, st.conditions.includeProfs, colorOf]);
+  const view: ResultView | null = useMemo(() => (results[selIdx] ? { items: itemsFor(selIdx) } : null), [results, selIdx, itemsFor]);
+
+  /* 3단계: ← → 키로 시간표 넘기기 */
+  useEffect(() => {
+    if (st.step !== 3 || results.length < 2) return;
+    const onKey = (e: KeyboardEvent) => {
+      const t = e.target as HTMLElement;
+      if (t.tagName === "INPUT" || t.tagName === "SELECT" || t.tagName === "TEXTAREA") return;
+      if (e.key === "ArrowRight") setSelIdx((i) => (i + 1) % results.length);
+      if (e.key === "ArrowLeft") setSelIdx((i) => (i - 1 + results.length) % results.length);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [st.step, results.length]);
+
+  const names = useCallback((i: number) => resGroups.filter((_, gi) => (results[i]?.picks[gi] ?? -1) >= 0).map((g) => g.name), [resGroups, results]);
+  const busySlots: Slot[] = useMemo(() => view?.items.flatMap((i) => i.slots) ?? [], [view]);
+
+  /* 지금 시간표의 빈 시간에 넣기 좋은 교양 (규칙 기반 추천) */
+  const recs = useMemo(() => {
+    if (!view) return [];
+    return recommendFill({
+      courses,
+      cartCodes: new Set(cart.map((c) => c.code)),
+      busy: busySlots,
+      currentCredit: view.items.reduce((s, i) => s + i.credit, 0),
+      cond: st.conditions,
+      filter: sectionFilter,
+    });
+  }, [view, courses, cart, busySlots, st.conditions, sectionFilter]);
+
+  /** 추천 과목을 그 분반으로 고정해 '꼭 넣을 과목'으로 담음 → 이 과목이 들어간 시간표만 다시 계산 */
+  const addRec = (r: Recommendation) => {
+    setSt((s) => ({
+      ...s,
+      cart: [...s.cart.filter((c) => c.code !== r.course.code), { code: r.course.code, mode: "must", pinned: r.section.id, excluded: [] }],
+    }));
+    track("rec_added", { code: r.course.code, name: r.course.name, reasons: r.reasons, rank: recs.indexOf(r) + 1 });
+    flash(`${r.course.name}을(를) 넣었어요`);
+  };
+
+  const majorLabel = st.major ? labelOf(st.major) : "";
+  const title = st.sem ? `${semLabel(st.sem)} 시간표` : "시간표";
+  const doImage = async (items: TimetableItem[] = view?.items ?? [], t = title) => {
+    if (!items.length) return;
+    const credit = items.reduce((s, i) => s + i.credit, 0);
+    await exportTimetable({
+      title: t,
+      subtitle: [majorLabel, `${credit}학점`].filter(Boolean).join(" · "),
+      items,
+    });
+    logSave("이미지 저장");
+    track("image_saved", { courses: items.length, credit });
+  };
+
+  /** 기존 사이트와 같은 Google Form 저장 로그 */
+  const logSave = (event: "이미지 저장" | "라이브러리 저장") =>
+    trackSave({ event, majorLabel, extraMajorLabels: st.extras.map(labelOf), entryYear: st.entryYear });
+
+  /* 모든 결과 이미지 일괄 저장 (기존 "모든 시간표 이미지 저장") */
+  const doBulkImages = async () => {
+    setModal(null);
+    const pad = String(results.length).length;
+    for (let i = 0; i < results.length; i++) {
+      setBulkProgress(i + 1);
+      const items = itemsFor(i);
+      const credit = items.reduce((s, it) => s + it.credit, 0);
+      await exportTimetable({
+        title,
+        subtitle: [majorLabel, `${credit}학점`, `${i + 1}번`].filter(Boolean).join(" · "),
+        items,
+        fileName: `${title} ${String(i + 1).padStart(pad, "0")}`,
+        });
+      await new Promise((r) => setTimeout(r, 400)); // 브라우저 다중 다운로드 차단 방지
+    }
+    setBulkProgress(null);
+    logSave("이미지 저장");
+    track("image_saved_bulk", { count: results.length });
+  };
+
+  // 새 화면은 라이트 모드만 (기존 사이트의 다크 설정은 건드리지 않고, 이 화면에서만 끔)
+  useEffect(() => {
+    const root = document.documentElement;
+    const had = root.classList.contains("dark");
+    root.classList.remove("dark");
+    return () => { if (had) root.classList.add("dark"); };
+  }, []);
+
+  const doSave = () => {
+    if (!view || !st.sem) return;
+    const name = saveName.trim() || `${title} ${plans.length + 1}`;
+    const saved = savePlan({ name, sem: st.sem, items: view.items.map((i) => ({ code: i.code, name: i.name, prof: i.prof, room: i.room, credit: i.credit, slots: i.slots, color: i.color, sectionIds: i.sectionIds })) });
+    if (!saved) { flash("저장 공간이 부족해요"); return; }
+    logSave("라이브러리 저장");
+    track("plan_saved", { courses: view.items.length });
+    setPlans(loadPlans());
+    setModal(null);
+    setSaveName("");
+    flash("보관함에 저장했어요");
+  };
+
+  const copy = async (text: string) => {
+    try { await navigator.clipboard.writeText(text); flash("복사했어요"); track("code_copied"); } catch { flash("복사에 실패했어요"); }
+  };
+
+  const sems = index ? sortSems(Object.keys(index.semesters)) : [];
+  const collectedAt = st.sem ? index?.semesters[st.sem]?.collectedAt : undefined;
+  const step = st.step;
+  const goStep = (n: 1 | 2 | 3) => {
+    update({ step: n });
+    track("step_view", { step: n, cart: cart.length });
+    if (n === 2 && !readLocal<number>(TOUR_KEY, 0)) setTour(true);
+  };
+
+  return (
+    <div className="pl">
+      <header className="pl-top">
+        <div className="pl-brand">KNU <span>시간표</span></div>
+        <nav className="pl-steps" aria-label="단계">
+          {([[1, "내 정보"], [2, "과목 담기"], [3, "시간표"]] as const).map(([n, label], i) => (
+            <div key={n} style={{ display: "flex", alignItems: "center" }}>
+              {i > 0 && <span className="pl-step-sep" />}
+              <button className="pl-step" aria-current={step === n ? "step" : undefined} disabled={n > 1 && !snapshot} onClick={() => goStep(n)}>
+                <b>{n}</b><span>{label}</span>
+              </button>
+            </div>
+          ))}
+        </nav>
+        <div className="pl-top-right">
+          <button className="pl-btn ghost" onClick={() => { setPlans(loadPlans()); setModal("saved"); }}>보관함{plans.length ? ` ${plans.length}` : ""}</button>
+          <div className="pl-pop">
+            <button className="pl-btn ghost" aria-expanded={menuOpen} aria-label="메뉴" onClick={() => setMenuOpen((v) => !v)}>메뉴</button>
+            {menuOpen && (
+              <>
+                <div style={{ position: "fixed", inset: 0, zIndex: 29 }} onClick={() => setMenuOpen(false)} />
+                <div className="pl-pop-panel pl-menu" style={{ left: "auto", right: 0, width: 220 }}>
+                  <div className="pl-pop-list">
+                    {step > 1 && <button onClick={() => { setMenuOpen(false); setTour(true); }}>사용법 보기</button>}
+                    <button onClick={() => { setMenuOpen(false); setSheet("calendar"); track("menu_calendar"); }}>학사일정</button>
+                    <button onClick={() => { setMenuOpen(false); setSheet("feedback"); track("menu_feedback"); }}>피드백 · 응원</button>
+                    <button onClick={() => { setMenuOpen(false); shareToKakao(); track("kakao_share"); }}>카카오톡으로 공유</button>
+                    <a href="/old" onClick={() => track("old_version_opened")}>구버전 보기</a>
+                    <a href="/privacy" target="_blank" rel="noopener">개인정보처리방침</a>
+                    <a href="mailto:insu0531@knu.ac.kr">문의 · insu0531@knu.ac.kr</a>
+                    {analyticsEnabled() && (
+                      <button onClick={() => { const next = !optOut; setOptOut(next); setOptOutState(next); flash(next ? "사용 통계를 보내지 않아요" : "사용 통계 보내기를 다시 켰어요"); }}>
+                        사용 통계 {optOut ? "보내기 켜기" : "보내지 않기"}
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      </header>
+
+      {step === 1 ? (
+        <div className="pl-scroll">
+          <div className="pl-intro">
+            <div className="pl-intro-lead pl-enter">
+              <h1>담기만 하세요.<br /><em>시간표</em>는 알아서<br />짜 드릴게요.</h1>
+              <p>전공·교양·교직을 한 번에 담으면 시간이 겹치지 않는 조합을 모두 찾아,<br />공강 많은 순·늦게 시작하는 순으로 정리해 드려요.</p>
+              <p className="pl-intro-point">우리 과에서는 안 열려도 <b>전공으로 인정되는 다른 학과 개설 과목</b>까지 함께 찾아 드려요.</p>
+              <div className="pl-hint">
+                {collectedAt && <>{fmtDate(collectedAt)} 기준 개설 정보 · </>}
+                <a className="pl-link" href="/privacy" target="_blank" rel="noopener">개인정보처리방침</a> · <a className="pl-link" href="mailto:insu0531@knu.ac.kr">insu0531@knu.ac.kr</a>
+              </div>
+            </div>
+            <div className="pl-intro-form pl-enter" style={{ animationDelay: "60ms" }}>
+              <div>
+                <div className="pl-label">학기</div>
+                <select className="pl-select" value={st.sem ?? ""} onChange={(e) => update({ sem: e.target.value, semChosenFor: recommendedSem() })} aria-label="학기">
+                  {sems.map((s) => <option key={s} value={s}>{semLabel(s)}</option>)}
+                </select>
+              </div>
+              <div className="pl-row">
+                <div>
+                  <div className="pl-label">학과</div>
+                  <MajorPicker options={majors} value={st.major} onChange={(m) => { update({ major: m, campuses: defaultCampuses(labelOf(m)) }); track("major_selected", { major: labelOf(m) }); }} />
+                </div>
+                <div>
+                  <div className="pl-label">학번</div>
+                  <select className="pl-select" value={st.entryYear} onChange={(e) => update({ entryYear: +e.target.value })} aria-label="학번">
+                    {Array.from({ length: ENTRY_YEAR_LAST - ENTRY_YEAR_MIN + 1 }, (_, i) => ENTRY_YEAR_LAST - i).map((y) => <option key={y} value={y}>{y}학번</option>)}
+                  </select>
+                </div>
+              </div>
+              {st.major && (
+                <div>
+                  <div className="pl-label">복수전공 · 부전공 <span className="pl-muted" style={{ fontWeight: 500 }}>(선택, 최대 3개)</span></div>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                    {st.extras.map((m, i) => (
+                      <MajorPicker options={majors} key={i} value={m} onChange={(nm) => update({ extras: st.extras.map((x, j) => (j === i ? nm : x)) })} onRemove={() => update({ extras: st.extras.filter((_, j) => j !== i) })} />
+                    ))}
+                    {st.extras.length < 3 && <MajorPicker options={majors} value={null} placeholder="+ 학과 추가" onChange={(m) => update({ extras: [...st.extras, m] })} />}
+                  </div>
+                </div>
+              )}
+              <button className="pl-btn primary lg" disabled={!snapshot} onClick={() => goStep(2)}>
+                {snapshot ? (st.major ? "과목 담으러 가기 →" : "학과 없이 계속하기 →") : loadError ? "강의 데이터를 불러오지 못했어요" : "강의 정보 불러오는 중…"}
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : !snapshot ? (
+        <div className="pl-loading">{loadError ? "강의 데이터를 불러오지 못했어요. 잠시 후 새로고침해 주세요." : "강의 정보 불러오는 중…"}</div>
+      ) : step === 2 ? (
+        <div className="pl-body pl-enter">
+          <div className="pl-split">
+            <div>
+              <CourseBrowser
+                key={`${st.sem}-${st.major ?? ""}`}
+                myLabels={[st.major, ...st.extras].filter((m): m is string => !!m).map(labelOf)}
+                courses={courses}
+                cart={cart}
+                hasMajor={!!st.major}
+                hasExtra={st.extras.length > 0}
+                sectionFilter={sectionFilter}
+                onCampusesChange={(c) => update({ campuses: c })}
+                includeGrad={st.includeGrad}
+                onIncludeGradChange={(v) => update({ includeGrad: v })}
+                onOnlyOpenChange={(v) => update({ onlyOpen: v })}
+                conditions={st.conditions}
+                busySlots={busySlots}
+                onSetMode={setMode}
+                onSection={onSection}
+              />
+            </div>
+            <aside className="pl-cart-side">
+              <div className="pl-cart-head"><h2>담은 과목</h2></div>
+              <div className="pl-scroll">
+                <CartList cart={cart} courseByCode={courseByCode} colorOf={colorOf} onSetMode={setMode} onClear={() => update({ cart: [] })} />
+              </div>
+            </aside>
+          </div>
+          <div className="pl-bar" data-tour="next">
+            <button className="pl-bar-summary" onClick={() => setModal("cart")}>
+              <b>{cart.length}과목 담음</b>
+              <div className="pl-hint">최대 {cartCredit(cart, courseByCode)}학점 · 겹치지 않게 최대한 넣어 드려요</div>
+            </button>
+            <button className="pl-btn primary lg" disabled={cart.length === 0} onClick={() => goStep(3)}>시간표 보기</button>
+          </div>
+        </div>
+      ) : (
+        <div className="pl-plan pl-enter">
+          <aside className="pl-cond" data-open={condOpen}>
+            <button className="pl-cond-toggle" onClick={() => setCondOpen((v) => !v)} aria-expanded={condOpen}>
+              <span>조건 · 정렬</span><span className="pl-muted">{condOpen ? "접기 ▴" : "펼치기 ▾"}</span>
+            </button>
+            <div className="pl-scroll">
+              <div className="pl-cond-block" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <span><b>{cart.length}과목</b> <span className="pl-muted">담음</span></span>
+                <button className="pl-link" onClick={() => goStep(2)}>과목 더 담기 · 빼기</button>
+              </div>
+              <ConditionsPanel cart={cart} courseByCode={courseByCode} conditions={st.conditions} onConditions={(c) => {
+                const changed = (Object.keys(c) as (keyof Conditions)[]).filter((k) => JSON.stringify(c[k]) !== JSON.stringify(st.conditions[k]));
+                track("condition_changed", { keys: changed, sort: c.sort, daysOff: c.daysOff, maxCredit: c.maxCredit, includeProfs: c.includeProfs.length, excludeProfs: c.excludeProfs.length });
+                update({ conditions: c });
+              }} onSetMode={setMode} />
+            </div>
+          </aside>
+          <section>
+            <ResultPanel
+              response={shown}
+              running={busy}
+              cartEmpty={cart.length === 0}
+              selIdx={selIdx}
+              onSelect={setSelIdx}
+              view={view}
+              names={names}
+              onImage={() => doImage()}
+              onSave={() => { setSaveName(""); setModal("save"); }}
+              onCodes={() => { setModal("codes"); track("codes_opened"); }}
+              onBulk={results.length > 1 ? () => (results.length > 20 ? setModal("bulk") : doBulkImages()) : undefined}
+              bulkProgress={bulkProgress}
+              onBack={() => goStep(2)}
+              recs={recs}
+              onAddRec={addRec}
+            />
+          </section>
+        </div>
+      )}
+
+      {modal && (
+        <div className="pl-modal-bg" onClick={() => { setModal(null); setPreview(null); }}>
+          <div className="pl-modal" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
+            {modal === "codes" && view && (
+              <>
+                <div className="pl-modal-head"><h3>수강신청 코드</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-body">
+                  {view.items.map((it) => (
+                    <div key={it.code} className="pl-code-row">
+                      <div>
+                        <div style={{ fontWeight: 600 }}>{it.name} <span className="pl-muted pl-small">{it.credit}학점</span></div>
+                        {it.options.length > 1 ? (
+                          <select className="pl-select" style={{ marginTop: 6, height: 28 }} value={it.chosen}
+                            onChange={(e) => setProfPick((p) => ({ ...p, [it.code]: e.target.value }))} aria-label={`${it.name} 분반 선택`}>
+                            {it.options.map((o) => <option key={o.id} value={o.id}>{o.id.split("-")[1]}분반 · {o.prof}</option>)}
+                          </select>
+                        ) : <div className="pl-muted pl-small">{it.prof}</div>}
+                        <code>{it.chosen}</code>
+                      </div>
+                      <button className="pl-btn sm" onClick={() => copy(it.chosen)}>복사</button>
+                    </div>
+                  ))}
+                  <div style={{ display: "flex", gap: 6, marginTop: 4 }}>
+                    <button className="pl-btn" style={{ flex: 1 }} onClick={() => copy(view.items.map((i) => i.chosen).join("\n"))}>전체 복사</button>
+                    <a className="pl-btn primary" style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", textDecoration: "none" }} href="https://sugang.knu.ac.kr" target="_blank" rel="noopener noreferrer">수강신청 사이트</a>
+                  </div>
+                </div>
+              </>
+            )}
+            {modal === "cart" && (
+              <>
+                <div className="pl-modal-head"><h3>담은 과목 {cart.length}</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-body" style={{ padding: 0 }}>
+                  <CartList cart={cart} courseByCode={courseByCode} colorOf={colorOf} onSetMode={setMode} onClear={() => update({ cart: [] })} />
+                </div>
+              </>
+            )}
+            {modal === "bulk" && (
+              <>
+                <div className="pl-modal-head"><h3>이미지 {results.length}장 저장</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-body">
+                  <div>결과 {results.length}개를 모두 이미지로 저장해요. 브라우저가 여러 파일 다운로드를 물어보면 허용해 주세요.</div>
+                  <button className="pl-btn primary" onClick={doBulkImages}>모두 저장</button>
+                </div>
+              </>
+            )}
+            {modal === "save" && (
+              <>
+                <div className="pl-modal-head"><h3>보관함에 저장</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-body">
+                  <input autoFocus className="pl-field" placeholder={`${title} ${plans.length + 1}`} value={saveName}
+                    onChange={(e) => setSaveName(e.target.value)} onKeyDown={(e) => e.key === "Enter" && doSave()} />
+                  <button className="pl-btn primary" onClick={doSave}>저장</button>
+                  <div className="pl-muted pl-small">이 브라우저에만 저장돼요.</div>
+                </div>
+              </>
+            )}
+            {modal === "saved" && (
+              <>
+                <div className="pl-modal-head">
+                  <h3>{preview ? preview.name : `보관함 ${plans.length}`}</h3>
+                  <button className="pl-x" aria-label="닫기" onClick={() => { setModal(null); setPreview(null); }}>×</button>
+                </div>
+                <div className="pl-modal-body">
+                  {preview ? (
+                    <>
+                      <Timetable items={preview.items} />
+                      <div style={{ display: "flex", gap: 6 }}>
+                        <button className="pl-btn" onClick={() => setPreview(null)}>목록</button>
+                        <button className="pl-btn primary" style={{ flex: 1 }} onClick={() => doImage(preview.items, preview.name)}>이미지 저장</button>
+                      </div>
+                    </>
+                  ) : plans.length === 0 ? (
+                    <div className="pl-empty">저장한 시간표가 없어요.</div>
+                  ) : (
+                    plans.map((p) => (
+                      <div key={p.id} className="pl-code-row">
+                        {renaming?.id === p.id ? (
+                          <input autoFocus className="pl-field" value={renaming.name}
+                            onChange={(e) => setRenaming({ id: p.id, name: e.target.value })}
+                            onKeyDown={(e) => {
+                              if (e.key === "Enter" && renaming.name.trim()) { renamePlan(p, renaming.name.trim()); setRenaming(null); setPlans(loadPlans()); }
+                              if (e.key === "Escape") setRenaming(null);
+                            }}
+                            onBlur={() => { if (renaming.name.trim()) renamePlan(p, renaming.name.trim()); setRenaming(null); setPlans(loadPlans()); }} />
+                        ) : (
+                          <button className="pl-course-main" onClick={() => setPreview(p)}>
+                            <div style={{ fontWeight: 600 }}>{p.name} {p.legacy && <span className="pl-badge">기존 사이트</span>}</div>
+                            <div className="pl-hint">{semLabel(p.sem)} · {p.items.reduce((s, i) => s + i.credit, 0)}학점 · {p.items.length}과목</div>
+                          </button>
+                        )}
+                        <div style={{ display: "flex", gap: 4 }}>
+                          <button className="pl-btn sm" onClick={() => setRenaming({ id: p.id, name: p.name })}>이름</button>
+                          <button className="pl-btn sm" onClick={() => { if (window.confirm(`'${p.name}'을(를) 삭제할까요?`)) { deletePlan(p); setPlans(loadPlans()); } }}>삭제</button>
+                        </div>
+                      </div>
+                    ))
+                  )}
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      )}
+      {sheet && (
+        <div className="pl-modal-bg" onClick={() => setSheet(null)}>
+          <div className="pl-modal pl-sheet" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
+            <div className="pl-modal-head"><h3>{sheet === "calendar" ? "학사일정" : "피드백 · 응원"}</h3><button className="pl-x" aria-label="닫기" onClick={() => setSheet(null)}>×</button></div>
+            <div className="pl-sheet-body">{sheet === "calendar" ? <AcademicCalendarTab /> : <FeedbackTab />}</div>
+          </div>
+        </div>
+      )}
+      <GuideTour steps={step === 3 ? TOUR_3 : TOUR_2} run={tour && step > 1} onClose={() => { setTour(false); writeLocal(TOUR_KEY, Date.now()); }} />
+      {toast && <div className="pl-toast" role="status">{toast}</div>}
+    </div>
+  );
+}
