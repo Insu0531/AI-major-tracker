@@ -16,7 +16,7 @@ import { trackSave } from "@/lib/trackSave";
 import { recommendFill, sampleRecs, type Recommendation } from "@/lib/planner/recommend";
 import QuickAdd from "@/components/planner/QuickAdd";
 import { analyticsEnabled, initAnalytics, isOptedOut, setOptOut, track } from "@/lib/analytics";
-import { pickDefaultSem, recommendedSem, semLabel, sortSems } from "@/lib/planner/semester";
+import { pickDefaultSem, recommendedSem, semLabel, sortSems, TERM_LABEL, TERMS } from "@/lib/planner/semester";
 import { shareTimetableImage, shareToKakao } from "@/lib/kakaoShare";
 import GuideTour, { type TourStep } from "@/components/GuideTour";
 import AcademicCalendarTab from "@/components/AcademicCalendarTab";
@@ -199,9 +199,10 @@ export default function Planner() {
   useEffect(() => { writeLocal(STATE_KEY, pickProfile(st)); }, [st]);
 
   useEffect(() => {
-    if (!st.sem) return;
+    // 아직 데이터가 없는 학기(예: 다음 해)는 받지 않고 1단계에서 안내만
+    if (!st.sem || !index?.semesters[st.sem]) return;
     loadSnapshot(st.sem).then((s) => (s ? setLoaded(s) : setLoadError(true)));
-  }, [st.sem]);
+  }, [st.sem, index]);
   const snapshot = loaded && loaded.sem === st.sem ? loaded : null;
 
   useEffect(() => {
@@ -494,6 +495,16 @@ export default function Planner() {
   };
 
   const sems = index ? sortSems(Object.keys(index.semesters)) : [];
+  // 연도 · 학기 따로 고르기 (데이터 첫 해 ~ 지금 기준 +4년)
+  const [selYear, selTerm] = (st.sem ?? recommendedSem()).split("-");
+  const yearOptions = (() => {
+    const ys = sems.map((s) => +s.split("-")[0]);
+    const first = Math.min(...ys, +recommendedSem().split("-")[0]);
+    const last = Math.max(...ys, +recommendedSem().split("-")[0]) + 4;
+    return Array.from({ length: last - first + 1 }, (_, i) => first + i);
+  })();
+  const semReady = !!(st.sem && index?.semesters[st.sem]);
+  const chooseSem = (year: string, term: string) => update({ sem: `${year}-${term}`, semChosenFor: recommendedSem() });
 
   const doRename = async (p: SavedPlan, name: string) => {
     if (!name) return;
@@ -642,9 +653,17 @@ export default function Planner() {
             <div className="pl-intro-form pl-enter" style={{ animationDelay: "60ms" }}>
               <div>
                 <div className="pl-label">학기</div>
-                <select className="pl-select" value={st.sem ?? ""} onChange={(e) => update({ sem: e.target.value, semChosenFor: recommendedSem() })} aria-label="학기">
-                  {sems.map((s) => <option key={s} value={s}>{semLabel(s)}</option>)}
-                </select>
+                <div className="pl-grid2">
+                  <select className="pl-select" value={selYear} onChange={(e) => chooseSem(e.target.value, selTerm)} aria-label="연도">
+                    {yearOptions.map((y) => <option key={y} value={y}>{y}년</option>)}
+                  </select>
+                  <select className="pl-select" value={selTerm} onChange={(e) => chooseSem(selYear, e.target.value)} aria-label="학기">
+                    {TERMS.map((t) => <option key={t} value={t}>{TERM_LABEL[t]}{index && !index.semesters[`${selYear}-${t}`] ? " (준비 중)" : ""}</option>)}
+                  </select>
+                </div>
+                {index && st.sem && !semReady && (
+                  <div className="pl-hint" style={{ marginTop: 6 }}>{semLabel(st.sem)} 개설 정보가 아직 없어요. 학교에 강의가 열리면 자동으로 채워져요.</div>
+                )}
               </div>
               <div className="pl-row">
                 <div>
@@ -670,7 +689,7 @@ export default function Planner() {
                 </div>
               )}
               <button className="pl-btn primary lg" disabled={!snapshot} onClick={() => goStep(2)}>
-                {snapshot ? (st.major ? "과목 담으러 가기 →" : "학과 없이 계속하기 →") : loadError ? "강의 데이터를 불러오지 못했어요" : "강의 정보 불러오는 중…"}
+                {snapshot ? (st.major ? "과목 담으러 가기 →" : "학과 없이 계속하기 →") : index && !semReady ? "이 학기는 아직 준비 중이에요" : loadError ? "강의 데이터를 불러오지 못했어요" : "강의 정보 불러오는 중…"}
               </button>
             </div>
           </div>
