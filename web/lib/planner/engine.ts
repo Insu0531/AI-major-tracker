@@ -176,7 +176,14 @@ export function runEngine(groups: EngineGroup[], cond: Conditions) {
     return true;
   };
 
+  const includeProfs = cond.includeProfs ?? [];
   const leaf = (credit: number) => {
+    // 꼭 들어야 하는 교수님: 고른 분반 중 그 교수님 수업이 있어야 함
+    for (const prof of includeProfs) {
+      let found = false;
+      for (let i = 0; i < n && !found; i++) found = !!chosen[i]?.opt.sections.some((s) => s.profs.includes(prof));
+      if (!found) return;
+    }
     // 최대성: 빠진 후보 과목 중 학점·시간 모두 들어갈 수 있는 게 있으면 버림
     for (let i = 0; i < n; i++) {
       if (chosen[i] || order[i].g.must) continue;

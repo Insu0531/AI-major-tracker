@@ -1,7 +1,7 @@
 "use client";
 
 import { dayCount, hourRange, type TimetableItem } from "@/lib/planner/exportImage";
-import { DAY_NAMES, mergeSlots, textOn } from "@/lib/planner/data";
+import { DAY_NAMES, mergeSlots } from "@/lib/planner/data";
 
 const LABEL_W = 34;
 
@@ -38,7 +38,6 @@ export default function Timetable({ items }: { items: TimetableItem[] }) {
                       title={`${it.name}\n${it.prof}\n${it.room}`}
                       style={{
                         background: it.color,
-                        color: textOn(it.color),
                         top: `calc(var(--hour) * ${(s - h0 * 60) / 60} + 1px)`,
                         height: `calc(var(--hour) * ${(e - s) / 60} - 2px)`,
                         left: 2,

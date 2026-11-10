@@ -1,7 +1,8 @@
 "use client";
 
-import { Fragment, memo, useMemo, useState } from "react";
-import { dayPatterns, formatSlots, sectionAllowed, type SectionFilter } from "@/lib/planner/data";
+import { Fragment, memo, useEffect, useMemo, useState } from "react";
+import { track } from "@/lib/analytics";
+import { dayPatterns, formatSlots, isFull, sectionAllowed, type SectionFilter } from "@/lib/planner/data";
 import { CATEGORY_LABEL, type CartItem, type CartMode, type Category, type Conditions, type Course, type RawSection, type Slot } from "@/lib/planner/types";
 
 const CATS: Category[] = ["major", "major2", "gyoyang", "kyoshik", "ilban", "other"];
@@ -21,15 +22,35 @@ function sectionMeetsConditions(s: RawSection, c: Conditions) {
   return s.slots.every(([d]) => !c.daysOff.includes(d));
 }
 
+/** 개설학과가 내 학과인지 (학과명 앞부분 기준: "전자공학부 인공지능전공" ↔ "전자공학부") */
+function isMyDept(dept: string, labels: string[]) {
+  const d = dept.replace(/\s/g, "");
+  return labels.some((l) => {
+    const head = l.replace(/^\[[^\]]+\]/, "").split(/[-\s(]/)[0];
+    const flat = l.replace(/\s/g, "");
+    return !!d && (flat.includes(d) || d.includes(head));
+  });
+}
+
 const gradeNum = (x: string) => (GRADES.includes(x) ? Number(x) : 9);
+
+/** 분반들의 비고를 중복 없이 모음 (예: "SU평가강좌 · 원격강좌") */
+function remarksOf(secs: RawSection[]): string {
+  const set = new Set<string>();
+  for (const s of secs) if (s.remark) set.add(s.remark);
+  return [...set].join(" / ");
+}
 
 type Props = {
   courses: Course[];
+  /** 내 학과 이름들 (타학과 개설 표시용) */
+  myLabels: string[];
   cart: CartItem[];
   hasMajor: boolean;
   hasExtra: boolean;
   sectionFilter: SectionFilter;
   onCampusesChange: (c: string[]) => void;
+  onOnlyOpenChange: (v: boolean) => void;
   includeGrad: boolean;
   onIncludeGradChange: (v: boolean) => void;
   conditions: Conditions;
@@ -39,8 +60,9 @@ type Props = {
 };
 
 export default function CourseBrowser(p: Props) {
+  const tabs = CATS.filter((c) => (c === "major" ? p.hasMajor : c === "major2" ? p.hasExtra : true));
   const [q, setQ] = useState("");
-  const [cats, setCats] = useState<Category[]>(p.hasMajor ? ["major"] : ["gyoyang"]);
+  const [cat, setCat] = useState<Category>(tabs[0]);
   const [grades, setGrades] = useState<string[]>([]);
   const [tags, setTags] = useState<string[]>([]);
   const [credits, setCredits] = useState<number[]>([]);
@@ -51,16 +73,28 @@ export default function CourseBrowser(p: Props) {
   const [sort, setSort] = useState<Sort>(null);
 
   const cartMap = useMemo(() => new Map(p.cart.map((c) => [c.code, c])), [p.cart]);
-  const toggle = <T,>(arr: T[], v: T) => (arr.includes(v) ? arr.filter((x) => x !== v) : [...arr, v]);
+  const toggle = <T,>(arr: T[], v: T) => {
+    track("filter_toggled", { value: String(v), on: !arr.includes(v) });
+    return arr.includes(v) ? arr.filter((x) => x !== v) : [...arr, v];
+  };
+  const searching = !!q.trim();
+  // 검색어는 입력이 멈춘 뒤 한 번만 기록
+  useEffect(() => {
+    const t = q.trim();
+    if (!t) return;
+    const id = setTimeout(() => track("search", { q: t }), 1200);
+    return () => clearTimeout(id);
+  }, [q]);
 
-  const filtered = useMemo(() => {
+  /* 탭과 무관한 필터를 통과한 과목 (탭별 개수 표시용) */
+  const base = useMemo(() => {
     const t = q.trim().replace(/\s/g, "").toLowerCase();
-    const out = p.courses.filter((c) => {
+    return p.courses.filter((c) => {
       if (!p.includeGrad && c.isGrad) return false;
       if (t) {
         const hay = `${c.name}${c.code}${c.dept}${c.sections.map((s) => s.profs.join("")).join("")}`.replace(/\s/g, "").toLowerCase();
         if (!hay.includes(t)) return false;
-      } else if (cats.length && !cats.includes(c.category)) return false;
+      }
       if (grades.length && !grades.includes(c.grade)) return false;
       if (credits.length && !credits.includes(c.credit >= 4 ? 4 : c.credit)) return false;
       if (tags.length && !tags.every((tg) => c.tags.includes(tg))) return false;
@@ -72,17 +106,27 @@ export default function CourseBrowser(p: Props) {
       }
       return true;
     });
-    const base = (a: Course, b: Course) => gradeNum(a.grade) - gradeNum(b.grade) || a.name.localeCompare(b.name, "ko");
-    if (!sort) return out.sort(base);
+  }, [p.courses, p.includeGrad, p.sectionFilter, p.conditions, p.busySlots, q, grades, credits, tags, onlyFree, cartMap]);
+
+  const counts = useMemo(() => {
+    const m = new Map<Category, number>();
+    for (const c of base) m.set(c.category, (m.get(c.category) ?? 0) + 1);
+    return m;
+  }, [base]);
+
+  const filtered = useMemo(() => {
+    const out = searching ? [...base] : base.filter((c) => c.category === cat);
+    const byDefault = (a: Course, b: Course) => gradeNum(a.grade) - gradeNum(b.grade) || a.name.localeCompare(b.name, "ko");
+    if (!sort) return out.sort(byDefault);
     const val = (c: Course) => (sort.col === "grade" ? gradeNum(c.grade) : sort.col === "credit" ? c.credit : sort.col === "dept" ? c.dept : c.name);
     return out.sort((a, b) => {
       const va = val(a), vb = val(b);
       const cmp = typeof va === "number" ? va - (vb as number) : String(va).localeCompare(String(vb), "ko");
-      return cmp * sort.dir || base(a, b);
+      return cmp * sort.dir || byDefault(a, b);
     });
-  }, [p.courses, p.includeGrad, p.sectionFilter, p.conditions, p.busySlots, q, cats, grades, credits, tags, onlyFree, cartMap, sort]);
+  }, [base, cat, searching, sort]);
 
-  const activeExtra = grades.length + tags.length + credits.length + (p.includeGrad ? 1 : 0);
+  const activeExtra = grades.length + tags.length + credits.length + (p.includeGrad ? 1 : 0) + (p.sectionFilter.onlyOpen ? 1 : 0);
   const sortBy = (col: SortCol) =>
     setSort((s) => (!s || s.col !== col ? { col, dir: 1 } : s.dir === 1 ? { col, dir: -1 } : null));
   const th = (col: SortCol, label: string, className = "") => (
@@ -100,10 +144,25 @@ export default function CourseBrowser(p: Props) {
           <h1>어떤 과목을 들을까요?</h1>
           <p>들을 만한 과목을 넉넉히 담아 두세요. 겹치지 않게 최대한 많이 넣은 시간표를 만들어 드려요.</p>
         </div>
+
+        <div className="pl-tabs" role="tablist" aria-label="구분" data-tour="cats">
+          {tabs.map((c) => (
+            <button
+              key={c}
+              role="tab"
+              className={`pl-tab cat-${c}`}
+              aria-selected={!searching && cat === c}
+              onClick={() => { setCat(c); setQ(""); setLimit(PAGE); setOpenCode(null); track("tab_changed", { tab: c }); }}
+            >
+              {CATEGORY_LABEL[c]} <span className="pl-tab-count">{(counts.get(c) ?? 0).toLocaleString()}</span>
+            </button>
+          ))}
+        </div>
+
         <div className="pl-search" data-tour="search">
           <input
             className="pl-field"
-            placeholder="과목명, 코드, 교수, 학과로 검색"
+            placeholder="과목명, 코드, 교수, 학과로 전체 검색"
             value={q}
             onChange={(e) => { setQ(e.target.value); setLimit(PAGE); }}
           />
@@ -111,59 +170,57 @@ export default function CourseBrowser(p: Props) {
             {filtersOpen ? "필터 접기" : `필터${activeExtra ? ` ${activeExtra}` : ""}`}
           </button>
         </div>
-        <div className="pl-filter-grid">
-          <div className="pl-filter-line" data-tour="cats">
-            <span className="pl-filter-name">구분</span>
-            <div className="pl-chips">
-              {CATS.filter((c) => (c === "major" ? p.hasMajor : c === "major2" ? p.hasExtra : true)).map((c) => (
-                <button key={c} className="pl-chip" aria-pressed={!q.trim() && cats.includes(c)} disabled={!!q.trim()} onClick={() => { setCats(toggle(cats, c)); setLimit(PAGE); }}>
-                  {CATEGORY_LABEL[c]}
+
+        {filtersOpen && (
+          <div className="pl-filter-grid">
+            <div className="pl-filter-line">
+              <span className="pl-filter-name">학년</span>
+              <div className="pl-chips">{GRADES.map((g) => <button key={g} className="pl-chip" aria-pressed={grades.includes(g)} onClick={() => setGrades(toggle(grades, g))}>{g}학년</button>)}</div>
+            </div>
+            <div className="pl-filter-line">
+              <span className="pl-filter-name">학점</span>
+              <div className="pl-chips">{[1, 2, 3, 4].map((c) => <button key={c} className="pl-chip" aria-pressed={credits.includes(c)} onClick={() => setCredits(toggle(credits, c))}>{c === 4 ? "4+" : c}학점</button>)}</div>
+            </div>
+            <div className="pl-filter-line">
+              <span className="pl-filter-name">특성</span>
+              <div className="pl-chips">{TAGS.map((t) => <button key={t} className="pl-chip" aria-pressed={tags.includes(t)} onClick={() => setTags(toggle(tags, t))}>{t}</button>)}</div>
+            </div>
+            <div className="pl-filter-line">
+              <span className="pl-filter-name">캠퍼스</span>
+              <div className="pl-chips">
+                {CAMPUSES.map((c) => (
+                  <button key={c} className="pl-chip" aria-pressed={p.sectionFilter.campuses.includes(c)} onClick={() => {
+                    const next = toggle(p.sectionFilter.campuses, c);
+                    if (next.length) p.onCampusesChange(next);
+                  }}>{c}</button>
+                ))}
+                <button className="pl-chip" aria-pressed={p.includeGrad} onClick={() => p.onIncludeGradChange(!p.includeGrad)}>대학원 포함</button>
+              </div>
+            </div>
+            <div className="pl-filter-line">
+              <span className="pl-filter-name">자리</span>
+              <div className="pl-chips">
+                <button className="pl-chip" aria-pressed={p.sectionFilter.onlyOpen} onClick={() => p.onOnlyOpenChange(!p.sectionFilter.onlyOpen)} title="신청 인원이 정원보다 적은 분반만 (수집 시점 기준)">
+                  정원 남은 분반만
                 </button>
-              ))}
-              {p.busySlots.length > 0 && (
-                <button className="pl-chip" aria-pressed={onlyFree} onClick={() => setOnlyFree((v) => !v)} title="지금 고른 시간표의 빈 시간에 맞는 분반이 있는 과목만">
-                  빈 시간에 맞는 것만
-                </button>
-              )}
+                {p.busySlots.length > 0 && (
+                  <button className="pl-chip" aria-pressed={onlyFree} onClick={() => setOnlyFree((v) => !v)} title="지금 고른 시간표의 빈 시간에 맞는 분반이 있는 과목만">
+                    내 시간표 빈 시간에 맞는 것만
+                  </button>
+                )}
+              </div>
             </div>
           </div>
-          {filtersOpen && (
-            <>
-              <div className="pl-filter-line">
-                <span className="pl-filter-name">학년</span>
-                <div className="pl-chips">{GRADES.map((g) => <button key={g} className="pl-chip" aria-pressed={grades.includes(g)} onClick={() => setGrades(toggle(grades, g))}>{g}학년</button>)}</div>
-              </div>
-              <div className="pl-filter-line">
-                <span className="pl-filter-name">학점</span>
-                <div className="pl-chips">{[1, 2, 3, 4].map((c) => <button key={c} className="pl-chip" aria-pressed={credits.includes(c)} onClick={() => setCredits(toggle(credits, c))}>{c === 4 ? "4+" : c}학점</button>)}</div>
-              </div>
-              <div className="pl-filter-line">
-                <span className="pl-filter-name">특성</span>
-                <div className="pl-chips">{TAGS.map((t) => <button key={t} className="pl-chip" aria-pressed={tags.includes(t)} onClick={() => setTags(toggle(tags, t))}>{t}</button>)}</div>
-              </div>
-              <div className="pl-filter-line">
-                <span className="pl-filter-name">캠퍼스</span>
-                <div className="pl-chips">
-                  {CAMPUSES.map((c) => (
-                    <button key={c} className="pl-chip" aria-pressed={p.sectionFilter.campuses.includes(c)} onClick={() => {
-                      const next = toggle(p.sectionFilter.campuses, c);
-                      if (next.length) p.onCampusesChange(next);
-                    }}>{c}</button>
-                  ))}
-                  <button className="pl-chip" aria-pressed={p.includeGrad} onClick={() => p.onIncludeGradChange(!p.includeGrad)}>대학원 포함</button>
-                </div>
-              </div>
-            </>
-          )}
-        </div>
+        )}
       </div>
+
       <div className="pl-scroll">
         <div className="pl-count">
-          <b>{filtered.length.toLocaleString()}</b>과목{q.trim() ? " · 전체에서 검색 중" : ""}
-          <span className="pl-muted"> · 과목을 누르면 분반이 펼쳐져요</span>
+          {searching ? <>전체에서 <b>{filtered.length.toLocaleString()}</b>과목 찾음</> : <><b>{filtered.length.toLocaleString()}</b>과목</>}
+          <span className="pl-muted"> · 과목을 누르면 분반별 교수·시간·정원이 펼쳐져요</span>
         </div>
         {filtered.length === 0 ? (
-          <div className="pl-empty">조건에 맞는 과목이 없어요.<br />구분이나 필터를 바꿔 보세요.</div>
+          <div className="pl-empty">조건에 맞는 과목이 없어요.<br />다른 탭이나 필터를 바꿔 보세요.</div>
         ) : (
           <table className="pl-table">
             <thead>
@@ -176,6 +233,7 @@ export default function CourseBrowser(p: Props) {
                 <th className="c-prof">교수</th>
                 <th className="c-time">강의시간</th>
                 <th className="c-num c-secs">분반</th>
+                <th className="c-note">비고</th>
               </tr>
             </thead>
             <tbody>
@@ -185,6 +243,8 @@ export default function CourseBrowser(p: Props) {
                   course={c}
                   item={cartMap.get(c.code)}
                   open={openCode === c.code}
+                  showCategory={searching}
+                  otherDept={(c.category === "major" || c.category === "major2") && !isMyDept(c.dept, p.myLabels)}
                   onToggleOpen={() => setOpenCode(openCode === c.code ? null : c.code)}
                   sectionFilter={p.sectionFilter}
                   onSetMode={p.onSetMode}
@@ -208,6 +268,8 @@ const CourseRow = memo(function CourseRow({
   course: c,
   item,
   open,
+  showCategory,
+  otherDept,
   onToggleOpen,
   sectionFilter,
   onSetMode,
@@ -216,6 +278,8 @@ const CourseRow = memo(function CourseRow({
   course: Course;
   item: CartItem | undefined;
   open: boolean;
+  showCategory: boolean;
+  otherDept: boolean;
   onToggleOpen: () => void;
   sectionFilter: SectionFilter;
   onSetMode: Props["onSetMode"];
@@ -226,18 +290,20 @@ const CourseRow = memo(function CourseRow({
   const time = timeKeys.size === 1 ? formatSlots(secs[0].slots) : dayPatterns(secs.map((s) => s.slots)) || "시간 미정";
   const profs = [...new Set(secs.flatMap((s) => s.profs))];
   const profText = profs.length === 0 ? "-" : profs.length <= 2 ? profs.join(", ") : `${profs.slice(0, 2).join(", ")} 외 ${profs.length - 2}`;
+  const note = remarksOf(secs);
 
   return (
     <Fragment>
       <tr className={`pl-tr${item ? " in-cart" : ""}${open ? " open" : ""}`} onClick={onToggleOpen}>
         <td className="c-add" onClick={(e) => e.stopPropagation()}>
-          <button className="pl-add-btn" aria-pressed={!!item} aria-label={item ? `${c.name} 빼기` : `${c.name} 담기`} onClick={() => onSetMode(c.code, item ? null : "maybe")}>
+          <button className="pl-add-btn" aria-pressed={!!item} aria-label={item ? `${c.name} 빼기` : `${c.name} 담기`} title={item ? "담기 취소" : "담기"} onClick={() => onSetMode(c.code, item ? null : "maybe")}>
             {item ? "✓" : "+"}
           </button>
         </td>
         <td className="c-name">
           <span className="pl-cname">{c.name}</span>
-          {c.category !== "other" && <span className={`pl-badge${c.category === "major" ? " accent" : ""}`}>{CATEGORY_LABEL[c.category]}</span>}
+          {showCategory && c.category !== "other" && <span className={`pl-badge cat-${c.category}`}>{CATEGORY_LABEL[c.category]}</span>}
+          {otherDept && <span className="pl-badge pl-badge-other" title="우리 과 이수체계 과목인데 다른 학과에서 열린 분반이에요">타학과 개설</span>}
           {c.tags.filter((t) => t === "SDG" || t === "인문교양").map((t) => <span key={t} className="pl-badge">{t}</span>)}
           <span className="pl-mobile-meta">{[c.grade && c.grade !== "*" ? `${c.grade}학년` : "", `${c.credit}학점`, time].filter(Boolean).join(" · ")}</span>
         </td>
@@ -247,25 +313,31 @@ const CourseRow = memo(function CourseRow({
         <td className="c-prof">{profText}</td>
         <td className="c-time">{time}</td>
         <td className="c-num c-secs">{secs.length}</td>
+        <td className="c-note" title={note}>{note}</td>
       </tr>
       {open && (
         <tr className="pl-tr-sub">
-          <td colSpan={8}>
+          <td colSpan={9}>
             <div className="pl-sections">
               {secs.map((s) => {
                 const pinned = item?.pinned === s.id;
                 const excluded = item?.excluded.includes(s.id) ?? false;
+                const full = isFull(s);
                 return (
                   <div key={s.id} className={`pl-sec${pinned ? " pinned" : ""}${excluded ? " excluded" : ""}`}>
                     <span className="pl-sec-no">{s.id.split("-")[1]}</span>
                     <span className="pl-sec-prof">{s.profs.join(", ") || "교수 미정"}</span>
                     <span className="pl-sec-time">{formatSlots(s.slots)}</span>
                     <span className="pl-sec-room">{s.room || "-"}</span>
-                    <span className="pl-sec-cap">{s.capacity ? `${s.applied ?? 0}/${s.capacity}명` : ""}</span>
+                    <span className={`pl-sec-cap${full ? " full" : ""}`}>{s.capacity ? `${s.applied ?? 0}/${s.capacity}명${full ? " 마감" : ""}` : ""}</span>
                     {item ? (
                       <span className="pl-sec-actions">
-                        <button className="pl-btn sm" aria-pressed={pinned} onClick={() => onSection(c.code, s.id, "pin")}>{pinned ? "고정됨" : "이 분반만"}</button>
-                        <button className="pl-btn sm" onClick={() => onSection(c.code, s.id, "exclude")}>{excluded ? "되살리기" : "빼기"}</button>
+                        <button className="pl-btn sm" aria-pressed={pinned} onClick={() => onSection(c.code, s.id, "pin")}>
+                          {pinned ? "고정 해제" : "이 분반으로 고정"}
+                        </button>
+                        <button className="pl-btn sm" aria-pressed={excluded} onClick={() => onSection(c.code, s.id, "exclude")}>
+                          {excluded ? "제외 취소" : "이 분반 제외"}
+                        </button>
                       </span>
                     ) : <span />}
                     {(s.campus !== "산격동" || s.remark) && (
@@ -274,7 +346,11 @@ const CourseRow = memo(function CourseRow({
                   </div>
                 );
               })}
-              {!item && <div className="pl-hint">담으면 원하는 분반만 남기거나, 싫은 분반을 뺄 수 있어요.</div>}
+              {item ? (
+                <div className="pl-hint">‘이 분반으로 고정’하면 시간표에 이 분반만 쓰고, ‘이 분반 제외’하면 이 분반은 빼고 만들어요.</div>
+              ) : (
+                <div className="pl-hint">담으면 특정 분반으로 고정하거나, 원하지 않는 분반을 제외할 수 있어요.</div>
+              )}
             </div>
           </td>
         </tr>

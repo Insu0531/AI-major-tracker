@@ -67,9 +67,13 @@ export function buildCourses(sections: RawSection[], mine: Map<string, string>, 
   return [...map.values()];
 }
 
-export type SectionFilter = { campuses: string[] };
+export type SectionFilter = { campuses: string[]; onlyOpen: boolean };
+
+/** 정원이 다 찼는지 (정원 정보가 없으면 판단하지 않음) */
+export const isFull = (s: RawSection) => !!s.capacity && (s.applied ?? 0) >= s.capacity;
 
 export function sectionAllowed(s: RawSection, f: SectionFilter): boolean {
+  if (f.onlyOpen && isFull(s)) return false;
   // 캠퍼스 정보가 없는(시간 미정 등) 분반은 항상 허용
   return !s.campus || f.campuses.includes(s.campus);
 }
@@ -132,22 +136,15 @@ export function formatSlots(slots: [number, number, number][]): string {
   return [...byTime.entries()].map(([t, ds]) => `${ds.map((d) => DAY_NAMES[d]).join("·")} ${t}`).join(", ");
 }
 
-/** 시간표 블록 색: 밝고 선명하되 형광은 피한 12색. 담은 순서대로 배정해 한 시간표 안에서 겹치지 않게 한다. */
+/**
+ * 시간표 블록 색: OKLCH 같은 밝기(L 0.605)·채도(C 0.11)에서 색상만 돌려 만든 12색.
+ * 화면의 차분한 뉴트럴과 어울리고, 모두 흰 글씨가 읽히는 밝기. 담은 순서대로 배정해 한 시간표 안에서 겹치지 않게 한다.
+ */
 export const PALETTE = [
-  "#f0715d", "#f4a23a", "#f2cd4f", "#82c96f", "#3fbc9f", "#4cb2e6",
-  "#5d88ee", "#8f7bea", "#c879dc", "#ee7ba8", "#a9bf4b", "#e9935e",
+  "#bb6660", "#b46e3c", "#a07c25", "#5c9251", "#15977e", "#0092ab",
+  "#4a86c1", "#7b77c1", "#9a6daf", "#b2658b", "#808934", "#b9694d"
 ];
 export const colorAt = (i: number) => PALETTE[((i % PALETTE.length) + PALETTE.length) % PALETTE.length];
-
-/** 배경색에 맞는 글자색 (밝은 블록은 어두운 글씨) */
-export function textOn(hex: string): string {
-  const n = parseInt(hex.slice(1), 16);
-  const [r, g, b] = [(n >> 16) & 255, (n >> 8) & 255, n & 255].map((v) => {
-    const c = v / 255;
-    return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
-  });
-  return 0.2126 * r + 0.7152 * g + 0.0722 * b > 0.42 ? "#2a2722" : "#ffffff";
-}
 
 /** 담은 순서가 없을 때(보관함 등) 쓰는 과목코드 기반 색 */
 export function colorFor(code: string): string {

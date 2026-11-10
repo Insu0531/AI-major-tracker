@@ -65,11 +65,20 @@ export function ConditionsPanel({
   const [allProfs, setAllProfs] = useState(false);
   const set = (patch: Partial<Conditions>) => onConditions({ ...c, ...patch });
 
-  const profs = useMemo(() => {
-    const s = new Set<string>();
-    for (const i of cart) for (const sec of courseByCode.get(i.code)?.sections ?? []) sec.profs.forEach((p) => s.add(p));
-    return [...s].sort((a, b) => a.localeCompare(b, "ko"));
+  // 교수님 → 담당 과목명 (칩에 마우스를 올리면 어떤 과목인지 보여 줌)
+  const profCourses = useMemo(() => {
+    const m = new Map<string, string[]>();
+    for (const i of cart) {
+      const course = courseByCode.get(i.code);
+      for (const sec of course?.sections ?? []) for (const p of sec.profs) {
+        const list = m.get(p) ?? [];
+        if (course && !list.includes(course.name)) list.push(course.name);
+        m.set(p, list);
+      }
+    }
+    return m;
   }, [cart, courseByCode]);
+  const profs = useMemo(() => [...profCourses.keys()].sort((a, b) => a.localeCompare(b, "ko")), [profCourses]);
 
   return (
     <>
@@ -123,19 +132,73 @@ export function ConditionsPanel({
       </div>
 
       {profs.length > 0 && (
-        <div className="pl-cond-block">
-          <div className="pl-label">피하고 싶은 교수</div>
-          <div className="pl-chips">
-            {(allProfs ? profs : profs.filter((p, i) => i < 10 || c.excludeProfs.includes(p))).map((p) => (
-              <button key={p} className="pl-chip" aria-pressed={c.excludeProfs.includes(p)}
-                onClick={() => set({ excludeProfs: c.excludeProfs.includes(p) ? c.excludeProfs.filter((x) => x !== p) : [...c.excludeProfs, p] })}>{p}</button>
-            ))}
-          </div>
-          {profs.length > 10 && (
-            <button className="pl-link" style={{ marginTop: 8 }} onClick={() => setAllProfs((v) => !v)}>{allProfs ? "접기" : `${profs.length - 10}명 더 보기`}</button>
-          )}
-        </div>
+        <>
+          <ProfChooser
+            label="꼭 들어야 하는 교수님"
+            hint="고른 교수님 수업이 들어간 시간표만 보여 줘요."
+            profs={profs}
+            profCourses={profCourses}
+            selected={c.includeProfs ?? []}
+            onToggle={(p) => {
+              const inc = c.includeProfs ?? [];
+              set({ includeProfs: inc.includes(p) ? inc.filter((x) => x !== p) : [...inc, p], excludeProfs: c.excludeProfs.filter((x) => x !== p) });
+            }}
+            showAll={allProfs}
+            onShowAll={() => setAllProfs((v) => !v)}
+          />
+          <ProfChooser
+            label="피하고 싶은 교수님"
+            hint="고른 교수님 분반은 빼고 시간표를 만들어요."
+            profs={profs}
+            profCourses={profCourses}
+            selected={c.excludeProfs}
+            onToggle={(p) => set({
+              excludeProfs: c.excludeProfs.includes(p) ? c.excludeProfs.filter((x) => x !== p) : [...c.excludeProfs, p],
+              includeProfs: (c.includeProfs ?? []).filter((x) => x !== p),
+            })}
+            showAll={allProfs}
+            onShowAll={() => setAllProfs((v) => !v)}
+          />
+        </>
       )}
     </>
+  );
+}
+
+function ProfChooser({
+  label,
+  hint,
+  profs,
+  profCourses,
+  selected,
+  onToggle,
+  showAll,
+  onShowAll,
+}: {
+  label: string;
+  hint: string;
+  profs: string[];
+  profCourses: Map<string, string[]>;
+  selected: string[];
+  onToggle: (p: string) => void;
+  showAll: boolean;
+  onShowAll: () => void;
+}) {
+  const shown = showAll ? profs : profs.filter((p, i) => i < 8 || selected.includes(p));
+  return (
+    <div className="pl-cond-block">
+      <div className="pl-label">{label}</div>
+      <div className="pl-hint" style={{ marginBottom: 8 }}>{hint}</div>
+      <div className="pl-chips">
+        {shown.map((p) => (
+          <button key={p} className="pl-chip" aria-pressed={selected.includes(p)} title={profCourses.get(p)?.join(", ")} onClick={() => onToggle(p)}>
+            {p}
+          </button>
+        ))}
+      </div>
+      {profs.length > 8 && (
+        <button className="pl-link" style={{ marginTop: 8 }} onClick={onShowAll}>{showAll ? "접기" : `${profs.length - 8}명 더 보기`}</button>
+      )}
+    </div>
   );
 }

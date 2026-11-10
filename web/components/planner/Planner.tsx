@@ -1,12 +1,13 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import Link from "next/link";
 import { MAJOR_LABELS, ENTRY_YEAR_MIN, type Major } from "@/lib/courses";
 import { buildCourses, buildEngineGroups, colorAt, loadCurriculum, loadIndex, loadSnapshot, type SectionFilter } from "@/lib/planner/data";
 import { exportTimetable, type TimetableItem } from "@/lib/planner/exportImage";
 import { deletePlan, loadPlans, readLocal, renamePlan, savePlan, writeLocal, type SavedPlan } from "@/lib/planner/storage";
 import { trackSave } from "@/lib/trackSave";
+import { analyticsEnabled, initAnalytics, isOptedOut, setOptOut, track } from "@/lib/analytics";
+import { pickDefaultSem, recommendedSem, semLabel, sortSems } from "@/lib/planner/semester";
 import { shareToKakao } from "@/lib/kakaoShare";
 import GuideTour, { type TourStep } from "@/components/GuideTour";
 import AcademicCalendarTab from "@/components/AcademicCalendarTab";
@@ -32,9 +33,7 @@ const TOUR_3: TourStep[] = [
   { selector: '[data-tour="actions"]', title: "저장 · 수강신청", body: "이미지로 저장하거나 보관함에 넣고, 수강신청 코드를 복사할 수 있어요. ← → 키로 시간표를 넘길 수 있어요." },
 ];
 const ENTRY_YEAR_LAST = 2026; // 이수체계 데이터가 있는 마지막 학번
-const TERM_LABEL: Record<string, string> = { "1": "1학기", "2": "2학기", s: "여름학기", w: "겨울학기" };
 const fmtDate = (iso: string) => new Date(iso).toLocaleString("ko-KR", { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
-const semLabel = (sem: string) => { const [y, t] = sem.split("-"); return `${y}년 ${TERM_LABEL[t] ?? t}`; };
 const defaultCampuses = (m: Major | null) => (m && MAJOR_LABELS[m].startsWith("[상주]") ? ["상주"] : ["산격동", "동인동"]);
 
 type Persisted = {
@@ -46,6 +45,9 @@ type Persisted = {
   conditions: Conditions;
   campuses: string[];
   includeGrad: boolean;
+  onlyOpen: boolean;
+  /** 학기를 직접 고른 시점의 추천 학기 (추천 학기가 바뀌면 다시 자동 선택) */
+  semChosenFor: string | null;
   step: 1 | 2 | 3;
 };
 
@@ -58,6 +60,8 @@ const INITIAL: Persisted = {
   conditions: DEFAULT_CONDITIONS,
   campuses: ["산격동", "동인동"],
   includeGrad: false,
+  onlyOpen: false,
+  semChosenFor: null,
   step: 1,
 };
 
@@ -68,6 +72,7 @@ function loadPersisted(): Persisted {
   conditions.startAfter = 0;
   conditions.endBefore = 0;
   if (!(conditions.sort in SORT_LABEL)) conditions.sort = "recommended";
+  conditions.includeProfs = conditions.includeProfs ?? [];
   return { ...INITIAL, ...saved, conditions };
 }
 
@@ -90,10 +95,10 @@ export default function Planner() {
   const [modal, setModal] = useState<null | "codes" | "save" | "saved" | "cart" | "bulk">(null);
   const [sheet, setSheet] = useState<null | "calendar" | "feedback">(null);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dark, setDark] = useState(() => document.documentElement.classList.contains("dark"));
   const [tour, setTour] = useState(false);
   const [renaming, setRenaming] = useState<{ id: string; name: string } | null>(null);
   const [bulkProgress, setBulkProgress] = useState<number | null>(null);
+  const [optOut, setOptOutState] = useState(isOptedOut);
   const [saveName, setSaveName] = useState("");
   const [plans, setPlans] = useState<SavedPlan[]>(loadPlans);
   const [preview, setPreview] = useState<SavedPlan | null>(null);
@@ -104,11 +109,13 @@ export default function Planner() {
 
   /* ── 초기화: 저장된 상태 + 학기 목록 ── */
   useEffect(() => {
+    void initAnalytics();
     loadIndex().then((idx) => {
       if (!idx) { setLoadError(true); return; }
       setIndex(idx);
-      const sems = Object.keys(idx.semesters).sort();
-      setSt((s) => (s.sem && idx.semesters[s.sem] ? s : { ...s, sem: sems[sems.length - 1] ?? null }));
+      // 날짜에 맞는 학기를 기본 선택. 직접 고른 학기는 같은 수강신청 시기 동안만 유지
+      const rec = recommendedSem();
+      setSt((s) => (s.sem && idx.semesters[s.sem] && s.semChosenFor === rec ? s : { ...s, sem: pickDefaultSem(Object.keys(idx.semesters)), semChosenFor: null }));
     });
   }, []);
 
@@ -137,7 +144,7 @@ export default function Planner() {
 
   const courses = useMemo(() => (snapshot ? buildCourses(snapshot.sections, mine, extra) : []), [snapshot, mine, extra]);
   const courseByCode = useMemo(() => new Map(courses.map((c) => [c.code, c])), [courses]);
-  const sectionFilter: SectionFilter = useMemo(() => ({ campuses: st.campuses }), [st.campuses]);
+  const sectionFilter: SectionFilter = useMemo(() => ({ campuses: st.campuses, onlyOpen: st.onlyOpen }), [st.campuses, st.onlyOpen]);
   const cart = useMemo(() => st.cart.filter((i) => courseByCode.has(i.code)), [st.cart, courseByCode]);
   const groups = useMemo(() => buildEngineGroups(cart, courseByCode, sectionFilter), [cart, courseByCode, sectionFilter]);
   // 색은 담은 순서대로 (한 시간표 안에서 같은 색이 나오지 않게)
@@ -153,6 +160,7 @@ export default function Planner() {
     w.onmessage = (e: MessageEvent<EngineResponse>) => {
       if (e.data.id !== reqId.current) return;
       setResp({ data: e.data, groups: pending.current });
+      track("results_computed", { total: e.data.total, kept: e.data.results.length, courses: pending.current.length, truncated: e.data.truncated, ms: e.data.ms });
       setSelIdx(0);
       setRunning(false);
     };
@@ -176,7 +184,11 @@ export default function Planner() {
   const busy = groups.length > 0 && running;
 
   /* ── 장바구니 조작 ── */
+  const courseRef = useRef(courseByCode);
+  useEffect(() => { courseRef.current = courseByCode; }, [courseByCode]);
   const setMode = useCallback((code: string, mode: CartMode | null) => {
+    const c = courseRef.current.get(code);
+    track(mode === null ? "course_removed" : mode === "must" ? "course_must" : "course_added", { code, name: c?.name, category: c?.category });
     setSt((s) => {
       const exists = s.cart.find((i) => i.code === code);
       if (!mode) return { ...s, cart: s.cart.filter((i) => i.code !== code) };
@@ -209,8 +221,11 @@ export default function Planner() {
       const opt = g.options[pi];
       const secs = opt.sections.filter((s) => !s.profs.some((p) => st.conditions.excludeProfs.includes(p)));
       const list = secs.length ? secs : opt.sections;
-      const chosen = list.find((s) => s.id === profPick[g.code]) ?? list[0];
-      const decided = list.length === 1 || !!profPick[g.code];
+      const picked = list.find((s) => s.id === profPick[g.code]);
+      const wanted = list.find((s) => s.profs.some((p) => (st.conditions.includeProfs ?? []).includes(p)));
+      const chosen = picked ?? wanted ?? list[0];
+      // 직접 고른 분반이나 '꼭 들어야 하는 교수님' 분반이면 그 교수님으로 확정해서 보여 줌
+      const decided = list.length === 1 || !!picked || !!wanted;
       items.push({
         code: g.code,
         name: g.name,
@@ -225,7 +240,7 @@ export default function Planner() {
       });
     });
     return items;
-  }, [results, resGroups, profPick, st.conditions.excludeProfs, colorOf]);
+  }, [results, resGroups, profPick, st.conditions.excludeProfs, st.conditions.includeProfs, colorOf]);
   const view: ResultView | null = useMemo(() => (results[selIdx] ? { items: itemsFor(selIdx) } : null), [results, selIdx, itemsFor]);
 
   /* 3단계: ← → 키로 시간표 넘기기 */
@@ -253,12 +268,13 @@ export default function Planner() {
       title: t,
       subtitle: [majorLabel, `${credit}학점`].filter(Boolean).join(" · "),
       items,
-      dark: document.documentElement.classList.contains("dark"),
     });
-    track("이미지 저장");
+    logSave("이미지 저장");
+    track("image_saved", { courses: items.length, credit });
   };
 
-  const track = (event: "이미지 저장" | "라이브러리 저장") =>
+  /** 기존 사이트와 같은 Google Form 저장 로그 */
+  const logSave = (event: "이미지 저장" | "라이브러리 저장") =>
     trackSave({ event, majorLabel, extraMajorLabels: st.extras.map((m) => MAJOR_LABELS[m]), entryYear: st.entryYear });
 
   /* 모든 결과 이미지 일괄 저장 (기존 "모든 시간표 이미지 저장") */
@@ -274,27 +290,29 @@ export default function Planner() {
         subtitle: [majorLabel, `${credit}학점`, `${i + 1}번`].filter(Boolean).join(" · "),
         items,
         fileName: `${title} ${String(i + 1).padStart(pad, "0")}`,
-        dark: document.documentElement.classList.contains("dark"),
-      });
+        });
       await new Promise((r) => setTimeout(r, 400)); // 브라우저 다중 다운로드 차단 방지
     }
     setBulkProgress(null);
-    track("이미지 저장");
+    logSave("이미지 저장");
+    track("image_saved_bulk", { count: results.length });
   };
 
-  const toggleDark = () => {
-    const next = !dark;
-    setDark(next);
-    document.documentElement.classList.toggle("dark", next);
-    try { localStorage.setItem("theme", next ? "dark" : "light"); } catch { /* 저장 실패해도 화면은 바뀜 */ }
-  };
+  // 새 화면은 라이트 모드만 (기존 사이트의 다크 설정은 건드리지 않고, 이 화면에서만 끔)
+  useEffect(() => {
+    const root = document.documentElement;
+    const had = root.classList.contains("dark");
+    root.classList.remove("dark");
+    return () => { if (had) root.classList.add("dark"); };
+  }, []);
 
   const doSave = () => {
     if (!view || !st.sem) return;
     const name = saveName.trim() || `${title} ${plans.length + 1}`;
     const saved = savePlan({ name, sem: st.sem, items: view.items.map((i) => ({ code: i.code, name: i.name, prof: i.prof, room: i.room, credit: i.credit, slots: i.slots, color: i.color, sectionIds: i.sectionIds })) });
     if (!saved) { flash("저장 공간이 부족해요"); return; }
-    track("라이브러리 저장");
+    logSave("라이브러리 저장");
+    track("plan_saved", { courses: view.items.length });
     setPlans(loadPlans());
     setModal(null);
     setSaveName("");
@@ -302,14 +320,15 @@ export default function Planner() {
   };
 
   const copy = async (text: string) => {
-    try { await navigator.clipboard.writeText(text); flash("복사했어요"); } catch { flash("복사에 실패했어요"); }
+    try { await navigator.clipboard.writeText(text); flash("복사했어요"); track("code_copied"); } catch { flash("복사에 실패했어요"); }
   };
 
-  const sems = index ? Object.keys(index.semesters).sort() : [];
+  const sems = index ? sortSems(Object.keys(index.semesters)) : [];
   const collectedAt = st.sem ? index?.semesters[st.sem]?.collectedAt : undefined;
   const step = st.step;
   const goStep = (n: 1 | 2 | 3) => {
     update({ step: n });
+    track("step_view", { step: n, cart: cart.length });
     if (n === 2 && !readLocal<number>(TOUR_KEY, 0)) setTour(true);
   };
 
@@ -337,11 +356,16 @@ export default function Planner() {
                 <div className="pl-pop-panel pl-menu" style={{ left: "auto", right: 0, width: 220 }}>
                   <div className="pl-pop-list">
                     {step > 1 && <button onClick={() => { setMenuOpen(false); setTour(true); }}>사용법 보기</button>}
-                    <button onClick={() => { setMenuOpen(false); setSheet("calendar"); }}>학사일정</button>
-                    <button onClick={() => { setMenuOpen(false); setSheet("feedback"); }}>피드백 · 응원</button>
-                    <button onClick={() => { setMenuOpen(false); shareToKakao(); }}>카카오톡으로 공유</button>
-                    <button onClick={toggleDark}>다크 모드 {dark ? "끄기" : "켜기"}</button>
-                    <Link href="/" style={{ display: "block", padding: "10px 14px", color: "inherit", textDecoration: "none" }}>기존 화면으로</Link>
+                    <button onClick={() => { setMenuOpen(false); setSheet("calendar"); track("menu_calendar"); }}>학사일정</button>
+                    <button onClick={() => { setMenuOpen(false); setSheet("feedback"); track("menu_feedback"); }}>피드백 · 응원</button>
+                    <button onClick={() => { setMenuOpen(false); shareToKakao(); track("kakao_share"); }}>카카오톡으로 공유</button>
+                    <a href="/privacy" target="_blank" rel="noopener">개인정보처리방침</a>
+                    <a href="mailto:insu0531@knu.ac.kr">문의 · insu0531@knu.ac.kr</a>
+                    {analyticsEnabled() && (
+                      <button onClick={() => { const next = !optOut; setOptOut(next); setOptOutState(next); flash(next ? "사용 통계를 보내지 않아요" : "사용 통계 보내기를 다시 켰어요"); }}>
+                        사용 통계 {optOut ? "보내기 켜기" : "보내지 않기"}
+                      </button>
+                    )}
                   </div>
                 </div>
               </>
@@ -355,23 +379,24 @@ export default function Planner() {
           <div className="pl-intro">
             <div className="pl-intro-lead pl-enter">
               <h1>담기만 하세요.<br /><em>시간표</em>는 알아서<br />짜 드릴게요.</h1>
-              <p>전공·교양·교직을 한 번에 담으면 시간이 겹치지 않는 조합을 모두 찾아, 공강 많은 순·늦게 시작하는 순으로 정리해 드려요.</p>
+              <p>전공·교양·교직을 한 번에 담으면 시간이 겹치지 않는 조합을 모두 찾아,<br />공강 많은 순·늦게 시작하는 순으로 정리해 드려요.</p>
+              <p className="pl-intro-point">우리 과에서는 안 열려도 <b>전공으로 인정되는 다른 학과 개설 과목</b>까지 함께 찾아 드려요.</p>
               <div className="pl-hint">
-                {collectedAt && `${fmtDate(collectedAt)} 기준 개설 정보 · `}
-                <Link href="/" className="pl-link">기존 화면으로</Link>
+                {collectedAt && <>{fmtDate(collectedAt)} 기준 개설 정보 · </>}
+                <a className="pl-link" href="/privacy" target="_blank" rel="noopener">개인정보처리방침</a> · <a className="pl-link" href="mailto:insu0531@knu.ac.kr">insu0531@knu.ac.kr</a>
               </div>
             </div>
             <div className="pl-intro-form pl-enter" style={{ animationDelay: "60ms" }}>
               <div>
                 <div className="pl-label">학기</div>
-                <select className="pl-select" value={st.sem ?? ""} onChange={(e) => update({ sem: e.target.value })} aria-label="학기">
+                <select className="pl-select" value={st.sem ?? ""} onChange={(e) => update({ sem: e.target.value, semChosenFor: recommendedSem() })} aria-label="학기">
                   {sems.map((s) => <option key={s} value={s}>{semLabel(s)}</option>)}
                 </select>
               </div>
               <div className="pl-row">
                 <div>
                   <div className="pl-label">학과</div>
-                  <MajorPicker value={st.major} onChange={(m) => update({ major: m, campuses: defaultCampuses(m) })} />
+                  <MajorPicker value={st.major} onChange={(m) => { update({ major: m, campuses: defaultCampuses(m) }); track("major_selected", { major: MAJOR_LABELS[m] }); }} />
                 </div>
                 <div>
                   <div className="pl-label">학번</div>
@@ -405,6 +430,7 @@ export default function Planner() {
             <div>
               <CourseBrowser
                 key={`${st.sem}-${st.major ?? ""}`}
+                myLabels={[st.major, ...st.extras].filter((m): m is Major => !!m).map((m) => MAJOR_LABELS[m])}
                 courses={courses}
                 cart={cart}
                 hasMajor={!!st.major}
@@ -413,6 +439,7 @@ export default function Planner() {
                 onCampusesChange={(c) => update({ campuses: c })}
                 includeGrad={st.includeGrad}
                 onIncludeGradChange={(v) => update({ includeGrad: v })}
+                onOnlyOpenChange={(v) => update({ onlyOpen: v })}
                 conditions={st.conditions}
                 busySlots={busySlots}
                 onSetMode={setMode}
@@ -445,7 +472,11 @@ export default function Planner() {
                 <span><b>{cart.length}과목</b> <span className="pl-muted">담음</span></span>
                 <button className="pl-link" onClick={() => goStep(2)}>과목 더 담기 · 빼기</button>
               </div>
-              <ConditionsPanel cart={cart} courseByCode={courseByCode} conditions={st.conditions} onConditions={(c) => update({ conditions: c })} onSetMode={setMode} />
+              <ConditionsPanel cart={cart} courseByCode={courseByCode} conditions={st.conditions} onConditions={(c) => {
+                const changed = (Object.keys(c) as (keyof Conditions)[]).filter((k) => JSON.stringify(c[k]) !== JSON.stringify(st.conditions[k]));
+                track("condition_changed", { keys: changed, sort: c.sort, daysOff: c.daysOff, maxCredit: c.maxCredit, includeProfs: c.includeProfs.length, excludeProfs: c.excludeProfs.length });
+                update({ conditions: c });
+              }} onSetMode={setMode} />
             </div>
           </aside>
           <section>
@@ -459,7 +490,7 @@ export default function Planner() {
               names={names}
               onImage={() => doImage()}
               onSave={() => { setSaveName(""); setModal("save"); }}
-              onCodes={() => setModal("codes")}
+              onCodes={() => { setModal("codes"); track("codes_opened"); }}
               onBulk={results.length > 1 ? () => (results.length > 20 ? setModal("bulk") : doBulkImages()) : undefined}
               bulkProgress={bulkProgress}
               onBack={() => goStep(2)}

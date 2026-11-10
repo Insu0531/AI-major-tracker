@@ -94,6 +94,8 @@ export type Conditions = {
   startAfter: number;  // 분, 0 = 제한 없음 (이 시각 이전 수업 없음)
   endBefore: number;   // 분, 0 = 제한 없음 (이 시각 이후 수업 없음)
   excludeProfs: string[];
+  /** 꼭 들어야 하는 교수님: 시간표에 이 교수님 수업이 하나 이상 들어가야 함 */
+  includeProfs: string[];
   sort: SortKey;
 };
 
@@ -104,6 +106,7 @@ export const DEFAULT_CONDITIONS: Conditions = {
   startAfter: 0,
   endBefore: 0,
   excludeProfs: [],
+  includeProfs: [],
   sort: "recommended",
 };
 

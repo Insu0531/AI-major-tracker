@@ -22,6 +22,16 @@
   --accent-ink: oklch(99% 0.005 25);
   --accent-weak: oklch(94.5% 0.03 25);
   --shadow: 0 1px 2px oklch(30% 0.02 60 / 0.06), 0 8px 24px oklch(30% 0.02 60 / 0.08);
+  /* 보조색(선택 상태) — 흑백만으로는 구분이 어려워 차분한 파랑을 씀 */
+  --pick: oklch(52% 0.15 255);
+  --pick-weak: oklch(94% 0.035 255);
+  /* 구분(탭·배지) 색 */
+  --c-major: oklch(53% 0.17 25);
+  --c-major2: oklch(60% 0.15 55);
+  --c-gyoyang: oklch(52% 0.15 255);
+  --c-kyoshik: oklch(55% 0.13 150);
+  --c-ilban: oklch(52% 0.15 300);
+  --c-other: oklch(50% 0.03 60);
 
   /* 간격 (4px 기반) */
   --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px; --s7: 48px; --s8: 64px;
@@ -50,21 +60,6 @@
 }
 .pl[data-font="gmarket"] { --font-head: "GmarketSans", var(--font-body); }
 .pl[data-font="suit"] { --font-head: "SUIT", var(--font-body); }
-
-.dark .pl {
-  --bg: oklch(19.5% 0.007 60);
-  --surface: oklch(23% 0.008 60);
-  --sunken: oklch(27% 0.009 60);
-  --sunken-2: oklch(31% 0.01 60);
-  --ink: oklch(95% 0.006 80);
-  --ink-2: oklch(83% 0.008 80);
-  --ink-3: oklch(67% 0.01 80);
-  --line: oklch(30% 0.009 60);
-  --accent: oklch(68% 0.15 25);
-  --accent-ink: oklch(18% 0.03 25);
-  --accent-weak: oklch(32% 0.06 25);
-  --shadow: 0 8px 24px oklch(5% 0 0 / 0.4);
-}
 
 .pl *, .pl *::before, .pl *::after { box-sizing: border-box; }
 .pl button { font: inherit; color: inherit; cursor: pointer; }
@@ -128,7 +123,7 @@
 .pl-btn.ghost:hover:not(:disabled) { background: var(--sunken); }
 .pl-btn.sm { height: 32px; padding: 0 var(--s3); font-size: 13px; }
 .pl-btn.lg { height: 48px; padding: 0 var(--s5); font-size: 16px; }
-.pl-btn[aria-pressed="true"] { background: var(--ink); color: var(--surface); }
+.pl-btn[aria-pressed="true"] { background: var(--pick); color: #fff; }
 .pl-link { background: none; border: none; padding: 0; color: var(--ink-2); text-decoration: underline; text-underline-offset: 3px; font-size: 14px; }
 .pl-link:hover { color: var(--ink); }
 
@@ -138,8 +133,9 @@
   background: var(--sunken); font-size: 14px; color: var(--ink-2); white-space: nowrap; font-weight: 500;
   transition: background-color 0.15s, color 0.15s;
 }
-.pl-chip:hover:not(:disabled) { background: var(--sunken-2); color: var(--ink); }
-.pl-chip[aria-pressed="true"] { background: var(--ink); color: var(--surface); }
+.pl-chip:hover:not(:disabled) { background: var(--pick-weak); color: var(--pick); }
+.pl-chip[aria-pressed="true"] { background: var(--pick); color: #fff; }
+.pl-chip[aria-pressed="true"]:hover { background: var(--pick); color: #fff; filter: brightness(1.06); }
 
 .pl-label { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: var(--s2); }
 .pl-hint { font-size: 14px; color: var(--ink-3); }
@@ -176,7 +172,6 @@
 .pl-search .pl-field { flex: 1; height: 44px; font-size: 16px; }
 .pl-filter-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr)); gap: var(--s2) var(--s5); }
 .pl-filter-line { display: grid; grid-template-columns: 56px 1fr; align-items: center; gap: var(--s2); }
-.pl-filter-line:first-child { grid-column: 1 / -1; }
 .pl-filter-name { font-size: 13px; font-weight: 700; color: var(--ink-2); }
 .pl-count { padding: var(--s3) var(--s5) var(--s2); font-size: 14px; color: var(--ink-2); }
 .pl-count b { color: var(--ink); }
@@ -360,3 +355,58 @@
   .pl-pop-panel { position: fixed; top: 120px; left: 12px; right: 12px; width: auto; }
   .pl-row { grid-template-columns: 1fr; }
 }
+
+/* ── 구분 탭 (내 전공 / 교양 / 교직 …) ── */
+.pl-tabs { display: flex; gap: var(--s1); overflow-x: auto; scrollbar-width: none; box-shadow: inset 0 -2px 0 var(--line); }
+.pl-tabs::-webkit-scrollbar { display: none; }
+.pl-tab {
+  --c: var(--c-other);
+  position: relative; flex-shrink: 0; height: 44px; padding: 0 var(--s4); border: none; background: none;
+  font-size: 15px; font-weight: 700; color: var(--ink-3); border-radius: var(--radius) var(--radius) 0 0;
+  transition: color 0.15s, background-color 0.15s;
+}
+.pl-tab::after { content: ""; position: absolute; left: var(--s2); right: var(--s2); bottom: 0; height: 3px; border-radius: 3px 3px 0 0; background: var(--c); transform: scaleX(0); transition: transform 0.2s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.pl-tab:hover { color: var(--c); background: color-mix(in srgb, var(--c) 8%, transparent); }
+.pl-tab[aria-selected="true"] { color: var(--c); }
+.pl-tab[aria-selected="true"]::after { transform: scaleX(1); }
+.pl-tab-count { font-size: 12px; font-weight: 600; padding: 1px 7px; border-radius: 10px; margin-left: 2px; background: var(--sunken); color: var(--ink-3); }
+.pl-tab[aria-selected="true"] .pl-tab-count { background: color-mix(in srgb, var(--c) 14%, transparent); color: var(--c); }
+.cat-major { --c: var(--c-major); }
+.cat-major2 { --c: var(--c-major2); }
+.cat-gyoyang { --c: var(--c-gyoyang); }
+.cat-kyoshik { --c: var(--c-kyoshik); }
+.cat-ilban { --c: var(--c-ilban); }
+.cat-other { --c: var(--c-other); }
+.pl-badge[class*="cat-"] { background: color-mix(in srgb, var(--c) 14%, transparent); color: var(--c); }
+
+/* 비고 · 정원 */
+.c-note { color: var(--ink-2) !important; font-size: 13px; max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pl-sec-cap.full { color: var(--c-major); font-weight: 700; }
+.pl-sec-actions .pl-btn { white-space: nowrap; }
+@media (max-width: 1439px) { .c-note { max-width: 140px; } }
+@media (max-width: 1100px) { .c-note { display: none; } }
+@media (max-width: 720px) {
+  .pl-tab { padding: 0 var(--s3); font-size: 14px; }
+  .pl-sec-actions .pl-btn { font-size: 12px; padding: 0 var(--s2); }
+}
+
+/* 표가 화면 폭을 넘지 않게: 긴 칸은 줄바꿈 허용 */
+.pl-table { table-layout: auto; }
+.c-time, .c-prof { white-space: normal !important; }
+.c-time { min-width: 120px; }
+.pl-sec { grid-template-columns: 36px minmax(72px, 0.8fr) minmax(130px, 1.3fr) minmax(100px, 1fr) 76px max-content; }
+.pl-intro-lead .pl-intro-point { margin-top: var(--s3); font-size: 16px; color: var(--ink); padding-left: var(--s3); box-shadow: inset 3px 0 0 var(--accent); }
+.pl-badge.pl-badge-other { background: color-mix(in srgb, var(--c-major2) 16%, transparent); color: var(--c-major2); }
+
+/* ── 문서 페이지 (개인정보처리방침) ── */
+.pl.pl-doc { height: auto; min-height: 100dvh; display: block; }
+.pl-doc-body { max-width: 760px; margin: 0 auto; padding: var(--s7) var(--s5) var(--s8); line-height: 1.75; }
+.pl-doc-body h1 { font-size: var(--fs-title); margin: var(--s5) 0 var(--s2); }
+.pl-doc-body h2 { font-size: 18px; margin: var(--s6) 0 var(--s2); }
+.pl-doc-body p, .pl-doc-body ul { margin: var(--s2) 0; color: var(--ink-2); }
+.pl-doc-body ul { padding-left: var(--s5); }
+.pl-doc-body b { color: var(--ink); }
+.pl-doc-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: var(--s3) 0; background: var(--surface); border-radius: var(--radius); overflow: hidden; }
+.pl-doc-table th, .pl-doc-table td { text-align: left; vertical-align: top; padding: var(--s2) var(--s3); box-shadow: inset 0 -1px 0 var(--line); }
+.pl-doc-table th { background: var(--sunken); font-weight: 700; color: var(--ink); white-space: nowrap; }
+@media (max-width: 720px) { .pl-doc-table { display: block; overflow-x: auto; } }

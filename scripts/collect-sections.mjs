@@ -116,11 +116,20 @@ function normalize(r, flags) {
   };
 }
 
+// 학기 순서: 1학기 → 여름계절 → 2학기 → 겨울계절 (web/lib/planner/semester.ts와 같은 규칙)
+const TERMS = ["1", "s", "2", "w"];
+const nextSem = (sem) => {
+  const [y, t] = sem.split("-");
+  const i = TERMS.indexOf(t);
+  return i === 3 ? `${+y + 1}-1` : `${y}-${TERMS[i + 1]}`;
+};
+
+/** 지금 수강신청을 준비할 학기 + 그다음 학기 (4~6월 여름, 7~9월 2학기, 10~11월 겨울, 12~3월 1학기) */
 function defaultSems(now = new Date()) {
   const y = now.getFullYear();
   const m = now.getMonth() + 1;
-  // 1~6월: 해당년 1학기·2학기, 7~12월: 해당년 2학기 + 다음해 1학기
-  return m <= 6 ? [`${y}-1`, `${y}-2`] : [`${y}-2`, `${y + 1}-1`];
+  const cur = m >= 4 && m <= 6 ? `${y}-s` : m >= 7 && m <= 9 ? `${y}-2` : m >= 10 && m <= 11 ? `${y}-w` : m === 12 ? `${y + 1}-1` : `${y}-1`;
+  return [cur, nextSem(cur)];
 }
 
 async function readJson(file) {
@@ -157,6 +166,10 @@ async function collect(sem) {
   const file = path.join(OUT_DIR, "sections", `${sem}.json`);
   const prev = await readJson(file);
   const prevCount = prev?.sections?.length ?? 0;
+  if (sections.length === 0 && prevCount === 0) {
+    console.log(`[${sem}] 아직 개설 정보가 없어요 → 건너뜀`);
+    return null;
+  }
   if (sections.length === 0 || (prevCount > 0 && sections.length < prevCount * 0.5)) {
     throw new Error(`[${sem}] 결과 이상: ${sections.length}건 (이전 ${prevCount}건) → 저장 안 함`);
   }
@@ -176,14 +189,14 @@ async function main() {
   let succeeded = 0;
   for (const sem of sems) {
     try {
-      index.semesters[sem] = await collect(sem);
-      succeeded++;
+      const r = await collect(sem);
+      if (r) { index.semesters[sem] = r; succeeded++; }
     } catch (e) {
       console.error(e.message);
       failed = true;
     }
   }
-  if (succeeded === 0) process.exit(1);
+  if (succeeded === 0) process.exit(failed ? 1 : 0);
   index.updatedAt = new Date().toISOString();
   await mkdir(OUT_DIR, { recursive: true });
   await writeFile(indexFile, JSON.stringify(index, null, 2) + "\n");

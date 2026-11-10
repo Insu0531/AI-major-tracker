@@ -231,6 +231,9 @@ SavedTimetable = { id, name, savedAt, sem: "2026-1", major, majorLabel, entryYea
 - 정규화 스키마 v1 (분반 1개): `{ id(crseNo), code, name, type(이수구분), credit, grade, college, dept, deptCd, profs[], time, slots[[요일0~6, 시작분, 종료분]], campus(산격동/동인동/상주/""), room, remark, tags[], capacity, applied, basket }`
 - 저장 위치: **레포에 커밋 (방식 a)** → Vercel 자동 재배포. 클라이언트가 1회 다운로드한 뒤 검색·조합을 모두 클라이언트에서 처리.
 - 이수체계(교육과정편람): 스냅샷의 `deptCd` 목록 → `searchEduCourList`(add_major.py 로직) 일괄 실행 → 전 학과·전 학번 자동 생성 (예정).
+  실측(2026-11-10): 학부 개설학과 코드 212개 중 137개는 이미 있음, 75개 없음. 없는 것 중 토목공학과·첨단반도체융합전공·농산업학과·비즈니스인텔리전스융합전공·인지과학융합전공 등은 교육과정이 받아짐.
+  7자리 코드(1O01001 등)는 기존 학과의 하위 개설 코드, 학사과(30019)·자율학부 등은 교육과정 없음 → 결과가 빈 코드는 건너뛰면 됨. 연속 요청 시 연결이 끊기므로 0.5초 이상 간격 + 재시도.
+- 계절학기(s/w)도 수집. 아직 열리지 않은 학기(0건 + 이전 파일 없음)는 실패가 아니라 건너뜀.
 - 이 클라우드 세션에서 Node fetch로 수집할 때는 `NODE_USE_ENV_PROXY=1 NODE_EXTRA_CA_CERTS=/root/.ccr/ca-bundle.crt`가 필요하다 (로컬/GitHub Actions에서는 불필요).
 
 ### 개발·배포 절차 (리뉴얼 이후)
@@ -257,7 +260,15 @@ SavedTimetable = { id, name, savedAt, sem: "2026-1", major, majorLabel, entryYea
 - 2단계 과목 목록은 **표**(담기 + 교과목명·학년·학점·개설학과·교수·강의시간·분반, 헤더 클릭 정렬, 행 클릭 시 분반 펼침) — 카드형은 "전부 회색이라 한눈에 안 들어옴" 피드백으로 교체. 필터는 기본으로 펼침.
 - 디자인 시스템(planner.css 상단 주석): OKLCH 틴티드 뉴트럴 + KNU 레드 1색, 4/8px 간격 토큰(--s1~s8), 테두리 대신 배경 톤·그림자, 제목만 `--font-head`(기본 Paperlogy, `data-font="gmarket|suit"`로 교체 가능), `clamp()` 유동 글씨, `:focus-visible` 외곽선, transform/opacity 모션 + reduced-motion 대응.
 - 시간표 색: 밝은 12색 `PALETTE`를 담은 순서대로 배정(한 시간표 안 중복 없음), 밝은 블록은 `textOn()`으로 어두운 글씨.
-- 결과 화면에서 수업 시간대 필터·평균 시간·경쟁률은 사용자 요청으로 제거.
+- 결과 화면에서 수업 시간대 필터·평균 시간·경쟁률은 사용자 요청으로 제거. **다크 모드도 제거**(이 화면에서만 `html.dark`를 떼고, 기존 사이트 설정은 유지).
+- 2단계 구분은 **탭**(한 번에 한 구분, 탭마다 과목 수 표시, 구분별 색 `--c-*`). 검색하면 탭과 무관하게 전체 검색. 비고 열, "정원 남은 분반만"(시간표 계산에도 적용), "타학과 개설" 배지(내 이수체계 과목인데 다른 학과가 연 것).
+- 분반 버튼 용어: "이 분반으로 고정 / 고정 해제", "이 분반 제외 / 제외 취소". 3단계 교수 조건: "꼭 들어야 하는 교수님"(엔진 leaf 검사, 해당 분반으로 표시 확정) / "피하고 싶은 교수님".
+- 시간표 블록 색은 OKLCH L0.605·C0.11 12색(주변 뉴트럴과 톤 맞춤, 전부 흰 글씨).
+- 학기: 계절학기 포함, 시간순(1→여름→2→겨울). `lib/planner/semester.ts`의 `recommendedSem()`이 날짜로 기본 학기 선택(4~6월 여름, 7~9월 2학기, 10~11월 겨울, 12~3월 1학기; 데이터 없으면 직전 학기). 직접 고른 학기는 같은 시기 동안만 유지(`semChosenFor`).
+- 문의 이메일 insu0531@knu.ac.kr (1단계 하단·메뉴), 개인정보처리방침 `/privacy` (`app/privacy/page.tsx`, 수집 항목이 바뀌면 같이 고칠 것).
+- 사용 패턴 분석: `lib/analytics.ts` (PostHog, `NEXT_PUBLIC_POSTHOG_KEY`/`NEXT_PUBLIC_POSTHOG_HOST`(기본 EU) 없으면 no-op, 쿠키 없이 localStorage, 세션 녹화 끔, 메뉴에서 수집 거부 가능).
+  주요 이벤트: step_view, major_selected, tab_changed, search, filter_toggled, course_added/removed/must, results_computed, condition_changed, image_saved(_bulk), plan_saved, codes_opened, code_copied, kakao_share, menu_*.
+  PostHog 프로젝트 설정에서 "Discard client IP data"를 켜야 개인정보처리방침과 일치.
 - 학교 데이터는 연강을 `토 9:00~10:30, 토 10:30~12:00`처럼 쪼개 준다 → 표시·이미지·시간 문자열은 `mergeSlots()`로 합쳐서 그린다.
 ```
 web/app/new/page.tsx            ssr:false로 Planner 로드 (localStorage 초기값 사용 때문)
