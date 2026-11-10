@@ -49,7 +49,7 @@ export default function QuickAdd({
   }, [q]);
 
   return (
-    <div className="pl-quick">
+    <div className="pl-quick" id="pl-quick">
       <div className="pl-quick-head">
         <div className="pl-label" style={{ marginBottom: 0 }}>다른 과목 검색해서 넣기</div>
         <input

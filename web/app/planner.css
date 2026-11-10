@@ -597,3 +597,9 @@
 /* 분반 줄 안 버튼은 배경과 구분되게 흰 바탕 */
 .pl-sec-actions .pl-btn:not([aria-pressed="true"]) { background: var(--surface); }
 .pl-sec-actions .pl-btn:not([aria-pressed="true"]):hover { background: var(--sunken-2); }
+
+/* 시간표 위 바로가기 버튼들 (추천 · 검색해서 넣기) */
+.pl-jumps { display: flex; flex-wrap: wrap; gap: var(--s2); }
+.pl-jumps .pl-rec-jump { align-self: auto; }
+.pl-jumps .pl-rec-jump + .pl-rec-jump span { animation: none; }
+.pl-quick { scroll-margin: var(--s6); }

@@ -101,11 +101,23 @@ export default function ResultPanel({
             </button>
           )}
         </div>
-        {recs.length > 0 && (
-          <button className="pl-rec-jump" onClick={() => document.getElementById("pl-recs")?.scrollIntoView({ behavior: "smooth", block: "start" })}>
-            <span aria-hidden>↓</span> 빈 시간에 넣기 좋은 교양 <b>{recs.length}개</b> 추천이 아래에 있어요
+        <div className="pl-jumps">
+          {recs.length > 0 && (
+            <button className="pl-rec-jump" onClick={() => document.getElementById("pl-recs")?.scrollIntoView({ behavior: "smooth", block: "start" })}>
+              <span aria-hidden>↓</span> 빈 시간에 넣기 좋은 교양 <b>{recs.length}개</b> 추천이 아래에 있어요
+            </button>
+          )}
+          <button
+            className="pl-rec-jump"
+            onClick={() => {
+              document.getElementById("pl-quick")?.scrollIntoView({ behavior: "smooth", block: "center" });
+              // 스크롤이 끝날 즈음 검색창에 커서 (휴대폰은 키보드가 바로 올라옴)
+              setTimeout(() => (document.querySelector("#pl-quick input") as HTMLInputElement | null)?.focus({ preventScroll: true }), 450);
+            }}
+          >
+            <span aria-hidden>🔍</span> 다른 과목 검색해서 넣기
           </button>
-        )}
+        </div>
         {response?.truncated && (
           <div className="pl-hint">조합이 너무 많아 일부만 살펴봤어요. 학점 범위를 좁히면 더 정확해져요.</div>
         )}
