@@ -88,7 +88,7 @@ export default function ResultPanel({
         )}
       </div>
       <div className="pl-scroll">
-        <div className="pl-tt-wrap"><Timetable items={view.items} /></div>
+        <div className="pl-tt-wrap" key={selIdx}><Timetable items={view.items} /></div>
         <div className="pl-list">
           <div className="pl-list-title">
             다른 시간표 <span className="pl-muted" style={{ fontWeight: 500 }}>

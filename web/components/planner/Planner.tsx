@@ -316,7 +316,7 @@ export default function Planner() {
   return (
     <div className="pl">
       <header className="pl-top">
-        <div className="pl-brand">KNU 시간표</div>
+        <div className="pl-brand">KNU <span>시간표</span></div>
         <nav className="pl-steps" aria-label="단계">
           {([[1, "내 정보"], [2, "과목 담기"], [3, "시간표"]] as const).map(([n, label], i) => (
             <div key={n} style={{ display: "flex", alignItems: "center" }}>
@@ -353,52 +353,54 @@ export default function Planner() {
       {step === 1 ? (
         <div className="pl-scroll">
           <div className="pl-intro">
-            <div className="pl-step-head">
-              <h1>먼저 알려 주세요</h1>
-              <p>학과와 학번에 맞는 전공 과목을 먼저 보여 드려요. 이 브라우저에 기억해 둘게요.</p>
-            </div>
-            <div>
-              <div className="pl-label">학기</div>
-              <select className="pl-select" value={st.sem ?? ""} onChange={(e) => update({ sem: e.target.value })} aria-label="학기">
-                {sems.map((s) => <option key={s} value={s}>{semLabel(s)}</option>)}
-              </select>
-            </div>
-            <div className="pl-row">
-              <div>
-                <div className="pl-label">학과</div>
-                <MajorPicker value={st.major} onChange={(m) => update({ major: m, campuses: defaultCampuses(m) })} />
+            <div className="pl-intro-lead pl-enter">
+              <h1>담기만 하세요.<br /><em>시간표</em>는 알아서<br />짜 드릴게요.</h1>
+              <p>전공·교양·교직을 한 번에 담으면 시간이 겹치지 않는 조합을 모두 찾아, 공강 많은 순·늦게 시작하는 순으로 정리해 드려요.</p>
+              <div className="pl-hint">
+                {collectedAt && `${fmtDate(collectedAt)} 기준 개설 정보 · `}
+                <Link href="/" className="pl-link">기존 화면으로</Link>
               </div>
+            </div>
+            <div className="pl-intro-form pl-enter" style={{ animationDelay: "60ms" }}>
               <div>
-                <div className="pl-label">학번</div>
-                <select className="pl-select" value={st.entryYear} onChange={(e) => update({ entryYear: +e.target.value })} aria-label="학번">
-                  {Array.from({ length: ENTRY_YEAR_LAST - ENTRY_YEAR_MIN + 1 }, (_, i) => ENTRY_YEAR_LAST - i).map((y) => <option key={y} value={y}>{y}학번</option>)}
+                <div className="pl-label">학기</div>
+                <select className="pl-select" value={st.sem ?? ""} onChange={(e) => update({ sem: e.target.value })} aria-label="학기">
+                  {sems.map((s) => <option key={s} value={s}>{semLabel(s)}</option>)}
                 </select>
               </div>
-            </div>
-            {st.major && (
-              <div>
-                <div className="pl-label">복수전공 · 부전공 <span className="pl-muted" style={{ fontWeight: 500 }}>(선택, 최대 3개)</span></div>
-                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                  {st.extras.map((m, i) => (
-                    <MajorPicker key={i} value={m} onChange={(nm) => update({ extras: st.extras.map((x, j) => (j === i ? nm : x)) })} onRemove={() => update({ extras: st.extras.filter((_, j) => j !== i) })} />
-                  ))}
-                  {st.extras.length < 3 && <MajorPicker value={null} placeholder="+ 학과 추가" onChange={(m) => update({ extras: [...st.extras, m] })} />}
+              <div className="pl-row">
+                <div>
+                  <div className="pl-label">학과</div>
+                  <MajorPicker value={st.major} onChange={(m) => update({ major: m, campuses: defaultCampuses(m) })} />
+                </div>
+                <div>
+                  <div className="pl-label">학번</div>
+                  <select className="pl-select" value={st.entryYear} onChange={(e) => update({ entryYear: +e.target.value })} aria-label="학번">
+                    {Array.from({ length: ENTRY_YEAR_LAST - ENTRY_YEAR_MIN + 1 }, (_, i) => ENTRY_YEAR_LAST - i).map((y) => <option key={y} value={y}>{y}학번</option>)}
+                  </select>
                 </div>
               </div>
-            )}
-            <button className="pl-btn primary lg" disabled={!snapshot} onClick={() => goStep(2)}>
-              {snapshot ? (st.major ? "과목 담으러 가기" : "학과 없이 계속하기") : loadError ? "강의 데이터를 불러오지 못했어요" : "강의 정보 불러오는 중…"}
-            </button>
-            <div className="pl-hint" style={{ textAlign: "center" }}>
-              {collectedAt && `${fmtDate(collectedAt)} 기준 개설 정보예요. `}
-              <Link href="/" className="pl-link">기존 화면으로</Link>
+              {st.major && (
+                <div>
+                  <div className="pl-label">복수전공 · 부전공 <span className="pl-muted" style={{ fontWeight: 500 }}>(선택, 최대 3개)</span></div>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                    {st.extras.map((m, i) => (
+                      <MajorPicker key={i} value={m} onChange={(nm) => update({ extras: st.extras.map((x, j) => (j === i ? nm : x)) })} onRemove={() => update({ extras: st.extras.filter((_, j) => j !== i) })} />
+                    ))}
+                    {st.extras.length < 3 && <MajorPicker value={null} placeholder="+ 학과 추가" onChange={(m) => update({ extras: [...st.extras, m] })} />}
+                  </div>
+                </div>
+              )}
+              <button className="pl-btn primary lg" disabled={!snapshot} onClick={() => goStep(2)}>
+                {snapshot ? (st.major ? "과목 담으러 가기 →" : "학과 없이 계속하기 →") : loadError ? "강의 데이터를 불러오지 못했어요" : "강의 정보 불러오는 중…"}
+              </button>
             </div>
           </div>
         </div>
       ) : !snapshot ? (
         <div className="pl-loading">{loadError ? "강의 데이터를 불러오지 못했어요. 잠시 후 새로고침해 주세요." : "강의 정보 불러오는 중…"}</div>
       ) : step === 2 ? (
-        <div className="pl-body">
+        <div className="pl-body pl-enter">
           <div className="pl-split">
             <div>
               <CourseBrowser
@@ -433,7 +435,7 @@ export default function Planner() {
           </div>
         </div>
       ) : (
-        <div className="pl-plan">
+        <div className="pl-plan pl-enter">
           <aside className="pl-cond" data-open={condOpen}>
             <button className="pl-cond-toggle" onClick={() => setCondOpen((v) => !v)} aria-expanded={condOpen}>
               <span>조건 · 정렬</span><span className="pl-muted">{condOpen ? "접기 ▴" : "펼치기 ▾"}</span>

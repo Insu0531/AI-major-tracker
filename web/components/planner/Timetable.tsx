@@ -20,7 +20,7 @@ export default function Timetable({ items }: { items: TimetableItem[] }) {
           {Array.from({ length: days }, (_, d) => <div key={d}>{DAY_NAMES[d]}</div>)}
         </div>
         <div className="pl-tt-body" style={{ gridTemplateColumns: cols, height: `calc(var(--hour) * ${h1 - h0})` }}>
-          <div style={{ position: "relative" }}>
+          <div className="pl-tt-hour-col" style={{ position: "relative" }}>
             {hours.map((h, i) => (
               <div key={h} className="pl-tt-hour" style={{ position: "absolute", right: 0, top: `calc(var(--hour) * ${i})` }}>{h}</div>
             ))}
