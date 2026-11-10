@@ -131,6 +131,17 @@ export function ConditionsPanel({
         </div>
       </div>
 
+      <div className="pl-cond-block">
+        <div className="pl-label">하루 일정</div>
+        <div className="pl-chips">
+          <button className="pl-chip" aria-pressed={c.lunchFree} onClick={() => set({ lunchFree: !c.lunchFree })} title="12시~13시에 수업이 없는 시간표만">점심시간 비우기</button>
+          <button className="pl-chip" aria-pressed={c.maxStreak === 180} onClick={() => set({ maxStreak: c.maxStreak ? 0 : 180 })} title="쉬는 시간 없이 3시간 넘게 이어지는 날이 없는 시간표만">3시간 넘는 연강 없음</button>
+          <button className="pl-chip" aria-pressed={c.maxGap === 120} onClick={() => set({ maxGap: c.maxGap ? 0 : 120 })} title="수업 사이 빈 시간이 2시간 넘는 날이 없는 시간표만">2시간 넘는 공강 없음</button>
+          <button className="pl-chip" aria-pressed={c.maxPerDay === 3} onClick={() => set({ maxPerDay: c.maxPerDay ? 0 : 3 })} title="하루에 3과목까지만 듣는 시간표만">하루 3과목 이하</button>
+          <button className="pl-chip" aria-pressed={c.noRemote} onClick={() => set({ noRemote: !c.noRemote })} title="원격강좌 분반은 빼고 시간표를 만들어요">원격강좌 빼기</button>
+        </div>
+      </div>
+
       {profs.length > 0 && (
         <>
           <ProfChooser

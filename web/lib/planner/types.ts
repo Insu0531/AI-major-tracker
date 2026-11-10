@@ -96,6 +96,16 @@ export type Conditions = {
   excludeProfs: string[];
   /** 꼭 들어야 하는 교수님: 시간표에 이 교수님 수업이 하나 이상 들어가야 함 */
   includeProfs: string[];
+  /** 12~13시 비우기 */
+  lunchFree: boolean;
+  /** 쉬는 시간 없이 이어지는 수업 최대 길이(분), 0 = 제한 없음 */
+  maxStreak: number;
+  /** 수업 사이 빈 시간 최대(분), 0 = 제한 없음 */
+  maxGap: number;
+  /** 하루 최대 과목 수, 0 = 제한 없음 */
+  maxPerDay: number;
+  /** 원격강좌 분반 빼기 */
+  noRemote: boolean;
   sort: SortKey;
 };
 
@@ -107,12 +117,17 @@ export const DEFAULT_CONDITIONS: Conditions = {
   endBefore: 0,
   excludeProfs: [],
   includeProfs: [],
+  lunchFree: false,
+  maxStreak: 0,
+  maxGap: 0,
+  maxPerDay: 0,
+  noRemote: false,
   sort: "recommended",
 };
 
 /* ── 엔진 입출력 (Worker로 전달되므로 직렬화 가능한 값만) ── */
 
-export type EngineSection = { id: string; profs: string[]; room: string; applied: number | null; capacity: number | null };
+export type EngineSection = { id: string; profs: string[]; room: string; applied: number | null; capacity: number | null; remote: boolean };
 
 /** 같은 시간대 분반 묶음 = 시간표상 하나의 선택지 */
 export type EngineOption = {

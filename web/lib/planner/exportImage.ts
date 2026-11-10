@@ -38,14 +38,19 @@ function wrap(ctx: CanvasRenderingContext2D, text: string, width: number): strin
 
 /**
  * 시간표를 PNG로 저장. DOM 캡처 없이 데이터로 직접 그린다.
- * exportTimetable({ title, items }) 한 줄이면 끝.
+ *
+ * 규격(사용자가 준 시간표 앱 캡처 기준, 1px 단위 그대로):
+ *   요일 머리줄 60 · 시간 열 62 · 요일 칸 214 · 1시간 135 → 월~금, 9~18시면 1132 × 1275
+ *   어두운 배경, 회색 격자선, 블록은 칸을 꽉 채우고 과목명(굵게) + 강의실만, 시각은 12시간제(1, 2, 3 …)
+ *   토요일 수업이 있으면 칸이 하나 늘고, 9시 이전·18시 이후 수업이 있으면 위아래로 늘어난다.
+ *   시간 미정 과목이 있으면 아래에 한 줄씩 덧붙인다.
+ *
+ * title/subtitle은 파일 이름에만 쓴다 (이미지에는 넣지 않음 — 규격 유지).
  */
 export async function exportTimetable({
   title,
-  subtitle = "",
   items,
   fileName,
-  dark = false,
 }: {
   title: string;
   subtitle?: string;
@@ -53,84 +58,76 @@ export async function exportTimetable({
   fileName?: string;
   dark?: boolean;
 }): Promise<void> {
-  const W = 1080;
-  const PAD = 48;
-  const HEAD = subtitle ? 120 : 96;
-  const LABEL = 44;
+  const HEAD = 60, LABEL = 62, COL = 214, HOUR = 135, LINE = 2;
+  const C = { bg: "#121212", line: "#2f2f2f", head: "#9c9c9c", hour: "#b4b4b4", text: "#ffffff" };
   const [h0, h1] = hourRange(items);
   const days = dayCount(items);
-  const rowH = 64;
-  const gridH = (h1 - h0) * rowH;
   const noTime = items.filter((i) => i.slots.length === 0);
-  const footer = noTime.length ? 40 + noTime.length * 30 : 0;
-  const H = HEAD + 36 + gridH + footer + PAD;
-  const colW = (W - PAD * 2 - LABEL) / days;
+  const FOOT = noTime.length ? 24 + noTime.length * 44 : 0;
+  const W = LABEL + COL * days;
+  const H = HEAD + HOUR * (h1 - h0) + FOOT;
 
-  const c = { bg: dark ? "#161615" : "#ffffff", ink: dark ? "#ecebe7" : "#1d1d1b", sub: dark ? "#9b9a94" : "#7a7973", line: dark ? "#2e2d2b" : "#e7e5df" };
   const canvas = document.createElement("canvas");
-  const scale = 2;
-  canvas.width = W * scale;
-  canvas.height = H * scale;
+  canvas.width = W;
+  canvas.height = H;
   const ctx = canvas.getContext("2d")!;
-  ctx.scale(scale, scale);
-  const font = (w: number, s: number) => `${w} ${s}px Pretendard, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif`;
+  const font = (w: number, s: number) => `${w} ${s}px "Apple SD Gothic Neo", Pretendard, "Malgun Gothic", sans-serif`;
 
-  ctx.fillStyle = c.bg;
+  ctx.fillStyle = C.bg;
   ctx.fillRect(0, 0, W, H);
-  ctx.fillStyle = c.ink;
-  ctx.font = font(700, 30);
-  ctx.textBaseline = "top";
-  ctx.fillText(title, PAD, PAD - 4);
-  if (subtitle) { ctx.fillStyle = c.sub; ctx.font = font(500, 18); ctx.fillText(subtitle, PAD, PAD + 38); }
+  ctx.textBaseline = "middle";
 
-  const top = HEAD + 36;
-  const left = PAD + LABEL;
-  // 요일 헤더
-  ctx.font = font(600, 17);
+  // 요일 머리줄
+  ctx.font = font(400, 28);
   ctx.textAlign = "center";
-  for (let d = 0; d < days; d++) { ctx.fillStyle = c.sub; ctx.fillText(DAY[d], left + colW * d + colW / 2, HEAD + 6); }
-  // 격자
-  ctx.strokeStyle = c.line;
-  ctx.lineWidth = 1;
+  ctx.fillStyle = C.head;
+  for (let d = 0; d < days; d++) ctx.fillText(DAY[d], LABEL + COL * d + COL / 2, HEAD / 2 + 1);
+
+  // 시각 (12시간제) — 칸 위쪽에 오른쪽 정렬
   ctx.textAlign = "right";
-  for (let h = h0; h <= h1; h++) {
-    const y = top + (h - h0) * rowH + 0.5;
-    ctx.beginPath(); ctx.moveTo(left, y); ctx.lineTo(W - PAD, y); ctx.stroke();
-    ctx.fillStyle = c.sub; ctx.font = font(500, 14); ctx.fillText(String(h), left - 10, y - 8);
-  }
-  for (let d = 0; d <= days; d++) {
-    const x = left + colW * d + 0.5;
-    ctx.beginPath(); ctx.moveTo(x, top); ctx.lineTo(x, top + gridH); ctx.stroke();
-  }
+  ctx.textBaseline = "top";
+  ctx.fillStyle = C.hour;
+  for (let h = h0; h < h1; h++) ctx.fillText(String(((h + 11) % 12) + 1), LABEL - 8, HEAD + (h - h0) * HOUR + 6);
+
+  // 격자선
+  ctx.fillStyle = C.line;
+  for (let h = 0; h <= h1 - h0; h++) ctx.fillRect(0, HEAD + h * HOUR - LINE / 2, W, LINE);
+  ctx.fillRect(0, HEAD - LINE / 2, W, LINE);
+  for (let d = 0; d <= days; d++) ctx.fillRect(LABEL + COL * d - LINE / 2, 0, LINE, HEAD + HOUR * (h1 - h0));
+
   // 블록
   ctx.textAlign = "left";
   for (const it of items) {
     for (const [d, s, e] of mergeSlots(it.slots)) {
-      const x = left + colW * d + 3;
-      const y = top + ((s - h0 * 60) / 60) * rowH + 2;
-      const w = colW - 6;
-      const h = ((e - s) / 60) * rowH - 4;
+      const x = LABEL + COL * d + LINE / 2;
+      const y = HEAD + ((s - h0 * 60) / 60) * HOUR + LINE / 2;
+      const w = COL - LINE;
+      const h = ((e - s) / 60) * HOUR - LINE;
       ctx.fillStyle = it.color;
-      ctx.beginPath(); ctx.roundRect(x, y, w, h, 4); ctx.fill();
+      ctx.fillRect(x, y, w, h);
       ctx.save();
-      ctx.beginPath(); ctx.rect(x, y, w, h); ctx.clip();
-      ctx.fillStyle = "#ffffff";
-      ctx.font = font(700, 15);
+      ctx.beginPath();
+      ctx.rect(x, y, w, h);
+      ctx.clip();
+      ctx.fillStyle = C.text;
       let ty = y + 8;
-      for (const line of wrap(ctx, it.name, w - 14).slice(0, 3)) { ctx.fillText(line, x + 7, ty); ty += 19; }
-      ctx.font = font(500, 13);
-      ctx.globalAlpha = 0.88;
-      for (const line of [it.prof, it.room].filter(Boolean)) {
-        for (const l of wrap(ctx, line, w - 14).slice(0, 2)) { if (ty + 16 > y + h) break; ctx.fillText(l, x + 7, ty); ty += 17; }
-      }
+      ctx.font = font(700, 32);
+      for (const line of wrap(ctx, it.name, w - 12)) { ctx.fillText(line, x + 6, ty); ty += 40; }
+      ctx.font = font(400, 27);
+      for (const line of wrap(ctx, it.room, w - 12)) { if (ty > y + h) break; ctx.fillText(line, x + 6, ty); ty += 35; }
       ctx.restore();
     }
   }
+
+  // 시간 미정
   if (noTime.length) {
-    let y = top + gridH + 28;
-    ctx.fillStyle = c.sub; ctx.font = font(600, 16); ctx.fillText("시간 미정", PAD, y); y += 28;
-    ctx.fillStyle = c.ink; ctx.font = font(500, 16);
-    for (const it of noTime) { ctx.fillText(`${it.name} · ${it.credit}학점${it.prof ? ` · ${it.prof}` : ""}`, PAD, y); y += 30; }
+    let y = HEAD + HOUR * (h1 - h0) + 24;
+    ctx.font = font(400, 26);
+    ctx.fillStyle = C.head;
+    for (const it of noTime) {
+      ctx.fillText(`시간 미정 · ${it.name} (${it.credit}학점)`, 16, y);
+      y += 44;
+    }
   }
 
   const blob = await new Promise<Blob | null>((r) => canvas.toBlob(r, "image/png"));

@@ -28,18 +28,53 @@ export function slotsToMask(slots: Slot[]): number[] {
 type PreparedOption = { idx: number; mask: number[]; opt: EngineOption };
 type PreparedGroup = { g: EngineGroup; origIdx: number; options: PreparedOption[] };
 
+const LUNCH: [number, number] = [12 * 60, 13 * 60];
+
 function optionPassesConditions(opt: EngineOption, c: Conditions): EngineOption | null {
   for (const [day, start, end] of opt.slots) {
     if (c.daysOff.includes(day)) return null;
     if (c.startAfter && start < c.startAfter) return null;
     if (c.endBefore && end > c.endBefore) return null;
+    if (c.lunchFree && start < LUNCH[1] && end > LUNCH[0]) return null;
   }
-  if (c.excludeProfs.length) {
-    const sections = opt.sections.filter((s) => !s.profs.some((p) => c.excludeProfs.includes(p)));
-    if (!sections.length) return null;
-    if (sections.length !== opt.sections.length) return { ...opt, sections };
+  const sections = opt.sections.filter((s) =>
+    !s.profs.some((p) => c.excludeProfs.includes(p)) && !(c.noRemote && s.remote));
+  if (!sections.length) return null;
+  return sections.length === opt.sections.length ? opt : { ...opt, sections };
+}
+
+/**
+ * 하루 단위 규칙 검사 (연강 길이 · 하루 과목 수 · 수업 사이 빈 시간)
+ * full=false 이면 과목을 더해도 나아지지 않는 규칙(연강·과목 수)만 본다 → 탐색 중 가지치기용
+ */
+function dayRulesOk(lists: Slot[][], c: Conditions, full: boolean): boolean {
+  if (!c.maxStreak && !c.maxPerDay && !(full && c.maxGap)) return true;
+  const byDay = new Map<number, [number, number][]>();
+  const perDay = new Map<number, number>();
+  for (const slots of lists) {
+    const days = new Set<number>();
+    for (const [d, s, e] of slots) {
+      if (!byDay.has(d)) byDay.set(d, []);
+      byDay.get(d)!.push([s, e]);
+      days.add(d);
+    }
+    for (const d of days) perDay.set(d, (perDay.get(d) ?? 0) + 1);
   }
-  return opt;
+  if (c.maxPerDay) for (const n of perDay.values()) if (n > c.maxPerDay) return false;
+  for (const segs of byDay.values()) {
+    segs.sort((a, b) => a[0] - b[0]);
+    let runStart = segs[0][0], runEnd = segs[0][1];
+    for (let i = 1; i <= segs.length; i++) {
+      const next = segs[i];
+      if (next && next[0] <= runEnd) { runEnd = Math.max(runEnd, next[1]); continue; }
+      if (c.maxStreak && runEnd - runStart > c.maxStreak) return false;
+      if (next) {
+        if (full && c.maxGap && next[0] - runEnd > c.maxGap) return false;
+        runStart = next[0]; runEnd = next[1];
+      }
+    }
+  }
+  return true;
 }
 
 export function computeMetrics(chosen: { credit: number; opt: EngineOption }[]): ComboMetrics {
@@ -184,11 +219,13 @@ export function runEngine(groups: EngineGroup[], cond: Conditions) {
       for (let i = 0; i < n && !found; i++) found = !!chosen[i]?.opt.sections.some((s) => s.profs.includes(prof));
       if (!found) return;
     }
-    // 최대성: 빠진 후보 과목 중 학점·시간 모두 들어갈 수 있는 게 있으면 버림
+    const chosenSlots = chosen.filter((c): c is PreparedOption => !!c).map((c) => c.opt.slots);
+    if (!dayRulesOk(chosenSlots, cond, true)) return;
+    // 최대성: 빠진 후보 과목 중 학점·시간·하루 규칙을 모두 지키며 더 넣을 수 있는 게 있으면 버림
     for (let i = 0; i < n; i++) {
       if (chosen[i] || order[i].g.must) continue;
       if (credit + order[i].g.credit > maxC) continue;
-      if (order[i].options.some((o) => fits(o.mask))) return;
+      if (order[i].options.some((o) => fits(o.mask) && dayRulesOk([...chosenSlots, o.opt.slots], cond, true))) return;
     }
     total++;
     const picks = new Array(groups.length).fill(-1);
@@ -209,8 +246,13 @@ export function runEngine(groups: EngineGroup[], cond: Conditions) {
     if (credit + suffixCredit[i] < minC) return;
     if (i === n) { leaf(credit); return; }
     const p = order[i];
+    const pruneDays = !!(cond.maxStreak || cond.maxPerDay);
     for (const o of p.options) {
       if (!fits(o.mask)) continue;
+      if (pruneDays) {
+        const lists = chosen.filter((c): c is PreparedOption => !!c).map((c) => c.opt.slots);
+        if (!dayRulesOk([...lists, o.opt.slots], cond, false)) continue;
+      }
       for (let d = 0; d < 7; d++) mask[d] |= o.mask[d];
       chosen[i] = o;
       rec(i + 1, credit + p.g.credit);

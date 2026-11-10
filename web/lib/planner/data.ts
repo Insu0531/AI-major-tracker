@@ -18,16 +18,20 @@ export async function loadSnapshot(sem: string): Promise<Snapshot | null> {
   }
 }
 
-/** 이수체계: 과목코드 → 권장 학년 */
-export async function loadCurriculum(major: string, entryYear: number): Promise<Map<string, string>> {
-  try {
-    const res = await fetch(`/courses/${major}/${entryYear}.json`);
-    if (!res.ok) return new Map();
-    const list = (await res.json()) as { code: string; grade: string }[];
-    return new Map(list.map((c) => [c.code, c.grade]));
-  } catch {
-    return new Map();
+/** 이수체계: 과목코드 → 권장 학년. 그 학번 파일이 없으면 가까운 학번(이전 우선) 것을 쓴다. */
+export async function loadCurriculum(major: string, entryYear: number, years?: number[]): Promise<Map<string, string>> {
+  const candidates = years?.length
+    ? [...years].sort((a, b) => Math.abs(a - entryYear) - Math.abs(b - entryYear) || a - b)
+    : [entryYear, entryYear - 1, entryYear - 2, entryYear + 1];
+  for (const y of candidates) {
+    try {
+      const res = await fetch(`/courses/${major}/${y}.json`);
+      if (!res.ok) continue;
+      const list = (await res.json()) as { code: string; grade: string }[];
+      return new Map(list.map((c) => [c.code, c.grade]));
+    } catch { /* 다음 연도 */ }
   }
+  return new Map();
 }
 
 const GYOYANG_TYPES = new Set(["교양", "기본소양", "기초공통"]);
@@ -91,7 +95,7 @@ export function buildEngineGroups(cart: CartItem[], courseByCode: Map<string, Co
       const key = JSON.stringify(s.slots);
       let o = byKey.get(key);
       if (!o) { o = { key, slots: s.slots, sections: [] }; byKey.set(key, o); }
-      o.sections.push({ id: s.id, profs: s.profs, room: s.room, applied: s.applied, capacity: s.capacity });
+      o.sections.push({ id: s.id, profs: s.profs, room: s.room, applied: s.applied, capacity: s.capacity, remote: s.tags.includes("원격") });
     }
     groups.push({ code: course.code, name: course.name, credit: course.credit, must: item.mode === "must", options: [...byKey.values()] });
   }

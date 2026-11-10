@@ -1,22 +1,24 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { MAJOR_LABELS, type Major } from "@/lib/courses";
+import type { MajorInfo } from "@/lib/planner/majors";
 
-const SORTED = (Object.entries(MAJOR_LABELS) as [Major, string][]).sort(([, a], [, b]) => {
-  const aS = a.startsWith("["), bS = b.startsWith("[");
+const sortMajors = (list: MajorInfo[]) => [...list].sort((a, b) => {
+  const aS = a.label.startsWith("["), bS = b.label.startsWith("[");
   if (aS !== bS) return aS ? 1 : -1;
-  return a.localeCompare(b, "ko");
+  return a.label.localeCompare(b.label, "ko");
 });
 
 export default function MajorPicker({
+  options,
   value,
   onChange,
   placeholder = "학과 선택",
   onRemove,
 }: {
-  value: Major | null;
-  onChange: (m: Major) => void;
+  options: MajorInfo[];
+  value: string | null;
+  onChange: (m: string) => void;
   placeholder?: string;
   onRemove?: () => void;
 }) {
@@ -31,10 +33,12 @@ export default function MajorPicker({
     return () => document.removeEventListener("mousedown", close);
   }, [open]);
 
+  const sorted = useMemo(() => sortMajors(options), [options]);
+  const labelOf = (key: string) => options.find((m) => m.key === key)?.label ?? key;
   const list = useMemo(() => {
     const t = q.replace(/\s/g, "");
-    return t ? SORTED.filter(([, l]) => l.replace(/\s/g, "").includes(t)) : SORTED;
-  }, [q]);
+    return t ? sorted.filter((m) => m.label.replace(/\s/g, "").includes(t)) : sorted;
+  }, [q, sorted]);
 
   return (
     <div className="pl-pop" ref={ref}>
@@ -45,7 +49,7 @@ export default function MajorPicker({
           style={{ maxWidth: 240, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", textAlign: "left" }}
           onClick={() => { setOpen((v) => !v); setQ(""); }}
         >
-          {value ? MAJOR_LABELS[value] : <span className="pl-muted">{placeholder}</span>}
+          {value ? labelOf(value) : <span className="pl-muted">{placeholder}</span>}
         </button>
         {onRemove && <button type="button" className="pl-x" aria-label="복수전공 삭제" onClick={onRemove}>×</button>}
       </div>
@@ -54,9 +58,9 @@ export default function MajorPicker({
           <input autoFocus className="pl-field" placeholder="학과 검색" value={q} onChange={(e) => setQ(e.target.value)} />
           <div className="pl-pop-list">
             {list.length === 0 && <div className="pl-empty">찾는 학과가 없어요</div>}
-            {list.map(([key, label]) => (
-              <button key={key} type="button" aria-current={key === value} onClick={() => { onChange(key); setOpen(false); }}>
-                {label}
+            {list.map((m) => (
+              <button key={m.key} type="button" aria-current={m.key === value} onClick={() => { onChange(m.key); setOpen(false); }}>
+                {m.label}{m.auto && <span className="pl-badge" style={{ marginLeft: 6 }}>신규</span>}
               </button>
             ))}
           </div>

@@ -1,7 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { MAJOR_LABELS, ENTRY_YEAR_MIN, type Major } from "@/lib/courses";
+import { ENTRY_YEAR_MIN } from "@/lib/courses";
+import { BASE_MAJORS, isSangjuLabel, loadMajors, type MajorInfo } from "@/lib/planner/majors";
 import { buildCourses, buildEngineGroups, colorAt, loadCurriculum, loadIndex, loadSnapshot, type SectionFilter } from "@/lib/planner/data";
 import { exportTimetable, type TimetableItem } from "@/lib/planner/exportImage";
 import { deletePlan, loadPlans, readLocal, renamePlan, savePlan, writeLocal, type SavedPlan } from "@/lib/planner/storage";
@@ -34,12 +35,12 @@ const TOUR_3: TourStep[] = [
 ];
 const ENTRY_YEAR_LAST = 2026; // 이수체계 데이터가 있는 마지막 학번
 const fmtDate = (iso: string) => new Date(iso).toLocaleString("ko-KR", { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
-const defaultCampuses = (m: Major | null) => (m && MAJOR_LABELS[m].startsWith("[상주]") ? ["상주"] : ["산격동", "동인동"]);
+const defaultCampuses = (label: string) => (isSangjuLabel(label) ? ["상주"] : ["산격동", "동인동"]);
 
 type Persisted = {
   sem: string | null;
-  major: Major | null;
-  extras: Major[];
+  major: string | null;
+  extras: string[];
   entryYear: number;
   cart: CartItem[];
   conditions: Conditions;
@@ -99,6 +100,10 @@ export default function Planner() {
   const [renaming, setRenaming] = useState<{ id: string; name: string } | null>(null);
   const [bulkProgress, setBulkProgress] = useState<number | null>(null);
   const [optOut, setOptOutState] = useState(isOptedOut);
+  const [majors, setMajors] = useState<MajorInfo[]>(BASE_MAJORS);
+  useEffect(() => { loadMajors().then(setMajors); }, []);
+  const majorByKey = useMemo(() => new Map(majors.map((m) => [m.key, m])), [majors]);
+  const labelOf = useCallback((key: string) => majorByKey.get(key)?.label ?? key, [majorByKey]);
   const [saveName, setSaveName] = useState("");
   const [plans, setPlans] = useState<SavedPlan[]>(loadPlans);
   const [preview, setPreview] = useState<SavedPlan | null>(null);
@@ -130,17 +135,17 @@ export default function Planner() {
   useEffect(() => {
     if (!st.major) return;
     const key = `${st.major}-${st.entryYear}`;
-    loadCurriculum(st.major, st.entryYear).then((map) => setMineCur({ key, map }));
-  }, [st.major, st.entryYear]);
+    loadCurriculum(st.major, st.entryYear, majorByKey.get(st.major)?.years).then((map) => setMineCur({ key, map }));
+  }, [st.major, st.entryYear, majorByKey]);
   const mine = st.major && mineCur?.key === `${st.major}-${st.entryYear}` ? mineCur.map : EMPTY_MAP;
 
   useEffect(() => {
-    Promise.all(st.extras.map((m) => loadCurriculum(m, st.entryYear))).then((maps) => {
+    Promise.all(st.extras.map((m) => loadCurriculum(m, st.entryYear, majorByKey.get(m)?.years))).then((maps) => {
       const merged = new Map<string, string>();
       for (const m of maps) for (const [k, v] of m) if (!merged.has(k)) merged.set(k, v);
       setExtra(merged);
     });
-  }, [st.extras, st.entryYear]);
+  }, [st.extras, st.entryYear, majorByKey]);
 
   const courses = useMemo(() => (snapshot ? buildCourses(snapshot.sections, mine, extra) : []), [snapshot, mine, extra]);
   const courseByCode = useMemo(() => new Map(courses.map((c) => [c.code, c])), [courses]);
@@ -233,7 +238,8 @@ export default function Planner() {
         slots: opt.slots,
         color: colorOf(g.code),
         prof: decided ? chosen.profs.join(", ") : `${chosen.profs[0] ?? ""} 외 ${list.length - 1}분반`,
-        room: decided ? chosen.room : "",
+        // 교수님 미정이어도 분반들 강의실이 모두 같으면 보여 줌
+        room: decided || list.every((x) => x.room === chosen.room) ? chosen.room : "",
         sectionIds: decided ? [chosen.id] : list.map((s) => s.id),
         options: list.map((s) => ({ id: s.id, prof: s.profs.join(", ") || "교수 미정" })),
         chosen: chosen.id,
@@ -259,7 +265,7 @@ export default function Planner() {
   const names = useCallback((i: number) => resGroups.filter((_, gi) => (results[i]?.picks[gi] ?? -1) >= 0).map((g) => g.name), [resGroups, results]);
   const busySlots: Slot[] = useMemo(() => view?.items.flatMap((i) => i.slots) ?? [], [view]);
 
-  const majorLabel = st.major ? MAJOR_LABELS[st.major] : "";
+  const majorLabel = st.major ? labelOf(st.major) : "";
   const title = st.sem ? `${semLabel(st.sem)} 시간표` : "시간표";
   const doImage = async (items: TimetableItem[] = view?.items ?? [], t = title) => {
     if (!items.length) return;
@@ -275,7 +281,7 @@ export default function Planner() {
 
   /** 기존 사이트와 같은 Google Form 저장 로그 */
   const logSave = (event: "이미지 저장" | "라이브러리 저장") =>
-    trackSave({ event, majorLabel, extraMajorLabels: st.extras.map((m) => MAJOR_LABELS[m]), entryYear: st.entryYear });
+    trackSave({ event, majorLabel, extraMajorLabels: st.extras.map(labelOf), entryYear: st.entryYear });
 
   /* 모든 결과 이미지 일괄 저장 (기존 "모든 시간표 이미지 저장") */
   const doBulkImages = async () => {
@@ -396,7 +402,7 @@ export default function Planner() {
               <div className="pl-row">
                 <div>
                   <div className="pl-label">학과</div>
-                  <MajorPicker value={st.major} onChange={(m) => { update({ major: m, campuses: defaultCampuses(m) }); track("major_selected", { major: MAJOR_LABELS[m] }); }} />
+                  <MajorPicker options={majors} value={st.major} onChange={(m) => { update({ major: m, campuses: defaultCampuses(labelOf(m)) }); track("major_selected", { major: labelOf(m) }); }} />
                 </div>
                 <div>
                   <div className="pl-label">학번</div>
@@ -410,9 +416,9 @@ export default function Planner() {
                   <div className="pl-label">복수전공 · 부전공 <span className="pl-muted" style={{ fontWeight: 500 }}>(선택, 최대 3개)</span></div>
                   <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                     {st.extras.map((m, i) => (
-                      <MajorPicker key={i} value={m} onChange={(nm) => update({ extras: st.extras.map((x, j) => (j === i ? nm : x)) })} onRemove={() => update({ extras: st.extras.filter((_, j) => j !== i) })} />
+                      <MajorPicker options={majors} key={i} value={m} onChange={(nm) => update({ extras: st.extras.map((x, j) => (j === i ? nm : x)) })} onRemove={() => update({ extras: st.extras.filter((_, j) => j !== i) })} />
                     ))}
-                    {st.extras.length < 3 && <MajorPicker value={null} placeholder="+ 학과 추가" onChange={(m) => update({ extras: [...st.extras, m] })} />}
+                    {st.extras.length < 3 && <MajorPicker options={majors} value={null} placeholder="+ 학과 추가" onChange={(m) => update({ extras: [...st.extras, m] })} />}
                   </div>
                 </div>
               )}
@@ -430,7 +436,7 @@ export default function Planner() {
             <div>
               <CourseBrowser
                 key={`${st.sem}-${st.major ?? ""}`}
-                myLabels={[st.major, ...st.extras].filter((m): m is Major => !!m).map((m) => MAJOR_LABELS[m])}
+                myLabels={[st.major, ...st.extras].filter((m): m is string => !!m).map(labelOf)}
                 courses={courses}
                 cart={cart}
                 hasMajor={!!st.major}
