@@ -216,22 +216,36 @@ SavedTimetable = { id, name, savedAt, sem: "2026-1", major, majorLabel, entryYea
 
 ---
 
-## 리뉴얼 계획 (2026-11 합의 중인 방향 — 확정 시 갱신)
+## 리뉴얼 계획 (2026-11, 확정 사항 반영)
 
 ### 목표
 전공→교양→교직 3단계 마법사를 **하나의 "시간표 검색"** 으로 통합. 전공(학과별)·교양·교직·일반선택을 한 풀에서 담고, 필터 + 정렬을 한 번에 적용. 기존 편의(내 전공 이수체계 자동 표시, 분반 고정/제외, 빈 시간 교양 찾기, 교수 선택, 이미지/라이브러리 저장, 수강신청 코드 복사)는 유지.
 
-### 데이터 전략: "요청 시 크롤링" → "미리 수집한 정적 스냅샷"
-- 근거: `response/교양시간표.json` 샘플이 `paging:false`로 872분반을 한 번에 반환. 교양 라우트도 필터 1개로 학기 전체 교양을 1회 호출로 받음 → 학기 전체 개설강좌도 소수 호출(필요시 개설학과 `estblDprtnCd`별 반복)로 수집 가능할 가능성 높음. **실측 필요**(이 클라우드 세션은 knuin.knu.ac.kr 접근이 네트워크 정책으로 차단됨).
-- 응답에 `appcrCnt`(신청인원)·`attlcPrscpCnt`(정원)·`sbjetSctnm`(교양/전공기반/…)·`estblDprtnCd`도 포함 → 경쟁률 정렬, 이수구분 태그에 활용 가능.
-- 파이프라인(안): GitHub Actions cron → 수집 스크립트 → 정규화된 `sections/{sem}.json`(+ gzip) 생성 → 정적 파일/Blob로 배포 → 클라이언트가 1회 다운로드 후 **검색·조합 전부 클라이언트에서**. 수강신청 기간엔 수집 주기 단축.
-- 이수체계(교육과정편람): 학기 스냅샷의 `estblDprtnCd` 목록 → `searchEduCourList`(add_major.py 로직) 일괄 실행 → 전 학과·전 학번 자동 생성. `Major`/라벨/메타는 생성된 `majors.json`에서 파생(수동 편집 금지).
+### 데이터 전략: "요청 시 크롤링" → "미리 수집한 정적 스냅샷" (결정됨)
+- **실측 완료 (2026-11-10)**: 강의계획서 API에 필터 없이 1회 호출 → 학기 전체 개설강좌 반환(페이징 없음).
+  2026-1: 5,791분반 / 2026-2: 5,588분반, 12~30초. 학부+대학원 전체, 445개 개설학과.
+  기존 과목코드별 조회·교양(sbjetRelmCd=01)·교직(sbjetSctcd=STCU000800007) 결과가 전부 포함됨을 표본 검증.
+- 수집기: `scripts/collect-sections.mjs` (의존성 없음, Node 18+) → `web/public/data/sections/{sem}.json` + `web/public/data/index.json`.
+  정규화 결과 학기당 약 2.4MB, **gzip 약 210KB**. SDG/인문교양/KNU미래설계는 전체 응답에 없어서 필터 조회 3회로 보충.
+  결과가 0건이거나 직전보다 50% 넘게 줄면 저장하지 않음.
+- 정규화 스키마 v1 (분반 1개): `{ id(crseNo), code, name, type(이수구분), credit, grade, college, dept, deptCd, profs[], time, slots[[요일0~6, 시작분, 종료분]], campus(산격동/동인동/상주/""), room, remark, tags[], capacity, applied, basket }`
+- 저장 위치: **레포에 커밋 (방식 a)** → Vercel 자동 재배포. 클라이언트가 1회 다운로드한 뒤 검색·조합을 모두 클라이언트에서 처리.
+- 이수체계(교육과정편람): 스냅샷의 `deptCd` 목록 → `searchEduCourList`(add_major.py 로직) 일괄 실행 → 전 학과·전 학번 자동 생성 (예정).
+- 이 클라우드 세션에서 Node fetch로 수집할 때는 `NODE_USE_ENV_PROXY=1 NODE_EXTRA_CA_CERTS=/root/.ccr/ca-bundle.crt`가 필요하다 (로컬/GitHub Actions에서는 불필요).
+
+### 개발·배포 절차 (리뉴얼 이후)
+- Vercel GitHub 연동, Root Directory = `web`. **`main`에 push/merge할 때만 운영 배포**, 그 밖의 브랜치는 push마다 **Preview URL**이 생성됨
+  (`ai-major-tracker-git-<브랜치명>-insu0531.vercel.app`, PR에 vercel[bot] 댓글로 링크가 달림).
+- 코드 변경: 작업 브랜치 → 로컬 `npm run dev` → push → Preview에서 PC·모바일 확인 → PR → main 머지(=운영 반영).
+- 데이터 갱신: GitHub Actions cron이 수집기를 실행하고 변경분만 main에 커밋 → 운영 자동 재배포 (예정). 수강신청 기간에는 주기 단축.
+  Vercel Hobby 한도(하루 배포 100회)를 고려해 최소 1시간 간격 유지.
+- 분석: PostHog 도입 확정 (Google Form 비콘 대체).
+- 작업 순서: ① 수집 실측(완료) → ② 데이터 구조 확정 → ③ 조합 엔진 → ④ UI.
 
 ### 조합 엔진
 - Web Worker로 이동, 30분 단위 요일 비트마스크 충돌검사, 백트래킹 + 필터 조기 가지치기, 정렬 점수 기준 상위 K개만 유지(전수 보관 금지).
 - 정렬 기준 후보: 공강일 수, 첫 수업 시작 시각, 마지막 수업 종료 시각, 우주공강(빈 시간) 총합, 총 학점/목표 학점 근접, 하루 최대 연강, 경쟁률(신청/정원).
 
 ### 기타
-- 사용 분석: Google Form 비콘 → 이벤트 분석 도구(PostHog 등, 클릭 autocapture·퍼널) 검토 중.
 - 이미지 저장: DOM 캡처 대신 데이터로 직접 그리는 단일 `exportTimetable(combo, options)` 함수. 교수 선택은 저장 시 모달이 아니라 과목 담을 때 처리.
 - 레이아웃: PC/태블릿 3패널(조건 | 과목 풀 | 결과), 모바일은 "담기 → 결과" 2단계 + 바텀시트.
