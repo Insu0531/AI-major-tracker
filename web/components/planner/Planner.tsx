@@ -61,7 +61,7 @@ type Persisted = {
 
 const INITIAL: Persisted = {
   sem: null,
-  major: null,
+  major: "ai", // 처음 방문하면 전자공학부 인공지능전공이 기본
   extras: [],
   entryYear: ENTRY_YEAR_LAST,
   cart: [],
