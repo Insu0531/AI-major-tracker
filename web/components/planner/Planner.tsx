@@ -100,7 +100,7 @@ export default function Planner() {
   const [running, setRunning] = useState(false);
   const [selIdx, setSelIdx] = useState(0);
   const [profPick, setProfPick] = useState<Record<string, string>>({});
-  const [modal, setModal] = useState<null | "codes" | "save" | "saved" | "cart" | "bulk" | "friends" | "invite">(null);
+  const [modal, setModal] = useState<null | "codes" | "save" | "saved" | "cart" | "bulk" | "friends" | "invite" | "pick">(null);
   /* ── 계정 (구글 로그인 · 보관함 동기화 · 친구) ── */
   const { session } = useSession();
   const loggedIn = !!session;
@@ -310,7 +310,8 @@ export default function Planner() {
         // 교수님 미정이어도 분반들 강의실이 모두 같으면 보여 줌
         room: decided || list.every((x) => x.room === chosen.room) ? chosen.room : "",
         sectionIds: decided ? [chosen.id] : list.map((s) => s.id),
-        options: list.map((s) => ({ id: s.id, prof: s.profs.join(", ") || "교수 미정" })),
+        options: list.map((s) => ({ id: s.id, prof: s.profs.join(", ") || "교수 미정", room: s.room })),
+        decided,
         chosen: chosen.id,
       });
     });
@@ -663,7 +664,7 @@ export default function Planner() {
               onSelect={setSelIdx}
               view={view}
               names={names}
-              onImage={() => doImage()}
+              onImage={() => (view?.items.some((i) => i.options.length > 1 && !i.decided) ? setModal("pick") : doImage())}
               onSave={() => { setSaveName(""); setModal("save"); }}
               onCodes={() => { setModal("codes"); track("codes_opened"); }}
               onBulk={results.length > 1 ? () => (results.length > 20 ? setModal("bulk") : doBulkImages()) : undefined}
@@ -671,6 +672,7 @@ export default function Planner() {
               onBack={() => goStep(2)}
               recs={recs}
               onAddRec={addRec}
+              onChoose={(code, id) => { setProfPick((p) => ({ ...p, [code]: id })); track("section_chosen", { where: "block" }); }}
             />
           </section>
         </div>
@@ -679,6 +681,31 @@ export default function Planner() {
       {modal && (
         <div className="pl-modal-bg" onClick={() => { setModal(null); setPreview(null); }}>
           <div className="pl-modal" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
+            {modal === "pick" && view && (
+              <>
+                <div className="pl-modal-head"><h3>분반 고르고 저장</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-body">
+                  <div className="pl-hint">같은 시간에 교수님이 다른 분반이 있어요. 고르면 이미지에 교수님·강의실이 들어가요.</div>
+                  {view.items.filter((i) => i.options.length > 1).map((it) => (
+                    <div key={it.code} className="pl-pick-group">
+                      <div style={{ fontWeight: 700 }}>{it.name}</div>
+                      <div className="pl-chips">
+                        {it.options.map((o) => (
+                          <button key={o.id} className="pl-chip" aria-pressed={it.decided && it.chosen === o.id}
+                            onClick={() => { setProfPick((p) => ({ ...p, [it.code]: o.id })); track("section_chosen", { where: "save" }); }}>
+                            {o.id.split("-").pop()} · {o.prof}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                  <div style={{ display: "flex", gap: 6, marginTop: 4 }}>
+                    <button className="pl-btn" style={{ flex: 1 }} onClick={() => { setModal(null); void doImage(); }}>고르지 않고 저장</button>
+                    <button className="pl-btn primary" style={{ flex: 1 }} onClick={() => { setModal(null); void doImage(); }}>이미지 저장</button>
+                  </div>
+                </div>
+              </>
+            )}
             {modal === "codes" && view && (
               <>
                 <div className="pl-modal-head"><h3>수강신청 코드</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>

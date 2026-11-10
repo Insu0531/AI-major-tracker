@@ -7,7 +7,7 @@ import type { EngineResponse } from "@/lib/planner/types";
 import Timetable from "./Timetable";
 
 export type ResultView = {
-  items: (TimetableItem & { sectionIds: string[]; options: { id: string; prof: string }[]; chosen: string })[];
+  items: (TimetableItem & { sectionIds: string[]; options: { id: string; prof: string; room: string }[]; chosen: string; decided: boolean })[];
 };
 
 export default function ResultPanel({
@@ -26,6 +26,7 @@ export default function ResultPanel({
   onBack,
   recs,
   onAddRec,
+  onChoose,
 }: {
   response: EngineResponse | null;
   running: boolean;
@@ -42,6 +43,7 @@ export default function ResultPanel({
   onBack: () => void;
   recs: Recommendation[];
   onAddRec: (r: Recommendation) => void;
+  onChoose: (code: string, sectionId: string) => void;
 }) {
   const results = response?.results ?? [];
   const m = results[selIdx]?.metrics;
@@ -93,7 +95,16 @@ export default function ResultPanel({
         )}
       </div>
       <div className="pl-scroll">
-        <div className="pl-tt-wrap" key={selIdx}><Timetable items={view.items} /></div>
+        <div className="pl-tt-wrap" key={selIdx}>
+          <Timetable
+            items={view.items}
+            choices={Object.fromEntries(view.items.map((i) => [i.code, { options: i.options, chosen: i.chosen, decided: i.decided }]))}
+            onChoose={onChoose}
+          />
+          {view.items.some((i) => i.options.length > 1 && !i.decided) && (
+            <div className="pl-hint" style={{ marginTop: 8 }}>‘교수님 선택 ▾’이 붙은 과목은 블록에 마우스를 올리거나 눌러 분반을 고를 수 있어요.</div>
+          )}
+        </div>
         {recs.length > 0 && (
           <div className="pl-recs" data-tour="recs">
             <div className="pl-list-title">
