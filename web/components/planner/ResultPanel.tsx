@@ -26,7 +26,11 @@ export default function ResultPanel({
   bulkProgress,
   onBack,
   recs,
+  addedRecs,
   onAddRec,
+  onRemoveRec,
+  onShuffleRecs,
+  quickAdd,
   onChoose,
 }: {
   response: EngineResponse | null;
@@ -45,6 +49,10 @@ export default function ResultPanel({
   onBack: () => void;
   recs: Recommendation[];
   onAddRec: (r: Recommendation) => void;
+  addedRecs: Recommendation[];
+  onRemoveRec: (code: string) => void;
+  onShuffleRecs?: () => void;
+  quickAdd: React.ReactNode;
   onChoose: (code: string, sectionId: string) => void;
 }) {
   const results = response?.results ?? [];
@@ -113,12 +121,24 @@ export default function ResultPanel({
             <div className="pl-hint" style={{ marginTop: 8 }}>‘교수님 선택 ▾’이 붙은 과목은 블록에 마우스를 올리거나 눌러 분반을 고를 수 있어요.</div>
           )}
         </div>
-        {recs.length > 0 && (
-          <div className="pl-recs" id="pl-recs" data-tour="recs">
-            <div className="pl-list-title">
-              이 시간표 빈 시간에 넣기 좋은 교양
-              <span className="pl-muted" style={{ fontWeight: 500 }}> · 공강 유지·빈 시간 채움·정원 여유 순으로 골랐어요</span>
+        <div className="pl-recs" id="pl-recs" data-tour="recs">
+            <div className="pl-list-title pl-recs-title">
+              <span>
+                이 시간표 빈 시간에 넣기 좋은 교양
+                <span className="pl-muted" style={{ fontWeight: 500 }}> · 공강 유지·빈 시간 채움·정원 여유를 따져 골랐어요</span>
+              </span>
+              {onShuffleRecs && <button className="pl-btn sm" onClick={onShuffleRecs}>↻ 다른 추천 보기</button>}
             </div>
+            {addedRecs.map((r) => (
+              <div key={`added-${r.section.id}`} className="pl-rec added">
+                <div className="pl-rec-main">
+                  <div className="pl-rec-name">{r.course.name} <span className="pl-muted">{r.course.credit}학점</span></div>
+                  <div className="pl-rec-meta">{formatSlots(r.section.slots)} · {r.section.profs.join(", ") || "교수 미정"}{r.section.room ? ` · ${r.section.room}` : ""}</div>
+                </div>
+                <button className="pl-btn sm" aria-pressed="true" onClick={() => onRemoveRec(r.course.code)} title="누르면 시간표에서 빼요">넣음 ✓ · 빼기</button>
+              </div>
+            ))}
+            {recs.length === 0 && addedRecs.length === 0 && <div className="pl-hint" style={{ padding: "0 24px 8px" }}>지금 조건으로 빈 시간에 들어가는 교양이 없어요. 학점 상한이나 공강 조건을 바꿔 보세요.</div>}
             {recs.map((r) => (
               <div key={r.section.id} className="pl-rec">
                 <div className="pl-rec-main">
@@ -129,8 +149,8 @@ export default function ResultPanel({
                 <button className="pl-btn sm primary" onClick={() => onAddRec(r)}>이 분반 넣기</button>
               </div>
             ))}
+            {quickAdd}
           </div>
-        )}
         <div className="pl-list">
           <div className="pl-list-title">
             다른 시간표 <span className="pl-muted" style={{ fontWeight: 500 }}>

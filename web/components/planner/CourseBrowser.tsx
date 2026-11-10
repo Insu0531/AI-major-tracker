@@ -23,7 +23,7 @@ function sectionMeetsConditions(s: RawSection, c: Conditions) {
 }
 
 /** 개설학과가 내 학과인지 (학과명 앞부분 기준: "전자공학부 인공지능전공" ↔ "전자공학부") */
-function isMyDept(dept: string, labels: string[]) {
+export function isMyDept(dept: string, labels: string[]) {
   const d = dept.replace(/\s/g, "");
   return labels.some((l) => {
     const head = l.replace(/^\[[^\]]+\]/, "").split(/[-\s(]/)[0];
@@ -272,7 +272,7 @@ export default function CourseBrowser(p: Props) {
   );
 }
 
-const CourseRow = memo(function CourseRow({
+export const CourseRow = memo(function CourseRow({
   course: c,
   item,
   open,

@@ -13,14 +13,15 @@ import {
 } from "@/lib/account";
 import FriendsPanel from "@/components/planner/FriendsPanel";
 import { trackSave } from "@/lib/trackSave";
-import { recommendFill, type Recommendation } from "@/lib/planner/recommend";
+import { recommendFill, sampleRecs, type Recommendation } from "@/lib/planner/recommend";
+import QuickAdd from "@/components/planner/QuickAdd";
 import { analyticsEnabled, initAnalytics, isOptedOut, setOptOut, track } from "@/lib/analytics";
 import { pickDefaultSem, recommendedSem, semLabel, sortSems } from "@/lib/planner/semester";
 import { shareTimetableImage, shareToKakao } from "@/lib/kakaoShare";
 import GuideTour, { type TourStep } from "@/components/GuideTour";
 import AcademicCalendarTab from "@/components/AcademicCalendarTab";
 import FeedbackTab from "@/components/FeedbackTab";
-import { DEFAULT_CONDITIONS, SORT_LABEL, type CartItem, type CartMode, type Conditions, type EngineGroup, type EngineResponse, type Slot, type Snapshot, type SnapshotIndex } from "@/lib/planner/types";
+import { DEFAULT_CONDITIONS, type CartItem, type CartMode, type Conditions, type EngineGroup, type EngineResponse, type Slot, type Snapshot, type SnapshotIndex } from "@/lib/planner/types";
 import MajorPicker from "@/components/planner/MajorPicker";
 import CourseBrowser from "@/components/planner/CourseBrowser";
 import { CartList, ConditionsPanel, cartCredit } from "@/components/planner/CartPanel";
@@ -73,15 +74,17 @@ const INITIAL: Persisted = {
   step: 1,
 };
 
+/**
+ * 새로고침하면 담은 과목·조건·단계는 처음부터 (사용자 요청).
+ * 내 정보(학기·학과·학번·복수전공·캠퍼스 설정)만 기억해서 매번 다시 고르지 않게 한다.
+ */
+const KEEP_ON_RELOAD = ["sem", "semChosenFor", "major", "extras", "entryYear", "campuses", "includeGrad", "onlyOpen"] as const;
+const pickProfile = (s: Partial<Persisted>) =>
+  Object.fromEntries(KEEP_ON_RELOAD.filter((k) => k in s).map((k) => [k, s[k]])) as Partial<Persisted>;
+
 function loadPersisted(): Persisted {
   const saved = readLocal<Partial<Persisted>>(STATE_KEY, {});
-  const conditions = { ...DEFAULT_CONDITIONS, ...saved.conditions };
-  // 화면에서 뺀 조건(수업 시간대·경쟁률 정렬)이 예전 저장값으로 몰래 걸려 있지 않게 초기화
-  conditions.startAfter = 0;
-  conditions.endBefore = 0;
-  if (!(conditions.sort in SORT_LABEL)) conditions.sort = "recommended";
-  conditions.includeProfs = conditions.includeProfs ?? [];
-  return { ...INITIAL, ...saved, conditions };
+  return { ...INITIAL, ...pickProfile(saved), conditions: { ...DEFAULT_CONDITIONS } };
 }
 
 const EMPTY_MAP = new Map<string, string>();
@@ -101,7 +104,7 @@ export default function Planner() {
   const [selIdx, setSelIdx] = useState(0);
   const [profPick, setProfPick] = useState<Record<string, string>>({});
   const [pickFor, setPickFor] = useState<"image" | "kakao">("image");
-  const [modal, setModal] = useState<null | "codes" | "save" | "saved" | "cart" | "bulk" | "friends" | "invite" | "pick">(null);
+  const [modal, setModal] = useState<null | "codes" | "save" | "saved" | "cart" | "bulk" | "friends" | "invite" | "pick" | "refresh">(null);
   /* ── 계정 (구글 로그인 · 보관함 동기화 · 친구) ── */
   const { session } = useSession();
   const loggedIn = !!session;
@@ -193,7 +196,7 @@ export default function Planner() {
     });
   }, []);
 
-  useEffect(() => { writeLocal(STATE_KEY, st); }, [st]);
+  useEffect(() => { writeLocal(STATE_KEY, pickProfile(st)); }, [st]);
 
   useEffect(() => {
     if (!st.sem) return;
@@ -336,8 +339,9 @@ export default function Planner() {
   const names = useCallback((i: number) => resGroups.filter((_, gi) => (results[i]?.picks[gi] ?? -1) >= 0).map((g) => g.name), [resGroups, results]);
   const busySlots: Slot[] = useMemo(() => view?.items.flatMap((i) => i.slots) ?? [], [view]);
 
-  /* 지금 시간표의 빈 시간에 넣기 좋은 교양 (규칙 기반 추천) */
-  const recs = useMemo(() => {
+  /* 지금 시간표의 빈 시간에 넣기 좋은 교양 (규칙 기반 추천 → 상위 24개 중 8개를 무작위로) */
+  const [recSeed, setRecSeed] = useState(() => Math.floor(Math.random() * 1e9));
+  const recPool = useMemo(() => {
     if (!view) return [];
     return recommendFill({
       courses,
@@ -346,8 +350,24 @@ export default function Planner() {
       currentCredit: view.items.reduce((s, i) => s + i.credit, 0),
       cond: st.conditions,
       filter: sectionFilter,
+      limit: 24,
     });
   }, [view, courses, cart, busySlots, st.conditions, sectionFilter]);
+  const recs = useMemo(() => sampleRecs(recPool, 8, recSeed), [recPool, recSeed]);
+
+  /* 추천에서 넣은 과목: 목록 위에 남겨 두고 다시 누르면 뺄 수 있게 */
+  const [recAdded, setRecAdded] = useState<string[]>([]);
+  const addedRecs: Recommendation[] = useMemo(() => recAdded.flatMap((code) => {
+    const item = cart.find((c) => c.code === code);
+    const course = courseByCode.get(code);
+    const section = course?.sections.find((x) => x.id === item?.pinned);
+    return course && section ? [{ course, section, score: 0, reasons: [] }] : [];
+  }), [recAdded, cart, courseByCode]);
+  const removeRec = (code: string) => {
+    setMode(code, null);
+    setRecAdded((a) => a.filter((c) => c !== code));
+    track("rec_removed", { code });
+  };
 
   /** 추천 과목을 그 분반으로 고정해 '꼭 넣을 과목'으로 담음 → 이 과목이 들어간 시간표만 다시 계산 */
   const addRec = (r: Recommendation) => {
@@ -355,6 +375,7 @@ export default function Planner() {
       ...s,
       cart: [...s.cart.filter((c) => c.code !== r.course.code), { code: r.course.code, mode: "must", pinned: r.section.id, excluded: [] }],
     }));
+    setRecAdded((a) => [...a.filter((c) => c !== r.course.code), r.course.code]);
     track("rec_added", { code: r.course.code, name: r.course.name, reasons: r.reasons, rank: recs.indexOf(r) + 1 });
     flash(`${r.course.name}을(를) 넣었어요`);
   };
@@ -362,8 +383,7 @@ export default function Planner() {
   const majorLabel = st.major ? labelOf(st.major) : "";
   const title = st.sem ? `${semLabel(st.sem)} 시간표` : "시간표";
   /** 지금 시간표 이미지를 카카오톡 피드 카드로 공유 (안 되면 기본 공유 창 → 그것도 안 되면 이미지 저장) */
-  const doKakao = async () => {
-    const items = view?.items ?? [];
+  const doKakao = async (items: TimetableItem[] = view?.items ?? [], t = title) => {
     if (!items.length) return;
     const credit = items.reduce((s, i) => s + i.credit, 0);
     const off = ["월", "화", "수", "목", "금"].filter((_, d) => !items.some((it) => it.slots.some(([dd]) => dd === d)));
@@ -371,9 +391,9 @@ export default function Planner() {
     try {
       const png = await renderTimetablePng(items);
       const how = await shareTimetableImage(png, {
-        title: `${title} (${credit}학점)`,
+        title: `${t} (${credit}학점)`,
         description: [majorLabel, off.length ? `공강 ${off.join("·")}` : "", "KNU 시간표에서 만들었어요"].filter(Boolean).join(" · "),
-        fileName: title,
+        fileName: t,
       });
       track("timetable_shared", { how, courses: items.length });
       if (how === "download") { await doImage(items); flash("공유할 수 없어 이미지로 저장했어요"); }
@@ -427,23 +447,48 @@ export default function Planner() {
     return () => { if (had) root.classList.add("dark"); };
   }, []);
 
-  const doSave = async () => {
-    if (!view || !st.sem) return;
+  const doSave = async (): Promise<boolean> => {
+    if (!view || !st.sem) return false;
     const name = saveName.trim() || `${title} ${plans.length + cloudPlans.length + 1}`;
     const items = view.items.map((i) => ({ code: i.code, name: i.name, prof: i.prof, room: i.room, credit: i.credit, slots: i.slots, color: i.color, sectionIds: i.sectionIds }));
     if (loggedIn) {
       try {
         const saved = await addCloudPlan({ name, sem: st.sem, items });
         if (saveFeatured) await setFeatured(saved.id);
-      } catch (e) { flash((e as Error).message); return; }
-    } else if (!savePlan({ name, sem: st.sem, items })) { flash("저장 공간이 부족해요"); return; }
+      } catch (e) { flash((e as Error).message); return false; }
+    } else if (!savePlan({ name, sem: st.sem, items })) { flash("저장 공간이 부족해요"); return false; }
+    setSavedSig(viewSig);
     logSave("라이브러리 저장");
     track("plan_saved", { courses: view.items.length, cloud: loggedIn, featured: loggedIn && saveFeatured });
     reloadPlans();
     setModal(null);
     setSaveName("");
     flash(loggedIn && saveFeatured ? "저장하고 대표 시간표로 정했어요" : "보관함에 저장했어요");
+    return true;
   };
+
+  /* ── 새로고침 전에 "보관함에 저장할까요?" ──
+     새로고침하면 담은 과목·조건이 초기화되므로, 저장 안 한 시간표가 있으면 묻는다.
+     F5 / Ctrl·⌘+R 은 우리 창을 띄우고, 브라우저 버튼·당겨서 새로고침은 브라우저 기본 확인 창만 가능(보안 제한). */
+  const viewSig = view ? view.items.map((i) => `${i.code}:${i.chosen}`).sort().join("|") : "";
+  const [savedSig, setSavedSig] = useState<string | null>(null);
+  const dirty = cart.length > 0 && (!view || viewSig !== savedSig);
+  const leaving = useRef(false);
+  const reloadNow = () => { leaving.current = true; window.location.reload(); };
+  useEffect(() => {
+    if (!dirty) return;
+    const onBefore = (e: BeforeUnloadEvent) => { if (leaving.current) return; e.preventDefault(); e.returnValue = ""; };
+    const onKey = (e: KeyboardEvent) => {
+      const isReload = e.key === "F5" || ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "r");
+      if (!isReload) return;
+      e.preventDefault();
+      setModal("refresh");
+      track("refresh_prompted");
+    };
+    window.addEventListener("beforeunload", onBefore);
+    window.addEventListener("keydown", onKey);
+    return () => { window.removeEventListener("beforeunload", onBefore); window.removeEventListener("keydown", onKey); };
+  }, [dirty]);
 
   const copy = async (text: string) => {
     try { await navigator.clipboard.writeText(text); flash("복사했어요"); track("code_copied"); } catch { flash("복사에 실패했어요"); }
@@ -498,7 +543,9 @@ export default function Planner() {
             {p.featured ? "대표 해제" : "대표로"}
           </button>
         )}
-        <button className="pl-btn sm" onClick={() => setRenaming({ id: p.id, name: p.name })}>이름</button>
+        <button className="pl-btn sm" onClick={() => setPreview(p)}>보기</button>
+        <button className="pl-btn sm" onClick={() => setRenaming({ id: p.id, name: p.name })}>이름 수정</button>
+        <button className="pl-btn sm pl-kakao" onClick={() => { track("saved_shared"); void doKakao(p.items, p.name); }}>카톡 공유</button>
         <button className="pl-btn sm" onClick={() => doDelete(p)}>삭제</button>
       </div>
     </div>
@@ -693,14 +740,28 @@ export default function Planner() {
               view={view}
               names={names}
               onImage={() => (view?.items.some((i) => i.options.length > 1 && !i.decided) ? (setPickFor("image"), setModal("pick")) : doImage())}
-              onKakao={() => (view?.items.some((i) => i.options.length > 1 && !i.decided) ? (setPickFor("kakao"), setModal("pick")) : doKakao())}
+              onKakao={() => (view?.items.some((i) => i.options.length > 1 && !i.decided) ? (setPickFor("kakao"), setModal("pick")) : void doKakao())}
               onSave={() => { setSaveName(""); setModal("save"); }}
               onCodes={() => { setModal("codes"); track("codes_opened"); }}
               onBulk={results.length > 1 ? () => (results.length > 20 ? setModal("bulk") : doBulkImages()) : undefined}
               bulkProgress={bulkProgress}
               onBack={() => goStep(2)}
               recs={recs}
+              addedRecs={addedRecs}
               onAddRec={addRec}
+              onRemoveRec={removeRec}
+              onShuffleRecs={recPool.length > recs.length ? () => { setRecSeed((x) => x + 1); track("rec_shuffled"); } : undefined}
+              quickAdd={
+                <QuickAdd
+                  courses={courses}
+                  cart={cart}
+                  sectionFilter={sectionFilter}
+                  includeGrad={st.includeGrad}
+                  myLabels={[st.major, ...st.extras].filter((m): m is string => !!m).map(labelOf)}
+                  onSetMode={setMode}
+                  onSection={onSection}
+                />
+              }
               onChoose={(code, id) => { setProfPick((p) => ({ ...p, [code]: id })); track("section_chosen", { where: "block" }); }}
             />
           </section>
@@ -710,6 +771,26 @@ export default function Planner() {
       {modal && (
         <div className="pl-modal-bg" onClick={() => { setModal(null); setPreview(null); }}>
           <div className="pl-modal" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
+            {modal === "refresh" && (
+              <>
+                <div className="pl-modal-head"><h3>새로고침할까요?</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-body">
+                  <div>새로고침하면 담은 과목과 조건이 <b>처음부터 다시</b> 시작돼요. (학기·학과·학번은 그대로)</div>
+                  {view ? (
+                    <>
+                      <div className="pl-hint">지금 보고 있는 시간표({view.items.length}과목 · {view.items.reduce((s, i) => s + i.credit, 0)}학점)를 보관함에 저장해 둘까요?</div>
+                      <button className="pl-btn primary lg" onClick={async () => { if (await doSave()) { track("refresh_saved"); reloadNow(); } }}>보관함에 저장하고 새로고침</button>
+                    </>
+                  ) : (
+                    <div className="pl-hint">아직 만든 시간표가 없어서 저장할 건 없어요.</div>
+                  )}
+                  <div style={{ display: "flex", gap: 6 }}>
+                    <button className="pl-btn" style={{ flex: 1 }} onClick={() => { track("refresh_discarded"); reloadNow(); }}>저장하지 않고 새로고침</button>
+                    <button className="pl-btn" style={{ flex: 1 }} onClick={() => setModal(null)}>취소</button>
+                  </div>
+                </div>
+              </>
+            )}
             {modal === "pick" && view && (
               <>
                 <div className="pl-modal-head"><h3>{pickFor === "kakao" ? "분반 고르고 공유" : "분반 고르고 저장"}</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
@@ -826,6 +907,7 @@ export default function Planner() {
                       <div style={{ display: "flex", gap: 6 }}>
                         <button className="pl-btn" onClick={() => setPreview(null)}>목록</button>
                         <button className="pl-btn primary" style={{ flex: 1 }} onClick={() => doImage(preview.items, preview.name)}>이미지 저장</button>
+                        <button className="pl-btn pl-kakao" style={{ flex: 1 }} onClick={() => { track("saved_shared"); void doKakao(preview.items, preview.name); }}>카톡 공유</button>
                       </div>
                     </>
                   ) : plans.length + cloudPlans.length === 0 ? (
