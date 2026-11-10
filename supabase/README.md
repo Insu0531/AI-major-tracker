@@ -1,6 +1,7 @@
 # 계정 · 친구 기능 설정 (Supabase + 구글 로그인)
 
-설정값(환경변수)이 없으면 사이트는 로그인 없이 지금처럼 동작한다. 아래를 끝내고 Vercel에 환경변수를 넣는 순간 "구글 로그인 · 친구" 버튼이 나타난다.
+환경변수가 다 들어가기 전에는 상단에 "로그인 · 친구 [준비 중]" 버튼만 보이고(누르면 안내 문구), 나머지는 로그인 없이 지금처럼 동작한다.
+아래를 끝내고 Vercel에 환경변수 3개를 넣고 다시 배포하면 실제 로그인으로 바뀐다.
 
 ## 1. Supabase 프로젝트 만들기
 1. https://supabase.com 가입 → **New project**
@@ -33,6 +34,7 @@ Supabase → **Project Settings → API** 에서 복사해 Vercel → Settings �
 |---|---|
 | `NEXT_PUBLIC_SUPABASE_URL` | Project URL (`https://xxxx.supabase.co`) |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | `anon` `public` 키 (공개용 키라 브라우저에 노출돼도 됨. **service_role 키는 절대 넣지 말 것**) |
+| `NEXT_PUBLIC_ACCOUNTS_LIVE` | `1` — 이 값을 넣어야 버튼이 "준비 중"에서 실제 로그인으로 바뀐다 (다 확인한 뒤 마지막에) |
 
 로컬에서 시험하려면 `web/.env.local`에 같은 두 줄을 넣고 `npm run dev`.
 

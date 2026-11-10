@@ -266,7 +266,7 @@ SavedTimetable = { id, name, savedAt, sem: "2026-1", major, majorLabel, entryYea
 - 수집기는 내용이 같으면 파일을 다시 쓰지 않음(불필요한 커밋 방지).
 
 ### 계정 · 친구 (Supabase, 2026-11-11)
-- 설정: `supabase/README.md` (Supabase 도쿄 리전(Asia-Pacific로 생성) + 구글 OAuth + Vercel 환경변수 `NEXT_PUBLIC_SUPABASE_URL`/`NEXT_PUBLIC_SUPABASE_ANON_KEY`). 환경변수 없으면 계정 기능 전체가 숨겨짐.
+- 설정: `supabase/README.md` (Supabase 도쿄 리전(Asia-Pacific로 생성) + 구글 OAuth + Vercel 환경변수 `NEXT_PUBLIC_SUPABASE_URL`/`NEXT_PUBLIC_SUPABASE_ANON_KEY`). `NEXT_PUBLIC_ACCOUNTS_LIVE=1`까지 있어야 켜짐. 그 전엔 상단에 "로그인 · 친구 [준비 중]" 버튼만(누르면 토스트), 초대 링크도 무시.
 - DB: `supabase/schema.sql` — profiles(이름·초대 코드), plans(보관함, 학기별 featured 1개), friendships(양방향 2행). RLS로 내 것만, 친구 데이터는 security definer 함수로만:
   set_featured, accept_invite, remove_friend, get_friends, get_friend_timetable(강의실·분반 번호 제거), regenerate_invite, delete_account.
   로컬 PostgreSQL 16 + auth 스키마 흉내로 권한 시나리오 검증함(타인 데이터·비친구·초대코드 조작·탈퇴 cascade).
@@ -277,6 +277,7 @@ SavedTimetable = { id, name, savedAt, sem: "2026-1", major, majorLabel, entryYea
 ### 빈 시간 교양 추천 (`lib/planner/recommend.ts`)
 - 3단계 시간표 아래 "이 시간표 빈 시간에 넣기 좋은 교양" 최대 8개. 규칙 점수: 공강 요일 유지 +30(새 평일 -15, 새 주말 -25), 앞뒤 수업과 이어짐 +10, 2시간 넘는 공강 생기면 -10, 9시 전 -8/18시 후 -6, 정원 여유 (1-신청/정원)×10, SDG·인문교양 +3. 같은 시간대는 최대 2개.
 - "이 분반 넣기" = 그 분반으로 고정 + 꼭 넣을 과목으로 담음. 이벤트 `rec_added`.
+- 결과 머리에 "↓ 빈 시간에 넣기 좋은 교양 N개 추천이 아래에 있어요" 버튼 → `#pl-recs`로 부드럽게 스크롤 (추천이 아래에 있는지 모르는 문제).
 
 ### `/new` 통합 시간표 검색 (1차 구현, 2026-11-10)
 기존 화면(`/`)은 그대로 두고 새 화면을 `/new`에 병행. 전공/교양/교직 마법사 3개 → **데이터는 하나로 합치고, 화면은 3단계**

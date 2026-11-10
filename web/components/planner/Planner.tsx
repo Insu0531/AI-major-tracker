@@ -504,9 +504,15 @@ export default function Planner() {
           ))}
         </nav>
         <div className="pl-top-right">
-          {accountsEnabled() && (loggedIn
+          {accountsEnabled() ? (loggedIn
             ? <button className="pl-btn ghost" onClick={() => { setModal("friends"); track("friends_opened"); }}>친구</button>
-            : <button className="pl-btn ghost" onClick={() => { track("login_clicked"); void signInWithGoogle(); }}>구글 로그인</button>)}
+            : <button className="pl-btn ghost" onClick={() => { track("login_clicked"); void signInWithGoogle(); }}>구글 로그인</button>)
+            : (
+              <button className="pl-btn ghost pl-soon" aria-disabled="true" title="구글 로그인 · 친구 시간표 기능을 준비하고 있어요"
+                onClick={() => { flash("구글 로그인과 친구 기능은 준비 중이에요"); track("soon_clicked", { feature: "account" }); }}>
+                로그인 · 친구 <span className="pl-soon-badge">준비 중</span>
+              </button>
+            )}
           <button className="pl-btn ghost" onClick={() => { reloadPlans(); setModal("saved"); }}>보관함{plans.length + cloudPlans.length ? ` ${plans.length + cloudPlans.length}` : ""}</button>
           <div className="pl-pop">
             <button className="pl-btn ghost" aria-expanded={menuOpen} aria-label="메뉴" onClick={() => setMenuOpen((v) => !v)}>메뉴</button>

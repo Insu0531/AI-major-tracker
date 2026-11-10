@@ -476,3 +476,19 @@
 /* 고르기 창이 아래 추천 목록에 가려지지 않게 시간표 영역을 위로 */
 .pl-tt-wrap { position: relative; z-index: 2; }
 .pl-tt-picker { animation-name: pl-fade; }
+
+/* 준비 중 기능 */
+.pl-soon { color: var(--ink-3); }
+.pl-soon-badge { font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: 4px; background: var(--sunken-2); color: var(--ink-3); }
+
+/* 아래 추천 목록으로 가는 안내 */
+.pl-rec-jump {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: var(--s2);
+  border: none; border-radius: 999px; padding: 6px var(--s3); font-size: 13px; font-weight: 600;
+  background: var(--pick-weak); color: var(--pick); transition: filter 0.15s;
+}
+.pl-rec-jump:hover { filter: brightness(0.97); }
+.pl-rec-jump span { display: inline-block; animation: pl-nudge 1.6s ease-in-out infinite; }
+.pl-rec-jump b { font-weight: 800; }
+@keyframes pl-nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
+.pl-recs { scroll-margin-top: var(--s4); }
