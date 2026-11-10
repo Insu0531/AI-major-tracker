@@ -261,7 +261,7 @@ SavedTimetable = { id, name, savedAt, sem: "2026-1", major, majorLabel, entryYea
 - 구버전 파일의 setState-in-effect 린트 오류 3개는 원래부터 있던 것.
 
 ### 데이터 자동 갱신 (GitHub Actions)
-- `.github/workflows/update-data.yml`: 매일 03:17(KST) `collect-sections.mjs`(지금 시기 학기 + 다음 학기), 매주 월 03:47 `collect-curricula.mjs`. 바뀐 파일이 있을 때만 main에 커밋 → Vercel 재배포.
+- `.github/workflows/update-data.yml`: 매일 03:17(KST) `collect-sections.mjs`(지금 시기 학기 + 다음 학기), 1월·7월 15일 03:47(6개월마다, 수강신청 전) `collect-curricula.mjs`. 바뀐 파일이 있을 때만 main에 커밋 → Vercel 재배포.
   수동 실행(Run workflow)에서 학기 지정·이수체계 포함 선택 가능. **워크플로 파일이 main에 있어야 예약 실행됨.**
 - 수집기는 내용이 같으면 파일을 다시 쓰지 않음(불필요한 커밋 방지).
 

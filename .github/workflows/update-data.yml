@@ -1,6 +1,6 @@
 # 강의 데이터 자동 갱신
 # - 매일 새벽: 학기 개설강좌 스냅샷 (scripts/collect-sections.mjs, 지금 시기의 학기 + 다음 학기)
-# - 매주 월요일: 전 학과 이수체계 (scripts/collect-curricula.mjs)
+# - 6개월마다(1월·7월 15일, 수강신청 전): 전 학과 이수체계 (scripts/collect-curricula.mjs)
 # 바뀐 파일이 있을 때만 main에 커밋 → Vercel이 자동으로 다시 배포한다.
 # Actions 탭에서 "Run workflow"로 언제든 수동 실행할 수 있고, 학기를 직접 지정할 수도 있다.
 name: 강의 데이터 갱신
@@ -8,7 +8,7 @@ name: 강의 데이터 갱신
 on:
   schedule:
     - cron: "17 18 * * *"   # 매일 03:17 (한국 시간)
-    - cron: "47 18 * * 0"   # 매주 월요일 03:47 (한국 시간) — 이수체계
+    - cron: "47 18 14 1,7 *" # 1월·7월 15일 03:47 (한국 시간) — 이수체계
   workflow_dispatch:
     inputs:
       semesters:
@@ -46,8 +46,8 @@ jobs:
           SEMS=$(echo "$SEMESTERS" | tr ' ,' '\n\n' | { grep -E '^[0-9]{4}-[12sw]$' || true; } | tr '\n' ' ')
           node scripts/collect-sections.mjs $SEMS
 
-      - name: 이수체계 수집 (주 1회 또는 수동 선택 시)
-        if: github.event.schedule == '47 18 * * 0' || github.event.inputs.curricula == 'true'
+      - name: 이수체계 수집 (6개월마다 또는 수동 선택 시)
+        if: github.event.schedule == '47 18 14 1,7 *' || github.event.inputs.curricula == 'true'
         run: node scripts/collect-curricula.mjs
 
       - name: 바뀐 데이터 커밋
