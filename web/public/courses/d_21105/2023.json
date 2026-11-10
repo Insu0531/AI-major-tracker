@@ -1,0 +1,332 @@
+[
+  {
+    "grade": "",
+    "code": "CHIL0707",
+    "name": "경학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0862",
+    "name": "광운연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0737",
+    "name": "당송문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0864",
+    "name": "등운연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0805",
+    "name": "문선연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0806",
+    "name": "문심조룡연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0768",
+    "name": "문언문법학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0766",
+    "name": "문자학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0814",
+    "name": "문헌학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0769",
+    "name": "백화문법학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0873",
+    "name": "선진양한문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0861",
+    "name": "설문연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0803",
+    "name": "운문연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0874",
+    "name": "원명청문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0736",
+    "name": "위진남북조문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0732",
+    "name": "음운론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0731",
+    "name": "제자백가연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0865",
+    "name": "중국고문자연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0738",
+    "name": "중국당대문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0875",
+    "name": "중국당대사회문화쟁점토론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0876",
+    "name": "중국당대작가연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0704",
+    "name": "중국문학비평연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0703",
+    "name": "중국문학사상사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0728",
+    "name": "중국문학연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0727",
+    "name": "중국문학전제토론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0734",
+    "name": "중국사곡연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0733",
+    "name": "중국산문연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0710",
+    "name": "중국소설연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0709",
+    "name": "중국시가연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0735",
+    "name": "중국시화와 시론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0764",
+    "name": "중국어학방법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0762",
+    "name": "중국어학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0761",
+    "name": "중국어학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0763",
+    "name": "중국어학자료연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0872",
+    "name": "중국언어철학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0867",
+    "name": "중국자서연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0712",
+    "name": "중국작가연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0730",
+    "name": "중국학술논쟁사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0808",
+    "name": "중국현대문학사특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0706",
+    "name": "중국현대문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0877",
+    "name": "중국현대사상과  문학 논쟁",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0713",
+    "name": "중국현대작가연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0801",
+    "name": "중국희곡연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0729",
+    "name": "중서문학비평이론비교연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0000",
+    "name": "학위논문연구 및 연구윤리 (중어중문학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0739",
+    "name": "한어개사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0740",
+    "name": "한어근현대문법이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0868",
+    "name": "한어어휘론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0771",
+    "name": "한어역사문법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0770",
+    "name": "한어의미론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0869",
+    "name": "한어통사론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0880",
+    "name": "한어특수구문연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0878",
+    "name": "한어형태론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0879",
+    "name": "한어화용론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0767",
+    "name": "훈고학연구",
+    "credit": "3-3-0"
+  }
+]

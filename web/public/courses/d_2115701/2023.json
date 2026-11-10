@@ -1,0 +1,302 @@
+[
+  {
+    "grade": "",
+    "code": "ARCH0894",
+    "name": "건물 및 산업 에너지시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0899",
+    "name": "건물및산업에너지혁신기업인턴쉽",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0910",
+    "name": "건물에너지평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0874",
+    "name": "건설 시뮬레이션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0863",
+    "name": "건설 시스템공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0866",
+    "name": "건설 일정관리 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0864",
+    "name": "건설 장비관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0862",
+    "name": "건설경제성공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0873",
+    "name": "건설생산성특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0884",
+    "name": "건설전산응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0875",
+    "name": "건설품질경영 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0762",
+    "name": "건축방재론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0912",
+    "name": "건축생산공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0768",
+    "name": "건축설비특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0911",
+    "name": "건축재료 및 구법특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0880",
+    "name": "건축재료성능론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0913",
+    "name": "건축재료세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0908",
+    "name": "공기조화설비특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0909",
+    "name": "공기환경특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0897",
+    "name": "구조실험방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0737",
+    "name": "구조안정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0719",
+    "name": "구조해석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0907",
+    "name": "대공간구조 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0886",
+    "name": "동역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0711",
+    "name": "메트릭스구조해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0885",
+    "name": "복합재료및구조특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0889",
+    "name": "불규칙진동론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0813",
+    "name": "수치해석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COEN0701",
+    "name": "스마트순환사회환경시스템 세미나1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "",
+    "code": "COEN0702",
+    "name": "스마트순환사회환경시스템 세미나2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "",
+    "code": "COEN0703",
+    "name": "스마트순환사회환경시스템 세미나3",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "",
+    "code": "COEN0704",
+    "name": "스마트순환사회환경시스템 세미나4",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0780",
+    "name": "신재생에너지특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0818",
+    "name": "에너지해석법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0763",
+    "name": "유한요소법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0778",
+    "name": "인간환경론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0774",
+    "name": "자연에너지론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0857",
+    "name": "재해재난특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0898",
+    "name": "제로에너지특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0826",
+    "name": "지역혁신기업인턴쉽교육",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0887",
+    "name": "진동제어론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0896",
+    "name": "철골소성설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0817",
+    "name": "철근콘크리트설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0914",
+    "name": "콘크리트재료과학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0840",
+    "name": "탄성구조학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0820",
+    "name": "프리스트레스콘크리트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0000",
+    "name": "학위논문연구 및 연구윤리(건축)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARUE0908",
+    "name": "합성구조물설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0853",
+    "name": "환경경관론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0861",
+    "name": "환경계획특론",
+    "credit": "3-3-0"
+  }
+]

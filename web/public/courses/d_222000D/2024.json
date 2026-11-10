@@ -1,0 +1,236 @@
+[
+  {
+    "grade": "",
+    "code": "TCHR0601",
+    "name": "교육과정",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0604",
+    "name": "교육방법및교육공학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0552",
+    "name": "교육봉사활동 2",
+    "credit": "2-0-60(h)"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0606",
+    "name": "교육사회",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0607",
+    "name": "교육심리",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0609",
+    "name": "교육철학및교육사",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0610",
+    "name": "교육평가",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0611",
+    "name": "교육학개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0612",
+    "name": "교육행정및교육경영",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0529",
+    "name": "교직실무",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0521",
+    "name": "교직실무 1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "",
+    "code": "DTED0834",
+    "name": "기억과 독일어교수법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DTED0833",
+    "name": "독문학교수법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DTED0831",
+    "name": "독서치료로서의 독일어수업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DTED0813",
+    "name": "독어텍스트분석지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DTED0804",
+    "name": "독어회화지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0468",
+    "name": "독일어 논리 및 논술지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DTED0806",
+    "name": "독일어교과서분석과평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DTED0827",
+    "name": "독일어교수법세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0581",
+    "name": "독일어교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0582",
+    "name": "독일어교재연구및지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DTED0824",
+    "name": "독일음악과 독일어교수법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0553",
+    "name": "디지털 교육",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "",
+    "code": "DTED0823",
+    "name": "매체와 독일어수업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DTED0828",
+    "name": "문화학과 독일어교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0520",
+    "name": "생활지도및상담(교직소양)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "DTED0832",
+    "name": "심리언어학과 독일어교수법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DTED0825",
+    "name": "아동문학과 독일어수업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DTED0815",
+    "name": "언어학이론과외국어교수법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DTED0829",
+    "name": "영상매체와 독일어교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0704",
+    "name": "영재교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DTED0830",
+    "name": "인터넷과 독일어수업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DTED0808",
+    "name": "제2언어습득이론과실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0703",
+    "name": "창의성 교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0528",
+    "name": "특수교육학개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0522",
+    "name": "학교현장실습",
+    "credit": "2-0-4(주)"
+  },
+  {
+    "grade": "",
+    "code": "DTED0000",
+    "name": "학위논문연구 및 연구윤리(독어교육전공)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DTED0818",
+    "name": "한독문화비교론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DTED0826",
+    "name": "한독언어비교론",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,416 @@
+[
+  {
+    "grade": "",
+    "code": "MUSI0777",
+    "name": "19세기 음악연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0847",
+    "name": "개별연구지도I",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0848",
+    "name": "개별연구지도II",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0868",
+    "name": "고급음악분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0751",
+    "name": "고등악리",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0854",
+    "name": "고전음악사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0707",
+    "name": "관악세미나",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0890",
+    "name": "관현악문헌세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0876",
+    "name": "관현악법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0723",
+    "name": "관현악법원리",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0831",
+    "name": "관현악전공 연구과제I",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0832",
+    "name": "관현악전공 연구과제II",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0833",
+    "name": "관현악전공 연구과제III",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0834",
+    "name": "관현악전공 연구과제IV",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0855",
+    "name": "낭만음악사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0881",
+    "name": "독일가곡해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0865",
+    "name": "무조음악연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0863",
+    "name": "선법음악연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0889",
+    "name": "성악문헌세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0709",
+    "name": "성악세미나",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0801",
+    "name": "성악전공 연구과제I",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0802",
+    "name": "성악전공 연구과제II",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0803",
+    "name": "성악전공 연구과제III",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0804",
+    "name": "성악전공 연구과제IV",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0870",
+    "name": "쉔커이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0888",
+    "name": "실내악문헌세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0859",
+    "name": "실내악연주세미나",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0894",
+    "name": "오페라세미나",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0722",
+    "name": "음악미학사상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0721",
+    "name": "음악분석연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0869",
+    "name": "음악분석이론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0711",
+    "name": "음악사Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0712",
+    "name": "음악사Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0879",
+    "name": "음악심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0878",
+    "name": "음악연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0892",
+    "name": "음악이론세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0701",
+    "name": "음악전공실기Ⅰ",
+    "credit": "2-0-2"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0702",
+    "name": "음악전공실기Ⅱ",
+    "credit": "2-0-2"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0703",
+    "name": "음악전공실기Ⅲ",
+    "credit": "2-0-2"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0704",
+    "name": "음악전공실기Ⅳ",
+    "credit": "2-0-2"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0776",
+    "name": "이론세미나",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0841",
+    "name": "이론전공 연구과제I",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0842",
+    "name": "이론전공 연구과제II",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0843",
+    "name": "이론전공 연구과제III",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0844",
+    "name": "이론전공 연구과제IV",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0891",
+    "name": "작곡가세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0706",
+    "name": "작곡세미나",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0821",
+    "name": "작곡전공 연구과제I",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0822",
+    "name": "작곡전공 연구과제II",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0823",
+    "name": "작곡전공 연구과제III",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0824",
+    "name": "작곡전공 연구과제IV",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0864",
+    "name": "조성음악연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0885",
+    "name": "컴퓨터음악작곡",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0882",
+    "name": "프랑스가곡해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0887",
+    "name": "피아노문헌세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0897",
+    "name": "피아노반주법세미나",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0710",
+    "name": "피아노반주세미나",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0705",
+    "name": "피아노세미나",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0811",
+    "name": "피아노전공 연구과제I",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0812",
+    "name": "피아노전공 연구과제II",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0813",
+    "name": "피아노전공 연구과제III",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0814",
+    "name": "피아노전공 연구과제IV",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0000",
+    "name": "학위논문연구 및 연구윤리(음악학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0741",
+    "name": "현대음악기법",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0866",
+    "name": "현대음악연구론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0708",
+    "name": "현악세미나",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0874",
+    "name": "형식과 양식 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0861",
+    "name": "화성과 대위I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0862",
+    "name": "화성과 대위II",
+    "credit": "3-3-0"
+  }
+]

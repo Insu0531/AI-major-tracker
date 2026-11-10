@@ -1,0 +1,482 @@
+[
+  {
+    "grade": "",
+    "code": "ACHE0750",
+    "name": "고급바이오에너지과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0775",
+    "name": "고급생물정보학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GRAD0744",
+    "name": "고급식량작물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0715",
+    "name": "고급작물생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0736",
+    "name": "기능성비료제조화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0760",
+    "name": "농식품고분자학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0738",
+    "name": "농식품안전성평가학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0749",
+    "name": "농식품품질평가학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0748",
+    "name": "농식품품질화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0753",
+    "name": "농약독성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0759",
+    "name": "농약잔류분석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GRAD0742",
+    "name": "농업분야에서 Genomic 및 Phenomics 데이터 분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0718",
+    "name": "농화학세미나 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0719",
+    "name": "농화학세미나 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0747",
+    "name": "단백질생화학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0735",
+    "name": "단백질화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0932",
+    "name": "미생물공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0744",
+    "name": "미생물생태학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0746",
+    "name": "미생물유전공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0745",
+    "name": "미생물유전체학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0779",
+    "name": "바이오매스재료공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0774",
+    "name": "발효생물공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0726",
+    "name": "복합교질반응학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0935",
+    "name": "분자세포생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0770",
+    "name": "분자식물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0831",
+    "name": "분자육종학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0783",
+    "name": "비료시비처방과 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0772",
+    "name": "비료종합관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0951",
+    "name": "살균제화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0952",
+    "name": "살충제화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0762",
+    "name": "생리활성물질학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0776",
+    "name": "생명시스템공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0711",
+    "name": "수도작특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0771",
+    "name": "식물·미생물상호작용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0814",
+    "name": "식물기내생산론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0733",
+    "name": "식물기능유전체학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0777",
+    "name": "식물대사생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0737",
+    "name": "식물방어시스템학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0828",
+    "name": "식물분자유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0736",
+    "name": "식물분자유전학 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0832",
+    "name": "식물생물정보학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0721",
+    "name": "식물세포유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0737",
+    "name": "식물영양학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0769",
+    "name": "식물유전자공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0729",
+    "name": "실험설계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0778",
+    "name": "유전자발현조절특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0773",
+    "name": "응용생명공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBI0711",
+    "name": "응용생명과학 세미나 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBI0712",
+    "name": "응용생명과학 세미나 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0816",
+    "name": "작물구조및기능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0830",
+    "name": "작물분자생물학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0735",
+    "name": "작물분자생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0911",
+    "name": "작물비교영양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0734",
+    "name": "작물생명공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0731",
+    "name": "작물생산학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0716",
+    "name": "작물영양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0732",
+    "name": "작물유전육종학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0818",
+    "name": "작물의대사및생장조절론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0817",
+    "name": "작물의물질생산론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0714",
+    "name": "잡초방제학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0822",
+    "name": "저항성육종론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0923",
+    "name": "점토광물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0811",
+    "name": "제초제생리화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0780",
+    "name": "제초제화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0724",
+    "name": "종자학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0728",
+    "name": "천연광물응용학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0781",
+    "name": "천연물생체기능론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0767",
+    "name": "천연물생화학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0766",
+    "name": "천연물성분화학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0782",
+    "name": "천연물자원특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0812",
+    "name": "천연물질개발및이용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0727",
+    "name": "토양구조발달학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0827",
+    "name": "통계유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBI0000",
+    "name": "학위논문연구 및 연구윤리 (응용생명과학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0955",
+    "name": "환경독성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0819",
+    "name": "환경생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0768",
+    "name": "환경식물생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0972",
+    "name": "환경식물생명공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0754",
+    "name": "환경오염물질학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0757",
+    "name": "환경오염복원학",
+    "credit": "3-3-0"
+  }
+]

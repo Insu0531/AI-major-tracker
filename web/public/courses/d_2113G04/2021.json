@@ -1,0 +1,272 @@
+[
+  {
+    "grade": "",
+    "code": "CIME0721",
+    "name": "고체물리학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0758",
+    "name": "고체물리학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0718",
+    "name": "고체의구조및결함1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0753",
+    "name": "고체의구조및결함2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0717",
+    "name": "고체화학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0773",
+    "name": "광학세라믹스특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0774",
+    "name": "광학세라믹스특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0771",
+    "name": "나노세라믹스특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0772",
+    "name": "나노세라믹스특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0715",
+    "name": "무기재료의기계적성질1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0749",
+    "name": "무기재료의기계적성질2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0733",
+    "name": "무기재료조직론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0747",
+    "name": "무기재료조직론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0722",
+    "name": "무기재료특강1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0723",
+    "name": "무기재료특강2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0759",
+    "name": "무기재료특강3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0760",
+    "name": "무기재료특강4",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0775",
+    "name": "박막공학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0776",
+    "name": "박막공학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0713",
+    "name": "반도체재료특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0743",
+    "name": "반도체재료특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0734",
+    "name": "상변태특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0751",
+    "name": "상변태특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0712",
+    "name": "상안정특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0739",
+    "name": "상안정특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0732",
+    "name": "소결특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0746",
+    "name": "소결특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0735",
+    "name": "에너지공학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0831",
+    "name": "에너지공학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0832",
+    "name": "에너지공학특론3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0778",
+    "name": "연료전지특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0728",
+    "name": "유전재료특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0741",
+    "name": "유전재료특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0779",
+    "name": "이차전지특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0729",
+    "name": "자성재료특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0742",
+    "name": "자성재료특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0725",
+    "name": "재료공학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0736",
+    "name": "재료공학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0726",
+    "name": "재료열역학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0737",
+    "name": "재료열역학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0724",
+    "name": "재료의표면 및 계면론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0727",
+    "name": "전자요업특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0740",
+    "name": "전자요업특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0777",
+    "name": "태양전지특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0000",
+    "name": "학위논문연구 및 연구윤리 (무기재료공학)",
+    "credit": "3-3-0"
+  }
+]

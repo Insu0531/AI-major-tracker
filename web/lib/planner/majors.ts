@@ -1,7 +1,9 @@
 import { MAJOR_LABELS } from "@/lib/courses";
 
 /** 학과 목록 항목. key는 /courses/{key}/{year}.json 폴더 이름 */
-export type MajorInfo = { key: string; label: string; years?: number[]; auto?: boolean };
+export type MajorInfo = { key: string; label: string; years?: number[]; auto?: boolean; level?: "grad" };
+
+export const isGradMajor = (m?: MajorInfo) => m?.level === "grad";
 
 /** 기존 사이트 학과(courses.ts) — 이수체계 파일 2021~2026 */
 export const BASE_MAJORS: MajorInfo[] = Object.entries(MAJOR_LABELS).map(([key, label]) => ({ key, label }));

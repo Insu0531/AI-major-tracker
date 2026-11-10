@@ -1,0 +1,410 @@
+[
+  {
+    "grade": "",
+    "code": "BICO0721",
+    "name": "건식 접착공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0775",
+    "name": "고급생물정보학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0702",
+    "name": "골충진제 개발",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0701",
+    "name": "공학논문작성법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0701",
+    "name": "광화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0717",
+    "name": "구조생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0729",
+    "name": "나노공정 및 3D 프린팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0981",
+    "name": "나노기능성소자공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0728",
+    "name": "나노바이오소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0722",
+    "name": "단백생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0730",
+    "name": "랩온어칩",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0716",
+    "name": "리보핵산생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0744",
+    "name": "미생물생태학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0746",
+    "name": "미생물유전공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0745",
+    "name": "미생물유전체학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0719",
+    "name": "미세구조생산공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0722",
+    "name": "미세구조역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0735",
+    "name": "바이오 기기분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0734",
+    "name": "바이오 멤스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0728",
+    "name": "바이오나노공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0785",
+    "name": "반도체소자특성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0983",
+    "name": "반도체특성평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0757",
+    "name": "분자 신경과학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0758",
+    "name": "분자 신경과학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0731",
+    "name": "분자생물학을 위한 바이오칩",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOC0716",
+    "name": "분자유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0720",
+    "name": "분자의학연구기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0958",
+    "name": "분자의학의 고급 기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0704",
+    "name": "뼈와 관절",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0733",
+    "name": "생체유체공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0705",
+    "name": "세포노화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0886",
+    "name": "센서공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0703",
+    "name": "신경-근골격계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0750",
+    "name": "신경과학 연구 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0751",
+    "name": "신경과학 연구 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0743",
+    "name": "신경과학 입문 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0744",
+    "name": "신경과학 입문 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0752",
+    "name": "신경과학실험연구법 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0753",
+    "name": "신경과학실험연구법 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0709",
+    "name": "신약개발과 창업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0706",
+    "name": "역분화 줄기세포학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0720",
+    "name": "연속생산공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0713",
+    "name": "융합 분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0715",
+    "name": "융합 생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0714",
+    "name": "융합 세포생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0726",
+    "name": "융합연구 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0727",
+    "name": "융합연구 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0725",
+    "name": "융합의생명공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0773",
+    "name": "응용생명공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0710",
+    "name": "의생명 빅데이터",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0708",
+    "name": "의생명 산업학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0712",
+    "name": "의생명 통계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0711",
+    "name": "의생명 프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0736",
+    "name": "의생명융합과 벤처",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0723",
+    "name": "의생명융합세미나 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0724",
+    "name": "의생명융합세미나 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0706",
+    "name": "의용계측",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0707",
+    "name": "의용전자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0701",
+    "name": "의용전자기기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0823",
+    "name": "의학연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0748",
+    "name": "인지과학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0749",
+    "name": "인지과학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0732",
+    "name": "인체역학 및 나노소재",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0718",
+    "name": "자연모사공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0867",
+    "name": "줄기세포 병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0707",
+    "name": "줄기세포 치료기술학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0715",
+    "name": "중개연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0000",
+    "name": "학위논문연구 및 연구윤리(의생명융합공학)",
+    "credit": "3-3-0"
+  }
+]

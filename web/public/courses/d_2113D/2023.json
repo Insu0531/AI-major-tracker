@@ -1,0 +1,674 @@
+[
+  {
+    "grade": "",
+    "code": "MGMT0903",
+    "name": "경영사례연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0838",
+    "name": "경영전략세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0706",
+    "name": "경영전략연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0850",
+    "name": "경영정보시스템세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0841",
+    "name": "경영통계세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0811",
+    "name": "경영학연구방법론 Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0822",
+    "name": "경영학연구방법론Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0847",
+    "name": "고급경영정보론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0785",
+    "name": "고급회계세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0881",
+    "name": "고용노사관계 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0839",
+    "name": "공급사슬 계획과 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0842",
+    "name": "공급사슬관리와 물류",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0774",
+    "name": "관리회계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0962",
+    "name": "관리회계이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0789",
+    "name": "관리회계특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0723",
+    "name": "광고관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0923",
+    "name": "광고관리세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0977",
+    "name": "국제회계연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0819",
+    "name": "그린마케팅세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0725",
+    "name": "글로벌마케팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0762",
+    "name": "금융계량분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0716",
+    "name": "금융공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0713",
+    "name": "금융기관론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0913",
+    "name": "금융기관세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0714",
+    "name": "금융시장론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0816",
+    "name": "금융연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0817",
+    "name": "금융특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0814",
+    "name": "기술혁신과 산업발전 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0906",
+    "name": "기술혁신세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0802",
+    "name": "기술혁신연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0764",
+    "name": "기술혁신전략과연구개발관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0823",
+    "name": "기업가정신 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0826",
+    "name": "기업윤리세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0911",
+    "name": "기업재무세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0720",
+    "name": "기업재무와금융위험관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0849",
+    "name": "기업재무이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0743",
+    "name": "데이터베이스관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0798",
+    "name": "마케팅이론과 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0724",
+    "name": "마케팅조사방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0927",
+    "name": "마케팅특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0795",
+    "name": "물류 및 공급망 관리 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0845",
+    "name": "비즈니스 분석 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0846",
+    "name": "비즈니스 분석 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0882",
+    "name": "비즈니스 시뮬레이션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0840",
+    "name": "비즈니스 애널리틱스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0843",
+    "name": "비즈니스 프로세스 관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0768",
+    "name": "비즈니스운영 관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0792",
+    "name": "비즈니스운영관리 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0807",
+    "name": "비즈니스운영관리 특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0844",
+    "name": "비즈니스운영전략",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0873",
+    "name": "빅데이터 시각화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0964",
+    "name": "사회회계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TMBA0781",
+    "name": "산업분석과산업발달사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0804",
+    "name": "생산운영관리 사례연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0806",
+    "name": "생산운영전략세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0730",
+    "name": "서비스마케팅세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0805",
+    "name": "서비스산업 운영관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0978",
+    "name": "세무의사결정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0776",
+    "name": "세무회계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0983",
+    "name": "세무회계특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0728",
+    "name": "소비자지향마케팅전략",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0722",
+    "name": "소비자행동분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0922",
+    "name": "소비자행동세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0818",
+    "name": "신기술마케팅관리세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TECP0707",
+    "name": "연구개발 회계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TMBA0782",
+    "name": "연구개발관리와기술가치평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0971",
+    "name": "원가분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0773",
+    "name": "원가회계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0984",
+    "name": "원가회계특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0874",
+    "name": "웹데이터 분석 및 활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0928",
+    "name": "유통경로세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0790",
+    "name": "의사결정을위한회계정보",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0968",
+    "name": "이익관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0709",
+    "name": "인적자원개발과조직관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0836",
+    "name": "인적자원관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0967",
+    "name": "인적자원회계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0973",
+    "name": "재무회계연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0961",
+    "name": "재무회계이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0872",
+    "name": "전략 및 조직특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0750",
+    "name": "전략적정보기술관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TMBA0701",
+    "name": "전자산업신기술동향",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0875",
+    "name": "전자정부특론",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0919",
+    "name": "정부 및 비영리조직 회계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0910",
+    "name": "조직행동세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0710",
+    "name": "조직행동연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0909",
+    "name": "조직혁신세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0801",
+    "name": "조직혁신연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0848",
+    "name": "증권투자론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0815",
+    "name": "증권평가세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0945",
+    "name": "지능정보시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0740",
+    "name": "초우량기업의생산혁신전략",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0912",
+    "name": "투자론세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0914",
+    "name": "파생상품세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0770",
+    "name": "품질경영론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0948",
+    "name": "프로젝트관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0000",
+    "name": "학위논문연구 및 연구윤리 (경영학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0775",
+    "name": "회계감사론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0982",
+    "name": "회계감사특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0788",
+    "name": "회계사세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0883",
+    "name": "회계실증연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0974",
+    "name": "회계윤리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0778",
+    "name": "회계이론세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0966",
+    "name": "회계정보관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0777",
+    "name": "회계정보시스템론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0969",
+    "name": "회계통제시스템론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0985",
+    "name": "회계학연구방법론세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0981",
+    "name": "회계학특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0810",
+    "name": "e-business관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0920",
+    "name": "IT기업가치평가론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0918",
+    "name": "IT산업분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0941",
+    "name": "MIS사례연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0749",
+    "name": "MIS연구방법론",
+    "credit": "3-3-0"
+  }
+]

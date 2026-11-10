@@ -1,0 +1,122 @@
+[
+  {
+    "grade": "",
+    "code": "ELEC0701",
+    "name": "디지털신호처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0704",
+    "name": "마이크로컴퓨터설계및응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0756",
+    "name": "멀티미디어공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0820",
+    "name": "소프트컴퓨팅특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0809",
+    "name": "신뢰성공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0922",
+    "name": "아날로그회로설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0708",
+    "name": "여파기이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0790",
+    "name": "영상처리응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0852",
+    "name": "인공지능응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0931",
+    "name": "전력변환회로",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0703",
+    "name": "전자계측론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0702",
+    "name": "전자회로론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0715",
+    "name": "컴퓨터그래픽개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0705",
+    "name": "컴퓨터이용설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0706",
+    "name": "컴퓨터조직론특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0000",
+    "name": "학위논문연구 및 연구윤리 (전자공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0743",
+    "name": "확률과정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0711",
+    "name": "회로망합성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0707",
+    "name": "VLSI설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0718",
+    "name": "VLSI신호처리",
+    "credit": "3-3-0"
+  }
+]

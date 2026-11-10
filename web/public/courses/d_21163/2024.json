@@ -1,0 +1,266 @@
+[
+  {
+    "grade": "",
+    "code": "OECA0751",
+    "name": "극지 탄소순환 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0710",
+    "name": "극한생물학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0711",
+    "name": "극한생물학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0746",
+    "name": "기후변화 원인물질 관측 및 기기분석 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0747",
+    "name": "기후변화 원인물질 관측 및 기기분석 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0735",
+    "name": "다변수 자료 통계 분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0731",
+    "name": "대기화학 특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0732",
+    "name": "대기화학 특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0748",
+    "name": "동위원소 생지화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0722",
+    "name": "무인해양기기 활용기술 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0740",
+    "name": "무인해양기기 활용기술 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0701",
+    "name": "미생물해양학특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0702",
+    "name": "미생물해양학특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0734",
+    "name": "생물자원활용특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0733",
+    "name": "생지화학 순환과 기후변화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0742",
+    "name": "연안기후학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0730",
+    "name": "영문/국문 과학 글쓰기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0743",
+    "name": "온실기체 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0738",
+    "name": "지구환경변화와 해양생태계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0000",
+    "name": "학위논문연구 및 연구윤리(해양학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0721",
+    "name": "해양 모델링 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0753",
+    "name": "해양 생지화학 기기분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0749",
+    "name": "해양 생지화학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0750",
+    "name": "해양 유기화학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0720",
+    "name": "해양 자료 처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0752",
+    "name": "해양 추적자 화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0741",
+    "name": "해양-대기 상호작용과 대양 기후변동",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0718",
+    "name": "해양난류학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0719",
+    "name": "해양난류학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0709",
+    "name": "해양미소생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0707",
+    "name": "해양생물정보학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0739",
+    "name": "해양생물학 연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0717",
+    "name": "해양순환 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0713",
+    "name": "해양순환론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0714",
+    "name": "해양순환론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0715",
+    "name": "해양순환론 III",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0716",
+    "name": "해양순환론 IV",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0712",
+    "name": "해양원생생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0705",
+    "name": "해양유전체학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0706",
+    "name": "해양유전체학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0736",
+    "name": "환경생물학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0737",
+    "name": "환경생물학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0744",
+    "name": "환경화학 자료분석 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0745",
+    "name": "환경화학 자료분석 II",
+    "credit": "3-3-0"
+  }
+]

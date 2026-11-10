@@ -1,0 +1,302 @@
+[
+  {
+    "grade": "",
+    "code": "ARIN0710",
+    "name": "강화학습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0707",
+    "name": "건설 기능특화 로봇 프로젝트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0729",
+    "name": "건설안전 기능특화 로봇 프로젝트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0721",
+    "name": "건설안전특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0921",
+    "name": "건축구법과 스마트 유지관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0762",
+    "name": "건축방재론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0714",
+    "name": "고급인공지능특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0731",
+    "name": "구조안전특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0720",
+    "name": "기계학습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0883",
+    "name": "딥러닝특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0803",
+    "name": "로봇 비젼 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0701",
+    "name": "로봇 제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0918",
+    "name": "로봇공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0806",
+    "name": "로봇설계공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0705",
+    "name": "로봇수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0708",
+    "name": "로봇전문가기술특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0702",
+    "name": "머신러닝특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0728",
+    "name": "사고조사개론 및 분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0920",
+    "name": "스마트 구조물 안전모니터링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0798",
+    "name": "스마트 구조신뢰성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0711",
+    "name": "스마트모빌리티시티",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0891",
+    "name": "스마트수재해관리공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARIN0702",
+    "name": "심화학습 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0722",
+    "name": "위험관리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0727",
+    "name": "위험성평가및분석기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0713",
+    "name": "융합안전 고급설계 프로젝트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0732",
+    "name": "융합안전 기계학습 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0714",
+    "name": "융합안전 기능특화 AI 프로젝트1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0715",
+    "name": "융합안전 기능특화 AI 프로젝트2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0712",
+    "name": "융합안전 기초설계 프로젝트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0724",
+    "name": "융합안전 데이터마이닝 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0710",
+    "name": "융합안전 로롯 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0709",
+    "name": "융합안전 로봇 개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0725",
+    "name": "융합안전 센서시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0723",
+    "name": "융합안전 영상처리 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0726",
+    "name": "융합안전 인턴쉽",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0716",
+    "name": "융합안전공학 세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0717",
+    "name": "융합안전공학 세미나2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0719",
+    "name": "융합안전공학 창업1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0720",
+    "name": "융합안전공학 창업2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0730",
+    "name": "인간-로봇 상호작용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0706",
+    "name": "재난안전특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0857",
+    "name": "재해재난특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0824",
+    "name": "컴퓨터비젼특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0812",
+    "name": "컴퓨터비젼특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0000",
+    "name": "학위논문 및 연구윤리(융합안전)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0712",
+    "name": "해양로봇특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0703",
+    "name": "AI 영상기반 건설시공관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SAFE0711",
+    "name": "AI기반 시설물 안전성 관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0890",
+    "name": "AI기반건설리스크관리론",
+    "credit": "3-3-0"
+  }
+]

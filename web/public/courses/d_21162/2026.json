@@ -1,0 +1,362 @@
+[
+  {
+    "grade": "",
+    "code": "FSAD0760",
+    "name": "고급 작물생장조절론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0728",
+    "name": "기후변화와 식량생산",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0753",
+    "name": "농산 가공시스템 공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0771",
+    "name": "농산 가공시스템 공학 및 실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0755",
+    "name": "농업 경제의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0772",
+    "name": "농업 수리시설을 위한 고급 지반조사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0754",
+    "name": "농업 유압시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0768",
+    "name": "농업 정보공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0770",
+    "name": "농업기계 설계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0720",
+    "name": "농업기계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0741",
+    "name": "농업마케팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0744",
+    "name": "농업생산정책학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0735",
+    "name": "농업생태학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0773",
+    "name": "농업용드론의 이해와 활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0731",
+    "name": "농업정책의 이론과 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0769",
+    "name": "동식물 센서 공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0808",
+    "name": "바이오매스학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0723",
+    "name": "새마을운동과 농촌개발",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0751",
+    "name": "생물산업 모델링 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0759",
+    "name": "세계식량안보와 농업생산",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0750",
+    "name": "수리구조물 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0767",
+    "name": "수리구조물을 위한 고급 복합재료 역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0715",
+    "name": "수리시설공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0756",
+    "name": "수리시설을 위한 지속가능한 보강재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0811",
+    "name": "수리환경공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0766",
+    "name": "수질 환경공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0724",
+    "name": "수확후관리기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0757",
+    "name": "스마트팜 공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0734",
+    "name": "식량작물 재배학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0761",
+    "name": "식물면역시스템의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0745",
+    "name": "식물번식학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0717",
+    "name": "식물유전자원학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0748",
+    "name": "식물유전체학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0765",
+    "name": "식물조직배양학기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0733",
+    "name": "식품가공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0729",
+    "name": "식품안전성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MACH0702",
+    "name": "실험통계학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0758",
+    "name": "액션플랜",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0752",
+    "name": "용수자원시스템 설계 및 운영",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0737",
+    "name": "원예생산학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0713",
+    "name": "작물생리의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0716",
+    "name": "작물생명공학기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0726",
+    "name": "작물생산 물관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0749",
+    "name": "작물생산 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0762",
+    "name": "작물육종 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0715",
+    "name": "작물육종학기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0725",
+    "name": "잡초관리기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0746",
+    "name": "잡초방제의 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0763",
+    "name": "정밀 수도 생산학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0718",
+    "name": "종자생산학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0719",
+    "name": "종합적병해충방제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0747",
+    "name": "지속가능 농업생산기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0743",
+    "name": "축산경영학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0738",
+    "name": "토양양분관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0764",
+    "name": "표현체학의 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0000",
+    "name": "학위논문연구 및 연구윤리(식량안보및농업개발학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0711",
+    "name": "한국어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0722",
+    "name": "현장세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0733",
+    "name": "현장세미나2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0736",
+    "name": "환경과 원예작물",
+    "credit": "3-3-0"
+  }
+]

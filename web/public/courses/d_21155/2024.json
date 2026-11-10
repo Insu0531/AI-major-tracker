@@ -1,0 +1,206 @@
+[
+  {
+    "grade": "",
+    "code": "STPA0711",
+    "name": "4차 산업혁명 기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0820",
+    "name": "광생체단층영상시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0717",
+    "name": "교차 개발환경 기반 임베디드 프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0713",
+    "name": "근거리무선통신",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0795",
+    "name": "딥러닝 이론및응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0716",
+    "name": "멀티미디어 스트리밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0712",
+    "name": "모바일 임베디드 프로세서 구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0722",
+    "name": "분산 컴퓨팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0714",
+    "name": "사용자컴퓨터인터페이스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0730",
+    "name": "산업체 특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0729",
+    "name": "산학협동 프로젝트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0721",
+    "name": "소프트웨어 프로젝트 공정 관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0735",
+    "name": "알고리즘설계 및 분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0737",
+    "name": "운영체제특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0739",
+    "name": "인공지능특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0760",
+    "name": "임베디드의료기기설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0723",
+    "name": "자율군집 소프트웨어 플랫폼 특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0715",
+    "name": "자율군집통신보안",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0731",
+    "name": "지능형 융합 기초 프로젝트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0733",
+    "name": "지능형 융합 심화 프로젝트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0732",
+    "name": "지능형 융합 응용 프로젝트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0734",
+    "name": "지능형 융합 종합프로젝트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0746",
+    "name": "컴퓨터구조특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0742",
+    "name": "컴퓨터망특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0827",
+    "name": "패턴인식특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0000",
+    "name": "학위논문연구 및 연구윤리 (융합소프트웨어)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0726",
+    "name": "헬스케어 소프트웨어 표준",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0725",
+    "name": "Body-Area Network",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0711",
+    "name": "RTOS기반 실물컴퓨팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0720",
+    "name": "SW 아키택춰",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COSO0718",
+    "name": "SW모델링 및 프로토타이핑",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CICT0701",
+    "name": "SW융합프로젝트1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "CICT0703",
+    "name": "SW융합프로젝트3",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "COSO0719",
+    "name": "SW테스팅 및 검증",
+    "credit": "3-3-0"
+  }
+]

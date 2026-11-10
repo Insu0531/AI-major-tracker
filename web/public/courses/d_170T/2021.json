@@ -1,0 +1,20 @@
+[
+  {
+    "grade": "1",
+    "code": "ENGR0311",
+    "name": "공학물리실험 I",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "ENGR0312",
+    "name": "공학물리실험 II",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "1",
+    "code": "MECH0223",
+    "name": "정역학",
+    "credit": "3-3-0"
+  }
+]

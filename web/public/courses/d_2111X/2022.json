@@ -1,0 +1,320 @@
+[
+  {
+    "grade": "",
+    "code": "DYFI0730",
+    "name": "4차산업혁명과 ICT융합섬유",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0751",
+    "name": "가공조제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0740",
+    "name": "계면과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MBIO0779",
+    "name": "고급기기분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0733",
+    "name": "기능성색소특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FUMA0735",
+    "name": "기능성섬유가공",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0775",
+    "name": "기능성재료표면가공",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0766",
+    "name": "디지털염료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0702",
+    "name": "딥러닝과 인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0722",
+    "name": "무기재료특강1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0723",
+    "name": "무기재료특강2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0797",
+    "name": "바이오메디컬재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0775",
+    "name": "박막공학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0776",
+    "name": "박막공학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0713",
+    "name": "반도체재료특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0743",
+    "name": "반도체재료특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0795",
+    "name": "부직포특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0722",
+    "name": "산업섬유고분자재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0794",
+    "name": "산업용섬유제조특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0757",
+    "name": "섬유가공특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0758",
+    "name": "섬유고분자재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0724",
+    "name": "섬유고분자재료특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0704",
+    "name": "섬유화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0735",
+    "name": "에너지공학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0831",
+    "name": "에너지공학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0832",
+    "name": "에너지공학특론3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0737",
+    "name": "염료화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0770",
+    "name": "웨어러블디바이스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0783",
+    "name": "유기나노재료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FUMA0711",
+    "name": "유기디스플레이재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INDC0721",
+    "name": "유기재료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FUMA0719",
+    "name": "유기전자재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0760",
+    "name": "융합기능성색소",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0781",
+    "name": "의료용나노재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0779",
+    "name": "이차전지특론",
+    "credit": "3-3-9"
+  },
+  {
+    "grade": "",
+    "code": "CIME0725",
+    "name": "재료공학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0736",
+    "name": "재료공학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0726",
+    "name": "재료열역학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0737",
+    "name": "재료열역학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0739",
+    "name": "전기전자이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0774",
+    "name": "전도성고분자재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0777",
+    "name": "전자탄소재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0769",
+    "name": "첨단산업용섬유",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0759",
+    "name": "첨단섬유복합체",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0750",
+    "name": "첨단유기재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0703",
+    "name": "첨단융합형 섬유기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0786",
+    "name": "친환경 섬유공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0704",
+    "name": "탄소복합섬유고분자재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0705",
+    "name": "탄소복합재료공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0000",
+    "name": "학위논문연구 및 연구윤리(섬유시스템공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0768",
+    "name": "ICT융합섬유 인턴쉽",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0726",
+    "name": "ICT융합섬유개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0776",
+    "name": "ICT융합지능형섬유",
+    "credit": "3-3-0"
+  }
+]

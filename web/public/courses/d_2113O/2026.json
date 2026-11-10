@@ -1,0 +1,224 @@
+[
+  {
+    "grade": "",
+    "code": "NANO0990",
+    "name": "고급나노과학특강1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0991",
+    "name": "고급나노과학특강2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0992",
+    "name": "고급나노과학특강3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0993",
+    "name": "고급나노과학특강4",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0913",
+    "name": "고분자나노복합체",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0919",
+    "name": "나노/마이크로메카트로닉스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0918",
+    "name": "나노/마이크로시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0916",
+    "name": "나노/마이크로역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0705",
+    "name": "나노과학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0904",
+    "name": "나노광전자학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0701",
+    "name": "나노물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0980",
+    "name": "나노물리학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0802",
+    "name": "나노물질구조학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0901",
+    "name": "나노반도체",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0703",
+    "name": "나노생명과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0982",
+    "name": "나노생명과학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0804",
+    "name": "나노생물공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0909",
+    "name": "나노생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0911",
+    "name": "나노세포학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0984",
+    "name": "나노소자특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0917",
+    "name": "나노소재전산모사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0983",
+    "name": "나노소재특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0910",
+    "name": "나노약물전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0902",
+    "name": "나노양자소자학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0914",
+    "name": "나노유기물구조분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0912",
+    "name": "나노유전공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0801",
+    "name": "나노재료공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0907",
+    "name": "나노재료화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0906",
+    "name": "나노촉매학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0704",
+    "name": "나노측정학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0908",
+    "name": "나노케미트로닉스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0702",
+    "name": "나노화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0981",
+    "name": "나노화학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0803",
+    "name": "분자전산모사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0903",
+    "name": "스핀트로닉스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0905",
+    "name": "클러스터와나노물질",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NANO0000",
+    "name": "학위논문연구 및 연구윤리(나노과학기술학)",
+    "credit": "3-3-0"
+  }
+]

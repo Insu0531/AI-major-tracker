@@ -1,0 +1,194 @@
+[
+  {
+    "grade": "",
+    "code": "TCHR0601",
+    "name": "교육과정",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0604",
+    "name": "교육방법및교육공학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0606",
+    "name": "교육사회",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0607",
+    "name": "교육심리",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0609",
+    "name": "교육철학및교육사",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0610",
+    "name": "교육평가",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0611",
+    "name": "교육학개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0612",
+    "name": "교육행정및교육경영",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0529",
+    "name": "교직실무",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0771",
+    "name": "데이터마이닝특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AICU0715",
+    "name": "딥 러닝 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AICU0716",
+    "name": "딥 러닝 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AICU0713",
+    "name": "머신러닝의 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0520",
+    "name": "생활지도및상담(교직소양)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "AICU0728",
+    "name": "애로해결 디자인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AICU0726",
+    "name": "에듀 테크놀로지 활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0704",
+    "name": "영재교육",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "AICU0711",
+    "name": "인공지능 융합교육의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0852",
+    "name": "인공지능응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AICU0727",
+    "name": "인지과학 기반 UX/UI 디자인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0703",
+    "name": "창의성 교육",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "AICU0723",
+    "name": "컴퓨팅 사고력 기반 과학교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AICU0722",
+    "name": "컴퓨팅 사고력 기반 수학교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0528",
+    "name": "특수교육학개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "AICU0721",
+    "name": "파이썬 프로그래밍 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AICU0724",
+    "name": "피지컬 컴퓨팅과 인공지능 교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AICU0000",
+    "name": "학위논문연구 및 연구윤리(AI융합교육전공)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AICU0714",
+    "name": "AI 융합 STEAM 교수 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AICU0712",
+    "name": "AI를 위한 프로그래밍 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AICU0725",
+    "name": "AI융합교육 인턴십 프로그램",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "TCHR0521",
+    "name": "교직실무 1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "9",
+    "code": "TCHR0553",
+    "name": "디지털 교육",
+    "credit": "1-1-0"
+  }
+]

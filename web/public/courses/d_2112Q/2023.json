@@ -1,0 +1,236 @@
+[
+  {
+    "grade": "",
+    "code": "KMUS0701",
+    "name": "국악전공실기Ⅰ",
+    "credit": "2-0-2"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0702",
+    "name": "국악전공실기Ⅱ",
+    "credit": "2-0-2"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0703",
+    "name": "국악전공실기Ⅲ",
+    "credit": "2-0-2"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0704",
+    "name": "국악전공실기Ⅳ",
+    "credit": "2-0-2"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0709",
+    "name": "국악전공실기IX",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0705",
+    "name": "국악전공실기V",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0706",
+    "name": "국악전공실기VI",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0707",
+    "name": "국악전공실기VII",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0708",
+    "name": "국악전공실기VIII",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0723",
+    "name": "동양음악사상연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0726",
+    "name": "동양음악연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0769",
+    "name": "문화예술경영이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0768",
+    "name": "문화콘텐츠",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0729",
+    "name": "민속악연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0770",
+    "name": "악학궤범강독연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0742",
+    "name": "예술철학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MUSI0775",
+    "name": "음악미학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0728",
+    "name": "정악연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0000",
+    "name": "학위논문연구 및 연구윤리 (국악학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0724",
+    "name": "한국고문헌연구I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0725",
+    "name": "한국고문헌연구II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0722",
+    "name": "한국고악보해독연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0721",
+    "name": "한국고악서원서강독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0732",
+    "name": "한국기보법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0751",
+    "name": "한국기악기법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0752",
+    "name": "한국기악문헌연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0764",
+    "name": "한국무용음악연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0766",
+    "name": "한국민속악연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0763",
+    "name": "한국불교음악연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0761",
+    "name": "한국성악기법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0762",
+    "name": "한국성악문헌연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0765",
+    "name": "한국아악연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0741",
+    "name": "한국악기론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0727",
+    "name": "한국악기학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0711",
+    "name": "한국음악문헌연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0771",
+    "name": "한국음악사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0712",
+    "name": "한국음악학연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0767",
+    "name": "한국작곡기법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KMUS0731",
+    "name": "한국전통음악분석연구",
+    "credit": "3-3-0"
+  }
+]

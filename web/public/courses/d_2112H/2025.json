@@ -1,0 +1,710 @@
+[
+  {
+    "grade": "",
+    "code": "ACEN0751",
+    "name": "건설재료시험연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0752",
+    "name": "건설재료학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0946",
+    "name": "계량경제분석연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0780",
+    "name": "고급 RC구조물 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0909",
+    "name": "과수최신과제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0740",
+    "name": "관개공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0782",
+    "name": "기본 복합 재료역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0870",
+    "name": "기후변화대응농산물위생안전론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0953",
+    "name": "기후변화대응생물공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0871",
+    "name": "기후변화환경경제분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0882",
+    "name": "노지스마트팜세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0936",
+    "name": "농산자원수확후관리기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0943",
+    "name": "농식품가격분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0937",
+    "name": "농식품바이오센서특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0894",
+    "name": "농식품안전성공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0875",
+    "name": "농식품유통분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0935",
+    "name": "농식품잔류물질학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0951",
+    "name": "농업비파괴분석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0762",
+    "name": "농업시설구조설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0765",
+    "name": "농업시설환경계측",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0732",
+    "name": "농업시설환경설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0941",
+    "name": "농업정보공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0933",
+    "name": "농업환경화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0712",
+    "name": "농지보전공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0747",
+    "name": "농촌수질공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0879",
+    "name": "동·식물 센싱 및 신호처리I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0890",
+    "name": "디지털정밀농업특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0942",
+    "name": "리모트센싱특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0952",
+    "name": "마이크로컨트롤러응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0897",
+    "name": "물류포장공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0773",
+    "name": "물절약시스템공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0949",
+    "name": "미생물사회학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0901",
+    "name": "바이오산업기계분석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0892",
+    "name": "바이오산업기계설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0902",
+    "name": "바이오시스템역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0896",
+    "name": "바이오재료공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0900",
+    "name": "바이오환경시스템제작특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0745",
+    "name": "배수공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0950",
+    "name": "빅데이터특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0891",
+    "name": "생물생산기계화특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0898",
+    "name": "생물생산기전설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0730",
+    "name": "생물생산에너지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0767",
+    "name": "생물환경시스템분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0945",
+    "name": "생태환경정보분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0774",
+    "name": "수리 최적화 기법 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0715",
+    "name": "수리시설공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0771",
+    "name": "수자원방재공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0748",
+    "name": "수자원시스템분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0934",
+    "name": "수질오염화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0925",
+    "name": "수확후관리최신과제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0920",
+    "name": "수확후관리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0881",
+    "name": "스마트농업수확후처리특론I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0880",
+    "name": "스마트농업시스템 특론I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0886",
+    "name": "스마트물관리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0887",
+    "name": "스마트생물생산융합기술특론Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0888",
+    "name": "스마트생물생산융합기술특론Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0889",
+    "name": "스마트센싱시스템공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0928",
+    "name": "스마트작물생명공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0927",
+    "name": "스마트작물육종학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0955",
+    "name": "스마트축산식품가공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0868",
+    "name": "스마트특용작물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0931",
+    "name": "스마트팜 에너지분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0947",
+    "name": "스마트팜공기유동분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0919",
+    "name": "스마트팜과수원예학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0913",
+    "name": "스마트팜기능성원예작물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0877",
+    "name": "스마트팜기상학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0903",
+    "name": "스마트팜나노바이오공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0938",
+    "name": "스마트팜농약학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0940",
+    "name": "스마트팜동물유전공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0954",
+    "name": "스마트팜미생물대사학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0899",
+    "name": "스마트팜생물생산환경제어특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0939",
+    "name": "스마트팜생물정보학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0895",
+    "name": "스마트팜생체물성공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0876",
+    "name": "스마트팜세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0923",
+    "name": "스마트팜식물병리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0904",
+    "name": "스마트팜식물생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0948",
+    "name": "스마트팜식물세균학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0922",
+    "name": "스마트팜식물유전체학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0930",
+    "name": "스마트팜작물생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0914",
+    "name": "스마트팜천연물화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0872",
+    "name": "스마트팜토양전염병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0869",
+    "name": "스마트팜특론(팀티칭)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0867",
+    "name": "시설원예특론I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0915",
+    "name": "시설원예학최신과제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0929",
+    "name": "시설원예학특론-현장실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0932",
+    "name": "시설원예환경조절론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0910",
+    "name": "식물분자유전학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0924",
+    "name": "식물생장조절학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0885",
+    "name": "에코인프라 콘크리트 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0873",
+    "name": "우주농업특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0857",
+    "name": "원격탐사특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0921",
+    "name": "원예가공이용특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0908",
+    "name": "원예번식학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0905",
+    "name": "원예생명세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0737",
+    "name": "원예시설론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0926",
+    "name": "원예작물발달유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0918",
+    "name": "원예종묘생산학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0911",
+    "name": "원예치료학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0772",
+    "name": "유역물순환공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0884",
+    "name": "응용소프트웨어공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0893",
+    "name": "이산요소법생물생산응용특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0944",
+    "name": "이산형선택분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0874",
+    "name": "인공지능특론I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0916",
+    "name": "잔디학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0917",
+    "name": "조원식물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0775",
+    "name": "지반계측",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0720",
+    "name": "지반공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0776",
+    "name": "지반보강공법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0722",
+    "name": "지반조사법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0907",
+    "name": "채소최신과제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0779",
+    "name": "첨단콘크리트공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0878",
+    "name": "축산스마트팜특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0883",
+    "name": "친환경지반신소재 개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0777",
+    "name": "파동기반 비파괴탐사기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0815",
+    "name": "하천공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0000",
+    "name": "학위논문연구 및 연구윤리 (농업토목공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0912",
+    "name": "화훼자원응용학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0906",
+    "name": "화훼최신과제",
+    "credit": "3-3-0"
+  }
+]

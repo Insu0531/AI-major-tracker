@@ -1,0 +1,128 @@
+[
+  {
+    "grade": "2",
+    "code": "COSC0203",
+    "name": "기초물리실험",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "COSC0201",
+    "name": "기초물리학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COSC0202",
+    "name": "기초물리학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COSC0221",
+    "name": "기초생물학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COSC0222",
+    "name": "기초생물학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COSC0223",
+    "name": "기초생물학실험",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "COSC0231",
+    "name": "기초지구과학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COSC0232",
+    "name": "기초지구과학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COSC0233",
+    "name": "기초지구과학실험",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "2",
+    "code": "COSC0211",
+    "name": "기초화학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COSC0212",
+    "name": "기초화학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COSC0213",
+    "name": "기초화학실험",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "3",
+    "code": "SCED0206",
+    "name": "고급물리학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SCED0207",
+    "name": "고급물리학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SCED0226",
+    "name": "고급생물학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SCED0227",
+    "name": "고급생물학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SCED0236",
+    "name": "고급지구과학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SCED0237",
+    "name": "고급지구과학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SCED0216",
+    "name": "고급화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SCED0217",
+    "name": "고급화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ASAT0205",
+    "name": "태양계천문학",
+    "credit": "3-3-0"
+  }
+]

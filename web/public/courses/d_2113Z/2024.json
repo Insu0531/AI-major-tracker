@@ -1,0 +1,266 @@
+[
+  {
+    "grade": "",
+    "code": "MECH0777",
+    "name": "고등공학수학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0747",
+    "name": "고효율 전동기 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0852",
+    "name": "구조진동학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0725",
+    "name": "냉동공조시스템응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0855",
+    "name": "덕트음향학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0862",
+    "name": "마이크로프로세서특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0731",
+    "name": "메카트로닉스 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0876",
+    "name": "무인자동차특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0749",
+    "name": "미래모빌리티산업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0865",
+    "name": "미래형자동차특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0841",
+    "name": "생산시스템특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0857",
+    "name": "선형대수응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0871",
+    "name": "센서 및 계측공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0854",
+    "name": "신호분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0734",
+    "name": "연속체 진동",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0751",
+    "name": "영어학술논문작성법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0864",
+    "name": "유공압시스템특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0717",
+    "name": "유체역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0824",
+    "name": "유한요소법과 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0851",
+    "name": "음향공학응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0715",
+    "name": "응용실험통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0723",
+    "name": "응용열역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0915",
+    "name": "응용열전달특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0882",
+    "name": "자동차 금속강도학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0813",
+    "name": "자동차공조시스템특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0821",
+    "name": "자동차설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0822",
+    "name": "재료역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0746",
+    "name": "전기유한요소법 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0893",
+    "name": "전기전자회로특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0748",
+    "name": "전동기제어 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0707",
+    "name": "전력전자특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0866",
+    "name": "지능전산응용해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0732",
+    "name": "차량 NVH I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0733",
+    "name": "차량 NVH Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0833",
+    "name": "차량기관시뮬레이션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0861",
+    "name": "차량기전공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0750",
+    "name": "차량배터리시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0863",
+    "name": "차량전자제어특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0774",
+    "name": "최적설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0771",
+    "name": "트라이볼로지특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0856",
+    "name": "파워트레인 NVH",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0000",
+    "name": "학위논문연구 및 연구윤리(자동차공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MACH0715",
+    "name": "CAD특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0853",
+    "name": "NVH시험평가",
+    "credit": "3-3-0"
+  }
+]

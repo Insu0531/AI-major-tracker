@@ -1,0 +1,602 @@
+[
+  {
+    "grade": "",
+    "code": "EDUC0904",
+    "name": "가족상담실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0897",
+    "name": "가족상담이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0792",
+    "name": "개인상담수퍼비전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0879",
+    "name": "개인상담실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0878",
+    "name": "개인상담이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0911",
+    "name": "고급상담연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0737",
+    "name": "고급통계분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0929",
+    "name": "교사와 교육과정 실행 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0923",
+    "name": "교수설계의 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0941",
+    "name": "교수전략 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0942",
+    "name": "교수전략 연구동향",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0939",
+    "name": "교수전략 연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0943",
+    "name": "교수전략의 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0736",
+    "name": "교실평가 연구세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0782",
+    "name": "교육가치론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0819",
+    "name": "교육과정개발",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0769",
+    "name": "교육과정사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0770",
+    "name": "교육과정설계 및 평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0764",
+    "name": "교육과정연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0768",
+    "name": "교육과정이론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0873",
+    "name": "교육과정정책 및 국제 비교론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0813",
+    "name": "교육과정행정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0816",
+    "name": "교육관리정보체제론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0746",
+    "name": "교육데이터과학 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0714",
+    "name": "교육목적론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0750",
+    "name": "교육및심리측정세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0741",
+    "name": "교육사회학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0745",
+    "name": "교육사회학이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0723",
+    "name": "교육심리세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0735",
+    "name": "교육심리연구의 최근 동향",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0712",
+    "name": "교육연구와 통계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0713",
+    "name": "교육의 언어와 논리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0713",
+    "name": "교육의 질적 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0754",
+    "name": "교육인사행정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0756",
+    "name": "교육재정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0814",
+    "name": "교육정책 및 개혁론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0709",
+    "name": "교육철학연구법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0969",
+    "name": "교육평가세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0810",
+    "name": "교육행정연구법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0760",
+    "name": "교육행정이론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0812",
+    "name": "교육행정조직행위론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0811",
+    "name": "교육행정평가론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0747",
+    "name": "구조방정식모형의 적용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0717",
+    "name": "근대한국교육사상연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0739",
+    "name": "네트워크 분석과 교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0748",
+    "name": "다층자료분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0763",
+    "name": "단원론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0766",
+    "name": "대학교육과정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0743",
+    "name": "대학연구의 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0722",
+    "name": "대학의 교육이념",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0725",
+    "name": "동기와 성격연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0785",
+    "name": "동양교육고전연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0712",
+    "name": "듀이교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0751",
+    "name": "디지털 학습분석과 평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0715",
+    "name": "비교교육철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0744",
+    "name": "비교국제교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0783",
+    "name": "사회철학이론과 교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0705",
+    "name": "상담면접",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0784",
+    "name": "서양교육고전연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0787",
+    "name": "서양교육사상연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0906",
+    "name": "심리검사실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0733",
+    "name": "심리이론과 교육세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0749",
+    "name": "심리측정이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0934",
+    "name": "연구방법 및 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0708",
+    "name": "영남교육의 변천사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0930",
+    "name": "영재와 창의성 교육과정 개발",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0742",
+    "name": "정량연구설계와 인과추론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0706",
+    "name": "정신병리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0818",
+    "name": "지식과 교육과정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0781",
+    "name": "지식이론과 교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0745",
+    "name": "지역사회 교육현안 워크숍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0905",
+    "name": "진로상담실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0896",
+    "name": "진로상담이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0903",
+    "name": "집단상담실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0907",
+    "name": "집단상담이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0752",
+    "name": "평생교육 정책 및 제도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0710",
+    "name": "평생교육경영기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0730",
+    "name": "평생교육론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0753",
+    "name": "평생교육방법론의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0731",
+    "name": "평생교육학연구방법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0848",
+    "name": "프래그머티즘과 교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0752",
+    "name": "학교경영론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0723",
+    "name": "학교부적응 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0724",
+    "name": "학교심리 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0844",
+    "name": "학교적응과 행복",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0914",
+    "name": "학습과개인차",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0738",
+    "name": "학습과학 연구방법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0741",
+    "name": "학습과학과 기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0875",
+    "name": "학습동기연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0740",
+    "name": "학습분석과 빅데이터",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0733",
+    "name": "학습심리 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUD0734",
+    "name": "학습자와 학습환경 분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0946",
+    "name": "학습전략과 교육목표",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0000",
+    "name": "학위논문연구 및 연구윤리 (교육학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0762",
+    "name": "한국교육과정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0706",
+    "name": "한국교육사세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0720",
+    "name": "한국사회와교육가치관",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0788",
+    "name": "한국유학교육사상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0718",
+    "name": "한국학교교육발전사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0707",
+    "name": "현대교육사조론",
+    "credit": "3-3-0"
+  }
+]

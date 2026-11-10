@@ -1,0 +1,266 @@
+[
+  {
+    "grade": "",
+    "code": "GEOG0743",
+    "name": "공간분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0953",
+    "name": "관광정책과 계획",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0772",
+    "name": "기후변동성분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0775",
+    "name": "기후예측기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0776",
+    "name": "기후와 환경변화 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0925",
+    "name": "기후환경론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0942",
+    "name": "도시경제지리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0935",
+    "name": "도시구조연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0950",
+    "name": "도시지리정보시스템세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0736",
+    "name": "도시지리학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0938",
+    "name": "도시체계연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0774",
+    "name": "동기후학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0951",
+    "name": "동아시아 지형론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0750",
+    "name": "디지털영상처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0939",
+    "name": "문화, 사회 그리고 경관",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0948",
+    "name": "문화산업과 장소마케팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0764",
+    "name": "문화지리세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0752",
+    "name": "부동산GIS",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0738",
+    "name": "사회이론과 공간",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0737",
+    "name": "사회지리학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0740",
+    "name": "산업재구조화와 공간",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0761",
+    "name": "세계정치경제지리세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0955",
+    "name": "세계정치지리학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0954",
+    "name": "역사지리세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0773",
+    "name": "응용기상정보",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0741",
+    "name": "인구지리학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0763",
+    "name": "자연과 사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0771",
+    "name": "전지구기후시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0747",
+    "name": "제4기 환경변화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0949",
+    "name": "젠더와 지리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0762",
+    "name": "종교지리세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0952",
+    "name": "지구환경변화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0937",
+    "name": "지역산업정책",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0742",
+    "name": "지역연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0751",
+    "name": "지형재해론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0748",
+    "name": "컴퓨터지도학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0941",
+    "name": "토지이용과계획세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0943",
+    "name": "하천및습지지형학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0000",
+    "name": "학위논문연구 및 연구윤리 (지리학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0944",
+    "name": "해양및해안지형학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0936",
+    "name": "혁신, 경제와 공간",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0749",
+    "name": "환경정책특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0719",
+    "name": "환경평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0753",
+    "name": "환경GIS",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,320 @@
+[
+  {
+    "grade": "",
+    "code": "CHEM0703",
+    "name": "고급무기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0753",
+    "name": "고급무기화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0851",
+    "name": "고급무기화학3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0701",
+    "name": "고급물리화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0818",
+    "name": "고급물리화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0873",
+    "name": "고급분광분석1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0874",
+    "name": "고급분광분석2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0704",
+    "name": "고급분석화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0702",
+    "name": "고급유기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0831",
+    "name": "고급유기화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0740",
+    "name": "고급유기화학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0845",
+    "name": "고급유기화학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0871",
+    "name": "고급전기분석화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0829",
+    "name": "고급표면화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0705",
+    "name": "고급화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0859",
+    "name": "고체무기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0723",
+    "name": "고체촉매화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0754",
+    "name": "무기구조론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0855",
+    "name": "무기구조론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0756",
+    "name": "무기합성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0755",
+    "name": "무기화학반응론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0857",
+    "name": "무기화학반응론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0752",
+    "name": "무기화학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0734",
+    "name": "물리유기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0832",
+    "name": "물리유기화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0713",
+    "name": "물리화학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0811",
+    "name": "물리화학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0724",
+    "name": "물리화학특론3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0725",
+    "name": "물리화학특론4",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0773",
+    "name": "분광분석화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0772",
+    "name": "분리화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0774",
+    "name": "분석화학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0775",
+    "name": "분석화학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0717",
+    "name": "분자구조 및 분광학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0850",
+    "name": "비대칭화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0783",
+    "name": "생분석화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0711",
+    "name": "양자화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0732",
+    "name": "유기구조해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0863",
+    "name": "유기금속화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0731",
+    "name": "유기합성1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0833",
+    "name": "유기합성2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0891",
+    "name": "의약화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0771",
+    "name": "전기분석화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0887",
+    "name": "질량분석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0835",
+    "name": "천연화합물화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0706",
+    "name": "청정화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0875",
+    "name": "표면분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0000",
+    "name": "학위논문연구 및 연구윤리 (화학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0709",
+    "name": "혁신화학소재개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0710",
+    "name": "혁신화학소재특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0712",
+    "name": "화학반응속도론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0791",
+    "name": "화학세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0991",
+    "name": "화학세미나2",
+    "credit": "3-3-0"
+  }
+]

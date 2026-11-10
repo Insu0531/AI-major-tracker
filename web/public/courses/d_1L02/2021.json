@@ -1,0 +1,38 @@
+[
+  {
+    "grade": "1",
+    "code": "FREN0202",
+    "name": "보전생물과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FREN0201",
+    "name": "식물진화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FSCI0202",
+    "name": "일반화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "DPRE0229",
+    "name": "자원식물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ACHE0321",
+    "name": "토양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "FREN0413",
+    "name": "환경원격탐사",
+    "credit": "3-3-0"
+  }
+]

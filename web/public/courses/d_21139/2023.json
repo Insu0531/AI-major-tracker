@@ -1,0 +1,236 @@
+[
+  {
+    "grade": "",
+    "code": "FSNU0769",
+    "name": "고급급식경영",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0736",
+    "name": "고급기능성식품학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0731",
+    "name": "고급식품가공저장학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0766",
+    "name": "고급식품과학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0738",
+    "name": "고급식품물성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0761",
+    "name": "고급식품미생물학실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "FENG0705",
+    "name": "고급식품미생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0739",
+    "name": "고급식품생물공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0767",
+    "name": "고급식품안전성평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0765",
+    "name": "고급식품평가법 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0764",
+    "name": "고급식품품질관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ANSC0774",
+    "name": "고급식품화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0768",
+    "name": "고급영양교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0771",
+    "name": "고급영양상담",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0722",
+    "name": "고급영양생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0763",
+    "name": "고급영양판정법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0711",
+    "name": "고급영양학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0713",
+    "name": "고급응용영양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HOEC0796",
+    "name": "고급응용통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0712",
+    "name": "고급임상영양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GENE0922",
+    "name": "고급지질생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0770",
+    "name": "급식경영연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0728",
+    "name": "비타민과 무기질 영양",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0759",
+    "name": "식품가공 현장실습",
+    "credit": "3-1-4"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0726",
+    "name": "식품과 면역",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0772",
+    "name": "식품안전관리인증기준특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0751",
+    "name": "식품영양기기분석법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0752",
+    "name": "식품학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0753",
+    "name": "식품학연구법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0725",
+    "name": "영양과면역",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0724",
+    "name": "영양과유전자발현",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0723",
+    "name": "영양생리학실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0762",
+    "name": "영양역학연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0754",
+    "name": "영양학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0755",
+    "name": "영양학연구법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0721",
+    "name": "인체영양생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0729",
+    "name": "최신영양문제세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0000",
+    "name": "학위논문연구 및 연구윤리(식품영양학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0727",
+    "name": "항산화물질과 인체건강",
+    "credit": "3-3-0"
+  }
+]

@@ -603,3 +603,7 @@
 .pl-jumps .pl-rec-jump { align-self: auto; }
 .pl-jumps .pl-rec-jump + .pl-rec-jump span { animation: none; }
 .pl-quick { scroll-margin: var(--s6); }
+
+/* 1단계 학부 / 대학원 탭 */
+.pl-level-tabs { margin-bottom: var(--s1); }
+.pl-level-tabs .pl-tab { flex: 1; justify-content: center; }

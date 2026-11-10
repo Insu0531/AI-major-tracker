@@ -1,0 +1,152 @@
+[
+  {
+    "grade": "2",
+    "code": "DYFI0411",
+    "name": "계면활성제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0203",
+    "name": "유기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0204",
+    "name": "유기화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CIME0447",
+    "name": "재료전기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ENVI0374",
+    "name": "환경유기화학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "INDC0411",
+    "name": "환경화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "APCH0425",
+    "name": "그린화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ADMC0204",
+    "name": "물산업 융합 소재 및 시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CIME0416",
+    "name": "반도체공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FIBR0321",
+    "name": "섬유재료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CIME0418",
+    "name": "세라믹공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "META0316",
+    "name": "재료의기계적성질",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEN0513",
+    "name": "재료화학공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "META0317",
+    "name": "표면처리공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "POLY0411",
+    "name": "합성섬유",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEN0463",
+    "name": "고분자화학공학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CIME0429",
+    "name": "디스플레이공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "INDC0433",
+    "name": "무기재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "META0416",
+    "name": "신소재공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEN0502",
+    "name": "에너지공정공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ADMC0202",
+    "name": "웨어러블 텍스타일",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "INDC0324",
+    "name": "유기재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "META0320",
+    "name": "전자재료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ADMC0201",
+    "name": "정밀소재공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ENVI0366",
+    "name": "화학안전공학",
+    "credit": "3-3-0"
+  }
+]

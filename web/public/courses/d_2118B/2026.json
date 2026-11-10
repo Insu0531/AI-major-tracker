@@ -1,0 +1,218 @@
+[
+  {
+    "grade": "",
+    "code": "ASAT0769",
+    "name": "고급 구름물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0710",
+    "name": "고급 구름역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0853",
+    "name": "고급 기상역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0709",
+    "name": "고급 기후변화특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0701",
+    "name": "고급 기후역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0714",
+    "name": "고급 대기난류",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0711",
+    "name": "고급 대기대류",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0707",
+    "name": "고급 대기대순환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0720",
+    "name": "고급 대기물리모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0705",
+    "name": "고급 대기복사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0706",
+    "name": "고급 대기수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0704",
+    "name": "고급 레이더기상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0776",
+    "name": "고급 미기상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0717",
+    "name": "고급 수치모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0713",
+    "name": "고급 위성기상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0702",
+    "name": "고급 종관기상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0777",
+    "name": "고급 중규모기상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0730",
+    "name": "고급도시기상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0729",
+    "name": "고급항공기상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0732",
+    "name": "기상기후 리스크 평가론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0723",
+    "name": "대기과학 의사소통론 및 논문 작성법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0791",
+    "name": "대기과학세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0891",
+    "name": "대기과학세미나2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0721",
+    "name": "대기융합모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0856",
+    "name": "대기자료동화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0731",
+    "name": "융합 위험기상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0727",
+    "name": "응용 구름물리학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0712",
+    "name": "응용 기상역학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0725",
+    "name": "응용 대기물리모델링",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0716",
+    "name": "응용 대기복사",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0719",
+    "name": "응용 레이더기상학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0715",
+    "name": "응용 위성기상학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0726",
+    "name": "응용 중규모기상학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0733",
+    "name": "인공 지능 기상 분석 및 예측론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0703",
+    "name": "지구물리유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASDE0000",
+    "name": "학위논문연구 및 연구윤리 (대기과학)",
+    "credit": "3-3-0"
+  }
+]

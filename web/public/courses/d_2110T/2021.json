@@ -1,0 +1,386 @@
+[
+  {
+    "grade": "",
+    "code": "ASAT0769",
+    "name": "고급 구름물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0776",
+    "name": "고급 미기상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0777",
+    "name": "고급 중규모기상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0724",
+    "name": "고급관측천문학 및 실습 1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0824",
+    "name": "고급관측천문학 및 실습 2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0866",
+    "name": "고급기상역학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0867",
+    "name": "고급기상역학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0718",
+    "name": "고급우주론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0818",
+    "name": "고급우주론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0845",
+    "name": "고급우주생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0728",
+    "name": "고급전산천문학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0702",
+    "name": "고급천문학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0838",
+    "name": "고급천문학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0703",
+    "name": "고급천문학세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0704",
+    "name": "고급천문학세미나2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0721",
+    "name": "고급천체물리학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0821",
+    "name": "고급천체물리학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0836",
+    "name": "고급태양계천문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0833",
+    "name": "고에너지 천체물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0732",
+    "name": "공간물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0743",
+    "name": "관측천문학특강 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0843",
+    "name": "관측천문학특강 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0861",
+    "name": "구름역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0858",
+    "name": "기후변동특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0751",
+    "name": "기후역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0791",
+    "name": "대기과학세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0891",
+    "name": "대기과학세미나2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0873",
+    "name": "대기난류",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0865",
+    "name": "대기대류",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0851",
+    "name": "대기대순환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0783",
+    "name": "대기복사전달1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0883",
+    "name": "대기복사전달2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0785",
+    "name": "대기수치해석",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0855",
+    "name": "대기에너지학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0871",
+    "name": "대기오염및분산",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0882",
+    "name": "대기원격탐사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0856",
+    "name": "대기자료동화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0766",
+    "name": "레이더기상학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0889",
+    "name": "레이더기상학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0827",
+    "name": "변광성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0713",
+    "name": "성간물질",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0733",
+    "name": "수리천문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0885",
+    "name": "수치모델링 및 응용",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0775",
+    "name": "열대기상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0826",
+    "name": "외부은하특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0716",
+    "name": "우리은하특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0819",
+    "name": "우주천문학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0820",
+    "name": "우주천문학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0868",
+    "name": "위성기상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0741",
+    "name": "이론천문학특강 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0841",
+    "name": "이론천문학특강 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0835",
+    "name": "전파천문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0753",
+    "name": "종관기상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0854",
+    "name": "중위도대기역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0781",
+    "name": "중층대기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0887",
+    "name": "지구물리자료분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0763",
+    "name": "지구유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0737",
+    "name": "천문기기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0726",
+    "name": "천체관측법 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0859",
+    "name": "파동역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0735",
+    "name": "플라즈마천문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0000",
+    "name": "학위논문연구 및 연구윤리 (천문대기과학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0711",
+    "name": "항성내부구조 및 진화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASAT0813",
+    "name": "항성역학",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,158 @@
+[
+  {
+    "grade": "",
+    "code": "ARIN0710",
+    "name": "강화학습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0701",
+    "name": "공학논문작성법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0847",
+    "name": "기계번역",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0720",
+    "name": "기계학습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARIN0713",
+    "name": "뉴로벤처(Neuroventure)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAIC0709",
+    "name": "모바일앱 프로그래밍 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAIC0703",
+    "name": "비전 및 언어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0734",
+    "name": "신경망",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARIN0702",
+    "name": "심화학습 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARIN0704",
+    "name": "심화학습 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0748",
+    "name": "영상신호처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAIC0708",
+    "name": "오픈소스 프로그래밍 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAIC0706",
+    "name": "인공지능 리빙 랩",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAIC0701",
+    "name": "인공지능 프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0852",
+    "name": "인공지능응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARIN0701",
+    "name": "인공지능GPU프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAIC0704",
+    "name": "인문/공학 융합 프로젝트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAIC0707",
+    "name": "인문학을 위한 기본 프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0746",
+    "name": "자연언어처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAIC0705",
+    "name": "저널클럽",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0936",
+    "name": "지능형정보검색",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AICU0721",
+    "name": "파이썬 프로그래밍 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0755",
+    "name": "패턴인식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAIC0000",
+    "name": "학위논문연구 및 연구윤리 (메타AI)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CTRA0720",
+    "name": "한문고전번역연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAIC0702",
+    "name": "한자와 한문의 이해",
+    "credit": "3-3-0"
+  }
+]

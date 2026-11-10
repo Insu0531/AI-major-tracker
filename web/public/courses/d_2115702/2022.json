@@ -1,0 +1,494 @@
+[
+  {
+    "grade": "",
+    "code": "CVLE0793",
+    "name": "가치공학방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0804",
+    "name": "강구조설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0764",
+    "name": "개수로 및 유사이동론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0838",
+    "name": "건설계약 관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIVL0715",
+    "name": "건설계획과 의사결정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0837",
+    "name": "건설공사비 추정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0842",
+    "name": "건설과 기후변화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0835",
+    "name": "건설기술과 공간정보 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0791",
+    "name": "건설기술과 공간정보 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIVL0716",
+    "name": "건설리스크관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIVL0714",
+    "name": "건설사업관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0841",
+    "name": "건설에너지특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0865",
+    "name": "건설재료화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0706",
+    "name": "계산수리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0758",
+    "name": "고급유한요소해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0778",
+    "name": "고급토질실험",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0872",
+    "name": "공간영상처리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0827",
+    "name": "교량설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0786",
+    "name": "구조동역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0737",
+    "name": "구조안정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0794",
+    "name": "구조해석 및 설계 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0797",
+    "name": "기계식 터널굴착",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0821",
+    "name": "기상방재론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0787",
+    "name": "내진설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0820",
+    "name": "내풍공학 및 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0740",
+    "name": "도로공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0735",
+    "name": "도시수공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0871",
+    "name": "디지털영상측정학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0819",
+    "name": "말뚝기초 공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0830",
+    "name": "방재공학특수문제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0727",
+    "name": "소성론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0723",
+    "name": "소성설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0770",
+    "name": "수공학특수문제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0767",
+    "name": "수리수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0768",
+    "name": "수문기상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0716",
+    "name": "수문모형기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0823",
+    "name": "수재해공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0752",
+    "name": "수질및수자원시스템분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0863",
+    "name": "수질화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0873",
+    "name": "스마트건설",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COEN0701",
+    "name": "스마트순환사회환경시스템 세미나1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "",
+    "code": "COEN0702",
+    "name": "스마트순환사회환경시스템 세미나2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0868",
+    "name": "스마트용수처리 및 급수시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0756",
+    "name": "신뢰성해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0796",
+    "name": "암반공학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0764",
+    "name": "연속체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0874",
+    "name": "영상측정학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0836",
+    "name": "원격탐사와 수자원",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0755",
+    "name": "유한요소해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0763",
+    "name": "응용수문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0759",
+    "name": "이론토질역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0825",
+    "name": "제방및사면안정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0772",
+    "name": "지반공학의수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0832",
+    "name": "지반공학특수문제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0792",
+    "name": "지반굴착",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0712",
+    "name": "지반안정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0843",
+    "name": "지속가능한 건설기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0867",
+    "name": "첨단녹색폐수처리기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0774",
+    "name": "최적설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0748",
+    "name": "추계학적수문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0840",
+    "name": "친환경설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0803",
+    "name": "콘크리트구조설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0721",
+    "name": "콘크리트부재의거동",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0702",
+    "name": "탄성론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0795",
+    "name": "터널설계 및 시공",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0869",
+    "name": "토양 및 지하수 오염처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0762",
+    "name": "토질 및 기초 동역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0875",
+    "name": "파라미터 추정학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0720",
+    "name": "평판및곡면판이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0866",
+    "name": "하수처리및생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0864",
+    "name": "하폐수처리공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0000",
+    "name": "학위논문연구 및 연구윤리 (토목공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0870",
+    "name": "해석영상측정학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0822",
+    "name": "호우방재특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0839",
+    "name": "환경경제성 평가론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0790",
+    "name": "환경공학특수문제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0717",
+    "name": "환경수리공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0829",
+    "name": "환경재해특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0761",
+    "name": "흙의 공학적 성질",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0736",
+    "name": "BIM세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0733",
+    "name": "BIM특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0763",
+    "name": "GIS특론",
+    "credit": "3-3-0"
+  }
+]

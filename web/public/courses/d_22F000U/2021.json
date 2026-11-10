@@ -1,0 +1,188 @@
+[
+  {
+    "grade": "",
+    "code": "AUTO0716",
+    "name": "계측법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0711",
+    "name": "고등공학수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0713",
+    "name": "고등수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0725",
+    "name": "냉동공조시스템응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SCTE0802",
+    "name": "논문작성기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0731",
+    "name": "메카트로닉스 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0719",
+    "name": "복합재료역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0722",
+    "name": "생산자동화특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0729",
+    "name": "센서특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0734",
+    "name": "연속체 진동",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0711",
+    "name": "열역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0718",
+    "name": "열전달특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0763",
+    "name": "유한요소법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APPM0713",
+    "name": "응용선형대수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0715",
+    "name": "응용실험통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0727",
+    "name": "응용연소공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUEN0714",
+    "name": "전기자동차특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUEN0712",
+    "name": "전동기고급설계1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUEN0713",
+    "name": "전동기고급설계2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0718",
+    "name": "전산유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MACH0703",
+    "name": "전산특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0732",
+    "name": "차량 NVH I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0733",
+    "name": "차량 NVH Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0728",
+    "name": "차량기관특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0737",
+    "name": "차량파워트레인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0730",
+    "name": "초전도공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0738",
+    "name": "파괴역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SCTE0801",
+    "name": "프리젠테이션과토론기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUEN0000",
+    "name": "학위논문연구 및 연구윤리(자동차)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MACH0715",
+    "name": "CAD특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MACH0716",
+    "name": "CAM특론",
+    "credit": "3-3-0"
+  }
+]

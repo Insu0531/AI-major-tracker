@@ -1,0 +1,92 @@
+[
+  {
+    "grade": "1",
+    "code": "WELF0205",
+    "name": "정신건강론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "WELF0286",
+    "name": "사회문제론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHIL0342",
+    "name": "윤리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "WELF0204",
+    "name": "자원봉사론",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "PHIL0304",
+    "name": "정신분석과 철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "WELF0382",
+    "name": "가족복지론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "WPLA0203",
+    "name": "복지-철학 기반 사회문제 해결",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "WPLA0201",
+    "name": "웰필리아의 사회복지적 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "WPLA0202",
+    "name": "웰필리아의 철학적 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHIL0306",
+    "name": "철학과 실존치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHIL0305",
+    "name": "철학상담의 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHIL0454",
+    "name": "철학적 인간학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "WELF0422",
+    "name": "프로그램개발과평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHIL0565",
+    "name": "명상과 인문치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "WELF0287",
+    "name": "사회복지윤리와철학",
+    "credit": "3-3-0"
+  }
+]

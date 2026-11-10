@@ -1,0 +1,290 @@
+[
+  {
+    "grade": "",
+    "code": "SPAC0705",
+    "name": "3차원 GIS",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0711",
+    "name": "가상현실",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0736",
+    "name": "객체지향프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0765",
+    "name": "고급모바일프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0706",
+    "name": "공간데이터모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0711",
+    "name": "공간모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0707",
+    "name": "공간분석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0703",
+    "name": "공간영상과 컴퓨터비젼",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0708",
+    "name": "공간의사결정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0709",
+    "name": "공간자료구조특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0719",
+    "name": "공간정보가시화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0713",
+    "name": "공간정보관련법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0712",
+    "name": "공간정보표준",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0715",
+    "name": "공간정보학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0718",
+    "name": "공간통계학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0720",
+    "name": "기상정보활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0788",
+    "name": "방재GIS",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0730",
+    "name": "소프트웨어공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0787",
+    "name": "수자원GIS",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0767",
+    "name": "수치사진측량학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0813",
+    "name": "수치해석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0736",
+    "name": "영상처리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0931",
+    "name": "원격탐사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0765",
+    "name": "웹기반지리정보체계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0860",
+    "name": "조정계산론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0723",
+    "name": "지적및토지관계법규",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0724",
+    "name": "지적정책론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0773",
+    "name": "지적측량학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0714",
+    "name": "지형분석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0710",
+    "name": "측량학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0725",
+    "name": "토지정보론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0741",
+    "name": "토지조사방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0747",
+    "name": "패턴인식론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0731",
+    "name": "프로그래밍언어특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0855",
+    "name": "해석사진측량학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0745",
+    "name": "환경영향평가방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0735",
+    "name": "BIM공간정보모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0736",
+    "name": "BIM세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0734",
+    "name": "BIM융합기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0733",
+    "name": "BIM특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0843",
+    "name": "CAAD특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0704",
+    "name": "Eco GIS",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0762",
+    "name": "GIS개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0740",
+    "name": "GIS세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0763",
+    "name": "GIS특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0764",
+    "name": "GIS표준",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0717",
+    "name": "GIS프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0721",
+    "name": "LBS및 유비쿼터스",
+    "credit": "3-3-0"
+  }
+]

@@ -240,6 +240,12 @@ SavedTimetable = { id, name, savedAt, sem: "2026-1", major, majorLabel, entryYea
   (기존 courses.ts 학과는 코드·학과명으로 비교해 건너뜀, 6자리 전공 코드는 4자리 학부 공통 과정을 합침, 결과 없는 코드는 버림).
   새 화면은 `lib/planner/majors.ts`의 `loadMajors()`로 기존 학과 + 자동 수집 학과를 합쳐 쓴다(학과 선택에 "신규" 배지). 기존 사이트(`/`)는 그대로.
   학번 파일이 없으면 가까운 학번 이수체계로 대체(`loadCurriculum`의 years).
+- **코드표 기반 전 학과 수집 (2026-11-11)**: `scripts/data/knu-depts.txt`(사용자가 준 학부·대학원 전체 코드표, 행정실·단과대·학부 7자리 분반 묶음 제외) → `collect-curricula.mjs --from-list`.
+  코드마다 2026·2023·2021 학번을 먼저 찔러 보고 하나라도 나오면 2021~2026 전부 받음, 다 비면 버림. 4개 동시, 약 40분.
+  **대학원 코드는 `sbjetSctinClscd: ""`** 이어야 결과가 나온다(학부용 STCU000700001이면 0건). 하위 전공(학부 6자리 → 4자리, 대학원 7자리 → 5자리 학과 또는 3자리 전문대학원)은 상위 공통 과정을 합침.
+  라벨: 학부 하위 전공 `학부명-전공명`, 대학원 `대학원 학과명`·`교육대학원 국어교육전공`, 상주는 `[상주]`. 대학원은 `level: "grad"`. 같은 라벨이 여러 코드면 학번이 많은 쪽만.
+  결과(2026-11-11): 1,072개 확인 → majors-extra 368개(학부 63 · 대학원 305). 기존 courses.ts 학과의 빈 학번 파일은 API에서도 비어 있음을 확인(그 학번에 과정 없음).
+- 1단계 학과 선택 위에 **학부 / 대학원 탭**(`st.level`, 새로고침 후에도 유지). 탭에 맞는 학과만 목록에(복수전공도 같은 과정), 탭을 바꾸면 안 맞는 학과는 해제. 대학원 학과를 고르면 "대학원 포함"이 자동으로 켜짐. 대학원 학과엔 "신규" 배지 안 붙임.
   주의: 기존 courses.ts의 컴퓨터학부 전공(cs_*) deptCd가 `1002xx`로 적혀 있지만 실제 코드는 `1O02xx`(영문 O). 과목 파일 내용은 맞음.
 - 이 클라우드 세션에서 Node fetch로 수집할 때는 `NODE_USE_ENV_PROXY=1 NODE_EXTRA_CA_CERTS=/root/.ccr/ca-bundle.crt`가 필요하다 (로컬/GitHub Actions에서는 불필요).
 
@@ -263,7 +269,7 @@ SavedTimetable = { id, name, savedAt, sem: "2026-1", major, majorLabel, entryYea
 - 구버전 파일의 setState-in-effect 린트 오류 3개는 원래부터 있던 것.
 
 ### 데이터 자동 갱신 (GitHub Actions)
-- `.github/workflows/update-data.yml`: 매일 03:17(KST) `collect-sections.mjs`(지금 시기 학기 + 다음 학기), 1월·7월 15일 03:47(6개월마다, 수강신청 전) `collect-curricula.mjs`. 바뀐 파일이 있을 때만 main에 커밋 → Vercel 재배포.
+- `.github/workflows/update-data.yml`: 매일 03:17(KST) `collect-sections.mjs`(지금 시기 학기 + 다음 학기), 1월·7월 15일 03:47(6개월마다, 수강신청 전) `collect-curricula.mjs --from-list` + 스냅샷 모드(제한 120분). 바뀐 파일이 있을 때만 main에 커밋 → Vercel 재배포.
   수동 실행(Run workflow)에서 학기 지정·이수체계 포함 선택 가능. **워크플로 파일이 main에 있어야 예약 실행됨.**
 - 수집기는 내용이 같으면 파일을 다시 쓰지 않음(불필요한 커밋 방지).
 

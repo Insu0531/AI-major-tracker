@@ -1,0 +1,110 @@
+[
+  {
+    "grade": "1",
+    "code": "COMP0454",
+    "name": "인공지능수학기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "COMP0453",
+    "name": "컴퓨팅사고와 SW코딩",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0356",
+    "name": "기구학및기계역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ITEC0419",
+    "name": "데이터과학기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0324",
+    "name": "인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0212",
+    "name": "전기전자공학기초 및 실험",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0354",
+    "name": "계측공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ITEC0417",
+    "name": "기계학습개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0323",
+    "name": "데이타통신",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MOBI0224",
+    "name": "딥러닝",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "STAT0452",
+    "name": "수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0319",
+    "name": "알고리즘1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ITEC0424",
+    "name": "컴퓨터비전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0583",
+    "name": "로봇시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0486",
+    "name": "마이크로컨트롤러",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "AIRB0201",
+    "name": "로봇응용인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "AIRB0202",
+    "name": "비행제어시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "AIRB0203",
+    "name": "CAE응용생산",
+    "credit": "3-3-0"
+  }
+]

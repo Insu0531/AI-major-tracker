@@ -1,0 +1,272 @@
+[
+  {
+    "grade": "",
+    "code": "ENVI0805",
+    "name": "감염성 폐기물의 관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0804",
+    "name": "건설폐기물의 처리 및 관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0878",
+    "name": "고급생물공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0767",
+    "name": "고도수처리공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0751",
+    "name": "고형폐기물처리및관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0833",
+    "name": "대기오염관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0736",
+    "name": "대기오염모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0835",
+    "name": "대기오염방지기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0831",
+    "name": "대기질",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0808",
+    "name": "매립가스관리공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0806",
+    "name": "매립지 사후관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0807",
+    "name": "매립지 차수공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0725",
+    "name": "물리화학적폐수처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0744",
+    "name": "반응공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0812",
+    "name": "산업생산공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0765",
+    "name": "산업수질관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0836",
+    "name": "산업폐기물처리및관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0840",
+    "name": "산업환경기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0842",
+    "name": "수공정화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0752",
+    "name": "슬러지및분뇨처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0834",
+    "name": "실내공기질관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0722",
+    "name": "용수처리공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0766",
+    "name": "유기성폐기물자원화관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0803",
+    "name": "유기성폐기물자원화특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0753",
+    "name": "유해폐기물처리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0816",
+    "name": "전과정 평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0815",
+    "name": "친환경 기업사례연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0809",
+    "name": "토양지하수오염",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0768",
+    "name": "통합유역관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0801",
+    "name": "폐기물 보전 및 자원회수",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0802",
+    "name": "폐기물감량화 및 자원화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0838",
+    "name": "폐기물의매립공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0837",
+    "name": "폐기물의퇴비공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0000",
+    "name": "학위논문연구 및 연구윤리 (환경공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0818",
+    "name": "현장실무",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0817",
+    "name": "환경경영과정(e-MBA)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0819",
+    "name": "환경기술세미나 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0820",
+    "name": "환경기술세미나 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0877",
+    "name": "환경데이터 탐색적분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0814",
+    "name": "환경법규",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0810",
+    "name": "환경분리공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0813",
+    "name": "환경시스템공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0832",
+    "name": "환경위해성평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INDC0911",
+    "name": "환경화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0811",
+    "name": "환경흡착공정",
+    "credit": "3-3-0"
+  }
+]

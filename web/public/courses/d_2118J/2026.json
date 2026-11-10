@@ -1,0 +1,146 @@
+[
+  {
+    "grade": "",
+    "code": "ENVI0847",
+    "name": "고급환경기기분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WATE0828",
+    "name": "물에너지융합기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WATE0725",
+    "name": "물환경AI",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "WATE0827",
+    "name": "상하수도관망",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WATE0825",
+    "name": "생물학적 수처리 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "WATE0724",
+    "name": "수질관리 모델링",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "WATE0721",
+    "name": "수질화학모델링 및 응용",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "WATE0727",
+    "name": "수처리설비모델링",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0852",
+    "name": "인공지능응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0716",
+    "name": "자동제어특론",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "WATE0726",
+    "name": "전산설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "MECH0718",
+    "name": "전산유체역학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "WATE0826",
+    "name": "정수처리공정 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "WATE0812",
+    "name": "제어공학특강: 센서시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0812",
+    "name": "컴퓨터비젼특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WATE0723",
+    "name": "폐수미생물과 메타게놈",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "WATE0824",
+    "name": "폐수처리공정 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "WATE0829",
+    "name": "하폐수처리 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "WATE0000",
+    "name": "학위논문연구 및 연구윤리(물∙IT융합공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FLEX0701",
+    "name": "현장실습9",
+    "credit": "3-0-4"
+  },
+  {
+    "grade": "",
+    "code": "WATE0811",
+    "name": "환경오염공정미생물",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WATE0823",
+    "name": "환경전과정평가 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0749",
+    "name": "환경정책특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WATE0722",
+    "name": "환경화학특론 및 팀프로젝트",
+    "credit": "3-2-2"
+  }
+]

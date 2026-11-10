@@ -1,0 +1,392 @@
+[
+  {
+    "grade": "",
+    "code": "ELEC0860",
+    "name": "3차원집적회로설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0817",
+    "name": "고급반도체물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0885",
+    "name": "고체소자이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0884",
+    "name": "고체전자수송론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0889",
+    "name": "광전자공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0826",
+    "name": "나노광학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0981",
+    "name": "나노기능성소자공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0876",
+    "name": "디스플레이광학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0899",
+    "name": "디스플레이소자공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0867",
+    "name": "디지털제어이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0880",
+    "name": "메모리소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0982",
+    "name": "바이오마이크로전자공",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELMA0710",
+    "name": "박막공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0775",
+    "name": "박막공학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0776",
+    "name": "박막공학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0787",
+    "name": "박막기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0830",
+    "name": "박막재료공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SEMI0701",
+    "name": "반도체 산학 프로젝트1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SEMI0702",
+    "name": "반도체 산학 프로젝트2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0742",
+    "name": "반도체고속고주파소자특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0785",
+    "name": "반도체소자특성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0713",
+    "name": "반도체재료특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0743",
+    "name": "반도체재료특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0983",
+    "name": "반도체특성평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PMEN0744",
+    "name": "분자동역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0879",
+    "name": "산화물전자소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0875",
+    "name": "생산시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0886",
+    "name": "센서공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0720",
+    "name": "시스템온칩구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0877",
+    "name": "에너지변환소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0718",
+    "name": "열전달특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0786",
+    "name": "유기반도체공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0878",
+    "name": "유연성소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0758",
+    "name": "유한요소법1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0738",
+    "name": "융합센서특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0723",
+    "name": "응용열역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PMEN0728",
+    "name": "응용재료역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0827",
+    "name": "재료강도론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0829",
+    "name": "적층제조공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0711",
+    "name": "전도열전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0872",
+    "name": "전산기원용설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0718",
+    "name": "전산유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0781",
+    "name": "전자물성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0896",
+    "name": "전자물성특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0702",
+    "name": "전자회로론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0865",
+    "name": "접촉역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PMEN0717",
+    "name": "정밀계측특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PMEN0736",
+    "name": "정밀표면공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0763",
+    "name": "제어시스템해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0868",
+    "name": "제어특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0776",
+    "name": "초소형기계기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0774",
+    "name": "최적설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0735",
+    "name": "최적제어이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCH0716",
+    "name": "콜로이드및계면화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0777",
+    "name": "태양전지특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0828",
+    "name": "파괴역학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0743",
+    "name": "표면화학특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0744",
+    "name": "표면화학특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0745",
+    "name": "표면화학특론 III",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SEMI0000",
+    "name": "학위논문연구및연구윤리(반도체)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0788",
+    "name": "화합물반도체",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0949",
+    "name": "CMOS 아날로그 회로",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0893",
+    "name": "MEMS공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0898",
+    "name": "MOS소자이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0930",
+    "name": "VLSI시스템설계",
+    "credit": "3-3-0"
+  }
+]

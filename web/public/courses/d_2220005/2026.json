@@ -1,0 +1,314 @@
+[
+  {
+    "grade": "",
+    "code": "EDUC0982",
+    "name": "가족상담",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0976",
+    "name": "개인상담실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0601",
+    "name": "교육과정",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0604",
+    "name": "교육방법및교육공학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0552",
+    "name": "교육봉사활동 2",
+    "credit": "2-0-60(시)"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0606",
+    "name": "교육사회",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0607",
+    "name": "교육심리",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0609",
+    "name": "교육철학및교육사",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0610",
+    "name": "교육평가",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0611",
+    "name": "교육학개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0612",
+    "name": "교육행정및교육경영",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0521",
+    "name": "교직실무 1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0523",
+    "name": "교직실무 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0553",
+    "name": "디지털 교육",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0766",
+    "name": "발달심리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0939",
+    "name": "사이버상담",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0899",
+    "name": "사회변화와 직업의 세계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0961",
+    "name": "사회심리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0485",
+    "name": "상담 논리 및 논술지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0761",
+    "name": "상담교재연구및지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0991",
+    "name": "상담실습및사례연구",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0992",
+    "name": "상담이론과실제",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0726",
+    "name": "상담자교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0520",
+    "name": "생활지도및상담(교직소양)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0987",
+    "name": "생활지도연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0990",
+    "name": "성격심리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHFA0343",
+    "name": "심리검사",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0214",
+    "name": "심리치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHFA0212",
+    "name": "아동발달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0998",
+    "name": "연구방법론과 통계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0704",
+    "name": "영재교육",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0995",
+    "name": "영재아상담",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0989",
+    "name": "이상심리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0960",
+    "name": "인지심리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0938",
+    "name": "적응심리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0994",
+    "name": "진로상담",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0898",
+    "name": "진로지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0973",
+    "name": "집단상담",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0703",
+    "name": "창의성 교육",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "CHFA0313",
+    "name": "청년발달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0870",
+    "name": "청소년심리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0528",
+    "name": "특수교육학개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0993",
+    "name": "특수아상담",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0962",
+    "name": "학교부적응상담",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0900",
+    "name": "학교심리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0522",
+    "name": "학교현장실습",
+    "credit": "2-0-4(주)"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0996",
+    "name": "학습부진아",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0959",
+    "name": "학습상담",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0988",
+    "name": "학습심리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0000",
+    "name": "학위논문연구 및 연구윤리 (교육학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0986",
+    "name": "행동수정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0775",
+    "name": "현장상담실습",
+    "credit": "3-2-2"
+  }
+]

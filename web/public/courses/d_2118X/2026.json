@@ -1,0 +1,272 @@
+[
+  {
+    "grade": "",
+    "code": "FADE0738",
+    "name": "계면화학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FADE0747",
+    "name": "고분자과학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0727",
+    "name": "고분자물리학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0741",
+    "name": "고분자하이드로겔과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0737",
+    "name": "고분자하이브리드소재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0726",
+    "name": "고분자화학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0747",
+    "name": "기기분석연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FADE0740",
+    "name": "기능성섬유연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FADE0748",
+    "name": "날염학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FADE0745",
+    "name": "니트공학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0738",
+    "name": "무기섬유연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0728",
+    "name": "바이오고분자특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0729",
+    "name": "바이오프린팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FADE0744",
+    "name": "방사공학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FADE0742",
+    "name": "방적공학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0739",
+    "name": "부직포제조공정연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0745",
+    "name": "산업용고분자연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FADE0750",
+    "name": "산업용섬유연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FADE0739",
+    "name": "섬유가공학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0732",
+    "name": "섬유고분자공정연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0736",
+    "name": "섬유고분자구조물성연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0730",
+    "name": "섬유고분자나노기술연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0743",
+    "name": "섬유고분자복합재료연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0733",
+    "name": "섬유고분자유변학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FADE0741",
+    "name": "섬유고분자화학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FADE0752",
+    "name": "섬유공학세미나 연구 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FADE0753",
+    "name": "섬유공학세미나 연구 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FADE0754",
+    "name": "섬유공학세미나 연구 3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FADE0733",
+    "name": "섬유공학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FADE0736",
+    "name": "섬유물리연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FADE0751",
+    "name": "섬유역학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FADE0735",
+    "name": "섬유화학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0734",
+    "name": "스마트섬유연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FADE0737",
+    "name": "염색학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0740",
+    "name": "유기재료설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0742",
+    "name": "의료용섬유재료 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FADE0743",
+    "name": "제직공학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FADE0746",
+    "name": "천연섬유고분자연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0735",
+    "name": "첨단플리스틱소재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0744",
+    "name": "친환경 섬유 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0731",
+    "name": "탄소융합소재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0724",
+    "name": "텍스타일소재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0725",
+    "name": "텍스타일제조공정연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AFME0000",
+    "name": "학위논문연구 및 연구윤리(첨단섬유재료공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0746",
+    "name": "ICT 융합섬유연구",
+    "credit": "3-3-0"
+  }
+]

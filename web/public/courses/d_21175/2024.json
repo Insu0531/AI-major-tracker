@@ -1,0 +1,1718 @@
+[
+  {
+    "grade": "",
+    "code": "ELEC0860",
+    "name": "3차원집적회로설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0995",
+    "name": "3D컴퓨터비젼",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0835",
+    "name": "가상현실특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARIN0710",
+    "name": "강화학습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0950",
+    "name": "객체지향언어특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0736",
+    "name": "견실제어이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0716",
+    "name": "계산지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0828",
+    "name": "계산지능응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0734",
+    "name": "고급적응신호처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0902",
+    "name": "고속디지털회로",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0827",
+    "name": "고장진단모니터링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0724",
+    "name": "고전력,고주파반도체설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0736",
+    "name": "고전압공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0737",
+    "name": "고전압응용특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0885",
+    "name": "고체소자이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0884",
+    "name": "고체전자수송론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0725",
+    "name": "고출력마이크로파시스템응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0708",
+    "name": "공진형전력변환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GRAD0731",
+    "name": "공학논문 작성의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0701",
+    "name": "공학논문작성법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0773",
+    "name": "광도파소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0820",
+    "name": "광생체단층영상시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0767",
+    "name": "광섬유통신이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0769",
+    "name": "광신호처리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0875",
+    "name": "광연산",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0821",
+    "name": "광음향공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0889",
+    "name": "광전자공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0819",
+    "name": "광정보처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0948",
+    "name": "광정보처리개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0872",
+    "name": "광통신소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0762",
+    "name": "광파공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0873",
+    "name": "광파공학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0768",
+    "name": "광파측정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0848",
+    "name": "광학 시스템 설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "COMP0720",
+    "name": "기계학습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0990",
+    "name": "기술경영과 IT창업전략",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0989",
+    "name": "기초현대광학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0826",
+    "name": "나노광학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0743",
+    "name": "나노구조및소자분석기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0981",
+    "name": "나노기능성소자공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0728",
+    "name": "나노바이오소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0744",
+    "name": "나노에너지하베스팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0776",
+    "name": "네트워크기반제어시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0951",
+    "name": "네트워킹기술특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0729",
+    "name": "뇌신호처리실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0835",
+    "name": "다변수제어시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0746",
+    "name": "다중물리계해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0752",
+    "name": "대기이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0756",
+    "name": "대형전력계통해석기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0749",
+    "name": "데이타공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0777",
+    "name": "데이터마이닝개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0771",
+    "name": "데이터마이닝특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0876",
+    "name": "디스플레이광학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0899",
+    "name": "디스플레이소자공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0932",
+    "name": "디스플레이시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0701",
+    "name": "디지털신호처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0984",
+    "name": "디지털영상처리개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0985",
+    "name": "디지털영상처리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0803",
+    "name": "디지털영상합성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0733",
+    "name": "디지털제어시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0741",
+    "name": "디지털통신특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0744",
+    "name": "디지털VLSI 백엔드 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0743",
+    "name": "디지털VLSI 프론트엔드 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0722",
+    "name": "로봇비젼",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0734",
+    "name": "로봇제어특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0779",
+    "name": "마이크로그리드전원",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0763",
+    "name": "마이크로파계통",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0764",
+    "name": "마이크로파소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0756",
+    "name": "멀티미디어공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0831",
+    "name": "멀티미디어특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0750",
+    "name": "멀티미디어SOC설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0880",
+    "name": "메모리소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0798",
+    "name": "무선 통신을 위한  정보 이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0863",
+    "name": "무선공학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0792",
+    "name": "무선전력전송응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0890",
+    "name": "미래 모빌리티 기술동향 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0894",
+    "name": "미래 모빌리티 기술동향2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0869",
+    "name": "밀리미터파공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0960",
+    "name": "밀리미터파공학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0982",
+    "name": "바이오마이크로전자공",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0822",
+    "name": "바이오메디컬 시스템반도체 융합기초설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0850",
+    "name": "바이오메디컬 시스템반도체 융합심화설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0849",
+    "name": "바이오메디컬 시스템반도체의 이해",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0891",
+    "name": "반도체고속고주파소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0742",
+    "name": "반도체고속고주파소자특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0882",
+    "name": "반도체공정기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0785",
+    "name": "반도체소자특성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0729",
+    "name": "반도체양자수송론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0795",
+    "name": "반도체재료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0983",
+    "name": "반도체특성평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0868",
+    "name": "복사및회절이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0746",
+    "name": "부호이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0751",
+    "name": "분산처리시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0714",
+    "name": "비디오공학론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0834",
+    "name": "비선형제어시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0739",
+    "name": "비파괴단층진단공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0861",
+    "name": "산란파통신",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0879",
+    "name": "산화물전자소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0826",
+    "name": "삼성반도체특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0779",
+    "name": "생체광공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0807",
+    "name": "생체신호해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0712",
+    "name": "생체전자공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0966",
+    "name": "서보제어시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0731",
+    "name": "선형계통론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0866",
+    "name": "선형및비선형전파이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0711",
+    "name": "선형시스템해석과 제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0886",
+    "name": "센서공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0742",
+    "name": "센서네트워크공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0739",
+    "name": "센서소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0740",
+    "name": "센서시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0741",
+    "name": "센서회로",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0730",
+    "name": "소프트웨어공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0780",
+    "name": "소프트컴퓨팅개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0820",
+    "name": "소프트컴퓨팅특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0752",
+    "name": "스마트그리드공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0791",
+    "name": "스마트그리드통신",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0720",
+    "name": "시스템온칩구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0710",
+    "name": "시스템온칩설계방법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0836",
+    "name": "신경망특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0805",
+    "name": "신경회로망",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0838",
+    "name": "신경회로망학습제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0718",
+    "name": "신뢰도해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0780",
+    "name": "신재생에너지특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CICE0803",
+    "name": "신호처리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0811",
+    "name": "신호해석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0819",
+    "name": "실시간시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0732",
+    "name": "심리색채공학론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0817",
+    "name": "아날로그회로특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0924",
+    "name": "아날로그VLSI설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0959",
+    "name": "안테나설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0958",
+    "name": "안테나이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0952",
+    "name": "암호학이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0825",
+    "name": "암호학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0782",
+    "name": "양자전자공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0772",
+    "name": "양자전자공학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0877",
+    "name": "에너지변환소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0745",
+    "name": "연속체전자기역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0748",
+    "name": "영상신호처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0744",
+    "name": "영상통신",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0969",
+    "name": "영상해석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0726",
+    "name": "오디오신호처리실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "COMP0737",
+    "name": "운영체제특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0771",
+    "name": "위성통신시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0844",
+    "name": "유도제어론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0878",
+    "name": "유연성소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0747",
+    "name": "음성신호처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0725",
+    "name": "음성신호처리실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0853",
+    "name": "음성신호처리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0791",
+    "name": "음향공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0784",
+    "name": "응용전자기학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EECS0716",
+    "name": "의료·바이오시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0992",
+    "name": "의료광음향론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0740",
+    "name": "의료분광시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0727",
+    "name": "의료영상복원 및 처리실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0709",
+    "name": "의용센서시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0935",
+    "name": "의용화상시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0936",
+    "name": "의용화상처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0753",
+    "name": "이동통신시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0774",
+    "name": "이동통신특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EECS0902",
+    "name": "이상신호 분석 및 처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EECS0714",
+    "name": "인공지능기반 의료영상처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0852",
+    "name": "인공지능응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0739",
+    "name": "인공지능특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0945",
+    "name": "인터넷프로그래밍응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EECS0711",
+    "name": "임베디드 기계학습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0740",
+    "name": "임베디드시스템을 위한 소프트웨어공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0764",
+    "name": "임베디드시스템특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0770",
+    "name": "자동차비전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0864",
+    "name": "장및파동",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0831",
+    "name": "적응제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EECS0715",
+    "name": "적층제조세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0731",
+    "name": "전기공학특강 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0732",
+    "name": "전기공학특강 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0733",
+    "name": "전기공학특강 3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0734",
+    "name": "전기공학특강 4",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0717",
+    "name": "전기기계설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0737",
+    "name": "전기기기제어론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0748",
+    "name": "전기응용기계역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0998",
+    "name": "전기자동차공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0763",
+    "name": "전동기구동시스템설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0749",
+    "name": "전동기설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0836",
+    "name": "전동기제어시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0753",
+    "name": "전력경제특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0765",
+    "name": "전력계통계획",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0703",
+    "name": "전력계통안정도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0755",
+    "name": "전력계통운영및제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0702",
+    "name": "전력계통운용특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0701",
+    "name": "전력계통제어특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0741",
+    "name": "전력반도체소자특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0900",
+    "name": "전력변환기동특성해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0800",
+    "name": "전력변환시스템해석및설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0931",
+    "name": "전력변환회로",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0839",
+    "name": "전력변환회로및시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0738",
+    "name": "전력전자공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0739",
+    "name": "전력전자회로해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0769",
+    "name": "전력품질",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0735",
+    "name": "전리기체특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0871",
+    "name": "전리층전파전파",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0750",
+    "name": "전자기력특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0747",
+    "name": "전자기열유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0781",
+    "name": "전자물성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0896",
+    "name": "전자물성특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0810",
+    "name": "전자장론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0734",
+    "name": "전자장수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0897",
+    "name": "전자재료공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0761",
+    "name": "전자파공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0702",
+    "name": "전자회로론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0766",
+    "name": "전파이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0743",
+    "name": "정보보안",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0856",
+    "name": "정보보호시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0837",
+    "name": "정보보호특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0745",
+    "name": "정보이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0822",
+    "name": "정보통신특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0738",
+    "name": "정전기공학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0962",
+    "name": "제어공학특강1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0963",
+    "name": "제어공학특강2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0823",
+    "name": "제어기술연구동향",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0832",
+    "name": "제어시스템컴퓨터설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0968",
+    "name": "제어시스템프로젝트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0754",
+    "name": "제어이론특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0964",
+    "name": "제어특강1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0965",
+    "name": "제어특강2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0953",
+    "name": "주기구조이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0954",
+    "name": "주기구조특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0837",
+    "name": "지능로보트공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0946",
+    "name": "지능시스템설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0731",
+    "name": "지능제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0736",
+    "name": "지능형 문제해결 심화프로젝트",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0746",
+    "name": "지능형 문제해결 심화프로젝트 2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0735",
+    "name": "지능형 문제해결 프로젝트",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0745",
+    "name": "지능형 문제해결 프로젝트 2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0737",
+    "name": "지능형광음향공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0770",
+    "name": "지능형반도체소자 및 시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EECS0903",
+    "name": "지능형센서융합",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0738",
+    "name": "지능형의료기기설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0874",
+    "name": "집적광학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0921",
+    "name": "집적회로설계기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0994",
+    "name": "차량 동적 모델링 제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0830",
+    "name": "차량용운영체제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0829",
+    "name": "차량통신과네크워크기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIEE0744",
+    "name": "차세대이동통신특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0730",
+    "name": "청각인지 및 음향심리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0716",
+    "name": "최적설계이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0732",
+    "name": "최적제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0842",
+    "name": "최적화이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0961",
+    "name": "추정및추적",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0715",
+    "name": "컴퓨터그래픽개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0947",
+    "name": "컴퓨터그래픽스응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0750",
+    "name": "컴퓨터비젼",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0716",
+    "name": "컴퓨터비젼개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0824",
+    "name": "컴퓨터비젼특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0812",
+    "name": "컴퓨터비젼특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0973",
+    "name": "컴퓨터연산특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0840",
+    "name": "컴퓨터운영체제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0706",
+    "name": "컴퓨터조직론특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0847",
+    "name": "컴퓨터지원 광기계 설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0754",
+    "name": "컴퓨터통신망특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0771",
+    "name": "태양광발전시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0728",
+    "name": "통계적 추론 및 기계 학습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0862",
+    "name": "통신기기설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0971",
+    "name": "통신망설계및분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0858",
+    "name": "통신망운용및관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0755",
+    "name": "통신소프트웨어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0970",
+    "name": "통신신호처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0735",
+    "name": "퍼지제어시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0774",
+    "name": "풍력발전특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0731",
+    "name": "프로그래밍언어특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0956",
+    "name": "플라즈마전자공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0000",
+    "name": "학위논문연구 및 연구윤리(전자전기공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0801",
+    "name": "형태인식론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0938",
+    "name": "화상시스템특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0939",
+    "name": "화상처리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0788",
+    "name": "화합물반도체",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0743",
+    "name": "확률과정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0986",
+    "name": "확률제어이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0928",
+    "name": "회로설계자동화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0949",
+    "name": "CMOS 아날로그 회로",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0808",
+    "name": "FPGA기반설계및검증",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0993",
+    "name": "ICT융합 모바일 광영상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0893",
+    "name": "MEMS공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0898",
+    "name": "MOS소자이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0846",
+    "name": "Programming 실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0726",
+    "name": "RF집적회로설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0977",
+    "name": "VLSI메모리설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0930",
+    "name": "VLSI시스템설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0718",
+    "name": "VLSI신호처리",
+    "credit": "3-3-0"
+  }
+]

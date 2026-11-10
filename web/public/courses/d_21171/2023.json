@@ -1,0 +1,266 @@
+[
+  {
+    "grade": "",
+    "code": "ROSS0707",
+    "name": "건설 기능특화 로봇 프로젝트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0714",
+    "name": "고급인공지능특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0719",
+    "name": "고급임베디드시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0711",
+    "name": "네트워크 기반 로봇",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0717",
+    "name": "로봇 기술 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0708",
+    "name": "로봇 동역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0803",
+    "name": "로봇 비젼 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0705",
+    "name": "로봇 센서 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0701",
+    "name": "로봇 제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0918",
+    "name": "로봇공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0704",
+    "name": "로봇구동시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0720",
+    "name": "로봇메커니즘응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0806",
+    "name": "로봇설계공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0705",
+    "name": "로봇수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0708",
+    "name": "로봇전문가기술특강",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0734",
+    "name": "로봇제어특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0811",
+    "name": "마이크로/나노 로봇",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0702",
+    "name": "머신러닝특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0721",
+    "name": "모바일로봇메커니즘",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0716",
+    "name": "모빌리티레이저응용특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0710",
+    "name": "모빌리티유도제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0709",
+    "name": "모빌리티항법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0807",
+    "name": "바이오 로봇 공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0703",
+    "name": "비선형시스템제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0701",
+    "name": "선형제어시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0703",
+    "name": "소프트로봇",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0711",
+    "name": "스마트모빌리티시티",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0715",
+    "name": "스마트팩토리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0713",
+    "name": "알고리즘 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0710",
+    "name": "이동로봇 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0804",
+    "name": "인간기계상호작용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0713",
+    "name": "인공지능설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0876",
+    "name": "제어응용시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0837",
+    "name": "지능로보트공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0801",
+    "name": "지능제어 이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EECS0903",
+    "name": "지능형센서융합",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0717",
+    "name": "지능형자동차시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0732",
+    "name": "최적제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0718",
+    "name": "친환경자동차시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0812",
+    "name": "컴퓨터비젼특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0000",
+    "name": "학위논문연구 및 연구윤리 (로봇 및 스마트시스템공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0712",
+    "name": "해양로봇특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0704",
+    "name": "햅틱인터랙션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0712",
+    "name": "휴머노이드 로봇",
+    "credit": "3-3-0"
+  }
+]

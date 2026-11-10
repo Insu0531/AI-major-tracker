@@ -1,0 +1,350 @@
+[
+  {
+    "grade": "",
+    "code": "NAMA0785",
+    "name": "2차원 나노소재특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0781",
+    "name": "고등 유한 요소법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0701",
+    "name": "고등 파괴 역학  I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0702",
+    "name": "고등 파괴 역학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0721",
+    "name": "광학재료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0705",
+    "name": "기능성재료특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0706",
+    "name": "기능성재료특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0783",
+    "name": "나노소자특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0709",
+    "name": "나노소재 물성의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0707",
+    "name": "나노소재 합성 및 분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0714",
+    "name": "나노재료 공정 및 분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0708",
+    "name": "디스플레이 소재 및 소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0719",
+    "name": "디스플레이특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0730",
+    "name": "박막특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0731",
+    "name": "박막특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0746",
+    "name": "반도체신소재특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0747",
+    "name": "반도체신소재특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0720",
+    "name": "배터리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0741",
+    "name": "비철 공학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0733",
+    "name": "세라믹공정특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0732",
+    "name": "세라믹공학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0895",
+    "name": "센서공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0775",
+    "name": "스마트세라믹특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0735",
+    "name": "신소재결정학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0745",
+    "name": "신소재상변태특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0734",
+    "name": "신소재응용특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0738",
+    "name": "에너지신소재특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0779",
+    "name": "에너지재료특론Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0722",
+    "name": "에너지저장재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0774",
+    "name": "유전체 세라믹스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0737",
+    "name": "자성박막특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0778",
+    "name": "자성재료특론Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0715",
+    "name": "재료 과학 및 논문작성법 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0716",
+    "name": "재료 과학 및 논문작성법 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0744",
+    "name": "재료 시험법 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0782",
+    "name": "재료 인공 지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0784",
+    "name": "재료물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0717",
+    "name": "재료전기화학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0718",
+    "name": "재료전기화학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0756",
+    "name": "재료전산특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0703",
+    "name": "재료합성공정특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0704",
+    "name": "재료합성공정특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0776",
+    "name": "전자세라믹 소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0748",
+    "name": "전자재료특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0749",
+    "name": "전자재료특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0723",
+    "name": "차세대 반도체 공정 및 소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0724",
+    "name": "차세대 복합재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0725",
+    "name": "차세대 이차전지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0740",
+    "name": "철강 공학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0713",
+    "name": "청정에너지특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0742",
+    "name": "탄 소성학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0739",
+    "name": "태양광신소재특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0710",
+    "name": "표면공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0712",
+    "name": "표면특성론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0711",
+    "name": "하이브리드재료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAME0000",
+    "name": "학위논문연구 및 연구윤리(나노신소재공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0736",
+    "name": "X-선회절실험특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0777",
+    "name": "X-선회절특론Ⅱ",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,566 @@
+[
+  {
+    "grade": "",
+    "code": "COPE0736",
+    "name": "건설환경분석화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0779",
+    "name": "건설환경생태공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0795",
+    "name": "건설환경설계세미나 Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0796",
+    "name": "건설환경설계세미나 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0737",
+    "name": "고급구조동역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0776",
+    "name": "고도산화처리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0768",
+    "name": "고도정수처리공정설계 Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0772",
+    "name": "고도정수처리공정설계 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0769",
+    "name": "고도하수처리공정설계 Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0773",
+    "name": "고도하수처리공정설계 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0738",
+    "name": "구조물내진설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIVL0710",
+    "name": "구조물소성해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0711",
+    "name": "구조물진단 및 안전관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0723",
+    "name": "구조물해체공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0739",
+    "name": "기초공학설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0797",
+    "name": "논문작성기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CEEM0728",
+    "name": "대기환경과학 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0725",
+    "name": "도시 상하수도시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0775",
+    "name": "도시방재론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0707",
+    "name": "도시방재시설공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0784",
+    "name": "도시수문학 Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0789",
+    "name": "도시수문학 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0740",
+    "name": "레이더 기상학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0761",
+    "name": "막처리공학 Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0762",
+    "name": "막처리공학 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0722",
+    "name": "발파공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0774",
+    "name": "방사능폐수처리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0710",
+    "name": "방재구조물설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0709",
+    "name": "방재역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0718",
+    "name": "사면안정공학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0777",
+    "name": "상하수관거관리공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0735",
+    "name": "생물처리공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0701",
+    "name": "세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0702",
+    "name": "수리수문학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0786",
+    "name": "수문수자원설계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0788",
+    "name": "수문홍수계획분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0708",
+    "name": "수자원관리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0791",
+    "name": "수자원세미나 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0787",
+    "name": "수자원세미나Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0790",
+    "name": "수자원시스템 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0783",
+    "name": "수자원시스템Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0792",
+    "name": "수처리 및 수질관리세미나 Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0793",
+    "name": "수처리 및 수질관리세미나 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0734",
+    "name": "슬러지처리공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0724",
+    "name": "시추공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0726",
+    "name": "신건설환경공학특론 Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0727",
+    "name": "신건설환경공학특론 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0766",
+    "name": "신수질관리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0778",
+    "name": "신재생물관리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0780",
+    "name": "여과처리공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0798",
+    "name": "원격탐사자료 해석 및 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0741",
+    "name": "응용구조해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0742",
+    "name": "응용매트릭스구조해석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0728",
+    "name": "응용상수도공학특론 Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0729",
+    "name": "응용상수도공학특론 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CEEM0708",
+    "name": "응용수문시스템공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CEEM0720",
+    "name": "응용전산수문특론Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CEEM0721",
+    "name": "응용전산수문특론Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0767",
+    "name": "응용전산수처리공학 Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0771",
+    "name": "응용전산수처리공학 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0732",
+    "name": "응용중수도공학특론 Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0733",
+    "name": "응용중수도공학특론 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0730",
+    "name": "응용하수도공학특론 Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0731",
+    "name": "응용하수도공학특론 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0712",
+    "name": "자연재해특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0713",
+    "name": "재난사례분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0822",
+    "name": "재료역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0706",
+    "name": "재해영향평가 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0714",
+    "name": "재해통계학륵론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0775",
+    "name": "저탄소시스템관리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0720",
+    "name": "지반안전공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0717",
+    "name": "지반재해공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0715",
+    "name": "지진방재학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0719",
+    "name": "지하공간관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0743",
+    "name": "철근콘크리트구조물설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0785",
+    "name": "추계수문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIVL0708",
+    "name": "탄성안정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0763",
+    "name": "탈염공학특론 Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0764",
+    "name": "탈염공학특론 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0716",
+    "name": "토석류공학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0721",
+    "name": "토양생태복원 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0770",
+    "name": "토양지하수오염관리 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0765",
+    "name": "토양지하수오염관리Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0703",
+    "name": "통합방재시스템공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0738",
+    "name": "파괴역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0794",
+    "name": "폐자원 및 토양오염세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0781",
+    "name": "폐자원관리특론 Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0782",
+    "name": "폐자원관리특론 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0705",
+    "name": "풍수해 방재시스템공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0704",
+    "name": "하천방재공학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0000",
+    "name": "학위논문연구 및 연구윤리(건설방재공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0744",
+    "name": "환경안전모델링특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0745",
+    "name": "환경안전유기화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0746",
+    "name": "환경안전화학특론",
+    "credit": "3-3-0"
+  }
+]

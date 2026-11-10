@@ -60,7 +60,7 @@ export default function MajorPicker({
             {list.length === 0 && <div className="pl-empty">찾는 학과가 없어요</div>}
             {list.map((m) => (
               <button key={m.key} type="button" aria-current={m.key === value} onClick={() => { onChange(m.key); setOpen(false); }}>
-                {m.label}{m.auto && <span className="pl-badge" style={{ marginLeft: 6 }}>신규</span>}
+                {m.label}{m.auto && !m.level && <span className="pl-badge" style={{ marginLeft: 6 }}>신규</span>}
               </button>
             ))}
           </div>

@@ -1,0 +1,338 @@
+[
+  {
+    "grade": "",
+    "code": "AGEC0709",
+    "name": "경제발전과농업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0707",
+    "name": "경제분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0701",
+    "name": "경제학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0901",
+    "name": "경제학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0727",
+    "name": "계량경제학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0904",
+    "name": "계량경제학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0921",
+    "name": "국제농업론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0705",
+    "name": "농산물가격분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0902",
+    "name": "농산물가격분석연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0718",
+    "name": "농산물국제교역 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0914",
+    "name": "농산물무역특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0903",
+    "name": "농산물유통분석연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0706",
+    "name": "농산물유통연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0712",
+    "name": "농업경영학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0924",
+    "name": "농업경제변동론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0710",
+    "name": "농업경제사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0702",
+    "name": "농업경제학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0703",
+    "name": "농업경제학연구 방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0719",
+    "name": "농업경제학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0928",
+    "name": "농업경제학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0717",
+    "name": "농업금융연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0716",
+    "name": "농업단체론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0913",
+    "name": "농업단체특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0927",
+    "name": "농업연관산업론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0720",
+    "name": "농업정책연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0915",
+    "name": "농업정책특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0923",
+    "name": "농업통계 및 관측",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0715",
+    "name": "농업투자분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0908",
+    "name": "농장경영의사결정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0918",
+    "name": "농장계획론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0932",
+    "name": "농촌개발특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0934",
+    "name": "농촌관광특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0723",
+    "name": "농촌사회조직론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0714",
+    "name": "농촌사회학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0933",
+    "name": "농촌조사방법특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0929",
+    "name": "도시농업론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0926",
+    "name": "비교농업정책론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0704",
+    "name": "생산경제학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0925",
+    "name": "생산경제학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0907",
+    "name": "수리경제학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0726",
+    "name": "수산경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0930",
+    "name": "수산경제학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0733",
+    "name": "시계열분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0920",
+    "name": "식량경제론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0725",
+    "name": "식품수요분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0931",
+    "name": "일반균형론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0708",
+    "name": "자원경제학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0905",
+    "name": "자원경제학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0916",
+    "name": "지대론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0702",
+    "name": "지역경제학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0724",
+    "name": "지역농업발전과협동조합",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0917",
+    "name": "지역농업특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0713",
+    "name": "토지경제학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0711",
+    "name": "통계적분석방법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0000",
+    "name": "학위논문연구 및 연구윤리 (농업경제학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0722",
+    "name": "환경경제학연구",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "grade": "",
+    "code": "BIFI0766",
+    "name": "고급 바이오컨쥬게이트 화학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0767",
+    "name": "고급 바이오컨쥬게이트 화학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0728",
+    "name": "고분자화학특론Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0729",
+    "name": "고분자화학특론Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0732",
+    "name": "기기분석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0755",
+    "name": "기능성 나노소재공학Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0756",
+    "name": "기능성 나노소재공학Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0762",
+    "name": "기능성 마이크로캡슐 특론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0763",
+    "name": "기능성 마이크로캡슐 특론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0733",
+    "name": "기능성 바이오섬유소재공학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0732",
+    "name": "기능성 바이오섬유소재공학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0725",
+    "name": "기능성유기고분자소재 특론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0726",
+    "name": "기능성유기고분자소재 특론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0743",
+    "name": "나노바이오복합섬유공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0738",
+    "name": "나노섬유공학특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0739",
+    "name": "나노섬유공학특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0737",
+    "name": "바이오섬유소재 구조분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0717",
+    "name": "바이오섬유소재 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0751",
+    "name": "바이오섬유재료특론Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0752",
+    "name": "바이오섬유재료특론Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0746",
+    "name": "복합재료계면화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0744",
+    "name": "부직포공학 특론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0745",
+    "name": "부직포공학 특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0734",
+    "name": "생분해성고분자공학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0757",
+    "name": "생분해성고분자공학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0736",
+    "name": "생체고분자재료공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0758",
+    "name": "섬유고분자 3D프린팅 특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0759",
+    "name": "섬유고분자 3D프린팅 특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0747",
+    "name": "섬유복합재료공학특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0748",
+    "name": "섬유복합재료공학특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0713",
+    "name": "스마트섬유",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0760",
+    "name": "유연소재 및 응용 특론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0761",
+    "name": "유연소재 및 응용 특론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0735",
+    "name": "재생섬유공학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0753",
+    "name": "탄소복합체공학특론Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0754",
+    "name": "탄소복합체공학특론Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0749",
+    "name": "탄소소재공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0764",
+    "name": "하이드로겔의 제작 및 응용 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0765",
+    "name": "하이드로겔의 제작 및 응용 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0000",
+    "name": "학위논문연구 및 연구윤리(바이오섬유소재학)",
+    "credit": "3-3-0"
+  }
+]

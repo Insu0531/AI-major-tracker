@@ -1,0 +1,308 @@
+[
+  {
+    "grade": "",
+    "code": "URRE0714",
+    "name": "경관계획 및 디자인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0932",
+    "name": "경관론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0763",
+    "name": "경관영향평가론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0907",
+    "name": "공간환경계획론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0725",
+    "name": "공원경영관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0901",
+    "name": "공원경영론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0712",
+    "name": "공원녹지발달사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0911",
+    "name": "공원녹지발달사특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0764",
+    "name": "공원녹지법규 및 정책",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0951",
+    "name": "관상식물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0904",
+    "name": "광역경관계획특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0738",
+    "name": "기후변화와 도시환경",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0762",
+    "name": "녹지계획연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0961",
+    "name": "녹지계획특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0771",
+    "name": "도시경관관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0967",
+    "name": "도시공간과 기후탄력성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0913",
+    "name": "도시공원특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0761",
+    "name": "도시생태론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0902",
+    "name": "도시생태특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0966",
+    "name": "도시환경정책세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0751",
+    "name": "배식계획학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0903",
+    "name": "생태경관특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0724",
+    "name": "식생관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0954",
+    "name": "식생조사론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0755",
+    "name": "실내조경학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0721",
+    "name": "조경관리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0933",
+    "name": "조경설계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0952",
+    "name": "조경수목학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0753",
+    "name": "조경식물분류학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0953",
+    "name": "조경식물생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0722",
+    "name": "조경식재특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0735",
+    "name": "조경연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0924",
+    "name": "조경운영관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0723",
+    "name": "조경이용관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0765",
+    "name": "조경지리정보체계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0922",
+    "name": "지역계획특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0711",
+    "name": "풍경계획론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0912",
+    "name": "풍경계획특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0923",
+    "name": "풍치보전특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0000",
+    "name": "학위논문연구 및 연구윤리 (조경학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0737",
+    "name": "현대조경론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0733",
+    "name": "환경미학론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0931",
+    "name": "환경미학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0921",
+    "name": "환경보전관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0746",
+    "name": "환경생태론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0963",
+    "name": "환경생태특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0906",
+    "name": "환경설계세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0905",
+    "name": "환경설계연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0965",
+    "name": "환경심리행태특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0745",
+    "name": "환경영향평가방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LARC0736",
+    "name": "환경행태심리",
+    "credit": "3-3-0"
+  }
+]

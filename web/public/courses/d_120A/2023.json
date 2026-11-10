@@ -1,0 +1,134 @@
+[
+  {
+    "grade": "1",
+    "code": "COME0301",
+    "name": "이산수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "LIBR0428",
+    "name": "정보기술과 인간",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ITEC0201",
+    "name": "컴퓨터학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "COMP0453",
+    "name": "컴퓨팅사고와 SW코딩",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "LIBR0362",
+    "name": "검색엔진",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DIIM0214",
+    "name": "데이터큐레이션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "LIBR0333",
+    "name": "디지털도서관론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0452",
+    "name": "빅데이터융합개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0224",
+    "name": "소프트웨어설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0451",
+    "name": "인공지능융합기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COME0331",
+    "name": "자료구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0217",
+    "name": "자바프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "LIBR0325",
+    "name": "정보자원목록론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DIIM0212",
+    "name": "데이터베이스 디자인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DIIM0211",
+    "name": "디지털정보검색",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0328",
+    "name": "모바일앱프로그래밍1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0312",
+    "name": "운영체제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LIBR0464",
+    "name": "웹프로그래밍의 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "LIBR0462",
+    "name": "이용자인터페이스론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0416",
+    "name": "고급웹프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "LIBR0357",
+    "name": "도서관 · 정보센터 실습",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0324",
+    "name": "인공지능",
+    "credit": "3-3-0"
+  }
+]

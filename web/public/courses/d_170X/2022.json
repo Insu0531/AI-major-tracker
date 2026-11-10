@@ -1,0 +1,128 @@
+[
+  {
+    "grade": "2",
+    "code": "ADNK0212",
+    "name": "북한농업개발학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ADNK0211",
+    "name": "북한농업의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HORT0292",
+    "name": "원예토양비료학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "MECH0332",
+    "name": "유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "DPBS0312",
+    "name": "작물생리학및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "AGRO0292",
+    "name": "재배학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CVLE0403",
+    "name": "구조역학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DPBS0358",
+    "name": "식물육종학및실험2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ACEN0422",
+    "name": "응용수문학 및 설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ACEN0415",
+    "name": "저수지공학및설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ACEN0423",
+    "name": "지반공학 및 실험1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ACEN0424",
+    "name": "지반공학 및 실험2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DPBS0408",
+    "name": "IT와 식물산업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ADNK0222",
+    "name": "고랭지농업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ACEN0347",
+    "name": "관개배수공학및설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ACEN0467",
+    "name": "농업시설공학 및 설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ACHE0405",
+    "name": "비료자재학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DPBS0409",
+    "name": "생명기술산업학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SMFA0212",
+    "name": "스마트팜기반조성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ADNK0221",
+    "name": "절수농업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DPBS0403",
+    "name": "종자생산 및 조직배양",
+    "credit": "3-3-0"
+  }
+]

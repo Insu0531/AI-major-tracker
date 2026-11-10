@@ -1,0 +1,140 @@
+[
+  {
+    "grade": "",
+    "code": "ELEC0776",
+    "name": "네트워크기반제어시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0728",
+    "name": "디지털시스템공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0701",
+    "name": "디지털신호처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0890",
+    "name": "미래 모빌리티 기술동향 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0894",
+    "name": "미래 모빌리티 기술동향2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0731",
+    "name": "선형계통론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FVIT0703",
+    "name": "스마트 자동차 전자공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0805",
+    "name": "신경회로망",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0838",
+    "name": "신경회로망학습제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0819",
+    "name": "실시간시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0852",
+    "name": "인공지능응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0740",
+    "name": "임베디드시스템을 위한 소프트웨어공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FVIT0702",
+    "name": "자율주행 시스템 개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0856",
+    "name": "정보보호시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0946",
+    "name": "지능시스템설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0994",
+    "name": "차량 동적 모델링 제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0830",
+    "name": "차량용운영체제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0829",
+    "name": "차량통신과네크워크기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0750",
+    "name": "컴퓨터비젼",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0840",
+    "name": "컴퓨터운영체제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FVIT0701",
+    "name": "프로젝트 입문설계 및 현장실습",
+    "credit": "3-1-4"
+  },
+  {
+    "grade": "",
+    "code": "FVIT0000",
+    "name": "학위논문연구 및 연구윤리(미래자동차·IT융합학과)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0801",
+    "name": "형태인식론",
+    "credit": "3-3-0"
+  }
+]

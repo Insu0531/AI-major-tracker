@@ -1,0 +1,284 @@
+[
+  {
+    "grade": "",
+    "code": "PHYS0780",
+    "name": "가속기물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0709",
+    "name": "고급광전환에너지기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0711",
+    "name": "고급에너지기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0829",
+    "name": "고급표면화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0715",
+    "name": "고에너지 가속기 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0706",
+    "name": "고전역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0723",
+    "name": "고체촉매화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0708",
+    "name": "광전기에너지변환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0710",
+    "name": "광촉매 환경 응용학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0827",
+    "name": "나노소재화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0730",
+    "name": "바이오에너지 대량생산",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0728",
+    "name": "바이오에너지 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0724",
+    "name": "발전로 안전공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0722",
+    "name": "방사선공학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0723",
+    "name": "방사선공학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0716",
+    "name": "불균일촉매",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0718",
+    "name": "비선형 빔 역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0714",
+    "name": "빔 역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0719",
+    "name": "빔 진단",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0729",
+    "name": "생물학적 수에너지회수",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0717",
+    "name": "선형 가속기 물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0708",
+    "name": "수리물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0712",
+    "name": "수소에너지공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0703",
+    "name": "양자역학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0701",
+    "name": "에너지과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0702",
+    "name": "에너지과학특강1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0703",
+    "name": "에너지과학특강2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0704",
+    "name": "에너지과학특강3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0705",
+    "name": "에너지과학특강4",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0726",
+    "name": "원자력특강1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0727",
+    "name": "원자력특강2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0720",
+    "name": "원자로물리1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0721",
+    "name": "원자로물리2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0716",
+    "name": "원형 가속기 물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0707",
+    "name": "응용통계물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0744",
+    "name": "응용핵물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0745",
+    "name": "응용핵물리학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0709",
+    "name": "입자물리학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0737",
+    "name": "입자물리학이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0771",
+    "name": "전기분석화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0701",
+    "name": "전자기학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0702",
+    "name": "전자기학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0000",
+    "name": "학위논문연구 및 연구윤리(에너지과학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0808",
+    "name": "핵물리학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0725",
+    "name": "핵연료주기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0759",
+    "name": "환경촉매공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0715",
+    "name": "흡착공정",
+    "credit": "3-3-0"
+  }
+]

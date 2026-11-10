@@ -1,0 +1,170 @@
+[
+  {
+    "grade": "",
+    "code": "COME0835",
+    "name": "가상현실특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0713",
+    "name": "객체지향특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0718",
+    "name": "고급프로그래밍언어론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0771",
+    "name": "데이터마이닝특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0733",
+    "name": "데이터베이스특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0831",
+    "name": "멀티미디어특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0778",
+    "name": "모바일컴퓨팅특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0730",
+    "name": "소프트웨어공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0813",
+    "name": "수치해석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0812",
+    "name": "알고리즘특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0737",
+    "name": "운영체제특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0762",
+    "name": "웹기술특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0772",
+    "name": "유비쿼터스컴퓨팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0739",
+    "name": "인공지능특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0773",
+    "name": "임베디드 소프트웨어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0764",
+    "name": "임베디드시스템특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0737",
+    "name": "자료구조특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0842",
+    "name": "자연언어처리특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0832",
+    "name": "전산공학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0837",
+    "name": "정보보호특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0744",
+    "name": "지식공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0746",
+    "name": "컴퓨터구조특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0747",
+    "name": "컴퓨터그래픽스특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0742",
+    "name": "컴퓨터망특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0824",
+    "name": "컴퓨터비젼특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0755",
+    "name": "패턴인식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0731",
+    "name": "프로그래밍언어특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0000",
+    "name": "학위논문연구 및 연구윤리(컴퓨터공학)",
+    "credit": "3-3-0"
+  }
+]

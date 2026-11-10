@@ -1,0 +1,224 @@
+[
+  {
+    "grade": "",
+    "code": "WELF0865",
+    "name": "구조방정식모형의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0763",
+    "name": "노인복지정책연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0789",
+    "name": "논문작성과 연구윤리 Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0790",
+    "name": "논문작성과 연구윤리 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0866",
+    "name": "메타분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0871",
+    "name": "복지국가와 기본소득론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0872",
+    "name": "복지국가의 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0815",
+    "name": "복지전달체계와 거버넌스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0970",
+    "name": "비교사회정책론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0807",
+    "name": "비영리조직론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0805",
+    "name": "빈곤 거버넌스 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0912",
+    "name": "사회문제론세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0802",
+    "name": "사회보장의 경제적 분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0814",
+    "name": "사회복지 데이터 분석 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0808",
+    "name": "사회복지거시이론 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0760",
+    "name": "사회복지경영론 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0809",
+    "name": "사회복지담론 비평",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0813",
+    "name": "사회복지역사 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0860",
+    "name": "사회복지와 경제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0801",
+    "name": "사회복지와 데이터 시각화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0804",
+    "name": "사회복지와 법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0955",
+    "name": "사회복지정책론세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0972",
+    "name": "사회복지정책분석과 평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0926",
+    "name": "사회복지조사론세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0791",
+    "name": "사회복지통합론 Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0792",
+    "name": "사회복지통합론 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0811",
+    "name": "사회복지행정 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0741",
+    "name": "사회복지현장실습연구",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "WELF0806",
+    "name": "사회서비스론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0810",
+    "name": "사회적경제와 사회복지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0933",
+    "name": "여성복지론세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0803",
+    "name": "재난과 사회복지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0762",
+    "name": "학술연구와 통계적 분석방법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0000",
+    "name": "학위논문연구 및 연구윤리 (사회복지학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0793",
+    "name": "현장연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0794",
+    "name": "현장연구세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "WELF0974",
+    "name": "회귀분석의 이해와 응용",
+    "credit": "3-3-0"
+  }
+]

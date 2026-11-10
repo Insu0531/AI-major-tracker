@@ -1,0 +1,476 @@
+[
+  {
+    "grade": "",
+    "code": "POLY0709",
+    "name": "기능성고분자특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0703",
+    "name": "디지털시스템특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0725",
+    "name": "로봇공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0725",
+    "name": "마이크로머시닝기술 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0751",
+    "name": "마이크로머시닝기술1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0976",
+    "name": "매식재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0710",
+    "name": "바이오멤스공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0726",
+    "name": "반도체센서공학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0752",
+    "name": "반도체센서공학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0784",
+    "name": "방사선물리학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0884",
+    "name": "방사선물리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0785",
+    "name": "방사선영상의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0885",
+    "name": "방사선영상의학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0728",
+    "name": "방사선의료장비론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0883",
+    "name": "방사선의료장비론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0781",
+    "name": "생리학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0812",
+    "name": "생물센서공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0912",
+    "name": "생물센서공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "POLY0715",
+    "name": "생체고분자특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0801",
+    "name": "생체시스템분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0704",
+    "name": "생체신호처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0807",
+    "name": "생체신호처리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0807",
+    "name": "생체신호해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0721",
+    "name": "생체역학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0724",
+    "name": "생체열전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0891",
+    "name": "생체용세라믹특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0892",
+    "name": "생체용합금특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0835",
+    "name": "생체유변학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0797",
+    "name": "생체재료독성론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0894",
+    "name": "생체재료특성및평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0893",
+    "name": "생체재료표면처리법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0712",
+    "name": "생체전자공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0789",
+    "name": "생화학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0703",
+    "name": "센서공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0728",
+    "name": "센서공학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0813",
+    "name": "시각센서공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0913",
+    "name": "시각센서공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0811",
+    "name": "신호해석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0795",
+    "name": "심미치과재료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0806",
+    "name": "영상시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0722",
+    "name": "응용기계설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0792",
+    "name": "응용치과재료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0705",
+    "name": "의공학세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0808",
+    "name": "의공학세미나2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "POLY0722",
+    "name": "의료용고분자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0711",
+    "name": "의료용나노기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0706",
+    "name": "의용계측",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0726",
+    "name": "의용생체자기공명분광학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0881",
+    "name": "의용생체자기공명분광학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0815",
+    "name": "의용센서공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0709",
+    "name": "의용센서시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0707",
+    "name": "의용전자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0701",
+    "name": "의용전자기기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0805",
+    "name": "의용컴퓨터비젼",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0702",
+    "name": "의학영상처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0803",
+    "name": "의학영상특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0804",
+    "name": "의학영상합성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0802",
+    "name": "인공장기특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0786",
+    "name": "자기공명영상의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0886",
+    "name": "자기공명영상학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0727",
+    "name": "자기공명펄스프로그래밍1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0882",
+    "name": "자기공명펄스프로그래밍2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0783",
+    "name": "재활과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0787",
+    "name": "재활기기학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0788",
+    "name": "재활의학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0708",
+    "name": "적응신호처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0702",
+    "name": "전자회로론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0723",
+    "name": "점성유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0793",
+    "name": "정밀치과기공론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0796",
+    "name": "치과교정력학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0775",
+    "name": "치과용합금",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0794",
+    "name": "치과임프란트재료의설계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0791",
+    "name": "치과재료공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0973",
+    "name": "치과재료접착론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0778",
+    "name": "치과재료학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0715",
+    "name": "컴퓨터그래픽개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0000",
+    "name": "학위논문연구 및 연구윤리(의용생체공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0782",
+    "name": "해부학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0801",
+    "name": "형태인식론",
+    "credit": "3-3-0"
+  }
+]

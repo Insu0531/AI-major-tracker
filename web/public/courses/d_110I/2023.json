@@ -1,0 +1,134 @@
+[
+  {
+    "grade": "1",
+    "code": "AGEC0203",
+    "name": "경제학원론Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "AGEC0204",
+    "name": "경제학원론Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "CHIL0368",
+    "name": "중국문학과 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGEC0312",
+    "name": "경제통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHIL0352",
+    "name": "고급중국어회화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHIL0437",
+    "name": "중국고전명문읽기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHIL0383",
+    "name": "중국어문법1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHIL0365",
+    "name": "중급중국어독해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHIL0351",
+    "name": "중급중국어회화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHTR0303",
+    "name": "현대중국사회와경제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGEC0510",
+    "name": "경제발전의이론과실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGEC0523",
+    "name": "농식품무역론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHTR0301",
+    "name": "중국문화와통상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHIL0371",
+    "name": "중국어작문 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHIL0454",
+    "name": "중국역사철학텍스트 읽기와 토론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHTR0302",
+    "name": "한중문화콘텐츠",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHIL0425",
+    "name": "현대중국의 문학과 사상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHIL0434",
+    "name": "현대중국의탐색",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGEC0522",
+    "name": "자원환경경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHIL0566",
+    "name": "중국어 주제발표와 토론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHIL0565",
+    "name": "중국어번역연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHIL0393",
+    "name": "중국어학의이해",
+    "credit": "3-3-0"
+  }
+]

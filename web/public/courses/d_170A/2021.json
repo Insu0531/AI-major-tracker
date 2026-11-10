@@ -1,0 +1,194 @@
+[
+  {
+    "grade": "1",
+    "code": "AGEC0203",
+    "name": "경제학원론Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "AGEC0204",
+    "name": "경제학원론Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "AGEC0201",
+    "name": "농업과인간",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "AGEC0306",
+    "name": "응용경제수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGEC0307",
+    "name": "거시경제분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGEC0312",
+    "name": "경제통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGEC0308",
+    "name": "농업경영학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGEC0304",
+    "name": "농업경제사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGEC0301",
+    "name": "농업경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGEC0401",
+    "name": "농업경제학연습1",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "AGEC0314",
+    "name": "농촌사회지도론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGEC0302",
+    "name": "미시경제분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGEC0411",
+    "name": "응용계량경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGEC0309",
+    "name": "토지경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGEC0402",
+    "name": "농산물가격이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGEC0418",
+    "name": "농산물무역의 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGEC0419",
+    "name": "농산물유통의 이해와 실무",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGEC0406",
+    "name": "농업경제학연습2",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "AGEC0415",
+    "name": "농업경제학연습3",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "AGEC0403",
+    "name": "생산경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGEC0417",
+    "name": "위험관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGEC0504",
+    "name": "응용환경경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGEC0416",
+    "name": "조사방법및자료분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGEC0510",
+    "name": "경제발전의이론과실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGEC0315",
+    "name": "공간경제분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGEC0515",
+    "name": "농업경제학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGEC0513",
+    "name": "농업경제학연습4",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "4",
+    "code": "AGEC0501",
+    "name": "농업정책학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGEC0514",
+    "name": "농촌개발의 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGEC0511",
+    "name": "상품선물과 옵션시장",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGEC0410",
+    "name": "자원경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AGEC0503",
+    "name": "협동조합론",
+    "credit": "3-3-0"
+  }
+]

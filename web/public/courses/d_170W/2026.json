@@ -1,0 +1,122 @@
+[
+  {
+    "grade": "1",
+    "code": "FOOD0211",
+    "name": "식품공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "HORT0312",
+    "name": "원예작물생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "HORT0427",
+    "name": "일반식물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FOAT0262",
+    "name": "식품가공공정기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FOBI0221",
+    "name": "식품생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FOBI0315",
+    "name": "식품소재학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "FOOD0325",
+    "name": "식품재료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HOFO0212",
+    "name": "원예식품생명공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HOFO0211",
+    "name": "원예작물의 다양성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHAR0252",
+    "name": "건강기능식품학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOBI0312",
+    "name": "식품생명화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOAT0243",
+    "name": "식품응용발효공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOAT0263",
+    "name": "식품응용생물공정공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOBI0453",
+    "name": "식품포장저장학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOOD0457",
+    "name": "원예식품가공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HORT0428",
+    "name": "원예작물수확후생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HORT0549",
+    "name": "농산물 마케팅 및 유통관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "FOAT0267",
+    "name": "식품안전과 식중독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HOFO0213",
+    "name": "원예식품산업세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "HOFO0214",
+    "name": "원예식품유통정보학",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "grade": "",
+    "code": "COMP0716",
+    "name": "계산지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0720",
+    "name": "기계학습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0777",
+    "name": "데이터마이닝개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0771",
+    "name": "데이터마이닝특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0701",
+    "name": "디지털신호처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0704",
+    "name": "마이크로컴퓨터설계및응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0756",
+    "name": "멀티미디어공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0820",
+    "name": "소프트컴퓨팅특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0805",
+    "name": "신경회로망",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CICE0803",
+    "name": "신호처리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0811",
+    "name": "신호해석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0790",
+    "name": "영상처리응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0852",
+    "name": "인공지능응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0739",
+    "name": "인공지능특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0946",
+    "name": "지능시스템설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0715",
+    "name": "컴퓨터그래픽개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0716",
+    "name": "컴퓨터비젼개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0812",
+    "name": "컴퓨터비젼특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0705",
+    "name": "컴퓨터이용설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0000",
+    "name": "학위논문연구 및 연구윤리 (전자공학)",
+    "credit": "3-3-0"
+  }
+]

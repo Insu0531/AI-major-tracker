@@ -1,0 +1,44 @@
+[
+  {
+    "grade": "",
+    "code": "CIME0795",
+    "name": "단결정 박막성장론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SCCO0702",
+    "name": "반도체산업융합 프로젝트 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SCCO0701",
+    "name": "반도체소자측정실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0983",
+    "name": "반도체특성평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SCCO0703",
+    "name": "유기박막재료신뢰성특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0786",
+    "name": "유기반도체공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0829",
+    "name": "적층제조공학",
+    "credit": "3-3-0"
+  }
+]

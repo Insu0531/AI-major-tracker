@@ -1,0 +1,356 @@
+[
+  {
+    "grade": "",
+    "code": "STAT0764",
+    "name": "결측자료분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0761",
+    "name": "경시적 자료분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0766",
+    "name": "고급다변량분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0769",
+    "name": "고급데이터마이닝",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0930",
+    "name": "고급통계적방법특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0913",
+    "name": "고급확률론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0762",
+    "name": "공간자료분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0731",
+    "name": "다변량분석 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0931",
+    "name": "다변량분석 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0747",
+    "name": "데이터마이닝분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0745",
+    "name": "리스크관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0945",
+    "name": "반응표면분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0734",
+    "name": "범주형자료분석 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0936",
+    "name": "범주형자료분석 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0722",
+    "name": "베이지안 추론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0924",
+    "name": "베이지안추론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0721",
+    "name": "비모수통계학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0923",
+    "name": "비모수통계학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0768",
+    "name": "생물정보학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0767",
+    "name": "생물통계방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0743",
+    "name": "생존분석 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0943",
+    "name": "생존분석 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0914",
+    "name": "선형모형론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0910",
+    "name": "선형모형론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0741",
+    "name": "시계열분석 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0941",
+    "name": "시계열분석 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0744",
+    "name": "신뢰수명검정론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0944",
+    "name": "신뢰수명검정론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0714",
+    "name": "실험계획론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0934",
+    "name": "실험계획법특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0765",
+    "name": "우도추론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0710",
+    "name": "이론통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0933",
+    "name": "일반화선형모형론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0732",
+    "name": "일반화선형모형론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0926",
+    "name": "축차분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0751",
+    "name": "통계계산특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0748",
+    "name": "통계상담방법 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0958",
+    "name": "통계상담방법 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0912",
+    "name": "통계적검정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0925",
+    "name": "통계적결정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0715",
+    "name": "통계적방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0730",
+    "name": "통계적방법특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0921",
+    "name": "통계적점근론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0911",
+    "name": "통계적추론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0742",
+    "name": "통계적품질관리 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0942",
+    "name": "통계적품질관리 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0755",
+    "name": "통계학세미나 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0953",
+    "name": "통계학세미나 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0753",
+    "name": "통계학실험 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0951",
+    "name": "통계학실험 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0733",
+    "name": "표본론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0935",
+    "name": "표본론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0000",
+    "name": "학위논문연구 및 연구윤리 (통계학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0763",
+    "name": "함수적 자료분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0723",
+    "name": "확률과정론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0922",
+    "name": "확률과정론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0712",
+    "name": "확률론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0713",
+    "name": "회귀분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0932",
+    "name": "회귀분석론특강",
+    "credit": "3-3-0"
+  }
+]

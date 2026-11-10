@@ -1,0 +1,74 @@
+[
+  {
+    "grade": "",
+    "code": "MECH0912",
+    "name": "기계공작특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0916",
+    "name": "냉동공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0918",
+    "name": "로봇공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0911",
+    "name": "열기관특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0913",
+    "name": "유압공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0914",
+    "name": "유체기계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0919",
+    "name": "윤활공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0921",
+    "name": "응력측정법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0915",
+    "name": "응용열전달특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0917",
+    "name": "전산기원용설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0992",
+    "name": "진동 및 소음제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0000",
+    "name": "학위논문연구 및 연구윤리 (기계공학)",
+    "credit": "3-3-0"
+  }
+]

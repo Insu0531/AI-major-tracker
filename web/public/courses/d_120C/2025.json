@@ -1,0 +1,146 @@
+[
+  {
+    "grade": "1",
+    "code": "PSYC0218",
+    "name": "심리통계 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "1",
+    "code": "COME0301",
+    "name": "이산수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "PSYC0355",
+    "name": "인지신경과학의 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ITEC0201",
+    "name": "컴퓨터학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "COMP0453",
+    "name": "컴퓨팅사고와 SW코딩",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "PSYC0232",
+    "name": "감각과 지각 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0452",
+    "name": "빅데이터융합개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0224",
+    "name": "소프트웨어설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PSYC0220",
+    "name": "심리설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0451",
+    "name": "인공지능융합기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COME0331",
+    "name": "자료구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0217",
+    "name": "자바프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "PSYC0332",
+    "name": "현대사회심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PSYC0442",
+    "name": "고급인지신경과학 및 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0328",
+    "name": "모바일앱프로그래밍1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0312",
+    "name": "운영체제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PSIT0302",
+    "name": "응용인지심리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0324",
+    "name": "인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PSYC0598",
+    "name": "인지심리학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "PSIT0301",
+    "name": "IT심리측정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PSYC0492",
+    "name": "고급심리통계 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0416",
+    "name": "고급웹프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "PSYC0504",
+    "name": "사이버심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PSIT0303",
+    "name": "심리모델링",
+    "credit": "3-2-2"
+  }
+]

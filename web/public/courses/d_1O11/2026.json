@@ -1,0 +1,386 @@
+[
+  {
+    "grade": "2",
+    "code": "COMP0217",
+    "name": "자바프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DGMA0309",
+    "name": "나노바이오센서",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EECS0312",
+    "name": "네트워크프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0311",
+    "name": "논리회로설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMA0207",
+    "name": "뇌공학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0323",
+    "name": "마이크로프로세서",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMA0310",
+    "name": "바이오기기분석(전자의료융합)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMA0206",
+    "name": "바이오메디컬빅데이터실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DGMA0205",
+    "name": "바이오메디컬인공지능실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DGMA0203",
+    "name": "산학프로젝트입문",
+    "credit": "3-0-96(시)"
+  },
+  {
+    "grade": "3",
+    "code": "DGMA0404",
+    "name": "센서기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0422",
+    "name": "소프트웨어공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0321",
+    "name": "신호및시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0312",
+    "name": "운영체제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMA0308",
+    "name": "의용계측 및 제어개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0324",
+    "name": "인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMA0504",
+    "name": "임베디드운영체제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMA0503",
+    "name": "자료구조와알고리즘",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMA0408",
+    "name": "전자회로1(IoT융합)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMA0405",
+    "name": "컴퓨터네트워크(IoT융합)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMA0307",
+    "name": "헬스케어기기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGME0201",
+    "name": "현장실습1 (ICT)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DGMA0403",
+    "name": "회로이론1(IoT융합)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMA0406",
+    "name": "IOT 신뢰성 공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMA0409",
+    "name": "IoT기반컴퓨터프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DGMA0407",
+    "name": "IOT기술세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0504",
+    "name": "기계학습시스템설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0323",
+    "name": "데이타통신",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0510",
+    "name": "데이터베이스응용(AI/SW)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0505",
+    "name": "딥러닝과강화학습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0502",
+    "name": "딥러닝과자연어처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0507",
+    "name": "모바일/웹프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0410",
+    "name": "무선 모니터링 시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0210",
+    "name": "바이오기기분석및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0209",
+    "name": "바이오센서공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0508",
+    "name": "빅데이터분석및응용(AI/SW)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0513",
+    "name": "사물컴퓨팅시스템설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0301",
+    "name": "산학캡스톤디자인1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0302",
+    "name": "산학캡스톤디자인2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0208",
+    "name": "생체기계인터페이스",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0506",
+    "name": "소프트웨어공학응용(AI/SW)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0319",
+    "name": "알고리즘1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGME0205",
+    "name": "엣지시스템설계실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DGME0203",
+    "name": "엣지컴퓨팅설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0305",
+    "name": "의료영상처리(전자의료융합)",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0303",
+    "name": "인공지능시스템응용",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "EECS0420",
+    "name": "임베디드시스템설계실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0509",
+    "name": "컴퓨터비전응용(AI/SW)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGME0202",
+    "name": "현장실습2 (ICT)",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0304",
+    "name": "AI 영상의료기기",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0501",
+    "name": "AI/SW캡스톤디자인",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0401",
+    "name": "IOT 종합설계Ⅰ",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0402",
+    "name": "IOT 종합설계Ⅱ",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0201",
+    "name": "IT의료융합캡스톤디자인(1)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0202",
+    "name": "IT의료융합캡스톤디자인(2)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0204",
+    "name": "POCT 시스템 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DGMA0306",
+    "name": "X-레이기기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "DGME0208",
+    "name": "빅데이터분석및응용",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "9",
+    "code": "DGMK0202",
+    "name": "산학연계PBL",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "9",
+    "code": "DGMK0201",
+    "name": "융합기술특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "DGME0204",
+    "name": "융합전자특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "DGMK0203",
+    "name": "인공지능융합개론Ⅰ",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "9",
+    "code": "DGME0206",
+    "name": "ICT-DNA팀설계프로젝트1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "9",
+    "code": "DGME0207",
+    "name": "ICT-DNA팀설계프로젝트2",
+    "credit": "3-2-2"
+  }
+]

@@ -1,0 +1,308 @@
+[
+  {
+    "grade": "",
+    "code": "KLCC0914",
+    "name": "경전주석연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0913",
+    "name": "경학사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0722",
+    "name": "경학특강 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0915",
+    "name": "경학특강2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0933",
+    "name": "고문서특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0907",
+    "name": "나려산문특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0924",
+    "name": "문자학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0920",
+    "name": "문학연구방법론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0921",
+    "name": "문학이론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0919",
+    "name": "사부문학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0922",
+    "name": "서지학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0925",
+    "name": "성운학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0712",
+    "name": "역사산문문학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0910",
+    "name": "전기문학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0721",
+    "name": "제자서특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0908",
+    "name": "조선산문특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0911",
+    "name": "필기야담특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0000",
+    "name": "학위논문연구 및 연구윤리(한문학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0711",
+    "name": "한국문집선독",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0761",
+    "name": "한국한문학사연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0762",
+    "name": "한국한문학사연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0901",
+    "name": "한국한문학사특강1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0902",
+    "name": "한국한문학사특강2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0731",
+    "name": "한국한시론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0903",
+    "name": "한국한시론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0732",
+    "name": "한국한시연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0904",
+    "name": "한국한시연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0928",
+    "name": "한문국문문학관계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0773",
+    "name": "한문국역연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0917",
+    "name": "한문국역특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0741",
+    "name": "한문문장론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0742",
+    "name": "한문문체론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0926",
+    "name": "한문문헌해제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0744",
+    "name": "한문소설론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0909",
+    "name": "한문소설론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0713",
+    "name": "한문소설특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0906",
+    "name": "한문시화연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0772",
+    "name": "한문학논문연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0912",
+    "name": "한문학문체특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0745",
+    "name": "한문학비평론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0905",
+    "name": "한문학비평사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0743",
+    "name": "한문학산문연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0771",
+    "name": "한문학연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0751",
+    "name": "한문학작가연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0918",
+    "name": "한문학작가연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0774",
+    "name": "한문학특수과제연구 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0916",
+    "name": "한문학특수과제연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0714",
+    "name": "한시특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0927",
+    "name": "한중문학비교연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0931",
+    "name": "행초서특강1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KLCC0932",
+    "name": "행초서특강2",
+    "credit": "3-3-0"
+  }
+]

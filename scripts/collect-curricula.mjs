@@ -9,7 +9,12 @@
  *    - 결과가 하나도 없는 코드(학사과·하위 개설 코드 등)는 버린다
  * 4. web/public/courses/d_{코드}/{연도}.json 과 web/public/data/majors-extra.json 을 만든다
  *
- * 사용법: node scripts/collect-curricula.mjs [--years 2021-2026] [--only 160E,170R]
+ * --from-list: 스냅샷 대신 scripts/data/knu-depts.txt(학부·대학원 전체 코드표)의 코드를 모두 확인한다.
+ *   먼저 2026·2023·2021 학번만 찔러 보고 하나라도 나오면 전 학번을 받는다 (빈 코드는 버림).
+ *   대학원 코드는 sbjetSctinClscd를 비워야 결과가 나온다. 대학원 학과는 level: "grad"로 저장.
+ *   하위 전공(학부 6자리, 대학원 7자리)은 상위 학과 공통 과정을 합친다.
+ *
+ * 사용법: node scripts/collect-curricula.mjs [--years 2021-2026] [--only 160E,170R] [--from-list] [--workers 3]
  * 의존성 없음 (Node 18+). 연속 요청 시 학교 서버가 연결을 끊으므로 요청 사이 간격 + 재시도.
  */
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
@@ -34,12 +39,14 @@ const argVal = (k) => { const i = args.indexOf(k); return i >= 0 ? args[i + 1] :
 const [y0, y1] = (argVal("--years") ?? `2021-${new Date().getFullYear()}`).split("-").map(Number);
 const YEARS = Array.from({ length: y1 - y0 + 1 }, (_, i) => y0 + i);
 const ONLY = argVal("--only")?.split(",");
+const FROM_LIST = args.includes("--from-list");
+const WORKERS = Number(argVal("--workers") ?? (FROM_LIST ? 3 : 1));
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const norm = (s) => s.replace(/^\[[^\]]+\]/, "").replace(/\(.*?\)/g, "").replace(/[\s\-.·]/g, "");
 
-async function fetchCurriculum(deptCd, year) {
-  const body = { isApi: "Y", search: { trgtYrsf: String(year), dprtnCd: deptCd, dprtnNm: "", sbjetSctinClscd: "STCU000700001", isApi: "Y" } };
+async function fetchCurriculum(deptCd, year, grad = false) {
+  const body = { isApi: "Y", search: { trgtYrsf: String(year), dprtnCd: deptCd, dprtnNm: "", sbjetSctinClscd: grad ? "" : "STCU000700001", isApi: "Y" } };
   for (let attempt = 1; attempt <= 4; attempt++) {
     try {
       const res = await fetch(API, { method: "POST", headers: HEADERS, body: JSON.stringify(body), signal: AbortSignal.timeout(30_000) });
@@ -65,6 +72,95 @@ function parse(rows) {
   return out;
 }
 
+/** scripts/data/knu-depts.txt → [{ code, name, level, college, parent }] */
+async function readList() {
+  const txt = await readFile(path.join(ROOT, "scripts", "data", "knu-depts.txt"), "utf-8");
+  const out = new Map();
+  let level = "학부", college = "";
+  for (const raw of txt.split("\n")) {
+    const line = raw.trim();
+    if (!line || line.startsWith("#")) continue;
+    if (line.startsWith("@")) { [level, college] = [line.slice(1, line.indexOf(" ")), line.slice(line.indexOf(" ") + 1)]; continue; }
+    const sp = line.indexOf(" ");
+    const code = line.slice(0, sp), name = line.slice(sp + 1).trim();
+    if (out.has(code)) continue;
+    out.set(code, { code, name, level, college });
+  }
+  // 상위 학과: 학부 6자리 → 4자리, 대학원 7자리 → 5자리(일반대학원) 또는 3자리(전문대학원)
+  for (const e of out.values()) {
+    const cands = e.level === "학부" ? (e.code.length === 6 ? [e.code.slice(0, 4)] : []) : e.code.length === 7 ? [e.code.slice(0, 5), e.code.slice(0, 3)] : [];
+    e.parent = cands.find((c) => out.has(c)) ?? null;
+  }
+  return [...out.values()];
+}
+
+async function mainFromList(known, haveNames) {
+  const list = await readList();
+  const byCode = new Map(list.map((e) => [e.code, e]));
+  const outFile = path.join(WEB, "public", "data", "majors-extra.json");
+  let prev = [];
+  try { prev = JSON.parse(await readFile(outFile, "utf-8")); } catch { /* 처음 */ }
+  const result = new Map(prev.map((m) => [m.deptCd, m]));
+  const targets = list.filter((e) => (ONLY ? ONLY.includes(e.code) : !(e.level === "학부" && (known(e.code) || haveNames.has(norm(e.name))))));
+  console.log(`코드표 ${list.length}개 중 확인할 코드 ${targets.length}개 · 학번 ${YEARS.join(",")} · 동시 ${WORKERS}`);
+
+  const cache = new Map(); // `${code}-${year}` → Map
+  const get = async (code, year, grad) => {
+    const k = `${code}-${year}`;
+    if (!cache.has(k)) { const rows = await fetchCurriculum(code, year, grad); cache.set(k, rows === null ? null : parse(rows)); }
+    return cache.get(k);
+  };
+  const probeYears = [YEARS[YEARS.length - 1], YEARS[Math.floor(YEARS.length / 2)], YEARS[0]];
+  let done = 0, added = 0;
+  const queue = [...targets];
+  const worker = async () => {
+    for (let e = queue.shift(); e; e = queue.shift()) {
+      const grad = e.level === "대학원";
+      let hit = false;
+      for (const y of probeYears) if ((await get(e.code, y, grad))?.size) { hit = true; break; }
+      done++;
+      if (!hit) { if (done % 50 === 0) console.log(`  … ${done}/${targets.length}`); continue; }
+      const years = [];
+      let total = 0;
+      for (const year of YEARS) {
+        const own = new Map(await get(e.code, year, grad) ?? []);
+        if (!own.size) continue;
+        if (e.parent) for (const [code, c] of (await get(e.parent, year, grad)) ?? []) if (!own.has(code)) own.set(code, c);
+        const list = [...own.values()].sort((a, b) => a.grade.localeCompare(b.grade) || a.name.localeCompare(b.name, "ko"));
+        const dir = path.join(WEB, "public", "courses", `d_${e.code}`);
+        await mkdir(dir, { recursive: true });
+        const file = path.join(dir, `${year}.json`);
+        const body = JSON.stringify(list, null, 2) + "\n";
+        let old = null;
+        try { old = await readFile(file, "utf-8"); } catch { /* 새 파일 */ }
+        if (old !== body) await writeFile(file, body);
+        years.push(year);
+        total += list.length;
+      }
+      if (!years.length) continue;
+      const parentName = e.parent ? byCode.get(e.parent)?.name : null;
+      const sangju = e.college.includes("상주");
+      const school = grad ? (e.college === "대학원" ? "대학원" : e.college.replace(/^\[상주캠퍼스\]/, "")) : "";
+      const base = parentName && parentName !== school ? `${parentName}-${e.name}` : e.name;
+      const label = `${sangju ? "[상주]" : ""}${grad && !base.startsWith(school) ? `${school} ` : ""}${base}`;
+      result.set(e.code, { key: `d_${e.code}`, label, deptCd: e.code, baseDeptCd: e.parent ?? undefined, college: e.college, ...(grad ? { level: "grad" } : {}), years });
+      added++;
+      console.log(`  ✓ ${e.code} ${label}: ${years.join(",")} (평균 ${Math.round(total / years.length)}과목) [${done}/${targets.length}]`);
+    }
+  };
+  await Promise.all(Array.from({ length: WORKERS }, worker));
+
+  // 같은 이름이 여러 코드면(예: 옛 코드·새 코드) 학번이 많은 쪽만 남긴다
+  const byLabel = new Map();
+  for (const m of result.values()) {
+    const o = byLabel.get(m.label);
+    if (!o || m.years.length > o.years.length) byLabel.set(m.label, m);
+  }
+  const out = [...byLabel.values()].sort((a, b) => a.label.localeCompare(b.label, "ko"));
+  await writeFile(outFile, JSON.stringify(out, null, 2) + "\n");
+  console.log(`새로 확인 ${added}개 · 저장 ${path.relative(ROOT, outFile)} (${out.length}개 학과, 대학원 ${out.filter((m) => m.level === "grad").length}개)`);
+}
+
 async function main() {
   // 1. 스냅샷에서 학부 개설학과
   const secDir = path.join(WEB, "public", "data", "sections");
@@ -87,6 +183,8 @@ async function main() {
   const haveNames = new Set([...labelBlock.matchAll(/:\s*"([^"]+)"/g)].map((m) => norm(m[1])));
   // 기존 데이터에 1O02xx(영문 O)가 1002xx로 적힌 경우가 있어 둘 다 비교
   const known = (cd) => haveCodes.has(cd) || haveCodes.has(cd.replace(/O/g, "0"));
+
+  if (FROM_LIST) return mainFromList(known, haveNames);
 
   const targets = [...depts.entries()].filter(([cd, d]) => (ONLY ? ONLY.includes(cd) : !known(cd) && !haveNames.has(norm(d.name))));
   console.log(`학부 개설학과 ${depts.size}개 중 새로 확인할 학과 ${targets.length}개 · 연도 ${YEARS.join(",")}`);

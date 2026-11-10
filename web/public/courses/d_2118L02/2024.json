@@ -1,0 +1,578 @@
+[
+  {
+    "grade": "",
+    "code": "MAME0742",
+    "name": "결정구조해석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "META0773",
+    "name": "결정성장법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0721",
+    "name": "고체물리학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0758",
+    "name": "고체물리학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0718",
+    "name": "고체의구조및결함1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0753",
+    "name": "고체의구조및결함2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0717",
+    "name": "고체화학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0784",
+    "name": "광전반도체재료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0773",
+    "name": "광학세라믹스특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0774",
+    "name": "광학세라믹스특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0763",
+    "name": "광학적물성분석법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAME0736",
+    "name": "나노반도체소자특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0771",
+    "name": "나노세라믹스특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0772",
+    "name": "나노세라믹스특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0790",
+    "name": "뉴로모픽반도체소자특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0715",
+    "name": "무기재료의기계적성질1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0749",
+    "name": "무기재료의기계적성질2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0733",
+    "name": "무기재료조직론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0747",
+    "name": "무기재료조직론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0722",
+    "name": "무기재료특강1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0723",
+    "name": "무기재료특강2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0759",
+    "name": "무기재료특강3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0760",
+    "name": "무기재료특강4",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0766",
+    "name": "박막공정특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0775",
+    "name": "박막공학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0776",
+    "name": "박막공학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAME0737",
+    "name": "박막소재특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0765",
+    "name": "반도체공정공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAME0741",
+    "name": "반도체공정제어계측",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0762",
+    "name": "반도체물리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAME0738",
+    "name": "반도체소자개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "META0883",
+    "name": "반도체소자물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "META0817",
+    "name": "반도체재료콜로퀴움1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "",
+    "code": "META0818",
+    "name": "반도체재료콜로퀴움2",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "",
+    "code": "META0819",
+    "name": "반도체재료콜로퀴움3",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "",
+    "code": "META0820",
+    "name": "반도체재료콜로퀴움4",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0713",
+    "name": "반도체재료특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0743",
+    "name": "반도체재료특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "META0813",
+    "name": "반도체재료PBL1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "META0814",
+    "name": "반도체재료PBL2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "META0815",
+    "name": "반도체재료PBL3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "META0816",
+    "name": "반도체재료PBL4",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0764",
+    "name": "반도체회로개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAME0735",
+    "name": "발광반도체소자특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAME0747",
+    "name": "분광분석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAME0734",
+    "name": "산화물 반도체 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0734",
+    "name": "상변태특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0751",
+    "name": "상변태특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0712",
+    "name": "상안정특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0739",
+    "name": "상안정특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0785",
+    "name": "센서반도체재료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0732",
+    "name": "소결특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0746",
+    "name": "소결특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0781",
+    "name": "수광반도체소자특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAME0743",
+    "name": "시뮬레이션소재설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAME0750",
+    "name": "시스템반도체소자배선특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0789",
+    "name": "신호처리분석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0768",
+    "name": "실리콘반도체특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0735",
+    "name": "에너지공학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0831",
+    "name": "에너지공학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0832",
+    "name": "에너지공학특론3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAME0745",
+    "name": "에너지반도체소자특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAME0744",
+    "name": "에너지반도체재료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0778",
+    "name": "연료전지특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAME0739",
+    "name": "유기·융복합반도체특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0728",
+    "name": "유전재료특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0741",
+    "name": "유전재료특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0780",
+    "name": "이머징반도체특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0779",
+    "name": "이차전지특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0729",
+    "name": "자성재료특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0742",
+    "name": "자성재료특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0725",
+    "name": "재료공학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0736",
+    "name": "재료공학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0726",
+    "name": "재료열역학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0737",
+    "name": "재료열역학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0724",
+    "name": "재료의표면 및 계면론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "META0747",
+    "name": "재료접합이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "META0719",
+    "name": "전기화학 분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0782",
+    "name": "전력반도체소자특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0787",
+    "name": "전자소자물성분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0727",
+    "name": "전자요업특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0740",
+    "name": "전자요업특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAME0713",
+    "name": "전자현미경론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAME0746",
+    "name": "전하수송물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAME0740",
+    "name": "증착분말가공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0786",
+    "name": "지능형반도체재료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0792",
+    "name": "지능형집적소자설계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0783",
+    "name": "지능형집적회로특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0788",
+    "name": "집적소자구조분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0777",
+    "name": "태양전지특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAME0749",
+    "name": "패키징/인터커넥트 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0767",
+    "name": "패터닝심화공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0000",
+    "name": "학위논문연구 및 연구윤리 (무기재료공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAME0748",
+    "name": "화학 물성 분석법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0769",
+    "name": "III-V족반도체특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0791",
+    "name": "IoT센서특론",
+    "credit": "3-3-0"
+  }
+]

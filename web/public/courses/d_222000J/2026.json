@@ -1,0 +1,230 @@
+[
+  {
+    "grade": "",
+    "code": "SSED0721",
+    "name": "경제교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SSED0719",
+    "name": "공법교육연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SSED0716",
+    "name": "교육경제학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0601",
+    "name": "교육과정",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0604",
+    "name": "교육방법및교육공학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0552",
+    "name": "교육봉사활동 2",
+    "credit": "2-0-60(h)"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0606",
+    "name": "교육사회",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0607",
+    "name": "교육심리",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0609",
+    "name": "교육철학및교육사",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0610",
+    "name": "교육평가",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0611",
+    "name": "교육학개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0612",
+    "name": "교육행정및교육경영",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0521",
+    "name": "교직실무 1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0523",
+    "name": "교직실무 2",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "HIED0813",
+    "name": "국사교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0553",
+    "name": "디지털 교육",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "",
+    "code": "SSED0714",
+    "name": "민주시민교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SSED0712",
+    "name": "민주정치와교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SSED0741",
+    "name": "법교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SSED0720",
+    "name": "사법교육연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIED0847",
+    "name": "사학사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SSED0753",
+    "name": "사회과학방법론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SSED0731",
+    "name": "사회교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SSED0717",
+    "name": "사회학이론과 교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0520",
+    "name": "생활지도및상담(교직소양)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0704",
+    "name": "영재교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEED0733",
+    "name": "인문지리교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0474",
+    "name": "일반사회 논리 및 논술지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0631",
+    "name": "일반사회교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0671",
+    "name": "일반사회교재연구및지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEED0734",
+    "name": "자연지리교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SSED0715",
+    "name": "정보경제와 교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SSED0711",
+    "name": "정치교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0703",
+    "name": "창의성 교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0528",
+    "name": "특수교육학개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0522",
+    "name": "학교현장실습",
+    "credit": "2-0-4(주)"
+  },
+  {
+    "grade": "",
+    "code": "SSED0000",
+    "name": "학위논문연구 및 연구윤리 (일반사회교육전공)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SSED0718",
+    "name": "현대사회변동과 교육",
+    "credit": "3-3-0"
+  }
+]

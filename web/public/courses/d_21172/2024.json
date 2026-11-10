@@ -1,0 +1,182 @@
+[
+  {
+    "grade": "",
+    "code": "META0731",
+    "name": "결정해석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0713",
+    "name": "고급에너지소자공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0714",
+    "name": "고급태양전지공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HYRE0703",
+    "name": "고분자 나노소재",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "META0749",
+    "name": "고체 확산론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0759",
+    "name": "광물성물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HYRE0713",
+    "name": "광전기화학 수소 생산",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0826",
+    "name": "나노광학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0750",
+    "name": "나노소재화학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0740",
+    "name": "무기재료화학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0741",
+    "name": "무기재료화학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0787",
+    "name": "미세조류분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0788",
+    "name": "미세조류생리생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENER0730",
+    "name": "바이오에너지 대량생산",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HYRE0704",
+    "name": "바이오에너지 배양 및 전환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0752",
+    "name": "스마트그리드공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HYRE0710",
+    "name": "신재생에너지 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0780",
+    "name": "신재생에너지특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HYRE0709",
+    "name": "심화 재료분석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "META0720",
+    "name": "에너지 재료의 이해와 활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HYRE0702",
+    "name": "에너지 저장 및 변환과 인터컬레이션 화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HYRE0706",
+    "name": "에너지무기소재",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HYRE0712",
+    "name": "에너지소재특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HYRE0708",
+    "name": "유연 에너지 저장소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HYRE0701",
+    "name": "재료 전기 화학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HYRE0711",
+    "name": "재료 전자물성 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HYRE0705",
+    "name": "전자와 포논",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MAME0713",
+    "name": "전자현미경론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HYRE0707",
+    "name": "태양전지 소재와 소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HYRE0000",
+    "name": "학위논문연구 및 연구윤리(수소 및 신재생에너지)",
+    "credit": "3-3-0"
+  }
+]

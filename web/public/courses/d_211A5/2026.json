@@ -1,0 +1,44 @@
+[
+  {
+    "grade": "",
+    "code": "MATH0845",
+    "name": "과학계산 및 수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0767",
+    "name": "생물통계방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0711",
+    "name": "의생명 프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AIBI0704",
+    "name": "AI바이오모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AIBI0701",
+    "name": "AI바이오입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AIBI0703",
+    "name": "AI바이오통계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AIBI0702",
+    "name": "AI생명정보학",
+    "credit": "3-3-0"
+  }
+]

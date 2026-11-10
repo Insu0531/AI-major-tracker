@@ -1,0 +1,428 @@
+[
+  {
+    "grade": "",
+    "code": "HEED0841",
+    "name": "가계복지정책특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0842",
+    "name": "가계재정관리교육의실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0803",
+    "name": "가정과교수학습론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0802",
+    "name": "가정과교육과정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0807",
+    "name": "가정과교육동향및이슈",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0808",
+    "name": "가정과교육장학론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0804",
+    "name": "가정과교육평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0801",
+    "name": "가정과교육행정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0741",
+    "name": "가정과논술지도방법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0833",
+    "name": "가정관리교수매체론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0831",
+    "name": "가정관리교재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0834",
+    "name": "가정관리모형연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0806",
+    "name": "가정교육과환경교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0878",
+    "name": "가정교육학연구방법론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0879",
+    "name": "가정교육학연구방법론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0742",
+    "name": "가정문화교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0832",
+    "name": "가정자원분석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0843",
+    "name": "가족관계교육의실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0835",
+    "name": "가족생활교육의이론및실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0844",
+    "name": "가족연구세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0733",
+    "name": "기능성식품학교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0729",
+    "name": "노화와영양교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HOEC0761",
+    "name": "복식과 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0721",
+    "name": "복식문화사교재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0722",
+    "name": "복식미와 트랜드교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0818",
+    "name": "복식의장교육특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0848",
+    "name": "부모교육의실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0855",
+    "name": "생활설계교육세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0847",
+    "name": "성인발달과노화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0837",
+    "name": "소비자교육의실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0838",
+    "name": "소비자문제상담교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0839",
+    "name": "소비자문화특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0840",
+    "name": "소비자정보특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0734",
+    "name": "식생활교육교재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0736",
+    "name": "식품문화교육 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0740",
+    "name": "식품문화교육 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0737",
+    "name": "식품학교육연구의실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0872",
+    "name": "식품학교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0852",
+    "name": "실내장식교육의실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0873",
+    "name": "실험조리교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0845",
+    "name": "아동교육교재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0836",
+    "name": "여성및가정생활사특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0726",
+    "name": "영양교육교재연구및매체론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0732",
+    "name": "영양소와약물대사특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0864",
+    "name": "영양조사및영양교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0727",
+    "name": "영양판정방법특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0730",
+    "name": "운동과영양교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0880",
+    "name": "응용통계학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0739",
+    "name": "의류소비자행동세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0822",
+    "name": "의류학의논제와동향",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0821",
+    "name": "의복과색채교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0811",
+    "name": "의복과환경교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0816",
+    "name": "의복구성교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0725",
+    "name": "의복디자인기법특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0813",
+    "name": "의복사회심리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0812",
+    "name": "의복소재교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0723",
+    "name": "의복유통과색채구성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0814",
+    "name": "의생활교육의실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0728",
+    "name": "인간발달과영양교육의실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0735",
+    "name": "저장식품교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0825",
+    "name": "전통복식교육특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0815",
+    "name": "전통염색특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0850",
+    "name": "주거공간구성론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0853",
+    "name": "주거사회학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0849",
+    "name": "주거학교재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0851",
+    "name": "주생활교육의실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0743",
+    "name": "진로개발연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0731",
+    "name": "질병예방과임상영양교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0846",
+    "name": "청소년교육의실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0724",
+    "name": "컴퓨터를이용한패턴설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEED0000",
+    "name": "학위논문연구 및 연구윤리(가정교육학)",
+    "credit": "3-3-0"
+  }
+]

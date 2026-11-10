@@ -1,0 +1,152 @@
+[
+  {
+    "grade": "",
+    "code": "DACO0711",
+    "name": "고급 사물인터넷",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0718",
+    "name": "고급프로그래밍언어론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0701",
+    "name": "공학논문작성법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0842",
+    "name": "그래프이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0720",
+    "name": "기계학습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0731",
+    "name": "다변량분석 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0747",
+    "name": "데이터마이닝분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0733",
+    "name": "데이터베이스특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0778",
+    "name": "모바일컴퓨팅특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0734",
+    "name": "범주형자료분석 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0722",
+    "name": "베이지안 추론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0725",
+    "name": "병렬처리시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0729",
+    "name": "분산처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DACO0712",
+    "name": "빅데이터 가시화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0788",
+    "name": "빅데이터 과학 및 분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0760",
+    "name": "생물정보공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0910",
+    "name": "선형모형론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0836",
+    "name": "신경망특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0710",
+    "name": "이론통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0739",
+    "name": "인공지능특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0766",
+    "name": "자연언어처리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0751",
+    "name": "통계계산특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0755",
+    "name": "통계학세미나 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0755",
+    "name": "패턴인식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DACO0000",
+    "name": "학위논문연구 및 연구윤리(데이터융합컴퓨팅학)",
+    "credit": "3-3-0"
+  }
+]

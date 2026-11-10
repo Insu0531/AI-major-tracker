@@ -1,0 +1,92 @@
+[
+  {
+    "grade": "",
+    "code": "ELEC0923",
+    "name": "계통공학론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0701",
+    "name": "디지털신호처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0733",
+    "name": "디지털제어시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0918",
+    "name": "로보트공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0916",
+    "name": "마이크로프로세스응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0738",
+    "name": "전력전자공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0703",
+    "name": "전자계측론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0919",
+    "name": "전자회로특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0962",
+    "name": "제어공학특강1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0963",
+    "name": "제어공학특강2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0732",
+    "name": "최적제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0754",
+    "name": "컴퓨터통신망특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0901",
+    "name": "컴퓨터프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0000",
+    "name": "학위논문연구 및 연구윤리 (전자공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0743",
+    "name": "확률과정론",
+    "credit": "3-3-0"
+  }
+]

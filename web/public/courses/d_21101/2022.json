@@ -1,0 +1,548 @@
+[
+  {
+    "grade": "",
+    "code": "KORL0912",
+    "name": "고대국어연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0956",
+    "name": "고전 서사 문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0755",
+    "name": "고전 서사 연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0958",
+    "name": "고전소설 작가연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0959",
+    "name": "고전소설 작품연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0726",
+    "name": "고전소설작품론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0957",
+    "name": "고전시가와 매체 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0725",
+    "name": "고전시가작품론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0909",
+    "name": "국어문법사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0972",
+    "name": "국어문화자원연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0750",
+    "name": "국어문화콘텐츠연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0713",
+    "name": "국어방언론연구 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0914",
+    "name": "국어방언론연구 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0715",
+    "name": "국어사문헌연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0708",
+    "name": "국어사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0707",
+    "name": "국어어휘론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0908",
+    "name": "국어어휘사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0954",
+    "name": "국어연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0702",
+    "name": "국어음성학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0703",
+    "name": "국어음운론연구 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0903",
+    "name": "국어음운론연구 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0906",
+    "name": "국어음운사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0706",
+    "name": "국어의미론연구 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0905",
+    "name": "국어의미론연구 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0714",
+    "name": "국어자료처리연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0973",
+    "name": "국어정보학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0971",
+    "name": "국어정책론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0705",
+    "name": "국어통사론연구 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0904",
+    "name": "국어통사론연구 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0910",
+    "name": "국어학사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0704",
+    "name": "국어형태론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0907",
+    "name": "국어형태사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0913",
+    "name": "근대국어연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0978",
+    "name": "글로컬문화콘텐츠개발연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0921",
+    "name": "대조·비교언어학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0756",
+    "name": "동아시아 한문학론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0731",
+    "name": "문예비평연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0951",
+    "name": "문화론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0757",
+    "name": "문화어문학연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0739",
+    "name": "문화어문학현장실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0969",
+    "name": "사전편찬학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0716",
+    "name": "사회언어학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0722",
+    "name": "설화문학론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0747",
+    "name": "시조및가사론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0918",
+    "name": "심리언어학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0709",
+    "name": "언어학사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0977",
+    "name": "영남지역과 문화어문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0718",
+    "name": "인지언어학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0902",
+    "name": "일반언어학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0711",
+    "name": "중세국어연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0960",
+    "name": "지역문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0919",
+    "name": "차자표기론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0751",
+    "name": "판소리계소설론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0803",
+    "name": "학술논문작성법(영문/국문)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0000",
+    "name": "학위논문연구 및 연구윤리 (국어국문학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0741",
+    "name": "한국고전문학배경론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0754",
+    "name": "한국고전문학사론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0967",
+    "name": "한국고전비평연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0975",
+    "name": "한국고전소설사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0964",
+    "name": "한국고전시가작가연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0966",
+    "name": "한국구비문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0926",
+    "name": "한국문학문헌연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0927",
+    "name": "한국문학사상연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0934",
+    "name": "한국민요연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0947",
+    "name": "한국비교문학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0929",
+    "name": "한국시가사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0801",
+    "name": "한국어논문작성법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0749",
+    "name": "한국어문화론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0930",
+    "name": "한국한문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0942",
+    "name": "한국현대문학론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0734",
+    "name": "한국현대문학비평사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0953",
+    "name": "한국현대문학사상연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0944",
+    "name": "한국현대문학연구사론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0945",
+    "name": "한국현대소설구조연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0952",
+    "name": "한국현대소설론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0943",
+    "name": "한국현대소설사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0733",
+    "name": "한국현대소설작품연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0738",
+    "name": "한국현대시사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0941",
+    "name": "한국현대시사상연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0940",
+    "name": "한국현대시연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0732",
+    "name": "한국현대시작품연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0950",
+    "name": "한국현대연극론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0737",
+    "name": "한국현대연극사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0970",
+    "name": "한국현대작가론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0735",
+    "name": "한국현대작가연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0736",
+    "name": "한국현대희곡론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0949",
+    "name": "한국현대희곡사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0727",
+    "name": "향가및여요론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0712",
+    "name": "현대국어연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0730",
+    "name": "현대문학연구방법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0917",
+    "name": "화법이론연구",
+    "credit": "3-3-0"
+  }
+]

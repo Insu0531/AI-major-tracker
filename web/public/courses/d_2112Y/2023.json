@@ -1,0 +1,3758 @@
+[
+  {
+    "grade": "",
+    "code": "MEDC0835",
+    "name": "가입가족관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0828",
+    "name": "가정의학원론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0833",
+    "name": "가족건강관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0832",
+    "name": "가족구조 및 기능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0840",
+    "name": "가족중재학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0709",
+    "name": "간경변증",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0768",
+    "name": "간외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0919",
+    "name": "간종양",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0827",
+    "name": "간질외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0730",
+    "name": "감각신경생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0881",
+    "name": "감염과 면역",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0732",
+    "name": "감염병의 진단법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0748",
+    "name": "갑상선학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0833",
+    "name": "객체지향형데이터베이스설계및응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0837",
+    "name": "건강증진과예방",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0791",
+    "name": "견 및 주관절외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0760",
+    "name": "결핵의 임상표현",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0809",
+    "name": "경막외마취",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0804",
+    "name": "고관절외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0964",
+    "name": "고급 분자의학 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0831",
+    "name": "고급소프트웨어프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0700",
+    "name": "고지혈증",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0701",
+    "name": "고혈압",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0827",
+    "name": "골격계핵응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0793",
+    "name": "골관절기초과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0789",
+    "name": "골관절외상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0795",
+    "name": "골관절종양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0749",
+    "name": "골대사학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0755",
+    "name": "골수 이식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0857",
+    "name": "과민반응",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0720",
+    "name": "과민반응의 병인론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0994",
+    "name": "관절경외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0743",
+    "name": "광생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0800",
+    "name": "국소마취",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0713",
+    "name": "굴절 및 사시",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0941",
+    "name": "근·골격계 유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0870",
+    "name": "근골격계 생체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDD0720",
+    "name": "근골격계 영상의학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDD0721",
+    "name": "근골격계 영상의학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0995",
+    "name": "근골격계 초음파학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0722",
+    "name": "근육생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0887",
+    "name": "근전도학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0902",
+    "name": "근전도학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0743",
+    "name": "급성 신부전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0759",
+    "name": "급성호흡부전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0726",
+    "name": "기관식도학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0757",
+    "name": "기관지내시경의 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0706",
+    "name": "기능신경해부학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0986",
+    "name": "기분장애의 생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0844",
+    "name": "기생충 면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0849",
+    "name": "기생충 병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0850",
+    "name": "기생충 분류학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0848",
+    "name": "기생충 생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0839",
+    "name": "기생충 생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0847",
+    "name": "기생충 생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0840",
+    "name": "기생충 실험법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0845",
+    "name": "기생충 역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0846",
+    "name": "기생충 치료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0843",
+    "name": "기생충 형태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0742",
+    "name": "나병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0750",
+    "name": "남성불임증",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0745",
+    "name": "내분비 분자 생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0770",
+    "name": "내분비외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0836",
+    "name": "노인병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0883",
+    "name": "노인정신의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0715",
+    "name": "녹내장",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0806",
+    "name": "뇌압1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0817",
+    "name": "뇌압2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0929",
+    "name": "뇌정위기능신경외과학Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0930",
+    "name": "뇌정위기능신경외과학Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0846",
+    "name": "뇌졸중 재활",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0809",
+    "name": "뇌종양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0819",
+    "name": "뇌천막상부종양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0820",
+    "name": "뇌천막하부종양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0888",
+    "name": "뇌파학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0903",
+    "name": "뇌파학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0808",
+    "name": "뇌혈관외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0778",
+    "name": "늑막질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0918",
+    "name": "담도계질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0933",
+    "name": "담도췌장외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0747",
+    "name": "당뇨병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0782",
+    "name": "대동맥질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0739",
+    "name": "대사성 산염기평형이상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0923",
+    "name": "대사성질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0874",
+    "name": "대사와 질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0920",
+    "name": "대장종양",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0767",
+    "name": "대장항문외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0832",
+    "name": "데이터베이스응용프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0983",
+    "name": "도식치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0707",
+    "name": "동맥경화의 병태생리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0708",
+    "name": "동맥경화의치료 및 예방",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0922",
+    "name": "동양사상과 서양정신치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0814",
+    "name": "동통외과학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0829",
+    "name": "동통외과학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0727",
+    "name": "두경부외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0731",
+    "name": "두경부종양방사선치료및화학요법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0814",
+    "name": "두경부종양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0807",
+    "name": "두부외상학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0818",
+    "name": "두부외상학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0912",
+    "name": "류마티스 관절염의 병인기전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0911",
+    "name": "류마티스 질환의 세포분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0801",
+    "name": "마취의 합병증",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0810",
+    "name": "마취의 휴유증",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0805",
+    "name": "마취전투약",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0804",
+    "name": "마취전평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0977",
+    "name": "만성 관절염의 치료기술론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0744",
+    "name": "만성 신부전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0715",
+    "name": "만성간염",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0838",
+    "name": "만성병관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0832",
+    "name": "만성퇴행성질환의 관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0764",
+    "name": "만성호흡부전의 관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0826",
+    "name": "말초신경외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0751",
+    "name": "말초혈액및 골수검사소견",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0710",
+    "name": "망막초자체질환의 치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0764",
+    "name": "면역병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0851",
+    "name": "면역세포와 장기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0863",
+    "name": "면역약리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0865",
+    "name": "면역요법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0864",
+    "name": "면역유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0855",
+    "name": "면역조절",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0854",
+    "name": "면역학 총론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0998",
+    "name": "명상과 의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0837",
+    "name": "문제지향식 의무기록",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0882",
+    "name": "미생물 동정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0888",
+    "name": "미생물 면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0890",
+    "name": "미생물 병인론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0805",
+    "name": "미세외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0914",
+    "name": "민무늬근약리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0844",
+    "name": "발달학적 관점에서 본 정신병리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0702",
+    "name": "발생생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0859",
+    "name": "발생학연구기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0814",
+    "name": "방사면역측정법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0768",
+    "name": "방사선물리학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0767",
+    "name": "방사선방어학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0765",
+    "name": "방사선분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0773",
+    "name": "방사선생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0769",
+    "name": "방사선생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0815",
+    "name": "방사선선량측정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0764",
+    "name": "방사선세포생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0992",
+    "name": "방사선의학생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0766",
+    "name": "방사선종양면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0776",
+    "name": "방사선치료및화학요법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0817",
+    "name": "방사약리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0753",
+    "name": "백혈병",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0778",
+    "name": "법의감식학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0775",
+    "name": "법의검사학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0779",
+    "name": "법의독물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0777",
+    "name": "법의문서작성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0780",
+    "name": "법의병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0773",
+    "name": "법의혈청학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0852",
+    "name": "병리검사정보학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0759",
+    "name": "병리학적 방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0729",
+    "name": "병원 감염",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0791",
+    "name": "병원감염병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0894",
+    "name": "병원감염체학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0861",
+    "name": "병원경영정보시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0842",
+    "name": "병원경영학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0884",
+    "name": "병원성세균 유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0723",
+    "name": "병원정보시스템실험",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0862",
+    "name": "병원행정관리정보시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0761",
+    "name": "병인론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0770",
+    "name": "병태병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0831",
+    "name": "보건과 인간생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0915",
+    "name": "보건의료정보표준학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0743",
+    "name": "보건의료정보학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0828",
+    "name": "보건의료정보학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0822",
+    "name": "보건의료통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0972",
+    "name": "보조기 의지학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0876",
+    "name": "복강경의 골반내 수술 적용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0776",
+    "name": "부검수기학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0834",
+    "name": "부부치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0921",
+    "name": "부부치료와 가족치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0750",
+    "name": "부신 및 성선",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0762",
+    "name": "부신질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0875",
+    "name": "부인과 내시경",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0866",
+    "name": "부인과 미세수술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0874",
+    "name": "부인과 방사선요법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0869",
+    "name": "부인과 병리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0871",
+    "name": "부인과 종양",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0861",
+    "name": "부인과 좌담회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0704",
+    "name": "부정맥",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0909",
+    "name": "분자면역약리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOL0921",
+    "name": "분자면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0766",
+    "name": "분자병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0757",
+    "name": "분자생물학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0750",
+    "name": "분자생물학연구법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0872",
+    "name": "분자세포영상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0913",
+    "name": "분자신경약리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0781",
+    "name": "분자약리학A",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0815",
+    "name": "분자역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0878",
+    "name": "분자영상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0963",
+    "name": "분자영상 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0915",
+    "name": "분자원충학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0782",
+    "name": "분자유전검사학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0749",
+    "name": "분자의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0961",
+    "name": "분자의학 연구법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0958",
+    "name": "분자의학의 고급 기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0908",
+    "name": "분자의학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0864",
+    "name": "분자형태학세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0865",
+    "name": "분자형태학세미나2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0866",
+    "name": "분자형태학세미나3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0984",
+    "name": "불안장애의 신경생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0867",
+    "name": "불임증",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0753",
+    "name": "비뇨생식기 외과수술학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0748",
+    "name": "비뇨생식기계통의해부 및 생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0755",
+    "name": "비뇨생식기세균학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0757",
+    "name": "비뇨생식기종양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0749",
+    "name": "비뇨생식기진단 및 검사법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0996",
+    "name": "비만학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0730",
+    "name": "비부비강수술학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDD0713",
+    "name": "비생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDD0711",
+    "name": "비알레르기학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0859",
+    "name": "사이토카인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0871",
+    "name": "사회보건의료윤리의제문제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0870",
+    "name": "산과 병리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0862",
+    "name": "산과 좌담회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0803",
+    "name": "산소요법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0724",
+    "name": "상기도해부학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0734",
+    "name": "생명정보학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0737",
+    "name": "생물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0982",
+    "name": "생물정신사회적 질병모형과 정신치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0798",
+    "name": "생역동학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0812",
+    "name": "생체시스템모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0813",
+    "name": "생체신호개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0745",
+    "name": "생체신호전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0821",
+    "name": "생체신호처리개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0863",
+    "name": "생체역학연구기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0751",
+    "name": "생통계학이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0739",
+    "name": "생화학연구법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0738",
+    "name": "생화학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0784",
+    "name": "성인심장외과",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0887",
+    "name": "세포 미생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0868",
+    "name": "세포 및 조직연구법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0991",
+    "name": "세포기반분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0767",
+    "name": "세포병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0852",
+    "name": "세포생물학 각론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0851",
+    "name": "세포생물학 총론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0876",
+    "name": "세포생물학연구법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0854",
+    "name": "세포성 면역반응",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0906",
+    "name": "세포신호전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0904",
+    "name": "세포약리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0751",
+    "name": "세포와 기질",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0762",
+    "name": "세포의 구조와 기능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0765",
+    "name": "세포화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0802",
+    "name": "소생술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0943",
+    "name": "소아 수분 및 전해질",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0917",
+    "name": "소아 재활",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0951",
+    "name": "소아간담도병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0945",
+    "name": "소아감염병학I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0946",
+    "name": "소아감염병학II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0910",
+    "name": "소아내분비학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0754",
+    "name": "소아비뇨기과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0944",
+    "name": "소아성장발달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0811",
+    "name": "소아신경외과학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0823",
+    "name": "소아신경외과학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0947",
+    "name": "소아신경질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0846",
+    "name": "소아신장병학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0851",
+    "name": "소아신장병학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0845",
+    "name": "소아심장병학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0849",
+    "name": "소아심장병학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0783",
+    "name": "소아심장외과",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0716",
+    "name": "소아안과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0949",
+    "name": "소아알레르기질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0771",
+    "name": "소아외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0790",
+    "name": "소아외상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0948",
+    "name": "소아위장병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0732",
+    "name": "소아이비인후과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0966",
+    "name": "소아정형외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0853",
+    "name": "소아종양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0849",
+    "name": "소아청소년 정신과 환자에 대한 치료적 접근",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0848",
+    "name": "소아청소년 환자의 정신약물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0845",
+    "name": "소아청소년과 정신적인 외상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0919",
+    "name": "소아청소년정신과에서 흔히 보는 임상질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0745",
+    "name": "소아피부과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0852",
+    "name": "소아혈액학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0950",
+    "name": "소아호흡기질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDD0717",
+    "name": "소화기계 영상의학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDD0718",
+    "name": "소화기계 영상의학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0825",
+    "name": "소화기계핵응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0727",
+    "name": "소화생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0713",
+    "name": "소화성 궤양",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0834",
+    "name": "수리생물학및수리의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDD0712",
+    "name": "수면생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0880",
+    "name": "수면정신의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0788",
+    "name": "수부외상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0781",
+    "name": "수혈의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0891",
+    "name": "숙주-병원체 상호작용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0921",
+    "name": "순환기병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0775",
+    "name": "순환부전증",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0724",
+    "name": "순환생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0975",
+    "name": "스포츠 재활",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0801",
+    "name": "스포츠외상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0802",
+    "name": "슬관절외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0916",
+    "name": "슬관절인대재건술학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0780",
+    "name": "식도외과",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0833",
+    "name": "식피수술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0927",
+    "name": "신경계 방사선수술학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0928",
+    "name": "신경계 혈관내수술학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0716",
+    "name": "신경과학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0800",
+    "name": "신경근육성질환학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDD0714",
+    "name": "신경두경부 영상의학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDD0715",
+    "name": "신경두경부 영상의학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDD0716",
+    "name": "신경두경부 영상의학 III",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0907",
+    "name": "신경면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0893",
+    "name": "신경병리학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0906",
+    "name": "신경병리학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0895",
+    "name": "신경분자 생물학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0712",
+    "name": "신경안과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0898",
+    "name": "신경약리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0816",
+    "name": "신경외과학세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0832",
+    "name": "신경외과학세미나2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0728",
+    "name": "신경이과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0808",
+    "name": "신경차단마취",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0936",
+    "name": "신경초음파학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0900",
+    "name": "신경학적 질환 모델",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0860",
+    "name": "신경해부학연구기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0901",
+    "name": "신경화학적방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0844",
+    "name": "신생아학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0847",
+    "name": "신생아학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0758",
+    "name": "신성고혈압",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0742",
+    "name": "신세뇨관성 산성증",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0952",
+    "name": "신약개발 및 임상시험",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0959",
+    "name": "신약개발과 분자의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0925",
+    "name": "신이식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0726",
+    "name": "신장생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0759",
+    "name": "신장이식술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0741",
+    "name": "신혈관성 고혈압",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0862",
+    "name": "실험동물학연구기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0858",
+    "name": "실험면역",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0771",
+    "name": "실험병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0735",
+    "name": "실험생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0960",
+    "name": "실험유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0703",
+    "name": "심부전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0723",
+    "name": "심장생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0785",
+    "name": "심장이식과 인공심장",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDD0719",
+    "name": "심혈관계 영상의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0792",
+    "name": "심혈관약리학A",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0718",
+    "name": "안과유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0702",
+    "name": "안과진단학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0709",
+    "name": "안과초음파학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0703",
+    "name": "안과치료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0836",
+    "name": "안면성형술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0708",
+    "name": "안면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0835",
+    "name": "안면외상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0701",
+    "name": "안발생학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0706",
+    "name": "안병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0707",
+    "name": "안생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0720",
+    "name": "안생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0711",
+    "name": "안수술학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0719",
+    "name": "안약리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0714",
+    "name": "안외상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0704",
+    "name": "안전부질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0700",
+    "name": "안해부학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0705",
+    "name": "안후부질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0715",
+    "name": "알고리즘과자료구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0722",
+    "name": "알레르기 진단법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0723",
+    "name": "알레르기 질환의 치료법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0968",
+    "name": "알츠하이머병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0917",
+    "name": "알코올과 간",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0856",
+    "name": "암 세포분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0847",
+    "name": "애착이론과 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0785",
+    "name": "약리학실험법A",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0911",
+    "name": "약리학적 신경생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0899",
+    "name": "약물뇌파학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0953",
+    "name": "약물유전체학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0859",
+    "name": "여성생식기의 염증",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0860",
+    "name": "여성생식기의 종양",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0920",
+    "name": "역동정신의학의 역사와 발달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0732",
+    "name": "연합중추생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0905",
+    "name": "염증과 알레르기 약리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0769",
+    "name": "염증론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0719",
+    "name": "염증성 장질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDD0722",
+    "name": "영상의학 총론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0733",
+    "name": "영양및운동생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0838",
+    "name": "예방소아과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0717",
+    "name": "예방안과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0774",
+    "name": "온열요법학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0765",
+    "name": "외과종양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDD0725",
+    "name": "외상중환자외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0751",
+    "name": "요로결석증",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0761",
+    "name": "요로내분비학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0752",
+    "name": "요로발생학 및 기형",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0763",
+    "name": "요로신경근육질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0760",
+    "name": "요로전환술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0731",
+    "name": "운동신경생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0844",
+    "name": "원격진료학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0839",
+    "name": "위기관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0717",
+    "name": "위염",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0718",
+    "name": "위장관의 운동장애질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0766",
+    "name": "위장외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0834",
+    "name": "위해성 평가 및 관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0901",
+    "name": "유발전위이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDD0723",
+    "name": "유방영상의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDD0724",
+    "name": "유방외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0747",
+    "name": "유전자발현과 조절",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0823",
+    "name": "유전자배열정보데이터베이스의응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0822",
+    "name": "유전자정보처리및구조분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0962",
+    "name": "유전자조작 연구법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0877",
+    "name": "유전체연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0734",
+    "name": "음성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0827",
+    "name": "의료경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0835",
+    "name": "의료모델링및모의실험",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0825",
+    "name": "의료사회학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0841",
+    "name": "의료영상학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0732",
+    "name": "의료정보검색",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0857",
+    "name": "의료정보학 및 통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0914",
+    "name": "의료정보학강의실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0731",
+    "name": "의료정보학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0911",
+    "name": "의료정보학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0762",
+    "name": "의료정보학실험및설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0912",
+    "name": "의료정보학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0913",
+    "name": "의료정보학프로젝트실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0826",
+    "name": "의료정책학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0836",
+    "name": "의료환경에서의인간-기계접속연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0701",
+    "name": "의용전자기기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0875",
+    "name": "의학 세포생물학 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0902",
+    "name": "의학독성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0885",
+    "name": "의학미생물학 최신토픽 Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0886",
+    "name": "의학미생물학 최신토픽 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0746",
+    "name": "의학분자유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0830",
+    "name": "의학상담학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0743",
+    "name": "의학세포생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0869",
+    "name": "의학실험동물생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0758",
+    "name": "의학실험동물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0858",
+    "name": "의학연구 기법 및 기기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0823",
+    "name": "의학연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0721",
+    "name": "의학용어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0754",
+    "name": "의학유전자조작",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0703",
+    "name": "의학유전학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0711",
+    "name": "의학유전학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0861",
+    "name": "의학유전학연구기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0729",
+    "name": "이과수술학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0733",
+    "name": "이과조직병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0735",
+    "name": "이비인후과전기생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0723",
+    "name": "이비인후과진단학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0858",
+    "name": "이상임신 및 예후",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0862",
+    "name": "이식면역",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0935",
+    "name": "이식외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0796",
+    "name": "인공관절학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0706",
+    "name": "인공심박조율",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0753",
+    "name": "인공지능및의료전문가시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0896",
+    "name": "인수전염병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0981",
+    "name": "인지 신경과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0853",
+    "name": "인체 구조와 기능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0728",
+    "name": "인체내분비생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0740",
+    "name": "인체단백질생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0744",
+    "name": "인체바이러스학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOL0771",
+    "name": "인체발생학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0880",
+    "name": "인체병원성 바이러스학-1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0897",
+    "name": "인체병원성 바이러스학-2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0879",
+    "name": "인체세균학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0720",
+    "name": "인체세포생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0855",
+    "name": "인체질환의 병리·생리 총론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0752",
+    "name": "인체효소학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0837",
+    "name": "인터넷-자바응용프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0713",
+    "name": "인터넷,자바,웹개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0971",
+    "name": "임상 수면의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0969",
+    "name": "임상 운동질환학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0967",
+    "name": "임상 치매학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0938",
+    "name": "임상간질학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0795",
+    "name": "임상검경학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0788",
+    "name": "임상결핵균 및 진균검사학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0790",
+    "name": "임상기생충검사학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0937",
+    "name": "임상뇌졸중학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0903",
+    "name": "임상독성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0786",
+    "name": "임상미생물검사술식학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0789",
+    "name": "임상바이러스검사학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0774",
+    "name": "임상법의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0787",
+    "name": "임상세균검사학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0891",
+    "name": "임상신경생리학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0904",
+    "name": "임상신경생리학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0892",
+    "name": "임상신경약리학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0905",
+    "name": "임상신경약리학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0889",
+    "name": "임상신경해부학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0838",
+    "name": "임상역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0840",
+    "name": "임상유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0741",
+    "name": "임상의료정보학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0851",
+    "name": "임상의료정보학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0785",
+    "name": "임상장기이식검사학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0792",
+    "name": "임상정도관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0722",
+    "name": "임상정보시스템개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0881",
+    "name": "임상정신병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0794",
+    "name": "임상종양진단검사학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0796",
+    "name": "임상컴퓨터데이터학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0705",
+    "name": "임상해부학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0816",
+    "name": "임상핵물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0793",
+    "name": "임상화학검사학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0841",
+    "name": "임종학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0856",
+    "name": "자가면역",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0914",
+    "name": "자가면역 질환의 세포성 면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0997",
+    "name": "자가면역검사학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0926",
+    "name": "자가면역질환의 병인론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0771",
+    "name": "자기공명영상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0913",
+    "name": "장기 비특이적 자가면역질환의 병인론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0993",
+    "name": "장내세균학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0835",
+    "name": "재해 예방 및 관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0973",
+    "name": "재활 신경과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0976",
+    "name": "재활의학의 약물치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0756",
+    "name": "전립선질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0717",
+    "name": "전산수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0763",
+    "name": "전산지원의학교육개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0711",
+    "name": "전산학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0775",
+    "name": "전산화단층촬영학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0797",
+    "name": "전신마취",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0833",
+    "name": "전염병관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0733",
+    "name": "전자의료정보개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0760",
+    "name": "전자현미경학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0763",
+    "name": "전현종양병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0794",
+    "name": "절단 및 재활의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0889",
+    "name": "점막 면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0807",
+    "name": "정맥마취",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0857",
+    "name": "정상임신 및 분만",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0799",
+    "name": "정신건강의학과 의사를 위한 치매학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0985",
+    "name": "정신분열병의 생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0878",
+    "name": "정신신체의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0910",
+    "name": "정신약리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0988",
+    "name": "정신약물과 정신장애의 치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0923",
+    "name": "정신약물학 개괄",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0989",
+    "name": "정신약물학과 보건경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0987",
+    "name": "정신약물학의 신경영상학적 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0990",
+    "name": "정신약물학의 역사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0924",
+    "name": "정신약물학의 전임상연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0980",
+    "name": "정신장애의 신경영상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0978",
+    "name": "족부족관절학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0861",
+    "name": "종양면역",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0768",
+    "name": "종양병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0744",
+    "name": "종양생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0772",
+    "name": "중재적방사선학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0810",
+    "name": "중추신경계감염학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0824",
+    "name": "중추신경계감염학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0824",
+    "name": "중추신경계핵응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0729",
+    "name": "중추신경생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0761",
+    "name": "지식경영및지식공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0893",
+    "name": "지역사회 감염",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0824",
+    "name": "지역사회 진단학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0780",
+    "name": "지혈 및 혈전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0830",
+    "name": "직업병의 진단 및 관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0916",
+    "name": "진단기생충학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0783",
+    "name": "진단면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0777",
+    "name": "진단혈액학실험",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0752",
+    "name": "진료의사결정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0742",
+    "name": "진료지원정보학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0918",
+    "name": "척수손상의재활",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0798",
+    "name": "척추마취",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0812",
+    "name": "척추신경외과학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0825",
+    "name": "척추신경외과학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0803",
+    "name": "척추외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0752",
+    "name": "철결핍성 빈혈",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0725",
+    "name": "청각학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0721",
+    "name": "청기생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0853",
+    "name": "체액성 면역반응",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0779",
+    "name": "체외순환과 심근보호",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0770",
+    "name": "초음파영상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0863",
+    "name": "초음파의 부인과 적용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0873",
+    "name": "초음파의 산과 적용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0873",
+    "name": "최신분자의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0866",
+    "name": "최신역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0931",
+    "name": "출혈성뇌혈관질환외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0716",
+    "name": "치료내시경학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0954",
+    "name": "치료약물 농도 모니터링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0712",
+    "name": "컴퓨터구조학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0736",
+    "name": "컴퓨터적용생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0716",
+    "name": "컴퓨터통신및네트웍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0864",
+    "name": "태아감시",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0865",
+    "name": "태아성숙",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0974",
+    "name": "통증의 재활",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0843",
+    "name": "통합의료영상관리시스템특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0812",
+    "name": "특수마취",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0714",
+    "name": "파일과데이터베이스개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0970",
+    "name": "파킨슨병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0702",
+    "name": "판막질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0842",
+    "name": "패턴인식과패턴분류",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0728",
+    "name": "패혈증의 병태 생리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0722",
+    "name": "평형기생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0758",
+    "name": "폐기능검사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0763",
+    "name": "폐부종의 병태생리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0761",
+    "name": "폐암의 병인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0781",
+    "name": "폐종양",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0922",
+    "name": "폐질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0965",
+    "name": "표지화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0836",
+    "name": "풍토병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0957",
+    "name": "프로테오믹스 연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0955",
+    "name": "프리라디칼 생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0736",
+    "name": "피부과학총론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0738",
+    "name": "피부면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0942",
+    "name": "피부부속기학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0747",
+    "name": "피부외과술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0737",
+    "name": "피부조직병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0739",
+    "name": "피부종양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0741",
+    "name": "피부진균학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0740",
+    "name": "피부질환 치료법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0868",
+    "name": "피임법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0834",
+    "name": "피판술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0000",
+    "name": "학위논문연구 및 연구윤리 (의학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0883",
+    "name": "항균제 내성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0727",
+    "name": "항생제의 임상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0852",
+    "name": "항원과 항체",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0820",
+    "name": "핵내분비학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0819",
+    "name": "핵순환기학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0823",
+    "name": "핵신장학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0818",
+    "name": "핵의학기기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0822",
+    "name": "핵종양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0826",
+    "name": "핵치료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0821",
+    "name": "핵혈액학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0882",
+    "name": "행동 및 인지치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0979",
+    "name": "행동신경학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0912",
+    "name": "행동약리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0843",
+    "name": "행동의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0932",
+    "name": "허혈성뇌혈관질환외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0867",
+    "name": "현미경학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0956",
+    "name": "혈관노화와 질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0915",
+    "name": "혈관염의 면역기전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0934",
+    "name": "혈관외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0924",
+    "name": "혈액 및 종양 환자에서 예상되는 내과적 합병증",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0871",
+    "name": "혈액세포생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0779",
+    "name": "혈액종양진단학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0725",
+    "name": "호흡생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0829",
+    "name": "환경및산업독성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0772",
+    "name": "환경병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0777",
+    "name": "흉벽질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0776",
+    "name": "흉부외상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0806",
+    "name": "흡입마취",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0811",
+    "name": "흡입요법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0730",
+    "name": "AIDS",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0731",
+    "name": "FUO",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0725",
+    "name": "HLA",
+    "credit": "3-3-0"
+  }
+]

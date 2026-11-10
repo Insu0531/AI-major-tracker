@@ -1,0 +1,386 @@
+[
+  {
+    "grade": "",
+    "code": "ENVI0847",
+    "name": "고급환경기기분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0849",
+    "name": "고도생물처리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0776",
+    "name": "고형폐기물의 화학적처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0843",
+    "name": "나노기술과청정에너지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0732",
+    "name": "대기오염관리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0850",
+    "name": "대기오염모니터링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0736",
+    "name": "대기오염모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0737",
+    "name": "대기오염제어특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0738",
+    "name": "대기오염제어특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0735",
+    "name": "대기화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0783",
+    "name": "막분리공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0780",
+    "name": "매립및매립가스공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0872",
+    "name": "매립지 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0876",
+    "name": "물리화학적 정수처리공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0725",
+    "name": "물리화학적폐수처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0726",
+    "name": "물리화학적폐수처리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0853",
+    "name": "물재이용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "OECA0708",
+    "name": "바이오에너지특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0744",
+    "name": "반응공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0879",
+    "name": "방사성폐기물처리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0777",
+    "name": "병원폐기물자원화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0730",
+    "name": "분진제어특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0856",
+    "name": "산업수질관리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0779",
+    "name": "산업오염제어공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0840",
+    "name": "산업환경기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0772",
+    "name": "생태공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0781",
+    "name": "수질공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0728",
+    "name": "수질화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COEN0701",
+    "name": "스마트순환사회환경시스템 세미나1",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "",
+    "code": "COEN0702",
+    "name": "스마트순환사회환경시스템 세미나2",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0778",
+    "name": "슬러지안정화공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0733",
+    "name": "실내공기오염특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0858",
+    "name": "에너지공학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0844",
+    "name": "에너지환경공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0739",
+    "name": "에어로졸",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0748",
+    "name": "에어로졸공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0740",
+    "name": "연소공학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0741",
+    "name": "연소공학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0793",
+    "name": "열처리 및 폐기물에너지 재생",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0722",
+    "name": "용수처리공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0816",
+    "name": "전과정 평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0749",
+    "name": "콜로이드및나노물질특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0796",
+    "name": "탐색적자료분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0760",
+    "name": "토양오염",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0792",
+    "name": "폐기물바이오연료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0874",
+    "name": "표면 및 토양화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0795",
+    "name": "하수슬러지의 퇴비화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0000",
+    "name": "학위논문연구 및 연구윤리 (환경공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0866",
+    "name": "혐기성소화공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0875",
+    "name": "환경공학 공정설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0794",
+    "name": "환경과 고형폐기물",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0797",
+    "name": "환경데이터분석및 실무",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0747",
+    "name": "환경동력화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0773",
+    "name": "환경모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0771",
+    "name": "환경복원공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0867",
+    "name": "환경생물공정공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0873",
+    "name": "환경생화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0785",
+    "name": "환경수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0813",
+    "name": "환경시스템공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0731",
+    "name": "환경위해성평가특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0743",
+    "name": "환경유기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0734",
+    "name": "환경자료분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENVI0868",
+    "name": "환경통계학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INDC0911",
+    "name": "환경화학특론",
+    "credit": "3-3-0"
+  }
+]

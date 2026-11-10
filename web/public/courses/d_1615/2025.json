@@ -1,0 +1,398 @@
+[
+  {
+    "grade": "3",
+    "code": "DGMB0202",
+    "name": "3차원CAD및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0354",
+    "name": "계측공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMF0202",
+    "name": "고분자의이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMB0211",
+    "name": "광공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMB0302",
+    "name": "디지털전환캡스톤디자인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMB0305",
+    "name": "디지털트윈구조해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMB0309",
+    "name": "로봇시뮬레이션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0486",
+    "name": "마이크로컨트롤러",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0358",
+    "name": "메카트로닉스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMB0508",
+    "name": "모빌리티제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMB0502",
+    "name": "미래자동차공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMB0301",
+    "name": "미래차전환CAD설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMF0207",
+    "name": "미래차현장실습1",
+    "credit": "3-0-4(주)"
+  },
+  {
+    "grade": "3",
+    "code": "DGMB0206",
+    "name": "미래형자동차융합캡스톤디자인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0482",
+    "name": "시스템제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMB0408",
+    "name": "신재생에너지개론(친환경배터리소재)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMB0406",
+    "name": "에너지세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMF0205",
+    "name": "에너지저장소자개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMF0203",
+    "name": "이차전지개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMB0509",
+    "name": "자동차구조해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMB0208",
+    "name": "자동차열유체공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMB0204",
+    "name": "자동차응용프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMB0504",
+    "name": "자동차전자기학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMB0503",
+    "name": "전기차디자인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMB0501",
+    "name": "전기차캡스톤디자인",
+    "credit": "3-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "DGMF0206",
+    "name": "전기차e파워트레인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PMEN0265",
+    "name": "정밀센서공학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "DGMB0402",
+    "name": "첨단배터리소재",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMB0403",
+    "name": "친환경배터리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MECH0489",
+    "name": "품질 및 신뢰성공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DGMB0303",
+    "name": "UX/UI디자인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "META0351",
+    "name": "금속열처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMB0212",
+    "name": "기하광학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0583",
+    "name": "로봇시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMB0306",
+    "name": "모빌리티SW시뮬레이션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMF0210",
+    "name": "미래차현장실습2",
+    "credit": "3-0-4(주)"
+  },
+  {
+    "grade": "4",
+    "code": "DGMB0207",
+    "name": "미래형자동차 산업기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMF0212",
+    "name": "배터리성능해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMB0401",
+    "name": "배터리캡스톤디자인",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "4",
+    "code": "DGMB0307",
+    "name": "버추얼팩토리시뮬레이션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMB0510",
+    "name": "부품요소설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMB0203",
+    "name": "시스템전산해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMB0405",
+    "name": "에너지소재화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMB0407",
+    "name": "연료전지공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMB0507",
+    "name": "영상데이터처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMB0310",
+    "name": "오토모티브회로설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMB0308",
+    "name": "오토모티브AI시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMB0505",
+    "name": "자동차전력전자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMB0201",
+    "name": "자율주행공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMB0404",
+    "name": "전기화학(친환경배터리소재)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AUTO0234",
+    "name": "전자제어섀시",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMB0304",
+    "name": "제품디자인SW실무",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0542",
+    "name": "졸업과제 1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "DGMB0209",
+    "name": "차량비전시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "MECH0586",
+    "name": "최신기계공학기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AUTO0250",
+    "name": "친환경차시스템공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DGMB0506",
+    "name": "친환경차에너지시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "DGMB0210",
+    "name": "미래전기자동차전기기술개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "DGMK0202",
+    "name": "산학연계PBL",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "9",
+    "code": "DGMF0209",
+    "name": "스마트팩토리시스템",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "9",
+    "code": "DGMF0204",
+    "name": "시뮬레이션기반오토모티브SW개발",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "DGMF0201",
+    "name": "오토모티브SW활용",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "9",
+    "code": "DGMK0201",
+    "name": "융합기술특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "DGMK0203",
+    "name": "인공지능융합개론Ⅰ",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "9",
+    "code": "DGMF0208",
+    "name": "자동차부품설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "9",
+    "code": "DGMF0211",
+    "name": "전기차플랫폼",
+    "credit": "3-3-0"
+  }
+]

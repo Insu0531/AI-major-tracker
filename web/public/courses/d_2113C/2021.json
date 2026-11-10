@@ -1,0 +1,518 @@
+[
+  {
+    "grade": "",
+    "code": "BIOL0972",
+    "name": "게놈진화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0775",
+    "name": "고급계통분류학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GENE0742",
+    "name": "고급면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GENE0727",
+    "name": "고급미생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0712",
+    "name": "고급발생생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GENE0724",
+    "name": "고급분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0714",
+    "name": "고급생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GENE0725",
+    "name": "고급생물공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GENE0746",
+    "name": "고급생체대사학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GENE0741",
+    "name": "고급생체조절론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0713",
+    "name": "고급생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0837",
+    "name": "고급생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOL0762",
+    "name": "고급세포생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GENE0744",
+    "name": "고급유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0715",
+    "name": "고급형태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0902",
+    "name": "구조기반약물학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "MBIO0737",
+    "name": "구조분자생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MBIO0760",
+    "name": "균학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOL0973",
+    "name": "기관발생학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MBIO0759",
+    "name": "노화생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0789",
+    "name": "뇌의구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0872",
+    "name": "단백질결정학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOC0915",
+    "name": "단백질공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GENE0728",
+    "name": "단백질생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0776",
+    "name": "동물계통학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOL0821",
+    "name": "동물분자생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0777",
+    "name": "동물생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GENE0947",
+    "name": "동물유전학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MBIO0784",
+    "name": "미생물생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0801",
+    "name": "미생물유전체학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0707",
+    "name": "미생물학면역학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MBIO0780",
+    "name": "미생물화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0787",
+    "name": "미세조류분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0788",
+    "name": "미세조류생리생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GENE0731",
+    "name": "바이러스학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0786",
+    "name": "발생학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOC0712",
+    "name": "발암생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0831",
+    "name": "발효미생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0805",
+    "name": "백신학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MBIO0753",
+    "name": "병원미생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOC0717",
+    "name": "분자생리화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOL0961",
+    "name": "분자생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MBIO0769",
+    "name": "산업미생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0804",
+    "name": "생리활성물질화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0866",
+    "name": "생명실험윤리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOC0718",
+    "name": "생물리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0873",
+    "name": "생유기화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0705",
+    "name": "생태계통학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0702",
+    "name": "생화학분자생물학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0803",
+    "name": "세균학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOL0971",
+    "name": "세포분화론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOL0922",
+    "name": "세포생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MBIO0758",
+    "name": "세포주기조절특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0778",
+    "name": "식물계통학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0851",
+    "name": "식물대사공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0785",
+    "name": "식물발생학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GENE0929",
+    "name": "식물분자생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOL0751",
+    "name": "식물생리생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPLS0717",
+    "name": "식물생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GENE0943",
+    "name": "식물생화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0780",
+    "name": "식물형태학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOL0853",
+    "name": "식물호르몬학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOL0911",
+    "name": "신경과학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0852",
+    "name": "실험동물학특론",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "MBIO0754",
+    "name": "암생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0901",
+    "name": "약물전달시스템학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0708",
+    "name": "유전생명공학세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0709",
+    "name": "유전생명공학세미나2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MBIO0785",
+    "name": "유전자발현조절특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GENE0949",
+    "name": "유전자조작특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0802",
+    "name": "의학바이러스학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GENE0944",
+    "name": "의학유전학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOL0872",
+    "name": "인류유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0783",
+    "name": "인체유전학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOL0941",
+    "name": "조류학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0781",
+    "name": "종생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0853",
+    "name": "줄기세포공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOC0924",
+    "name": "지질생화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0784",
+    "name": "진화계통학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0706",
+    "name": "진화발생생물학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0854",
+    "name": "펩타이드공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0000",
+    "name": "학위논문연구 및 연구윤리(생명과학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MBIO0738",
+    "name": "항생물질학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MBIO0723",
+    "name": "환경미생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIFE0874",
+    "name": "효소생화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GENE0927",
+    "name": "Genome연구",
+    "credit": "3-3-0"
+  }
+]

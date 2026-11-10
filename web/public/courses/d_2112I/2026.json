@@ -1,0 +1,92 @@
+[
+  {
+    "grade": "",
+    "code": "MBIO0784",
+    "name": "미생물생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MBIO0763",
+    "name": "미생물유전학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0761",
+    "name": "미생물효소학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0762",
+    "name": "발효미생물공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0785",
+    "name": "발효생물공학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0763",
+    "name": "발효생물공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0764",
+    "name": "발효생화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0784",
+    "name": "전통주양조학연습",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0788",
+    "name": "전통주양조학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0771",
+    "name": "주류마케팅관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0786",
+    "name": "주류분석학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0789",
+    "name": "주류양조공학연습",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0787",
+    "name": "주류품질관리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FEBI0000",
+    "name": "학위논문연구 및 연구윤리(발효생물공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0798",
+    "name": "AI기반 발효식품위생학특론",
+    "credit": "3-3-0"
+  }
+]

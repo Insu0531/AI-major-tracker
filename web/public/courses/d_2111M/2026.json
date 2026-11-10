@@ -1,0 +1,230 @@
+[
+  {
+    "grade": "",
+    "code": "APCE0759",
+    "name": "고급고분자가공",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0769",
+    "name": "고급고분자물성 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0770",
+    "name": "고급고분자물성 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0719",
+    "name": "고급물리화학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0720",
+    "name": "고급물리화학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0737",
+    "name": "고급분석화학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0738",
+    "name": "고급분석화학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0758",
+    "name": "고급유기재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0783",
+    "name": "고분자 기술혁신 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0746",
+    "name": "고분자화학특론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0747",
+    "name": "고분자화학특론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0776",
+    "name": "기능성소재공학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0777",
+    "name": "기능성소재공학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0782",
+    "name": "기능성하이브리드 복합소재",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0780",
+    "name": "나노 고분자소재 공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0760",
+    "name": "나노소재공학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0761",
+    "name": "나노소재공학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0750",
+    "name": "나노소재화학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0751",
+    "name": "나노소재화학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0773",
+    "name": "나노재료구조분석 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0774",
+    "name": "나노재료구조분석 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0748",
+    "name": "생체재료화학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0749",
+    "name": "생체재료화학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0781",
+    "name": "소프트 전자소재",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0779",
+    "name": "연성소재",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0728",
+    "name": "유기화학특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0729",
+    "name": "유기화학특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0718",
+    "name": "응용통계역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0763",
+    "name": "의료용신소재 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0764",
+    "name": "의료용신소재 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0713",
+    "name": "이동현상특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0714",
+    "name": "이동현상특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0716",
+    "name": "이론유변학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0756",
+    "name": "전자재료화학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "POLY0729",
+    "name": "친환경 고분자재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0743",
+    "name": "표면화학특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0744",
+    "name": "표면화학특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "POLY0000",
+    "name": "학위논문연구 및 연구윤리 (고분자공학)",
+    "credit": "3-3-0"
+  }
+]

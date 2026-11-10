@@ -1,0 +1,764 @@
+[
+  {
+    "grade": "",
+    "code": "MATH0739",
+    "name": "가환대수학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0839",
+    "name": "가환대수학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0714",
+    "name": "계산기하학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APPM0813",
+    "name": "계산대수기하학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APPM0725",
+    "name": "계산적 근사이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0846",
+    "name": "고급함수해석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0847",
+    "name": "곡면매듭이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0883",
+    "name": "곡선론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0845",
+    "name": "과학계산 및 수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0735",
+    "name": "군의 표현론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0835",
+    "name": "군의 표현론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0848",
+    "name": "그래프이론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0849",
+    "name": "그래프이론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0877",
+    "name": "극소곡면론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0850",
+    "name": "금융수학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0792",
+    "name": "기초기하학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0790",
+    "name": "기초기하학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0729",
+    "name": "기하적 위상수학 특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0770",
+    "name": "기하적위상수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0882",
+    "name": "기하학연구세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0763",
+    "name": "기하학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0818",
+    "name": "다변수함수론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0760",
+    "name": "다양체론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0874",
+    "name": "대수기하학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0876",
+    "name": "대수기하학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0751",
+    "name": "대수적위상수학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0851",
+    "name": "대수적위상수학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0767",
+    "name": "대수적위상수학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0737",
+    "name": "대수적정수론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0837",
+    "name": "대수적정수론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0742",
+    "name": "대수학연구세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0861",
+    "name": "대수학특강1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0862",
+    "name": "대수학특강2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0863",
+    "name": "대수학특강3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0864",
+    "name": "대수학특강4",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0884",
+    "name": "대역해석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APPM0843",
+    "name": "동력학계와 혼돈",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0775",
+    "name": "리군론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0865",
+    "name": "리대수",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0776",
+    "name": "리만기하학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0769",
+    "name": "매듭이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0774",
+    "name": "미분기하학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0859",
+    "name": "미분위상수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0866",
+    "name": "바나흐공간론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0867",
+    "name": "바나흐공간론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0841",
+    "name": "범주론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0759",
+    "name": "변분론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0793",
+    "name": "보형형식이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0761",
+    "name": "복소다양체론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0711",
+    "name": "복소변수함수론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0811",
+    "name": "복소변수함수론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0732",
+    "name": "비가환대수학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0832",
+    "name": "비가환대수학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0868",
+    "name": "비선형함수해석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0869",
+    "name": "비선형해석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APPM0718",
+    "name": "산업수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APPM0743",
+    "name": "산업응용통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APPM0719",
+    "name": "선형계획법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APPM0846",
+    "name": "수리생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0764",
+    "name": "수리생물학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APPM0823",
+    "name": "수리유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0784",
+    "name": "수치상미방",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APPM0811",
+    "name": "수치선형대수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APPM0824",
+    "name": "수치적최적이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0787",
+    "name": "수치편미분방정식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0704",
+    "name": "수치해석1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0804",
+    "name": "수치해석2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0885",
+    "name": "수치해석특강1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0886",
+    "name": "수치해석특강2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0887",
+    "name": "수학과 보험학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0721",
+    "name": "실복소해석학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0722",
+    "name": "실복소해석학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0740",
+    "name": "암호학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APPM0934",
+    "name": "양자계산론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APPM0942",
+    "name": "양자장이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0860",
+    "name": "위상군론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0753",
+    "name": "위상다양체론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0853",
+    "name": "위상다양체론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0768",
+    "name": "위상리군론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0765",
+    "name": "위상수학연구세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0766",
+    "name": "위상수학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0734",
+    "name": "유니버설대수",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APPM0724",
+    "name": "유한요소 분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APPM0731",
+    "name": "응용기하학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APPM0834",
+    "name": "응용사영기하학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0819",
+    "name": "응용수학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0821",
+    "name": "응용수학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APPM0729",
+    "name": "응용수학연구세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0888",
+    "name": "응용수학특강1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0889",
+    "name": "응용수학특강2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0890",
+    "name": "응용수학특강3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0891",
+    "name": "응용수학특강4",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APPM0827",
+    "name": "응용역산법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0892",
+    "name": "응용위상수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APPM0826",
+    "name": "응용제어이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0944",
+    "name": "응용함수해석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APPM0954",
+    "name": "응용확률과정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0777",
+    "name": "의사리만기하학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0820",
+    "name": "작용소대수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0812",
+    "name": "작용소론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0814",
+    "name": "작용소론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0736",
+    "name": "조합론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0836",
+    "name": "조합론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0752",
+    "name": "조합적위상수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0893",
+    "name": "조화해석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0823",
+    "name": "추계적역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0822",
+    "name": "추계적편미분방정식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0731",
+    "name": "추상대수학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0831",
+    "name": "추상대수학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0702",
+    "name": "편미분방정식론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0802",
+    "name": "편미분방정식론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0894",
+    "name": "프리에해석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0000",
+    "name": "학위논문연구 및 연구윤리 (수학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0703",
+    "name": "함수해석학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0705",
+    "name": "함수해석학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0745",
+    "name": "해석학연구세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0744",
+    "name": "해석학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0897",
+    "name": "현장산업수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0740",
+    "name": "호모로지대수학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0840",
+    "name": "호모로지대수학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0748",
+    "name": "혼돈과 프랙탈",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0795",
+    "name": "확률 및 응용통계학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0788",
+    "name": "확률 및 응용통계학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0738",
+    "name": "환론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0838",
+    "name": "환론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0895",
+    "name": "힐버트공간론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0896",
+    "name": "힐버트공간론2",
+    "credit": "3-3-0"
+  }
+]
