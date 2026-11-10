@@ -8,6 +8,6 @@ const Planner = dynamic(() => import("@/components/planner/Planner"), {
   loading: () => <div className="pl"><div className="pl-loading">불러오는 중…</div></div>,
 });
 
-export default function NewPage() {
+export default function PlannerClient() {
   return <Planner />;
 }

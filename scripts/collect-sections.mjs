@@ -174,6 +174,11 @@ async function collect(sem) {
     throw new Error(`[${sem}] 결과 이상: ${sections.length}건 (이전 ${prevCount}건) → 저장 안 함`);
   }
 
+  // 내용이 그대로면 파일을 다시 쓰지 않는다 (불필요한 커밋·재배포 방지)
+  if (prev && JSON.stringify(prev.sections) === JSON.stringify(sections)) {
+    console.log(`[${sem}] 변경 없음`);
+    return { sem, collectedAt: prev.collectedAt, count: prev.count, unchanged: true };
+  }
   const collectedAt = new Date().toISOString();
   await mkdir(path.dirname(file), { recursive: true });
   await writeFile(file, JSON.stringify({ v: SCHEMA_VERSION, sem, collectedAt, count: sections.length, sections }));
@@ -187,16 +192,21 @@ async function main() {
   const index = (await readJson(indexFile)) ?? { v: SCHEMA_VERSION, semesters: {} };
   let failed = false;
   let succeeded = 0;
+  let changed = 0;
   for (const sem of sems) {
     try {
       const r = await collect(sem);
-      if (r) { index.semesters[sem] = r; succeeded++; }
+      if (r) {
+        if (!r.unchanged) { index.semesters[sem] = r; changed++; }
+        succeeded++;
+      }
     } catch (e) {
       console.error(e.message);
       failed = true;
     }
   }
   if (succeeded === 0) process.exit(failed ? 1 : 0);
+  if (changed === 0) { console.log("바뀐 학기 없음"); if (failed) process.exit(1); return; }
   index.updatedAt = new Date().toISOString();
   await mkdir(OUT_DIR, { recursive: true });
   await writeFile(indexFile, JSON.stringify(index, null, 2) + "\n");

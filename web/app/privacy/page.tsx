@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import "../new/planner.css";
+import Link from "next/link";
+import "../planner.css";
 
 export const metadata: Metadata = {
   title: "개인정보처리방침 · KNU 시간표",
@@ -20,7 +21,7 @@ export default function PrivacyPage() {
       />
       <div className="pl pl-doc">
         <article className="pl-doc-body">
-          <a className="pl-link" href="/new">← 시간표로 돌아가기</a>
+          <Link className="pl-link" href="/">← 시간표로 돌아가기</Link>
           <h1>개인정보처리방침</h1>
           <p className="pl-hint">시행일: {EFFECTIVE}</p>
 

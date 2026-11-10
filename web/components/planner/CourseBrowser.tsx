@@ -34,11 +34,18 @@ function isMyDept(dept: string, labels: string[]) {
 
 const gradeNum = (x: string) => (GRADES.includes(x) ? Number(x) : 9);
 
-/** 분반들의 비고를 중복 없이 모음 (예: "SU평가강좌 · 원격강좌") */
-function remarksOf(secs: RawSection[]): string {
-  const set = new Set<string>();
-  for (const s of secs) if (s.remark) set.add(s.remark);
-  return [...set].join(" / ");
+/** 표의 비고 칸: 분반 중 하나라도 해당하면 "SU평가 포함"처럼 짧게. 자세한 비고는 펼쳤을 때 분반별로 보여 줌 */
+const NOTE_FLAGS: [RegExp, string][] = [
+  [/SU평가/, "SU평가"],
+  [/원격/, "원격"],
+  [/플립드/, "플립드"],
+  [/\(영어\)|영어강의/, "영어강의"],
+  [/신규 교원|신임/, "신임 교수"],
+  [/외국인|유학생/, "외국인 대상"],
+];
+function noteFlags(secs: RawSection[]): string[] {
+  const text = secs.map((s) => `${s.remark} ${s.tags.join(" ")}`).join(" | ");
+  return NOTE_FLAGS.filter(([re]) => re.test(text)).map(([, label]) => `${label} 포함`);
 }
 
 type Props = {
@@ -234,6 +241,7 @@ export default function CourseBrowser(p: Props) {
                 <th className="c-time">강의시간</th>
                 <th className="c-num c-secs">분반</th>
                 <th className="c-note">비고</th>
+                <th className="c-chev"><span className="pl-sr">펼치기</span></th>
               </tr>
             </thead>
             <tbody>
@@ -290,7 +298,7 @@ const CourseRow = memo(function CourseRow({
   const time = timeKeys.size === 1 ? formatSlots(secs[0].slots) : dayPatterns(secs.map((s) => s.slots)) || "시간 미정";
   const profs = [...new Set(secs.flatMap((s) => s.profs))];
   const profText = profs.length === 0 ? "-" : profs.length <= 2 ? profs.join(", ") : `${profs.slice(0, 2).join(", ")} 외 ${profs.length - 2}`;
-  const note = remarksOf(secs);
+  const flags = noteFlags(secs);
 
   return (
     <Fragment>
@@ -303,7 +311,7 @@ const CourseRow = memo(function CourseRow({
         <td className="c-name">
           <span className="pl-cname">{c.name}</span>
           {showCategory && c.category !== "other" && <span className={`pl-badge cat-${c.category}`}>{CATEGORY_LABEL[c.category]}</span>}
-          {otherDept && <span className="pl-badge pl-badge-other" title="우리 과 이수체계 과목인데 다른 학과에서 열린 분반이에요">타학과 개설</span>}
+          {otherDept && <span className="pl-badge pl-badge-other" title="우리 과 이수체계 과목이에요. 다른 학과에서 연 분반도 포함돼 있어요">타학과 개설 포함</span>}
           {c.tags.filter((t) => t === "SDG" || t === "인문교양").map((t) => <span key={t} className="pl-badge">{t}</span>)}
           <span className="pl-mobile-meta">{[c.grade && c.grade !== "*" ? `${c.grade}학년` : "", `${c.credit}학점`, time].filter(Boolean).join(" · ")}</span>
         </td>
@@ -313,11 +321,12 @@ const CourseRow = memo(function CourseRow({
         <td className="c-prof">{profText}</td>
         <td className="c-time">{time}</td>
         <td className="c-num c-secs">{secs.length}</td>
-        <td className="c-note" title={note}>{note}</td>
+        <td className="c-note">{flags.map((f) => <span key={f} className="pl-flag">{f}</span>)}</td>
+        <td className="c-chev" aria-hidden><span className={open ? "up" : ""}>⌄</span></td>
       </tr>
       {open && (
         <tr className="pl-tr-sub">
-          <td colSpan={9}>
+          <td colSpan={10}>
             <div className="pl-sections">
               {secs.map((s) => {
                 const pinned = item?.pinned === s.id;
@@ -330,27 +339,21 @@ const CourseRow = memo(function CourseRow({
                     <span className="pl-sec-time">{formatSlots(s.slots)}</span>
                     <span className="pl-sec-room">{s.room || "-"}</span>
                     <span className={`pl-sec-cap${full ? " full" : ""}`}>{s.capacity ? `${s.applied ?? 0}/${s.capacity}명${full ? " 마감" : ""}` : ""}</span>
-                    {item ? (
-                      <span className="pl-sec-actions">
-                        <button className="pl-btn sm" aria-pressed={pinned} onClick={() => onSection(c.code, s.id, "pin")}>
-                          {pinned ? "고정 해제" : "이 분반으로 고정"}
-                        </button>
-                        <button className="pl-btn sm" aria-pressed={excluded} onClick={() => onSection(c.code, s.id, "exclude")}>
-                          {excluded ? "제외 취소" : "이 분반 제외"}
-                        </button>
-                      </span>
-                    ) : <span />}
+                    <span className="pl-sec-actions">
+                      <button className="pl-btn sm" aria-pressed={pinned} onClick={() => onSection(c.code, s.id, "pin")}>
+                        {pinned ? "고정 해제" : "이 분반으로 고정"}
+                      </button>
+                      <button className="pl-btn sm" aria-pressed={excluded} onClick={() => onSection(c.code, s.id, "exclude")}>
+                        {excluded ? "제외 취소" : "이 분반 제외"}
+                      </button>
+                    </span>
                     {(s.campus !== "산격동" || s.remark) && (
                       <span className="pl-sec-note">{[s.campus !== "산격동" ? s.campus : "", s.remark].filter(Boolean).join(" · ")}</span>
                     )}
                   </div>
                 );
               })}
-              {item ? (
-                <div className="pl-hint">‘이 분반으로 고정’하면 시간표에 이 분반만 쓰고, ‘이 분반 제외’하면 이 분반은 빼고 만들어요.</div>
-              ) : (
-                <div className="pl-hint">담으면 특정 분반으로 고정하거나, 원하지 않는 분반을 제외할 수 있어요.</div>
-              )}
+              <div className="pl-hint">‘이 분반으로 고정’하면 시간표에 이 분반만 쓰고, ‘이 분반 제외’하면 이 분반은 빼고 만들어요. 아직 안 담은 과목이면 자동으로 담겨요.</div>
             </div>
           </td>
         </tr>

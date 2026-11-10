@@ -1,6 +1,7 @@
 "use client";
 
-import { DAY_NAMES } from "@/lib/planner/data";
+import { DAY_NAMES, formatSlots } from "@/lib/planner/data";
+import type { Recommendation } from "@/lib/planner/recommend";
 import type { TimetableItem } from "@/lib/planner/exportImage";
 import type { EngineResponse } from "@/lib/planner/types";
 import Timetable from "./Timetable";
@@ -23,6 +24,8 @@ export default function ResultPanel({
   onBulk,
   bulkProgress,
   onBack,
+  recs,
+  onAddRec,
 }: {
   response: EngineResponse | null;
   running: boolean;
@@ -37,6 +40,8 @@ export default function ResultPanel({
   onBulk?: () => void;
   bulkProgress: number | null;
   onBack: () => void;
+  recs: Recommendation[];
+  onAddRec: (r: Recommendation) => void;
 }) {
   const results = response?.results ?? [];
   const m = results[selIdx]?.metrics;
@@ -89,6 +94,24 @@ export default function ResultPanel({
       </div>
       <div className="pl-scroll">
         <div className="pl-tt-wrap" key={selIdx}><Timetable items={view.items} /></div>
+        {recs.length > 0 && (
+          <div className="pl-recs" data-tour="recs">
+            <div className="pl-list-title">
+              이 시간표 빈 시간에 넣기 좋은 교양
+              <span className="pl-muted" style={{ fontWeight: 500 }}> · 공강 유지·빈 시간 채움·정원 여유 순으로 골랐어요</span>
+            </div>
+            {recs.map((r) => (
+              <div key={r.section.id} className="pl-rec">
+                <div className="pl-rec-main">
+                  <div className="pl-rec-name">{r.course.name} <span className="pl-muted">{r.course.credit}학점</span></div>
+                  <div className="pl-rec-meta">{formatSlots(r.section.slots)} · {r.section.profs.join(", ") || "교수 미정"}{r.section.room ? ` · ${r.section.room}` : ""}</div>
+                  <div className="pl-rec-reasons">{r.reasons.map((x) => <span key={x} className="pl-rec-reason">{x}</span>)}</div>
+                </div>
+                <button className="pl-btn sm primary" onClick={() => onAddRec(r)}>이 분반 넣기</button>
+              </div>
+            ))}
+          </div>
+        )}
         <div className="pl-list">
           <div className="pl-list-title">
             다른 시간표 <span className="pl-muted" style={{ fontWeight: 500 }}>

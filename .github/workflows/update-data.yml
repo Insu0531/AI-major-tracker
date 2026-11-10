@@ -1,0 +1,63 @@
+# 강의 데이터 자동 갱신
+# - 매일 새벽: 학기 개설강좌 스냅샷 (scripts/collect-sections.mjs, 지금 시기의 학기 + 다음 학기)
+# - 매주 월요일: 전 학과 이수체계 (scripts/collect-curricula.mjs)
+# 바뀐 파일이 있을 때만 main에 커밋 → Vercel이 자동으로 다시 배포한다.
+# Actions 탭에서 "Run workflow"로 언제든 수동 실행할 수 있고, 학기를 직접 지정할 수도 있다.
+name: 강의 데이터 갱신
+
+on:
+  schedule:
+    - cron: "17 18 * * *"   # 매일 03:17 (한국 시간)
+    - cron: "47 18 * * 0"   # 매주 월요일 03:47 (한국 시간) — 이수체계
+  workflow_dispatch:
+    inputs:
+      semesters:
+        description: "수집할 학기 (예: 2026-2 2026-w). 비우면 지금 시기에 맞춰 자동"
+        required: false
+        default: ""
+      curricula:
+        description: "이수체계도 수집"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: 개설강좌 수집
+        env:
+          SEMESTERS: ${{ github.event.inputs.semesters }}
+        run: |
+          # 학기 형식(2026-1, 2026-s …)만 통과시킴
+          SEMS=$(echo "$SEMESTERS" | tr ' ,' '\n\n' | { grep -E '^[0-9]{4}-[12sw]$' || true; } | tr '\n' ' ')
+          node scripts/collect-sections.mjs $SEMS
+
+      - name: 이수체계 수집 (주 1회 또는 수동 선택 시)
+        if: github.event.schedule == '47 18 * * 0' || github.event.inputs.curricula == 'true'
+        run: node scripts/collect-curricula.mjs
+
+      - name: 바뀐 데이터 커밋
+        run: |
+          git add web/public/data web/public/courses
+          if git diff --cached --quiet; then
+            echo "바뀐 데이터 없음"
+            exit 0
+          fi
+          git config user.name "knu-timetable-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "데이터 갱신: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
+          git push

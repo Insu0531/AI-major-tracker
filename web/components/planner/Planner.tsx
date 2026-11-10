@@ -7,6 +7,7 @@ import { buildCourses, buildEngineGroups, colorAt, loadCurriculum, loadIndex, lo
 import { exportTimetable, type TimetableItem } from "@/lib/planner/exportImage";
 import { deletePlan, loadPlans, readLocal, renamePlan, savePlan, writeLocal, type SavedPlan } from "@/lib/planner/storage";
 import { trackSave } from "@/lib/trackSave";
+import { recommendFill, type Recommendation } from "@/lib/planner/recommend";
 import { analyticsEnabled, initAnalytics, isOptedOut, setOptOut, track } from "@/lib/analytics";
 import { pickDefaultSem, recommendedSem, semLabel, sortSems } from "@/lib/planner/semester";
 import { shareToKakao } from "@/lib/kakaoShare";
@@ -205,7 +206,8 @@ export default function Planner() {
   const onSection = useCallback((code: string, id: string, action: "pin" | "exclude") => {
     setSt((s) => ({
       ...s,
-      cart: s.cart.map((i) => {
+      // 아직 안 담은 과목이면 담으면서 적용
+      cart: (s.cart.some((i) => i.code === code) ? s.cart : [...s.cart, { code, mode: "maybe" as const, pinned: null, excluded: [] }]).map((i) => {
         if (i.code !== code) return i;
         if (action === "pin") return { ...i, pinned: i.pinned === id ? null : id, excluded: i.excluded.filter((x) => x !== id) };
         const excluded = i.excluded.includes(id) ? i.excluded.filter((x) => x !== id) : [...i.excluded, id];
@@ -264,6 +266,29 @@ export default function Planner() {
 
   const names = useCallback((i: number) => resGroups.filter((_, gi) => (results[i]?.picks[gi] ?? -1) >= 0).map((g) => g.name), [resGroups, results]);
   const busySlots: Slot[] = useMemo(() => view?.items.flatMap((i) => i.slots) ?? [], [view]);
+
+  /* 지금 시간표의 빈 시간에 넣기 좋은 교양 (규칙 기반 추천) */
+  const recs = useMemo(() => {
+    if (!view) return [];
+    return recommendFill({
+      courses,
+      cartCodes: new Set(cart.map((c) => c.code)),
+      busy: busySlots,
+      currentCredit: view.items.reduce((s, i) => s + i.credit, 0),
+      cond: st.conditions,
+      filter: sectionFilter,
+    });
+  }, [view, courses, cart, busySlots, st.conditions, sectionFilter]);
+
+  /** 추천 과목을 그 분반으로 고정해 '꼭 넣을 과목'으로 담음 → 이 과목이 들어간 시간표만 다시 계산 */
+  const addRec = (r: Recommendation) => {
+    setSt((s) => ({
+      ...s,
+      cart: [...s.cart.filter((c) => c.code !== r.course.code), { code: r.course.code, mode: "must", pinned: r.section.id, excluded: [] }],
+    }));
+    track("rec_added", { code: r.course.code, name: r.course.name, reasons: r.reasons, rank: recs.indexOf(r) + 1 });
+    flash(`${r.course.name}을(를) 넣었어요`);
+  };
 
   const majorLabel = st.major ? labelOf(st.major) : "";
   const title = st.sem ? `${semLabel(st.sem)} 시간표` : "시간표";
@@ -365,6 +390,7 @@ export default function Planner() {
                     <button onClick={() => { setMenuOpen(false); setSheet("calendar"); track("menu_calendar"); }}>학사일정</button>
                     <button onClick={() => { setMenuOpen(false); setSheet("feedback"); track("menu_feedback"); }}>피드백 · 응원</button>
                     <button onClick={() => { setMenuOpen(false); shareToKakao(); track("kakao_share"); }}>카카오톡으로 공유</button>
+                    <a href="/old" onClick={() => track("old_version_opened")}>구버전 보기</a>
                     <a href="/privacy" target="_blank" rel="noopener">개인정보처리방침</a>
                     <a href="mailto:insu0531@knu.ac.kr">문의 · insu0531@knu.ac.kr</a>
                     {analyticsEnabled() && (
@@ -500,6 +526,8 @@ export default function Planner() {
               onBulk={results.length > 1 ? () => (results.length > 20 ? setModal("bulk") : doBulkImages()) : undefined}
               bulkProgress={bulkProgress}
               onBack={() => goStep(2)}
+              recs={recs}
+              onAddRec={addRec}
             />
           </section>
         </div>

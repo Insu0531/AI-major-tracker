@@ -410,3 +410,38 @@
 .pl-doc-table th, .pl-doc-table td { text-align: left; vertical-align: top; padding: var(--s2) var(--s3); box-shadow: inset 0 -1px 0 var(--line); }
 .pl-doc-table th { background: var(--sunken); font-weight: 700; color: var(--ink); white-space: nowrap; }
 @media (max-width: 720px) { .pl-doc-table { display: block; overflow-x: auto; } }
+
+/* 빈 시간 교양 추천 */
+.pl-recs { padding-bottom: var(--s3); }
+.pl-rec { display: flex; align-items: center; gap: var(--s4); padding: var(--s3) var(--s5); box-shadow: inset 0 -1px 0 var(--line); animation: pl-in 0.2s ease-out both; }
+.pl-rec-main { flex: 1; min-width: 0; }
+.pl-rec-name { font-weight: 700; }
+.pl-rec-meta { font-size: 14px; color: var(--ink-2); margin-top: 2px; }
+.pl-rec-reasons { display: flex; flex-wrap: wrap; gap: var(--s1); margin-top: 6px; }
+.pl-rec-reason { font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 10px; background: var(--pick-weak); color: var(--pick); }
+@media (max-width: 720px) { .pl-rec { padding-left: var(--s4); padding-right: var(--s4); align-items: flex-start; } }
+
+/* 비고 요약 · 펼치기 표시 */
+.c-note { white-space: normal !important; max-width: 200px; }
+.pl-flag { display: inline-block; font-size: 12px; font-weight: 600; padding: 1px 7px; margin: 1px 4px 1px 0; border-radius: 4px; background: var(--sunken-2); color: var(--ink-2); white-space: nowrap; }
+.c-chev { width: 36px; text-align: center; color: var(--ink-3); }
+.c-chev span { display: inline-block; font-size: 18px; line-height: 1; transition: transform 0.2s; }
+.c-chev span.up { transform: rotate(180deg); }
+.pl-tr:hover .c-chev { color: var(--ink); }
+
+/* 과목 담기 머리: 넓은 화면에선 제목·검색 | 필터 를 나란히 → 표 칸을 넓게 */
+@media (min-width: 1100px) {
+  .pl-browse-head {
+    display: grid; grid-template-columns: minmax(300px, 0.85fr) 1.15fr; column-gap: var(--s6); row-gap: var(--s3);
+    grid-template-areas: "title filters" "search filters" "tabs tabs";
+    padding-top: var(--s4); padding-bottom: var(--s3);
+  }
+  .pl-browse-head > .pl-step-head { grid-area: title; }
+  .pl-browse-head > .pl-search { grid-area: search; align-self: start; }
+  .pl-browse-head > .pl-filter-grid { grid-area: filters; grid-template-columns: 1fr; gap: 6px; align-self: start; }
+  .pl-browse-head > .pl-tabs { grid-area: tabs; }
+  .pl-browse-head .pl-filter-line .pl-chip { height: 28px; font-size: 13px; padding: 0 10px; }
+}
+/* 제외한 분반: 글자만 흐리게, 버튼은 또렷하게 */
+.pl-sec.excluded { opacity: 1; }
+.pl-sec.excluded > :not(.pl-sec-actions) { opacity: 0.4; }
