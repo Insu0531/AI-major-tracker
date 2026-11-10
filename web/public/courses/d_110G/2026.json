@@ -1,0 +1,146 @@
+[
+  {
+    "grade": "1",
+    "code": "ENGL0246",
+    "name": "사고와 언어, 그리고 과학과 창의성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ENGL0248",
+    "name": "상상과 치유의 문학이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ENGL0247",
+    "name": "영문학과 신화적 상상력",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GERL0561",
+    "name": "교양소설, 문학적 상상과 치유",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHIL0322",
+    "name": "논리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "GERL0566",
+    "name": "디지털시대의 의사소통",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HUMN0215",
+    "name": "설득의 수사학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EDED0462",
+    "name": "심리검사와 교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HUCO0214",
+    "name": "인문카운슬링과 회복탄력성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HUCO0211",
+    "name": "인문학과 카운슬링1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HUCO0212",
+    "name": "인문학과 카운슬링2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHIL0304",
+    "name": "정신분석과 철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "EDED0570",
+    "name": "학생상담의이론과실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EDED0407",
+    "name": "교수-학습과 학생지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMM0559",
+    "name": "매체와 시공간",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMM0584",
+    "name": "미디어 인간학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMM0539",
+    "name": "소통과 철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HUCO0213",
+    "name": "인문학과 카운슬링3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "EDED0364",
+    "name": "진로상담과 진로발달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHIL0306",
+    "name": "철학과 실존치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHIL0305",
+    "name": "철학상담의 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHIL0454",
+    "name": "철학적 인간학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHIL0565",
+    "name": "명상과 인문치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHIL0589",
+    "name": "비판이론",
+    "credit": "3-3-0"
+  }
+]

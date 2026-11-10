@@ -1,0 +1,434 @@
+[
+  {
+    "grade": "",
+    "code": "MECH0825",
+    "name": "2상유동및열전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0725",
+    "name": "경계층유동",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0777",
+    "name": "고등공학수학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0778",
+    "name": "고등공학수학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0715",
+    "name": "고속유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0727",
+    "name": "기계공학대학원세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0728",
+    "name": "기계공학대학원세미나2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0821",
+    "name": "난류이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0713",
+    "name": "내연기관특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0712",
+    "name": "대류열전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0867",
+    "name": "디지털제어이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0901",
+    "name": "레이저응용기술특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0918",
+    "name": "로봇공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0832",
+    "name": "로켓공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0830",
+    "name": "박막재료공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0858",
+    "name": "복합재료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0815",
+    "name": "분무공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0824",
+    "name": "비뉴턴유체역학및열전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0811",
+    "name": "비등열전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0861",
+    "name": "비선형유한요소해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0833",
+    "name": "비평형응축이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0762",
+    "name": "상태공간제어시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0875",
+    "name": "생산시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0726",
+    "name": "생체공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0835",
+    "name": "생체유변학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0873",
+    "name": "소성역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0764",
+    "name": "소성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0879",
+    "name": "스마트연속생산공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0724",
+    "name": "압축성유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0819",
+    "name": "에너지변환유동공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0768",
+    "name": "역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0814",
+    "name": "연소공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0871",
+    "name": "연속체역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0718",
+    "name": "열전달특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0826",
+    "name": "열전달향상이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0717",
+    "name": "유체역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0758",
+    "name": "유한요소법1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0765",
+    "name": "유한요소법2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0772",
+    "name": "음향공학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0883",
+    "name": "음향공학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0723",
+    "name": "응용열역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0719",
+    "name": "이상유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GRAD0734",
+    "name": "일반전산유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0827",
+    "name": "재료강도론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0829",
+    "name": "적층제조공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0711",
+    "name": "전도열전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0872",
+    "name": "전산기원용설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0718",
+    "name": "전산유체역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0834",
+    "name": "전산유체역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0865",
+    "name": "접촉역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0755",
+    "name": "정밀가공특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0763",
+    "name": "제어시스템해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0876",
+    "name": "제어응용시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0868",
+    "name": "제어특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0869",
+    "name": "제어특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0751",
+    "name": "진동학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0776",
+    "name": "초소형기계기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0824",
+    "name": "초음파공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0774",
+    "name": "최적설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0735",
+    "name": "최적제어이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0818",
+    "name": "충격파이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0757",
+    "name": "탄성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0822",
+    "name": "터보기계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0874",
+    "name": "통계적시스템해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0771",
+    "name": "트라이볼로지특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0828",
+    "name": "파괴역학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0862",
+    "name": "판각이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0866",
+    "name": "피로파괴특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0000",
+    "name": "학위논문연구 및 연구윤리 (기계공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0993",
+    "name": "햅틱 및 협동로봇제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0767",
+    "name": "확률시스템분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0878",
+    "name": "CNC제어특론",
+    "credit": "3-3-0"
+  }
+]

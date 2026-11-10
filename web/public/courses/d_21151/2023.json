@@ -1,0 +1,398 @@
+[
+  {
+    "grade": "",
+    "code": "DOLS0818",
+    "name": "경기지도 실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0819",
+    "name": "경기지도론 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0820",
+    "name": "경기지도론 특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0846",
+    "name": "교정운동학실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0821",
+    "name": "노인체육론 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0822",
+    "name": "노인체육론 특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0945",
+    "name": "발달운동학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0966",
+    "name": "비교체육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0989",
+    "name": "사회체육세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0988",
+    "name": "사회체육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0933",
+    "name": "생체역학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0904",
+    "name": "생체역학실험",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0932",
+    "name": "생체역학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0823",
+    "name": "선수코칭실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0824",
+    "name": "스포츠 시설관리론 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0825",
+    "name": "스포츠 시설관리론 특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0826",
+    "name": "스포츠리더십 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0827",
+    "name": "스포츠리더십 특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0968",
+    "name": "스포츠마케팅특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0917",
+    "name": "스포츠사회학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0986",
+    "name": "스포츠사회학이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0916",
+    "name": "스포츠사회학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0936",
+    "name": "스포츠심리학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0828",
+    "name": "스포츠와 컴퓨터정보",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0987",
+    "name": "스포츠와사회문제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0829",
+    "name": "스포츠정보론 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0981",
+    "name": "스포츠행정경영세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0980",
+    "name": "스포츠행정경영특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0848",
+    "name": "신체교정학실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0997",
+    "name": "실험스포츠심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0958",
+    "name": "실험영양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0961",
+    "name": "여가론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0830",
+    "name": "운동과 대사증후군 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0831",
+    "name": "운동과 대사증후군 특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0906",
+    "name": "운동과근육생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0905",
+    "name": "운동과심폐생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0908",
+    "name": "운동과영양처방",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0972",
+    "name": "운동과호르몬대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0929",
+    "name": "운동생리학실험",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0970",
+    "name": "운동생화학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0847",
+    "name": "운동손상진단학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0953",
+    "name": "운동영양생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0973",
+    "name": "운동영양식사학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0942",
+    "name": "운동영양학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0957",
+    "name": "운동영양학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0849",
+    "name": "운동재활특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0817",
+    "name": "운동처방실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0941",
+    "name": "운동처방특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0938",
+    "name": "운동학습및제어세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0839",
+    "name": "운동해부학 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0840",
+    "name": "운동해부학 실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0838",
+    "name": "운동해부학 특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHFA0753",
+    "name": "질적연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0912",
+    "name": "체육미학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0922",
+    "name": "체육사상사세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0915",
+    "name": "체육원리세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0914",
+    "name": "체육원리특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0913",
+    "name": "체육철학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0944",
+    "name": "체육측정평가세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0943",
+    "name": "체육측정평가특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0834",
+    "name": "코칭론 특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0835",
+    "name": "코칭론세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0816",
+    "name": "통계분석실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0939",
+    "name": "트레이닝론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DOLS0000",
+    "name": "학위논문연구 및 연구윤리(레저스포츠학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0921",
+    "name": "한국체육사상사특강",
+    "credit": "3-3-0"
+  }
+]

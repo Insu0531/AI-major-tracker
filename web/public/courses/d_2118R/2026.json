@@ -1,0 +1,158 @@
+[
+  {
+    "grade": "",
+    "code": "SMMB0715",
+    "name": "가상공학설계 및 해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0714",
+    "name": "고급인공지능특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SMMB0714",
+    "name": "다물체동역학 설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0702",
+    "name": "머신러닝특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SMMB0716",
+    "name": "모빌리티 동역학 설계 및 제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SMMB0717",
+    "name": "모빌리티 진동시스템 해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SMMB0706",
+    "name": "모빌리티고등수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0716",
+    "name": "모빌리티레이저응용특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SMMB0710",
+    "name": "모빌리티비전특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SMMB0701",
+    "name": "모빌리티에너지시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SMMB0702",
+    "name": "모빌리티에너지저장및변환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SMMB0708",
+    "name": "모빌리티열유체특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0710",
+    "name": "모빌리티유도제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SMMB0703",
+    "name": "모빌리티재료공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SMMB0704",
+    "name": "모빌리티제어특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SMMB0709",
+    "name": "모빌리티포토닉스특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0709",
+    "name": "모빌리티항법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SMMB0713",
+    "name": "미래모빌리티세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SMMB0711",
+    "name": "센서기반공간정보특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0715",
+    "name": "스마트팩토리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0713",
+    "name": "인공지능설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SMMB0718",
+    "name": "자연모사 창의설계 및 해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SMMB0705",
+    "name": "자율주행시스템특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROSS0718",
+    "name": "친환경자동차시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SMMB0000",
+    "name": "학위논문연구및연구윤리(스마트모빌리티공학과)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SMMB0712",
+    "name": "확률론적 로봇공학",
+    "credit": "3-3-0"
+  }
+]

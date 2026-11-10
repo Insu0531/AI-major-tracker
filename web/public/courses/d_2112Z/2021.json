@@ -1,0 +1,620 @@
+[
+  {
+    "grade": "",
+    "code": "NURS0924",
+    "name": "가족정신간호",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0775",
+    "name": "가족정신간호및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "NURS0931",
+    "name": "가족정신간호실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0835",
+    "name": "간호과학철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0721",
+    "name": "간호관리문제세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0731",
+    "name": "간호교육과정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0833",
+    "name": "간호문제분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0902",
+    "name": "간호연구 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0862",
+    "name": "간호연구Ⅰ",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0824",
+    "name": "간호이론개발",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0822",
+    "name": "간호이론분석및평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0860",
+    "name": "간호이론Ⅰ",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0861",
+    "name": "간호이론II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0725",
+    "name": "간호인력관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0724",
+    "name": "간호조직행위론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0832",
+    "name": "간호철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0812",
+    "name": "간호통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0823",
+    "name": "건강관련이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HEAL0731",
+    "name": "건강증진과 보건교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0857",
+    "name": "건강증진특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0744",
+    "name": "고위험모성간호및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "NURS0764",
+    "name": "고위험아동문제와간호",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0825",
+    "name": "노인간호복지",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0836",
+    "name": "노인간호복지 실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0826",
+    "name": "노인건강증진",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0837",
+    "name": "노인건강증진 실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0859",
+    "name": "노인전문간호실습 Ⅱ",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "NURS0858",
+    "name": "노인전문간호실습Ⅰ",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "NURS0827",
+    "name": "노인전문간호총론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0828",
+    "name": "노인질환관리 I",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0829",
+    "name": "노인질환관리 II",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0757",
+    "name": "만성건강문제와간호",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0763",
+    "name": "만성아동문제와간호",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0727",
+    "name": "발달단계별 정신간호",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0728",
+    "name": "발달단계별 정신간호 실습",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "NURS0806",
+    "name": "방문간호실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0966",
+    "name": "병원호스피스실습 I",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "NURS0971",
+    "name": "병원호스피스실습 II",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0906",
+    "name": "병태생리학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0808",
+    "name": "보건행정실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0964",
+    "name": "사별가족간호",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0848",
+    "name": "상급 여성건강 간호 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "NURS0844",
+    "name": "상급 여성건강 간호학 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0723",
+    "name": "상급간호관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0813",
+    "name": "상급간호연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0702",
+    "name": "상급간호정보학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0904",
+    "name": "상급건강사정",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "NURS0846",
+    "name": "상급병태생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0849",
+    "name": "상급성인간호 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "NURS0752",
+    "name": "상급성인간호학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0850",
+    "name": "상급아동간호 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "NURS0851",
+    "name": "상급아동간호학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0703",
+    "name": "상급응급간호 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0705",
+    "name": "상급응급간호 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0706",
+    "name": "상급응급간호실습 II",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "NURS0704",
+    "name": "상급응급간호실습I",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "NURS0847",
+    "name": "상급임상간호생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0845",
+    "name": "상급임상간호약리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0718",
+    "name": "상급정신간호",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0853",
+    "name": "상급정신간호 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "NURS0719",
+    "name": "상급정신간호실습",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "NURS0852",
+    "name": "상급정신간호학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0854",
+    "name": "상급지역사회간호 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "NURS0855",
+    "name": "상급지역사회간호학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0780",
+    "name": "상급지역사회보건간호학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0972",
+    "name": "심리사회·영적간호와 상담",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0905",
+    "name": "약리학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0743",
+    "name": "여성건강문제세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0707",
+    "name": "외상 및 사회응급간호",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0708",
+    "name": "외상 및 사회응급간호 실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0713",
+    "name": "유전상담의이론과실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0807",
+    "name": "일차건강관리실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0709",
+    "name": "재해간호",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0710",
+    "name": "재해간호실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0903",
+    "name": "전문간호사의역할및정책(법과윤리포함)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0834",
+    "name": "전문직업론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0755",
+    "name": "종양환자간호및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "NURS0747",
+    "name": "중환자간호 I",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0748",
+    "name": "중환자간호 II",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0749",
+    "name": "중환자간호 III",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0750",
+    "name": "중환자간호 IV",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0767",
+    "name": "중환자간호실습 I",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "NURS0768",
+    "name": "중환자간호실습 II",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "NURS0769",
+    "name": "중환자간호실습 III",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0770",
+    "name": "중환자간호실습 IV",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0778",
+    "name": "중환자전문간호특론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0722",
+    "name": "지도자론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0804",
+    "name": "지역사회 건강증진실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0842",
+    "name": "지역사회 보건사업 기획",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0841",
+    "name": "지역사회 사례관리",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0843",
+    "name": "지역사회 사례관리 실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0856",
+    "name": "지역사회간호중재론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0921",
+    "name": "지역사회정신보건간호",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0928",
+    "name": "지역사회정신보건간호실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0968",
+    "name": "지역사회호스피스실습 I",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0969",
+    "name": "지역사회호스피스실습 II",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "NURS0726",
+    "name": "질적연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0774",
+    "name": "집단정신간호및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "NURS0818",
+    "name": "통증 및 증상완화간호",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0756",
+    "name": "통증이론및간호",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "NURS0000",
+    "name": "학위논문연구 및 연구윤리 (간호학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0961",
+    "name": "호스피스/완화요법 총론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0965",
+    "name": "호스피스운영관리",
+    "credit": "1-1-0"
+  }
+]

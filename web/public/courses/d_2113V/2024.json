@@ -1,0 +1,524 @@
+[
+  {
+    "grade": "",
+    "code": "DESC0702",
+    "name": "경조직 연구 방법 개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0784",
+    "name": "골격계 질환연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0782",
+    "name": "골대사 생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0701",
+    "name": "골생물학 개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0740",
+    "name": "구강보건학의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0712",
+    "name": "구강생물학연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0705",
+    "name": "구강악안면발생개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0724",
+    "name": "구강조직 및 발생유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0703",
+    "name": "기초병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0757",
+    "name": "뇌의 시냅스연접 양상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0711",
+    "name": "대사생화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0752",
+    "name": "동통의 신경생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0718",
+    "name": "두개안면분자유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0719",
+    "name": "두개안면재생학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0723",
+    "name": "두개안면형성 신호전달체계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0754",
+    "name": "면역전자현미경법특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0722",
+    "name": "발생분자생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0759",
+    "name": "분자신경과학의 최신 경향",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0727",
+    "name": "분자신경세포생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOL0803",
+    "name": "생물정보학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0792",
+    "name": "생체 고분자 가공",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0793",
+    "name": "생체고분자 역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0743",
+    "name": "생체고분자화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0750",
+    "name": "생체나노기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0748",
+    "name": "생체복합재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0791",
+    "name": "생체재료 계면 현상론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0746",
+    "name": "생체재료의 물성시험",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0749",
+    "name": "생체재료의 세포반응",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0747",
+    "name": "생체재료의 전자현미경학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0742",
+    "name": "생체재료의 정량분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0785",
+    "name": "생화학 연구방법 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0786",
+    "name": "세포 신호 전달 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0720",
+    "name": "세포발생기전개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0713",
+    "name": "세포사멸과질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0758",
+    "name": "시냅스 연접 양상의 최신 경향",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0751",
+    "name": "시냅스가소성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0753",
+    "name": "신경생물학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0760",
+    "name": "신경생물학의 최신 경향",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0772",
+    "name": "신경약리학 개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0774",
+    "name": "신경전달 연구방법 개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0745",
+    "name": "심미접착치과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0762",
+    "name": "심순환생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0755",
+    "name": "아교세포생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0721",
+    "name": "악안면발생및기형학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0735",
+    "name": "예방치과학의 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0787",
+    "name": "유전자  발현 조절 및 편집 기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0790",
+    "name": "의료용 고분자 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0776",
+    "name": "이온통로형 수용체 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0769",
+    "name": "임상응용생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0744",
+    "name": "재료분광학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0778",
+    "name": "전압의존성 이온통로 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0704",
+    "name": "조직공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0783",
+    "name": "줄기세포 분화론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0716",
+    "name": "줄기세포생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0780",
+    "name": "중추신경계 약물 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0715",
+    "name": "질환유전학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0730",
+    "name": "최신 기능유전체학 방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0773",
+    "name": "최신기초약리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0763",
+    "name": "최신내분비생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0739",
+    "name": "최신노인치과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0768",
+    "name": "최신분자신경생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0756",
+    "name": "최신신경세포생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0765",
+    "name": "최신신장생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0714",
+    "name": "최신의학생명과학연구특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0738",
+    "name": "최신장애인치과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0770",
+    "name": "최신통증연구동향",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0761",
+    "name": "최신통합인체생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0764",
+    "name": "최신호흡생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0741",
+    "name": "치과금속공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0736",
+    "name": "치과병의원기본경영",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0737",
+    "name": "치과병의원의감염방지론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0781",
+    "name": "치과세포생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0728",
+    "name": "치과영역의 분자면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0726",
+    "name": "치과영역의 분자유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0717",
+    "name": "치아재생학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0725",
+    "name": "치아형태 및 분자발생학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0734",
+    "name": "치의학고급통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0733",
+    "name": "치의학기본통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0731",
+    "name": "치의학연구방법론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0732",
+    "name": "치의학연구방법론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0767",
+    "name": "통증연구특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0766",
+    "name": "통합신경생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0000",
+    "name": "학위논문연구 및 연구윤리(치의과학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0788",
+    "name": "현대종양생물학 동향",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0794",
+    "name": "CAD/CAM 재료의 접착",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0777",
+    "name": "G-단백 연계형 수용체 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DESC0729",
+    "name": "RNA 생물학 특론",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,116 @@
+[
+  {
+    "grade": "",
+    "code": "COSO0717",
+    "name": "교차 개발환경 기반 임베디드 프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FASW0702",
+    "name": "미래자동차 SW 실습 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FASW0703",
+    "name": "미래자동차 SW 실습 융합",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FASW0704",
+    "name": "미래자동차SW 융복합세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FASW0705",
+    "name": "미래자동차SW 융복합세미나2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FASW0706",
+    "name": "산학연계프로젝트 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FASW0707",
+    "name": "산학연계프로젝트 융합",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0733",
+    "name": "시스템프로그래밍특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0852",
+    "name": "인공지능응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0739",
+    "name": "인공지능특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FASW0708",
+    "name": "임베디드 SW설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0822",
+    "name": "정보통신특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FASW0709",
+    "name": "지능형 차량 제어 시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0830",
+    "name": "차량용운영체제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0829",
+    "name": "차량통신과네크워크기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0824",
+    "name": "컴퓨터비젼특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0706",
+    "name": "컴퓨터조직론특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FASW0710",
+    "name": "통합 SDV 플랫폼 실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FASW0701",
+    "name": "SDV 표준 기술 동향",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,608 @@
+[
+  {
+    "grade": "",
+    "code": "MESC0763",
+    "name": "감염과 면역 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDB0749",
+    "name": "골대사학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0809",
+    "name": "과학기술난제해결 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0810",
+    "name": "과학기술난제해결 II",
+    "credit": "3-1-4"
+  },
+  {
+    "grade": "",
+    "code": "MESC0802",
+    "name": "과학적 의사 소통",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0755",
+    "name": "기능적 신경해부 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0756",
+    "name": "기능적 신경해부 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0793",
+    "name": "기생충 분류체계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0791",
+    "name": "기생충 진단 최신기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0807",
+    "name": "기술사업화 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0808",
+    "name": "기술사업화 II",
+    "credit": "3-1-4"
+  },
+  {
+    "grade": "",
+    "code": "MESC0727",
+    "name": "기초 종양생물학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0728",
+    "name": "기초 종양생물학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0725",
+    "name": "노화생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0803",
+    "name": "논리적 분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0722",
+    "name": "단백생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0760",
+    "name": "면역과 기생충",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0768",
+    "name": "면역제어 및 치료적 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0770",
+    "name": "면역학 개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0835",
+    "name": "바이러스-숙주 상호작용 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0724",
+    "name": "발달생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0806",
+    "name": "방사성의약품",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0906",
+    "name": "병태생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0757",
+    "name": "분자 신경과학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0758",
+    "name": "분자 신경과학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0748",
+    "name": "분자바이러스학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0765",
+    "name": "분자세균학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0861",
+    "name": "분자약리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0761",
+    "name": "분자연충학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0878",
+    "name": "분자영상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0779",
+    "name": "분자영상 개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0915",
+    "name": "분자원충학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0759",
+    "name": "분자원충학 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOC0716",
+    "name": "분자유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0749",
+    "name": "분자의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0720",
+    "name": "분자의학연구기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0713",
+    "name": "생명의학세미나 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0714",
+    "name": "생명의학세미나 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0833",
+    "name": "생식발생유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0821",
+    "name": "생체신호처리개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0904",
+    "name": "세포약리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0718",
+    "name": "세포조직생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0782",
+    "name": "세포치료와 약물전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0726",
+    "name": "시스템 생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0750",
+    "name": "신경과학 연구 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0751",
+    "name": "신경과학 연구 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0743",
+    "name": "신경과학 입문 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0744",
+    "name": "신경과학 입문 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDS0715",
+    "name": "신경과학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0752",
+    "name": "신경과학실험연구법 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0753",
+    "name": "신경과학실험연구법 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0907",
+    "name": "신경면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0720",
+    "name": "신경생물학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0786",
+    "name": "신약개발 및 임상시험 개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0723",
+    "name": "신호전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0741",
+    "name": "암 연구 방법론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0735",
+    "name": "암 연구 프론티어 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0736",
+    "name": "암 연구 프론티어 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0729",
+    "name": "암의 분자생물학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0733",
+    "name": "암의 분자영상 및 진단",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0785",
+    "name": "약물유전체학 개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0792",
+    "name": "열대의학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0778",
+    "name": "영상 화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0710",
+    "name": "영어논문작성법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0787",
+    "name": "영어논문작성법 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0732",
+    "name": "응용 종양생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0834",
+    "name": "의과학 연구를 위한 R 실전 분석",
+    "credit": "3-1-4"
+  },
+  {
+    "grade": "",
+    "code": "MESC0804",
+    "name": "의과학 정보학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0711",
+    "name": "의과학세미나 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0712",
+    "name": "의과학세미나 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0801",
+    "name": "의과학윤리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0731",
+    "name": "의료정보학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0717",
+    "name": "의학분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0719",
+    "name": "의학생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0758",
+    "name": "의학실험동물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0823",
+    "name": "의학연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0777",
+    "name": "의학영상처리 개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0721",
+    "name": "의학화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0836",
+    "name": "인수공통바이러스의 최신지견",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0748",
+    "name": "인지과학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0749",
+    "name": "인지과학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0772",
+    "name": "인체질환과 면역학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0773",
+    "name": "인체질환과 면역학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0773",
+    "name": "임상단백질체학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0769",
+    "name": "자가면역과 질병",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0780",
+    "name": "재생의과학의 이론과 응용 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0831",
+    "name": "정신과학Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0783",
+    "name": "조직재생과 생체재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0739",
+    "name": "종양생물학 세미나 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0740",
+    "name": "종양생물학 세미나 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0737",
+    "name": "종양생물학의 최신 지견 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0738",
+    "name": "종양생물학의 최신 지견 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0715",
+    "name": "중개연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0832",
+    "name": "진단유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0794",
+    "name": "통합대사학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0000",
+    "name": "학위논문연구 및 연구윤리(의과학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0716",
+    "name": "해부생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0805",
+    "name": "핵심유기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0775",
+    "name": "혈관생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0776",
+    "name": "혈류역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0767",
+    "name": "T 세포: 면역학, 유전학, 질병",
+    "credit": "3-3-0"
+  }
+]

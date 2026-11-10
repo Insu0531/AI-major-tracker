@@ -1,0 +1,284 @@
+[
+  {
+    "grade": "",
+    "code": "SENS0841",
+    "name": "광센서공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0941",
+    "name": "광센서공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0834",
+    "name": "광화학센서공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0934",
+    "name": "광화학센서공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0862",
+    "name": "대기오염센서공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0962",
+    "name": "대기오염센서공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0844",
+    "name": "디스플레이공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0944",
+    "name": "디스플레이공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0821",
+    "name": "무기센서재료공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0921",
+    "name": "무기센서재료공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0831",
+    "name": "물질분석공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0931",
+    "name": "물질분석공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0842",
+    "name": "반도체센서공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0942",
+    "name": "반도체센서공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0832",
+    "name": "분자센서공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0932",
+    "name": "분자센서공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0812",
+    "name": "생물센서공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0912",
+    "name": "생물센서공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0701",
+    "name": "센서공학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0702",
+    "name": "센서공학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0703",
+    "name": "센서공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0852",
+    "name": "센서시스템공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0952",
+    "name": "센서시스템공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0704",
+    "name": "센서신호처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0861",
+    "name": "수질오염센서공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0961",
+    "name": "수질오염센서공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0813",
+    "name": "시각센서공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0913",
+    "name": "시각센서공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0851",
+    "name": "액츄에이터공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0951",
+    "name": "액츄에이터공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0822",
+    "name": "역학센서공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0922",
+    "name": "역학센서공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0833",
+    "name": "유기센서재료공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0933",
+    "name": "유기센서재료공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0823",
+    "name": "음향센서공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0923",
+    "name": "음향센서공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0814",
+    "name": "응용광학센서공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0914",
+    "name": "응용광학센서공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0705",
+    "name": "응용해석공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0815",
+    "name": "의용센서공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0811",
+    "name": "전기화학센서공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0911",
+    "name": "전기화학센서공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0824",
+    "name": "초음파공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0924",
+    "name": "초음파공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0000",
+    "name": "학위논문연구 및 연구윤리 (센서공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0871",
+    "name": "LED소자기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SENS0872",
+    "name": "LED응용기술",
+    "credit": "3-3-0"
+  }
+]

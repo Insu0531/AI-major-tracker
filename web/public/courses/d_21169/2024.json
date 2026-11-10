@@ -1,0 +1,320 @@
+[
+  {
+    "grade": "",
+    "code": "ARIN0710",
+    "name": "강화학습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0716",
+    "name": "계산지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0779",
+    "name": "고급자료구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0701",
+    "name": "공학논문작성법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0842",
+    "name": "그래프이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0847",
+    "name": "기계번역",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0720",
+    "name": "기계학습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0770",
+    "name": "뇌과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARIN0712",
+    "name": "뇌인지공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARIN0713",
+    "name": "뉴로벤처(Neuroventure)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0771",
+    "name": "데이터마이닝특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0728",
+    "name": "디지털시스템공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0918",
+    "name": "로봇공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0725",
+    "name": "병렬처리시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0760",
+    "name": "생물정보공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0807",
+    "name": "생체신호해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0712",
+    "name": "생체전자공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AUTO0857",
+    "name": "선형대수응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELRI0740",
+    "name": "센서시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0820",
+    "name": "소프트컴퓨팅특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0734",
+    "name": "신경망",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0836",
+    "name": "신경망특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARIN0711",
+    "name": "신경모방칩 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0838",
+    "name": "신경회로망학습제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARIN0702",
+    "name": "심화학습 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARIN0704",
+    "name": "심화학습 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0812",
+    "name": "알고리즘특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0761",
+    "name": "영상및그래픽스응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0853",
+    "name": "음성신호처리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MATH0819",
+    "name": "응용수학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARIN0703",
+    "name": "의료영상처리 개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARIN0707",
+    "name": "의료영상처리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0709",
+    "name": "의용센서시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARIN0705",
+    "name": "인공지능 융합개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0852",
+    "name": "인공지능응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0739",
+    "name": "인공지능특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARIN0709",
+    "name": "인공지능하드웨어특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARIN0701",
+    "name": "인공지능GPU프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0748",
+    "name": "인지과학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0785",
+    "name": "인턴쉽프로그램1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0786",
+    "name": "인턴쉽프로그램2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0730",
+    "name": "임베디드시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0760",
+    "name": "임베디드의료기기설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0770",
+    "name": "자동차비전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0746",
+    "name": "자연언어처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARIN0708",
+    "name": "전자컴퓨터특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0837",
+    "name": "지능로보트공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0946",
+    "name": "지능시스템설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARIN0706",
+    "name": "지능형자동차특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0824",
+    "name": "컴퓨터비젼특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0755",
+    "name": "패턴인식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARIN0000",
+    "name": "학위논문연구 및 연구윤리(인공지능)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0743",
+    "name": "확률과정론",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,206 @@
+[
+  {
+    "grade": "",
+    "code": "EESO0735",
+    "name": "고급전력전자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0739",
+    "name": "고주파 자기소자 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0721",
+    "name": "기능성 고분자 신소재",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CTMT0717",
+    "name": "기술가치평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0707",
+    "name": "기술경영과 혁신전략",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0704",
+    "name": "기술기반창업실무",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "STSE0710",
+    "name": "기술라이센싱전략과실무",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAE0701",
+    "name": "기술사업화 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0701",
+    "name": "기술창업 및 마케팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAE0702",
+    "name": "기술창업의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0719",
+    "name": "나노물질과 나노기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0714",
+    "name": "네트워크기반제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0709",
+    "name": "디지털뉴노멀시대의기술창업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0722",
+    "name": "사물컴퓨팅 플랫폼 기반 비즈니스 창출 전략",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0708",
+    "name": "스마트방재기술창업실무",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0718",
+    "name": "스마트시티특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0705",
+    "name": "스타트업캡스톤디자인",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "STSE0703",
+    "name": "신기술 창업 실무 프로젝트",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0780",
+    "name": "신재생에너지특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0717",
+    "name": "에너지공학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0739",
+    "name": "인공지능특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0715",
+    "name": "임베디드 제어 시스템 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0712",
+    "name": "지능형 IoT",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0716",
+    "name": "지능형 Mobility 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAE0703",
+    "name": "지식재산권특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0702",
+    "name": "창업가의 리더십",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0706",
+    "name": "창업과 창직",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CTMT0710",
+    "name": "창업자금 조달 실무",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0711",
+    "name": "클라우드 및 엣지 플랫폼 컴퓨팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAE0000",
+    "name": "학위논문연구 및 연구윤리 (과학기술실용공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0724",
+    "name": "현대제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0713",
+    "name": "IoT 단말 기술 개발 및 상품화 공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0723",
+    "name": "IoT 방재 안전공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STSE0720",
+    "name": "IT산업에서의 고분자",
+    "credit": "3-3-0"
+  }
+]

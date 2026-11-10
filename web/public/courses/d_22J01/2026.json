@@ -1,0 +1,224 @@
+[
+  {
+    "grade": "",
+    "code": "NURS0976",
+    "name": "가족치료 및 상담",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0979",
+    "name": "가족치료 및 상담실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0862",
+    "name": "간호연구Ⅰ",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0860",
+    "name": "간호이론Ⅰ",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0989",
+    "name": "노인간호연구세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0985",
+    "name": "노인장기요양관리 Ⅰ",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0987",
+    "name": "노인장기요양관리 Ⅱ",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0988",
+    "name": "노인장기요양관리실습 Ⅱ",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0986",
+    "name": "노인장기요양관리실습Ⅰ",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "NURS0984",
+    "name": "노인전문간호총론과건강증진",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0828",
+    "name": "노인질환관리 I",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0829",
+    "name": "노인질환관리 II",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0839",
+    "name": "노인질환관리실습 I",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0840",
+    "name": "노인질환관리실습 II",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "NURS0978",
+    "name": "발달단계별정신건강간호",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0981",
+    "name": "발달단계별정신건강간호실습",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0966",
+    "name": "병원호스피스실습 I",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "NURS0971",
+    "name": "병원호스피스실습 II",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0906",
+    "name": "병태생리학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0964",
+    "name": "사별가족간호",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0904",
+    "name": "상급건강사정",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "NURS0908",
+    "name": "상급건강사정실습",
+    "credit": "1-0-2"
+  },
+  {
+    "grade": "",
+    "code": "NURS0907",
+    "name": "상급건강사정이론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0891",
+    "name": "상급정신건강간호세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0977",
+    "name": "상급정신건강간호실습",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "NURS0972",
+    "name": "심리사회·영적간호와 상담",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0905",
+    "name": "약리학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0903",
+    "name": "전문간호사의역할및정책(법과윤리포함)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0983",
+    "name": "정신건강간호연구세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0980",
+    "name": "지역사회정신건강간호세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0982",
+    "name": "지역사회정신건강간호실습",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "NURS0968",
+    "name": "지역사회호스피스실습 I",
+    "credit": "2-0-4"
+  },
+  {
+    "grade": "",
+    "code": "NURS0969",
+    "name": "지역사회호스피스실습 II",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "NURS0818",
+    "name": "통증 및 증상완화간호",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0961",
+    "name": "호스피스/완화요법 총론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0975",
+    "name": "호스피스간호연구세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NURS0965",
+    "name": "호스피스운영관리",
+    "credit": "1-1-0"
+  }
+]

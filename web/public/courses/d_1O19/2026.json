@@ -1,0 +1,92 @@
+[
+  {
+    "grade": "",
+    "code": "COME0701",
+    "name": "공학논문작성법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0727",
+    "name": "의료영상복원 및 처리실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "CAIB0207",
+    "name": "기계학습입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CAIB0234",
+    "name": "신경망개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ELEC0520",
+    "name": "파이썬프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "MOBI0224",
+    "name": "딥러닝",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CAIB0235",
+    "name": "딥러닝프로그래밍실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "MTED0231",
+    "name": "선형대수",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0321",
+    "name": "신호및시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0421",
+    "name": "영상처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CAIB0228",
+    "name": "인공지능 기초와 활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0424",
+    "name": "컴퓨터비전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "INSP0201",
+    "name": "기초 최적화이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "INSP0203",
+    "name": "뇌공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "INSP0202",
+    "name": "지능신호처리개론",
+    "credit": "3-3-0"
+  }
+]

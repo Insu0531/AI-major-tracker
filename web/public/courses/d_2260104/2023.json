@@ -1,0 +1,116 @@
+[
+  {
+    "grade": "",
+    "code": "ELEC0912",
+    "name": "공중선및전파이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0911",
+    "name": "광통신시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0701",
+    "name": "디지털신호처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0758",
+    "name": "디지털통신시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0909",
+    "name": "마이크로웨이브시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0913",
+    "name": "무선통신특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0771",
+    "name": "위성통신시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0753",
+    "name": "이동통신시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EECS0715",
+    "name": "적층제조세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0914",
+    "name": "전자파공업응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0761",
+    "name": "전자파공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0759",
+    "name": "정보및부호이론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0856",
+    "name": "정보보호시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0907",
+    "name": "정보통신특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0754",
+    "name": "컴퓨터통신망특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0792",
+    "name": "통신공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0906",
+    "name": "통신시스템특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0000",
+    "name": "학위논문연구 및 연구윤리 (전자공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0743",
+    "name": "확률과정론",
+    "credit": "3-3-0"
+  }
+]

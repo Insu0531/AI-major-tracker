@@ -1,0 +1,224 @@
+[
+  {
+    "grade": "",
+    "code": "AMEN0755",
+    "name": "과학기술논문작성법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0758",
+    "name": "기계재료거동특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0713",
+    "name": "내연기관특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSAD0768",
+    "name": "농업 정보공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0738",
+    "name": "농업에너지공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0985",
+    "name": "디지털영상처리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0718",
+    "name": "바이오센서특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0759",
+    "name": "바이오소재공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0867",
+    "name": "방제기계학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0716",
+    "name": "밭농업기계시스템공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0715",
+    "name": "밭농업기계현장실증연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0739",
+    "name": "밭농업기계현장실증연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0726",
+    "name": "생물가공기계학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0822",
+    "name": "생물가공기계학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0728",
+    "name": "생물공정특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0748",
+    "name": "생물산업계측학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0862",
+    "name": "생물산업기계분석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0753",
+    "name": "생물산업기계설계특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0861",
+    "name": "생물산업기계설계특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0756",
+    "name": "생물산업기계신뢰성공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0733",
+    "name": "생물산업동력공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0851",
+    "name": "생물산업로봇공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0719",
+    "name": "생물시스템특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0746",
+    "name": "생체물성공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0754",
+    "name": "수직농장학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0757",
+    "name": "스마트생물산업기계세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0727",
+    "name": "식품기계공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0723",
+    "name": "실험설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0836",
+    "name": "열사이클특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0737",
+    "name": "원예작물기계시스템공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0913",
+    "name": "유압공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0863",
+    "name": "유체기계학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0736",
+    "name": "작물생산기반특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0749",
+    "name": "전기ㆍ전자공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0750",
+    "name": "제어공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0751",
+    "name": "진동공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMEN0000",
+    "name": "학위논문연구 및 연구윤리(생물산업기계공학)",
+    "credit": "3-3-0"
+  }
+]

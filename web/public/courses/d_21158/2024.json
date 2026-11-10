@@ -1,0 +1,308 @@
+[
+  {
+    "grade": "",
+    "code": "APCH0713",
+    "name": "결정학및회절분석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0722",
+    "name": "고급공정해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INDC0701",
+    "name": "고급물리화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0784",
+    "name": "고급반응공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INDC0702",
+    "name": "고급분석화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INDC0821",
+    "name": "고급유기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0808",
+    "name": "고분자공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCH0718",
+    "name": "고분자에너지전자재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0775",
+    "name": "공학의사소통",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0760",
+    "name": "나노소재공학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0761",
+    "name": "나노소재공학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCH0717",
+    "name": "나노소재특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0827",
+    "name": "나노소재화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GENE0926",
+    "name": "단백질공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0771",
+    "name": "미세유체시스템공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELMA0710",
+    "name": "박막공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0712",
+    "name": "분리정제공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCH0707",
+    "name": "분자구조설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0716",
+    "name": "불균일촉매",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0456",
+    "name": "생물화학공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0733",
+    "name": "생유기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0726",
+    "name": "생체공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0723",
+    "name": "시스템자동화 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0724",
+    "name": "시스템자동화 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEE0780",
+    "name": "신재생에너지특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCH0715",
+    "name": "에너지소재구조분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCH0714",
+    "name": "에너지소재분광분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0772",
+    "name": "에너지재료공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0785",
+    "name": "에너지재료소자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0774",
+    "name": "연성물질특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0734",
+    "name": "유기금속화학특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0735",
+    "name": "유기금속화학특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0786",
+    "name": "유기반도체공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0701",
+    "name": "융합 세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0702",
+    "name": "융합 세미나2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INDC0741",
+    "name": "응용양자화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0787",
+    "name": "응용화학공학 특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0788",
+    "name": "응용화학공학 특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0789",
+    "name": "응용화학공학 특론 III",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCH0708",
+    "name": "의약품합성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0790",
+    "name": "이동현상특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0897",
+    "name": "전자재료공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCH0709",
+    "name": "차세대에너지소재특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0791",
+    "name": "첨단고분자기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0792",
+    "name": "콜로이드 및 계면현상 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0793",
+    "name": "콜로이드 및 계면현상 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCH0710",
+    "name": "탄소재료공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0000",
+    "name": "학위논문연구 및 연구윤리(응용화학공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0717",
+    "name": "화학열역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCH0711",
+    "name": "환경소재공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0759",
+    "name": "환경촉매공학",
+    "credit": "3-3-0"
+  }
+]

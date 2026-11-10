@@ -1,0 +1,344 @@
+[
+  {
+    "grade": "",
+    "code": "FRAN0927",
+    "name": "고전주의연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0754",
+    "name": "구조주의특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0932",
+    "name": "기능주의언어학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0739",
+    "name": "기호학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0940",
+    "name": "기호학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0749",
+    "name": "문체론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0943",
+    "name": "문체론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0947",
+    "name": "번역론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0916",
+    "name": "불고전극연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0912",
+    "name": "불낭만주의연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0715",
+    "name": "불문학사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0726",
+    "name": "불문학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0921",
+    "name": "불문학이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0923",
+    "name": "불문화론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0724",
+    "name": "불비평연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0924",
+    "name": "불사실주의연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0714",
+    "name": "불소설연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0711",
+    "name": "불소설이론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0716",
+    "name": "불수필연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0712",
+    "name": "불시연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0722",
+    "name": "불시이론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0744",
+    "name": "불어문법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0944",
+    "name": "불어학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0721",
+    "name": "불작가연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0914",
+    "name": "불작가특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0950",
+    "name": "불한대조언어학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0725",
+    "name": "불희곡연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0713",
+    "name": "불희곡이론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0735",
+    "name": "사회언어학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0738",
+    "name": "실험음성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0949",
+    "name": "어휘론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0951",
+    "name": "언어학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0948",
+    "name": "음운론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0937",
+    "name": "응용언어학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0946",
+    "name": "의미론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0731",
+    "name": "일반언어학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0938",
+    "name": "텍스트구조분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0942",
+    "name": "통사론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0727",
+    "name": "프랑스문화사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0728",
+    "name": "프랑스문화연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0917",
+    "name": "프랑스사상연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0755",
+    "name": "프랑스어권연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0750",
+    "name": "프랑스어번역이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0751",
+    "name": "프랑스어음운론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0737",
+    "name": "프랑스어의미론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0747",
+    "name": "프랑스어통사론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0748",
+    "name": "프랑스어형태론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0740",
+    "name": "프랑스어화용론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0729",
+    "name": "프랑스지역연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0753",
+    "name": "프랑스지역특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0000",
+    "name": "학위논문연구 및 연구윤리 (불어불문학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0925",
+    "name": "현대불문학비평연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0911",
+    "name": "현대불소설연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0915",
+    "name": "현대불시특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0922",
+    "name": "현대불희곡연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0931",
+    "name": "현대언어학이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FRAN0939",
+    "name": "화용론특강",
+    "credit": "3-3-0"
+  }
+]

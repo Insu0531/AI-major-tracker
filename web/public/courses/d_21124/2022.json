@@ -1,0 +1,326 @@
+[
+  {
+    "grade": "",
+    "code": "HORT0722",
+    "name": "과수결실생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0892",
+    "name": "과수육종학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0721",
+    "name": "과수학특론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0821",
+    "name": "과수학특론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0822",
+    "name": "과수환경론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0751",
+    "name": "기능성소재학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0851",
+    "name": "기능성원예작물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0867",
+    "name": "디지털식물병진단학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0865",
+    "name": "산학협동세미나 Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0866",
+    "name": "산학협동세미나 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0804",
+    "name": "산학협동특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0811",
+    "name": "생물공학최신과제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0712",
+    "name": "생물공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0815",
+    "name": "생물자료분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0803",
+    "name": "수확후관리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0839",
+    "name": "수확후생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0877",
+    "name": "스마트 탄소복합재료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0875",
+    "name": "스마트과수학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0869",
+    "name": "스마트식량작물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0876",
+    "name": "스마트식물공장특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0861",
+    "name": "스마트팜정보학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0862",
+    "name": "스마트팜최신과제 및 기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0874",
+    "name": "스마트팜해외농업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0863",
+    "name": "스마트팜현장실무 Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0864",
+    "name": "스마트팜현장실무 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0817",
+    "name": "시설환경론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0871",
+    "name": "식물-미생물상호작용특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0854",
+    "name": "식물내병성육종 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "HORT0893",
+    "name": "식물분자생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPLS0717",
+    "name": "식물생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0872",
+    "name": "식물생산생태학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0801",
+    "name": "식물시스템유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0852",
+    "name": "식물염색체공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0853",
+    "name": "식물유전체학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MACH0702",
+    "name": "실험통계학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0873",
+    "name": "영어논문작성및발표",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0710",
+    "name": "영어논문작성법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0802",
+    "name": "원예산물분석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0816",
+    "name": "원예작물번식특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0752",
+    "name": "원예작물분자육종학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0713",
+    "name": "원예작물생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0814",
+    "name": "원예작물영양생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0711",
+    "name": "원예작물육종학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0812",
+    "name": "원예작물화학조절론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0901",
+    "name": "원예학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0868",
+    "name": "작물유전체분석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0870",
+    "name": "전작최신과제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0891",
+    "name": "채소육종학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0731",
+    "name": "채소학특론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0831",
+    "name": "채소학특론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0000",
+    "name": "학위논문연구 및 연구윤리 (원예학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0732",
+    "name": "화훼개화생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0741",
+    "name": "화훼학특론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HORT0841",
+    "name": "화훼학특론 2",
+    "credit": "3-3-0"
+  }
+]

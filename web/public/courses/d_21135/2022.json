@@ -1,0 +1,842 @@
+[
+  {
+    "grade": "",
+    "code": "VETE0796",
+    "name": "가축의 생식기 질병",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0761",
+    "name": "가축의 소화생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0977",
+    "name": "개, 고양이 간담도, 소화기 영상진단",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0978",
+    "name": "개, 고양이 비뇨기, 생식기 영상진단",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0979",
+    "name": "개, 고양이 심혈관계 영상 진단",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0967",
+    "name": "고양이 피부질병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0942",
+    "name": "곤충매개 질병",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0928",
+    "name": "대동물 임신진단학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0732",
+    "name": "대사성질병",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0739",
+    "name": "독성병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0880",
+    "name": "독성유전체학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0878",
+    "name": "동물 수액요법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0926",
+    "name": "동물 응용생명공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0922",
+    "name": "동물전염병학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0938",
+    "name": "마우스 조직학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0937",
+    "name": "말 복지학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0781",
+    "name": "말 유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0780",
+    "name": "말 질병 진단기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0779",
+    "name": "말 질병학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0893",
+    "name": "말재생의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0943",
+    "name": "모기 및 모기매개 질병",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0851",
+    "name": "미량원소",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0924",
+    "name": "바이오의약품 독성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0960",
+    "name": "반려동물 두경부의 컴퓨터단층촬영술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0957",
+    "name": "반려동물 방사선학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0959",
+    "name": "반려동물 신경계의 자기공명영상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0958",
+    "name": "반려동물 초음파학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0961",
+    "name": "반려동물 흉복부의 컴퓨터단층촬영술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0789",
+    "name": "분자 및 세포 신경생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0931",
+    "name": "분자조직학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0953",
+    "name": "비교수의약물동태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0874",
+    "name": "산업동물응용해부학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0788",
+    "name": "생식기질병의진단법 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0870",
+    "name": "성체줄기세포와 임상적용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0777",
+    "name": "세포 및 유전자치료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0705",
+    "name": "세포학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0972",
+    "name": "소동물 국소마취학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0964",
+    "name": "소동물 내시경학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0971",
+    "name": "소동물 마취감시학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0962",
+    "name": "소동물 심장외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0968",
+    "name": "소동물 응급의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0966",
+    "name": "소동물 임상영양학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0927",
+    "name": "소동물 임신진단학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0965",
+    "name": "소동물 자가면역 질환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0963",
+    "name": "소동물 종양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0969",
+    "name": "소동물 중환자의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0970",
+    "name": "소동물 통증의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0797",
+    "name": "소동물의 번식 및 불임증",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0795",
+    "name": "소동물의 번식 및 임상동물번식학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0765",
+    "name": "소동물임상해부학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0945",
+    "name": "소화관 미생물총과 장뇌축",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0950",
+    "name": "수생 야생동물 전염병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0932",
+    "name": "수생동물의학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0936",
+    "name": "수생동물질병진단학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0934",
+    "name": "수생무척추동물질병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0879",
+    "name": "수의 대사성질병 임상병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0876",
+    "name": "수의 비뇨기 임상병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0981",
+    "name": "수의 중재적 방사선학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0873",
+    "name": "수의공중보건학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0770",
+    "name": "수의내분비임상병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0923",
+    "name": "수의내분비장애론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0810",
+    "name": "수의내분비학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0925",
+    "name": "수의독성학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0819",
+    "name": "수의면역병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0755",
+    "name": "수의면역약리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0716",
+    "name": "수의면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0902",
+    "name": "수의바이러스성질병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0929",
+    "name": "수의발생공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0956",
+    "name": "수의백신학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0783",
+    "name": "수의복강외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0757",
+    "name": "수의분자바이러스학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0903",
+    "name": "수의분자진단학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0850",
+    "name": "수의비뇨기병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0784",
+    "name": "수의비뇨생식기외과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0973",
+    "name": "수의생화학·분자생물학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0701",
+    "name": "수의생화학실험법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0895",
+    "name": "수의세포생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0907",
+    "name": "수의세포진단병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0905",
+    "name": "수의소화기병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0849",
+    "name": "수의소화기병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0745",
+    "name": "수의식품미생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0767",
+    "name": "수의신경과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0821",
+    "name": "수의신경병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0759",
+    "name": "수의신경생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0916",
+    "name": "수의신경외과학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0904",
+    "name": "수의실험병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0869",
+    "name": "수의안과학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0758",
+    "name": "수의예방바이러스학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0750",
+    "name": "수의예방세균학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0883",
+    "name": "수의외과 저널 클럽",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0954",
+    "name": "수의위장관약리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0737",
+    "name": "수의응용진단병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0794",
+    "name": "수의임상동물번식학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0906",
+    "name": "수의임상종양병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0915",
+    "name": "수의정형외과학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0930",
+    "name": "수의조직학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0974",
+    "name": "수의종양면역학·생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0976",
+    "name": "수의진단생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0975",
+    "name": "수의진단유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0785",
+    "name": "수의치과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0764",
+    "name": "수의평활근생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0855",
+    "name": "수의피부병학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0980",
+    "name": "수의학에서 기능적 영상의학 및 핵의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0955",
+    "name": "수의항생요법학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0769",
+    "name": "수의혈액임상병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0707",
+    "name": "수의혈액학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0894",
+    "name": "수의호흡기 생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0952",
+    "name": "수의호흡기약리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0772",
+    "name": "수의환경독성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0846",
+    "name": "순환기질병",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0872",
+    "name": "식품유래 병원성세균  진단",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0847",
+    "name": "신경계질병",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0809",
+    "name": "신경조직학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0766",
+    "name": "신경해부학연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0939",
+    "name": "신흥 · 재흥감염병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0852",
+    "name": "실험동물 유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0951",
+    "name": "야생동물 감염병학(심화)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0946",
+    "name": "야생동물 기생충학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0948",
+    "name": "야생동물 병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0714",
+    "name": "야생동물및실험동물병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0935",
+    "name": "양식학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0740",
+    "name": "유전자치환동물병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0747",
+    "name": "유전적 역학분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0830",
+    "name": "인수공통전염병",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0793",
+    "name": "장관신경계와 내장통증",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0768",
+    "name": "종양병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0867",
+    "name": "줄기세포 병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0776",
+    "name": "줄기세포와 재생의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0871",
+    "name": "줄기세포치료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0941",
+    "name": "진드기매개 질병",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0940",
+    "name": "진드기학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0853",
+    "name": "질환모델동물 유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0738",
+    "name": "질환모델동물병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0792",
+    "name": "체액생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0733",
+    "name": "특수내과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0734",
+    "name": "특수진단학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0786",
+    "name": "피부재건 및 이식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0000",
+    "name": "학위논문연구 및 연구윤리 (수의학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0731",
+    "name": "호흡기질병",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VETE0862",
+    "name": "GLP특론",
+    "credit": "3-3-0"
+  }
+]

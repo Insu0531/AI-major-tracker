@@ -1,0 +1,224 @@
+[
+  {
+    "grade": "",
+    "code": "FOSE0732",
+    "name": "고급건강기능성식품학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0749",
+    "name": "고급수확후관리기술특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0731",
+    "name": "고급식품가공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0736",
+    "name": "고급식품저장학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0748",
+    "name": "고급식품풍미학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0757",
+    "name": "바이오식품소재특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0929",
+    "name": "발효식품학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0714",
+    "name": "세계음식문화특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0722",
+    "name": "식생활과 생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FUSN0734",
+    "name": "식품과 건강에서의 공간분석 활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0752",
+    "name": "식품미생물학연구법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0728",
+    "name": "식품미생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0932",
+    "name": "식품생물공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0746",
+    "name": "식품신제품개발실무",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0753",
+    "name": "식품안전성특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ABIO0717",
+    "name": "식품위생학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0742",
+    "name": "식품탄수화물화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0756",
+    "name": "식품학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0724",
+    "name": "식품화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0743",
+    "name": "외식경영연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0750",
+    "name": "외식경영특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0741",
+    "name": "외식마케팅연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0751",
+    "name": "외식산업사례분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0739",
+    "name": "외식산업의 연구이슈",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0724",
+    "name": "외식산업의 최근경향",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0754",
+    "name": "외식서비스사이언스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0738",
+    "name": "외식인적자원관리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0737",
+    "name": "외식전략경영세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0755",
+    "name": "외식조직행동론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0744",
+    "name": "외식트렌드연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0740",
+    "name": "음식관광세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0747",
+    "name": "음식문화연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0745",
+    "name": "전분화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PUAD0802",
+    "name": "조사연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0000",
+    "name": "학위논문연구 및 연구윤리(식품외식산업학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0713",
+    "name": "한국음식문화특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSI0743",
+    "name": "현대음식문화특론",
+    "credit": "3-3-0"
+  }
+]

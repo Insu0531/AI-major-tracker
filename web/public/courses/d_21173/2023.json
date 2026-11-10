@@ -1,0 +1,488 @@
+[
+  {
+    "grade": "",
+    "code": "HUCO0742",
+    "name": "공감과 소통의 문학 연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0743",
+    "name": "공감과 소통의 문학 연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0754",
+    "name": "권력의 계보학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0816",
+    "name": "내러티브와 상담",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0723",
+    "name": "논리와 설득",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0753",
+    "name": "놀이상담 현장실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0751",
+    "name": "놀이와 인문카운슬링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0748",
+    "name": "대중문화의 철학적 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0795",
+    "name": "도가철학과 인문카운슬링 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0796",
+    "name": "도가철학과 인문카운슬링 연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0716",
+    "name": "동양고전과 인문카운슬링 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0718",
+    "name": "동양고전과 인문카운슬링 연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0715",
+    "name": "동양심리학 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0717",
+    "name": "동양심리학 연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0788",
+    "name": "마이너리티와 젠더적 감성 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0721",
+    "name": "매체와 문화연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0759",
+    "name": "명상실습과 치유",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0783",
+    "name": "문제인식과 변증적 해결",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0811",
+    "name": "문학과 치유 세미나 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0812",
+    "name": "문학과 치유 세미나 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0767",
+    "name": "문학과 트라우마 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0746",
+    "name": "문학상상력과 인문카운슬링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0774",
+    "name": "문학치료 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0756",
+    "name": "문화간 의사소통 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0775",
+    "name": "복지상담 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0819",
+    "name": "부조리 문학 연구와 소통",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0784",
+    "name": "비판적 사고와 인문카운슬링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0712",
+    "name": "비판철학과 철학상담",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0727",
+    "name": "사고와 언어 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0728",
+    "name": "사고와 언어 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0814",
+    "name": "사회복지상담 실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0762",
+    "name": "상담연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0769",
+    "name": "상상력과 공감의 철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0747",
+    "name": "상상력과 치유",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0731",
+    "name": "설득의 수사학 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0760",
+    "name": "성격이론의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0787",
+    "name": "소설 읽기와 이문화 커뮤니케이션의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0781",
+    "name": "소크라테스 대화의 이해와 실천 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0782",
+    "name": "소크라테스 대화의 이해와 실천 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0778",
+    "name": "신경과학과 상담",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0766",
+    "name": "실존분석과 현존재분석의 철학적 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0764",
+    "name": "실존적 정신병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0714",
+    "name": "심리치료로서의 철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0755",
+    "name": "언어,문화, 커뮤니케이션 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0820",
+    "name": "에로티즘과 죽음을 통한 타인의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0749",
+    "name": "영화와 인문카운슬링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0768",
+    "name": "영화와 정신분석학 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0722",
+    "name": "예술과 문화철학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0750",
+    "name": "예술과 인문카운슬링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0752",
+    "name": "예술상담 현장실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0793",
+    "name": "유가철학과 인문카운슬링 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0794",
+    "name": "유가철학과 인문카운슬링 연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0813",
+    "name": "의사소통의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0711",
+    "name": "의사소통철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0741",
+    "name": "이해와 소통의 해석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0734",
+    "name": "인간 의사소통",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0761",
+    "name": "인간발달과 정신병리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0719",
+    "name": "인도심리학 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0720",
+    "name": "인도심리학 연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0758",
+    "name": "인도철학과 인문카운슬링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0771",
+    "name": "인문카운슬링연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0772",
+    "name": "인문카운슬링연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0823",
+    "name": "인성과 치유",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0824",
+    "name": "자아의 분열과 소통 불가능성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0817",
+    "name": "자학적 표상과 메타언어에 대한성찰",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0726",
+    "name": "정신분석학과 문학 치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0777",
+    "name": "정신의학과 상담",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0737",
+    "name": "존재와 공감",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0818",
+    "name": "죽음에 대한 메타인지적 이해와 기호의 실천",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0765",
+    "name": "질적 연구를 위한 현상학 방법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0815",
+    "name": "집단과 사회복지상담",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0770",
+    "name": "철학상담 사례 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0773",
+    "name": "철학상담 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0821",
+    "name": "침묵의 소통",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0776",
+    "name": "퍼실리테이션연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0725",
+    "name": "포스트모더니즘 이론과 관용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0000",
+    "name": "학위논문연구 및 연구윤리(인문카운슬링학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0724",
+    "name": "행위 철학과 자기 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0744",
+    "name": "화용론과 의사소통 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0745",
+    "name": "화용론과 의사소통 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HUCO0822",
+    "name": "휴머니즘과 포스트휴머니즘 연구",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,692 @@
+[
+  {
+    "grade": "",
+    "code": "DSED0913",
+    "name": "감각생물학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0911",
+    "name": "계통학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHED0736",
+    "name": "고급무기화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHED0734",
+    "name": "고급분석화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHED0735",
+    "name": "고급유기화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0804",
+    "name": "고급입자물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0701",
+    "name": "고급통계방법특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0964",
+    "name": "고생물학교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHED0841",
+    "name": "고체물리학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0826",
+    "name": "과학 및 STEAM 교육과정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0708",
+    "name": "과학교사교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0705",
+    "name": "과학교수학습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0828",
+    "name": "과학교육 및 STEAM 연구법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0821",
+    "name": "과학교육 연구윤리와 논문 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0702",
+    "name": "과학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0706",
+    "name": "과학장학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0703",
+    "name": "과학철학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0956",
+    "name": "관측천문학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0811",
+    "name": "광물성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0959",
+    "name": "광물특성교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0720",
+    "name": "광자기술특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHED0735",
+    "name": "광학교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0838",
+    "name": "구조생물학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0810",
+    "name": "구조지질학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0922",
+    "name": "기후 분석 및 실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0924",
+    "name": "기후학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0812",
+    "name": "나노반도체특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0923",
+    "name": "대기과학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRI0716",
+    "name": "동물생리학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIED0733",
+    "name": "동물형태학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0715",
+    "name": "멀티미디어와물리교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIED0781",
+    "name": "면역학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0835",
+    "name": "무기화학교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHED0712",
+    "name": "무기화학내용지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHED0704",
+    "name": "무기화학및실험",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHED0707",
+    "name": "무기화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0716",
+    "name": "물리개념변화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0714",
+    "name": "물리교육과정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0713",
+    "name": "물리교육세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0718",
+    "name": "물리교육평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0712",
+    "name": "물리교재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0711",
+    "name": "물리학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0833",
+    "name": "물리화학교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHED0718",
+    "name": "물리화학내용지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHED0700",
+    "name": "물리화학및실험1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHED0701",
+    "name": "물리화학및실험2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0713",
+    "name": "물리화학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIED0761",
+    "name": "발생학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0836",
+    "name": "분석화학교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHED0714",
+    "name": "분석화학내용지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHED0702",
+    "name": "분석화학및실험",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHED0715",
+    "name": "분석화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIED0764",
+    "name": "분자생물학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0909",
+    "name": "분자세포생물학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0912",
+    "name": "생명정보학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0758",
+    "name": "생물실험실습지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0751",
+    "name": "생물학사특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIED0745",
+    "name": "생태학과 환경교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIED0762",
+    "name": "세포생물학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0801",
+    "name": "수리물리학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIED0721",
+    "name": "식물생리학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHED0705",
+    "name": "실용유기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0965",
+    "name": "암석성인론세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0953",
+    "name": "암석학교육특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0954",
+    "name": "암석학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHED0742",
+    "name": "양자역학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHED0732",
+    "name": "역학교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHED0751",
+    "name": "열및통계물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHED0734",
+    "name": "원자핵물리학교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0834",
+    "name": "유기화학교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHED0716",
+    "name": "유기화학내용지도법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHED0703",
+    "name": "유기화학및실험",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEM0736",
+    "name": "유기화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIED0763",
+    "name": "유전학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0832",
+    "name": "융합생물 교육 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0831",
+    "name": "융합생물 교재 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0837",
+    "name": "융합생물학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0830",
+    "name": "융합화학교육특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0926",
+    "name": "응용지질학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0807",
+    "name": "응집물질물리학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0921",
+    "name": "이론지구물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHED0733",
+    "name": "전자기학교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0928",
+    "name": "지구과학과 융합 교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0774",
+    "name": "지구과학교육과정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ESED0760",
+    "name": "지구과학교육사 및 철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0773",
+    "name": "지구과학교육세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0777",
+    "name": "지구과학교육연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ESED0762",
+    "name": "지구과학교육특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0779",
+    "name": "지구과학교재연구 및 개발",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0778",
+    "name": "지구과학실험실습지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0958",
+    "name": "지구물리학교육특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0927",
+    "name": "지구시스템과학 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0717",
+    "name": "창의성과물리교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0737",
+    "name": "창의성과화학교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0955",
+    "name": "천문학교육특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0966",
+    "name": "천체물리개념연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0813",
+    "name": "첨단물리학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHED0731",
+    "name": "컴퓨터물리교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0957",
+    "name": "태양계천문학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GRAD0721",
+    "name": "통합적 교과교육 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0000",
+    "name": "학위논문연구 및 연구윤리(과학교육학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0963",
+    "name": "해양학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0925",
+    "name": "현대천문학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0736",
+    "name": "화학개념변화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0734",
+    "name": "화학교육과정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0733",
+    "name": "화학교육세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0739",
+    "name": "화학사 및 철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHED0737",
+    "name": "화학전공세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHED0738",
+    "name": "화학전공세미나2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0829",
+    "name": "화학STEAM 및 교재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0823",
+    "name": "International STEM/STEAM Program",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0825",
+    "name": "Seminar for STEM/STEAM Education",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0827",
+    "name": "STEAM 교육과 과학영재교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0822",
+    "name": "STEAM 교육의 이해와 적용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DSED0824",
+    "name": "STEAM R&E",
+    "credit": "3-3-0"
+  }
+]

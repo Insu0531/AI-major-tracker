@@ -1,0 +1,1502 @@
+[
+  {
+    "grade": "",
+    "code": "JURA0971",
+    "name": "가사소송법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0874",
+    "name": "개인채무자파산및회생절차법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0887",
+    "name": "경제법사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0781",
+    "name": "경제법일반이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0886",
+    "name": "경제법판례연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0715",
+    "name": "경제헌법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0975",
+    "name": "경제형법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0943",
+    "name": "경찰행정법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0926",
+    "name": "계약법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0866",
+    "name": "공공부문의노동권",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0947",
+    "name": "공물법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0965",
+    "name": "공적부조법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0867",
+    "name": "교육기본권론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0859",
+    "name": "국가보상법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0862",
+    "name": "국가철학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0710",
+    "name": "국제경제법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0789",
+    "name": "국제경제법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0740",
+    "name": "국제경제분쟁해결론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0824",
+    "name": "국제계약법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0806",
+    "name": "국제과세론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0814",
+    "name": "국제관계와헌법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0860",
+    "name": "국제노동법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0805",
+    "name": "국제대금결제론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0901",
+    "name": "국제물품매매법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0892",
+    "name": "국제민사소송법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0771",
+    "name": "국제법일반이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0906",
+    "name": "국제보험론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0904",
+    "name": "국제복합운송법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0772",
+    "name": "국제분쟁처리법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0964",
+    "name": "국제사회보장법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0907",
+    "name": "국제상사중재론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0804",
+    "name": "국제소송론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0778",
+    "name": "국제인권법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0905",
+    "name": "국제자본거래론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0934",
+    "name": "국제조세법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0709",
+    "name": "국제지적재산권법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0871",
+    "name": "국제책임법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0775",
+    "name": "국제통상법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0708",
+    "name": "국제투자법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0903",
+    "name": "국제항공운송법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0902",
+    "name": "국제해상운송법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0730",
+    "name": "국제형법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0779",
+    "name": "국제환경법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0714",
+    "name": "권력분립론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0869",
+    "name": "근로기준법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0973",
+    "name": "금융거래법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0889",
+    "name": "금융규제법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0713",
+    "name": "기본인권론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LAWS0911",
+    "name": "기업결제법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0745",
+    "name": "기업금융법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0742",
+    "name": "기업조직법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LAWS0915",
+    "name": "기업조직법특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0974",
+    "name": "기업지배구조론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0981",
+    "name": "기업집단규제법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LAWS0916",
+    "name": "기업활동법특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0998",
+    "name": "기초법판례연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0979",
+    "name": "남녀고용평등법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0933",
+    "name": "납세자의권익구제방안연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0765",
+    "name": "노동기본권연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0800",
+    "name": "노동분쟁해결제도연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0768",
+    "name": "노동쟁의와 쟁의행위제도연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0865",
+    "name": "노동조합",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0985",
+    "name": "다국적기업규제법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0766",
+    "name": "단체교섭과 단체협약제도연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0750",
+    "name": "담보물권법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0937",
+    "name": "대기환경보전법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0727",
+    "name": "대리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0911",
+    "name": "독일헌법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0785",
+    "name": "독점규제법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0728",
+    "name": "동산물권법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0997",
+    "name": "동양법사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0723",
+    "name": "등기제도론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0809",
+    "name": "무역과노동기준의연계에관한연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0808",
+    "name": "무역과환경기준의연계에관한연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0803",
+    "name": "무역분쟁사례연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0722",
+    "name": "물권변동론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0853",
+    "name": "미국무역법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0788",
+    "name": "미국통상법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0910",
+    "name": "미국헌법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0987",
+    "name": "미국회사법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0893",
+    "name": "민사소송법일반이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0894",
+    "name": "민사소송법특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0797",
+    "name": "민사소송법판례연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0891",
+    "name": "민사집행법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0896",
+    "name": "민사집행법판례연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0925",
+    "name": "민사책임론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0876",
+    "name": "방송규제법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0731",
+    "name": "범죄론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0984",
+    "name": "법경제학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0878",
+    "name": "법논증론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0923",
+    "name": "법률행위론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0704",
+    "name": "법사회학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0968",
+    "name": "법여성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0879",
+    "name": "법의학이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0720",
+    "name": "법인론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0701",
+    "name": "법학방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0875",
+    "name": "보전절차법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0895",
+    "name": "복합소송론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0767",
+    "name": "부당노동행위제도연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0726",
+    "name": "부동산담보법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0957",
+    "name": "부동산세법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0986",
+    "name": "부정경쟁방지법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0884",
+    "name": "부정경쟁방지법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0970",
+    "name": "북한법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0760",
+    "name": "북한형사법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0820",
+    "name": "불법행위일반이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0729",
+    "name": "불법행위특수이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0980",
+    "name": "비교경제법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0897",
+    "name": "비교민사소송법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0823",
+    "name": "비교사법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LAWS0909",
+    "name": "비교상행위법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0802",
+    "name": "비교특허법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0952",
+    "name": "비교행정법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0861",
+    "name": "비교헌법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0832",
+    "name": "비교형법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0977",
+    "name": "비교형사소송법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LAWS0910",
+    "name": "비교회사법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0962",
+    "name": "비정규고용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0822",
+    "name": "사무관리·부당이득론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0721",
+    "name": "사법일반이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0944",
+    "name": "사회보장행정법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0963",
+    "name": "사회보험법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0888",
+    "name": "산업규제법일반연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0961",
+    "name": "산업재해보상보험법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0741",
+    "name": "상사법일반이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0843",
+    "name": "상사판례연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0827",
+    "name": "상속법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0929",
+    "name": "상속법판례연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LAWS0908",
+    "name": "상행위법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0967",
+    "name": "생명공학법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0863",
+    "name": "선거제도론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0954",
+    "name": "소득세법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0955",
+    "name": "소비세법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0982",
+    "name": "소비자보호법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0791",
+    "name": "소와 소송물론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0724",
+    "name": "소유권론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0747",
+    "name": "손해보험연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0936",
+    "name": "수질환경보전법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0996",
+    "name": "시효론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0909",
+    "name": "신용장",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0960",
+    "name": "아동과 법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0912",
+    "name": "언론제도론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0807",
+    "name": "영국무역법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0734",
+    "name": "영미형법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0872",
+    "name": "외교관계법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0852",
+    "name": "외국환경법제연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0774",
+    "name": "유럽연합법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0966",
+    "name": "유럽헌법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0773",
+    "name": "유엔법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0873",
+    "name": "의료행정법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0978",
+    "name": "의료형사법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LAWS0913",
+    "name": "이사회·주주총회법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0828",
+    "name": "이혼법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0748",
+    "name": "인보험연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0976",
+    "name": "인터넷과범죄",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0993",
+    "name": "일본법사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0770",
+    "name": "일본법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0719",
+    "name": "입법학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LAWS0917",
+    "name": "자본시장법특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0702",
+    "name": "자연법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0916",
+    "name": "자치입법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0801",
+    "name": "재산범죄론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0821",
+    "name": "재산법판례",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0956",
+    "name": "재산세법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0794",
+    "name": "재판 . 상소론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0796",
+    "name": "재판외분쟁해결절차연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0882",
+    "name": "저작권법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0972",
+    "name": "전자거래법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0725",
+    "name": "점유권론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0868",
+    "name": "정당제도론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0703",
+    "name": "정법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0857",
+    "name": "정보사회와행정법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0913",
+    "name": "정보사회헌법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0990",
+    "name": "정부계약법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0815",
+    "name": "정부형태론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0786",
+    "name": "조세관련헌법재판연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0953",
+    "name": "조세법기초이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0958",
+    "name": "조세절차법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0931",
+    "name": "조세징수법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0959",
+    "name": "조세판례연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0870",
+    "name": "조약법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LAWS0914",
+    "name": "주주권연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0881",
+    "name": "중국사법제도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0991",
+    "name": "중국헌법제도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0899",
+    "name": "중재법특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0792",
+    "name": "증거법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0890",
+    "name": "증명책임론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0932",
+    "name": "지방세법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0988",
+    "name": "지방자치법일반연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0900",
+    "name": "지방자치법특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0917",
+    "name": "지방자치법판례연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0817",
+    "name": "지적재산 라이센싱",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0816",
+    "name": "지적재산권침해와 손해배상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LAWS0912",
+    "name": "채무자회생법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0819",
+    "name": "첨단과학기술과 지적재산권",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0826",
+    "name": "친자법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0928",
+    "name": "친족법판례연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0989",
+    "name": "토지공법일반연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0918",
+    "name": "토지공법특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0930",
+    "name": "토지공법판례연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0919",
+    "name": "토지정책및입법론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0877",
+    "name": "통신규제법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0716",
+    "name": "통일과헌법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0885",
+    "name": "특별경제법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0927",
+    "name": "특수계약론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0754",
+    "name": "특허법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0949",
+    "name": "특허쟁송법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0811",
+    "name": "평등보장론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0938",
+    "name": "폐기물관리법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0983",
+    "name": "하도급법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0000",
+    "name": "학위논문연구 및 연구윤리 (법학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0994",
+    "name": "한국법사연구 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0995",
+    "name": "한국법사연구 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0777",
+    "name": "항공·우주법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0776",
+    "name": "해양법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0950",
+    "name": "행정강제법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0751",
+    "name": "행정법일반이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0753",
+    "name": "행정소송법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0858",
+    "name": "행정심판법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0854",
+    "name": "행정입법론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0856",
+    "name": "행정재량론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0759",
+    "name": "행정절차법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0948",
+    "name": "행정조직법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0951",
+    "name": "행정지도연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0855",
+    "name": "행정행위론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0834",
+    "name": "행형법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0818",
+    "name": "헌법일반이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0914",
+    "name": "헌법재판연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0812",
+    "name": "헌법해석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0825",
+    "name": "현대가족법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0707",
+    "name": "현대법사상연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0739",
+    "name": "현대형법이론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0732",
+    "name": "형벌론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0833",
+    "name": "형법사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0837",
+    "name": "형법철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0733",
+    "name": "형법특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0835",
+    "name": "형법학방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0737",
+    "name": "형사사례연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0735",
+    "name": "형사소송법일반이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0738",
+    "name": "형사증거법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0830",
+    "name": "형사특별법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0924",
+    "name": "혼인법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0939",
+    "name": "환경구제법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0940",
+    "name": "환경규제법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0942",
+    "name": "환경법기초이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0941",
+    "name": "환경법판례연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0935",
+    "name": "환경영향평가법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0849",
+    "name": "IT와 개인정보보호",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LAWS0918",
+    "name": "M&A 실무",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JURA0787",
+    "name": "WTO법연구",
+    "credit": "3-3-0"
+  }
+]

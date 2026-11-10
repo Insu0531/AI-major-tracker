@@ -1,0 +1,302 @@
+[
+  {
+    "grade": "",
+    "code": "EESO0719",
+    "name": "고급광전기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0713",
+    "name": "고급에너지소자공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0712",
+    "name": "고급에너지재료공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0765",
+    "name": "고급에너지저장재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0769",
+    "name": "고급전력시스템 시뮬레이션 이론 및 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0735",
+    "name": "고급전력전자",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0764",
+    "name": "고급전지기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0714",
+    "name": "고급태양전지공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0760",
+    "name": "고급AC모터제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0739",
+    "name": "고주파 자기소자 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0737",
+    "name": "고주파 전력변환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0716",
+    "name": "광전기화학 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0717",
+    "name": "광촉매 원리 및 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0718",
+    "name": "광화학적 고도산화공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0761",
+    "name": "모터제어시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0771",
+    "name": "발전/송전/배전시스템 모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0729",
+    "name": "발전로 안전공학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0730",
+    "name": "발전로 안전공학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0726",
+    "name": "방사선 계측",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0727",
+    "name": "방사선 방호",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0728",
+    "name": "방사선 수송 해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0732",
+    "name": "방사성 폐기물 관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0738",
+    "name": "소프트 스위칭 전력변환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0762",
+    "name": "심화전기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0742",
+    "name": "에너지공학특강1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0743",
+    "name": "에너지공학특강2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0744",
+    "name": "에너지공학특강3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0745",
+    "name": "에너지공학특강4",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0746",
+    "name": "에너지공학특강5",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0747",
+    "name": "에너지공학특강6",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0740",
+    "name": "에너지변환특강 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0741",
+    "name": "에너지변환특강 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0768",
+    "name": "에너지시스템 최적운영 및 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0733",
+    "name": "원자력공학특강 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0734",
+    "name": "원자력공학특강 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0724",
+    "name": "원자로 해석 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0725",
+    "name": "원자로 해석 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0763",
+    "name": "유연에너지저장장치",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0766",
+    "name": "전기화학분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0736",
+    "name": "전력변환응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0767",
+    "name": "전력시스템 시뮬레이션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0770",
+    "name": "전력시장",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0711",
+    "name": "첨단에너지공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0722",
+    "name": "태양광전환 특강 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0723",
+    "name": "태양광전환 특강 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0720",
+    "name": "태양전지공학 특강 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0721",
+    "name": "태양전지공학 특강 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0715",
+    "name": "태양전지발전시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0000",
+    "name": "학위논문연구 및 연구윤리(에너지공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EESO0731",
+    "name": "핵연료 주기 기술",
+    "credit": "3-3-0"
+  }
+]

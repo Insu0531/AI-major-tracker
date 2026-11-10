@@ -1,0 +1,188 @@
+[
+  {
+    "grade": "2",
+    "code": "AMEN0254",
+    "name": "기계제도 및 CAD",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0206",
+    "name": "기초프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0452",
+    "name": "빅데이터융합개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AMEN0313",
+    "name": "생물생산기계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COME0301",
+    "name": "이산수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0451",
+    "name": "인공지능융합기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COME0331",
+    "name": "자료구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0217",
+    "name": "자바프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ITEC0201",
+    "name": "컴퓨터학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ACEN0365",
+    "name": "농업토목시스템공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ACEN0546",
+    "name": "농촌상하수도공학및설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AMEN0443",
+    "name": "마이크로프로세서 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0328",
+    "name": "모바일앱프로그래밍1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "AMEN0323",
+    "name": "생물가공시스템공학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "ACEN0435",
+    "name": "생물환경조절공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SMFA0213",
+    "name": "스마트생물산업기계공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "SMFA0211",
+    "name": "스마트팜공학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AMEN0431",
+    "name": "에너지공학 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0312",
+    "name": "운영체제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "META0231",
+    "name": "재료역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ACEN0415",
+    "name": "저수지공학및설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0416",
+    "name": "고급웹프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ACEN0347",
+    "name": "관개배수공학및설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ACEN0467",
+    "name": "농업시설공학 및 설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ACEN0518",
+    "name": "농지공학 및 설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "ACEN0560",
+    "name": "농촌지리정보공학 및 설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "AMEN0416",
+    "name": "생물생산시설환경제어 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0224",
+    "name": "소프트웨어설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "SMFA0212",
+    "name": "스마트팜기반조성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0324",
+    "name": "인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "AMEN0412",
+    "name": "트랙터공학 및 실습",
+    "credit": "3-2-2"
+  }
+]

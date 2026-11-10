@@ -1,0 +1,224 @@
+[
+  {
+    "grade": "",
+    "code": "EDED0760",
+    "name": "고급연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0601",
+    "name": "교육과정",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0604",
+    "name": "교육방법및교육공학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0552",
+    "name": "교육봉사활동 2",
+    "credit": "2-0-60(h)"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0606",
+    "name": "교육사회",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0607",
+    "name": "교육심리",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0762",
+    "name": "교육심리 쟁점 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0767",
+    "name": "교육심리문제 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0845",
+    "name": "교육심리의연구와적용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0609",
+    "name": "교육철학및교육사",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0761",
+    "name": "교육측정세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0849",
+    "name": "교육통계와교육세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0780",
+    "name": "교육통계의 원리와 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0763",
+    "name": "교육통계의 원리와 적용Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0764",
+    "name": "교육통계의 원리와 적용Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0610",
+    "name": "교육평가",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0756",
+    "name": "교육평가의 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0846",
+    "name": "교육평가의연구와적용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0611",
+    "name": "교육학개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0612",
+    "name": "교육행정및교육경영",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0529",
+    "name": "교직실무",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0520",
+    "name": "생활지도및상담(교직소양)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0765",
+    "name": "성격과 개인차",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0757",
+    "name": "심리검사제작 및 분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0851",
+    "name": "심리측정과 교육평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0704",
+    "name": "영재교육",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0703",
+    "name": "창의성 교육",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0528",
+    "name": "특수교육학개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0753",
+    "name": "학교심리 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0769",
+    "name": "학교학습과 교육심리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0522",
+    "name": "학교현장실습",
+    "credit": "2-0-4(주)"
+  },
+  {
+    "grade": "",
+    "code": "EDED0754",
+    "name": "학습과 동기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0768",
+    "name": "학습자 발달 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0000",
+    "name": "학위논문연구 및 연구윤리 (교육학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0759",
+    "name": "회귀분석과 변량분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "TCHR0521",
+    "name": "교직실무 1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "9",
+    "code": "TCHR0553",
+    "name": "디지털 교육",
+    "credit": "1-1-0"
+  }
+]

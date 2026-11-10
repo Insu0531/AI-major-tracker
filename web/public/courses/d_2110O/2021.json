@@ -1,0 +1,374 @@
+[
+  {
+    "grade": "",
+    "code": "PHYS0780",
+    "name": "가속기물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0831",
+    "name": "강입자 물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0755",
+    "name": "고급결정구조학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0787",
+    "name": "고급고체물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0804",
+    "name": "고급광학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0726",
+    "name": "고급물리실험",
+    "credit": "3-0-6"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0821",
+    "name": "고급물리학특강1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0822",
+    "name": "고급물리학특강2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0823",
+    "name": "고급물리학특강3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0824",
+    "name": "고급물리학특강4",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0817",
+    "name": "고급반도체물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0724",
+    "name": "고급양자역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0838",
+    "name": "고급응용핵물리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0782",
+    "name": "고급전산물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0786",
+    "name": "고급핵물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0785",
+    "name": "고에너지물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0736",
+    "name": "고에너지현상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0706",
+    "name": "고전역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0819",
+    "name": "고체물리특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0759",
+    "name": "광물성물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0827",
+    "name": "광학시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0792",
+    "name": "나노 및 양자고체물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0826",
+    "name": "나노광학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0760",
+    "name": "다체이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0790",
+    "name": "대칭성이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0830",
+    "name": "디스플레이 및 센서물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0832",
+    "name": "물리연구와 실험기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0829",
+    "name": "물리연구의 가치와 윤리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0834",
+    "name": "물리학과 첨단산업기술 개발",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0761",
+    "name": "비평형통계역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0820",
+    "name": "상대성이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0708",
+    "name": "수리물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0794",
+    "name": "실험데이터분석방법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0727",
+    "name": "실험방법 및 자료처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0833",
+    "name": "실험회로설계 및 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0703",
+    "name": "양자역학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0704",
+    "name": "양자역학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0791",
+    "name": "양자장론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0725",
+    "name": "양자통계역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0836",
+    "name": "에너지변환 및 저장 물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0753",
+    "name": "유전체물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0707",
+    "name": "응용통계물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0793",
+    "name": "응용플라즈마물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0744",
+    "name": "응용핵물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0816",
+    "name": "응집물리학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0809",
+    "name": "입자물리특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0737",
+    "name": "입자물리학이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0754",
+    "name": "자성체물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0835",
+    "name": "전산모사 및 모델링",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0701",
+    "name": "전자기학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0702",
+    "name": "전자기학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0763",
+    "name": "초전도체물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0837",
+    "name": "최신 입자물리 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0815",
+    "name": "통계물리학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0788",
+    "name": "통계역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0789",
+    "name": "플라즈마물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0000",
+    "name": "학위논문연구 및 연구윤리 (물리학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0825",
+    "name": "학제간물리연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0828",
+    "name": "핵 및 입자 검출기 물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0808",
+    "name": "핵물리학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0743",
+    "name": "핵반응이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHYS0742",
+    "name": "핵분광학",
+    "credit": "3-3-0"
+  }
+]

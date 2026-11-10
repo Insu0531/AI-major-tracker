@@ -1,0 +1,452 @@
+[
+  {
+    "grade": "",
+    "code": "GEOL0839",
+    "name": "결정학특론 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0751",
+    "name": "고생물학특론및실험1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0752",
+    "name": "고생물학특론및실험2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0814",
+    "name": "고생태학특론및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0770",
+    "name": "고식물학특론 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0877",
+    "name": "고지진학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0868",
+    "name": "공간통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0823",
+    "name": "구조지질학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0810",
+    "name": "구조지질학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0854",
+    "name": "단층기하운동론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0869",
+    "name": "단층역학론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0872",
+    "name": "대수층정화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0842",
+    "name": "동위원소지질학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0876",
+    "name": "딥러닝의 지질학적 활용 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0855",
+    "name": "물리검층해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0753",
+    "name": "미고생물학특론및실험1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0754",
+    "name": "미고생물학특론및실험2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0853",
+    "name": "미구조론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0822",
+    "name": "보석광물학특론및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0809",
+    "name": "분광지구화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0875",
+    "name": "분지역전 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0828",
+    "name": "분지해석학특론 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0857",
+    "name": "사건층서학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0789",
+    "name": "사면공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0795",
+    "name": "수리지구물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0825",
+    "name": "수리지구화학 및 실험1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0826",
+    "name": "수리지구화학 및 실험2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0827",
+    "name": "수리지질학특론 및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0848",
+    "name": "수치지하수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0707",
+    "name": "암반공학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0708",
+    "name": "암반공학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0843",
+    "name": "암석광물상평론 및 실험1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0791",
+    "name": "암석광물조직론 및 실험1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0800",
+    "name": "암석역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0841",
+    "name": "암석지구화학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0801",
+    "name": "암석학특론 및 세미나",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0769",
+    "name": "연속및불연속변형작용의이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0856",
+    "name": "연질퇴적변형구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0871",
+    "name": "우물역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0765",
+    "name": "응력및변형",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0844",
+    "name": "응용광물학특론 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0838",
+    "name": "자원지질학특론및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0807",
+    "name": "점토광물학및실험1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0808",
+    "name": "점토광물학및실험2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0870",
+    "name": "조산대와 조산운동",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0873",
+    "name": "중력류 저류층 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0860",
+    "name": "지구구조론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0879",
+    "name": "지구물리수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0706",
+    "name": "지구물리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0716",
+    "name": "지사학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0811",
+    "name": "지사학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0812",
+    "name": "지사학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0878",
+    "name": "지진과 방재",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0773",
+    "name": "지진학및실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0852",
+    "name": "지질 자료 분석 실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0849",
+    "name": "지질데이터 마이닝 개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0847",
+    "name": "지하수모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0845",
+    "name": "지하수오염학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0846",
+    "name": "지하수유동학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0786",
+    "name": "지하수학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0719",
+    "name": "층서학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0874",
+    "name": "탄성파 자료 처리 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0802",
+    "name": "터널공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0829",
+    "name": "토양광물학 및 지구화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0797",
+    "name": "퇴적지질학특론 및 실험 2",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0796",
+    "name": "퇴적지질학특론 및 실험1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0850",
+    "name": "패턴인식과 지질학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0000",
+    "name": "학위논문연구 및 연구윤리 (지질학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0713",
+    "name": "한국지층론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0714",
+    "name": "한국지층론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0738",
+    "name": "화산학특론및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0732",
+    "name": "화성암석성인론및실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0866",
+    "name": "환경광물학 및 실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0788",
+    "name": "환경지질학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOL0864",
+    "name": "활지구조론",
+    "credit": "3-3-0"
+  }
+]

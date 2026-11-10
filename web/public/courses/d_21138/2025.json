@@ -1,0 +1,356 @@
+[
+  {
+    "grade": "",
+    "code": "CLTX0809",
+    "name": "3D 의복과 인체",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0807",
+    "name": "3D 패션 주얼리 모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0741",
+    "name": "고급복식사회심리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0752",
+    "name": "고급피복환경학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0811",
+    "name": "기능성 스마트웨어 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0765",
+    "name": "드레이핑연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HOEC0764",
+    "name": "복식공예특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0782",
+    "name": "복식과인간행동",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0735",
+    "name": "복식색채학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0774",
+    "name": "복식유행이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0775",
+    "name": "색채심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0721",
+    "name": "서양복식사특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0718",
+    "name": "섬유물성연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0714",
+    "name": "세척이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0728",
+    "name": "소재기획특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0786",
+    "name": "아트패브릭",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0731",
+    "name": "어패럴디자인특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0713",
+    "name": "염색가공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0732",
+    "name": "예술의상특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0719",
+    "name": "응용섬유화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0804",
+    "name": "의류생산시스템 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0801",
+    "name": "의류학연구방법론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0802",
+    "name": "의류학연구방법론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0771",
+    "name": "의복과사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0751",
+    "name": "의복과인간공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0791",
+    "name": "의복특수연구과제1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0792",
+    "name": "의복특수연구과제2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0755",
+    "name": "인체와의복구성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0794",
+    "name": "전통의상과 천연염색",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0716",
+    "name": "직물사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0789",
+    "name": "컴퓨터텍스타일디자인연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0753",
+    "name": "컴퓨터패턴연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0806",
+    "name": "테크니컬 의류 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0734",
+    "name": "텍스타일디자인특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0761",
+    "name": "특수의복연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0808",
+    "name": "파라메트릭 패션디자인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0810",
+    "name": "패션 테크놀로지 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0805",
+    "name": "패션과 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0783",
+    "name": "패션과조형",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0743",
+    "name": "패션구매와유통론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0746",
+    "name": "패션리테일링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0742",
+    "name": "패션마케팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0803",
+    "name": "패션미학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0745",
+    "name": "패션산업론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0781",
+    "name": "패션소싱",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0787",
+    "name": "패션일러스트레이션연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0788",
+    "name": "패션일러스트레이션연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0784",
+    "name": "패션컬러특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0785",
+    "name": "패션컬렉션연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0744",
+    "name": "패션프로모션과비주얼머천다이징",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0763",
+    "name": "평면재단연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0717",
+    "name": "피복가공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0793",
+    "name": "피복감성과학론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0754",
+    "name": "피복생리학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0715",
+    "name": "피복재료조직연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0000",
+    "name": "학위논문연구 및 연구윤리(의류학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0766",
+    "name": "한국복식구성특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0722",
+    "name": "한국복식사특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLTX0726",
+    "name": "현대복식사",
+    "credit": "3-3-0"
+  }
+]

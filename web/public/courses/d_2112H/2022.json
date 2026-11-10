@@ -1,0 +1,224 @@
+[
+  {
+    "grade": "",
+    "code": "ACEN0716",
+    "name": "간척공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0751",
+    "name": "건설재료시험연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0752",
+    "name": "건설재료학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0740",
+    "name": "관개공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0727",
+    "name": "기초설계및시공",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0739",
+    "name": "농산물저장시설론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0735",
+    "name": "농업시설계획",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0762",
+    "name": "농업시설구조설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0765",
+    "name": "농업시설환경계측",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0732",
+    "name": "농업시설환경설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0712",
+    "name": "농지보전공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0747",
+    "name": "농촌수질공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0745",
+    "name": "배수공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0721",
+    "name": "보강토구조물공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0756",
+    "name": "산업폐기물처리공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0730",
+    "name": "생물생산에너지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0766",
+    "name": "생물생산환경공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0767",
+    "name": "생물환경시스템분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0759",
+    "name": "수로보호공법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0715",
+    "name": "수리시설공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0742",
+    "name": "수리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0748",
+    "name": "수자원시스템분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0760",
+    "name": "식물생장모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0737",
+    "name": "원예시설론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0717",
+    "name": "유역공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0768",
+    "name": "응용풍공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0711",
+    "name": "저수지공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0720",
+    "name": "지반공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0722",
+    "name": "지반조사법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0726",
+    "name": "지반환경공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0749",
+    "name": "지하수수리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0738",
+    "name": "축산시설론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0725",
+    "name": "토공구조물설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0750",
+    "name": "토목섬유개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0758",
+    "name": "토목섬유설계시공법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0710",
+    "name": "하천방재공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACEN0000",
+    "name": "학위논문연구 및 연구윤리 (농업토목공학)",
+    "credit": "3-3-0"
+  }
+]

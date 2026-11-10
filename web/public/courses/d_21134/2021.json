@@ -1,0 +1,1070 @@
+[
+  {
+    "grade": "",
+    "code": "DENB0888",
+    "name": "3차원 영상유도 임플란트 치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0893",
+    "name": "3D 프린팅과 임상치의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0705",
+    "name": "감각계의 신경생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0811",
+    "name": "강화형글라스 아이오노머",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0764",
+    "name": "경조직 연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0763",
+    "name": "경조직 재생학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0795",
+    "name": "경조직 질환론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0703",
+    "name": "골생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0857",
+    "name": "골이식과 임플란트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0817",
+    "name": "골재생치료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0710",
+    "name": "교정재료 및 생역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0742",
+    "name": "교정치료기법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0827",
+    "name": "구강건강통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0801",
+    "name": "구강병연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0709",
+    "name": "구강병진단학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0705",
+    "name": "구강세균학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0702",
+    "name": "구강악안면 병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0911",
+    "name": "구강악안면악성종양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0820",
+    "name": "구강안면동통학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0815",
+    "name": "구강역학의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0884",
+    "name": "구강영역 감염 및 종창의 약물치료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0845",
+    "name": "국소의치와 치과용 임플란트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0890",
+    "name": "국소의치와 치과용 임플란트 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0903",
+    "name": "근거중심보철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0894",
+    "name": "근거중심의 보철학을 위한  체계적 연구방법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0727",
+    "name": "근관치료학 문헌",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0824",
+    "name": "근관치료학연구론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0831",
+    "name": "기질 접착",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0746",
+    "name": "노인치과보존학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0719",
+    "name": "노인치과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0729",
+    "name": "노인치과학 개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0825",
+    "name": "뇌의 연접양식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0708",
+    "name": "두개악안면기형 및 수술교정학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0756",
+    "name": "두개안면 통증학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0793",
+    "name": "두개안면부 발생학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0910",
+    "name": "두개안면재생의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0709",
+    "name": "두경부해부 및 두부규격방사선사진학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0817",
+    "name": "레이저치의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0875",
+    "name": "만성질환자의 치과약물치료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0836",
+    "name": "면역조직화학기법특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0939",
+    "name": "미래의 보철학 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0706",
+    "name": "바이러스학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0905",
+    "name": "바이러스학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0821",
+    "name": "바이오치아 재생학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0858",
+    "name": "발육이상의 외과적처치",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0701",
+    "name": "병리학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0812",
+    "name": "복합레진의 개시 체계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0767",
+    "name": "분자 신경생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0715",
+    "name": "분자생화학실험기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0777",
+    "name": "분자신경생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0762",
+    "name": "분자의학유전체학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0744",
+    "name": "생물통계 및 연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0818",
+    "name": "생체임플란트계면연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0813",
+    "name": "생체재료학 총론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0903",
+    "name": "세균내독소와숙주관계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0906",
+    "name": "세균염색체",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0702",
+    "name": "세포생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0835",
+    "name": "세포신경생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0839",
+    "name": "소아 청소년 심미수복",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0863",
+    "name": "소아예방교정학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0737",
+    "name": "수면과 구강내과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0880",
+    "name": "신경계의 발생",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0779",
+    "name": "신경과학 최신연구동향",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0808",
+    "name": "신경생물학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0826",
+    "name": "신경신호전달연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0736",
+    "name": "신경의학과 구강내과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0807",
+    "name": "신경해부학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0877",
+    "name": "신호전달체계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0961",
+    "name": "실험치과약리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0882",
+    "name": "심미보철수복학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0833",
+    "name": "심미세라믹 접착",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0728",
+    "name": "심미수복재료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0729",
+    "name": "심미접착수복",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0748",
+    "name": "심미치과학의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0812",
+    "name": "악관절기능장애론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0740",
+    "name": "악안면 발생 및 유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0854",
+    "name": "악안면보철과 임플란트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0711",
+    "name": "악안면외상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0743",
+    "name": "악안면정형치료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0886",
+    "name": "악안면조직이식학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0838",
+    "name": "악안면피판술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0842",
+    "name": "어린이의 교합 유도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0819",
+    "name": "어린이의 진정요법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0862",
+    "name": "어린이의 행동조절",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0848",
+    "name": "연구설계 및 방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0902",
+    "name": "연쇄상구균의유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0798",
+    "name": "예방치의학 및 치과재료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0896",
+    "name": "완전 무치학 환자를 위한 치과매식학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0847",
+    "name": "우식예방방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0706",
+    "name": "운동 및 통합 신경생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0714",
+    "name": "유전자발현조절",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0851",
+    "name": "이온화방사선방어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0791",
+    "name": "인체 병태생물 및 약물치료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0797",
+    "name": "인체 분자생물 및 미생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0733",
+    "name": "인체 해부 및 생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0739",
+    "name": "임상 근관치료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0781",
+    "name": "임상예방치과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0768",
+    "name": "임상응용 구강생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0829",
+    "name": "임상치과재료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0938",
+    "name": "임플란트 교합학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0901",
+    "name": "임플란트 교합학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0804",
+    "name": "임플란트 병인론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0887",
+    "name": "임플란트 이중관 의치학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0898",
+    "name": "임플란트 이중관 의치학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0752",
+    "name": "임플란트주위조직학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0754",
+    "name": "임플란트치료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0883",
+    "name": "자연치와 임플란트를 이용한 오버덴쳐",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0891",
+    "name": "자연치와 임플란트를 이용한 오버덴쳐 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0864",
+    "name": "장애어린이의 치과치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0922",
+    "name": "저작의신경조절",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0735",
+    "name": "전신질환과 구강내과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0814",
+    "name": "조직재생용 생체재료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0794",
+    "name": "줄기세포 응용학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0803",
+    "name": "줄기세포분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0816",
+    "name": "지역사회구강보건학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0937",
+    "name": "첨단 치과의료기기학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0892",
+    "name": "첨단임플란트치료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0840",
+    "name": "초기영구치 치수치료의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0865",
+    "name": "초기영구치의 외상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0897",
+    "name": "최신 임플란트 보철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0810",
+    "name": "최신구강내과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0876",
+    "name": "최신분자생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0909",
+    "name": "최신악안면기형치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0823",
+    "name": "최신암분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0758",
+    "name": "최신예방치과세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0907",
+    "name": "최신임상연구동향 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0908",
+    "name": "최신임상연구동향 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0711",
+    "name": "최신치과교정진단학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0852",
+    "name": "최신치의학영상 연구동향1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0859",
+    "name": "최신치의학영상 연구동향2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0861",
+    "name": "측두하악관절영상법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0710",
+    "name": "측두하악장애학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0902",
+    "name": "치과 보철학 분야의 중개 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0720",
+    "name": "치과영역에서의나노기술의적용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0885",
+    "name": "치과영역의 국소 및 전신마취제 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0783",
+    "name": "치과영역의 신경독성학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0761",
+    "name": "치과영역의 신경약리학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0768",
+    "name": "치과영역의마약성진통약물특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0766",
+    "name": "치과영역의비스테로이드성-항염증약물특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0963",
+    "name": "치과영역의약물상호작용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0810",
+    "name": "치과용 생체재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0834",
+    "name": "치과용임플란트 표면처리방법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0757",
+    "name": "치과의원경영학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0830",
+    "name": "치과재료시험평가론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0832",
+    "name": "치과재료의 생물학적 안정성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0738",
+    "name": "치수동통학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0726",
+    "name": "치수생물학의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0837",
+    "name": "치아발생생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0822",
+    "name": "치아와골세포분화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0747",
+    "name": "치아우식과 수복",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0759",
+    "name": "치아우식연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0841",
+    "name": "치아의 발생 및 발육장애학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0741",
+    "name": "치열 및 악안면 성장발육학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0895",
+    "name": "치의학 임상연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0870",
+    "name": "치의학분야에서신개념기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0879",
+    "name": "치의학분자유전발생학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0878",
+    "name": "치의학세포분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0734",
+    "name": "치의학연구방법개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0870",
+    "name": "치의학영상 물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0871",
+    "name": "치의학영상 생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0850",
+    "name": "치의학영상진단학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0866",
+    "name": "치의학영상진단학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0849",
+    "name": "치의학영상판독법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0805",
+    "name": "치주미생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0806",
+    "name": "치주염병인론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0753",
+    "name": "치주조직공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0820",
+    "name": "치주질환의 역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0749",
+    "name": "치주치료학문헌고찰",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0769",
+    "name": "타액선 생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0860",
+    "name": "타액선영상법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0766",
+    "name": "통증연구 방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0000",
+    "name": "학위논문연구 및 연구윤리 (치의학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0707",
+    "name": "혈액과 순환",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENT0708",
+    "name": "혐기성세균감염",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0745",
+    "name": "협진교정치료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0809",
+    "name": "화학감각계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0828",
+    "name": "화학요법제의 구강합병증 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DENB0704",
+    "name": "흥분성조직의 생리학",
+    "credit": "3-3-0"
+  }
+]

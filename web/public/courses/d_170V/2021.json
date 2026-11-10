@@ -1,0 +1,218 @@
+[
+  {
+    "grade": "2",
+    "code": "BIOF0206",
+    "name": "기기분석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0392",
+    "name": "기초생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOF0204",
+    "name": "기초영양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0391",
+    "name": "기초유기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0206",
+    "name": "기초프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "AGBL0314",
+    "name": "미생물학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0452",
+    "name": "빅데이터융합개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0422",
+    "name": "생명물리화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0404",
+    "name": "생명유기화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOF0203",
+    "name": "생물실험통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "AGRO0361",
+    "name": "식물유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COME0301",
+    "name": "이산수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0451",
+    "name": "인공지능융합기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COME0331",
+    "name": "자료구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0217",
+    "name": "자바프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "ITEC0201",
+    "name": "컴퓨터학개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ACHE0464",
+    "name": "고급유전공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOBI0348",
+    "name": "기능성 식품과 면역",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "FOBI0201",
+    "name": "기초생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0328",
+    "name": "모바일앱프로그래밍1",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "3",
+    "code": "BIIN0212",
+    "name": "생물정보학의 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIOC0622",
+    "name": "세포생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0312",
+    "name": "운영체제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIIN0211",
+    "name": "유전공학의 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ACHE0431",
+    "name": "응용생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ACHE0476",
+    "name": "최신미생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "DPBS0408",
+    "name": "IT와 식물산업",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ITEC0416",
+    "name": "고급웹프로그래밍",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "BIIN0214",
+    "name": "농식품유해물질정보학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ACHE0425",
+    "name": "바이오에너지과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ACHE0403",
+    "name": "발효생물화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "DPBS0409",
+    "name": "생명기술산업학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIIN0213",
+    "name": "생물정보학실습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0224",
+    "name": "소프트웨어설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "COMP0324",
+    "name": "인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEM0635",
+    "name": "천연물화학",
+    "credit": "3-3-0"
+  }
+]

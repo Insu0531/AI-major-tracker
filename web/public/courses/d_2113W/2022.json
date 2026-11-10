@@ -1,0 +1,602 @@
+[
+  {
+    "grade": "",
+    "code": "PHAR0850",
+    "name": "감염성종양학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0851",
+    "name": "감염치료약학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0870",
+    "name": "건강기능식품소재학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0842",
+    "name": "근거중심약학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0718",
+    "name": "기능성유전체학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0814",
+    "name": "내분비계치료학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0813",
+    "name": "대사체학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0848",
+    "name": "독성단백체분석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0807",
+    "name": "독성학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0824",
+    "name": "미생물면역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0844",
+    "name": "바이오고분자화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0841",
+    "name": "바이오의약품 개발특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0867",
+    "name": "방사성의약품학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0852",
+    "name": "병원성미생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0801",
+    "name": "병태생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0861",
+    "name": "분자모델링 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0862",
+    "name": "분자모델링 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0810",
+    "name": "분자병태생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0871",
+    "name": "빅테이터약학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0774",
+    "name": "산업독성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOC0912",
+    "name": "생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0793",
+    "name": "생물리약학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0863",
+    "name": "생물리약학특론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0864",
+    "name": "생물리약학특론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0830",
+    "name": "생물약제학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0869",
+    "name": "생물통계학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0755",
+    "name": "생물활성물질전달시스템특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0747",
+    "name": "생약학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0838",
+    "name": "생유기약화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0732",
+    "name": "생체방어기전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0866",
+    "name": "세포 생리학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0792",
+    "name": "세포병태생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0835",
+    "name": "세포치료학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0815",
+    "name": "순환기계치료학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0817",
+    "name": "신경계치료학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0834",
+    "name": "신경약물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0868",
+    "name": "신약개발과 임상시험",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0839",
+    "name": "암유전체학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0818",
+    "name": "약무정책특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0823",
+    "name": "약물대사동태학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0704",
+    "name": "약물대사체분석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0795",
+    "name": "약물동태학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0731",
+    "name": "약물상호작용학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0719",
+    "name": "약물송달학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0833",
+    "name": "약물수용체론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0860",
+    "name": "약물신호전달학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0707",
+    "name": "약물역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0803",
+    "name": "약물치료학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0854",
+    "name": "약물치료학특론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0855",
+    "name": "약물타겟 발굴 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0843",
+    "name": "약물표적학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0831",
+    "name": "약물학특론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0832",
+    "name": "약물학특론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0794",
+    "name": "약품기기분석학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0811",
+    "name": "약품기기분석학특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0791",
+    "name": "약품생화학특론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0826",
+    "name": "약품생화학특론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0822",
+    "name": "약품식물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0857",
+    "name": "약품제조화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0820",
+    "name": "약학연구입문 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0821",
+    "name": "약학연구입문 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0781",
+    "name": "약학특강1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0782",
+    "name": "약학특강2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0783",
+    "name": "약학특강3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0784",
+    "name": "약학특강4",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0845",
+    "name": "예방약학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0712",
+    "name": "유기약품합성화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0828",
+    "name": "유기의약품구조해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0745",
+    "name": "의약면역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0761",
+    "name": "의약분자 모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0808",
+    "name": "의약분자생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0849",
+    "name": "의약신호전달생화학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0819",
+    "name": "의약품경제성평가특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0762",
+    "name": "의약품구조활성상관관계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0806",
+    "name": "의약품정보학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0856",
+    "name": "의약품합성학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0752",
+    "name": "의약화학특론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0711",
+    "name": "의약화학특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0802",
+    "name": "임상나노약제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0804",
+    "name": "임상약동학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0847",
+    "name": "임상약물유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0805",
+    "name": "조제학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0859",
+    "name": "종양생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0816",
+    "name": "종양치료학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0744",
+    "name": "종양학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0865",
+    "name": "지질대사체학특록",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0722",
+    "name": "천연물구조분석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0721",
+    "name": "천연물분리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0717",
+    "name": "천연물성분화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0809",
+    "name": "천연물약품학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0796",
+    "name": "천연물자원학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPRE0712",
+    "name": "천연물화학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0812",
+    "name": "천연약물생합성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0829",
+    "name": "천연의약품합성학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0846",
+    "name": "특수환자집단 약물요법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0000",
+    "name": "학위논문연구 및 연구윤리(약학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0853",
+    "name": "항생물질약품학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0827",
+    "name": "혈액학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0858",
+    "name": "화학생물약학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0840",
+    "name": "후성유전학",
+    "credit": "3-3-0"
+  }
+]

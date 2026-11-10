@@ -1,0 +1,344 @@
+[
+  {
+    "grade": "",
+    "code": "ARTS0829",
+    "name": "공간매체구조론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0819",
+    "name": "공간색채연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0791",
+    "name": "공간표현연구1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0792",
+    "name": "공간표현연구2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0793",
+    "name": "공간표현연구3",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0780",
+    "name": "근현대미학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0826",
+    "name": "디지털문화론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0794",
+    "name": "매체표현연구1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0795",
+    "name": "매체표현연구2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0796",
+    "name": "매체표현연구3",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0828",
+    "name": "문화콘텐츠세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0870",
+    "name": "미술현장세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0783",
+    "name": "서양화작품연구세미나1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0784",
+    "name": "서양화작품연구세미나2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0854",
+    "name": "서양화작품연구세미나3",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0856",
+    "name": "서양화작품해석론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0857",
+    "name": "서양화작품해석론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0876",
+    "name": "서양화특강1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0877",
+    "name": "서양화특강2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0878",
+    "name": "서양화특강3",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0879",
+    "name": "서양화특강4",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0720",
+    "name": "예술문화특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0901",
+    "name": "전공실기Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0902",
+    "name": "전공실기Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0785",
+    "name": "조소작품연구 세미나1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0786",
+    "name": "조소작품연구 세미나2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0855",
+    "name": "조소작품연구세미나3",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0858",
+    "name": "조소작품해석론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0859",
+    "name": "조소작품해석론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0881",
+    "name": "조소특강1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0882",
+    "name": "조소특강2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0883",
+    "name": "조소특강3",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0884",
+    "name": "조소특강4",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0722",
+    "name": "조형론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0787",
+    "name": "창작연습1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0788",
+    "name": "창작연습2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0789",
+    "name": "창작연습3",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0000",
+    "name": "학위논문연구 및 연구윤리(미술학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0803",
+    "name": "한국현대미술비평론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0781",
+    "name": "한국화작품연구세미나1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0782",
+    "name": "한국화작품연구세미나2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0865",
+    "name": "한국화작품연구세미나3",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0866",
+    "name": "한국화작품해석론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0867",
+    "name": "한국화작품해석론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0861",
+    "name": "한국화특강1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0862",
+    "name": "한국화특강2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0863",
+    "name": "한국화특강3",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0864",
+    "name": "한국화특강4",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0802",
+    "name": "현대미술비평론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0776",
+    "name": "현대미술사론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0814",
+    "name": "현대미술현장연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0815",
+    "name": "현대서양화연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0816",
+    "name": "현대서양화연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0885",
+    "name": "현대조소연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0886",
+    "name": "현대조소연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0868",
+    "name": "현대한국화연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0869",
+    "name": "현대한국화연구2",
+    "credit": "3-3-0"
+  }
+]

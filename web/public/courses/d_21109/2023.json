@@ -1,0 +1,626 @@
+[
+  {
+    "grade": "",
+    "code": "HIST0926",
+    "name": "고려시대사료연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0703",
+    "name": "고려시대사연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0704",
+    "name": "고려시대사연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0903",
+    "name": "고려시대사연습1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0904",
+    "name": "고려시대사연습2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0727",
+    "name": "고려정치제도사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0841",
+    "name": "글로컬히스토리연습1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0842",
+    "name": "글로컬히스토리연습2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0843",
+    "name": "글로컬히스토리연습3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0844",
+    "name": "글로컬히스토리연습4",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0845",
+    "name": "글로컬히스토리연습5",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0846",
+    "name": "글로컬히스토리연습6",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0847",
+    "name": "대외관계사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0849",
+    "name": "대외관계사연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0940",
+    "name": "동서교섭사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0943",
+    "name": "동아국제관계사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0737",
+    "name": "동양경제사연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0939",
+    "name": "동양경제사연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0739",
+    "name": "동양사상사연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0942",
+    "name": "동양사상사연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0941",
+    "name": "동양사특수강의",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0731",
+    "name": "동양사학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0736",
+    "name": "동양사회사연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0938",
+    "name": "동양사회사연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0738",
+    "name": "동양정치제도사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0936",
+    "name": "명·청사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0945",
+    "name": "북아시아사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0744",
+    "name": "북한현대사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0946",
+    "name": "북한현대사연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0931",
+    "name": "상·주사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0827",
+    "name": "서양각국사연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0816",
+    "name": "서양고대사연습1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0817",
+    "name": "서양고대사연습2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0807",
+    "name": "서양근대사연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0808",
+    "name": "서양근대사연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0833",
+    "name": "서양근대사연구동향1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0834",
+    "name": "서양근대사연구동향2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0822",
+    "name": "서양근대사연습1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0823",
+    "name": "서양근대사연습2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0805",
+    "name": "서양근세사연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0806",
+    "name": "서양근세사연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0831",
+    "name": "서양근세사연구동향1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0832",
+    "name": "서양근세사연구동향2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0820",
+    "name": "서양근세사연습1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0821",
+    "name": "서양근세사연습2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0811",
+    "name": "서양사특수주제연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0812",
+    "name": "서양사특수주제연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0813",
+    "name": "서양사특수주제연구3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0814",
+    "name": "서양사특수주제연구4",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0815",
+    "name": "서양사특수주제연구5",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0803",
+    "name": "서양중세사연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0804",
+    "name": "서양중세사연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0818",
+    "name": "서양중세사연습1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0819",
+    "name": "서양중세사연습2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0809",
+    "name": "서양현대사연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0810",
+    "name": "서양현대사연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0835",
+    "name": "서양현대사연구동향1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0836",
+    "name": "서양현대사연구동향2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0824",
+    "name": "서양현대사연습1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0825",
+    "name": "서양현대사연습2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0826",
+    "name": "서양현대사연습3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0848",
+    "name": "세계체제연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0935",
+    "name": "송·원사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0934",
+    "name": "수·당사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0927",
+    "name": "영남고문서연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0933",
+    "name": "위진남북조사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0944",
+    "name": "일본사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0705",
+    "name": "조선시대사연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0706",
+    "name": "조선시대사연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0905",
+    "name": "조선시대사연습1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0906",
+    "name": "조선시대사연습2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0770",
+    "name": "중국고대사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0775",
+    "name": "중국고대사연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0937",
+    "name": "중국근·현대사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0773",
+    "name": "중국근대사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0778",
+    "name": "중국근대사연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0772",
+    "name": "중국근세사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0777",
+    "name": "중국근세사연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0771",
+    "name": "중국중세사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0776",
+    "name": "중국중세사연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0779",
+    "name": "중국현대사연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0932",
+    "name": "진·한사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0850",
+    "name": "퍼블릭히스토리1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0851",
+    "name": "퍼블릭히스토리2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0000",
+    "name": "학위논문연구 및 연구윤리 (사학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0701",
+    "name": "한국고대사연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0702",
+    "name": "한국고대사연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0901",
+    "name": "한국고대사연습1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0902",
+    "name": "한국고대사연습2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0928",
+    "name": "한국근대민족운동사연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0707",
+    "name": "한국근대사연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0708",
+    "name": "한국근대사연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0907",
+    "name": "한국근대사연습1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0908",
+    "name": "한국근대사연습2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0729",
+    "name": "한국근대사회경제사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0925",
+    "name": "한국금석문연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0723",
+    "name": "한국사상사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0921",
+    "name": "한국사상사연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0722",
+    "name": "한국사학사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0916",
+    "name": "한국사학사연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0709",
+    "name": "한국현대사연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0710",
+    "name": "한국현대사연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0909",
+    "name": "한국현대사연습1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0930",
+    "name": "한국현대사연습2",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,512 @@
+[
+  {
+    "grade": "",
+    "code": "SOED0886",
+    "name": "거시경제교육세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0887",
+    "name": "경제교육론세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0850",
+    "name": "경제지리교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0897",
+    "name": "공법교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0895",
+    "name": "공법특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0864",
+    "name": "관광지리교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0888",
+    "name": "교육경제학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0871",
+    "name": "국토지리와환경교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0848",
+    "name": "기후교육론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0849",
+    "name": "도시지리교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0837",
+    "name": "동서문화교류사특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0830",
+    "name": "동양고중세사교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0831",
+    "name": "동양근현대사교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0826",
+    "name": "동양사교육의실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0835",
+    "name": "동양사사료론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0838",
+    "name": "문화사특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0857",
+    "name": "문화지리교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0885",
+    "name": "미시경제교육세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0892",
+    "name": "민주시민교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0899",
+    "name": "법철학교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0817",
+    "name": "비교역사교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0898",
+    "name": "사법교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0896",
+    "name": "사법특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0840",
+    "name": "사학사특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0839",
+    "name": "사회경제사특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0876",
+    "name": "사회과교육교재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0879",
+    "name": "사회과교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0878",
+    "name": "사회과교육연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0875",
+    "name": "사회과교육지도론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0877",
+    "name": "사회과교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0881",
+    "name": "사회변동과교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0883",
+    "name": "사회사상세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0884",
+    "name": "사회와교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0853",
+    "name": "사회지리교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0832",
+    "name": "서양고중세사교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0833",
+    "name": "서양근현대사교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0827",
+    "name": "서양사교육의실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0836",
+    "name": "서양사사료론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0824",
+    "name": "세계사교육세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0820",
+    "name": "세계사교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0822",
+    "name": "세계사교재론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0812",
+    "name": "역사교수방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0816",
+    "name": "역사교육과멀티미디어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0811",
+    "name": "역사교육과정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0818",
+    "name": "역사교육론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0815",
+    "name": "역사교육사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0814",
+    "name": "역사교육연구법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0813",
+    "name": "역사교육평가론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0856",
+    "name": "원격탐사와지리학습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0861",
+    "name": "인문지리교재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0859",
+    "name": "자연지리교재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0891",
+    "name": "정치교육교재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0890",
+    "name": "정치교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0894",
+    "name": "정치학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0846",
+    "name": "지리교육과정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0865",
+    "name": "지리교육과환경교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0869",
+    "name": "지리교육국제비교",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0872",
+    "name": "지리교육목표론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0873",
+    "name": "지리교육평가론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0868",
+    "name": "지리답사와지리교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0845",
+    "name": "지리수업설계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0870",
+    "name": "지리정보체계와지리교재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0852",
+    "name": "지리조사교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0866",
+    "name": "지리학습과교육매체론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0841",
+    "name": "지역사특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0863",
+    "name": "지역지리교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0862",
+    "name": "지역지리교재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0847",
+    "name": "지형교육론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0858",
+    "name": "컴퓨터지리학습론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0000",
+    "name": "학위논문연구 및 연구윤리(사회교육학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0889",
+    "name": "한국경제와세계경제세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0828",
+    "name": "한국고중세사교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0829",
+    "name": "한국근현대사교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0823",
+    "name": "한국사교육세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0825",
+    "name": "한국사교육의실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0819",
+    "name": "한국사교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0821",
+    "name": "한국사교재론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0834",
+    "name": "한국사사료론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0880",
+    "name": "한국사회특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0893",
+    "name": "한국정치교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0867",
+    "name": "해외지역연구와지리교육",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0882",
+    "name": "현대사회이론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0851",
+    "name": "환경지리교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0860",
+    "name": "환경지리교재연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOED0854",
+    "name": "GIS교육론",
+    "credit": "3-3-0"
+  }
+]

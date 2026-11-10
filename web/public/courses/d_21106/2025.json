@@ -1,0 +1,602 @@
+[
+  {
+    "grade": "",
+    "code": "JPNL0720",
+    "name": "대조 비교언어학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0849",
+    "name": "동북아전쟁사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0860",
+    "name": "동아시아 매체와 소통",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0859",
+    "name": "동아시아근대잡지연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0855",
+    "name": "동아시아여성문화론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0732",
+    "name": "모노가타리문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0955",
+    "name": "비교언어학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0722",
+    "name": "시대별일본어연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0912",
+    "name": "응용언어학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0954",
+    "name": "일반언어학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "KORL0902",
+    "name": "일반언어학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0908",
+    "name": "일반언어학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FUSN0732",
+    "name": "일반통번역학 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0735",
+    "name": "일본고전극문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0755",
+    "name": "일본고전문학연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0734",
+    "name": "일본고전수필문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0731",
+    "name": "일본고전시가연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0739",
+    "name": "일본국학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0966",
+    "name": "일본극문학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0736",
+    "name": "일본근대극문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0756",
+    "name": "일본근대문학연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0833",
+    "name": "일본근대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0749",
+    "name": "일본근대시론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0748",
+    "name": "일본근대작가론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0961",
+    "name": "일본근세문학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0742",
+    "name": "일본근세문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0963",
+    "name": "일본다이쇼문학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0744",
+    "name": "일본대정문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0856",
+    "name": "일본대중문화연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0852",
+    "name": "일본도시론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0851",
+    "name": "일본매체연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0962",
+    "name": "일본메이지문학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0743",
+    "name": "일본명치문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0933",
+    "name": "일본문예비평연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0842",
+    "name": "일본문학의 서사학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0858",
+    "name": "일본문화와지역학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0844",
+    "name": "일본사세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0759",
+    "name": "일본사회특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0958",
+    "name": "일본상고문학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0934",
+    "name": "일본상고문학연습1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0737",
+    "name": "일본설화문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0750",
+    "name": "일본소설연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0745",
+    "name": "일본소화문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0738",
+    "name": "일본신화연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0903",
+    "name": "일본어교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0956",
+    "name": "일본어교육학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0920",
+    "name": "일본어교육학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0923",
+    "name": "일본어교육학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0902",
+    "name": "일본어구조론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0904",
+    "name": "일본어구조론연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0713",
+    "name": "일본어담화론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0703",
+    "name": "일본어문법론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0717",
+    "name": "일본어문법사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0710",
+    "name": "일본어문체론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0719",
+    "name": "일본어방언론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0721",
+    "name": "일본어사료연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0718",
+    "name": "일본어사회언어학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0715",
+    "name": "일본어어형성론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0707",
+    "name": "일본어어휘론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0916",
+    "name": "일본어연구특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0714",
+    "name": "일본어연어론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0704",
+    "name": "일본어음성학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0705",
+    "name": "일본어음운론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0706",
+    "name": "일본어의미론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0957",
+    "name": "일본어자료강독세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0709",
+    "name": "일본어통사론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0716",
+    "name": "일본어품사론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0711",
+    "name": "일본어학사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0917",
+    "name": "일본어학연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0918",
+    "name": "일본어학연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0919",
+    "name": "일본어학연구3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0701",
+    "name": "일본어학연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0702",
+    "name": "일본어학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0712",
+    "name": "일본어한자음연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0708",
+    "name": "일본어형태론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0845",
+    "name": "일본역사1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0846",
+    "name": "일본역사2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0747",
+    "name": "일본일기문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0754",
+    "name": "일본전통문화연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0854",
+    "name": "일본점령기연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0847",
+    "name": "일본정치사상사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0850",
+    "name": "일본정치와 인물",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0853",
+    "name": "일본젠더사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0959",
+    "name": "일본중고문학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0740",
+    "name": "일본중고문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0960",
+    "name": "일본중세문학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0741",
+    "name": "일본중세문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0843",
+    "name": "일본학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0758",
+    "name": "일본학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0964",
+    "name": "일본현대문학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0746",
+    "name": "일본현대문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0953",
+    "name": "일본현대시론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0952",
+    "name": "일본현대작가론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0000",
+    "name": "학위논문연구 및 연구윤리(일어일문학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0753",
+    "name": "한·일비교문학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0848",
+    "name": "한일관계사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0857",
+    "name": "한일대중문화세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0931",
+    "name": "한일문예비평연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0932",
+    "name": "한일문예사조사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "JPNL0965",
+    "name": "한일비교문학세미나",
+    "credit": "3-3-0"
+  }
+]

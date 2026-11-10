@@ -1,0 +1,44 @@
+[
+  {
+    "grade": "",
+    "code": "ELRI0746",
+    "name": "다중물리계해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MBCO0702",
+    "name": "모빌리티소재특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MBCO0703",
+    "name": "모빌리티융합프로젝트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MBCO0701",
+    "name": "모빌리티인공지능특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIME0796",
+    "name": "반도체 전기화학 기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0718",
+    "name": "열전달특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0770",
+    "name": "자동차비전",
+    "credit": "3-3-0"
+  }
+]

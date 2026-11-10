@@ -1,0 +1,314 @@
+[
+  {
+    "grade": "",
+    "code": "DPRE0711",
+    "name": "기기분석학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGRO0829",
+    "name": "내병성육종론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPRE0713",
+    "name": "농약화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPRE0720",
+    "name": "농업의비전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0794",
+    "name": "목재병리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGED0725",
+    "name": "비료학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0785",
+    "name": "산림기후변화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0773",
+    "name": "산림문화관광학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0793",
+    "name": "산림미생물생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0791",
+    "name": "산림병리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0777",
+    "name": "산림복원공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0781",
+    "name": "산림생태학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0783",
+    "name": "산림식물사회학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0782",
+    "name": "산림식물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0780",
+    "name": "산림원격탐사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0790",
+    "name": "산림유전자원학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0779",
+    "name": "산림작업시스템특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0771",
+    "name": "산림정책 및 일반법규학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0776",
+    "name": "산림측정공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0775",
+    "name": "산림치유학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MBIO0777",
+    "name": "생물유기화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0795",
+    "name": "생물전자현미경",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0792",
+    "name": "수목병관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0788",
+    "name": "수목생장학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0796",
+    "name": "수목생태생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0789",
+    "name": "수목진단학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0784",
+    "name": "숲생태해설학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPRE0728",
+    "name": "식물대사체학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPRE0729",
+    "name": "식물병방제학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPLS0717",
+    "name": "식물생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPRE0718",
+    "name": "식물생명공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPRE0719",
+    "name": "식물조직배양학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPRE0722",
+    "name": "실험설계분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0774",
+    "name": "야생동물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPRE0727",
+    "name": "유기농업특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0778",
+    "name": "임도공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0787",
+    "name": "임업종묘학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0772",
+    "name": "자연휴양림특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPRE0724",
+    "name": "자원식물학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPRE0715",
+    "name": "작물 보호학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPRE0714",
+    "name": "작물영양학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPRE0726",
+    "name": "작물환경학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPRE0723",
+    "name": "종자학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPRE0712",
+    "name": "천연물화학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPRE0725",
+    "name": "토양생화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGED0724",
+    "name": "토양학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FREN0000",
+    "name": "학위논문연구 및 연구윤리(산림환경자원학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPRE0000",
+    "name": "학위논문연구 및 연구윤리(식물자원환경)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPRE0721",
+    "name": "화색의 분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPRE0717",
+    "name": "환경농업론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MBIO0723",
+    "name": "환경미생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DPRE0716",
+    "name": "LMO의 안전성 특론",
+    "credit": "3-3-0"
+  }
+]

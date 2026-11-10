@@ -1,0 +1,458 @@
+[
+  {
+    "grade": "",
+    "code": "PHIL0912",
+    "name": "갈등 실천 Capstone 세미나",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0910",
+    "name": "갈등 연구 Core 세미나 1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0911",
+    "name": "갈등 연구 Core 세미나 2",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "",
+    "code": "FUSN0733",
+    "name": "갈등, 협력, 그리고 시장",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0906",
+    "name": "갈등과 도가철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0897",
+    "name": "갈등과 문화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0900",
+    "name": "갈등과 유학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0895",
+    "name": "갈등과 전략",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0834",
+    "name": "갈등과 화쟁",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0831",
+    "name": "갈등의 변증법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0767",
+    "name": "갈등의 정치철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0704",
+    "name": "경험론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0769",
+    "name": "공감과 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0714",
+    "name": "도가철학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0874",
+    "name": "도가철학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0705",
+    "name": "독일관념론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0857",
+    "name": "독일관념론연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0866",
+    "name": "문화철학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0814",
+    "name": "법철학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0830",
+    "name": "불교와 임상철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0718",
+    "name": "불교철학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0833",
+    "name": "사회갈등과 비판이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0700",
+    "name": "서양고대철학연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0800",
+    "name": "서양고대철학연습1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0801",
+    "name": "서양고대철학연습2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0702",
+    "name": "서양중세철학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0802",
+    "name": "서양중세철학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0904",
+    "name": "소통과 연대",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0899",
+    "name": "소통의 해석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0828",
+    "name": "실존철학과 임상철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0808",
+    "name": "실천철학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0864",
+    "name": "심리철학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0907",
+    "name": "언어와 소통",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0811",
+    "name": "언어철학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0813",
+    "name": "역사철학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0869",
+    "name": "예술과 문화철학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0848",
+    "name": "예술철학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0836",
+    "name": "유가철학과 갈등예방",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0889",
+    "name": "유가철학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0890",
+    "name": "유가철학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0896",
+    "name": "윤리와 가치갈등",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0738",
+    "name": "윤리학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0729",
+    "name": "인공지능과 존재 위기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0766",
+    "name": "인도고전연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0765",
+    "name": "인도철학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0881",
+    "name": "인도철학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0736",
+    "name": "인식론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0843",
+    "name": "인식론연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0768",
+    "name": "전쟁과 윤리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0832",
+    "name": "전쟁과 정신분석학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0744",
+    "name": "정치사회철학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0806",
+    "name": "정치사회철학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0737",
+    "name": "존재론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0841",
+    "name": "존재론연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0812",
+    "name": "종교철학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0835",
+    "name": "주역과 갈등조정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0816",
+    "name": "중국고대철학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0886",
+    "name": "중국성리학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0892",
+    "name": "중국성리학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0908",
+    "name": "철학적 대화, 그러나 소통",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0809",
+    "name": "철학적 인간학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0863",
+    "name": "프랑스철학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0000",
+    "name": "학위논문연구 및 연구윤리 (철학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0720",
+    "name": "한국불교철학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0719",
+    "name": "한국성리학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0818",
+    "name": "한국성리학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0887",
+    "name": "한국철학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0891",
+    "name": "한국철학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0703",
+    "name": "합리론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0710",
+    "name": "해석학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0728",
+    "name": "행위, 합리성, 도덕성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0803",
+    "name": "현대영미철학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0707",
+    "name": "현대유럽철학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0804",
+    "name": "현대유럽철학연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0709",
+    "name": "현상학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHIL0851",
+    "name": "현상학연습",
+    "credit": "3-3-0"
+  }
+]

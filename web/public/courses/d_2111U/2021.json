@@ -1,0 +1,242 @@
+[
+  {
+    "grade": "",
+    "code": "COME0759",
+    "name": "고급인터넷기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0718",
+    "name": "고급프로그래밍언어론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFO0811",
+    "name": "고등암호수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0701",
+    "name": "공학논문작성법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0752",
+    "name": "대기이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFO0823",
+    "name": "멀티미디어컨텐츠보호",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFO0826",
+    "name": "모바일 정보보안",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0778",
+    "name": "모바일컴퓨팅특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0817",
+    "name": "무선인터넷특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0714",
+    "name": "병렬알고리즘",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFO0822",
+    "name": "생체인증",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0733",
+    "name": "시스템프로그래밍특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0735",
+    "name": "알고리즘설계 및 분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0812",
+    "name": "알고리즘특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFO0711",
+    "name": "암호수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0740",
+    "name": "암호학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0952",
+    "name": "암호학이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0825",
+    "name": "암호학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFO0712",
+    "name": "양자계산및정보보호",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0762",
+    "name": "웹기술특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0753",
+    "name": "이동통신시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFO0812",
+    "name": "인터넷시스템보안",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFO0802",
+    "name": "전산망보안",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0743",
+    "name": "정보보안",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFO0813",
+    "name": "정보보호관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0856",
+    "name": "정보보호시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFO0803",
+    "name": "정보보호시스템설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0837",
+    "name": "정보보호특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFO0702",
+    "name": "정보보호프로토콜",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFO0701",
+    "name": "정보보호학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0853",
+    "name": "정보은닉",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0854",
+    "name": "정보통신시스템특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0734",
+    "name": "차세대통신망특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFO0703",
+    "name": "침입탐지이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFO0721",
+    "name": "컴퓨터네트워크",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0748",
+    "name": "컴퓨터망설계및분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0742",
+    "name": "컴퓨터망특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFO0821",
+    "name": "컴퓨터바이러스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFO0827",
+    "name": "프라이버시 보호",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFO0000",
+    "name": "학위논문연구 및 연구윤리(정보보호학)",
+    "credit": "3-3-0"
+  }
+]

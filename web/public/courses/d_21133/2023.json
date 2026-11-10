@@ -1,0 +1,278 @@
+[
+  {
+    "grade": "",
+    "code": "MDCS0723",
+    "name": "간호정보학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0719",
+    "name": "간호학용어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0737",
+    "name": "개인별 의학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0713",
+    "name": "객체관계형 데이터베이스 활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0711",
+    "name": "객체지향모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0736",
+    "name": "객체지향프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0831",
+    "name": "고급소프트웨어프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0726",
+    "name": "공공보건정보학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0721",
+    "name": "기초의학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0722",
+    "name": "기초의학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0832",
+    "name": "데이터베이스응용프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0861",
+    "name": "병원경영정보시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0720",
+    "name": "병원관리와 조직론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0723",
+    "name": "병원정보시스템실험",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0734",
+    "name": "보건의료정보와 사회윤리의 제문제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0727",
+    "name": "보건의료정보표준학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDA0822",
+    "name": "보건의료통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0736",
+    "name": "생물정보공학과 의학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOL0803",
+    "name": "생물정보학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0735",
+    "name": "생물정보학설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BMEE0704",
+    "name": "생체신호처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0712",
+    "name": "소프트웨어 설계방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0715",
+    "name": "알고리즘과자료구조",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0844",
+    "name": "원격진료학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0823",
+    "name": "유전자배열정보데이터베이스의응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0718",
+    "name": "의료영상론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0911",
+    "name": "의료정보학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0912",
+    "name": "의료정보학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0836",
+    "name": "의료환경에서의인간-기계접속연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0738",
+    "name": "의무기록관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0715",
+    "name": "의학온토로지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0721",
+    "name": "의학용어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0716",
+    "name": "의학인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0714",
+    "name": "인터넷프로그래밍특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0724",
+    "name": "임상정보시스템특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0725",
+    "name": "진단검사정보학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0733",
+    "name": "진료응용프로그램공유론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0752",
+    "name": "진료의사결정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0731",
+    "name": "진료의사결정지원시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0717",
+    "name": "컴퓨터지원 의학교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDIF0716",
+    "name": "컴퓨터통신및네트웍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0732",
+    "name": "통합보건의료정보공유시스템특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0730",
+    "name": "평생건강기록시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0729",
+    "name": "표준보건의료패턴설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0728",
+    "name": "표준의료 모델링 및 모의실험",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MDCS0000",
+    "name": "학위논문연구 및 연구윤리(의료정보학)",
+    "credit": "3-3-0"
+  }
+]

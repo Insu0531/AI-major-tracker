@@ -1,0 +1,44 @@
+[
+  {
+    "grade": "",
+    "code": "MECH0918",
+    "name": "로봇공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "RBCO0703",
+    "name": "로봇융합산학프로젝트1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "RBCO0702",
+    "name": "로봇제어와응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0710",
+    "name": "이동로봇 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DEEE0731",
+    "name": "지능제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "RBCO0701",
+    "name": "최적상태추정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MECH0993",
+    "name": "햅틱 및 협동로봇제어",
+    "credit": "3-3-0"
+  }
+]

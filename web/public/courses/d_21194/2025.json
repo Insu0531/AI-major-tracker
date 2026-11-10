@@ -1,0 +1,182 @@
+[
+  {
+    "grade": "",
+    "code": "INFE0702",
+    "name": "감염미생물검출특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFE0716",
+    "name": "감염병치료제 개발과 임상시험",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFE0715",
+    "name": "감염병헬스케어관리PBL",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFE0714",
+    "name": "감염병헬스케어예방PBL",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFE0713",
+    "name": "감염병헬스케어캡스톤디자인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFE0712",
+    "name": "감염병헬스케어콜로퀴움",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0826",
+    "name": "감염보건학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFE0710",
+    "name": "감염질환예방발효식품학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0851",
+    "name": "감염치료약학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0807",
+    "name": "독성학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFE0711",
+    "name": "맞춤형헬스케어식품학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFE0704",
+    "name": "면역병태생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0761",
+    "name": "미생물효소학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0841",
+    "name": "바이오의약품 개발특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFE0706",
+    "name": "바이오헬스지식재산권특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFE0703",
+    "name": "백신개발특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0792",
+    "name": "세포병태생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFE0709",
+    "name": "식의약품분석학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0770",
+    "name": "식품생화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0977",
+    "name": "식품의약학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0803",
+    "name": "약물치료학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0845",
+    "name": "예방약학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0745",
+    "name": "의약면역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFE0701",
+    "name": "인수공통감염병학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0805",
+    "name": "조제학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0816",
+    "name": "첨단식품특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PHAR0846",
+    "name": "특수환자집단 약물요법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0981",
+    "name": "푸드바이오엔지니어링특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFE0708",
+    "name": "프로바이오틱스학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INFE0705",
+    "name": "항생물질약품학특강",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,158 @@
+[
+  {
+    "grade": "",
+    "code": "COMI0717",
+    "name": "고급컴퓨터시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0714",
+    "name": "고급프로그래밍언어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0701",
+    "name": "데이터베이스시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0720",
+    "name": "디자인패턴",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0704",
+    "name": "멀티미디어시스템특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0719",
+    "name": "모바일응용프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0706",
+    "name": "모바일컴퓨팅기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0722",
+    "name": "비지니스프로세스디자인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0721",
+    "name": "소프트웨어아키텍쳐",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0710",
+    "name": "신호처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0723",
+    "name": "실용인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0716",
+    "name": "오토마타와컴파일러",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0707",
+    "name": "웹데이터베이스시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0718",
+    "name": "유비쿼터스센서네트워크",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0709",
+    "name": "인터넷응용기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0702",
+    "name": "지능시스템특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0711",
+    "name": "컴퓨터네트워크시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0725",
+    "name": "컴퓨터비젼시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0705",
+    "name": "컴퓨터시스템특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0708",
+    "name": "컴퓨터정보기술특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0712",
+    "name": "컴퓨터정보세미나 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0713",
+    "name": "컴퓨터정보세미나 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0724",
+    "name": "패턴인식활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0703",
+    "name": "퍼지시스템특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMI0715",
+    "name": "프로그래밍언어론이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOWA0000",
+    "name": "학위논문연구 및 연구윤리(소프트웨어)",
+    "credit": "3-3-0"
+  }
+]

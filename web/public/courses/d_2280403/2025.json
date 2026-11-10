@@ -1,0 +1,80 @@
+[
+  {
+    "grade": "",
+    "code": "INTL0701",
+    "name": "국제문화의 이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0719",
+    "name": "중국경제통상의이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0718",
+    "name": "중국문언문연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0721",
+    "name": "중국법률의이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0723",
+    "name": "중국사상연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0726",
+    "name": "중국사회전제토론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0716",
+    "name": "중국실용언어연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0722",
+    "name": "중국의 문학과 예술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0720",
+    "name": "중국정치의이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0725",
+    "name": "중국지역학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0717",
+    "name": "중국현대문연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIN0000",
+    "name": "학위논문연구 및 연구윤리(중국학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHIL0724",
+    "name": "한중관계사연구",
+    "credit": "3-3-0"
+  }
+]

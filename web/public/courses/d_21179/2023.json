@@ -1,0 +1,410 @@
+[
+  {
+    "grade": "",
+    "code": "CSFE0750",
+    "name": "건강과 GIS",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0715",
+    "name": "건물에너지 분석 및 응용 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGEC0727",
+    "name": "계량경제학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0720",
+    "name": "고효율열시스템기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0703",
+    "name": "공간영상과 컴퓨터비젼",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0739",
+    "name": "공간정보알고리즘",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0723",
+    "name": "구조물 안정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLCH0732",
+    "name": "국제 에너지·환경 협약",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLCH0729",
+    "name": "국제 에너지·환경학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLCH0730",
+    "name": "국제협상및 관계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0733",
+    "name": "드론영상처리분석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLCH0720",
+    "name": "미래공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0722",
+    "name": "소성해석이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SPAC0767",
+    "name": "수치사진측량학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLCH0714",
+    "name": "순환경제모델링연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0735",
+    "name": "스마트 공간정보",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0714",
+    "name": "스마트 에너지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0729",
+    "name": "스마트구조시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0737",
+    "name": "시계열 원격탐사 자료분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLCH0918",
+    "name": "신재생에너지개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLCH0919",
+    "name": "신재생에너지공학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0725",
+    "name": "안전성 평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0721",
+    "name": "에너지 기반 구조해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0712",
+    "name": "에너지 빅데이터 응용 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0742",
+    "name": "에너지 실무영어 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0743",
+    "name": "에너지 실무영어 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLCH0811",
+    "name": "에너지 융합연구 A",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLCH0812",
+    "name": "에너지 융합연구 B",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLCH0813",
+    "name": "에너지 융합연구 C",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLCH0814",
+    "name": "에너지 융합연구 D",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0711",
+    "name": "에너지 인공지능 응용 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0734",
+    "name": "에너지 GIS",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PUAD0780",
+    "name": "에너지·기후변화정책론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLCH0722",
+    "name": "에너지·환경공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLCH0727",
+    "name": "에너지·환경시스템모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLCH0728",
+    "name": "에너지·환경통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLCH0719",
+    "name": "에너지경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0766",
+    "name": "에너지공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0719",
+    "name": "에너지기계설비특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLCH0716",
+    "name": "에너지시스템 분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0713",
+    "name": "에너지신산업 응용 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0717",
+    "name": "에너지저장기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLCH0734",
+    "name": "에너지정책론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0716",
+    "name": "에너지하베스팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GEOG0931",
+    "name": "원격탐사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0736",
+    "name": "원격탐사와 기후변화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0740",
+    "name": "위성영상처리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0744",
+    "name": "융복합세미나 A",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0745",
+    "name": "융복합세미나 B",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0746",
+    "name": "융복합세미나 C",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0747",
+    "name": "융복합세미나 D",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0751",
+    "name": "지리정보체계 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CLCH0712",
+    "name": "지속가능한발전연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0718",
+    "name": "친환경공정시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0728",
+    "name": "플랜트 수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0726",
+    "name": "플랜트 유한요소해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0727",
+    "name": "플랜트 지진공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0741",
+    "name": "플랜트경제성공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0724",
+    "name": "플랜트구조동역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0730",
+    "name": "플랜트구조역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0731",
+    "name": "플랜트매트리스구조해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0748",
+    "name": "플랜트응용수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0732",
+    "name": "플랜트탄소성론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0000",
+    "name": "학위논문연구및연구윤리(융복합시스템공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0855",
+    "name": "해석사진측량학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0738",
+    "name": "환경드론사진측량특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PUAD0778",
+    "name": "환경정책론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CSFE0749",
+    "name": "GIS프로그래밍 특론",
+    "credit": "3-3-0"
+  }
+]

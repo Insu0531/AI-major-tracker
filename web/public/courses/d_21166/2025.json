@@ -1,0 +1,524 @@
+[
+  {
+    "grade": "",
+    "code": "VICD0822",
+    "name": "공간디자인연구",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0867",
+    "name": "공간정보디자인 특강",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0869",
+    "name": "공공디자인특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0821",
+    "name": "광고디자인연구",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0711",
+    "name": "광고디자인특강1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0712",
+    "name": "광고디자인특강2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0752",
+    "name": "광고학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0866",
+    "name": "데이터시각화 특강",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0857",
+    "name": "디자인경영특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0853",
+    "name": "디자인기호학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0754",
+    "name": "디자인기획특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0878",
+    "name": "디자인리서치특론1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0879",
+    "name": "디자인리서치특론2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0757",
+    "name": "디자인마케팅특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0755",
+    "name": "디자인매니지먼트특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0856",
+    "name": "디자인문화특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0851",
+    "name": "디자인방법특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0893",
+    "name": "디자인비평1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0894",
+    "name": "디자인비평2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0890",
+    "name": "디자인세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0891",
+    "name": "디자인세미나2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0756",
+    "name": "디자인심리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0771",
+    "name": "디자인특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0834",
+    "name": "디자인평론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0811",
+    "name": "디지털디자인연구1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0812",
+    "name": "디지털디자인연구2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0721",
+    "name": "디지털미디어디자인특강1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0722",
+    "name": "디지털미디어디자인특강2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0723",
+    "name": "디지털컨텐츠디자인특강1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0724",
+    "name": "디지털컨텐츠디자인특강2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0758",
+    "name": "디지털컨텐츠디자인특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0861",
+    "name": "디지털컨텐츠디자인특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0872",
+    "name": "디지털컨텐츠디자인특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0882",
+    "name": "메타버스디자인연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0883",
+    "name": "메타버스디자인연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0880",
+    "name": "메타콘텐츠디자인특강1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0881",
+    "name": "메타콘텐츠디자인특강2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0886",
+    "name": "모션그래픽스연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0887",
+    "name": "모션그래픽스연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0892",
+    "name": "발상과 표현",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0888",
+    "name": "브랜드디자인연구",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0884",
+    "name": "비주얼프로그래밍연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0885",
+    "name": "비주얼프로그래밍연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0870",
+    "name": "사용자경험디자인특강1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0871",
+    "name": "사용자경험디자인특강2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0753",
+    "name": "사진디자인특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0817",
+    "name": "색채디자인연구1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0818",
+    "name": "색채디자인연구2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0854",
+    "name": "색채심리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0761",
+    "name": "색채학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0825",
+    "name": "생활문화디자인연구",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0891",
+    "name": "시각디자인연구1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0892",
+    "name": "시각디자인연구2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0716",
+    "name": "시각디자인특강1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0717",
+    "name": "시각디자인특강2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0733",
+    "name": "시각환경디자인특강1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0734",
+    "name": "시각환경디자인특강2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0889",
+    "name": "언어와 이미지연구",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0815",
+    "name": "에디토리얼디자인연구1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0816",
+    "name": "에디토리얼디자인연구2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0728",
+    "name": "에디토리얼디자인특강1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0729",
+    "name": "에디토리얼디자인특강2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0852",
+    "name": "영상디자인특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0813",
+    "name": "영상미디어디자인연구1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0814",
+    "name": "영상미디어디자인연구2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0868",
+    "name": "이벤트브랜딩디자인특론",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0859",
+    "name": "인간공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0873",
+    "name": "인터랙션디자인연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0874",
+    "name": "인터랙션디자인연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0759",
+    "name": "인터페이스디자인특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0862",
+    "name": "인터페이스디자인특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0877",
+    "name": "인터페이스디자인특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0863",
+    "name": "인포메이션디자인특강1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0864",
+    "name": "인포메이션디자인특강2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0731",
+    "name": "일러스트레이션특강1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0732",
+    "name": "일러스트레이션특강2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0823",
+    "name": "제품디자인연구",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0855",
+    "name": "조형예술특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0865",
+    "name": "창조적 사고 특론",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0726",
+    "name": "타이포그라픽스특강1",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0727",
+    "name": "타이포그라픽스특강2",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0824",
+    "name": "패션문화연구",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "DESI0000",
+    "name": "학위논문연구 및 연구윤리(디자인학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0846",
+    "name": "현대디자인연구",
+    "credit": "3-0-3"
+  },
+  {
+    "grade": "",
+    "code": "VICD0858",
+    "name": "환경문화특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0875",
+    "name": "UX/UI 연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0876",
+    "name": "UX/UI 연구2",
+    "credit": "3-3-0"
+  }
+]

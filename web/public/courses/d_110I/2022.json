@@ -1,0 +1,122 @@
+[
+  {
+    "grade": "1",
+    "code": "AGEC0203",
+    "name": "경제학원론Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "AGEC0204",
+    "name": "경제학원론Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "ECON0204",
+    "name": "무역학원론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ECON0381",
+    "name": "무역상무론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHIL0363",
+    "name": "중국문화의이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHIL0393",
+    "name": "중국어학의이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHIL0365",
+    "name": "중급중국어독해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHTR0303",
+    "name": "현대중국사회와경제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHIL0452",
+    "name": "경전과제자백가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ECON0482",
+    "name": "국제물류론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGEC0418",
+    "name": "농산물무역의 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "AGEC0504",
+    "name": "응용환경경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHTR0301",
+    "name": "중국문화와통상",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHIL0436",
+    "name": "중국역대명문읽기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHIL0423",
+    "name": "중국현대문학의이해",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHTR0302",
+    "name": "한중문화콘텐츠",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHIL0434",
+    "name": "현대중국의탐색",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHIL0564",
+    "name": "실무중국어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHIL0563",
+    "name": "중국어실용문읽기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHIL0562",
+    "name": "중국어학특강",
+    "credit": "3-3-0"
+  }
+]

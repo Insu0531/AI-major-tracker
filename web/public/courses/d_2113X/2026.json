@@ -1,0 +1,248 @@
+[
+  {
+    "grade": "",
+    "code": "ECSS0722",
+    "name": "곤충-선충 상호작용론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0712",
+    "name": "곤충-식물상호작용론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0728",
+    "name": "곤충계통분류학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0749",
+    "name": "곤충과인간",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0752",
+    "name": "곤충내분비학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0753",
+    "name": "곤충독성학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0750",
+    "name": "곤충분자생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0717",
+    "name": "곤충사료학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0754",
+    "name": "곤충생명정보학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0755",
+    "name": "곤충생태생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0748",
+    "name": "곤충유전체학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0747",
+    "name": "뇌질환특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0731",
+    "name": "동물계통진화학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0732",
+    "name": "동물계통학 최신과제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0739",
+    "name": "동물분자생태학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0718",
+    "name": "미생물공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0740",
+    "name": "분자생명과학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0719",
+    "name": "분자생화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0756",
+    "name": "사회성 곤충학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0711",
+    "name": "생태과학세미나 Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0742",
+    "name": "생태과학세미나 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0743",
+    "name": "생태과학세미나 III",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0751",
+    "name": "생태관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0741",
+    "name": "생태병리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0724",
+    "name": "생태생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0738",
+    "name": "세포-세포간신호전달개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0723",
+    "name": "식물기생선충학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0725",
+    "name": "신경생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GRAD0711",
+    "name": "실천 연구윤리",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0726",
+    "name": "유전자발현조절론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0757",
+    "name": "응용분자곤충학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0720",
+    "name": "응용분자생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0758",
+    "name": "의-질병공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0729",
+    "name": "자원곤충학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0721",
+    "name": "잔디해충학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0745",
+    "name": "절지동물집단유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0759",
+    "name": "친환경해충방제학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0000",
+    "name": "학위논문연구 및 연구윤리(생태과학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0730",
+    "name": "해충방제학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0746",
+    "name": "화학생태학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECSS0760",
+    "name": "환경생태곤충학특론",
+    "credit": "3-3-0"
+  }
+]

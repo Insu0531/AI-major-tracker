@@ -1,0 +1,296 @@
+[
+  {
+    "grade": "",
+    "code": "LIBR0737",
+    "name": "검색엔진특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0747",
+    "name": "계량정보학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0952",
+    "name": "고문서특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0924",
+    "name": "공공도서관경영특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0785",
+    "name": "대화형시스템설계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0735",
+    "name": "데이터베이스구축특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0786",
+    "name": "데이터사이언스 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0787",
+    "name": "데이터사이언스 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0753",
+    "name": "동양고서지학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0935",
+    "name": "디지털도서관특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0783",
+    "name": "디지털리터러시연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0804",
+    "name": "디지털인문학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0798",
+    "name": "디지털큐레이션특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0791",
+    "name": "디지털플랫폼활용론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0916",
+    "name": "메타데이터연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0795",
+    "name": "목록법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0727",
+    "name": "문헌정보학연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0779",
+    "name": "북한도서관연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0794",
+    "name": "분류법연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0788",
+    "name": "사용자경험설계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0782",
+    "name": "사용자경험연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0800",
+    "name": "소셜미디어마이닝특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0740",
+    "name": "웹정보시스템세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0793",
+    "name": "웹프로그래밍특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0777",
+    "name": "장서관리연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0774",
+    "name": "전자자원관리연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0765",
+    "name": "전통기록물관리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0773",
+    "name": "전통기록물웹컨텐츠구축론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0772",
+    "name": "전통기록물DB구축",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0734",
+    "name": "정보검색특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0778",
+    "name": "정보서비스연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0802",
+    "name": "정보시각화연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0784",
+    "name": "정보아키텍쳐특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0736",
+    "name": "정보윤리특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0781",
+    "name": "정보이용교육연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0780",
+    "name": "정보이용자연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0941",
+    "name": "정보이용행태연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0792",
+    "name": "정보정책및법규연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0797",
+    "name": "정보학연구설계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0789",
+    "name": "지능형정보검색론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0790",
+    "name": "지능형정보시스템구축론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0803",
+    "name": "지능형정보시스템분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0728",
+    "name": "지식정보센터경영특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0937",
+    "name": "지식정보센터경영평가론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0776",
+    "name": "지식정보센터마케팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0801",
+    "name": "텍스트데이터분석연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0775",
+    "name": "학교도서관경영특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0796",
+    "name": "학술커뮤니케이션연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0000",
+    "name": "학위논문연구 및 연구윤리(문헌정보학)",
+    "credit": "3-3-0"
+  }
+]

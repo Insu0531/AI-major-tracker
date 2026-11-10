@@ -1,0 +1,374 @@
+[
+  {
+    "grade": "",
+    "code": "LIBR0739",
+    "name": "검색기술특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0737",
+    "name": "검색엔진특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0747",
+    "name": "계량정보학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0714",
+    "name": "계속자료관리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0952",
+    "name": "고문서특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0751",
+    "name": "고서 및 고문서조직론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0924",
+    "name": "공공도서관경영특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0951",
+    "name": "금석문자료특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0735",
+    "name": "데이터베이스구축특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0753",
+    "name": "동양고서지학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0954",
+    "name": "동양체계서지학특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0935",
+    "name": "디지털도서관특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0916",
+    "name": "메타데이터연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0712",
+    "name": "목록학특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0727",
+    "name": "문헌정보학연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0729",
+    "name": "미디어센터경영특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0711",
+    "name": "분류학특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0912",
+    "name": "비교목록법특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0746",
+    "name": "비교문헌정보학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0911",
+    "name": "비교분류법특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0740",
+    "name": "웹정보시스템세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0745",
+    "name": "이용자인터페이스특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0738",
+    "name": "인용색인데이터베이스분석연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0755",
+    "name": "인지와 정보검색",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CICE0846",
+    "name": "인터넷기술특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0945",
+    "name": "인터넷자원활용특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0743",
+    "name": "장서개발특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0915",
+    "name": "전자자료관리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0768",
+    "name": "전통기록물검색론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0764",
+    "name": "전통기록물과 목록학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0771",
+    "name": "전통기록물관련법규연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0765",
+    "name": "전통기록물관리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0769",
+    "name": "전통기록물시스템구축론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0773",
+    "name": "전통기록물웹컨텐츠구축론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0766",
+    "name": "전통기록물인터페이스연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0770",
+    "name": "전통기록물정보센터구축론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0761",
+    "name": "전통기록물조직론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0767",
+    "name": "전통기록물활용연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0772",
+    "name": "전통기록물DB구축",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0734",
+    "name": "정보검색특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0732",
+    "name": "정보공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0931",
+    "name": "정보네트워크특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0744",
+    "name": "정보봉사특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0736",
+    "name": "정보윤리특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0944",
+    "name": "정보이용교육특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0941",
+    "name": "정보이용행태연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0943",
+    "name": "정보정책특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0733",
+    "name": "정보학특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0936",
+    "name": "지능형정보검색",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0930",
+    "name": "지식정보관련법규연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0728",
+    "name": "지식정보센터경영특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0937",
+    "name": "지식정보센터경영평가론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0929",
+    "name": "지식정보센터계획론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0938",
+    "name": "지식정보센터마케팅전략특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0939",
+    "name": "지식정보시스템분석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0713",
+    "name": "특수자료조직론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0763",
+    "name": "판화 및 서예사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0000",
+    "name": "학위논문연구 및 연구윤리(문헌정보학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0752",
+    "name": "한국고서지학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0762",
+    "name": "한국인쇄출판문화사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0940",
+    "name": "한국체계서지학특수연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "LIBR0953",
+    "name": "한국형태서지학특수연구",
+    "credit": "3-3-0"
+  }
+]

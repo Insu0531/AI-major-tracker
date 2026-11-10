@@ -1,0 +1,224 @@
+[
+  {
+    "grade": "2",
+    "code": "PHYS0261",
+    "name": "물리학실험III",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0205",
+    "name": "물리화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0201",
+    "name": "분석화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "ACHE0631",
+    "name": "분자생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "HUMN0213",
+    "name": "상상의 인문학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIOC0622",
+    "name": "세포생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIED0313",
+    "name": "식물계통학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0211",
+    "name": "역학및연습1",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0204",
+    "name": "유기화학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PCBI0201",
+    "name": "융합과학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0311",
+    "name": "전자기학및연습1",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "2",
+    "code": "PCBI0202",
+    "name": "진로개발 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0323",
+    "name": "현대물리실험",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "2",
+    "code": "PHYS0222",
+    "name": "현대물리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CHEM0251",
+    "name": "화학수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "BIED0555",
+    "name": "환경생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0353",
+    "name": "기기분석1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ANSC0432",
+    "name": "동물생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0301",
+    "name": "무기화학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0207",
+    "name": "물리화학3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "BIED0631",
+    "name": "발생학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MEDI0318",
+    "name": "신경과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0331",
+    "name": "양자물리및연습1",
+    "credit": "4-3-2"
+  },
+  {
+    "grade": "3",
+    "code": "BIOC0621",
+    "name": "유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0351",
+    "name": "전공탐구프로젝트1",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0352",
+    "name": "전공탐구프로젝트2",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "3",
+    "code": "BIOL0386",
+    "name": "조류학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "HUMN0211",
+    "name": "치유의 인문학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "PHYS0431",
+    "name": "현대광학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CHEM0356",
+    "name": "화학공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEM0456",
+    "name": "고체 및 재료화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CHEM0452",
+    "name": "유기반응론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PCBI0401",
+    "name": "진로개발 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "BIOL0479",
+    "name": "진화생물학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0475",
+    "name": "첨단과학콜로키움1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0476",
+    "name": "첨단과학콜로키움2",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "4",
+    "code": "PHYS0471",
+    "name": "첨단물리실험",
+    "credit": "2-1-2"
+  }
+]

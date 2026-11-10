@@ -1,0 +1,374 @@
+[
+  {
+    "grade": "",
+    "code": "PSYC0987",
+    "name": "계량심리학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0977",
+    "name": "고급발달심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0771",
+    "name": "고급생리심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0926",
+    "name": "고급성격심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0782",
+    "name": "고급소비자심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0917",
+    "name": "고급실험설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0753",
+    "name": "고급심리통계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0972",
+    "name": "고급이상심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0980",
+    "name": "고급인지신경과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0948",
+    "name": "고급인지심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0752",
+    "name": "고급지각심리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0950",
+    "name": "고급측정이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0978",
+    "name": "고급학습심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0738",
+    "name": "광고효과연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0960",
+    "name": "노년심리학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0935",
+    "name": "뇌영상 연구법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0803",
+    "name": "뇌와 기억",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0952",
+    "name": "다변량분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0826",
+    "name": "문화와 상담",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0936",
+    "name": "미디어 효과 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0762",
+    "name": "발달심리연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0764",
+    "name": "발달정신병리세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0946",
+    "name": "발달측정평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0786",
+    "name": "사회적 인지와 소비자 행동",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0829",
+    "name": "상담 면접의 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0831",
+    "name": "상담 및 심리치료 이론과 실제 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0832",
+    "name": "상담 및 심리치료 이론과 실제 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0810",
+    "name": "상담사례 실습 및 지도",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0828",
+    "name": "상담사례 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0974",
+    "name": "상담심리세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0736",
+    "name": "소비자 경험 연구방법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0737",
+    "name": "소비자 심리와 마케팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0983",
+    "name": "소비자심리세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0942",
+    "name": "신경심리세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0986",
+    "name": "신경심리평가법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0949",
+    "name": "신경심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0714",
+    "name": "심리진단",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0723",
+    "name": "심리치료와 고급상담이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0915",
+    "name": "심리평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0951",
+    "name": "심리학연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0763",
+    "name": "응용발달심리세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0811",
+    "name": "인간기억과 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0979",
+    "name": "인지, 정서 및 행동",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0953",
+    "name": "인지공학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0961",
+    "name": "인지발달세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0934",
+    "name": "인지신경과학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0960",
+    "name": "인지심리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0959",
+    "name": "인지적노화과정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0925",
+    "name": "인지치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0785",
+    "name": "임상면접의 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0914",
+    "name": "임상심리세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0801",
+    "name": "작업기억과 집행기능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0802",
+    "name": "정서의 인지신경과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0748",
+    "name": "주의의 인지신경과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0735",
+    "name": "지역사회심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0830",
+    "name": "진로상담및발달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0827",
+    "name": "진로심리세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0805",
+    "name": "집단상담과 집단치료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0747",
+    "name": "청소년발달세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0715",
+    "name": "투사법검사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0000",
+    "name": "학위논문연구 및 연구윤리 (심리학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PSYC0913",
+    "name": "행동치료",
+    "credit": "3-3-0"
+  }
+]

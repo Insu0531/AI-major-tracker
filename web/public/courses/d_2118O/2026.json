@@ -1,0 +1,380 @@
+[
+  {
+    "grade": "",
+    "code": "ASCO0747",
+    "name": "공정양론특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0742",
+    "name": "구조안전진단특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PMEN0721",
+    "name": "그린에너지공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0723",
+    "name": "기상레이더활용 융합연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CVLE0738",
+    "name": "기초공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0751",
+    "name": "나노기계센서공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0745",
+    "name": "나노에너지특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0752",
+    "name": "나노재료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0756",
+    "name": "다공성재료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0725",
+    "name": "대기오염특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0753",
+    "name": "박막특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0719",
+    "name": "방재경제학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0731",
+    "name": "방재기계시스템 CAD 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0733",
+    "name": "방재기계재료역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0718",
+    "name": "방재지리정보시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0714",
+    "name": "복합재난 융합연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0750",
+    "name": "부식과 방식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0748",
+    "name": "분리 및 혼합공학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0728",
+    "name": "상하수처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PMEN0741",
+    "name": "설계및생산에서의인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0732",
+    "name": "세라믹공학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0746",
+    "name": "센서 소재 및 소자특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PMEN0722",
+    "name": "소음진동학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COPE0702",
+    "name": "수리수문학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0716",
+    "name": "수재해분석및평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0722",
+    "name": "수질오염모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0720",
+    "name": "스마트구조물유지관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0741",
+    "name": "스마트재료학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MACH0717",
+    "name": "실용로봇공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0758",
+    "name": "에너지 변환 및 저장 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0755",
+    "name": "에너지반응공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHME0717",
+    "name": "에너지환경공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PMEN0718",
+    "name": "원격감시제어특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARCH0763",
+    "name": "유한요소법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0749",
+    "name": "융합 전기화학공학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0732",
+    "name": "융합공학설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0734",
+    "name": "융합기계생산시스템특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0730",
+    "name": "융합기계시스템자동화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0740",
+    "name": "융합기계역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0735",
+    "name": "융합기계열역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0736",
+    "name": "융합기계열전달특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0738",
+    "name": "융합센서특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0711",
+    "name": "융합연구세미나A (초급)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0712",
+    "name": "융합연구세미나B (중급)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0713",
+    "name": "융합연구세미나C (고급)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0724",
+    "name": "응용방재기상학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CEEM0708",
+    "name": "응용수문시스템공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0717",
+    "name": "응용재해통계학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0754",
+    "name": "이론  파괴역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0739",
+    "name": "재난관리 자동화기구특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0729",
+    "name": "재난관리 지능로봇공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0737",
+    "name": "재난대응 정밀계측특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0743",
+    "name": "재료인공지능특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0726",
+    "name": "재해 대응 융합수처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0727",
+    "name": "재해수질분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0748",
+    "name": "전자재료특론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PMEN0736",
+    "name": "정밀표면공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0715",
+    "name": "지반재해 방재론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CIVL0708",
+    "name": "탄성안정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0721",
+    "name": "통합수자원관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0753",
+    "name": "표면화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ASCO0000",
+    "name": "학위논문연구 및 연구윤리(미래과학기술융합학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "INDC0911",
+    "name": "환경화학특론",
+    "credit": "3-3-0"
+  }
+]

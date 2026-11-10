@@ -1,0 +1,266 @@
+[
+  {
+    "grade": "",
+    "code": "COMP0711",
+    "name": "가상현실",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "VICD0822",
+    "name": "공간디자인연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0721",
+    "name": "네트워크 미디어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0720",
+    "name": "동영상처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0731",
+    "name": "디지털 도구의 활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0732",
+    "name": "디지털 프로그램의 활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0826",
+    "name": "디지털문화론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0723",
+    "name": "디지털문화산업정책",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0984",
+    "name": "디지털영상처리개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0803",
+    "name": "디지털영상합성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMM0724",
+    "name": "매체기호학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0736",
+    "name": "멀티미디어 프로덕션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0831",
+    "name": "멀티미디어특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0712",
+    "name": "문화기술론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0713",
+    "name": "문화원형연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0828",
+    "name": "문화콘텐츠세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0716",
+    "name": "미디어 인터페이스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0734",
+    "name": "미디어아트 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0711",
+    "name": "미디어아트의 역사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0722",
+    "name": "미디어와 엔터테인먼트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0725",
+    "name": "미디어와 음악",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0718",
+    "name": "비주얼 리터러시",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0726",
+    "name": "사운드 디자인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0733",
+    "name": "센서기술의 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0719",
+    "name": "스토리텔링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0724",
+    "name": "실험 애니메이션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0728",
+    "name": "실험영화 제작",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0717",
+    "name": "아트 & 그래픽스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMM0932",
+    "name": "영상산업론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0727",
+    "name": "영화영상의 특수효과",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0721",
+    "name": "예술문화연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0729",
+    "name": "웹매체 기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0772",
+    "name": "유비쿼터스컴퓨팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0738",
+    "name": "인간컴퓨터상호작용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0715",
+    "name": "인체구조론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0730",
+    "name": "인터액티브 아트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0735",
+    "name": "작가와 작품론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0722",
+    "name": "조형론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0774",
+    "name": "컴퓨터게임 및 애니메이션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0947",
+    "name": "컴퓨터그래픽스응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0737",
+    "name": "프로젝션 매핑 콘텐츠 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MGMT0948",
+    "name": "프로젝트관리론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DIMA0000",
+    "name": "학위논문연구 및 연구윤리(디지털미디어아트학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARTS0726",
+    "name": "현대미학연구",
+    "credit": "3-3-0"
+  }
+]

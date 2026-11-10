@@ -1,0 +1,338 @@
+[
+  {
+    "grade": "",
+    "code": "ECON0724",
+    "name": "경제변동론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0725",
+    "name": "경제성장론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0770",
+    "name": "경제정책세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0767",
+    "name": "경제학방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0755",
+    "name": "경제학사세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0754",
+    "name": "경제학설사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0734",
+    "name": "계량경제학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0720",
+    "name": "고급거시경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0801",
+    "name": "고급게임이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0752",
+    "name": "고급경제사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0732",
+    "name": "고급계량경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0780",
+    "name": "고급공간경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0726",
+    "name": "고급국제경제론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0723",
+    "name": "고급국제금융론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0710",
+    "name": "고급미시경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0712",
+    "name": "고급산업조직론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0730",
+    "name": "고급수리경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0779",
+    "name": "공간경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0715",
+    "name": "공공경제학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0775",
+    "name": "금융계량경제학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0722",
+    "name": "금융정책",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0748",
+    "name": "기술경제학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0741",
+    "name": "노동경제학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0743",
+    "name": "노사관계론세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0736",
+    "name": "다변량계량분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0762",
+    "name": "동아시아경제론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0751",
+    "name": "동양경제사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0746",
+    "name": "복지정책",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0765",
+    "name": "비교경제발전론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0771",
+    "name": "비교경제사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0744",
+    "name": "비교경제체제론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0711",
+    "name": "산업정책",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0763",
+    "name": "세계경제론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0745",
+    "name": "소득분배론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0733",
+    "name": "시계열분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0776",
+    "name": "에너지환경체제론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0783",
+    "name": "응용미시경제학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0714",
+    "name": "재정학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0716",
+    "name": "정보경제학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0740",
+    "name": "정치경제학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0782",
+    "name": "제도경제학 방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0747",
+    "name": "제도경제학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0781",
+    "name": "제도와 성장",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0713",
+    "name": "중소기업론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0773",
+    "name": "지속가능한 발전론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0774",
+    "name": "지역경제분석론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0000",
+    "name": "학위논문연구 및 연구윤리 (경제학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0761",
+    "name": "한국경제발전론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0750",
+    "name": "한국경제사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0760",
+    "name": "한국경제세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0810",
+    "name": "현대경제문제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0749",
+    "name": "현대자본주의론세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0721",
+    "name": "화폐이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0777",
+    "name": "환경경제모델링",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0840",
+    "name": "환경경제학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ECON0719",
+    "name": "후생경제학",
+    "credit": "3-3-0"
+  }
+]

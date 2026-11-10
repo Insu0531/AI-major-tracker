@@ -1,0 +1,356 @@
+[
+  {
+    "grade": "",
+    "code": "FOOD0826",
+    "name": "감염보건학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0964",
+    "name": "건강기능성식품학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0954",
+    "name": "곡류가공학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0805",
+    "name": "나노바이오기술특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0753",
+    "name": "농산식품가공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "GRAD0743",
+    "name": "농식품생명산업 지식재산의 분석과 활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0793",
+    "name": "단백질 및 지방식품가공학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0778",
+    "name": "미생물유전공학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0761",
+    "name": "미생물효소학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0957",
+    "name": "발효미생물공학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0797",
+    "name": "발효미생물생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0929",
+    "name": "발효식품학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOL0964",
+    "name": "분자미생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0813",
+    "name": "생리활성물질영양학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOIE0735",
+    "name": "수산 및 축산식품가공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0973",
+    "name": "수확후관리기술특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0814",
+    "name": "식품가공신기술특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOBI0735",
+    "name": "식품공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0937",
+    "name": "식품기능화학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0820",
+    "name": "식품나노학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0961",
+    "name": "식품나노학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0779",
+    "name": "식품단백질체학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0795",
+    "name": "식품디자인특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0791",
+    "name": "식품면역학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0819",
+    "name": "식품물리학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0825",
+    "name": "식품물성학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0781",
+    "name": "식품분리분석학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0818",
+    "name": "식품분석학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0959",
+    "name": "식품생물공학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0932",
+    "name": "식품생물공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0815",
+    "name": "식품생물정보학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0770",
+    "name": "식품생화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0726",
+    "name": "식품소재화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0823",
+    "name": "식품안전학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOIE0715",
+    "name": "식품안전학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0794",
+    "name": "식품영양화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ABIO0717",
+    "name": "식품위생학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0824",
+    "name": "식품위해미생물검출특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0796",
+    "name": "식품위해요소중점관리특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0977",
+    "name": "식품의약학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0817",
+    "name": "식품통계학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0821",
+    "name": "식품포장저장학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOSE0734",
+    "name": "식품품질관리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0950",
+    "name": "식품화학연구특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0724",
+    "name": "식품화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0962",
+    "name": "식품효소학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0960",
+    "name": "양조생물공학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0811",
+    "name": "영양유전체학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0955",
+    "name": "원예식품가공학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0812",
+    "name": "천연물소재학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0816",
+    "name": "첨단식품특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0953",
+    "name": "탄수화물화학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0981",
+    "name": "푸드바이오엔지니어링특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0982",
+    "name": "푸드스마트제조공정학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0980",
+    "name": "푸드스마트제조공정학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0809",
+    "name": "프로바이오틱스특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0000",
+    "name": "학위논문연구 및 연구윤리 (식품공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0827",
+    "name": "AI기반 식품위해미생물검출특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0979",
+    "name": "ICT 융합 푸드테크의 이해와 활용",
+    "credit": "3-3-0"
+  }
+]

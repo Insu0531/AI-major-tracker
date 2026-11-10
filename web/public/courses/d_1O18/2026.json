@@ -1,0 +1,110 @@
+[
+  {
+    "grade": "1",
+    "code": "COMP0454",
+    "name": "인공지능수학기초",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "1",
+    "code": "COMP0453",
+    "name": "컴퓨팅사고와 SW코딩",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "2",
+    "code": "COMP0324",
+    "name": "인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "2",
+    "code": "CAIB0228",
+    "name": "인공지능 기초와 활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ITEC0417",
+    "name": "기계학습개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "MOBI0224",
+    "name": "딥러닝",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ELEC0323",
+    "name": "마이크로프로세서",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CAIB0238",
+    "name": "인공지능세미나특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "CAIB0211",
+    "name": "자연어처리개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "COMP0455",
+    "name": "지능HCI",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "3",
+    "code": "ITEC0424",
+    "name": "컴퓨터비전",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CAIB0216",
+    "name": "강화학습개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CAIB0225",
+    "name": "음성인식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "CAIB0222",
+    "name": "인공지능시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "4",
+    "code": "ELEC0515",
+    "name": "자율시스템설계",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "9",
+    "code": "PSAI0202",
+    "name": "멀티모달인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "PSAI0201",
+    "name": "생성형 인공지능",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "9",
+    "code": "PSAI0203",
+    "name": "피지컬 AI 캡스톤디자인",
+    "credit": "3-2-2"
+  }
+]

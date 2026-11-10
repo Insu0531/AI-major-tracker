@@ -1,0 +1,44 @@
+[
+  {
+    "grade": "",
+    "code": "MATH0848",
+    "name": "그래프이론1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ABBC0703",
+    "name": "블록체인특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ABBC0701",
+    "name": "융합응용데이터마이닝",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ABBC0702",
+    "name": "융합응용선형대수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0739",
+    "name": "인공지능특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "STAT0751",
+    "name": "통계계산특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ABBC0704",
+    "name": "ABB산업융합프로젝트",
+    "credit": "3-3-0"
+  }
+]

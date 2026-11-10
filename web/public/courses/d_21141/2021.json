@@ -1,0 +1,266 @@
+[
+  {
+    "grade": "",
+    "code": "FIBR0777",
+    "name": "가잠대사생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0780",
+    "name": "견사곤충육종학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0729",
+    "name": "고분자화학특론Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0779",
+    "name": "곤충기능학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0754",
+    "name": "곤충면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0743",
+    "name": "곤충발생유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0751",
+    "name": "곤충병리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0718",
+    "name": "곤충분자생물공학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0744",
+    "name": "곤충유전학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0757",
+    "name": "곤충자원개발론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0756",
+    "name": "곤충조직학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0776",
+    "name": "곤충Biotech특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0778",
+    "name": "곤충Genome과학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DYFI0732",
+    "name": "기기분석특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0733",
+    "name": "기능성 바이오섬유소재공학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0732",
+    "name": "기능성 바이오섬유소재공학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0743",
+    "name": "나노바이오복합섬유공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0738",
+    "name": "나노섬유공학특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0739",
+    "name": "나노섬유공학특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0737",
+    "name": "바이오섬유소재 구조분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0712",
+    "name": "바이오섬유소재 및 제품관리특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0721",
+    "name": "바이오섬유소재 및 제품관리특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0717",
+    "name": "바이오섬유소재 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0714",
+    "name": "바이오섬유소재생산학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0744",
+    "name": "부직포공학 특론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0745",
+    "name": "부직포공학 특론2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0753",
+    "name": "생물적해충방제론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0734",
+    "name": "생분해성고분자공학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0736",
+    "name": "생체고분자재료공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0763",
+    "name": "섬유가공특론Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0764",
+    "name": "섬유가공특론Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0711",
+    "name": "섬유계면화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0741",
+    "name": "섬유재료공학특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0742",
+    "name": "섬유재료공학특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0713",
+    "name": "스마트섬유",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0761",
+    "name": "염색학특론Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0762",
+    "name": "염색학특론Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0735",
+    "name": "재생섬유공학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0726",
+    "name": "천연섬유세미나Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0727",
+    "name": "천연섬유세미나Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0766",
+    "name": "천연섬유특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0749",
+    "name": "탄소소재공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIFI0000",
+    "name": "학위논문연구 및 연구윤리(바이오섬유소재학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FIBR0755",
+    "name": "환경곤충학",
+    "credit": "3-3-0"
+  }
+]

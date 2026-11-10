@@ -1,0 +1,632 @@
+[
+  {
+    "grade": "",
+    "code": "HIST0873",
+    "name": "고려사회·문화사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0863",
+    "name": "고려시대사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0747",
+    "name": "고려정치사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0793",
+    "name": "근대중국의 개혁과 혁명",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0841",
+    "name": "글로컬히스토리연습1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0842",
+    "name": "글로컬히스토리연습2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0843",
+    "name": "글로컬히스토리연습3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0844",
+    "name": "글로컬히스토리연습4",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0845",
+    "name": "글로컬히스토리연습5",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0846",
+    "name": "글로컬히스토리연습6",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0980",
+    "name": "기술과 환경",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0892",
+    "name": "냉전사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0893",
+    "name": "능력주의와 불평등",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0885",
+    "name": "도시사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0860",
+    "name": "동북아시아사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0856",
+    "name": "동서문명교류사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0859",
+    "name": "동아시아국제관계사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0853",
+    "name": "동아시아론연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0857",
+    "name": "동아시아사특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0855",
+    "name": "동아시아사회경제사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0785",
+    "name": "동아시아정치제도사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0858",
+    "name": "동아시아젠더사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0977",
+    "name": "러시아사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0852",
+    "name": "명청시대사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0869",
+    "name": "북한사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0896",
+    "name": "서양고대사연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0888",
+    "name": "서양근대사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0984",
+    "name": "서양근대사연구동향",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0976",
+    "name": "서양근대사연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0886",
+    "name": "서양근세사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0982",
+    "name": "서양근세사연구동향",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0974",
+    "name": "서양근세사연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0759",
+    "name": "서양중세사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0898",
+    "name": "서양중세사연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0755",
+    "name": "서양현대사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0986",
+    "name": "서양현대사연구동향",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0978",
+    "name": "서양현대사연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0975",
+    "name": "서유럽사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0795",
+    "name": "선진시대사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0848",
+    "name": "세계체제연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0789",
+    "name": "송원사의 제문제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0792",
+    "name": "송원시대사료연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0746",
+    "name": "송원시대사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0897",
+    "name": "스페인 라틴아메리카 역사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0895",
+    "name": "신자유주의역사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0973",
+    "name": "역사연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0927",
+    "name": "영남고문서연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0972",
+    "name": "영남지역사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0899",
+    "name": "영제국사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0861",
+    "name": "유라시아사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0894",
+    "name": "유토피아의 역사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0987",
+    "name": "이주의 역사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0985",
+    "name": "자본주의의 역사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0890",
+    "name": "전쟁과 평화",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0887",
+    "name": "제국주의와 식민지",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0877",
+    "name": "제국주의와 한국사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0891",
+    "name": "젠더와 섹슈얼리티",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0875",
+    "name": "조선사회·경제사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0864",
+    "name": "조선시대사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0865",
+    "name": "조선정치·사상사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0983",
+    "name": "종교와 사회의 역사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0784",
+    "name": "중국경제사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0788",
+    "name": "중국고중세법제사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0791",
+    "name": "중국고중세사회사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0797",
+    "name": "중국고중세유학사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0787",
+    "name": "중국고중세정치사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0798",
+    "name": "중국고중세종교사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0786",
+    "name": "중국사상사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0782",
+    "name": "중국사학사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0783",
+    "name": "중국사회사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0854",
+    "name": "중국의 민족과 지역사회",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0790",
+    "name": "중화민국사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0794",
+    "name": "중화인민공화국사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0745",
+    "name": "진한시대출토자료연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0796",
+    "name": "진한제국사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0979",
+    "name": "질병의 역사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0889",
+    "name": "파시즘의 역사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0769",
+    "name": "퍼블릭히스토리 실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0981",
+    "name": "퍼블릭히스토리 이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0000",
+    "name": "학위논문연구 및 연구윤리 (사학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0711",
+    "name": "한국고대사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0872",
+    "name": "한국고대사회·경제사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0862",
+    "name": "한국고대정치·사상사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0883",
+    "name": "한국근대민족운동사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0714",
+    "name": "한국근대사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0876",
+    "name": "한국근대사회사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0748",
+    "name": "한국근대정치사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0867",
+    "name": "한국문화유산특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0882",
+    "name": "한국불교사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0723",
+    "name": "한국사상사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0749",
+    "name": "한국사에서 공간과 도시",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0767",
+    "name": "한국사에서 일상과 생활",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0874",
+    "name": "한국사에서 중앙과 지방",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0879",
+    "name": "한국사주제특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0722",
+    "name": "한국사학사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0868",
+    "name": "한국생태환경사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0881",
+    "name": "한국예술사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0884",
+    "name": "한국이주사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0870",
+    "name": "한국전근대국제관계사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0768",
+    "name": "한국전쟁·냉전·그리고 분단 체제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0880",
+    "name": "한국젠더사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0871",
+    "name": "한국현대국제관계사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0725",
+    "name": "한국현대사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0878",
+    "name": "한국현대사회·문화사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0866",
+    "name": "한국현대정치·경제사연구",
+    "credit": "3-3-0"
+  }
+]

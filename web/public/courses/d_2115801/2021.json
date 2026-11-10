@@ -1,0 +1,236 @@
+[
+  {
+    "grade": "",
+    "code": "APCE0719",
+    "name": "고급물리화학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0720",
+    "name": "고급물리화학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0737",
+    "name": "고급분석화학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0738",
+    "name": "고급분석화학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0739",
+    "name": "고급유기분광분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0758",
+    "name": "고급유기재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0746",
+    "name": "고분자화학특론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0747",
+    "name": "고분자화학특론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0731",
+    "name": "공업화학특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0732",
+    "name": "공업화학특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0733",
+    "name": "공업화학특론 III",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0750",
+    "name": "나노소재화학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0751",
+    "name": "나노소재화학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0752",
+    "name": "나노소재화학 III",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0773",
+    "name": "나노재료구조분석 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0774",
+    "name": "나노재료구조분석 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0775",
+    "name": "나노재료구조분석 III",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0740",
+    "name": "무기재료화학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0741",
+    "name": "무기재료화학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0742",
+    "name": "무기재료화학 III",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0748",
+    "name": "생체재료화학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0749",
+    "name": "생체재료화학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHED0721",
+    "name": "양자화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0772",
+    "name": "에너지재료공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0734",
+    "name": "유기금속화학특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0735",
+    "name": "유기금속화학특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0736",
+    "name": "유기금속화학특론 III",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0728",
+    "name": "유기화학특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0729",
+    "name": "유기화학특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0730",
+    "name": "유기화학특론 III",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0701",
+    "name": "융합 세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0702",
+    "name": "융합 세미나2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ACHE0703",
+    "name": "융합 세미나3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0756",
+    "name": "전자재료화학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0757",
+    "name": "전자재료화학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0743",
+    "name": "표면화학특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0744",
+    "name": "표면화학특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0745",
+    "name": "표면화학특론 III",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCH0000",
+    "name": "학위논문연구 및 연구윤리(응용화학)",
+    "credit": "3-3-0"
+  }
+]

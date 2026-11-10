@@ -1,0 +1,176 @@
+[
+  {
+    "grade": "",
+    "code": "ROBO0802",
+    "name": "강인적응제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0711",
+    "name": "네트워크 기반 로봇",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0702",
+    "name": "디지털 시스템 제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0717",
+    "name": "로봇 기술 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0708",
+    "name": "로봇 동역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0709",
+    "name": "로봇 메커니즘",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0803",
+    "name": "로봇 비젼 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0705",
+    "name": "로봇 센서 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0701",
+    "name": "로봇 제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0704",
+    "name": "로봇구동시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0810",
+    "name": "로봇기반지능생산시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0806",
+    "name": "로봇설계공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0805",
+    "name": "로봇신소재공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0714",
+    "name": "리얼타임 시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0811",
+    "name": "마이크로/나노 로봇",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0807",
+    "name": "바이오 로봇 공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0703",
+    "name": "비선형시스템제어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0706",
+    "name": "센서 및 계측",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0716",
+    "name": "소프트컴퓨팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0713",
+    "name": "알고리즘 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0715",
+    "name": "에이전트 시스템 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0710",
+    "name": "이동로봇 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0804",
+    "name": "인간기계상호작용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0707",
+    "name": "인터페이스 설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0809",
+    "name": "임베디드시스템 응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0808",
+    "name": "지능로봇설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0801",
+    "name": "지능제어 이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0000",
+    "name": "학위논문연구 및 연구윤리(로봇공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ROBO0712",
+    "name": "휴머노이드 로봇",
+    "credit": "3-3-0"
+  }
+]

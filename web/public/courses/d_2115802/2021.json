@@ -1,0 +1,254 @@
+[
+  {
+    "grade": "",
+    "code": "APCE0759",
+    "name": "고급고분자가공",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0769",
+    "name": "고급고분자물성 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0770",
+    "name": "고급고분자물성 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0771",
+    "name": "고급고분자물성 III",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0722",
+    "name": "고급공정해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0713",
+    "name": "고급반응공학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0714",
+    "name": "고급반응공학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0737",
+    "name": "고급분석화학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0738",
+    "name": "고급분석화학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0758",
+    "name": "고급유기재료",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0746",
+    "name": "고분자화학특론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0747",
+    "name": "고분자화학특론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "NAMA0719",
+    "name": "공학수치해석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0711",
+    "name": "공학수학특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0712",
+    "name": "공학수학특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0760",
+    "name": "나노소재공학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0761",
+    "name": "나노소재공학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0762",
+    "name": "나노소재공학 III",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0712",
+    "name": "분리정제공정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0716",
+    "name": "불균일촉매",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0725",
+    "name": "생물화학공학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0726",
+    "name": "생물화학공학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0727",
+    "name": "생물화학공학 III",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0747",
+    "name": "생체재료공학1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0748",
+    "name": "생체재료공학2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0723",
+    "name": "시스템자동화 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0724",
+    "name": "시스템자동화 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0772",
+    "name": "에너지재료공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0713",
+    "name": "이동현상특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0714",
+    "name": "이동현상특론 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0766",
+    "name": "전자재료공학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0767",
+    "name": "전자재료공학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0768",
+    "name": "전자재료공학 III",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0743",
+    "name": "표면화학특론 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0000",
+    "name": "학위논문연구 및 연구윤리 (화학공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0703",
+    "name": "화학공학특강1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0704",
+    "name": "화학공학특강2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0760",
+    "name": "화학공학특강3",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0761",
+    "name": "화학공학특강4",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "APCE0717",
+    "name": "화학열역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0759",
+    "name": "환경촉매공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CHEN0715",
+    "name": "흡착공정",
+    "credit": "3-3-0"
+  }
+]

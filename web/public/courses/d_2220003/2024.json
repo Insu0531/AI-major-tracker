@@ -1,0 +1,224 @@
+[
+  {
+    "grade": "",
+    "code": "TCHR0601",
+    "name": "교육과정",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0918",
+    "name": "교육기획론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0783",
+    "name": "교육리더십",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0604",
+    "name": "교육방법및교육공학",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0932",
+    "name": "교육법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0552",
+    "name": "교육봉사활동 2",
+    "credit": "2-0-60(시)"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0606",
+    "name": "교육사회",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0922",
+    "name": "교육시설론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0607",
+    "name": "교육심리",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0609",
+    "name": "교육철학및교육사",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0865",
+    "name": "교육통치론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0610",
+    "name": "교육평가",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0611",
+    "name": "교육학개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0782",
+    "name": "교육행정가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0724",
+    "name": "교육행정교육론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0612",
+    "name": "교육행정및교육경영",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0784",
+    "name": "교육행정세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0866",
+    "name": "교육행정연구법의 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0928",
+    "name": "교육행정의이론과실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0931",
+    "name": "교육행정조직의 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDED0781",
+    "name": "교육행정철학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0926",
+    "name": "교육행정통계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0529",
+    "name": "교직실무",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0521",
+    "name": "교직실무 1",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0553",
+    "name": "디지털 교육",
+    "credit": "1-1-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0927",
+    "name": "비교교육행정",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0520",
+    "name": "생활지도및상담(교직소양)",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0704",
+    "name": "영재교육",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0920",
+    "name": "장학이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0703",
+    "name": "창의성 교육",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0528",
+    "name": "특수교육학개론",
+    "credit": "2-2-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0911",
+    "name": "학교경영의 이론과 실제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0864",
+    "name": "학교와 교원정책",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0863",
+    "name": "학교와 교원평가",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TCHR0522",
+    "name": "학교현장실습",
+    "credit": "2-0-4(주)"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0935",
+    "name": "학교회계와 감사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "EDUC0000",
+    "name": "학위논문연구 및 연구윤리 (교육학)",
+    "credit": "3-3-0"
+  }
+]

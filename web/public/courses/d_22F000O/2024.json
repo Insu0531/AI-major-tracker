@@ -1,0 +1,122 @@
+[
+  {
+    "grade": "",
+    "code": "SOFT0713",
+    "name": "객체지향 프로그래밍 컨셉",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOFT0726",
+    "name": "고급그래프이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOFT0725",
+    "name": "고급정보검색",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOFT0724",
+    "name": "고성능 컴퓨터시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SCTE0802",
+    "name": "논문작성기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOFT0720",
+    "name": "데이터 마이닝 활용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOFT0716",
+    "name": "소프트웨어개발 프로세스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOFT0715",
+    "name": "소프트웨어모델링 언어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOFT0723",
+    "name": "소프트웨어설계특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOFT0714",
+    "name": "유비쿼터스 센서 네트워크 프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOFT0727",
+    "name": "이동데이터베이스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOFT0718",
+    "name": "지능소프트웨어 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOFT0717",
+    "name": "컴포넌트 아키텍쳐",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOFT0712",
+    "name": "컴퓨터 알고리즘 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOFT0721",
+    "name": "컴퓨터소프트웨어세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOFT0722",
+    "name": "컴퓨터소프트웨어세미나2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOFT0719",
+    "name": "통계적 패턴인식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOFT0711",
+    "name": "프로그래밍언어 개념과 구성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SCTE0801",
+    "name": "프리젠테이션과토론기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SOFT0000",
+    "name": "학위논문연구 및 연구윤리(컴퓨터소프트웨어)",
+    "credit": "3-3-0"
+  }
+]

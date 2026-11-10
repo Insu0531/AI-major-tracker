@@ -1,0 +1,458 @@
+[
+  {
+    "grade": "",
+    "code": "PEED0965",
+    "name": "그리스·로마체육사특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0962",
+    "name": "다변량통계해석특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0901",
+    "name": "무용교육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0971",
+    "name": "무용미학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0998",
+    "name": "무용원론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0946",
+    "name": "발달운동학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0945",
+    "name": "발달운동학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0985",
+    "name": "비교체육세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0966",
+    "name": "비교체육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0989",
+    "name": "사회체육세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0988",
+    "name": "사회체육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0933",
+    "name": "생체역학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0904",
+    "name": "생체역학실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "PEED0932",
+    "name": "생체역학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0968",
+    "name": "스포츠마케팅특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0917",
+    "name": "스포츠사회학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0986",
+    "name": "스포츠사회학이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0916",
+    "name": "스포츠사회학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0936",
+    "name": "스포츠심리학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0935",
+    "name": "스포츠심리학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0987",
+    "name": "스포츠와사회문제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0979",
+    "name": "스포츠의학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0981",
+    "name": "스포츠행정경영세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0980",
+    "name": "스포츠행정경영특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0997",
+    "name": "실험스포츠심리학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "PEED0958",
+    "name": "실험영양학",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "PEED0961",
+    "name": "여가론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0984",
+    "name": "올림피즘특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0906",
+    "name": "운동과근육생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0905",
+    "name": "운동과심폐생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0908",
+    "name": "운동과영양처방",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0972",
+    "name": "운동과호르몬대사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0929",
+    "name": "운동생리학실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "PEED0928",
+    "name": "운동생리학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0970",
+    "name": "운동생화학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0953",
+    "name": "운동영양생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0973",
+    "name": "운동영양식사학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0942",
+    "name": "운동영양학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0957",
+    "name": "운동영양학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0995",
+    "name": "운동제어특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0907",
+    "name": "운동처방연습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "PEED0941",
+    "name": "운동처방특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0938",
+    "name": "운동학습및제어세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0969",
+    "name": "운동학습특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0996",
+    "name": "운동행동발달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0994",
+    "name": "응용스포츠심리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0902",
+    "name": "인체공학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0903",
+    "name": "인체공학실험",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "PEED0934",
+    "name": "인체공학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0990",
+    "name": "체육과교육과정세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0993",
+    "name": "체육교수연구방법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0991",
+    "name": "체육교수이론세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0927",
+    "name": "체육교수이론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0926",
+    "name": "체육교육과정특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0967",
+    "name": "체육교재연구특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0912",
+    "name": "체육미학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0922",
+    "name": "체육사상사세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0983",
+    "name": "체육사상사특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0992",
+    "name": "체육수업설계론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0915",
+    "name": "체육원리세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0914",
+    "name": "체육원리특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0913",
+    "name": "체육철학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0911",
+    "name": "체육철학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0944",
+    "name": "체육측정평가세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0943",
+    "name": "체육측정평가특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0910",
+    "name": "체육통계학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0982",
+    "name": "체육학연구법특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0975",
+    "name": "측정이론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0976",
+    "name": "통계분석연습",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "PEED0939",
+    "name": "트레이닝론특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0920",
+    "name": "특수체육세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0947",
+    "name": "특수체육특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0978",
+    "name": "학교보건학세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0977",
+    "name": "학교보건학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0000",
+    "name": "학위논문연구 및 연구윤리(체육교육)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "PEED0921",
+    "name": "한국체육사상사특강",
+    "credit": "3-3-0"
+  }
+]

@@ -1,0 +1,518 @@
+[
+  {
+    "grade": "",
+    "code": "ENGL0767",
+    "name": "19세기 미국소설 연구 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0967",
+    "name": "19세기 미국소설 연구 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0768",
+    "name": "19세기 영국소설 연구 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0968",
+    "name": "19세기 영국소설 연구 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0787",
+    "name": "19세기 영미시 연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0987",
+    "name": "19세기 영미시 연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0763",
+    "name": "20세기 미국소설 연구 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0762",
+    "name": "20세기 영국소설 연구 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0963",
+    "name": "20세기 영국소설 연구 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0786",
+    "name": "20세기 영미시 연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0986",
+    "name": "20세기 영미시 연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0804",
+    "name": "디지털 셰익스피어 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0805",
+    "name": "디지털 셰익스피어 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0726",
+    "name": "디지털 인문학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0727",
+    "name": "디지털 인문학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0780",
+    "name": "르네상스 영희곡 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0756",
+    "name": "르네상스시대영국시연구1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0959",
+    "name": "르네상스시대영국시연구2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0781",
+    "name": "문학비평 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0981",
+    "name": "문학비평 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0782",
+    "name": "문학이론 연구 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0982",
+    "name": "문학이론 연구 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0769",
+    "name": "미국소설세미나 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0969",
+    "name": "미국소설세미나 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0719",
+    "name": "미디어와 서사 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0720",
+    "name": "미디어와 서사 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0783",
+    "name": "비평과 이론 세미나 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0983",
+    "name": "비평과 이론 세미나 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0779",
+    "name": "셰익스피어와 문화 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FUSN0735",
+    "name": "신기술과 통번역1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0717",
+    "name": "실용자연어처리 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0718",
+    "name": "실용자연어처리 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0758",
+    "name": "심리언어학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0714",
+    "name": "심리언어학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0801",
+    "name": "아프로퓨처리즘, 미디어, 흑인소설",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0913",
+    "name": "언어분석1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0914",
+    "name": "언어분석2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0809",
+    "name": "언어습득 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0810",
+    "name": "언어습득 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0807",
+    "name": "언어처리 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0973",
+    "name": "영국 극작가론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0965",
+    "name": "영미소설 세미나 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0764",
+    "name": "영미소설세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0785",
+    "name": "영미시 세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0984",
+    "name": "영미시 세미나2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0991",
+    "name": "영미시 특강 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0992",
+    "name": "영미시 특강 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0788",
+    "name": "영미희곡세미나 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0789",
+    "name": "영미희곡세미나 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0732",
+    "name": "영어사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0798",
+    "name": "영어영문학 연구방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0715",
+    "name": "영어학 양적연구방법론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0711",
+    "name": "음운론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0911",
+    "name": "음운론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0915",
+    "name": "음운론 세미나 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0792",
+    "name": "음운론 세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0760",
+    "name": "음향음성학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0748",
+    "name": "응용언어학 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0948",
+    "name": "응용언어학 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0796",
+    "name": "응용언어학특강 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0731",
+    "name": "의미론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0931",
+    "name": "의미론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0795",
+    "name": "의미론 특강 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0918",
+    "name": "의미론 특강 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FUSN0732",
+    "name": "일반통번역학 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0716",
+    "name": "자연어처리 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0806",
+    "name": "자연어처리 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0797",
+    "name": "코퍼스언어학 I",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0808",
+    "name": "코퍼스언어학 II",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0728",
+    "name": "통사 이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0729",
+    "name": "통사 이론 및 실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0736",
+    "name": "통사론 세미나 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0922",
+    "name": "통사론 세미나 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0927",
+    "name": "통사론 연구방법론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0794",
+    "name": "통사론 특강 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0925",
+    "name": "통사론 특강 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0000",
+    "name": "학위논문연구 및 연구윤리 (영어영문학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0775",
+    "name": "현대미국희곡",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0776",
+    "name": "현대영국희곡",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0742",
+    "name": "현대영문법 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0942",
+    "name": "현대영문법 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0802",
+    "name": "현대영미희곡과 매체성",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0743",
+    "name": "형태론 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0943",
+    "name": "형태론 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0738",
+    "name": "형태론 세미나 1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ENGL0924",
+    "name": "형태론 세미나 2",
+    "credit": "3-3-0"
+  }
+]

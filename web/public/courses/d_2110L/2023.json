@@ -1,0 +1,254 @@
+[
+  {
+    "grade": "",
+    "code": "ARSC0744",
+    "name": "구술사 I : 이론과 방법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0755",
+    "name": "구술사Ⅱ : 실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0717",
+    "name": "기록관 관리와 경영",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0729",
+    "name": "기록관리실습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0756",
+    "name": "기록관리표준연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0759",
+    "name": "기록문화 콘텐츠 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0712",
+    "name": "기록의 보존과 복구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0741",
+    "name": "기록의 평가와 수집",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0711",
+    "name": "기록정리와 기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0760",
+    "name": "기록정보 데이터베이스 디자인",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0732",
+    "name": "기록정보서비스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0746",
+    "name": "기록학연습 Ⅰ",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0747",
+    "name": "기록학연습 Ⅱ",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0748",
+    "name": "기록학연습 Ⅲ",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0749",
+    "name": "기록학연습 Ⅳ",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0757",
+    "name": "기록학연습 Ⅴ",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0710",
+    "name": "기록학입문",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0752",
+    "name": "기록학특강 Ⅱ",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0753",
+    "name": "기록학특강 Ⅲ",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0754",
+    "name": "기록학특강 Ⅳ",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0758",
+    "name": "기록학특강 Ⅴ",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0751",
+    "name": "기록학특강Ⅰ",
+    "credit": "3-2-2"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0761",
+    "name": "디지털아카이빙 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0762",
+    "name": "민간기록물관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0736",
+    "name": "세계의 기록관리 체제 Ⅱ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0735",
+    "name": "세계의 기록관리 체제Ⅰ",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0734",
+    "name": "시청각기록 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0743",
+    "name": "전자기록관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0742",
+    "name": "정보공개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0733",
+    "name": "정보기술과 기록",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0763",
+    "name": "지방기록물연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0723",
+    "name": "지역사 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0000",
+    "name": "학위논문연구 및 연구윤리(기록학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0721",
+    "name": "한국고문서 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0718",
+    "name": "한국기록관리의 역사",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0920",
+    "name": "한국법제사연습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0714",
+    "name": "한국의 기록관리 체제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0738",
+    "name": "한국행정사 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0722",
+    "name": "한국현대기록 연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "HIST0725",
+    "name": "한국현대사연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0745",
+    "name": "행정법 총론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ARSC0731",
+    "name": "현행기록관리",
+    "credit": "3-3-0"
+  }
+]

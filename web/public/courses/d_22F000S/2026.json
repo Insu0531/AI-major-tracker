@@ -1,0 +1,164 @@
+[
+  {
+    "grade": "",
+    "code": "AMSE0721",
+    "name": "결정학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0716",
+    "name": "고분자과학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SCTE0802",
+    "name": "논문작성기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0714",
+    "name": "니트공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMSE0727",
+    "name": "박막재료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0795",
+    "name": "반도체재료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0713",
+    "name": "방사공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0708",
+    "name": "섬유가공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0710",
+    "name": "섬유고분자화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0718",
+    "name": "섬유공정특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0702",
+    "name": "섬유공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0705",
+    "name": "섬유물리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0720",
+    "name": "섬유역학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0703",
+    "name": "섬유재료학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0704",
+    "name": "섬유화학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMSE0724",
+    "name": "세라믹재료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMSE0720",
+    "name": "신소재공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMSE0730",
+    "name": "압광 파괴역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMSE0728",
+    "name": "에너지재료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEXT0706",
+    "name": "염색학이론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMSE0726",
+    "name": "자성재료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0793",
+    "name": "전자재료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMSE0731",
+    "name": "첨단소재 기계학습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMSE0729",
+    "name": "태양전지재료특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "SCTE0801",
+    "name": "프리젠테이션과토론기법",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "TEMA0000",
+    "name": "학위논문연구 및 연구윤리(섬유 · 신소재공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AMSE0723",
+    "name": "X선회절특론",
+    "credit": "3-3-0"
+  }
+]

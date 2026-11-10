@@ -1,0 +1,62 @@
+[
+  {
+    "grade": "",
+    "code": "ABBD0705",
+    "name": "산업융합프로젝트1",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "",
+    "code": "ABBD0706",
+    "name": "산업융합프로젝트2",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "",
+    "code": "ABBD0707",
+    "name": "산업융합프로젝트3",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "",
+    "code": "COME0812",
+    "name": "알고리즘특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0739",
+    "name": "인공지능특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ABBD0000",
+    "name": "학위논문연구 및 연구윤리(ABB)",
+    "credit": "2-1-2"
+  },
+  {
+    "grade": "",
+    "code": "ABBD0702",
+    "name": "ABB 실무자를 위한 다변수미분적분학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ABBD0704",
+    "name": "ABB 실무자를 위한 데이터마이닝",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ABBD0701",
+    "name": "ABB 실무자를 위한 선형대수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ABBD0703",
+    "name": "ABB 실무자를 위한 통계적방법론",
+    "credit": "3-3-0"
+  }
+]

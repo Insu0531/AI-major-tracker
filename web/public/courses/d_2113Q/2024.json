@@ -1,0 +1,290 @@
+[
+  {
+    "grade": "",
+    "code": "COMP0711",
+    "name": "가상현실",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0723",
+    "name": "데이타베이스시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CICE0702",
+    "name": "데이터통신",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0701",
+    "name": "디지털신호처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0741",
+    "name": "디지털통신특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CICE0716",
+    "name": "리눅스운영체제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0727",
+    "name": "멀티미디어시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CICE0843",
+    "name": "멀티미디어통신",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0778",
+    "name": "모바일컴퓨팅특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0913",
+    "name": "무선통신특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0730",
+    "name": "소프트웨어공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CICE0803",
+    "name": "신호처리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CICE0903",
+    "name": "실무수습",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0761",
+    "name": "영상및그래픽스응용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0748",
+    "name": "영상신호처리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0736",
+    "name": "영상처리특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0737",
+    "name": "운영체제특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0771",
+    "name": "위성통신시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0772",
+    "name": "유비쿼터스컴퓨팅",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0753",
+    "name": "이동통신시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CICE0706",
+    "name": "이산치수학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0738",
+    "name": "인간컴퓨터상호작용",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CICE0846",
+    "name": "인터넷기술특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0773",
+    "name": "임베디드 소프트웨어",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0832",
+    "name": "전산공학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0761",
+    "name": "전자파공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0856",
+    "name": "정보보호시스템",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0837",
+    "name": "정보보호특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CICE0847",
+    "name": "정보시스템특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CICE0901",
+    "name": "정보통신세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0907",
+    "name": "정보통신특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0822",
+    "name": "정보통신특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CICE0902",
+    "name": "정보통신프로젝트",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CICE0866",
+    "name": "지적재산권",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0957",
+    "name": "차세대인터넷기술",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0734",
+    "name": "차세대통신망특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0857",
+    "name": "초고속정보통신망",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0745",
+    "name": "컴파일러특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "CICE0707",
+    "name": "컴퓨터구조론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COME0742",
+    "name": "컴퓨터망특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0750",
+    "name": "컴퓨터비젼",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0862",
+    "name": "통신기기설계",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0971",
+    "name": "통신망설계및분석",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0858",
+    "name": "통신망운용및관리",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0906",
+    "name": "통신시스템특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "COMP0755",
+    "name": "패턴인식",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "DMTE0000",
+    "name": "학위논문연구 및 연구윤리(모바일통신공학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ELEC0743",
+    "name": "확률과정론",
+    "credit": "3-3-0"
+  }
+]

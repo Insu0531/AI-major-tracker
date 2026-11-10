@@ -1,0 +1,218 @@
+[
+  {
+    "grade": "",
+    "code": "ABCO0705",
+    "name": "개발도상국의 공중보건과 원헬스 전략",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIED0772",
+    "name": "계통분류학특강",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0712",
+    "name": "고급임상영양학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0823",
+    "name": "고급종양면역학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ABCO0706",
+    "name": "글로벌 리더십 및 커뮤니케이션",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0825",
+    "name": "나노바이오공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0826",
+    "name": "랩온어칩 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0734",
+    "name": "바이오 멤스",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOBI0739",
+    "name": "바이오매스 및 바이오화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOC0912",
+    "name": "생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ABCO0716",
+    "name": "생물다양성 현장교육 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0824",
+    "name": "생체재료공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MEDC0906",
+    "name": "세포신호전달",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ABCO0710",
+    "name": "식의약소재개발 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0919",
+    "name": "식품독성학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOAT0724",
+    "name": "식품미생물대사공학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOAT0722",
+    "name": "식품응용생화학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOAT0723",
+    "name": "식품응용의약학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOOD0731",
+    "name": "식품효소학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOAT0728",
+    "name": "약용식품개발특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FSNU0725",
+    "name": "영양과면역",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ANSC0758",
+    "name": "유전자조작방법론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIED0775",
+    "name": "유전학연구",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOAT0727",
+    "name": "응용시스템생물학 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BICO0711",
+    "name": "의생명 프로그래밍",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOBI0722",
+    "name": "의약식품유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "MESC0818",
+    "name": "줄기세포공학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOBI0731",
+    "name": "천연물 분자구조 결정론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ABCO0708",
+    "name": "천연물 정보과학 기반 신약개발",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ABCO0702",
+    "name": "첨단바이오 과학 글쓰기",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ABCO0701",
+    "name": "첨단바이오 융합 개론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ABCO0704",
+    "name": "첨단바이오 융합 글로벌 세미나",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ABCO0703",
+    "name": "첨단바이오 융합 빅데이터 분석 및 활용(AI+X)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ABCO0709",
+    "name": "첨단바이오 현장진단(POCT) 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "FOAT0725",
+    "name": "최신식품안전성연구동향 특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "ABCO0000",
+    "name": "학위논문연구 및 연구윤리(첨단바이오융합)",
+    "credit": "3-3-0"
+  }
+]

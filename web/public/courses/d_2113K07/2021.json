@@ -1,0 +1,320 @@
+[
+  {
+    "grade": "",
+    "code": "AGBL0924",
+    "name": "경제선충학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0735",
+    "name": "곤충분류학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0936",
+    "name": "곤충생리학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0737",
+    "name": "곤충생태학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0943",
+    "name": "곤충생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0938",
+    "name": "곤충수리분류학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0946",
+    "name": "곤충행동학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "BIOL0701",
+    "name": "곤충형태학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0932",
+    "name": "균근학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0922",
+    "name": "농업해충학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0929",
+    "name": "도시곤충학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0919",
+    "name": "병원미생물유전학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0731",
+    "name": "병원세균생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0918",
+    "name": "병원세균생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0719",
+    "name": "병원진균생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0917",
+    "name": "병원진균생태학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0947",
+    "name": "분자곤충학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0937",
+    "name": "산림곤충학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0941",
+    "name": "산업유용곤충학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0931",
+    "name": "살균제약리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0942",
+    "name": "생물다양성보호론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0913",
+    "name": "생물학적병해방제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0927",
+    "name": "생물학적해충방제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0702",
+    "name": "세포생물학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0911",
+    "name": "수병학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0945",
+    "name": "수서곤충학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0716",
+    "name": "시설작물병해론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0704",
+    "name": "식물검역론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0713",
+    "name": "식물바이러스학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0914",
+    "name": "식물병리생화학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0714",
+    "name": "식물병리해부학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0711",
+    "name": "식물병원균학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0712",
+    "name": "식물병원세균학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0718",
+    "name": "식물병진단학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0915",
+    "name": "식물병태생리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0715",
+    "name": "식물생리병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0933",
+    "name": "식물유행병학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0948",
+    "name": "식물의학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0729",
+    "name": "양봉학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0741",
+    "name": "응애학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0935",
+    "name": "응용곤충학세미나 2",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0734",
+    "name": "응용곤충학세미나1",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0722",
+    "name": "응용곤충학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0703",
+    "name": "응용전자현미경학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0733",
+    "name": "의용곤충학특론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0732",
+    "name": "잔디병해론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0717",
+    "name": "저장병해론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0912",
+    "name": "종합식물병해방제",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0727",
+    "name": "종합해충관리학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0934",
+    "name": "진균독소론",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0916",
+    "name": "진균분류학",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0000",
+    "name": "학위논문연구 및 연구윤리 (농생물학)",
+    "credit": "3-3-0"
+  },
+  {
+    "grade": "",
+    "code": "AGBL0944",
+    "name": "환경곤충학특론",
+    "credit": "3-3-0"
+  }
+]
