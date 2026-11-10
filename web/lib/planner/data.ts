@@ -88,8 +88,10 @@ export function buildEngineGroups(cart: CartItem[], courseByCode: Map<string, Co
   for (const item of cart) {
     const course = courseByCode.get(item.code);
     if (!course) continue;
-    let secs = course.sections.filter((s) => sectionAllowed(s, f) && !item.excluded.includes(s.id));
-    if (item.pinned) secs = secs.filter((s) => s.id === item.pinned);
+    // 고정한 분반: 사용자가 직접 고른 것이므로 정원·캠퍼스 필터와 상관없이 그 분반만 쓴다
+    const secs = item.pinned
+      ? course.sections.filter((s) => s.id === item.pinned)
+      : course.sections.filter((s) => sectionAllowed(s, f) && !item.excluded.includes(s.id));
     const byKey = new Map<string, EngineOption>();
     for (const s of secs) {
       const key = JSON.stringify(s.slots);
@@ -97,7 +99,8 @@ export function buildEngineGroups(cart: CartItem[], courseByCode: Map<string, Co
       if (!o) { o = { key, slots: s.slots, sections: [] }; byKey.set(key, o); }
       o.sections.push({ id: s.id, profs: s.profs, room: s.room, applied: s.applied, capacity: s.capacity, remote: s.tags.includes("원격") });
     }
-    groups.push({ code: course.code, name: course.name, credit: course.credit, must: item.mode === "must", options: [...byKey.values()] });
+    // 분반을 고정한 과목은 시간표에 반드시 들어간다 (기존 사이트와 같은 규칙)
+    groups.push({ code: course.code, name: course.name, credit: course.credit, must: item.mode === "must" || !!item.pinned, options: [...byKey.values()] });
   }
   return groups;
 }

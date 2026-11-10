@@ -353,7 +353,7 @@ export const CourseRow = memo(function CourseRow({
                   </div>
                 );
               })}
-              <div className="pl-hint">‘이 분반으로 고정’하면 시간표에 이 분반만 쓰고, ‘이 분반 제외’하면 이 분반은 빼고 만들어요. 아직 안 담은 과목이면 자동으로 담겨요.</div>
+              <div className="pl-hint">‘이 분반으로 고정’하면 이 과목은 시간표에 <b>반드시 이 분반으로</b> 들어가고, ‘이 분반 제외’하면 이 분반은 빼고 만들어요. 아직 안 담은 과목이면 자동으로 담겨요.</div>
             </div>
           </td>
         </tr>
