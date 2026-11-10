@@ -5,7 +5,13 @@ import { ENTRY_YEAR_MIN } from "@/lib/courses";
 import { BASE_MAJORS, isSangjuLabel, loadMajors, type MajorInfo } from "@/lib/planner/majors";
 import { buildCourses, buildEngineGroups, colorAt, loadCurriculum, loadIndex, loadSnapshot, type SectionFilter } from "@/lib/planner/data";
 import { exportTimetable, type TimetableItem } from "@/lib/planner/exportImage";
-import { deletePlan, loadPlans, readLocal, renamePlan, savePlan, writeLocal, type SavedPlan } from "@/lib/planner/storage";
+import { deletePlan, loadPlans, markMigrated, readLocal, renamePlan, savePlan, writeLocal, type SavedPlan } from "@/lib/planner/storage";
+import { accountsEnabled } from "@/lib/supabase";
+import {
+  acceptInvite, addCloudPlan, deleteAccount, deleteCloudPlan, getProfile, listCloudPlans, renameCloudPlan,
+  setFeatured, signInWithGoogle, signOut, unsetFeatured, useSession, type Profile,
+} from "@/lib/account";
+import FriendsPanel from "@/components/planner/FriendsPanel";
 import { trackSave } from "@/lib/trackSave";
 import { recommendFill, type Recommendation } from "@/lib/planner/recommend";
 import { analyticsEnabled, initAnalytics, isOptedOut, setOptOut, track } from "@/lib/analytics";
@@ -94,7 +100,13 @@ export default function Planner() {
   const [running, setRunning] = useState(false);
   const [selIdx, setSelIdx] = useState(0);
   const [profPick, setProfPick] = useState<Record<string, string>>({});
-  const [modal, setModal] = useState<null | "codes" | "save" | "saved" | "cart" | "bulk">(null);
+  const [modal, setModal] = useState<null | "codes" | "save" | "saved" | "cart" | "bulk" | "friends" | "invite">(null);
+  /* ── 계정 (구글 로그인 · 보관함 동기화 · 친구) ── */
+  const { session } = useSession();
+  const loggedIn = !!session;
+  const [me, setMe] = useState<Profile | null>(null);
+  const [cloudPlans, setCloudPlans] = useState<SavedPlan[]>([]);
+  const [saveFeatured, setSaveFeatured] = useState(true);
   const [sheet, setSheet] = useState<null | "calendar" | "feedback">(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [tour, setTour] = useState(false);
@@ -107,11 +119,66 @@ export default function Planner() {
   const labelOf = useCallback((key: string) => majorByKey.get(key)?.label ?? key, [majorByKey]);
   const [saveName, setSaveName] = useState("");
   const [plans, setPlans] = useState<SavedPlan[]>(loadPlans);
+  const [toastMsg, setToastMsg] = useState("");
+  const flash = useCallback((msg: string) => { setToastMsg(msg); setTimeout(() => setToastMsg(""), 1800); }, []);
+
+  const refreshCloud = useCallback(async () => {
+    try {
+      const [list, prof] = await Promise.all([listCloudPlans(), getProfile()]);
+      setCloudPlans(list);
+      setMe(prof);
+    } catch { /* 네트워크 오류 시 다음에 다시 */ }
+  }, []);
+  const reloadPlans = () => { setPlans(loadPlans()); if (loggedIn) void refreshCloud(); };
+
+  useEffect(() => {
+    if (!loggedIn) return;
+    let alive = true;
+    Promise.all([listCloudPlans(), getProfile()])
+      .then(([list, prof]) => { if (alive) { setCloudPlans(list); setMe(prof); } })
+      .catch(() => { /* 네트워크 오류 시 다음에 다시 */ });
+    track("logged_in");
+    return () => { alive = false; };
+  }, [loggedIn]);
+
+  // 초대 링크(?invite=코드)로 들어오면 코드를 기억해 두고, 로그인되어 있으면 바로 친구 맺기
+  const INVITE_KEY = "knu_pending_invite";
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    const code = url.searchParams.get("invite");
+    if (!code) return;
+    writeLocal(INVITE_KEY, code);
+    url.searchParams.delete("invite");
+    window.history.replaceState(null, "", url.pathname + url.search + url.hash);
+  }, []);
+  useEffect(() => {
+    const code = readLocal<string>(INVITE_KEY, "");
+    if (!code || !accountsEnabled()) return;
+    if (!loggedIn) { const t = setTimeout(() => setModal("invite"), 0); return () => clearTimeout(t); }
+    writeLocal(INVITE_KEY, "");
+    acceptInvite(code)
+      .then((name) => { flash(`${name}님과 친구가 됐어요`); track("friend_added", { via: "link" }); })
+      .catch((e: Error) => flash(e.message));
+  }, [loggedIn, flash]);
+
+  /** 이 브라우저 보관함을 계정으로 옮기기 (기존 사이트 저장본은 원본을 두고 목록에서만 숨김) */
+  const migrateLocal = async () => {
+    const local = loadPlans();
+    let moved = 0;
+    for (const p of local) {
+      try {
+        await addCloudPlan({ name: p.name, sem: p.sem, items: p.items, savedAt: p.savedAt });
+        if (p.legacy) markMigrated([p.id]); else deletePlan(p);
+        moved++;
+      } catch { /* 하나 실패해도 나머지 계속 */ }
+    }
+    track("plans_migrated", { count: moved });
+    flash(`${moved}개를 계정으로 옮겼어요`);
+    reloadPlans();
+  };
   const [preview, setPreview] = useState<SavedPlan | null>(null);
-  const [toast, setToast] = useState("");
 
   const update = useCallback((patch: Partial<Persisted>) => setSt((s) => ({ ...s, ...patch })), []);
-  const flash = (msg: string) => { setToast(msg); setTimeout(() => setToast(""), 1800); };
 
   /* ── 초기화: 저장된 상태 + 학기 목록 ── */
   useEffect(() => {
@@ -337,17 +404,22 @@ export default function Planner() {
     return () => { if (had) root.classList.add("dark"); };
   }, []);
 
-  const doSave = () => {
+  const doSave = async () => {
     if (!view || !st.sem) return;
-    const name = saveName.trim() || `${title} ${plans.length + 1}`;
-    const saved = savePlan({ name, sem: st.sem, items: view.items.map((i) => ({ code: i.code, name: i.name, prof: i.prof, room: i.room, credit: i.credit, slots: i.slots, color: i.color, sectionIds: i.sectionIds })) });
-    if (!saved) { flash("저장 공간이 부족해요"); return; }
+    const name = saveName.trim() || `${title} ${plans.length + cloudPlans.length + 1}`;
+    const items = view.items.map((i) => ({ code: i.code, name: i.name, prof: i.prof, room: i.room, credit: i.credit, slots: i.slots, color: i.color, sectionIds: i.sectionIds }));
+    if (loggedIn) {
+      try {
+        const saved = await addCloudPlan({ name, sem: st.sem, items });
+        if (saveFeatured) await setFeatured(saved.id);
+      } catch (e) { flash((e as Error).message); return; }
+    } else if (!savePlan({ name, sem: st.sem, items })) { flash("저장 공간이 부족해요"); return; }
     logSave("라이브러리 저장");
-    track("plan_saved", { courses: view.items.length });
-    setPlans(loadPlans());
+    track("plan_saved", { courses: view.items.length, cloud: loggedIn, featured: loggedIn && saveFeatured });
+    reloadPlans();
     setModal(null);
     setSaveName("");
-    flash("보관함에 저장했어요");
+    flash(loggedIn && saveFeatured ? "저장하고 대표 시간표로 정했어요" : "보관함에 저장했어요");
   };
 
   const copy = async (text: string) => {
@@ -355,6 +427,59 @@ export default function Planner() {
   };
 
   const sems = index ? sortSems(Object.keys(index.semesters)) : [];
+
+  const doRename = async (p: SavedPlan, name: string) => {
+    if (!name) return;
+    if (p.cloud) await renameCloudPlan(p.id, name).catch((e: Error) => flash(e.message));
+    else renamePlan(p, name);
+    reloadPlans();
+  };
+  const doDelete = async (p: SavedPlan) => {
+    if (!window.confirm(`'${p.name}'을(를) 삭제할까요?`)) return;
+    if (p.cloud) await deleteCloudPlan(p.id).catch((e: Error) => flash(e.message));
+    else deletePlan(p);
+    reloadPlans();
+  };
+  const toggleFeatured = async (p: SavedPlan) => {
+    try {
+      if (p.featured) await unsetFeatured(p.id); else await setFeatured(p.id);
+      track("featured_set", { on: !p.featured });
+      flash(p.featured ? "대표 시간표를 해제했어요" : `${semLabel(p.sem)} 대표 시간표로 정했어요`);
+    } catch (e) { flash((e as Error).message); }
+    reloadPlans();
+  };
+
+  const renderPlanRow = (p: SavedPlan) => (
+    <div key={p.id} className="pl-code-row">
+      {renaming?.id === p.id ? (
+        <input autoFocus className="pl-field" value={renaming.name}
+          onChange={(e) => setRenaming({ id: p.id, name: e.target.value })}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") { void doRename(p, renaming.name.trim()); setRenaming(null); }
+            if (e.key === "Escape") setRenaming(null);
+          }}
+          onBlur={() => { void doRename(p, renaming.name.trim()); setRenaming(null); }} />
+      ) : (
+        <button className="pl-course-main" onClick={() => setPreview(p)}>
+          <div style={{ fontWeight: 600 }}>
+            {p.name}{" "}
+            {p.featured && <span className="pl-badge cat-major">대표</span>}
+            {p.legacy && <span className="pl-badge">기존 사이트</span>}
+          </div>
+          <div className="pl-hint">{semLabel(p.sem)} · {p.items.reduce((s, i) => s + i.credit, 0)}학점 · {p.items.length}과목</div>
+        </button>
+      )}
+      <div style={{ display: "flex", gap: 4, flexWrap: "wrap", justifyContent: "flex-end" }}>
+        {p.cloud && (
+          <button className="pl-btn sm" aria-pressed={!!p.featured} onClick={() => toggleFeatured(p)} title="친구에게 보이는 이번 학기 내 시간표">
+            {p.featured ? "대표 해제" : "대표로"}
+          </button>
+        )}
+        <button className="pl-btn sm" onClick={() => setRenaming({ id: p.id, name: p.name })}>이름</button>
+        <button className="pl-btn sm" onClick={() => doDelete(p)}>삭제</button>
+      </div>
+    </div>
+  );
   const collectedAt = st.sem ? index?.semesters[st.sem]?.collectedAt : undefined;
   const step = st.step;
   const goStep = (n: 1 | 2 | 3) => {
@@ -378,7 +503,10 @@ export default function Planner() {
           ))}
         </nav>
         <div className="pl-top-right">
-          <button className="pl-btn ghost" onClick={() => { setPlans(loadPlans()); setModal("saved"); }}>보관함{plans.length ? ` ${plans.length}` : ""}</button>
+          {accountsEnabled() && (loggedIn
+            ? <button className="pl-btn ghost" onClick={() => { setModal("friends"); track("friends_opened"); }}>친구</button>
+            : <button className="pl-btn ghost" onClick={() => { track("login_clicked"); void signInWithGoogle(); }}>구글 로그인</button>)}
+          <button className="pl-btn ghost" onClick={() => { reloadPlans(); setModal("saved"); }}>보관함{plans.length + cloudPlans.length ? ` ${plans.length + cloudPlans.length}` : ""}</button>
           <div className="pl-pop">
             <button className="pl-btn ghost" aria-expanded={menuOpen} aria-label="메뉴" onClick={() => setMenuOpen((v) => !v)}>메뉴</button>
             {menuOpen && (
@@ -386,6 +514,12 @@ export default function Planner() {
                 <div style={{ position: "fixed", inset: 0, zIndex: 29 }} onClick={() => setMenuOpen(false)} />
                 <div className="pl-pop-panel pl-menu" style={{ left: "auto", right: 0, width: 220 }}>
                   <div className="pl-pop-list">
+                    {loggedIn && (
+                      <div className="pl-menu-account">
+                        <b>{me?.display_name ?? "로그인됨"}</b>
+                        <span>{session?.user.email}</span>
+                      </div>
+                    )}
                     {step > 1 && <button onClick={() => { setMenuOpen(false); setTour(true); }}>사용법 보기</button>}
                     <button onClick={() => { setMenuOpen(false); setSheet("calendar"); track("menu_calendar"); }}>학사일정</button>
                     <button onClick={() => { setMenuOpen(false); setSheet("feedback"); track("menu_feedback"); }}>피드백 · 응원</button>
@@ -393,6 +527,15 @@ export default function Planner() {
                     <a href="/old" onClick={() => track("old_version_opened")}>구버전 보기</a>
                     <a href="/privacy" target="_blank" rel="noopener">개인정보처리방침</a>
                     <a href="mailto:insu0531@knu.ac.kr">문의 · insu0531@knu.ac.kr</a>
+                    {loggedIn && <button onClick={async () => { setMenuOpen(false); await signOut(); setCloudPlans([]); setMe(null); flash("로그아웃했어요"); }}>로그아웃</button>}
+                    {loggedIn && (
+                      <button onClick={async () => {
+                        setMenuOpen(false);
+                        if (!window.confirm("회원 탈퇴하면 계정에 저장한 시간표와 친구 관계가 모두 바로 삭제되고 되돌릴 수 없어요. 탈퇴할까요?")) return;
+                        try { await deleteAccount(); setCloudPlans([]); setMe(null); flash("탈퇴했어요. 그동안 고마웠어요"); }
+                        catch (e) { flash((e as Error).message); }
+                      }}>회원 탈퇴</button>
+                    )}
                     {analyticsEnabled() && (
                       <button onClick={() => { const next = !optOut; setOptOut(next); setOptOutState(next); flash(next ? "사용 통계를 보내지 않아요" : "사용 통계 보내기를 다시 켰어요"); }}>
                         사용 통계 {optOut ? "보내기 켜기" : "보내지 않기"}
@@ -570,6 +713,22 @@ export default function Planner() {
                 </div>
               </>
             )}
+            {modal === "friends" && loggedIn && (
+              <>
+                <div className="pl-modal-head"><h3>친구</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <FriendsPanel sems={sems} defaultSem={st.sem ?? sems[sems.length - 1]} flash={flash} />
+              </>
+            )}
+            {modal === "invite" && (
+              <>
+                <div className="pl-modal-head"><h3>친구 초대를 받았어요</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-body">
+                  <div>구글 계정으로 로그인하면 바로 친구가 돼요. 서로의 <b>대표 시간표</b>(과목명·시간·교수님)를 볼 수 있어요.</div>
+                  <button className="pl-btn primary lg" onClick={() => { track("login_clicked", { from: "invite" }); void signInWithGoogle(); }}>구글로 로그인하고 친구 되기</button>
+                  <button className="pl-link" style={{ alignSelf: "center" }} onClick={() => { writeLocal("knu_pending_invite", ""); setModal(null); }}>괜찮아요</button>
+                </div>
+              </>
+            )}
             {modal === "bulk" && (
               <>
                 <div className="pl-modal-head"><h3>이미지 {results.length}장 저장</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
@@ -585,8 +744,16 @@ export default function Planner() {
                 <div className="pl-modal-body">
                   <input autoFocus className="pl-field" placeholder={`${title} ${plans.length + 1}`} value={saveName}
                     onChange={(e) => setSaveName(e.target.value)} onKeyDown={(e) => e.key === "Enter" && doSave()} />
+                  {loggedIn && (
+                    <label className="pl-check">
+                      <input type="checkbox" checked={saveFeatured} onChange={(e) => setSaveFeatured(e.target.checked)} />
+                      {st.sem ? semLabel(st.sem) : "이 학기"} 대표 시간표로 정하기 <span className="pl-muted">(친구에게 보여요)</span>
+                    </label>
+                  )}
                   <button className="pl-btn primary" onClick={doSave}>저장</button>
-                  <div className="pl-muted pl-small">이 브라우저에만 저장돼요.</div>
+                  <div className="pl-muted pl-small">
+                    {loggedIn ? "계정에 저장돼서 다른 기기에서도 볼 수 있어요." : accountsEnabled() ? "이 브라우저에만 저장돼요. 구글로 로그인하면 계정에 저장돼요." : "이 브라우저에만 저장돼요."}
+                  </div>
                 </div>
               </>
             )}
@@ -605,31 +772,24 @@ export default function Planner() {
                         <button className="pl-btn primary" style={{ flex: 1 }} onClick={() => doImage(preview.items, preview.name)}>이미지 저장</button>
                       </div>
                     </>
-                  ) : plans.length === 0 ? (
+                  ) : plans.length + cloudPlans.length === 0 ? (
                     <div className="pl-empty">저장한 시간표가 없어요.</div>
                   ) : (
-                    plans.map((p) => (
-                      <div key={p.id} className="pl-code-row">
-                        {renaming?.id === p.id ? (
-                          <input autoFocus className="pl-field" value={renaming.name}
-                            onChange={(e) => setRenaming({ id: p.id, name: e.target.value })}
-                            onKeyDown={(e) => {
-                              if (e.key === "Enter" && renaming.name.trim()) { renamePlan(p, renaming.name.trim()); setRenaming(null); setPlans(loadPlans()); }
-                              if (e.key === "Escape") setRenaming(null);
-                            }}
-                            onBlur={() => { if (renaming.name.trim()) renamePlan(p, renaming.name.trim()); setRenaming(null); setPlans(loadPlans()); }} />
-                        ) : (
-                          <button className="pl-course-main" onClick={() => setPreview(p)}>
-                            <div style={{ fontWeight: 600 }}>{p.name} {p.legacy && <span className="pl-badge">기존 사이트</span>}</div>
-                            <div className="pl-hint">{semLabel(p.sem)} · {p.items.reduce((s, i) => s + i.credit, 0)}학점 · {p.items.length}과목</div>
-                          </button>
-                        )}
-                        <div style={{ display: "flex", gap: 4 }}>
-                          <button className="pl-btn sm" onClick={() => setRenaming({ id: p.id, name: p.name })}>이름</button>
-                          <button className="pl-btn sm" onClick={() => { if (window.confirm(`'${p.name}'을(를) 삭제할까요?`)) { deletePlan(p); setPlans(loadPlans()); } }}>삭제</button>
-                        </div>
-                      </div>
-                    ))
+                    <>
+                      {loggedIn && cloudPlans.length > 0 && <div className="pl-label">내 계정</div>}
+                      {loggedIn && cloudPlans.map(renderPlanRow)}
+                      {plans.length > 0 && (
+                        <>
+                          {loggedIn && (
+                            <div className="pl-migrate">
+                              <span>이 브라우저에만 있는 시간표 {plans.length}개</span>
+                              <button className="pl-btn sm primary" onClick={migrateLocal}>계정으로 옮기기</button>
+                            </div>
+                          )}
+                          {plans.map(renderPlanRow)}
+                        </>
+                      )}
+                    </>
                   )}
                 </div>
               </>
@@ -646,7 +806,7 @@ export default function Planner() {
         </div>
       )}
       <GuideTour steps={step === 3 ? TOUR_3 : TOUR_2} run={tour && step > 1} onClose={() => { setTour(false); writeLocal(TOUR_KEY, Date.now()); }} />
-      {toast && <div className="pl-toast" role="status">{toast}</div>}
+      {toastMsg && <div className="pl-toast" role="status">{toastMsg}</div>}
     </div>
   );
 }

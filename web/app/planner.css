@@ -445,3 +445,13 @@
 /* 제외한 분반: 글자만 흐리게, 버튼은 또렷하게 */
 .pl-sec.excluded { opacity: 1; }
 .pl-sec.excluded > :not(.pl-sec-actions) { opacity: 0.4; }
+
+/* 계정 · 친구 */
+.pl-check { display: flex; align-items: center; gap: var(--s2); font-size: 14px; cursor: pointer; }
+.pl-check input { width: 18px; height: 18px; accent-color: var(--accent); }
+.pl-migrate { display: flex; align-items: center; justify-content: space-between; gap: var(--s3); padding: var(--s3) var(--s4); margin-top: var(--s3); border-radius: var(--radius); background: var(--pick-weak); color: var(--pick); font-size: 14px; font-weight: 600; }
+.pl-menu-account { padding: var(--s3) var(--s4); box-shadow: inset 0 -1px 0 var(--line); display: flex; flex-direction: column; }
+.pl-menu-account span { font-size: 13px; color: var(--ink-3); overflow: hidden; text-overflow: ellipsis; }
+.pl-friend-row { width: 100%; border: none; cursor: pointer; text-align: left; margin-bottom: var(--s1); }
+.pl-friend-row:hover { background: var(--sunken-2); }
+.pl-friend-invite { padding: var(--s4); border-radius: var(--radius); background: var(--sunken); }

@@ -265,6 +265,15 @@ SavedTimetable = { id, name, savedAt, sem: "2026-1", major, majorLabel, entryYea
   수동 실행(Run workflow)에서 학기 지정·이수체계 포함 선택 가능. **워크플로 파일이 main에 있어야 예약 실행됨.**
 - 수집기는 내용이 같으면 파일을 다시 쓰지 않음(불필요한 커밋 방지).
 
+### 계정 · 친구 (Supabase, 2026-11-11)
+- 설정: `supabase/README.md` (Supabase 서울 리전 + 구글 OAuth + Vercel 환경변수 `NEXT_PUBLIC_SUPABASE_URL`/`NEXT_PUBLIC_SUPABASE_ANON_KEY`). 환경변수 없으면 계정 기능 전체가 숨겨짐.
+- DB: `supabase/schema.sql` — profiles(이름·초대 코드), plans(보관함, 학기별 featured 1개), friendships(양방향 2행). RLS로 내 것만, 친구 데이터는 security definer 함수로만:
+  set_featured, accept_invite, remove_friend, get_friends, get_friend_timetable(강의실·분반 번호 제거), regenerate_invite, delete_account.
+  로컬 PostgreSQL 16 + auth 스키마 흉내로 권한 시나리오 검증함(타인 데이터·비친구·초대코드 조작·탈퇴 cascade).
+- 클라이언트: `lib/supabase.ts`(PKCE), `lib/account.ts`(useSession·보관함 CRUD·친구 RPC), `components/planner/FriendsPanel.tsx`.
+  초대 링크 `/?invite=코드` → localStorage `knu_pending_invite`에 기억 → 로그인 후 자동 수락. 이 브라우저 보관함은 "계정으로 옮기기"(기존 사이트 저장본은 원본 유지, `knu_planner_migrated_v1`로 숨김).
+- 범위: 로그인·동기화·대표 시간표·친구 추가/보기/삭제·탈퇴. 공강 맞추기는 이번 범위 아님. 친구에게는 과목명·시간·교수님만(사용자 결정).
+
 ### 빈 시간 교양 추천 (`lib/planner/recommend.ts`)
 - 3단계 시간표 아래 "이 시간표 빈 시간에 넣기 좋은 교양" 최대 8개. 규칙 점수: 공강 요일 유지 +30(새 평일 -15, 새 주말 -25), 앞뒤 수업과 이어짐 +10, 2시간 넘는 공강 생기면 -10, 9시 전 -8/18시 후 -6, 정원 여유 (1-신청/정원)×10, SDG·인문교양 +3. 같은 시간대는 최대 2개.
 - "이 분반 넣기" = 그 분반으로 고정 + 꼭 넣을 과목으로 담음. 이벤트 `rec_added`.
