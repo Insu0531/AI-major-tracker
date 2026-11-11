@@ -85,7 +85,7 @@ export default function ResultPanel({
     return <div className="pl-empty">조건에 맞는 분반이 없는 필수 과목이 있어요.<br /><b>{response.emptyMust.join(", ")}</b><br />공강·시간·교수 조건이나 분반 제외를 확인해 주세요.</div>;
   }
   if (response && !running && results.length === 0) {
-    return <div className="pl-empty">조건을 모두 만족하는 시간표가 없어요.<br />필수 과목끼리 시간이 겹치거나, 학점·공강 조건이 너무 좁을 수 있어요.</div>;
+    return <div className="pl-empty">조건을 모두 만족하는 시간표가 없어요.<br />필수 과목끼리 시간이 겹치거나, 학점·공강·시간대 조건이 너무 좁을 수 있어요.</div>;
   }
   if (!view || !m) return <div className="pl-empty">시간표를 만드는 중이에요…</div>;
 

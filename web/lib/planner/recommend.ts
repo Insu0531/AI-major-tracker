@@ -77,6 +77,7 @@ export function recommendFill({
       if (cond.noRemote && sec.tags.includes("원격")) continue;
       if (sec.profs.some((p) => cond.excludeProfs.includes(p))) continue;
       if (overlaps(sec.slots, busy)) continue;
+      if (overlaps(sec.slots, cond.blockedSlots ?? [])) continue;
       if (sec.slots.some(([d, s, e]) => cond.daysOff.includes(d) || (cond.lunchFree && s < 780 && e > 720))) continue;
 
       let score = 0;

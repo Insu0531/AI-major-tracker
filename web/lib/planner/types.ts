@@ -76,15 +76,14 @@ export type CartItem = {
   excluded: string[];
 };
 
-export type SortKey = "recommended" | "freeDays" | "lateStart" | "earlyEnd" | "gaps" | "credit";
+export type SortKey = "credit" | "recommended" | "freeDays" | "gaps";
 
+/** 3단계 정렬 칩 (이 순서대로 보임). 기본은 학점 높은 순 (2026-11-11 사용자 요청, 늦게 시작·일찍 끝남은 뺌) */
 export const SORT_LABEL: Record<SortKey, string> = {
+  credit: "학점 높은 순",
   recommended: "추천순",
   freeDays: "공강 많은 순",
-  lateStart: "늦게 시작",
-  earlyEnd: "일찍 끝남",
   gaps: "빈 시간 적은 순",
-  credit: "학점 높은 순",
 };
 
 export type Conditions = {
@@ -106,6 +105,10 @@ export type Conditions = {
   maxPerDay: number;
   /** 원격강좌 분반 빼기 */
   noRemote: boolean;
+  /** 빼고 싶은 시간: 이 칸(30분 단위 [요일, 시작분, 끝분])에 걸리는 분반은 쓰지 않음 */
+  blockedSlots: Slot[];
+  /** 꼭 넣을 시간: 이 칸이 전부 수업으로 채워진 시간표만 */
+  requiredSlots: Slot[];
   sort: SortKey;
 };
 
@@ -122,7 +125,9 @@ export const DEFAULT_CONDITIONS: Conditions = {
   maxGap: 0,
   maxPerDay: 0,
   noRemote: false,
-  sort: "recommended",
+  blockedSlots: [],
+  requiredSlots: [],
+  sort: "credit",
 };
 
 /* ── 엔진 입출력 (Worker로 전달되므로 직렬화 가능한 값만) ── */
