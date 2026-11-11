@@ -862,3 +862,25 @@
 .pl-intro-sample .pl-tt-block span:empty { display: none; }
 .pl-intro-sample-tag { position: absolute; top: 10px; right: 12px; font-size: 11px; font-weight: 700; color: var(--ink-3); background: var(--sunken); padding: 2px 8px; border-radius: 10px; }
 @media (max-width: 900px) { .pl-intro-sample { display: none; } }
+/* 8. 불러오는 중 뼈대 · 빈 화면 그림 */
+@keyframes pl-shimmer { 0% { background-position: -240px 0; } 100% { background-position: 240px 0; } }
+.pl-skel { flex: 1; padding: var(--s6) var(--s5); display: flex; flex-direction: column; gap: 10px; max-width: 1100px; width: 100%; margin: 0 auto; }
+.pl-skel-bar, .pl-skel-row span, .pl-skel-grid span {
+  border-radius: 6px; background: linear-gradient(90deg, var(--sunken) 0, var(--sunken-2) 120px, var(--sunken) 240px) 0 0 / 480px 100%;
+  animation: pl-shimmer 1.2s linear infinite;
+}
+.pl-skel-bar { height: 22px; }
+.pl-skel-bar.w40 { width: 40%; height: 28px; margin-bottom: 4px; }
+.pl-skel-bar.w70 { width: 70%; margin-bottom: 12px; }
+.pl-skel-row { display: grid; grid-template-columns: 28px 2fr 1fr 1.4fr; gap: 16px; align-items: center; padding: 8px 0; box-shadow: inset 0 -1px 0 var(--line); }
+.pl-skel-row span { height: 14px; }
+.pl-skel-row span:first-child { height: 28px; border-radius: 14px; }
+.pl-skel-tt { padding: var(--s5); }
+.pl-skel-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; height: 360px; padding: 12px; border-radius: var(--radius-lg); background: var(--surface); box-shadow: var(--shadow); }
+.pl-skel-grid span { border-radius: 2px; margin-top: calc(var(--i) * 28px + 10px); height: 90px; }
+.pl-empty::before {
+  content: ""; display: block; width: 44px; height: 44px; margin: 0 auto var(--s3); border-radius: 22px; background: var(--sunken);
+  -webkit-mask: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='4' y='5' width='16' height='15' rx='2'/%3E%3Cpath d='M4 10h16M9 3v4M15 3v4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: center; background-size: 22px;
+}

@@ -773,7 +773,15 @@ export default function Planner() {
           </div>
         </div>
       ) : !snapshot ? (
-        <div className="pl-loading">{loadError ? "강의 데이터를 불러오지 못했어요. 잠시 후 새로고침해 주세요." : "강의 정보 불러오는 중…"}</div>
+        loadError
+          ? <div className="pl-loading">강의 데이터를 불러오지 못했어요. 잠시 후 새로고침해 주세요.</div>
+          : (
+            // 표 모양 뼈대 (빈 화면 대신)
+            <div className="pl-skel" role="status" aria-label="강의 정보 불러오는 중">
+              <div className="pl-skel-bar w40" /><div className="pl-skel-bar w70" />
+              {Array.from({ length: 8 }, (_, i) => <div key={i} className="pl-skel-row"><span /><span /><span /><span /></div>)}
+            </div>
+          )
       ) : step === 2 ? (
         <div className="pl-body pl-enter">
           <div className="pl-split">

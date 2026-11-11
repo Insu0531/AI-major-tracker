@@ -187,7 +187,14 @@ export default function ResultPanel({
   if (response && !running && results.length === 0) {
     return emptyWithAdded(<>조건을 모두 만족하는 시간표가 없어요.<br />{addedRecs.length > 0 ? "방금 담은 과목 때문일 수 있어요. 아래에서 빼 보세요." : "필수 과목끼리 시간이 겹치거나, 학점·공강·시간대 조건이 너무 좁을 수 있어요."}</>);
   }
-  if (!view || !m) return <div className="pl-empty">시간표를 만드는 중이에요…</div>;
+  if (!view || !m) return (
+    // 시간표 모양 뼈대 + 안내
+    <div className="pl-skel pl-skel-tt" role="status" aria-label="시간표를 만드는 중">
+      <div className="pl-skel-bar w40" />
+      <div className="pl-skel-grid">{Array.from({ length: 5 }, (_, i) => <span key={i} style={{ ["--i" as string]: i }} />)}</div>
+      <div className="pl-hint" style={{ textAlign: "center" }}>겹치지 않는 시간표를 찾는 중이에요…</div>
+    </div>
+  );
 
   const offDays = DAY_NAMES.slice(0, 5).filter((_, d) => !view.items.some((it) => it.slots.some(([dd]) => dd === d)));
 
