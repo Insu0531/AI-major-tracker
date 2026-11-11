@@ -803,7 +803,7 @@ export default function Planner() {
               const short = Math.max(0, target - credit);
               return (
                 <button className="pl-bar-summary" onClick={() => setModal("cart")} aria-label={`${cart.length}과목, ${credit}학점 담음, 목표 ${target}학점`}>
-                  <b>{cart.length}과목 담음</b> <span className="pl-bar-credit">{credit} / {target}학점</span>
+                  <b key={`n${cart.length}`} className="pl-bump">{cart.length}과목 담음</b> <span key={`c${credit}`} className="pl-bar-credit pl-bump">{credit} / {target}학점</span>
                   <span className="pl-credit-bar" aria-hidden><span style={{ width: `${Math.min(100, (credit / target) * 100)}%` }} data-full={short === 0} /></span>
                   <div className="pl-hint">{short > 0 ? `목표까지 ${short}학점 더 담으면 좋아요 | 시간이 겹치면 다 못 넣을 수 있어 넉넉히` : "목표 학점만큼 담았어요 | 겹치지 않게 최대한 넣어 드려요"}</div>
                 </button>

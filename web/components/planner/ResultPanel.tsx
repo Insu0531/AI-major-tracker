@@ -23,9 +23,9 @@ const REC_TABS: { key: RecTab; label: string; hint: string }[] = [
   { key: "gyoyang", label: "교양 추천", hint: "교양·일반선택" },
 ];
 
-function RecRow({ r, onAdd, showSection, cont }: { r: Recommendation; onAdd: (r: Recommendation) => void; showSection?: boolean; cont?: boolean }) {
+function RecRow({ r, onAdd, showSection, cont, i = 0 }: { r: Recommendation; onAdd: (r: Recommendation) => void; showSection?: boolean; cont?: boolean; i?: number }) {
   return (
-    <div className={`pl-rec${cont ? " cont" : ""}`}>
+    <div className={`pl-rec${cont ? " cont" : ""}`} style={{ ["--i" as string]: Math.min(i, 10) }}>
       <div className="pl-rec-main">
         {cont ? (
           <div className="pl-rec-name"><span className="pl-rec-sec">{r.section.id.split("-").pop()}분반</span></div>
@@ -115,6 +115,10 @@ export default function ResultPanel({
     try { localStorage.setItem("knu_fill_open", open ? "1" : "0"); } catch { /* 무시 */ }
   };
   const [listOpen, setListOpen] = useState(false);
+  // ‹ › 로 넘긴 방향 (시간표가 그쪽으로 살짝 밀리며 바뀜)
+  const [prevIdx, setPrevIdx] = useState(selIdx);
+  const [dir, setDir] = useState(0);
+  if (selIdx !== prevIdx) { setDir(selIdx > prevIdx ? 1 : -1); setPrevIdx(selIdx); }
   const [moreOpen, setMoreOpen] = useState(false);
   useEffect(() => {
     if (!moreOpen) return;
@@ -239,7 +243,7 @@ export default function ResultPanel({
         )}
       </div>
       <div className="pl-scroll">
-        <div className="pl-tt-wrap" key={selIdx}>
+        <div className="pl-tt-wrap" key={selIdx} data-dir={dir > 0 ? "next" : dir < 0 ? "prev" : undefined}>
           <Timetable
             items={view.items}
             choices={Object.fromEntries(view.items.map((i) => [i.code, { options: i.options, chosen: i.chosen, decided: i.decided }]))}
@@ -270,7 +274,7 @@ export default function ResultPanel({
             <div className="pl-fill-body">
               <div className="pl-fill-sub">빈 시간에 들어가는 분반 <span className="pl-muted">{new Set(searchRecs.map((r) => r.course.code)).size}과목 | {searchRecs.length}개 분반</span></div>
               {searchRecs.length > 0
-                ? searchRecs.map((r, i) => <RecRow key={r.section.id} r={r} onAdd={onAddRec} showSection cont={i > 0 && searchRecs[i - 1].course.code === r.course.code} />)
+                ? searchRecs.map((r, i) => <RecRow key={r.section.id} r={r} i={i} onAdd={onAddRec} showSection cont={i > 0 && searchRecs[i - 1].course.code === r.course.code} />)
                 : <div className="pl-hint pl-fill-none">검색한 과목 중 지금 시간표 빈 시간(공강·시간대·학점 조건 포함)에 들어가는 분반이 없어요. 아래 목록에서 직접 담으면 시간표를 다시 짜 드려요.</div>}
               <div className="pl-fill-sub">전체 검색 결과</div>
               {quickAdd(q)}
@@ -294,7 +298,7 @@ export default function ResultPanel({
                     {curTab === "major" ? "빈 시간에 그대로 들어가는 전공 과목은 없어요. 아래에서 담아 보면 다른 과목 분반을 바꿔 가며 다시 짜 드려요." : "지금 조건으로 빈 시간에 들어가는 교양이 없어요. 학점 상한이나 공강 조건을 바꿔 보세요."}
                   </div>
                 )}
-                {recs[curTab].map((r) => <RecRow key={r.section.id} r={r} onAdd={onAddRec} />)}
+                {recs[curTab].map((r, i) => <RecRow key={r.section.id} r={r} i={i} onAdd={onAddRec} />)}
                 {curTab === "major" && (
                   <>
                     <div className="pl-fill-sub">다른 전공 과목 <span className="pl-muted">| 시간이 겹쳐도 담으면 시간표를 다시 짜 드려요</span></div>

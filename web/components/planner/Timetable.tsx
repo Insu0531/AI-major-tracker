@@ -47,7 +47,7 @@ export default function Timetable({
           {Array.from({ length: days }, (_, d) => (
             <div key={d} className="pl-tt-col">
               {hours.map((h, i) => <div key={h} className="pl-tt-line" style={{ top: `calc(var(--hour) * ${i})` }} />)}
-              {items.flatMap((it) =>
+              {items.flatMap((it, ii) =>
                 mergeSlots(it.slots)
                   .filter(([day]) => day === d)
                   .map(([, s, e]) => {
@@ -61,6 +61,8 @@ export default function Timetable({
                         className={`pl-tt-block${pickable ? " pickable" : ""}${isOpen ? " open" : ""}`}
                         title={pickable ? undefined : `${it.name}\n${it.prof}\n${it.room}`}
                         style={{
+                          // 결과를 바꿀 때 과목 순서대로 살짝 차례로 나타남 (planner.css .pl-tt-block)
+                          ["--i" as string]: ii,
                           background: it.color,
                           top: `calc(var(--hour) * ${(s - h0 * 60) / 60} + 1px)`,
                           height: `calc(var(--hour) * ${(e - s) / 60} - 2px)`,
