@@ -115,6 +115,7 @@ export default function ResultPanel({
     try { localStorage.setItem("knu_fill_open", open ? "1" : "0"); } catch { /* 무시 */ }
   };
   const [listOpen, setListOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
 
   if (cartEmpty) {
     return (
@@ -190,13 +191,26 @@ export default function ResultPanel({
         <div className="pl-actions" data-tour="actions">
           <button className="pl-btn primary" onClick={onImage}>이미지 저장</button>
           <button className="pl-btn pl-kakao" onClick={onKakao}>카톡 공유</button>
-          <button className="pl-btn" onClick={onSave}>보관함에 저장</button>
-          <button className="pl-btn" onClick={onCodes}>수강신청 코드</button>
-          {onBulk && (
-            <button className="pl-btn ghost pl-hide-mobile" onClick={onBulk} disabled={bulkProgress !== null}>
-              {bulkProgress !== null ? `저장 중 ${bulkProgress}/${results.length}` : `전체 이미지 저장 (${results.length})`}
-            </button>
-          )}
+          {/* 나머지(보관함·수강신청 코드·전체 이미지)는 더보기 안에 (2026-11-11 단순화) */}
+          <div className="pl-pop pl-more">
+            <button className="pl-btn" aria-expanded={moreOpen} aria-haspopup="menu" onClick={() => setMoreOpen((v) => !v)}>더보기 ▾</button>
+            {moreOpen && (
+              <>
+                <div style={{ position: "fixed", inset: 0, zIndex: 29 }} onClick={() => setMoreOpen(false)} />
+                <div className="pl-pop-panel pl-menu pl-more-panel" role="menu">
+                  <div className="pl-pop-list">
+                    <button role="menuitem" onClick={() => { setMoreOpen(false); onSave(); }}>보관함에 저장</button>
+                    <button role="menuitem" onClick={() => { setMoreOpen(false); onCodes(); }}>수강신청 코드 보기</button>
+                    {onBulk && (
+                      <button role="menuitem" disabled={bulkProgress !== null} onClick={() => { setMoreOpen(false); onBulk(); }}>
+                        {bulkProgress !== null ? `이미지 저장 중 ${bulkProgress}/${results.length}` : `전체 ${results.length}개 이미지 저장`}
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
         </div>
         {results.length > 1 && (
           <div className="pl-strip" role="list" aria-label="다른 시간표">

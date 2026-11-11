@@ -61,8 +61,8 @@ type Props = {
   sectionFilter: SectionFilter;
   onCampusesChange: (c: string[]) => void;
   onOnlyOpenChange: (v: boolean) => void;
+  /** 1단계 학부/대학원 탭을 따름 (2단계 "대학원 포함" 필터는 2026-11-11 단순화로 없앰) */
   includeGrad: boolean;
-  onIncludeGradChange: (v: boolean) => void;
   conditions: Conditions;
   busySlots: Slot[];
   onSetMode: (code: string, mode: CartMode | null) => void;
@@ -137,7 +137,7 @@ export default function CourseBrowser(p: Props) {
     });
   }, [base, cat, searching, sort]);
 
-  const activeExtra = grades.length + tags.length + credits.length + (p.includeGrad ? 1 : 0) + (p.sectionFilter.onlyOpen ? 1 : 0);
+  const activeExtra = grades.length + tags.length + credits.length + (p.sectionFilter.onlyOpen ? 1 : 0);
   const sortBy = (col: SortCol) =>
     setSort((s) => (!s || s.col !== col ? { col, dir: 1 } : s.dir === 1 ? { col, dir: -1 } : null));
   const th = (col: SortCol, label: string, className = "") => (
@@ -205,7 +205,6 @@ export default function CourseBrowser(p: Props) {
                     if (next.length) p.onCampusesChange(next);
                   }}>{c}</button>
                 ))}
-                <button className="pl-chip" aria-pressed={p.includeGrad} onClick={() => p.onIncludeGradChange(!p.includeGrad)}>대학원 포함</button>
               </div>
             </div>
             <div className="pl-filter-line">

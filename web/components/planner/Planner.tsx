@@ -91,7 +91,8 @@ function loadPersisted(): Persisted {
   const saved = readLocal<Partial<Persisted>>(STATE_KEY, {});
   const profile = pickProfile(saved);
   // 다시 온 사람(학과를 이미 골라 둔 경우)은 1단계를 건너뛰고 바로 과목 담기부터 (1단계는 상단 단계 표시로 갈 수 있음)
-  return { ...INITIAL, ...profile, conditions: { ...DEFAULT_CONDITIONS }, step: profile.major ? 2 : 1 };
+  // 대학원 과목 표시는 1단계 학부/대학원 탭을 그대로 따름
+  return { ...INITIAL, ...profile, conditions: { ...DEFAULT_CONDITIONS }, step: profile.major ? 2 : 1, includeGrad: profile.level === "grad" };
 }
 
 const EMPTY_MAP = new Map<string, string>();
@@ -778,7 +779,6 @@ export default function Planner() {
                 sectionFilter={sectionFilter}
                 onCampusesChange={(c) => update({ campuses: c })}
                 includeGrad={st.includeGrad}
-                onIncludeGradChange={(v) => update({ includeGrad: v })}
                 onOnlyOpenChange={(v) => update({ onlyOpen: v })}
                 conditions={st.conditions}
                 busySlots={busySlots}
