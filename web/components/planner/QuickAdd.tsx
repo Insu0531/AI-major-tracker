@@ -13,6 +13,7 @@ import { CourseRow, isMyDept } from "./CourseBrowser";
  */
 export default function QuickAdd({
   q,
+  list,
   courses,
   cart,
   sectionFilter,
@@ -22,6 +23,8 @@ export default function QuickAdd({
   onSection,
 }: {
   q: string;
+  /** 검색 대신 정해진 과목 목록을 그대로 보여 줄 때 (전공 추천 탭의 "다른 전공 과목") */
+  list?: Course[];
   courses: Course[];
   cart: CartItem[];
   sectionFilter: SectionFilter;
@@ -35,6 +38,7 @@ export default function QuickAdd({
   const cartMap = useMemo(() => new Map(cart.map((c) => [c.code, c])), [cart]);
 
   const results = useMemo(() => {
+    if (list) return list.slice(0, 40);
     const t = normQuery(q);
     if (t.length < 1) return [];
     return courses
@@ -42,18 +46,18 @@ export default function QuickAdd({
       .filter((c) => courseMatches(c, t))
       .sort((a, b) => Number(!a.name.replace(/\s/g, "").toLowerCase().startsWith(t)) - Number(!b.name.replace(/\s/g, "").toLowerCase().startsWith(t)) || a.name.localeCompare(b.name, "ko"))
       .slice(0, 15);
-  }, [q, courses, includeGrad, sectionFilter]);
+  }, [q, list, courses, includeGrad, sectionFilter]);
 
   useEffect(() => {
     const t = q.trim();
-    if (!t) return;
+    if (!t || list) return;
     const id = setTimeout(() => track("search", { q: t, where: "quick_add" }), 1200);
     return () => clearTimeout(id);
-  }, [q]);
+  }, [q, list]);
 
-  if (!q.trim()) return null;
+  if (!list && !q.trim()) return null;
   return results.length === 0 ? (
-    <div className="pl-hint" style={{ padding: "12px 0" }}>찾는 과목이 없어요.</div>
+    <div className="pl-hint" style={{ padding: "12px 0" }}>{list ? "더 담을 전공 과목이 없어요." : "찾는 과목이 없어요."}</div>
   ) : (
     <div className="pl-quick-results">
       <table className="pl-table pl-table-mini">

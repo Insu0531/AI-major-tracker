@@ -5,7 +5,7 @@ import { track } from "@/lib/analytics";
 import { DAY_NAMES, formatSlots } from "@/lib/planner/data";
 import type { Recommendation } from "@/lib/planner/recommend";
 import type { TimetableItem } from "@/lib/planner/exportImage";
-import type { EngineResponse } from "@/lib/planner/types";
+import type { Course, EngineResponse } from "@/lib/planner/types";
 import Timetable from "./Timetable";
 
 export type ResultView = {
@@ -18,8 +18,8 @@ type RecTab = "gyoyang" | "major";
 const reasonKind = (x: string) =>
   x.startsWith("공강") ? "free" : x.startsWith("앞뒤") ? "near" : x.startsWith("정원") ? "seat" : x === "SDG" ? "sdg" : x === "인문교양" ? "hum" : x.startsWith("원격") ? "remote" : "etc";
 const REC_TABS: { key: RecTab; label: string; hint: string }[] = [
-  { key: "gyoyang", label: "교양 추천", hint: "교양·일반선택" },
   { key: "major", label: "전공 추천", hint: "내 전공·복수전공" },
+  { key: "gyoyang", label: "교양 추천", hint: "교양·일반선택" },
 ];
 
 function RecRow({ r, onAdd, showSection, cont }: { r: Recommendation; onAdd: (r: Recommendation) => void; showSection?: boolean; cont?: boolean }) {
@@ -62,6 +62,7 @@ export default function ResultPanel({
   onShuffleRecs,
   hasMajor,
   recommendSearch,
+  majorMore,
   quickAdd,
   onChoose,
 }: {
@@ -87,14 +88,16 @@ export default function ResultPanel({
   onShuffleRecs: () => void;
   hasMajor: boolean;
   recommendSearch: (q: string) => Recommendation[];
-  quickAdd: (q: string) => React.ReactNode;
+  majorMore: Course[];
+  quickAdd: (q: string, list?: Course[]) => React.ReactNode;
   onChoose: (code: string, sectionId: string) => void;
 }) {
   const results = response?.results ?? [];
   const m = results[selIdx]?.metrics;
   // 빈 시간 채우기: 검색어가 있으면 검색 결과, 없으면 고른 추천 탭
   const [q, setQ] = useState("");
-  const [tab, setTab] = useState<RecTab>("gyoyang");
+  const [tab, setTab] = useState<RecTab>(hasMajor ? "major" : "gyoyang");
+  const curTab: RecTab = hasMajor ? tab : "gyoyang";
   const searchRecs = useMemo(() => recommendSearch(q), [q, recommendSearch]);
 
   if (cartEmpty) {
@@ -210,21 +213,28 @@ export default function ResultPanel({
             <>
               <div className="pl-tabs pl-fill-tabs" role="tablist" aria-label="추천 종류">
                 {REC_TABS.filter((t) => t.key === "gyoyang" || hasMajor).map((t) => (
-                  <button key={t.key} role="tab" type="button" className="pl-tab" aria-selected={tab === t.key} title={t.hint}
+                  <button key={t.key} role="tab" type="button" className="pl-tab" aria-selected={curTab === t.key} title={t.hint}
                     style={{ "--c": "var(--accent)" } as React.CSSProperties}
                     onClick={() => { setTab(t.key); track("rec_tab", { tab: t.key }); }}>
                     {t.label}<span className="pl-tab-count">{recs[t.key].length}</span>
                   </button>
                 ))}
-                {canShuffle[tab] && <button className="pl-btn sm pl-fill-shuffle" onClick={onShuffleRecs}>↻ 다른 추천 보기</button>}
+                {canShuffle[curTab] && <button className="pl-btn sm pl-fill-shuffle" onClick={onShuffleRecs}>↻ 다른 추천 보기</button>}
               </div>
               <div className="pl-fill-body">
-                {recs[tab].length === 0 && (
-                  <div className="pl-hint" style={{ padding: "12px 0" }}>
-                    {tab === "major" ? "빈 시간에 들어가는 전공 과목이 없어요. 위에서 직접 검색해 보세요." : "지금 조건으로 빈 시간에 들어가는 교양이 없어요. 학점 상한이나 공강 조건을 바꿔 보세요."}
+                {curTab === "major" && <div className="pl-fill-sub">지금 시간표 빈 시간에 들어가는 분반</div>}
+                {recs[curTab].length === 0 && (
+                  <div className="pl-hint pl-fill-none">
+                    {curTab === "major" ? "빈 시간에 그대로 들어가는 전공 과목은 없어요. 아래에서 담아 보면 다른 과목 분반을 바꿔 가며 다시 짜 드려요." : "지금 조건으로 빈 시간에 들어가는 교양이 없어요. 학점 상한이나 공강 조건을 바꿔 보세요."}
                   </div>
                 )}
-                {recs[tab].map((r) => <RecRow key={r.section.id} r={r} onAdd={onAddRec} />)}
+                {recs[curTab].map((r) => <RecRow key={r.section.id} r={r} onAdd={onAddRec} />)}
+                {curTab === "major" && (
+                  <>
+                    <div className="pl-fill-sub">다른 전공 과목 <span className="pl-muted">· 시간이 겹쳐도 담으면 시간표를 다시 짜 드려요</span></div>
+                    {quickAdd("", majorMore.filter((c) => !recs.major.some((r) => r.course.code === c.code)))}
+                  </>
+                )}
               </div>
             </>
           )}

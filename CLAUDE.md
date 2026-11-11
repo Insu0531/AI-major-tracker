@@ -306,7 +306,8 @@ SavedTimetable = { id, name, savedAt, sem: "2026-1", major, majorLabel, entryYea
 - 점수 상위 24개 중 8개를 순위 가중 무작위(`sampleRecs`, seed)로 → 들어올 때마다 다르고 "↻ 다른 추천 보기"로 바꿈.
 - **"빈 시간 채우기" 한 칸으로 통합 (2026-11-11, 사용자 요청)**: 시간표 바로 아래 ① 검색창(맨 위) → ② **교양 추천 / 전공 추천 탭**(+ ↻ 다른 추천 보기) → ③ 목록.
   검색어가 있으면 탭 대신 ① **"빈 시간에 들어가는 분반"**(검색어에 맞는 과목을 구분 상관없이 `recommendFill(perSection: true)`로 **들어가는 분반 전부**(과목별로 묶어 최대 30개, 같은 과목 두 번째 분반부터는 분반 번호만 들여서), 추천과 같은 이유 칩·"이 분반 넣기", `recommendSearch`) → ② "전체 검색 결과"(`QuickAdd.tsx`, 2단계 `CourseRow` 미니 표). 검색 매칭은 `recommend.ts`의 `courseMatches`/`normQuery` 공용. 지우면 추천으로 돌아옴. 넣은 추천 과목("넣음 ✓ · 빼기")은 탭과 무관하게 맨 위. 넣은 뒤 결과가 0개(필수 과목 불가 포함)가 돼도 빈 화면 아래 "방금 넣은 과목" 칸에 같은 빼기 버튼을 보여 줌(`emptyWithAdded`).
-  전공 추천 = `recommendFill(categories: ["major","major2"], includeGrad)`, 학과가 없으면 탭 숨김. 이벤트 `rec_tab`, `rec_added`에 tab.
+  탭 순서 **전공 추천 → 교양 추천**(학과 있으면 전공 탭이 기본). 전공 추천 = `recommendFill(categories: ["major","major2"], includeGrad)`, 학과가 없으면 탭 숨김.
+  전공 탭 아래에는 "다른 전공 과목"(`majorMore`: 안 담은 내 전공·복수전공 과목 전부, 학년·이름순 최대 40) — 시간이 겹쳐도 `QuickAdd list` 미니 표로 담기/분반 고정 가능, 담으면 엔진이 다시 짬 (2026-11-11 요청). 이벤트 `rec_tab`, `rec_added`에 tab.
 - 결과 머리의 안내 버튼은 하나: "✦ 내 시간표 맞춤 추천 받기 · 교양 N · 전공 N개 · 과목 검색" → `#pl-fill`로 스크롤 (칸 제목도 "내 시간표 맞춤 추천"). 규칙 기반이라 "AI" 표현은 안 씀.
 - 추천 이유 칩은 종류별 색(`data-kind`: 공강 초록 · 이어짐 파랑 · 정원 주황 · SDG 청록 · 인문교양 분홍 · 원격 회색).
 

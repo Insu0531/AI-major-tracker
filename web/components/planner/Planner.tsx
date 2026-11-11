@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { ENTRY_YEAR_MIN } from "@/lib/courses";
 import { BASE_MAJORS, isGradMajor, isSangjuLabel, loadMajors, type MajorInfo } from "@/lib/planner/majors";
-import { buildCourses, buildEngineGroups, colorAt, loadCurriculum, loadIndex, loadSnapshot, type SectionFilter } from "@/lib/planner/data";
+import { buildCourses, buildEngineGroups, colorAt, loadCurriculum, loadIndex, loadSnapshot, sectionAllowed, type SectionFilter } from "@/lib/planner/data";
 import { exportTimetable, renderTimetablePng, type TimetableItem } from "@/lib/planner/exportImage";
 import { deletePlan, loadPlans, markMigrated, readLocal, renamePlan, savePlan, writeLocal, type SavedPlan } from "@/lib/planner/storage";
 import { accountsEnabled } from "@/lib/supabase";
@@ -370,6 +370,13 @@ export default function Planner() {
     gyoyang: recommendFill({ ...recBase, categories: ["gyoyang", "ilban"] }),
     major: recommendFill({ ...recBase, categories: ["major", "major2"] }),
   } : { gyoyang: [], major: [] }, [recBase]);
+  /** 전공 추천 탭 아래 "다른 전공 과목": 안 담은 내 전공·복수전공 과목 전부 (시간이 겹쳐도 담아 볼 수 있게) */
+  const majorMore = useMemo(() => {
+    const inCart = new Set(cart.map((c) => c.code));
+    return courses
+      .filter((c) => (c.category === "major" || c.category === "major2") && !inCart.has(c.code) && (st.includeGrad || !c.isGrad) && c.sections.some((x) => sectionAllowed(x, sectionFilter)))
+      .sort((a, b) => a.grade.localeCompare(b.grade) || a.name.localeCompare(b.name, "ko"));
+  }, [courses, cart, st.includeGrad, sectionFilter]);
   /** 검색한 과목 중 지금 시간표 빈 시간에 들어가는 분반 전부 (구분 상관없이, 과목별로 묶어 최대 30개) */
   const recommendSearch = useCallback((q: string): Recommendation[] => {
     const t = normQuery(q);
@@ -816,9 +823,11 @@ export default function Planner() {
               onShuffleRecs={() => { setRecSeed((x) => x + 1); track("rec_shuffled"); }}
               hasMajor={!!st.major || st.extras.length > 0}
               recommendSearch={recommendSearch}
-              quickAdd={(q) => (
+              majorMore={majorMore}
+              quickAdd={(q, list) => (
                 <QuickAdd
                   q={q}
+                  list={list}
                   courses={courses}
                   cart={cart}
                   sectionFilter={sectionFilter}
