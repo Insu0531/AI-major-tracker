@@ -155,3 +155,8 @@ export function sampleRecs(pool: Recommendation[], n: number, seed: number): Rec
   // 고른 것들은 다시 점수순으로 보여 줌
   return out.sort((p, q) => q.score - p.score);
 }
+
+/** 검색어 매칭 (과목명·코드·학과·교수, 공백 무시). 3단계 검색과 검색 추천이 같은 규칙을 쓴다 */
+export const normQuery = (q: string) => q.trim().replace(/\s/g, "").toLowerCase();
+export const courseMatches = (c: Course, t: string) =>
+  `${c.name}${c.code}${c.dept}${c.sections.map((s) => s.profs.join("")).join("")}`.replace(/\s/g, "").toLowerCase().includes(t);

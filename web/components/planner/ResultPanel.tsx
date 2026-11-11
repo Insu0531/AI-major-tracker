@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { track } from "@/lib/analytics";
 import { DAY_NAMES, formatSlots } from "@/lib/planner/data";
 import type { Recommendation } from "@/lib/planner/recommend";
@@ -21,6 +21,19 @@ const REC_TABS: { key: RecTab; label: string; hint: string }[] = [
   { key: "gyoyang", label: "교양 추천", hint: "교양·일반선택" },
   { key: "major", label: "전공 추천", hint: "내 전공·복수전공" },
 ];
+
+function RecRow({ r, onAdd }: { r: Recommendation; onAdd: (r: Recommendation) => void }) {
+  return (
+    <div className="pl-rec">
+      <div className="pl-rec-main">
+        <div className="pl-rec-name">{r.course.name} <span className="pl-muted">{r.course.credit}학점</span></div>
+        <div className="pl-rec-meta">{formatSlots(r.section.slots)} · {r.section.profs.join(", ") || "교수 미정"}{r.section.room ? ` · ${r.section.room}` : ""}</div>
+        {r.reasons.length > 0 && <div className="pl-rec-reasons">{r.reasons.map((x) => <span key={x} className="pl-rec-reason" data-kind={reasonKind(x)}>{x}</span>)}</div>}
+      </div>
+      <button className="pl-btn sm primary" onClick={() => onAdd(r)}>이 분반 넣기</button>
+    </div>
+  );
+}
 
 export default function ResultPanel({
   response,
@@ -44,6 +57,7 @@ export default function ResultPanel({
   canShuffle,
   onShuffleRecs,
   hasMajor,
+  recommendSearch,
   quickAdd,
   onChoose,
 }: {
@@ -68,6 +82,7 @@ export default function ResultPanel({
   canShuffle: Record<RecTab, boolean>;
   onShuffleRecs: () => void;
   hasMajor: boolean;
+  recommendSearch: (q: string) => Recommendation[];
   quickAdd: (q: string) => React.ReactNode;
   onChoose: (code: string, sectionId: string) => void;
 }) {
@@ -76,6 +91,7 @@ export default function ResultPanel({
   // 빈 시간 채우기: 검색어가 있으면 검색 결과, 없으면 고른 추천 탭
   const [q, setQ] = useState("");
   const [tab, setTab] = useState<RecTab>("gyoyang");
+  const searchRecs = useMemo(() => recommendSearch(q), [q, recommendSearch]);
 
   if (cartEmpty) {
     return (
@@ -165,7 +181,14 @@ export default function ResultPanel({
             </div>
           ))}
           {q.trim() ? (
-            <div className="pl-fill-body">{quickAdd(q)}</div>
+            <div className="pl-fill-body">
+              <div className="pl-fill-sub">빈 시간에 들어가는 분반 <span className="pl-muted">{searchRecs.length}개</span></div>
+              {searchRecs.length > 0
+                ? searchRecs.map((r) => <RecRow key={r.section.id} r={r} onAdd={onAddRec} />)
+                : <div className="pl-hint pl-fill-none">검색한 과목 중 지금 시간표 빈 시간(공강·시간대·학점 조건 포함)에 들어가는 분반이 없어요. 아래 목록에서 직접 담으면 시간표를 다시 짜 드려요.</div>}
+              <div className="pl-fill-sub">전체 검색 결과</div>
+              {quickAdd(q)}
+            </div>
           ) : (
             <>
               <div className="pl-tabs pl-fill-tabs" role="tablist" aria-label="추천 종류">
@@ -184,16 +207,7 @@ export default function ResultPanel({
                     {tab === "major" ? "빈 시간에 들어가는 전공 과목이 없어요. 위에서 직접 검색해 보세요." : "지금 조건으로 빈 시간에 들어가는 교양이 없어요. 학점 상한이나 공강 조건을 바꿔 보세요."}
                   </div>
                 )}
-                {recs[tab].map((r) => (
-                  <div key={r.section.id} className="pl-rec">
-                    <div className="pl-rec-main">
-                      <div className="pl-rec-name">{r.course.name} <span className="pl-muted">{r.course.credit}학점</span></div>
-                      <div className="pl-rec-meta">{formatSlots(r.section.slots)} · {r.section.profs.join(", ") || "교수 미정"}{r.section.room ? ` · ${r.section.room}` : ""}</div>
-                      <div className="pl-rec-reasons">{r.reasons.map((x) => <span key={x} className="pl-rec-reason" data-kind={reasonKind(x)}>{x}</span>)}</div>
-                    </div>
-                    <button className="pl-btn sm primary" onClick={() => onAddRec(r)}>이 분반 넣기</button>
-                  </div>
-                ))}
+                {recs[tab].map((r) => <RecRow key={r.section.id} r={r} onAdd={onAddRec} />)}
               </div>
             </>
           )}

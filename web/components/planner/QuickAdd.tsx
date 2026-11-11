@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { track } from "@/lib/analytics";
 import { sectionAllowed, type SectionFilter } from "@/lib/planner/data";
+import { courseMatches, normQuery } from "@/lib/planner/recommend";
 import type { CartItem, CartMode, Course } from "@/lib/planner/types";
 import { CourseRow, isMyDept } from "./CourseBrowser";
 
@@ -34,11 +35,11 @@ export default function QuickAdd({
   const cartMap = useMemo(() => new Map(cart.map((c) => [c.code, c])), [cart]);
 
   const results = useMemo(() => {
-    const t = q.trim().replace(/\s/g, "").toLowerCase();
+    const t = normQuery(q);
     if (t.length < 1) return [];
     return courses
       .filter((c) => (includeGrad || !c.isGrad) && c.sections.some((s) => sectionAllowed(s, sectionFilter)))
-      .filter((c) => `${c.name}${c.code}${c.dept}${c.sections.map((s) => s.profs.join("")).join("")}`.replace(/\s/g, "").toLowerCase().includes(t))
+      .filter((c) => courseMatches(c, t))
       .sort((a, b) => Number(!a.name.replace(/\s/g, "").toLowerCase().startsWith(t)) - Number(!b.name.replace(/\s/g, "").toLowerCase().startsWith(t)) || a.name.localeCompare(b.name, "ko"))
       .slice(0, 15);
   }, [q, courses, includeGrad, sectionFilter]);

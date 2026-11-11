@@ -13,7 +13,7 @@ import {
 } from "@/lib/account";
 import FriendsPanel from "@/components/planner/FriendsPanel";
 import { trackSave } from "@/lib/trackSave";
-import { recommendFill, sampleRecs, type Recommendation } from "@/lib/planner/recommend";
+import { courseMatches, normQuery, recommendFill, sampleRecs, type Recommendation } from "@/lib/planner/recommend";
 import QuickAdd from "@/components/planner/QuickAdd";
 import { analyticsEnabled, initAnalytics, isOptedOut, setOptOut, track } from "@/lib/analytics";
 import { dataSemFor, pickDefaultSem, recommendedSem, semLabel, sortSems, TERM_LABEL, TERMS } from "@/lib/planner/semester";
@@ -356,23 +356,27 @@ export default function Planner() {
 
   /* 지금 시간표의 빈 시간에 넣기 좋은 과목 — 교양 탭 / 전공 탭 (규칙 기반 추천 → 상위 24개 중 8개를 무작위로) */
   const [recSeed, setRecSeed] = useState(() => Math.floor(Math.random() * 1e9));
-  const recPools = useMemo(() => {
-    if (!view) return { gyoyang: [], major: [] };
-    const base = {
-      courses,
-      cartCodes: new Set(cart.map((c) => c.code)),
-      busy: busySlots,
-      currentCredit: view.items.reduce((s, i) => s + i.credit, 0),
-      cond: st.conditions,
-      filter: sectionFilter,
-      includeGrad: st.includeGrad,
-      limit: 24,
-    };
-    return {
-      gyoyang: recommendFill({ ...base, categories: ["gyoyang", "ilban"] }),
-      major: recommendFill({ ...base, categories: ["major", "major2"] }),
-    };
-  }, [view, courses, cart, busySlots, st.conditions, sectionFilter, st.includeGrad]);
+  const recBase = useMemo(() => (view ? {
+    courses,
+    cartCodes: new Set(cart.map((c) => c.code)),
+    busy: busySlots,
+    currentCredit: view.items.reduce((s, i) => s + i.credit, 0),
+    cond: st.conditions,
+    filter: sectionFilter,
+    includeGrad: st.includeGrad,
+    limit: 24,
+  } : null), [view, courses, cart, busySlots, st.conditions, sectionFilter, st.includeGrad]);
+  const recPools = useMemo(() => recBase ? {
+    gyoyang: recommendFill({ ...recBase, categories: ["gyoyang", "ilban"] }),
+    major: recommendFill({ ...recBase, categories: ["major", "major2"] }),
+  } : { gyoyang: [], major: [] }, [recBase]);
+  /** 검색한 과목 중 지금 시간표 빈 시간에 들어가는 분반 (구분 상관없이, 점수순 최대 10개) */
+  const recommendSearch = useCallback((q: string): Recommendation[] => {
+    const t = normQuery(q);
+    if (!recBase || !t) return [];
+    const matched = recBase.courses.filter((c) => courseMatches(c, t));
+    return recommendFill({ ...recBase, courses: matched, categories: ["major", "major2", "gyoyang", "kyoshik", "ilban", "other"], limit: 10 });
+  }, [recBase]);
   const recs = useMemo(() => ({
     gyoyang: sampleRecs(recPools.gyoyang, 8, recSeed),
     major: sampleRecs(recPools.major, 8, recSeed),
@@ -399,8 +403,8 @@ export default function Planner() {
       cart: [...s.cart.filter((c) => c.code !== r.course.code), { code: r.course.code, mode: "must", pinned: r.section.id, excluded: [] }],
     }));
     setRecAdded((a) => [...a.filter((c) => c !== r.course.code), r.course.code]);
-    const tab = recs.major.includes(r) ? "major" : "gyoyang";
-    track("rec_added", { code: r.course.code, name: r.course.name, reasons: r.reasons, tab, rank: recs[tab].indexOf(r) + 1 });
+    const tab = recs.major.includes(r) ? "major" : recs.gyoyang.includes(r) ? "gyoyang" : "search";
+    track("rec_added", { code: r.course.code, name: r.course.name, reasons: r.reasons, tab, rank: tab === "search" ? 0 : recs[tab].indexOf(r) + 1 });
     flash(`${r.course.name}을(를) 넣었어요`);
   };
 
@@ -811,6 +815,7 @@ export default function Planner() {
               canShuffle={{ gyoyang: recPools.gyoyang.length > recs.gyoyang.length, major: recPools.major.length > recs.major.length }}
               onShuffleRecs={() => { setRecSeed((x) => x + 1); track("rec_shuffled"); }}
               hasMajor={!!st.major || st.extras.length > 0}
+              recommendSearch={recommendSearch}
               quickAdd={(q) => (
                 <QuickAdd
                   q={q}
