@@ -360,6 +360,7 @@ export default function Planner() {
     courses,
     cartCodes: new Set(cart.map((c) => c.code)),
     busy: busySlots,
+    busyByCourse: view.items.map((i) => i.slots),
     currentCredit: view.items.reduce((s, i) => s + i.credit, 0),
     cond: st.conditions,
     filter: sectionFilter,

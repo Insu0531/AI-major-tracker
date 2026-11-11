@@ -49,7 +49,7 @@ function optionPassesConditions(opt: EngineOption, c: Conditions, blocked: numbe
  * 하루 단위 규칙 검사 (연강 길이 · 하루 과목 수 · 수업 사이 빈 시간)
  * full=false 이면 과목을 더해도 나아지지 않는 규칙(연강·과목 수)만 본다 → 탐색 중 가지치기용
  */
-function dayRulesOk(lists: Slot[][], c: Conditions, full: boolean): boolean {
+export function dayRulesOk(lists: Slot[][], c: Conditions, full: boolean): boolean {
   if (!c.maxStreak && !c.maxPerDay && !(full && c.maxGap)) return true;
   const byDay = new Map<number, [number, number][]>();
   const perDay = new Map<number, number>();
