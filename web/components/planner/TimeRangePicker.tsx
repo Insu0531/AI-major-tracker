@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { DAY_NAMES } from "@/lib/planner/data";
+import { useDialogKeys } from "@/lib/planner/useDialogKeys";
 import type { Slot } from "@/lib/planner/types";
 
 /**
@@ -107,6 +108,8 @@ export default function TimeRangePicker({
 
   // 어떤 방법으로 닫든(완료·×·바깥) 마지막으로 칠한 것까지 저장하고 닫기
   const close = () => { changeRef.current(cellsToSlots(cells, "block"), cellsToSlots(cells, "need")); onClose(); };
+
+  useDialogKeys(true, close);
 
   const count = (m: TimeMode) => [...cells.values()].filter((v) => v === m).length;
   const hours = (n: number) => `${n / 2}시간`;

@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Major, MAJOR_LABELS, ENTRY_YEAR_MIN, ENTRY_YEAR_MAX } from "@/lib/courses";
 
-const FORM_ACTION =
+export const FORM_ACTION =
   "https://docs.google.com/forms/d/e/1FAIpQLSc6VyJCdBAmc2olMVcSBrC2FN0iNMoCqPPXIfQHzE_Ew1145g/formResponse";
 
 const CATEGORIES = ["기능 추가 문의", "버그 신고", "UI/UX(디자인) 개선", "응원"] as const;

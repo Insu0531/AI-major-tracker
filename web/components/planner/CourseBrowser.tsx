@@ -308,7 +308,9 @@ export const CourseRow = memo(function CourseRow({
 
   return (
     <Fragment>
-      <tr className={`pl-tr${item ? " in-cart" : ""}${open ? " open" : ""}`} onClick={onToggleOpen}>
+      <tr className={`pl-tr${item ? " in-cart" : ""}${open ? " open" : ""}`} onClick={onToggleOpen}
+        tabIndex={0} aria-expanded={open} aria-label={`${c.name} 분반 ${open ? "접기" : "펼치기"}`}
+        onKeyDown={(e) => { if ((e.key === "Enter" || e.key === " ") && e.target === e.currentTarget) { e.preventDefault(); onToggleOpen(); } }}>
         <td className="c-add" onClick={(e) => e.stopPropagation()}>
           <button className="pl-add-btn" aria-pressed={!!item} aria-label={item ? `${c.name} 빼기` : `${c.name} 담기`} title={item ? "담기 취소" : "담기"} onClick={() => onSetMode(c.code, item ? null : "maybe")}>
             {item ? "✓" : "+"}

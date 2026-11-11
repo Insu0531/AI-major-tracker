@@ -20,8 +20,9 @@ import { analyticsEnabled, initAnalytics, isOptedOut, setOptOut, track } from "@
 import { dataSemFor, pickDefaultSem, recommendedSem, semLabel, sortSems, TERM_LABEL, TERMS } from "@/lib/planner/semester";
 import { shareTimetableImage, shareToKakao } from "@/lib/kakaoShare";
 import GuideTour, { type TourStep } from "@/components/GuideTour";
-import AcademicCalendarTab from "@/components/AcademicCalendarTab";
-import FeedbackTab from "@/components/FeedbackTab";
+import PlannerCalendar from "@/components/planner/PlannerCalendar";
+import { useDialogKeys } from "@/lib/planner/useDialogKeys";
+import PlannerFeedback from "@/components/planner/PlannerFeedback";
 import { DEFAULT_CONDITIONS, type CartItem, type CartMode, type Conditions, type EngineGroup, type EngineResponse, type Slot, type Snapshot, type SnapshotIndex } from "@/lib/planner/types";
 import MajorPicker from "@/components/planner/MajorPicker";
 import CourseBrowser from "@/components/planner/CourseBrowser";
@@ -196,6 +197,9 @@ export default function Planner() {
     reloadPlans();
   };
   const [preview, setPreview] = useState<SavedPlan | null>(null);
+  // 키보드: 열린 창은 Esc로 닫고 Tab이 창 안에서만 돌게
+  useDialogKeys(!!sheet, () => setSheet(null));
+  useDialogKeys(!!modal && !sheet, () => { setModal(null); setPreview(null); });
 
   const update = useCallback((patch: Partial<Persisted>) => setSt((s) => ({ ...s, ...patch })), []);
 
@@ -1044,9 +1048,9 @@ export default function Planner() {
       )}
       {sheet && (
         <div className="pl-modal-bg" onClick={() => setSheet(null)}>
-          <div className="pl-modal pl-sheet" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
+          <div className={`pl-modal ${sheet === "calendar" ? "pl-sheet" : "pl-fb-modal"}`} onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label={sheet === "calendar" ? "학사일정" : "피드백 · 응원"}>
             <div className="pl-modal-head"><h3>{sheet === "calendar" ? "학사일정" : "피드백 · 응원"}</h3><button className="pl-x" aria-label="닫기" onClick={() => setSheet(null)}>×</button></div>
-            <div className="pl-sheet-body">{sheet === "calendar" ? <AcademicCalendarTab /> : <FeedbackTab />}</div>
+            <div className="pl-sheet-body">{sheet === "calendar" ? <PlannerCalendar /> : <PlannerFeedback majorLabel={majorLabel} entryYear={st.entryYear} />}</div>
           </div>
         </div>
       )}

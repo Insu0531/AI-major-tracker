@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 
-type EvColor = "indigo" | "red" | "green" | "amber" | "purple";
-type CalEvent = { date: string; endDate?: string; label: string; color?: EvColor };
+export type EvColor = "indigo" | "red" | "green" | "amber" | "purple";
+export type CalEvent = { date: string; endDate?: string; label: string; color?: EvColor };
 
 // ── 학사일정 데이터 ──────────────────────────────────────────
 // 단일 일정:  { date: "2026-03-03", label: "개강", color: "amber" }
 // 기간 일정:  { date: "2026-04-16", endDate: "2026-04-22", label: "중간고사 기간", color: "purple" }
 // 색상: indigo(행정/대학원·기본) | red(공휴일) | green(수강) | amber(학기운영) | purple(시험)
-const EVENTS: CalEvent[] = [
+export const EVENTS: CalEvent[] = [
   // 1월
   { date: "2026-01-01", label: "신정", color: "red" },
   { date: "2026-01-02", label: "시무식" },
