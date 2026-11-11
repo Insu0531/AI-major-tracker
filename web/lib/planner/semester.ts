@@ -39,3 +39,18 @@ export function pickDefaultSem(available: string[], now = new Date()): string | 
   const before = sorted.filter((s) => semOrder(s) <= semOrder(rec));
   return before.length ? before[before.length - 1] : sorted[0];
 }
+
+/**
+ * 실제로 불러올 학기 데이터. 고른 학기 데이터가 아직 없으면(예: 2027년 1학기)
+ * 같은 학기의 가장 최근 해(2026년 1학기) → 없으면 그 이전 가장 최근 학기 → 없으면 가장 최근 학기로 대신 보여 준다.
+ */
+export function dataSemFor(target: string, available: string[]): string | null {
+  if (!available.length) return null;
+  if (available.includes(target)) return target;
+  const term = target.split("-")[1];
+  const sorted = sortSems(available);
+  const sameTerm = sorted.filter((s) => s.endsWith(`-${term}`) && semOrder(s) < semOrder(target));
+  if (sameTerm.length) return sameTerm[sameTerm.length - 1];
+  const before = sorted.filter((s) => semOrder(s) < semOrder(target));
+  return before.length ? before[before.length - 1] : sorted[sorted.length - 1];
+}

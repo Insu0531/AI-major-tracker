@@ -116,20 +116,16 @@ function normalize(r, flags) {
   };
 }
 
-// 학기 순서: 1학기 → 여름계절 → 2학기 → 겨울계절 (web/lib/planner/semester.ts와 같은 규칙)
-const TERMS = ["1", "s", "2", "w"];
-const nextSem = (sem) => {
-  const [y, t] = sem.split("-");
-  const i = TERMS.indexOf(t);
-  return i === 3 ? `${+y + 1}-1` : `${y}-${TERMS[i + 1]}`;
-};
-
-/** 지금 수강신청을 준비할 학기 + 그다음 학기 (4~6월 여름, 7~9월 2학기, 10~11월 겨울, 12~3월 1학기) */
+/**
+ * 매일 수집할 학기 (2026-11-11 사용자 요청: 다가오는 정규학기 하나만)
+ * 10~3월 → 다음 1학기(11월이면 2027-1), 4~9월 → 그해 2학기.
+ * 아직 안 열린 학기(0건)는 건너뛰므로 학교에 미리 뜨면 다음 날 새벽 바로 잡힌다.
+ * 다른 학기는 Actions 수동 실행(학기 지정) 또는 `node scripts/collect-sections.mjs 2026-w`로.
+ */
 function defaultSems(now = new Date()) {
   const y = now.getFullYear();
   const m = now.getMonth() + 1;
-  const cur = m >= 4 && m <= 6 ? `${y}-s` : m >= 7 && m <= 9 ? `${y}-2` : m >= 10 && m <= 11 ? `${y}-w` : m === 12 ? `${y + 1}-1` : `${y}-1`;
-  return [cur, nextSem(cur)];
+  return [m >= 10 ? `${y + 1}-1` : m <= 3 ? `${y}-1` : `${y}-2`];
 }
 
 async function readJson(file) {

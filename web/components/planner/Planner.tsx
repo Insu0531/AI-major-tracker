@@ -16,7 +16,7 @@ import { trackSave } from "@/lib/trackSave";
 import { recommendFill, sampleRecs, type Recommendation } from "@/lib/planner/recommend";
 import QuickAdd from "@/components/planner/QuickAdd";
 import { analyticsEnabled, initAnalytics, isOptedOut, setOptOut, track } from "@/lib/analytics";
-import { pickDefaultSem, recommendedSem, semLabel, sortSems, TERM_LABEL, TERMS } from "@/lib/planner/semester";
+import { dataSemFor, pickDefaultSem, recommendedSem, semLabel, sortSems, TERM_LABEL, TERMS } from "@/lib/planner/semester";
 import { shareTimetableImage, shareToKakao } from "@/lib/kakaoShare";
 import GuideTour, { type TourStep } from "@/components/GuideTour";
 import AcademicCalendarTab from "@/components/AcademicCalendarTab";
@@ -204,18 +204,20 @@ export default function Planner() {
       setIndex(idx);
       // 날짜에 맞는 학기를 기본 선택. 직접 고른 학기는 같은 수강신청 시기 동안만 유지
       const rec = recommendedSem();
-      setSt((s) => (s.sem && idx.semesters[s.sem] && s.semChosenFor === rec ? s : { ...s, sem: pickDefaultSem(Object.keys(idx.semesters)), semChosenFor: null }));
+      setSt((s) => (s.sem && s.semChosenFor === rec ? s : { ...s, sem: pickDefaultSem(Object.keys(idx.semesters)), semChosenFor: null }));
     });
   }, []);
 
   useEffect(() => { writeLocal(STATE_KEY, pickProfile(st)); }, [st]);
 
+  // 아직 데이터가 없는 학기(예: 2027년 1학기)는 같은 학기의 가장 최근 데이터(2026년 1학기)로 대신 조회 (2026-11-11 사용자 요청)
+  const dataSem = index && st.sem ? dataSemFor(st.sem, Object.keys(index.semesters)) : null;
+  const fallbackSem = dataSem && dataSem !== st.sem ? dataSem : null;
   useEffect(() => {
-    // 아직 데이터가 없는 학기(예: 다음 해)는 받지 않고 1단계에서 안내만
-    if (!st.sem || !index?.semesters[st.sem]) return;
-    loadSnapshot(st.sem).then((s) => (s ? setLoaded(s) : setLoadError(true)));
-  }, [st.sem, index]);
-  const snapshot = loaded && loaded.sem === st.sem ? loaded : null;
+    if (!dataSem) return;
+    loadSnapshot(dataSem).then((s) => (s ? setLoaded(s) : setLoadError(true)));
+  }, [dataSem]);
+  const snapshot = loaded && loaded.sem === dataSem ? loaded : null;
 
   useEffect(() => {
     if (!st.major) return;
@@ -524,7 +526,6 @@ export default function Planner() {
     const last = Math.max(...ys, +recommendedSem().split("-")[0]) + 4;
     return Array.from({ length: last - first + 1 }, (_, i) => first + i);
   })();
-  const semReady = !!(st.sem && index?.semesters[st.sem]);
   const chooseSem = (year: string, term: string) => update({ sem: `${year}-${term}`, semChosenFor: recommendedSem() });
 
   const doRename = async (p: SavedPlan, name: string) => {
@@ -581,7 +582,7 @@ export default function Planner() {
       </div>
     </div>
   );
-  const collectedAt = st.sem ? index?.semesters[st.sem]?.collectedAt : undefined;
+  const collectedAt = dataSem ? index?.semesters[dataSem]?.collectedAt : undefined;
   const step = st.step;
   const goStep = (n: 1 | 2 | 3) => {
     update({ step: n });
@@ -658,6 +659,11 @@ export default function Planner() {
           </div>
         </div>
       </header>
+      {step > 1 && fallbackSem && st.sem && (
+        <div className="pl-sem-note" role="status">
+          {semLabel(st.sem)} 개설 정보가 아직 없어 <b>{semLabel(fallbackSem)}</b> 개설 정보로 보여 드려요. 실제 개설 과목·시간은 달라질 수 있어요.
+        </div>
+      )}
 
       {step === 1 ? (
         <div className="pl-scroll">
@@ -682,8 +688,8 @@ export default function Planner() {
                     {TERMS.map((t) => <option key={t} value={t}>{TERM_LABEL[t]}{index && !index.semesters[`${selYear}-${t}`] ? " (준비 중)" : ""}</option>)}
                   </select>
                 </div>
-                {index && st.sem && !semReady && (
-                  <div className="pl-hint" style={{ marginTop: 6 }}>{semLabel(st.sem)} 개설 정보가 아직 없어요. 학교에 강의가 열리면 자동으로 채워져요.</div>
+                {fallbackSem && st.sem && (
+                  <div className="pl-hint" style={{ marginTop: 6 }}>{semLabel(st.sem)} 개설 정보는 아직 없어서 <b>{semLabel(fallbackSem)}</b> 개설 정보로 보여 드려요. 학교에 강의가 열리면 자동으로 바뀌어요.</div>
                 )}
               </div>
               <div>
@@ -720,7 +726,7 @@ export default function Planner() {
                 </div>
               )}
               <button className="pl-btn primary lg" disabled={!snapshot} onClick={() => goStep(2)}>
-                {snapshot ? (st.major ? "과목 담으러 가기 →" : "학과 없이 계속하기 →") : index && !semReady ? "이 학기는 아직 준비 중이에요" : loadError ? "강의 데이터를 불러오지 못했어요" : "강의 정보 불러오는 중…"}
+                {snapshot ? (st.major ? "과목 담으러 가기 →" : "학과 없이 계속하기 →") : loadError ? "강의 데이터를 불러오지 못했어요" : "강의 정보 불러오는 중…"}
               </button>
             </div>
           </div>
