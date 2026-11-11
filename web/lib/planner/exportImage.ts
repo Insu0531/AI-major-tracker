@@ -47,7 +47,7 @@ function wrap(ctx: CanvasRenderingContext2D, text: string, width: number): strin
  * 시간 미정 과목이 있으면 아래에 한 줄씩 덧붙인다. (이미지에 제목은 넣지 않는다 — 규격 유지)
  */
 export async function renderTimetablePng(items: TimetableItem[]): Promise<Blob> {
-  const HEAD = 60, LABEL = 62, COL = 214, HOUR = 135, GAP = 4, RADIUS = 14, BAR = 6;
+  const HEAD = 60, LABEL = 62, COL = 214, HOUR = 135, GAP = 4, PAD = 12;
   // 사이트 디자인 토큰 (planner.css): 따뜻한 회백색 배경, 옅은 선, KNU 레드
   const C = { bg: "#f6f5f1", grid: "#fdfcfa", line: "#e4e1da", half: "#e9e6df", head: "#2b2925", hour: "#8a877f", text: "#ffffff", sub: "#4b4842", accent: "#a8262c" };
   const BODY = `"Pretendard Variable", Pretendard, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif`;
@@ -74,9 +74,7 @@ export async function renderTimetablePng(items: TimetableItem[]): Promise<Blob> 
   ctx.fillRect(0, 0, W, H);
   // 시간표 판 (머리줄 아래, 시간 열 오른쪽)
   ctx.fillStyle = C.grid;
-  ctx.beginPath();
-  ctx.roundRect(LABEL, HEAD, W - LABEL, bodyH, [16, 0, 0, 0]);
-  ctx.fill();
+  ctx.fillRect(LABEL, HEAD, W - LABEL, bodyH);
 
   // 왼쪽 위 빈칸: KNU 로고
   ctx.fillStyle = C.accent;
@@ -109,7 +107,7 @@ export async function renderTimetablePng(items: TimetableItem[]): Promise<Blob> 
   ctx.fillStyle = C.hour;
   for (let h = h0; h < h1; h++) ctx.fillText(String(h).padStart(2, "0"), LABEL - 12, HEAD + (h - h0) * HOUR + (h === h0 ? 18 : 0));
 
-  // 블록: 둥근 모서리 + 왼쪽 진한 띠
+  // 블록: 각진 단색 (음영·둥근 모서리 없음, 사용자 요청)
   ctx.textAlign = "left";
   ctx.textBaseline = "top";
   for (const it of items) {
@@ -120,22 +118,20 @@ export async function renderTimetablePng(items: TimetableItem[]): Promise<Blob> 
       const h = ((e - s) / 60) * HOUR - GAP * 2;
       ctx.save();
       ctx.beginPath();
-      ctx.roundRect(x, y, w, h, RADIUS);
+      ctx.rect(x, y, w, h);
       ctx.clip();
       ctx.fillStyle = it.color;
       ctx.fillRect(x, y, w, h);
-      ctx.fillStyle = "rgba(0, 0, 0, 0.16)";
-      ctx.fillRect(x, y, BAR, h);
       ctx.fillStyle = C.text;
       let ty = y + 14;
-      const tx = x + BAR + 12;
+      const tx = x + PAD;
       ctx.font = head(28);
-      for (const line of wrap(ctx, it.name, w - BAR - 24).slice(0, 3)) { ctx.fillText(line, tx, ty); ty += 36; }
+      for (const line of wrap(ctx, it.name, w - PAD * 2).slice(0, 3)) { ctx.fillText(line, tx, ty); ty += 36; }
       ty += 4;
       ctx.font = body(500, 22);
       ctx.globalAlpha = 0.92;
       for (const text of [it.prof, it.room].filter(Boolean)) {
-        for (const line of wrap(ctx, text, w - BAR - 24).slice(0, 2)) {
+        for (const line of wrap(ctx, text, w - PAD * 2).slice(0, 2)) {
           if (ty + 26 > y + h) break;
           ctx.fillText(line, tx, ty);
           ty += 28;
