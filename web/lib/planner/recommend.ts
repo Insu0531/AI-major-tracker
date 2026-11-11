@@ -47,6 +47,7 @@ export function recommendFill({
   filter,
   categories = ["gyoyang", "ilban"],
   includeGrad = false,
+  perSection = false,
   limit = 8,
 }: {
   courses: Course[];
@@ -57,6 +58,8 @@ export function recommendFill({
   filter: SectionFilter;
   categories?: Category[];
   includeGrad?: boolean;
+  /** true면 과목마다 최고 분반 하나가 아니라, 들어가는 분반을 전부 돌려준다 (검색 추천용, 같은 과목끼리 붙여서) */
+  perSection?: boolean;
   limit?: number;
 }): Recommendation[] {
   const usedDays = new Set(busy.map(([d]) => d));
@@ -111,9 +114,19 @@ export function recommendFill({
       if (course.tags.includes("인문교양")) { score += 3; reasons.push("인문교양"); }
       if (sec.tags.includes("원격")) reasons.push("원격강좌");
 
-      if (!best || score > best.score) best = { course, section: sec, score, reasons };
+      const rec = { course, section: sec, score, reasons };
+      if (perSection) out.push(rec);
+      else if (!best || score > best.score) best = rec;
     }
     if (best) out.push(best);
+  }
+  if (perSection) {
+    // 과목별 최고 점수 순으로 과목을 세우고, 과목 안에서는 분반 점수순
+    const top = new Map<string, number>();
+    for (const r of out) top.set(r.course.code, Math.max(top.get(r.course.code) ?? -Infinity, r.score));
+    return out
+      .sort((a, b) => top.get(b.course.code)! - top.get(a.course.code)! || a.course.code.localeCompare(b.course.code) || b.score - a.score)
+      .slice(0, limit);
   }
   // 같은 시간대만 줄줄이 나오지 않게, 시간대마다 최대 2개
   const perSlot = new Map<string, number>();

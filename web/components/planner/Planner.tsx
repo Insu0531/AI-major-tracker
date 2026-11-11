@@ -370,12 +370,12 @@ export default function Planner() {
     gyoyang: recommendFill({ ...recBase, categories: ["gyoyang", "ilban"] }),
     major: recommendFill({ ...recBase, categories: ["major", "major2"] }),
   } : { gyoyang: [], major: [] }, [recBase]);
-  /** 검색한 과목 중 지금 시간표 빈 시간에 들어가는 분반 (구분 상관없이, 점수순 최대 10개) */
+  /** 검색한 과목 중 지금 시간표 빈 시간에 들어가는 분반 전부 (구분 상관없이, 과목별로 묶어 최대 30개) */
   const recommendSearch = useCallback((q: string): Recommendation[] => {
     const t = normQuery(q);
     if (!recBase || !t) return [];
     const matched = recBase.courses.filter((c) => courseMatches(c, t));
-    return recommendFill({ ...recBase, courses: matched, categories: ["major", "major2", "gyoyang", "kyoshik", "ilban", "other"], limit: 10 });
+    return recommendFill({ ...recBase, courses: matched, categories: ["major", "major2", "gyoyang", "kyoshik", "ilban", "other"], perSection: true, limit: 30 });
   }, [recBase]);
   const recs = useMemo(() => ({
     gyoyang: sampleRecs(recPools.gyoyang, 8, recSeed),

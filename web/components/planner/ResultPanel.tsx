@@ -22,11 +22,15 @@ const REC_TABS: { key: RecTab; label: string; hint: string }[] = [
   { key: "major", label: "전공 추천", hint: "내 전공·복수전공" },
 ];
 
-function RecRow({ r, onAdd }: { r: Recommendation; onAdd: (r: Recommendation) => void }) {
+function RecRow({ r, onAdd, showSection, cont }: { r: Recommendation; onAdd: (r: Recommendation) => void; showSection?: boolean; cont?: boolean }) {
   return (
-    <div className="pl-rec">
+    <div className={`pl-rec${cont ? " cont" : ""}`}>
       <div className="pl-rec-main">
-        <div className="pl-rec-name">{r.course.name} <span className="pl-muted">{r.course.credit}학점</span></div>
+        {cont ? (
+          <div className="pl-rec-name"><span className="pl-rec-sec">{r.section.id.split("-").pop()}분반</span></div>
+        ) : (
+          <div className="pl-rec-name">{r.course.name} <span className="pl-muted">{r.course.credit}학점</span>{showSection && <span className="pl-rec-sec">{r.section.id.split("-").pop()}분반</span>}</div>
+        )}
         <div className="pl-rec-meta">{formatSlots(r.section.slots)} · {r.section.profs.join(", ") || "교수 미정"}{r.section.room ? ` · ${r.section.room}` : ""}</div>
         {r.reasons.length > 0 && <div className="pl-rec-reasons">{r.reasons.map((x) => <span key={x} className="pl-rec-reason" data-kind={reasonKind(x)}>{x}</span>)}</div>}
       </div>
@@ -182,9 +186,9 @@ export default function ResultPanel({
           ))}
           {q.trim() ? (
             <div className="pl-fill-body">
-              <div className="pl-fill-sub">빈 시간에 들어가는 분반 <span className="pl-muted">{searchRecs.length}개</span></div>
+              <div className="pl-fill-sub">빈 시간에 들어가는 분반 <span className="pl-muted">{new Set(searchRecs.map((r) => r.course.code)).size}과목 · {searchRecs.length}개 분반</span></div>
               {searchRecs.length > 0
-                ? searchRecs.map((r) => <RecRow key={r.section.id} r={r} onAdd={onAddRec} />)
+                ? searchRecs.map((r, i) => <RecRow key={r.section.id} r={r} onAdd={onAddRec} showSection cont={i > 0 && searchRecs[i - 1].course.code === r.course.code} />)
                 : <div className="pl-hint pl-fill-none">검색한 과목 중 지금 시간표 빈 시간(공강·시간대·학점 조건 포함)에 들어가는 분반이 없어요. 아래 목록에서 직접 담으면 시간표를 다시 짜 드려요.</div>}
               <div className="pl-fill-sub">전체 검색 결과</div>
               {quickAdd(q)}
