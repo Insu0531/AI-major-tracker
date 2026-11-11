@@ -776,3 +776,8 @@
 .pl-more { position: relative; }
 .pl-more-panel { left: auto !important; right: 0; width: 220px; }
 @media (min-width: 721px) { .pl-more-panel { left: 0 !important; right: auto; } }
+
+/* 1단계 학기 한 줄 */
+.pl-sem-line { display: flex; align-items: center; gap: var(--s3); height: 44px; padding: 0 14px; border-radius: var(--radius); background: var(--sunken); }
+.pl-sem-line b { font-size: 16px; }
+.pl-sem-line .pl-link { margin-left: auto; }

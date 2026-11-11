@@ -563,6 +563,7 @@ export default function Planner() {
     const last = Math.max(...ys, +recommendedSem().split("-")[0]) + 4;
     return Array.from({ length: last - first + 1 }, (_, i) => first + i);
   })();
+  const [semEdit, setSemEdit] = useState(false);
   const chooseSem = (year: string, term: string) => update({ sem: `${year}-${term}`, semChosenFor: recommendedSem() });
 
   const doRename = async (p: SavedPlan, name: string) => {
@@ -712,6 +713,13 @@ export default function Planner() {
             <div className="pl-intro-form pl-enter" style={{ animationDelay: "60ms" }}>
               <div>
                 <div className="pl-label">학기</div>
+                {/* 대부분 기본 학기를 그대로 써서 한 줄로 접어 둠, "바꾸기"를 누르면 연도·학기 칸 (2026-11-11 단순화) */}
+                {!semEdit ? (
+                  <div className="pl-sem-line">
+                    <b>{st.sem ? semLabel(st.sem) : "불러오는 중…"}</b>
+                    <button className="pl-link" onClick={() => setSemEdit(true)}>바꾸기</button>
+                  </div>
+                ) : (
                 <div className="pl-grid2">
                   <select className="pl-select" value={selYear} onChange={(e) => chooseSem(e.target.value, selTerm)} aria-label="연도">
                     {yearOptions.map((y) => <option key={y} value={y}>{y}년</option>)}
@@ -720,6 +728,7 @@ export default function Planner() {
                     {TERMS.map((t) => <option key={t} value={t}>{TERM_LABEL[t]}{index && !index.semesters[`${selYear}-${t}`] ? " (준비 중)" : ""}</option>)}
                   </select>
                 </div>
+                )}
                 {fallbackSem && st.sem && (
                   <div className="pl-hint" style={{ marginTop: 6 }}>{semLabel(st.sem)} 개설 정보는 아직 없어서 <b>{semLabel(fallbackSem)}</b> 개설 정보로 보여 드려요. 학교에 강의가 열리면 자동으로 바뀌어요.</div>
                 )}
