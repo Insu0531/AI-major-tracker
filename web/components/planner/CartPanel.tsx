@@ -107,9 +107,11 @@ export function ConditionsPanel({
       <div className="pl-cond-block" data-tour="sort">
         <div className="pl-label">정렬</div>
         <div className="pl-chips">
-          {SORT_OPTIONS.map((k) => (
-            <button key={k} className="pl-chip" aria-pressed={c.sort === k} onClick={() => set({ sort: k })}>{SORT_LABEL[k]}</button>
-          ))}
+          <div className="pl-seg" role="radiogroup" aria-label="정렬">
+            {SORT_OPTIONS.map((k) => (
+              <button key={k} role="radio" aria-checked={c.sort === k} onClick={() => set({ sort: k })}>{SORT_LABEL[k]}</button>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -155,11 +157,18 @@ export function ConditionsPanel({
 
       <div className="pl-cond-block">
         <div className="pl-label">하루 일정</div>
-        <div className="pl-chips">
-          <button className="pl-chip" aria-pressed={c.maxStreak === 180} onClick={() => set({ maxStreak: c.maxStreak ? 0 : 180 })} title="쉬는 시간 없이 3시간 넘게 이어지는 날이 없는 시간표만">3시간 넘는 연강 없음</button>
-          <button className="pl-chip" aria-pressed={c.maxGap === 120} onClick={() => set({ maxGap: c.maxGap ? 0 : 120 })} title="수업 사이 빈 시간이 2시간 넘는 날이 없는 시간표만">2시간 넘는 공강 없음</button>
-          <button className="pl-chip" aria-pressed={c.maxPerDay === 3} onClick={() => set({ maxPerDay: c.maxPerDay ? 0 : 3 })} title="하루에 3과목까지만 듣는 시간표만">하루 3과목 이하</button>
-          <button className="pl-chip" aria-pressed={c.noRemote} onClick={() => set({ noRemote: !c.noRemote })} title="원격강좌 분반은 빼고 시간표를 만들어요">원격강좌 빼기</button>
+        {/* 켜고 끄는 조건이라 칩 대신 스위치 (정렬·시간대와 모양을 달리해 구분) */}
+        <div className="pl-switches">
+          {([
+            ["3시간 넘는 연강 없음", c.maxStreak === 180, () => set({ maxStreak: c.maxStreak ? 0 : 180 })],
+            ["2시간 넘는 공강 없음", c.maxGap === 120, () => set({ maxGap: c.maxGap ? 0 : 120 })],
+            ["하루 3과목 이하", c.maxPerDay === 3, () => set({ maxPerDay: c.maxPerDay ? 0 : 3 })],
+            ["원격강좌 빼기", c.noRemote, () => set({ noRemote: !c.noRemote })],
+          ] as const).map(([label, on, toggle]) => (
+            <button key={label} role="switch" aria-checked={on} className="pl-switch" onClick={toggle}>
+              <span>{label}</span><i aria-hidden />
+            </button>
+          ))}
         </div>
       </div>
 

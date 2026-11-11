@@ -824,3 +824,33 @@
 .pl-nav .pl-btn .pl-icon { width: 16px; height: 16px; vertical-align: middle; }
 .pl-fb-check .pl-icon { width: 24px; height: 24px; }
 .pl-tt-pick .pl-icon { width: 10px; height: 10px; }
+/* 3. 추천 이유: 같은 무채색 칩 + 종류별 작은 점 (예전 무지개 배경 대신) */
+.pl-rec-reason, .pl-rec-reason[data-kind] { background: var(--sunken); color: var(--ink-2); font-weight: 500; display: inline-flex; align-items: center; gap: 5px; }
+.pl-rec-reason::before { content: ""; width: 6px; height: 6px; border-radius: 3px; background: var(--ink-3); }
+.pl-rec-reason[data-kind="free"]::before { background: oklch(60% 0.13 150); }
+.pl-rec-reason[data-kind="near"]::before { background: var(--pick); }
+.pl-rec-reason[data-kind="seat"]::before { background: oklch(70% 0.13 75); }
+.pl-rec-reason[data-kind="sdg"]::before { background: oklch(62% 0.1 200); }
+.pl-rec-reason[data-kind="hum"]::before { background: oklch(60% 0.14 340); }
+.pl-rec-reason[data-kind="remote"]::before { background: var(--accent); }
+
+/* 4. 조건 칸: 정렬은 두 칸 탭 버튼, 하루 일정은 스위치 */
+.pl-seg { display: inline-flex; padding: 3px; border-radius: 10px; background: var(--sunken); gap: 2px; }
+.pl-seg button { border: none; background: none; height: 30px; padding: 0 14px; border-radius: 8px; font-size: 13px; font-weight: 600; color: var(--ink-2); transition: background-color 0.15s, color 0.15s; }
+.pl-seg button[aria-checked="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px oklch(30% 0.02 60 / 0.12); }
+.pl-switches { display: flex; flex-direction: column; gap: 2px; }
+.pl-switch { display: flex; align-items: center; justify-content: space-between; gap: var(--s3); width: 100%; border: none; background: none; padding: 7px 0; font-size: 13.5px; color: var(--ink); text-align: left; }
+.pl-switch i { position: relative; width: 34px; height: 20px; border-radius: 10px; background: var(--sunken-2); flex-shrink: 0; transition: background-color 0.18s; }
+.pl-switch i::after { content: ""; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 8px; background: var(--surface); box-shadow: 0 1px 2px oklch(30% 0.02 60 / 0.25); transition: transform 0.18s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.pl-switch[aria-checked="true"] i { background: var(--pick); }
+.pl-switch[aria-checked="true"] i::after { transform: translateX(14px); }
+
+/* 5. 2단계 표: 더 촘촘하게, 배지는 조용히, 교과구분은 작은 태그 */
+.pl-table td { padding-top: 9px; padding-bottom: 9px; }
+.pl-badge.pl-badge-other { background: var(--sunken); color: var(--ink-3); font-weight: 500; }
+.pl-type { display: inline-block; margin: 1px 4px 1px 0; padding: 1px 7px; border-radius: 5px; font-size: 12px; font-weight: 600; background: var(--sunken); color: var(--ink-2); white-space: nowrap; }
+.pl-type[data-t="must"] { background: var(--accent-weak); color: var(--accent); }
+.pl-type[data-t="gy"] { background: color-mix(in srgb, var(--c-gyoyang) 12%, transparent); color: var(--c-gyoyang); }
+.pl-type[data-t="ky"] { background: color-mix(in srgb, var(--c-kyoshik) 14%, transparent); color: var(--c-kyoshik); }
+.pl-type[data-t="il"] { background: color-mix(in srgb, var(--c-ilban) 12%, transparent); color: var(--c-ilban); }
+.c-type { white-space: normal !important; }

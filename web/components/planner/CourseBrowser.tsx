@@ -12,6 +12,9 @@ const GRADES = ["1", "2", "3", "4"];
 const CAMPUSES = ["산격동", "동인동", "상주"];
 const PAGE = 150;
 
+/** 교과구분 태그 색: 필수(빨강 계열) · 교양 · 교직 · 그 밖 전공류(무채색) */
+const typeTone = (t: string) => (t.includes("필수") ? "must" : t.includes("교양") ? "gy" : t.includes("교직") ? "ky" : t.includes("일반") ? "il" : "etc");
+
 /** 교과구분(이수구분): 분반마다 다를 수 있어 모아서 보여 줌 (예: 전공필수·전공) */
 export const courseTypes = (secs: { type: string }[]) => [...new Set(secs.map((s) => s.type).filter(Boolean))];
 
@@ -317,11 +320,11 @@ export const CourseRow = memo(function CourseRow({
         <td className="c-name">
           <span className="pl-cname">{c.name}</span>
           {showCategory && c.category !== "other" && <span className={`pl-badge cat-${c.category}`}>{CATEGORY_LABEL[c.category]}</span>}
-          {otherDept && <span className="pl-badge pl-badge-other" title="우리 과 이수체계 과목이에요. 다른 학과에서 연 분반도 포함돼 있어요">타학과 개설 포함</span>}
+          {otherDept && <span className="pl-badge pl-badge-other" title="우리 과 이수체계 과목이에요. 다른 학과에서 연 분반도 포함돼 있어요">타학과 개설</span>}
           {c.tags.filter((t) => t === "SDG" || t === "인문교양").map((t) => <span key={t} className="pl-badge">{t}</span>)}
           <span className="pl-mobile-meta">{[types.join(", "), c.grade && c.grade !== "*" ? `${c.grade}학년` : "", `${c.credit}학점`, time].filter(Boolean).join(" | ")}</span>
         </td>
-        <td className="c-type">{types.join(", ") || "-"}</td>
+        <td className="c-type">{types.length ? types.map((t) => <span key={t} className="pl-type" data-t={typeTone(t)}>{t}</span>) : "-"}</td>
         <td className="c-num">{c.grade && c.grade !== "*" ? c.grade : "-"}</td>
         <td className="c-num">{c.credit}</td>
         <td className="c-prof">{profText}</td>

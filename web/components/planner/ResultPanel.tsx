@@ -16,6 +16,12 @@ export type ResultView = {
 
 type RecTab = "gyoyang" | "major";
 
+/** 이유는 앞에서 2개만(점수에 크게 기여한 순), 원격강좌는 알아야 하니 있으면 붙임 — 칩이 무지개처럼 많아 보이지 않게 */
+const topReasons = (rs: string[]) => {
+  const main = rs.filter((x) => !x.startsWith("원격")).slice(0, 2);
+  return rs.some((x) => x.startsWith("원격")) ? [...main, "원격강좌"] : main;
+};
+
 /** 추천 이유 칩 색 구분 (recommend.ts의 reasons 문구 기준) */
 const reasonKind = (x: string) =>
   x.startsWith("공강") ? "free" : x.startsWith("앞뒤") ? "near" : x.startsWith("정원") ? "seat" : x === "SDG" ? "sdg" : x === "인문교양" ? "hum" : x.startsWith("원격") ? "remote" : "etc";
@@ -34,7 +40,7 @@ function RecRow({ r, onAdd, showSection, cont, i = 0 }: { r: Recommendation; onA
           <div className="pl-rec-name">{r.course.name} <span className="pl-muted">{r.course.credit}학점</span>{showSection && <span className="pl-rec-sec">{r.section.id.split("-").pop()}분반</span>}</div>
         )}
         <div className="pl-rec-meta">{r.section.type && <span className="pl-rec-type">{r.section.type}</span>}{formatSlots(r.section.slots)} | {r.section.profs.join(", ") || "교수 미정"}{r.section.room ? ` | ${r.section.room}` : ""}</div>
-        {r.reasons.length > 0 && <div className="pl-rec-reasons">{r.reasons.map((x) => <span key={x} className="pl-rec-reason" data-kind={reasonKind(x)}>{x}</span>)}</div>}
+        {r.reasons.length > 0 && <div className="pl-rec-reasons">{topReasons(r.reasons).map((x) => <span key={x} className="pl-rec-reason" data-kind={reasonKind(x)}>{x}</span>)}</div>}
       </div>
       <button className="pl-btn sm primary" onClick={() => onAdd(r)}>담기</button>
     </div>
