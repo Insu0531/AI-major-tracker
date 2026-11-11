@@ -32,12 +32,15 @@ export default function GuideTour({
   const [idx, setIdx] = useState(0);
   const [rect, setRect] = useState<Rect | null>(null);
 
-  // 투어를 새로 켤 때마다 첫 단계로 + 포커스 해제(포커스된 버튼이 Enter로 재실행되는 것 방지)
+  // 투어를 새로 켤 때마다 첫 단계로 (렌더 중에 이전 값과 비교 — effect 안 setState 대신)
+  const [prevRun, setPrevRun] = useState(run);
+  if (run !== prevRun) {
+    setPrevRun(run);
+    if (run) setIdx(0);
+  }
+  // 포커스 해제(포커스된 버튼이 Enter로 재실행되는 것 방지)
   useEffect(() => {
-    if (run) {
-      setIdx(0);
-      (document.activeElement as HTMLElement | null)?.blur();
-    }
+    if (run) (document.activeElement as HTMLElement | null)?.blur();
   }, [run]);
 
   const measure = useCallback(() => {

@@ -28,7 +28,7 @@ export type SavedPlan = {
   sem: string;
   savedAt: string;
   items: (TimetableItem & { sectionIds: string[] })[];
-  /** 기존 사이트(/old) 라이브러리에서 온 항목 */
+  /** 예전 사이트 라이브러리(localStorage `knu_saved_timetables`)에서 온 항목 */
   legacy?: boolean;
   /** 계정(서버)에 저장된 항목 */
   cloud?: boolean;
@@ -36,7 +36,7 @@ export type SavedPlan = {
   featured?: boolean;
 };
 
-/* 계정으로 옮긴 기존 사이트 저장본은 목록에서 숨김 (원본은 구버전이 계속 쓰므로 지우지 않음) */
+/* 계정으로 옮긴 기존 사이트 저장본은 목록에서 숨김 (원본 저장 데이터는 지우지 않음) */
 const MIGRATED_KEY = "knu_planner_migrated_v1";
 export const markMigrated = (ids: string[]) => writeLocal(MIGRATED_KEY, [...new Set([...readLocal<string[]>(MIGRATED_KEY, []), ...ids])]);
 const migrated = () => new Set(readLocal<string[]>(MIGRATED_KEY, []));

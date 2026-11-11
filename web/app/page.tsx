@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "전공·교양·교직을 한 번에 담으면 겹치지 않는 시간표를 모두 찾아 정리해 드려요. 전공으로 인정되는 다른 학과 개설 과목까지 함께 찾아요.",
 };
 
-// 새 시간표 검색 화면 (구버전은 /old)
+// 시간표 검색 화면 (구버전 /old는 2026-11-11 삭제, /old 주소는 여기로 연결)
 export default function Home() {
   return (
     <>

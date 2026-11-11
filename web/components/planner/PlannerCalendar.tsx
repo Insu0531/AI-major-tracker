@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { EVENTS, type CalEvent, type EvColor } from "@/components/AcademicCalendarTab";
+import { EVENTS, type CalEvent, type EvColor } from "@/lib/planner/calendarEvents";
 
-/** 학사일정 (새 디자인). 일정 데이터는 구버전 AcademicCalendarTab의 EVENTS를 같이 쓴다 */
+/** 학사일정. 일정 데이터는 lib/planner/calendarEvents.ts */
 const WEEKDAYS = ["일", "월", "화", "수", "목", "금", "토"];
 const KIND: Record<EvColor, string> = { indigo: "etc", red: "holiday", green: "reg", amber: "term", purple: "exam" };
 const LEGEND: [string, string][] = [["reg", "수강"], ["term", "학기 운영"], ["exam", "시험"], ["holiday", "공휴일"], ["etc", "행정"]];
