@@ -147,9 +147,10 @@ export function formatSlots(slots: [number, number, number][]): string {
  * 시간표 블록 색: OKLCH 같은 밝기(L 0.605)·채도(C 0.11)에서 색상만 돌려 만든 12색.
  * 화면의 차분한 뉴트럴과 어울리고, 모두 흰 글씨가 읽히는 밝기. 담은 순서대로 배정해 한 시간표 안에서 겹치지 않게 한다.
  */
+// OKLCH L 0.55 (2026-11-11 한 단계 진하게, 흰 글씨 대비 4.6~5.2 — 작은 글씨 권장 4.5 이상). 색상(hue)·채도는 그대로
 export const PALETTE = [
-  "#bb6660", "#b46e3c", "#a07c25", "#5c9251", "#15977e", "#0092ab",
-  "#4a86c1", "#7b77c1", "#9a6daf", "#b2658b", "#808934", "#b9694d"
+  "#a85550", "#a25e2b", "#8f6b09", "#4c8141", "#08856e", "#097f95",
+  "#3975af", "#6c67af", "#895d9d", "#a0557b", "#707921", "#a7593d"
 ];
 export const colorAt = (i: number) => PALETTE[((i % PALETTE.length) + PALETTE.length) % PALETTE.length];
 
