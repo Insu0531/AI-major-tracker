@@ -1,5 +1,5 @@
 # 강의 데이터 자동 갱신
-# - 매일 새벽 1회: 학기 개설강좌 스냅샷 (scripts/collect-sections.mjs, 진행 중인 학기 + 지금 시기의 학기 + 다음 학기, 예: 11월 → 2026-2·2026-w·2027-1)
+# - 매일 새벽 1회: 다가오는 정규학기 개설강좌 스냅샷 (scripts/collect-sections.mjs, 10~3월 → 다음 1학기, 4~9월 → 2학기. 11월이면 2027-1)
 # - 6개월마다(1월·7월 15일, 수강신청 전): 학부·대학원 전 학과 이수체계 (scripts/collect-curricula.mjs --from-list)
 # 바뀐 파일이 있을 때만 main에 커밋 → Vercel이 자동으로 다시 배포한다.
 # Actions 탭에서 "Run workflow"로 언제든 수동 실행할 수 있고, 학기를 직접 지정할 수도 있다.
@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
     inputs:
       semesters:
-        description: "수집할 학기 (예: 2026-2 2026-w). 비우면 지금 시기에 맞춰 자동"
+        description: "수집할 학기 (예: 2026-2 2026-w). 비우면 다가오는 정규학기(지금은 2027-1)"
         required: false
         default: ""
       curricula:
