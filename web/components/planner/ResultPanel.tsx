@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { track } from "@/lib/analytics";
 import { DAY_NAMES, formatSlots } from "@/lib/planner/data";
 import type { Recommendation } from "@/lib/planner/recommend";
@@ -32,10 +32,10 @@ function RecRow({ r, onAdd, showSection, cont }: { r: Recommendation; onAdd: (r:
         ) : (
           <div className="pl-rec-name">{r.course.name} <span className="pl-muted">{r.course.credit}학점</span>{showSection && <span className="pl-rec-sec">{r.section.id.split("-").pop()}분반</span>}</div>
         )}
-        <div className="pl-rec-meta">{r.section.type && <span className="pl-rec-type">{r.section.type}</span>}{formatSlots(r.section.slots)} · {r.section.profs.join(", ") || "교수 미정"}{r.section.room ? ` · ${r.section.room}` : ""}</div>
+        <div className="pl-rec-meta">{r.section.type && <span className="pl-rec-type">{r.section.type}</span>}{formatSlots(r.section.slots)} | {r.section.profs.join(", ") || "교수 미정"}{r.section.room ? ` | ${r.section.room}` : ""}</div>
         {r.reasons.length > 0 && <div className="pl-rec-reasons">{r.reasons.map((x) => <span key={x} className="pl-rec-reason" data-kind={reasonKind(x)}>{x}</span>)}</div>}
       </div>
-      <button className="pl-btn sm primary" onClick={() => onAdd(r)}>이 분반 넣기</button>
+      <button className="pl-btn sm primary" onClick={() => onAdd(r)}>담기</button>
     </div>
   );
 }
@@ -115,6 +115,13 @@ export default function ResultPanel({
     try { localStorage.setItem("knu_fill_open", open ? "1" : "0"); } catch { /* 무시 */ }
   };
   const [listOpen, setListOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
+  useEffect(() => {
+    if (!moreOpen) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setMoreOpen(false); };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [moreOpen]);
 
   if (cartEmpty) {
     return (
@@ -124,14 +131,14 @@ export default function ResultPanel({
       </div>
     );
   }
-  // 추천·검색에서 넣은 과목 (넣음 ✓ · 빼기). 결과가 0개가 돼도 여기서 다시 뺄 수 있게 빈 화면에도 보여 준다
+  // 추천·검색에서 담은 과목 (담음 ✓ 빼기). 결과가 0개가 돼도 여기서 다시 뺄 수 있게 빈 화면에도 보여 준다
   const addedList = addedRecs.map((r) => (
     <div key={`added-${r.section.id}`} className="pl-rec added">
       <div className="pl-rec-main">
         <div className="pl-rec-name">{r.course.name} <span className="pl-muted">{r.course.credit}학점</span></div>
-        <div className="pl-rec-meta">{formatSlots(r.section.slots)} · {r.section.profs.join(", ") || "교수 미정"}{r.section.room ? ` · ${r.section.room}` : ""}</div>
+        <div className="pl-rec-meta">{formatSlots(r.section.slots)} | {r.section.profs.join(", ") || "교수 미정"}{r.section.room ? ` | ${r.section.room}` : ""}</div>
       </div>
-      <button className="pl-btn sm" aria-pressed="true" onClick={() => onRemoveRec(r.course.code)} title="누르면 시간표에서 빼요">넣음 ✓ · 빼기</button>
+      <button className="pl-btn sm" aria-pressed="true" onClick={() => onRemoveRec(r.course.code)} title="누르면 담은 과목에서 빼요">담음 ✓ 빼기</button>
     </div>
   ));
   const emptyWithAdded = (msg: React.ReactNode) => (
@@ -157,7 +164,7 @@ export default function ResultPanel({
       </div>
       {addedRecs.length > 0 && (
         <div className="pl-recs pl-empty-added">
-          <div className="pl-list-title">방금 넣은 과목 <span className="pl-muted" style={{ fontWeight: 500 }}>· 빼면 이 과목 없이 다시 짜 드려요</span></div>
+          <div className="pl-list-title">방금 담은 과목 <span className="pl-muted" style={{ fontWeight: 500 }}>| 빼면 이 과목 없이 다시 짜 드려요</span></div>
           {addedList}
         </div>
       )}
@@ -167,7 +174,7 @@ export default function ResultPanel({
     return emptyWithAdded(<>조건에 맞는 분반이 없는 필수 과목이 있어요.<br /><b>{response.emptyMust.join(", ")}</b><br />공강·시간·교수 조건이나 분반 제외를 확인해 주세요.</>);
   }
   if (response && !running && results.length === 0) {
-    return emptyWithAdded(<>조건을 모두 만족하는 시간표가 없어요.<br />{addedRecs.length > 0 ? "방금 넣은 과목 때문일 수 있어요. 아래에서 빼 보세요." : "필수 과목끼리 시간이 겹치거나, 학점·공강·시간대 조건이 너무 좁을 수 있어요."}</>);
+    return emptyWithAdded(<>조건을 모두 만족하는 시간표가 없어요.<br />{addedRecs.length > 0 ? "방금 담은 과목 때문일 수 있어요. 아래에서 빼 보세요." : "필수 과목끼리 시간이 겹치거나, 학점·공강·시간대 조건이 너무 좁을 수 있어요."}</>);
   }
   if (!view || !m) return <div className="pl-empty">시간표를 만드는 중이에요…</div>;
 
@@ -184,25 +191,38 @@ export default function ResultPanel({
           </div>
           <div className="pl-stats">
             <span><b>{m.credit}</b>학점</span>
-            <span>공강 <b>{offDays.length ? offDays.join("·") : "없음"}</b></span>
+            <span>공강 <b>{offDays.length ? offDays.join(", ") : "없음"}</b></span>
           </div>
         </div>
         <div className="pl-actions" data-tour="actions">
           <button className="pl-btn primary" onClick={onImage}>이미지 저장</button>
           <button className="pl-btn pl-kakao" onClick={onKakao}>카톡 공유</button>
-          <button className="pl-btn" onClick={onSave}>보관함에 저장</button>
-          <button className="pl-btn" onClick={onCodes}>수강신청 코드</button>
-          {onBulk && (
-            <button className="pl-btn ghost pl-hide-mobile" onClick={onBulk} disabled={bulkProgress !== null}>
-              {bulkProgress !== null ? `저장 중 ${bulkProgress}/${results.length}` : `전체 이미지 저장 (${results.length})`}
-            </button>
-          )}
+          {/* 나머지(보관함·수강신청 코드·전체 이미지)는 더보기 안에 (2026-11-11 단순화) */}
+          <div className="pl-pop pl-more">
+            <button className="pl-btn" aria-expanded={moreOpen} aria-haspopup="menu" onClick={() => setMoreOpen((v) => !v)}>더보기 ▾</button>
+            {moreOpen && (
+              <>
+                <div style={{ position: "fixed", inset: 0, zIndex: 29 }} onClick={() => setMoreOpen(false)} />
+                <div className="pl-pop-panel pl-menu pl-more-panel" role="menu">
+                  <div className="pl-pop-list">
+                    <button role="menuitem" onClick={() => { setMoreOpen(false); onSave(); }}>보관함에 저장</button>
+                    <button role="menuitem" onClick={() => { setMoreOpen(false); onCodes(); }}>수강신청 코드 보기</button>
+                    {onBulk && (
+                      <button role="menuitem" disabled={bulkProgress !== null} onClick={() => { setMoreOpen(false); onBulk(); }}>
+                        {bulkProgress !== null ? `이미지 저장 중 ${bulkProgress}/${results.length}` : `전체 ${results.length}개 이미지 저장`}
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
         </div>
         {results.length > 1 && (
           <div className="pl-strip" role="list" aria-label="다른 시간표">
             {results.slice(0, 30).map((r, i) => (
-              <button key={i} role="listitem" className="pl-strip-item" aria-current={i === selIdx} onClick={() => onSelect(i)} title={names(i).join(" · ")}>
-                <b>{i + 1}</b> {r.metrics.credit}학점{r.metrics.freeDays ? ` · 공강 ${r.metrics.freeDays}일` : ""}
+              <button key={i} role="listitem" className="pl-strip-item" aria-current={i === selIdx} onClick={() => onSelect(i)} title={names(i).join(" | ")}>
+                <b>{i + 1}</b> {r.metrics.credit}학점{r.metrics.freeDays ? ` | 공강 ${r.metrics.freeDays}일` : ""}
               </button>
             ))}
             {results.length > 30 && <button className="pl-strip-item more" onClick={() => { setListOpen(true); setTimeout(() => document.querySelector(".pl-list")?.scrollIntoView({ behavior: "smooth", block: "start" }), 30); }}>+{results.length - 30}개</button>}
@@ -211,7 +231,7 @@ export default function ResultPanel({
         <div className="pl-jumps">
           <button className="pl-rec-jump" onClick={() => { toggleFill(true); setTimeout(() => document.getElementById("pl-fill")?.scrollIntoView({ behavior: "smooth", block: "start" }), 30); }}>
             <span aria-hidden>✦</span> 내 시간표 맞춤 추천 받기
-            <em>{hasMajor ? <>전공 <b>{recs.major.length}</b> · </> : null}교양 <b>{recs.gyoyang.length}</b>개 · 과목 검색</em>
+            <em>{hasMajor ? <>전공 <b>{recs.major.length}</b> | </> : null}교양 <b>{recs.gyoyang.length}</b>개 | 과목 검색</em>
           </button>
         </div>
         {response?.truncated && (
@@ -231,7 +251,7 @@ export default function ResultPanel({
         </div>
         <div className="pl-recs pl-fill" id="pl-fill" data-tour="recs">
           <button className="pl-list-title pl-recs-title pl-fill-toggle" aria-expanded={fillOpen} onClick={() => toggleFill(!fillOpen)}>
-            <span>내 시간표 맞춤 추천 <span className="pl-muted" style={{ fontWeight: 500 }}>· {hasMajor ? `전공 ${recs.major.length} · ` : ""}교양 {recs.gyoyang.length} · 과목 검색</span></span>
+            <span>내 시간표 맞춤 추천 <span className="pl-muted" style={{ fontWeight: 500 }}>| {hasMajor ? `전공 ${recs.major.length} | ` : ""}교양 {recs.gyoyang.length} | 과목 검색</span></span>
             <span className="pl-muted">{fillOpen ? "접기 ▴" : "펼치기 ▾"}</span>
           </button>
           {fillOpen && <>
@@ -239,8 +259,8 @@ export default function ResultPanel({
             <input
               className="pl-field"
               type="search"
-              placeholder="다른 과목 검색해서 넣기 (과목명, 코드, 교수, 학과)"
-              aria-label="과목 검색해서 넣기"
+              placeholder="다른 과목 검색해서 담기 (과목명, 코드, 교수, 학과)"
+              aria-label="과목 검색해서 담기"
               value={q}
               onChange={(e) => setQ(e.target.value)}
             />
@@ -248,7 +268,7 @@ export default function ResultPanel({
           {addedList}
           {q.trim() ? (
             <div className="pl-fill-body">
-              <div className="pl-fill-sub">빈 시간에 들어가는 분반 <span className="pl-muted">{new Set(searchRecs.map((r) => r.course.code)).size}과목 · {searchRecs.length}개 분반</span></div>
+              <div className="pl-fill-sub">빈 시간에 들어가는 분반 <span className="pl-muted">{new Set(searchRecs.map((r) => r.course.code)).size}과목 | {searchRecs.length}개 분반</span></div>
               {searchRecs.length > 0
                 ? searchRecs.map((r, i) => <RecRow key={r.section.id} r={r} onAdd={onAddRec} showSection cont={i > 0 && searchRecs[i - 1].course.code === r.course.code} />)
                 : <div className="pl-hint pl-fill-none">검색한 과목 중 지금 시간표 빈 시간(공강·시간대·학점 조건 포함)에 들어가는 분반이 없어요. 아래 목록에서 직접 담으면 시간표를 다시 짜 드려요.</div>}
@@ -277,7 +297,7 @@ export default function ResultPanel({
                 {recs[curTab].map((r) => <RecRow key={r.section.id} r={r} onAdd={onAddRec} />)}
                 {curTab === "major" && (
                   <>
-                    <div className="pl-fill-sub">다른 전공 과목 <span className="pl-muted">· 시간이 겹쳐도 담으면 시간표를 다시 짜 드려요</span></div>
+                    <div className="pl-fill-sub">다른 전공 과목 <span className="pl-muted">| 시간이 겹쳐도 담으면 시간표를 다시 짜 드려요</span></div>
                     {quickAdd("", majorMore.filter((c) => !recs.major.some((r) => r.course.code === c.code)))}
                   </>
                 )}
@@ -296,8 +316,8 @@ export default function ResultPanel({
           {listOpen && results.map((r, i) => (
             <button key={i} className="pl-list-row" aria-current={i === selIdx} onClick={() => onSelect(i)}>
               <span className="pl-muted">{i + 1}</span>
-              <span className="pl-list-names">{names(i).join(" · ")}</span>
-              <span className="pl-muted">{r.metrics.credit}학점 · 공강 {r.metrics.freeDays}일</span>
+              <span className="pl-list-names">{names(i).join(" | ")}</span>
+              <span className="pl-muted">{r.metrics.credit}학점 | 공강 {r.metrics.freeDays}일</span>
             </button>
           ))}
         </div>

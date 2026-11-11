@@ -85,6 +85,8 @@ export const SORT_LABEL: Record<SortKey, string> = {
   freeDays: "공강 많은 순",
   gaps: "빈 시간 적은 순",
 };
+/** 3단계에 보이는 정렬 칩 (2026-11-11 단순화: 둘만). 엔진은 나머지 기준도 계속 지원 */
+export const SORT_OPTIONS: SortKey[] = ["credit", "freeDays"];
 
 export type Conditions = {
   minCredit: number;   // 0 = 제한 없음

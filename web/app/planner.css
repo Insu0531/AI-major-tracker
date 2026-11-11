@@ -558,7 +558,7 @@
   /* 3단계: 결과 머리와 시간표를 한 번에 스크롤, 버튼은 2열 */
   .pl-plan > section { overflow-y: auto; -webkit-overflow-scrolling: touch; }
   .pl-plan > section > .pl-scroll { overflow: visible; flex: none; }
-  .pl-actions { display: grid; grid-template-columns: 1fr 1fr; }
+  .pl-actions { display: grid; grid-template-columns: 1fr 1fr auto; }
   .pl-actions .pl-btn { width: 100%; padding: 0 var(--s2); }
   .pl-result-bar { gap: var(--s3); }
   .pl-recs-title { flex-direction: column; align-items: flex-start; }
@@ -765,3 +765,28 @@
 .pl-fb-err { font-size: 13.5px; color: var(--accent); font-weight: 600; }
 .pl-fb-done { align-items: center; text-align: center; padding-top: var(--s4); }
 .pl-fb-check { width: 48px; height: 48px; border-radius: 24px; display: flex; align-items: center; justify-content: center; background: oklch(93% 0.05 150); color: oklch(45% 0.12 150); font-size: 22px; font-weight: 700; }
+
+/* 교수님 한 줄 세 상태 */
+.pl-chip.pl-prof-chip.inc { background: var(--pick); color: #fff; }
+.pl-chip.pl-prof-chip.exc { background: oklch(93% 0.04 25); color: var(--accent); text-decoration: line-through; text-decoration-thickness: 1px; }
+.pl-prof-legend.inc { color: var(--pick); }
+.pl-prof-legend.exc { color: var(--accent); }
+
+/* 3단계 더보기 */
+.pl-more { position: relative; }
+.pl-more-panel { left: auto !important; right: 0; width: 220px; }
+@media (min-width: 721px) { .pl-more-panel { left: 0 !important; right: auto; } }
+
+/* 1단계 학기 한 줄 */
+.pl-sem-line { display: flex; align-items: center; gap: var(--s3); height: 44px; padding: 0 14px; border-radius: var(--radius); background: var(--sunken); }
+.pl-sem-line b { font-size: 16px; }
+.pl-sem-line .pl-link { margin-left: auto; }
+
+/* 시간대 창 빠른 선택 (공강 요일·점심) */
+.pl-trp-quick { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; }
+.pl-trp-quick .pl-muted { font-size: 12.5px; margin-right: 2px; }
+.pl-trp-quick .pl-chip { height: 28px; padding: 0 10px; font-size: 13px; }
+.pl-trp-quick .pl-chip[aria-pressed="true"] { background: oklch(85% 0.075 25); color: oklch(35% 0.12 25); }
+
+/* 펼친 과목 머리: 개설학과 | 분반 수 | 비고 */
+.pl-sec-head { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; padding: 0 0 var(--s2); font-size: 13px; color: var(--ink-2); }

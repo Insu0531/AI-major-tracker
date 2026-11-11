@@ -147,7 +147,7 @@ export async function renderTimetablePng(items: TimetableItem[]): Promise<Blob> 
     ctx.font = body(500, 24);
     ctx.fillStyle = C.sub;
     for (const it of noTime) {
-      ctx.fillText(`시간 미정 · ${it.name} (${it.credit}학점)`, 18, y);
+      ctx.fillText(`시간 미정: ${it.name} (${it.credit}학점)`, 18, y);
       y += 44;
     }
   }

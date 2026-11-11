@@ -73,7 +73,7 @@ export default function FriendsPanel({ sems, defaultSem, flash }: { sems: string
           <div className="pl-empty">불러오는 중…</div>
         ) : tt ? (
           <>
-            <div className="pl-hint">{tt.name} · {tt.items.reduce((s, i) => s + i.credit, 0)}학점 · 과목명·시간·교수님만 보여요</div>
+            <div className="pl-hint">{tt.name} | {tt.items.reduce((s, i) => s + i.credit, 0)}학점 | 과목명·시간·교수님만 보여요</div>
             <Timetable items={tt.items} />
           </>
         ) : (
@@ -102,7 +102,7 @@ export default function FriendsPanel({ sems, defaultSem, flash }: { sems: string
               <button className="pl-btn primary" onClick={() => { copy(inviteLink(profile.invite_code)); track("invite_copied"); }}>링크 복사</button>
             </div>
             <div className="pl-hint" style={{ marginTop: 6 }}>
-              초대 코드 <b style={{ color: "var(--ink)", letterSpacing: "0.08em" }}>{profile.invite_code}</b> ·{" "}
+              초대 코드 <b style={{ color: "var(--ink)", letterSpacing: "0.08em" }}>{profile.invite_code}</b> |{" "}
               <button className="pl-link" onClick={async () => {
                 if (!window.confirm("새 코드를 만들면 예전 링크로는 더 이상 친구 추가가 안 돼요. 이미 맺은 친구는 그대로예요.")) return;
                 const c = await regenerateInvite();

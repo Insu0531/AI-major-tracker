@@ -78,7 +78,7 @@ export default function QuickAdd({
           ))}
         </tbody>
       </table>
-      <div className="pl-hint" style={{ padding: "8px 0" }}>담으면 시간표를 다시 계산해요. 담은 과목은 ‘과목 더 담기 · 빼기’에서도 볼 수 있어요.</div>
+      <div className="pl-hint" style={{ padding: "8px 0" }}>담으면 시간표를 다시 계산해요. 담은 과목은 ‘과목 더 담기/빼기’에서도 볼 수 있어요.</div>
     </div>
   );
 }
