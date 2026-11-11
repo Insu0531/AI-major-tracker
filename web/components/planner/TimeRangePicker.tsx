@@ -33,16 +33,22 @@ function slotsToCells(block: Slot[], need: Slot[]): Cells {
   return c;
 }
 
-/** "월 9:00~10:30 · 수 13:00~14:00" 처럼 요약 (같은 요일 이어진 칸은 합침) */
+/** 요약: 다 칠한 요일은 "금 공강", 월~금 12시 칸은 "점심 12~13시", 나머지는 "월 9:00~10:30" (이어진 칸은 합침) */
 export function describeSlots(slots: Slot[], max = 3): string {
-  const byDay = new Map<number, number[]>();
-  for (const [d, s] of slots) byDay.set(d, [...(byDay.get(d) ?? []), s]);
-  const parts: string[] = [];
+  const byDay = new Map<number, Set<number>>();
+  for (const [d, s] of slots) { if (!byDay.has(d)) byDay.set(d, new Set()); byDay.get(d)!.add(Math.floor(s / STEP) * STEP); }
   const hm = (m: number) => `${Math.floor(m / 60)}:${String(m % 60).padStart(2, "0")}`;
+  const off: number[] = [];
+  for (const [d, ms] of byDay) if (ROWS.every((m) => ms.has(m))) off.push(d);
+  const LUNCH = 12 * 60;
+  const lunch = [0, 1, 2, 3, 4].every((d) => off.includes(d) || byDay.get(d)?.has(LUNCH)) && [0, 1, 2, 3, 4].some((d) => !off.includes(d));
+  const parts: string[] = [];
+  if (off.length) parts.push(`${off.sort().map((d) => DAY_NAMES[d]).join("")} 공강`);
+  if (lunch) parts.push("점심 12~13시");
   for (const d of [...byDay.keys()].sort()) {
-    const ms = [...new Set(byDay.get(d))].sort((a, b) => a - b);
-    // 8~22시를 다 칠한 요일은 "금 공강"으로
-    if (ms.length >= ROWS.length && ROWS.every((m) => ms.includes(m))) { parts.push(`${DAY_NAMES[d]} 공강`); continue; }
+    if (off.includes(d)) continue;
+    const ms = [...byDay.get(d)!].filter((m) => !(lunch && m === LUNCH)).sort((a, b) => a - b);
+    if (!ms.length) continue;
     let a = ms[0], b = ms[0] + STEP;
     for (let i = 1; i <= ms.length; i++) {
       if (ms[i] === b) { b += STEP; continue; }
