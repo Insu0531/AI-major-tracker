@@ -796,11 +796,9 @@
 @keyframes pl-slide-next { from { opacity: 0; transform: translateX(14px); } to { opacity: 1; transform: none; } }
 @keyframes pl-slide-prev { from { opacity: 0; transform: translateX(-14px); } to { opacity: 1; transform: none; } }
 @keyframes pl-bump { 0% { transform: scale(1); } 40% { transform: scale(1.08); } 100% { transform: scale(1); } }
-/* 시간표 블록: 과목 순서대로 18ms씩 늦게 (최대 몇 과목이라 전체 0.4초 안) */
-.pl-tt-block { animation: pl-block 0.26s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(var(--i, 0) * 18ms); }
-/* ‹ › 로 넘길 때 방향대로 */
-.pl-tt-wrap[data-dir="next"] { animation: pl-slide-next 0.22s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
-.pl-tt-wrap[data-dir="prev"] { animation: pl-slide-prev 0.22s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+/* 시간표를 바꿀 때는 움직임 없이 아주 짧은 페이드만 (블록 차례 등장·좌우 밀림은 "눈이 아프다" 피드백으로 뺌, 2026-11-11) */
+.pl-tt-block { animation: none; }
+.pl-tt-wrap, .pl-tt-wrap[data-dir] { animation: pl-fade 0.12s ease-out both; }
 /* 추천 목록은 위에서부터 차례로 */
 .pl-rec { animation-delay: calc(var(--i, 0) * 25ms); }
 /* 담은 과목 수·학점이 바뀌면 톡 */
