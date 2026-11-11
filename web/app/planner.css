@@ -787,3 +787,6 @@
 .pl-trp-quick .pl-muted { font-size: 12.5px; margin-right: 2px; }
 .pl-trp-quick .pl-chip { height: 28px; padding: 0 10px; font-size: 13px; }
 .pl-trp-quick .pl-chip[aria-pressed="true"] { background: oklch(85% 0.075 25); color: oklch(35% 0.12 25); }
+
+/* 펼친 과목 머리: 개설학과 | 분반 수 | 비고 */
+.pl-sec-head { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; padding: 0 0 var(--s2); font-size: 13px; color: var(--ink-2); }

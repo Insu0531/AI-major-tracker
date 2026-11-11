@@ -35,7 +35,7 @@ function RecRow({ r, onAdd, showSection, cont }: { r: Recommendation; onAdd: (r:
         <div className="pl-rec-meta">{r.section.type && <span className="pl-rec-type">{r.section.type}</span>}{formatSlots(r.section.slots)} | {r.section.profs.join(", ") || "교수 미정"}{r.section.room ? ` | ${r.section.room}` : ""}</div>
         {r.reasons.length > 0 && <div className="pl-rec-reasons">{r.reasons.map((x) => <span key={x} className="pl-rec-reason" data-kind={reasonKind(x)}>{x}</span>)}</div>}
       </div>
-      <button className="pl-btn sm primary" onClick={() => onAdd(r)}>이 분반 넣기</button>
+      <button className="pl-btn sm primary" onClick={() => onAdd(r)}>담기</button>
     </div>
   );
 }
@@ -125,14 +125,14 @@ export default function ResultPanel({
       </div>
     );
   }
-  // 추천·검색에서 넣은 과목 (넣음 ✓ (빼기)). 결과가 0개가 돼도 여기서 다시 뺄 수 있게 빈 화면에도 보여 준다
+  // 추천·검색에서 담은 과목 (담음 ✓ 빼기). 결과가 0개가 돼도 여기서 다시 뺄 수 있게 빈 화면에도 보여 준다
   const addedList = addedRecs.map((r) => (
     <div key={`added-${r.section.id}`} className="pl-rec added">
       <div className="pl-rec-main">
         <div className="pl-rec-name">{r.course.name} <span className="pl-muted">{r.course.credit}학점</span></div>
         <div className="pl-rec-meta">{formatSlots(r.section.slots)} | {r.section.profs.join(", ") || "교수 미정"}{r.section.room ? ` | ${r.section.room}` : ""}</div>
       </div>
-      <button className="pl-btn sm" aria-pressed="true" onClick={() => onRemoveRec(r.course.code)} title="누르면 시간표에서 빼요">넣음 ✓ (빼기)</button>
+      <button className="pl-btn sm" aria-pressed="true" onClick={() => onRemoveRec(r.course.code)} title="누르면 담은 과목에서 빼요">담음 ✓ 빼기</button>
     </div>
   ));
   const emptyWithAdded = (msg: React.ReactNode) => (
@@ -158,7 +158,7 @@ export default function ResultPanel({
       </div>
       {addedRecs.length > 0 && (
         <div className="pl-recs pl-empty-added">
-          <div className="pl-list-title">방금 넣은 과목 <span className="pl-muted" style={{ fontWeight: 500 }}>| 빼면 이 과목 없이 다시 짜 드려요</span></div>
+          <div className="pl-list-title">방금 담은 과목 <span className="pl-muted" style={{ fontWeight: 500 }}>| 빼면 이 과목 없이 다시 짜 드려요</span></div>
           {addedList}
         </div>
       )}
@@ -168,7 +168,7 @@ export default function ResultPanel({
     return emptyWithAdded(<>조건에 맞는 분반이 없는 필수 과목이 있어요.<br /><b>{response.emptyMust.join(", ")}</b><br />공강·시간·교수 조건이나 분반 제외를 확인해 주세요.</>);
   }
   if (response && !running && results.length === 0) {
-    return emptyWithAdded(<>조건을 모두 만족하는 시간표가 없어요.<br />{addedRecs.length > 0 ? "방금 넣은 과목 때문일 수 있어요. 아래에서 빼 보세요." : "필수 과목끼리 시간이 겹치거나, 학점·공강·시간대 조건이 너무 좁을 수 있어요."}</>);
+    return emptyWithAdded(<>조건을 모두 만족하는 시간표가 없어요.<br />{addedRecs.length > 0 ? "방금 담은 과목 때문일 수 있어요. 아래에서 빼 보세요." : "필수 과목끼리 시간이 겹치거나, 학점·공강·시간대 조건이 너무 좁을 수 있어요."}</>);
   }
   if (!view || !m) return <div className="pl-empty">시간표를 만드는 중이에요…</div>;
 
@@ -253,8 +253,8 @@ export default function ResultPanel({
             <input
               className="pl-field"
               type="search"
-              placeholder="다른 과목 검색해서 넣기 (과목명, 코드, 교수, 학과)"
-              aria-label="과목 검색해서 넣기"
+              placeholder="다른 과목 검색해서 담기 (과목명, 코드, 교수, 학과)"
+              aria-label="과목 검색해서 담기"
               value={q}
               onChange={(e) => setQ(e.target.value)}
             />

@@ -412,29 +412,32 @@ export default function Planner() {
   }), [recPools, recSeed]);
 
   /* 추천에서 넣은 과목: 목록 위에 남겨 두고 다시 누르면 뺄 수 있게 */
-  const [recAdded, setRecAdded] = useState<string[]>([]);
-  const addedRecs: Recommendation[] = useMemo(() => recAdded.flatMap((code) => {
-    const item = cart.find((c) => c.code === code);
+  // 추천에서 담은 과목 → 추천했던 분반 (목록 위 "담음 ✓"에 그 분반 정보를 보여 주려고)
+  const [recAdded, setRecAdded] = useState<Record<string, string>>({});
+  const addedRecs: Recommendation[] = useMemo(() => Object.entries(recAdded).flatMap(([code, sid]) => {
     const course = courseByCode.get(code);
-    const section = course?.sections.find((x) => x.id === item?.pinned);
-    return course && section ? [{ course, section, score: 0, reasons: [] }] : [];
+    const section = course?.sections.find((x) => x.id === sid);
+    return course && section && cart.some((c) => c.code === code) ? [{ course, section, score: 0, reasons: [] }] : [];
   }), [recAdded, cart, courseByCode]);
   const removeRec = (code: string) => {
     setMode(code, null);
-    setRecAdded((a) => a.filter((c) => c !== code));
+    setRecAdded((a) => Object.fromEntries(Object.entries(a).filter(([k]) => k !== code)));
     track("rec_removed", { code });
   };
 
-  /** 추천 과목을 그 분반으로 고정해 '꼭 넣을 과목'으로 담음 → 이 과목이 들어간 시간표만 다시 계산 */
+  /**
+   * 추천 과목 담기 — 2단계 "담기"와 같은 뜻(후보로 담음, 2026-11-11 단순화).
+   * 추천 분반은 지금 시간표 빈 시간에 들어가므로, 엔진이 이 과목이 들어간 시간표를 만들어 줌. 반드시 넣으려면 '꼭 넣을 과목'에서.
+   */
   const addRec = (r: Recommendation) => {
     setSt((s) => ({
       ...s,
-      cart: [...s.cart.filter((c) => c.code !== r.course.code), { code: r.course.code, mode: "must", pinned: r.section.id, excluded: [] }],
+      cart: s.cart.some((c) => c.code === r.course.code) ? s.cart : [...s.cart, { code: r.course.code, mode: "maybe", pinned: null, excluded: [] }],
     }));
-    setRecAdded((a) => [...a.filter((c) => c !== r.course.code), r.course.code]);
+    setRecAdded((a) => ({ ...a, [r.course.code]: r.section.id }));
     const tab = recs.major.includes(r) ? "major" : recs.gyoyang.includes(r) ? "gyoyang" : "search";
     track("rec_added", { code: r.course.code, name: r.course.name, reasons: r.reasons, tab, rank: tab === "search" ? 0 : recs[tab].indexOf(r) + 1 });
-    flash(`${r.course.name}을(를) 넣었어요`);
+    flash(`${r.course.name}을(를) 담았어요`);
   };
 
   const majorLabel = st.major ? labelOf(st.major) : "";

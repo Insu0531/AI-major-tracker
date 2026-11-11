@@ -78,7 +78,8 @@ export default function CourseBrowser(p: Props) {
   const [credits, setCredits] = useState<number[]>([]);
   const [onlyFree, setOnlyFree] = useState(false);
   // 넓은 화면은 필터를 펼쳐 두고, 휴대폰은 과목 표가 먼저 보이게 접어 둔다
-  const [filtersOpen, setFiltersOpen] = useState(() => typeof window === "undefined" || window.innerWidth > 720);
+  // 필터는 처음엔 접어 두고 "필터 N" 버튼으로 (2026-11-11 단순화, 넓은 화면 포함)
+  const [filtersOpen, setFiltersOpen] = useState(false);
   const [limit, setLimit] = useState(PAGE);
   const [openCode, setOpenCode] = useState<string | null>(null);
   const [sort, setSort] = useState<Sort>(null);
@@ -178,7 +179,7 @@ export default function CourseBrowser(p: Props) {
             onChange={(e) => { setQ(e.target.value); setLimit(PAGE); }}
           />
           <button className="pl-btn" onClick={() => setFiltersOpen((v) => !v)} aria-expanded={filtersOpen}>
-            {filtersOpen ? "필터 접기" : `필터${activeExtra ? ` ${activeExtra}` : ""}`}
+            {filtersOpen ? "필터 접기 ▴" : `필터${activeExtra ? ` ${activeExtra}개 켜짐` : ""} ▾`}
           </button>
         </div>
 
@@ -240,11 +241,8 @@ export default function CourseBrowser(p: Props) {
                 {th("type", "교과구분", "c-type")}
                 {th("grade", "학년", "c-num")}
                 {th("credit", "학점", "c-num")}
-                {th("dept", "개설학과", "c-dept")}
                 <th className="c-prof">교수</th>
                 <th className="c-time">강의시간</th>
-                <th className="c-num c-secs">분반</th>
-                <th className="c-note">비고</th>
                 <th className="c-chev"><span className="pl-sr">펼치기</span></th>
               </tr>
             </thead>
@@ -325,16 +323,19 @@ export const CourseRow = memo(function CourseRow({
         <td className="c-type">{types.join(", ") || "-"}</td>
         <td className="c-num">{c.grade && c.grade !== "*" ? c.grade : "-"}</td>
         <td className="c-num">{c.credit}</td>
-        <td className="c-dept">{c.dept}</td>
         <td className="c-prof">{profText}</td>
         <td className="c-time">{time}</td>
-        <td className="c-num c-secs">{secs.length}</td>
-        <td className="c-note">{flags.map((f) => <span key={f} className="pl-flag">{f}</span>)}</td>
         <td className="c-chev" aria-hidden><span className={open ? "up" : ""}>⌄</span></td>
       </tr>
       {open && (
         <tr className="pl-tr-sub">
-          <td colSpan={11}>
+          <td colSpan={8}>
+            {/* 표에서 뺀 개설학과·분반 수·비고는 펼친 줄 머리에 (2026-11-11 단순화: 표 11칸 → 8칸) */}
+            <div className="pl-sec-head">
+              <span>{c.dept}</span>
+              <span>분반 {secs.length}개</span>
+              {flags.map((f) => <span key={f} className="pl-flag">{f}</span>)}
+            </div>
             <div className="pl-sections">
               {secs.map((s) => {
                 const pinned = item?.pinned === s.id;
