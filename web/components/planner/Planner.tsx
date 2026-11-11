@@ -19,7 +19,7 @@ import QuickAdd from "@/components/planner/QuickAdd";
 import { analyticsEnabled, initAnalytics, isOptedOut, setOptOut, track } from "@/lib/analytics";
 import { dataSemFor, pickDefaultSem, recommendedSem, semLabel, sortSems, TERM_LABEL, TERMS } from "@/lib/planner/semester";
 import { shareTimetableImage, shareToKakao } from "@/lib/kakaoShare";
-import GuideTour, { type TourStep } from "@/components/GuideTour";
+import GuideTour from "@/components/GuideTour";
 import PlannerCalendar from "@/components/planner/PlannerCalendar";
 import { useDialogKeys } from "@/lib/planner/useDialogKeys";
 import PlannerFeedback from "@/components/planner/PlannerFeedback";
@@ -28,21 +28,12 @@ import MajorPicker from "@/components/planner/MajorPicker";
 import CourseBrowser from "@/components/planner/CourseBrowser";
 import { CartList, ConditionsPanel, cartCredit } from "@/components/planner/CartPanel";
 import ResultPanel, { type ResultView } from "@/components/planner/ResultPanel";
+import { CodesBody, PickBody } from "@/components/planner/SectionModals";
+import { TOUR_2, TOUR_3 } from "@/lib/planner/tour";
 import Timetable from "@/components/planner/Timetable";
 
 const STATE_KEY = "knu_planner_state_v1";
 const TOUR_KEY = "knu_planner_tour_v1";
-const TOUR_2: TourStep[] = [
-  { selector: '[data-tour="search"]', title: "과목 찾기", body: "과목명·코드·교수·학과로 검색하거나, 오른쪽 '필터'로 학년·학점·SDG·캠퍼스 등을 고를 수 있어요." },
-  { selector: '[data-tour="cats"]', title: "구분", body: "내 전공(학과·학번 이수체계), 교양, 교직 등으로 나눠 볼 수 있어요. 여러 개를 같이 켜도 돼요." },
-  { selector: ".pl-course", title: "담기", body: "들을 만한 과목을 넉넉히 담으세요. 과목 이름을 누르면 분반이 펼쳐지고, 원하는 분반만 고정하거나 싫은 분반을 뺄 수 있어요." },
-  { selector: '[data-tour="next"]', title: "시간표 보기", body: "담은 과목으로 시간이 겹치지 않게 최대한 많이 넣은 시간표를 만들어 드려요." },
-];
-const TOUR_3: TourStep[] = [
-  { selector: '[data-tour="must"]', title: "꼭 넣을 과목", body: "반드시 들어가야 하는 과목을 고르면 그 과목이 들어간 시간표만 보여 줘요." },
-  { selector: '[data-tour="sort"]', title: "정렬과 조건", body: "공강 많은 순, 늦게 시작 등으로 정렬하고, 아래에서 학점·공강 요일·수업 시간·피할 교수를 정할 수 있어요." },
-  { selector: '[data-tour="actions"]', title: "저장과 수강신청", body: "이미지로 저장하거나 보관함에 넣고, 수강신청 코드를 복사할 수 있어요. ← → 키로 시간표를 넘길 수 있어요." },
-];
 const ENTRY_YEAR_LAST = 2026; // 이수체계 데이터가 있는 마지막 학번
 const fmtDate = (iso: string) => new Date(iso).toLocaleString("ko-KR", { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
 const defaultCampuses = (label: string) => (isSangjuLabel(label) ? ["상주"] : ["산격동", "동인동"]);
@@ -910,55 +901,13 @@ export default function Planner() {
               </>
             )}
             {modal === "pick" && view && (
-              <>
-                <div className="pl-modal-head"><h3>{pickFor === "kakao" ? "분반 고르고 공유" : "분반 고르고 저장"}</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
-                <div className="pl-modal-body">
-                  <div className="pl-hint">같은 시간에 교수님이 다른 분반이 있어요. 고르면 이미지에 교수님·강의실이 들어가요.</div>
-                  {view.items.filter((i) => i.options.length > 1).map((it) => (
-                    <div key={it.code} className="pl-pick-group">
-                      <div style={{ fontWeight: 700 }}>{it.name}</div>
-                      <div className="pl-chips">
-                        {it.options.map((o) => (
-                          <button key={o.id} className="pl-chip" aria-pressed={it.decided && it.chosen === o.id}
-                            onClick={() => { setProfPick((p) => ({ ...p, [it.code]: o.id })); track("section_chosen", { where: "save" }); }}>
-                            {o.id.split("-").pop()}분반 {o.prof}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                  <div style={{ display: "flex", gap: 6, marginTop: 4 }}>
-                    <button className="pl-btn" style={{ flex: 1 }} onClick={() => { setModal(null); void (pickFor === "kakao" ? doKakao() : doImage()); }}>고르지 않고 {pickFor === "kakao" ? "공유" : "저장"}</button>
-                    <button className="pl-btn primary" style={{ flex: 1 }} onClick={() => { setModal(null); void (pickFor === "kakao" ? doKakao() : doImage()); }}>{pickFor === "kakao" ? "카톡 공유" : "이미지 저장"}</button>
-                  </div>
-                </div>
-              </>
+              <PickBody items={view.items} pickFor={pickFor} onClose={() => setModal(null)}
+                onPick={(code, id) => { setProfPick((p) => ({ ...p, [code]: id })); track("section_chosen", { where: "save" }); }}
+                onDone={() => { setModal(null); void (pickFor === "kakao" ? doKakao() : doImage()); }} />
             )}
             {modal === "codes" && view && (
-              <>
-                <div className="pl-modal-head"><h3>수강신청 코드</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
-                <div className="pl-modal-body">
-                  {view.items.map((it) => (
-                    <div key={it.code} className="pl-code-row">
-                      <div>
-                        <div style={{ fontWeight: 600 }}>{it.name} <span className="pl-muted pl-small">{it.credit}학점</span></div>
-                        {it.options.length > 1 ? (
-                          <select className="pl-select" style={{ marginTop: 6, height: 28 }} value={it.chosen}
-                            onChange={(e) => setProfPick((p) => ({ ...p, [it.code]: e.target.value }))} aria-label={`${it.name} 분반 선택`}>
-                            {it.options.map((o) => <option key={o.id} value={o.id}>{o.id.split("-")[1]}분반 {o.prof}</option>)}
-                          </select>
-                        ) : <div className="pl-muted pl-small">{it.prof}</div>}
-                        <code>{it.chosen}</code>
-                      </div>
-                      <button className="pl-btn sm" onClick={() => copy(it.chosen)}>복사</button>
-                    </div>
-                  ))}
-                  <div style={{ display: "flex", gap: 6, marginTop: 4 }}>
-                    <button className="pl-btn" style={{ flex: 1 }} onClick={() => copy(view.items.map((i) => i.chosen).join("\n"))}>전체 복사</button>
-                    <a className="pl-btn primary" style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", textDecoration: "none" }} href="https://sugang.knu.ac.kr" target="_blank" rel="noopener noreferrer">수강신청 사이트</a>
-                  </div>
-                </div>
-              </>
+              <CodesBody items={view.items} onClose={() => setModal(null)} onCopy={copy}
+                onPick={(code, id) => setProfPick((p) => ({ ...p, [code]: id }))} />
             )}
             {modal === "cart" && (
               <>
