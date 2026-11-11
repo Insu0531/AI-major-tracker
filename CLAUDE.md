@@ -334,7 +334,7 @@ SavedTimetable = { id, name, savedAt, sem: "2026-1", major, majorLabel, entryYea
   엔진 `dayRulesOk()` — 연강·과목 수는 탐색 중 가지치기, 공강은 완성 시 검사. "더 넣을 수 있는 후보" 판정에도 같은 규칙을 적용해야 결과가 사라지지 않음.
 - 이미지 저장 규격(사용자가 준 시간표 앱 캡처 기준): 요일 머리줄 60 · 시간 열 62 · 요일 칸 214 · 1시간 135px (크기만 맞추고 모양은 사이트 아이덴티티: 회백색 배경·세로선 없는 격자·30분 점선·각진 단색 블록(음영·둥근 모서리 없음, 2026-11-11 요청)·Paperlogy 요일/과목명·왼쪽 위 KNU 로고·24시간제 두 자리),
   한글 요일, 12시간제 시각, 블록은 칸을 꽉 채우고 과목명(굵게)+강의실. 월~금 9~18시면 1132×1275.
-- 학기: 계절학기 포함, 시간순(1→여름→2→겨울). `lib/planner/semester.ts`의 `recommendedSem()`이 날짜로 기본 학기 선택(4~6월 여름, 7~9월 2학기, 10~11월 겨울, 12~3월 1학기; 데이터 없으면 직전 학기). 직접 고른 학기는 같은 시기 동안만 유지(`semChosenFor`). 1단계는 연도(데이터 첫 해~지금+4년)·학기 두 칸으로 따로 고르고, 데이터 없는 학기는 "(준비 중)" 표시 + 다음 버튼 비활성(스냅샷 요청 안 함).
+- 학기: 계절학기 포함, 시간순(1→여름→2→겨울). `lib/planner/semester.ts`의 `recommendedSem()`이 날짜로 기본 학기 선택(4~6월 여름, 7~9월 2학기, 10~11월 겨울, 12~3월 1학기; 데이터 없으면 직전 학기). 직접 고른 학기는 같은 시기 동안만 유지(`semChosenFor`). 1단계는 연도(데이터 첫 해~지금+4년)·학기 두 칸으로 따로 고르고, 데이터 없는 학기는 "(준비 중)" 표시. 그래도 조회 가능(2026-11-11 요청): `dataSemFor()`가 같은 학기의 가장 최근 해(없으면 직전 학기) 스냅샷을 대신 불러오고, 1단계 안내 + 2·3단계 상단 노란 띠(`.pl-sem-note`)로 "○○ 개설 정보로 보여 드려요" 표시. 시간표 제목·저장 학기는 고른 학기 그대로.
 - 문의 이메일 insu0531@knu.ac.kr (1단계 하단·메뉴), 개인정보처리방침 `/privacy` (`app/privacy/page.tsx`, 수집 항목이 바뀌면 같이 고칠 것).
 - 사용 패턴 분석: `lib/analytics.ts` (PostHog, `NEXT_PUBLIC_POSTHOG_KEY`/`NEXT_PUBLIC_POSTHOG_HOST`(기본 EU) 없으면 no-op, 쿠키 없이 localStorage, 세션 녹화 끔, 메뉴에서 수집 거부 가능).
   주요 이벤트: step_view, major_selected, tab_changed, search, filter_toggled, course_added/removed/must, results_computed, condition_changed, image_saved(_bulk), plan_saved, codes_opened, code_copied, kakao_share, menu_*.

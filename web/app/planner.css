@@ -665,3 +665,7 @@
 .pl-trp-cell.block { background: oklch(85% 0.075 25); }
 .pl-trp-cell.need { background: oklch(85% 0.07 255); }
 .pl-cond .pl-link { font-size: 13px; }
+
+/* 데이터 없는 학기를 이전 학기 데이터로 보여 줄 때 안내 띠 */
+.pl-sem-note { padding: 8px var(--s5); background: oklch(95.5% 0.04 85); color: oklch(42% 0.08 70); font-size: 13.5px; text-align: center; }
+@media (max-width: 720px) { .pl-sem-note { padding: 8px var(--s4); text-align: left; } }
