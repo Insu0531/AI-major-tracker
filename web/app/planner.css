@@ -699,3 +699,14 @@
 .pl-relax-btn { height: auto !important; min-height: 34px; padding: 6px 12px !important; background: var(--pick-weak) !important; color: var(--pick) !important; }
 .pl-relax-btn b { font-weight: 700; margin-left: 4px; }
 .pl-relax-btn:hover { filter: brightness(0.97); }
+
+/* 3단계 정리: 결과 가로 띠 · 접히는 칸 */
+.pl-strip { display: flex; gap: 6px; overflow-x: auto; padding: 2px 0 var(--s1); scrollbar-width: thin; }
+.pl-strip-item { flex-shrink: 0; height: 30px; padding: 0 10px; border: none; border-radius: 15px; background: var(--sunken); font-size: 13px; color: var(--ink-2); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.pl-strip-item b { color: var(--ink); margin-right: 2px; }
+.pl-strip-item:hover { background: var(--pick-weak); }
+.pl-strip-item[aria-current="true"] { background: var(--pick); color: #fff; }
+.pl-strip-item[aria-current="true"] b { color: #fff; }
+.pl-strip-item.more { color: var(--pick); font-weight: 600; }
+.pl-fill-toggle { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: var(--s3); border: none; background: none; text-align: left; cursor: pointer; }
+.pl-fill-toggle:hover .pl-muted:last-child { color: var(--ink); }
