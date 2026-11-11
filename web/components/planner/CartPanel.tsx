@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { colorFor, DAY_NAMES } from "@/lib/planner/data";
-import { SORT_LABEL, type CartItem, type CartMode, type Conditions, type Course, type SortKey } from "@/lib/planner/types";
+import { SORT_LABEL, SORT_OPTIONS, type CartItem, type CartMode, type Conditions, type Course } from "@/lib/planner/types";
 import TimeRangePicker, { describeSlots, type TimeMode } from "./TimeRangePicker";
 
 export function cartCredit(items: CartItem[], courseByCode: Map<string, Course>) {
@@ -106,7 +106,7 @@ export function ConditionsPanel({
       <div className="pl-cond-block" data-tour="sort">
         <div className="pl-label">정렬</div>
         <div className="pl-chips">
-          {(Object.keys(SORT_LABEL) as SortKey[]).map((k) => (
+          {SORT_OPTIONS.map((k) => (
             <button key={k} className="pl-chip" aria-pressed={c.sort === k} onClick={() => set({ sort: k })}>{SORT_LABEL[k]}</button>
           ))}
         </div>
@@ -170,69 +170,62 @@ export function ConditionsPanel({
       </div>
 
       {profs.length > 0 && (
-        <>
-          <ProfChooser
-            label="꼭 들어야 하는 교수님"
-            hint="고른 교수님 수업이 들어간 시간표만 보여 줘요."
-            profs={profs}
-            profCourses={profCourses}
-            selected={c.includeProfs ?? []}
-            onToggle={(p) => {
-              const inc = c.includeProfs ?? [];
-              set({ includeProfs: inc.includes(p) ? inc.filter((x) => x !== p) : [...inc, p], excludeProfs: c.excludeProfs.filter((x) => x !== p) });
-            }}
-            showAll={allProfs}
-            onShowAll={() => setAllProfs((v) => !v)}
-          />
-          <ProfChooser
-            label="피하고 싶은 교수님"
-            hint="고른 교수님 분반은 빼고 시간표를 만들어요."
-            profs={profs}
-            profCourses={profCourses}
-            selected={c.excludeProfs}
-            onToggle={(p) => set({
-              excludeProfs: c.excludeProfs.includes(p) ? c.excludeProfs.filter((x) => x !== p) : [...c.excludeProfs, p],
-              includeProfs: (c.includeProfs ?? []).filter((x) => x !== p),
-            })}
-            showAll={allProfs}
-            onShowAll={() => setAllProfs((v) => !v)}
-          />
-        </>
+        <ProfChooser
+          profs={profs}
+          profCourses={profCourses}
+          include={c.includeProfs ?? []}
+          exclude={c.excludeProfs}
+          onCycle={(p) => {
+            // 누를 때마다 기본 → 꼭 → 피함 → 기본
+            const inc = c.includeProfs ?? [];
+            if (inc.includes(p)) set({ includeProfs: inc.filter((x) => x !== p), excludeProfs: [...c.excludeProfs, p] });
+            else if (c.excludeProfs.includes(p)) set({ excludeProfs: c.excludeProfs.filter((x) => x !== p) });
+            else set({ includeProfs: [...inc, p] });
+          }}
+          showAll={allProfs}
+          onShowAll={() => setAllProfs((v) => !v)}
+        />
       )}
     </>
   );
 }
 
+/** 교수님 한 줄: 칩을 누를 때마다 기본 → 꼭 들을 → 피할 → 기본 (2026-11-11 단순화, 예전엔 두 줄) */
 function ProfChooser({
-  label,
-  hint,
   profs,
   profCourses,
-  selected,
-  onToggle,
+  include,
+  exclude,
+  onCycle,
   showAll,
   onShowAll,
 }: {
-  label: string;
-  hint: string;
   profs: string[];
   profCourses: Map<string, string[]>;
-  selected: string[];
-  onToggle: (p: string) => void;
+  include: string[];
+  exclude: string[];
+  onCycle: (p: string) => void;
   showAll: boolean;
   onShowAll: () => void;
 }) {
-  const shown = showAll ? profs : profs.filter((p, i) => i < 8 || selected.includes(p));
+  const chosen = (p: string) => include.includes(p) || exclude.includes(p);
+  const shown = showAll ? profs : profs.filter((p, i) => i < 8 || chosen(p));
   return (
     <div className="pl-cond-block">
-      <div className="pl-label">{label}</div>
-      <div className="pl-hint" style={{ marginBottom: 8 }}>{hint}</div>
+      <div className="pl-label">교수님</div>
+      <div className="pl-hint" style={{ marginBottom: 8 }}>한 번 누르면 <b className="pl-prof-legend inc">꼭 듣기</b>, 두 번 누르면 <b className="pl-prof-legend exc">피하기</b>, 세 번이면 해제예요.</div>
       <div className="pl-chips">
-        {shown.map((p) => (
-          <button key={p} className="pl-chip" aria-pressed={selected.includes(p)} title={profCourses.get(p)?.join(", ")} onClick={() => onToggle(p)}>
-            {p}
-          </button>
-        ))}
+        {shown.map((p) => {
+          const state = include.includes(p) ? "inc" : exclude.includes(p) ? "exc" : "";
+          return (
+            <button key={p} className={`pl-chip pl-prof-chip ${state}`} aria-pressed={!!state}
+              aria-label={`${p} 교수님${state === "inc" ? ", 꼭 듣기" : state === "exc" ? ", 피하기" : ""}`}
+              title={[profCourses.get(p)?.join(", "), state === "inc" ? "꼭 듣기" : state === "exc" ? "피하기" : ""].filter(Boolean).join(" | ")}
+              onClick={() => onCycle(p)}>
+              {state === "inc" ? "✓ " : state === "exc" ? "✕ " : ""}{p}
+            </button>
+          );
+        })}
       </div>
       {profs.length > 8 && (
         <button className="pl-link" style={{ marginTop: 8 }} onClick={onShowAll}>{showAll ? "접기" : `${profs.length - 8}명 더 보기`}</button>

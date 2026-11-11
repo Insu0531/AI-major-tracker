@@ -641,15 +641,10 @@ export default function Planner() {
           ))}
         </nav>
         <div className="pl-top-right">
-          {accountsEnabled() ? (loggedIn
+          {/* 로그인·친구는 켜졌을 때만 헤더에. 준비 중일 땐 메뉴 안에만 (안 되는 버튼이 늘 보이지 않게) */}
+          {accountsEnabled() && (loggedIn
             ? <button className="pl-btn ghost" onClick={() => { setModal("friends"); track("friends_opened"); }}>친구</button>
-            : <button className="pl-btn ghost" onClick={() => { track("login_clicked"); void signInWithGoogle(); }}>구글 로그인</button>)
-            : (
-              <button className="pl-btn ghost pl-soon pl-hide-mobile" aria-disabled="true" title="구글 로그인/친구 시간표 기능을 준비하고 있어요"
-                onClick={() => { flash("구글 로그인과 친구 기능은 준비 중이에요"); track("soon_clicked", { feature: "account" }); }}>
-                로그인/친구 <span className="pl-soon-badge">준비 중</span>
-              </button>
-            )}
+            : <button className="pl-btn ghost" onClick={() => { track("login_clicked"); void signInWithGoogle(); }}>구글 로그인</button>)}
           <button className="pl-btn ghost" onClick={() => { reloadPlans(); setModal("saved"); }}>보관함{plans.length + cloudPlans.length ? ` ${plans.length + cloudPlans.length}` : ""}</button>
           <div className="pl-pop">
             <button className="pl-btn ghost" aria-expanded={menuOpen} aria-label="메뉴" onClick={() => setMenuOpen((v) => !v)}>메뉴</button>
@@ -666,7 +661,7 @@ export default function Planner() {
                     )}
                     {step > 1 && <button onClick={() => { setMenuOpen(false); setTour(true); }}>사용법 보기</button>}
                     {!accountsEnabled() && (
-                      <button className="pl-show-mobile" onClick={() => { setMenuOpen(false); flash("구글 로그인과 친구 기능은 준비 중이에요"); }}>로그인/친구 (준비 중)</button>
+                      <button onClick={() => { setMenuOpen(false); flash("구글 로그인과 친구 기능은 준비 중이에요"); track("soon_clicked", { feature: "account" }); }}>로그인/친구 (준비 중)</button>
                     )}
                     <button onClick={() => { setMenuOpen(false); setSheet("calendar"); track("menu_calendar"); }}>학사일정</button>
                     <button onClick={() => { setMenuOpen(false); setSheet("feedback"); track("menu_feedback"); }}>피드백/응원</button>
