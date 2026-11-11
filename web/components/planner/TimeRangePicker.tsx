@@ -82,6 +82,16 @@ export default function TimeRangePicker({
       return next;
     });
 
+  // 요일 머리를 누르면 그 요일 전체(8~22시)를 지금 모드로 칠하기 / 이미 다 칠해져 있으면 지우기
+  const allOf = (d: number) => ROWS.every((m) => cells.get(key(d, m)) === mode);
+  const toggleDay = (d: number) =>
+    setCells((prev) => {
+      const next = new Map(prev);
+      const erase = ROWS.every((m) => prev.get(key(d, m)) === mode);
+      for (const m of ROWS) if (erase) next.delete(key(d, m)); else next.set(key(d, m), mode);
+      return next;
+    });
+
   const cellAt = (x: number, y: number) => (document.elementFromPoint(x, y) as HTMLElement | null)?.closest<HTMLElement>("[data-cell]")?.dataset.cell;
 
   const count = (m: TimeMode) => [...cells.values()].filter((v) => v === m).length;
@@ -104,7 +114,7 @@ export default function TimeRangePicker({
             </button>
           </div>
           <div className="pl-hint">
-            {mode === "block" ? "칠한 시간에 걸리는 분반은 시간표에 넣지 않아요." : "칠한 시간이 모두 수업으로 채워진 시간표만 보여 줘요."} 칸을 누르거나 끌어서 칠하고, 칠한 칸을 다시 누르면 지워져요.
+            {mode === "block" ? "칠한 시간에 걸리는 분반은 시간표에 넣지 않아요." : "칠한 시간이 모두 수업으로 채워진 시간표만 보여 줘요."} 칸을 누르거나 끌어서 칠하고, 칠한 칸을 다시 누르면 지워져요. 요일을 누르면 그 요일 전체를 칠해요.
           </div>
           <div
             className="pl-trp-grid"
@@ -123,7 +133,10 @@ export default function TimeRangePicker({
             }}
           >
             <div />
-            {Array.from({ length: DAYS }, (_, d) => <div key={d} className="pl-trp-day">{DAY_NAMES[d]}</div>)}
+            {Array.from({ length: DAYS }, (_, d) => (
+              <button key={d} type="button" className="pl-trp-day" title={`${DAY_NAMES[d]}요일 전체 ${allOf(d) ? "지우기" : "칠하기"}`}
+                onPointerDown={(e) => e.stopPropagation()} onClick={() => toggleDay(d)}>{DAY_NAMES[d]}</button>
+            ))}
             {ROWS.map((m) => (
               <div key={m} style={{ display: "contents" }}>
                 <div className="pl-trp-hour">{m % 60 === 0 ? m / 60 : ""}</div>
