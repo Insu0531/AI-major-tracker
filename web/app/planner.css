@@ -669,3 +669,14 @@
 /* 데이터 없는 학기를 이전 학기 데이터로 보여 줄 때 안내 띠 */
 .pl-sem-note { padding: 8px var(--s5); background: oklch(95.5% 0.04 85); color: oklch(42% 0.08 70); font-size: 13.5px; text-align: center; }
 @media (max-width: 720px) { .pl-sem-note { padding: 8px var(--s4); text-align: left; } }
+
+/* 검색 시: "빈 시간에 들어가는 분반" → "전체 검색 결과" 소제목 */
+.pl-fill-sub { padding: var(--s3) var(--s5) var(--s1); font-size: 13px; font-weight: 700; color: var(--ink-2); }
+.pl-fill-body > .pl-fill-none { padding: 4px var(--s5) var(--s2) !important; }
+@media (max-width: 720px) { .pl-fill-sub { padding-left: var(--s4); padding-right: var(--s4); } }
+
+/* 검색 추천: 분반별 행 (같은 과목 두 번째 분반부터는 과목명 대신 분반 번호만, 들여서) */
+.pl-rec-sec { display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 8px; background: var(--sunken); font-size: 12px; font-weight: 600; color: var(--ink-2); vertical-align: 1px; }
+.pl-rec.cont { padding-top: var(--s2); padding-left: calc(var(--s5) + 14px); }
+.pl-rec.cont .pl-rec-sec { margin-left: 0; }
+@media (max-width: 720px) { .pl-rec.cont { padding-left: calc(var(--s4) + 12px); } }
