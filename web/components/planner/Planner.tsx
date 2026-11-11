@@ -114,6 +114,14 @@ export default function Planner() {
   const [saveFeatured, setSaveFeatured] = useState(true);
   const [sheet, setSheet] = useState<null | "calendar" | "feedback">(null);
   const [menuOpen, setMenuOpen] = useState(false);
+  // 다크 모드: 메뉴에서 켬 (기본은 밝게, 이 브라우저에 기억). 저장 이미지는 항상 밝은 색
+  const [theme, setTheme] = useState<"light" | "dark">(() => (readLocal<string>("knu_planner_theme", "light") === "dark" ? "dark" : "light"));
+  const toggleTheme = () => {
+    const next = theme === "dark" ? "light" : "dark";
+    setTheme(next);
+    writeLocal("knu_planner_theme", next);
+    track("theme_changed", { theme: next });
+  };
   const [tour, setTour] = useState(false);
   const [renaming, setRenaming] = useState<{ id: string; name: string } | null>(null);
   const [bulkProgress, setBulkProgress] = useState<number | null>(null);
@@ -633,7 +641,7 @@ export default function Planner() {
   };
 
   return (
-    <div className="pl">
+    <div className="pl" data-theme={theme}>
       <header className="pl-top">
         <div className="pl-brand">KNU <span>시간표 마법사</span></div>
         <nav className="pl-steps" aria-label="단계">
@@ -669,6 +677,7 @@ export default function Planner() {
                     {!accountsEnabled() && (
                       <button onClick={() => { setMenuOpen(false); flash("구글 로그인과 친구 기능은 준비 중이에요"); track("soon_clicked", { feature: "account" }); }}>로그인/친구 (준비 중)</button>
                     )}
+                    <button onClick={() => { setMenuOpen(false); toggleTheme(); }}>{theme === "dark" ? "밝은 화면으로" : "다크 모드"}</button>
                     <button onClick={() => { setMenuOpen(false); setSheet("calendar"); track("menu_calendar"); }}>학사일정</button>
                     <button onClick={() => { setMenuOpen(false); setSheet("feedback"); track("menu_feedback"); }}>피드백/응원</button>
                     <button onClick={() => { setMenuOpen(false); shareToKakao(); track("kakao_share"); }}>카카오톡으로 공유</button>

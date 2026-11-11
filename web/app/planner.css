@@ -889,3 +889,50 @@
 .pl-cart-steps { margin: 0 0 var(--s4); padding: 0 0 0 20px; color: var(--ink-2); font-size: 13.5px; line-height: 1.6; display: flex; flex-direction: column; gap: 4px; }
 .pl-cart-steps b { color: var(--ink); }
 .pl-grade-add { width: 100%; }
+/* 10. 다크 모드 (메뉴에서 켬, .pl[data-theme="dark"]) — 같은 따뜻한 뉴트럴을 어둡게, 포인트색은 조금 밝게 */
+.pl[data-theme="dark"] {
+  --bg: oklch(19% 0.008 60);
+  --surface: oklch(23.5% 0.009 60);
+  --sunken: oklch(28% 0.01 60);
+  --sunken-2: oklch(33% 0.012 60);
+  --ink: oklch(93% 0.006 80);
+  --ink-2: oklch(80% 0.008 80);
+  --ink-3: oklch(64% 0.01 80);
+  --line: oklch(31% 0.01 60);
+  --accent: oklch(66% 0.17 25);
+  --accent-ink: oklch(16% 0.02 25);
+  --accent-weak: oklch(32% 0.07 25);
+  --pick: oklch(68% 0.14 255);
+  --pick-weak: oklch(31% 0.06 255);
+  --c-major: oklch(68% 0.16 25);
+  --c-major2: oklch(72% 0.13 55);
+  --c-gyoyang: oklch(70% 0.13 255);
+  --c-kyoshik: oklch(70% 0.12 150);
+  --c-ilban: oklch(70% 0.13 300);
+  --shadow: 0 1px 2px oklch(0% 0 0 / 0.3), 0 8px 24px oklch(0% 0 0 / 0.35);
+  color-scheme: dark;
+}
+.pl[data-theme="dark"] .pl-btn.primary { color: oklch(99% 0 0); background: oklch(52% 0.17 25); }
+.pl[data-theme="dark"] .pl-btn.pl-kakao { background: #fee500; color: #191600; }
+.pl[data-theme="dark"] .pl-time-btn.block.on,
+.pl[data-theme="dark"] .pl-trp-mode.block[aria-checked="true"],
+.pl[data-theme="dark"] .pl-chip.pl-prof-chip.exc { background: oklch(32% 0.07 25); color: oklch(80% 0.1 25); }
+.pl[data-theme="dark"] .pl-trp-mode.need[aria-checked="true"] { background: oklch(31% 0.06 255); color: oklch(82% 0.08 255); }
+.pl[data-theme="dark"] .pl-sem-note { background: oklch(30% 0.05 80); color: oklch(88% 0.06 85); }
+.pl[data-theme="dark"] .pl-cal-ev[data-kind] { background: var(--sunken-2); color: var(--ink); }
+.pl[data-theme="dark"] .pl-fb-check { background: oklch(32% 0.06 150); color: oklch(85% 0.1 150); }
+.pl[data-theme="dark"] .pl-trp-cell.block { background: oklch(55% 0.12 25); }
+.pl[data-theme="dark"] .pl-trp-cell.need { background: oklch(55% 0.12 255); }
+.pl[data-theme="dark"] .pl-tt-block { box-shadow: none; }
+.pl[data-theme="dark"] .pl-modal-bg { background: oklch(0% 0 0 / 0.55); }
+/* 디자인 정리 보정 */
+.pl-intro-sample-tag { top: auto; bottom: 10px; right: 12px; }
+.pl-cart-empty { padding: 0 var(--s4) var(--s4); }
+.pl-cart-empty .pl-cart-steps { padding-left: 18px; }
+/* 다크: 밝은 파랑·빨강 바탕 위 글씨는 어둡게 (흰 글씨는 대비 부족) */
+.pl[data-theme="dark"] .pl-chip[aria-pressed="true"],
+.pl[data-theme="dark"] .pl-strip-item[aria-current="true"],
+.pl[data-theme="dark"] .pl-strip-item[aria-current="true"] b,
+.pl[data-theme="dark"] .pl-btn[aria-pressed="true"],
+.pl[data-theme="dark"] .pl-chip.pl-prof-chip.inc { color: oklch(17% 0.02 255); }
+.pl[data-theme="dark"] .pl-add-btn[aria-pressed="true"] { color: oklch(17% 0.02 25); }
