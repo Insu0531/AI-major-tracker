@@ -13,6 +13,7 @@
  *  영역        SDG +3, 인문교양 +3
  */
 import { isFull, sectionAllowed, type SectionFilter } from "./data";
+import { dayRulesOk } from "./engine";
 import type { Category, Conditions, Course, RawSection, Slot } from "./types";
 
 export type Recommendation = {
@@ -42,6 +43,7 @@ export function recommendFill({
   courses,
   cartCodes,
   busy,
+  busyByCourse,
   currentCredit,
   cond,
   filter,
@@ -53,6 +55,8 @@ export function recommendFill({
   courses: Course[];
   cartCodes: Set<string>;
   busy: Slot[];
+  /** 지금 시간표 과목별 시간 (하루 일정 조건 검사용: 연강·공강·하루 과목 수) */
+  busyByCourse?: Slot[][];
   currentCredit: number;
   cond: Conditions;
   filter: SectionFilter;
@@ -82,6 +86,8 @@ export function recommendFill({
       if (overlaps(sec.slots, busy)) continue;
       if (overlaps(sec.slots, cond.blockedSlots ?? [])) continue;
       if (sec.slots.some(([d, s, e]) => cond.daysOff.includes(d) || (cond.lunchFree && s < 780 && e > 720))) continue;
+      // 하루 일정 조건(3시간 넘는 연강·2시간 넘는 공강·하루 과목 수)도 시간표 계산과 똑같이 지켜야 넣은 뒤 결과가 사라지지 않음
+      if (busyByCourse && !dayRulesOk([...busyByCourse, sec.slots], cond, true)) continue;
 
       let score = 0;
       const reasons: string[] = [];

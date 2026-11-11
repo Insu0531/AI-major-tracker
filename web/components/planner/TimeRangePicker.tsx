@@ -2,10 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 import { DAY_NAMES } from "@/lib/planner/data";
+import { useDialogKeys } from "@/lib/planner/useDialogKeys";
 import type { Slot } from "@/lib/planner/types";
 
 /**
- * 시간대 고르기 창: 빈 주간 격자(월~토, 8~22시, 30분 칸)를 클릭·드래그로 칠한다.
+ * 시간대 고르기 창: 빈 주간 격자(월~토, 8~22시, 1시간 칸)를 클릭·드래그로 칠한다. 칠하면 바로 조건에 반영(적용 버튼 없음).
  *  - "빼고 싶은 시간"(block): 칠한 칸에 걸리는 분반은 시간표에 넣지 않음
  *  - "꼭 넣을 시간"(need): 칠한 칸이 모두 수업으로 채워진 시간표만
  * 마우스·터치 모두 pointer 이벤트로 처리 (터치는 elementFromPoint로 지나간 칸을 찾음)
@@ -13,7 +14,7 @@ import type { Slot } from "@/lib/planner/types";
 export type TimeMode = "block" | "need";
 type Cells = Map<string, TimeMode>; // "요일-시작분" → 모드
 
-const H0 = 8, H1 = 22, STEP = 30;
+const H0 = 8, H1 = 22, STEP = 60;
 const ROWS = Array.from({ length: ((H1 - H0) * 60) / STEP }, (_, i) => H0 * 60 + i * STEP);
 const DAYS = 6;
 const key = (d: number, m: number) => `${d}-${m}`;
@@ -27,7 +28,8 @@ export const cellsToSlots = (cells: Cells, mode: TimeMode): Slot[] =>
 function slotsToCells(block: Slot[], need: Slot[]): Cells {
   const c: Cells = new Map();
   for (const [mode, list] of [["block", block], ["need", need]] as const)
-    for (const [d, s, e] of list) for (let m = s; m < e; m += STEP) c.set(key(d, m), mode);
+    // 예전에 30분 칸으로 저장된 조건도 그 시간이 들어간 1시간 칸으로
+    for (const [d, s, e] of list) for (let m = Math.floor(s / STEP) * STEP; m < e; m += STEP) c.set(key(d, m), mode);
   return c;
 }
 
@@ -53,16 +55,26 @@ export default function TimeRangePicker({
   blocked,
   required,
   initialMode,
-  onApply,
+  onChange,
   onClose,
 }: {
   blocked: Slot[];
   required: Slot[];
   initialMode: TimeMode;
-  onApply: (blocked: Slot[], required: Slot[]) => void;
+  /** 칠할 때마다(드래그는 끝난 뒤) 바로 저장 */
+  onChange: (blocked: Slot[], required: Slot[]) => void;
   onClose: () => void;
 }) {
   const [cells, setCells] = useState<Cells>(() => slotsToCells(blocked, required));
+  // 바뀌면 잠깐 뒤(드래그 중 매번 다시 계산하지 않게) 바로 조건에 반영
+  const first = useRef(true);
+  const changeRef = useRef(onChange);
+  useEffect(() => { changeRef.current = onChange; }, [onChange]);
+  useEffect(() => {
+    if (first.current) { first.current = false; return; }
+    const id = setTimeout(() => changeRef.current(cellsToSlots(cells, "block"), cellsToSlots(cells, "need")), 250);
+    return () => clearTimeout(id);
+  }, [cells]);
   const [mode, setMode] = useState<TimeMode>(initialMode);
   // 드래그 중: 첫 칸이 이미 지금 모드면 지우기, 아니면 칠하기
   const drag = useRef<{ erase: boolean } | null>(null);
@@ -94,15 +106,20 @@ export default function TimeRangePicker({
 
   const cellAt = (x: number, y: number) => (document.elementFromPoint(x, y) as HTMLElement | null)?.closest<HTMLElement>("[data-cell]")?.dataset.cell;
 
+  // 어떤 방법으로 닫든(완료·×·바깥) 마지막으로 칠한 것까지 저장하고 닫기
+  const close = () => { changeRef.current(cellsToSlots(cells, "block"), cellsToSlots(cells, "need")); onClose(); };
+
+  useDialogKeys(true, close);
+
   const count = (m: TimeMode) => [...cells.values()].filter((v) => v === m).length;
   const hours = (n: number) => `${n / 2}시간`;
 
   return (
-    <div className="pl-modal-bg" onClick={onClose}>
+    <div className="pl-modal-bg" onClick={close}>
       <div className="pl-modal pl-trp" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label="시간대 고르기">
         <div className="pl-modal-head">
           <h3>시간대 고르기</h3>
-          <button className="pl-x" aria-label="닫기" onClick={onClose}>×</button>
+          <button className="pl-x" aria-label="닫기" onClick={close}>×</button>
         </div>
         <div className="pl-modal-body">
           <div className="pl-trp-modes" role="radiogroup" aria-label="칠할 종류">
@@ -114,7 +131,7 @@ export default function TimeRangePicker({
             </button>
           </div>
           <div className="pl-hint">
-            {mode === "block" ? "칠한 시간에 걸리는 분반은 시간표에 넣지 않아요." : "칠한 시간이 모두 수업으로 채워진 시간표만 보여 줘요."} 칸을 누르거나 끌어서 칠하고, 칠한 칸을 다시 누르면 지워져요. 요일을 누르면 그 요일 전체를 칠해요.
+            {mode === "block" ? "칠한 시간에 걸리는 분반은 시간표에 넣지 않아요." : "칠한 시간이 모두 수업으로 채워진 시간표만 보여 줘요."} 칸을 누르거나 끌어서 칠하고, 칠한 칸을 다시 누르면 지워져요. 요일을 누르면 그 요일 전체를 칠해요. 칠하면 바로 반영돼요.
           </div>
           <div
             className="pl-trp-grid"
@@ -139,17 +156,17 @@ export default function TimeRangePicker({
             ))}
             {ROWS.map((m) => (
               <div key={m} style={{ display: "contents" }}>
-                <div className="pl-trp-hour">{m % 60 === 0 ? m / 60 : ""}</div>
+                <div className="pl-trp-hour">{m / 60}</div>
                 {Array.from({ length: DAYS }, (_, d) => {
                   const v = cells.get(key(d, m));
-                  return <div key={d} data-cell={key(d, m)} className={`pl-trp-cell${m % 60 === 0 ? " hour" : ""}${v ? ` ${v}` : ""}`} />;
+                  return <div key={d} data-cell={key(d, m)} className={`pl-trp-cell hour${v ? ` ${v}` : ""}`} />;
                 })}
               </div>
             ))}
           </div>
           <div style={{ display: "flex", gap: 6 }}>
             <button className="pl-btn" onClick={() => setCells(new Map())}>모두 지우기</button>
-            <button className="pl-btn primary" style={{ flex: 1 }} onClick={() => onApply(cellsToSlots(cells, "block"), cellsToSlots(cells, "need"))}>적용</button>
+            <button className="pl-btn primary" style={{ flex: 1 }} onClick={close}>완료</button>
           </div>
         </div>
       </div>

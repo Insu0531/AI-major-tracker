@@ -71,6 +71,9 @@ export default function Timetable({
                         onMouseLeave={pickable ? closeSoon : undefined}
                         onClick={pickable ? () => setOpen(isOpen ? null : { code: it.code, key }) : undefined}
                         role={pickable ? "button" : undefined}
+                        tabIndex={pickable ? 0 : undefined}
+                        aria-expanded={pickable ? isOpen : undefined}
+                        onKeyDown={pickable ? (ev) => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); setOpen(isOpen ? null : { code: it.code, key }); } else if (ev.key === "Escape") setOpen(null); } : undefined}
                         aria-label={pickable ? `${it.name} 분반 고르기` : undefined}
                       >
                         <strong>{it.name}</strong>

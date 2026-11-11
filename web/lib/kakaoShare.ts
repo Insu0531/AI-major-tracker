@@ -36,10 +36,13 @@ export function shareToKakao() {
 export async function shareTimetableImage(
   png: Blob,
   { title, description, fileName }: { title: string; description: string; fileName: string },
+  /** 카카오 공유가 안 돼 다른 방법으로 넘어갈 때 (이유: "sdk" = SDK 미준비, 그 밖엔 카카오 오류 메시지) — 화면에 알리고 기록하려고 */
+  onKakaoFail?: (reason: string) => void,
 ): Promise<"kakao" | "native" | "download"> {
   const file = new File([png], `${fileName.replace(/[\\/:*?"<>|]/g, "")}.png`, { type: "image/png" });
   const kakao = window.Kakao;
-  if (kakao?.isInitialized?.() && kakao.Share.uploadImage) {
+  if (!(kakao?.isInitialized?.() && kakao.Share.uploadImage)) onKakaoFail?.("sdk");
+  else {
     try {
       const { infos } = await kakao.Share.uploadImage({ file: [file] });
       const link = { mobileWebUrl: SITE_URL, webUrl: SITE_URL };
@@ -56,8 +59,10 @@ export async function shareTimetableImage(
         buttons: [{ title: "나도 시간표 짜기", link }],
       });
       return "kakao";
-    } catch {
-      /* 아래 방법으로 */
+    } catch (e) {
+      // 예: 카카오 개발자 콘솔에 사이트 도메인이 없으면 {code:-401, msg:"domain mismatched!"}
+      const err = e as { msg?: string; message?: string; code?: number };
+      onKakaoFail?.(String(err?.code ?? "") + " " + (err?.msg ?? err?.message ?? "unknown"));
     }
   }
   const nav = navigator as Navigator & { canShare?: (d: ShareData) => boolean };

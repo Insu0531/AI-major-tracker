@@ -11,7 +11,10 @@ const GRADES = ["1", "2", "3", "4"];
 const CAMPUSES = ["산격동", "동인동", "상주"];
 const PAGE = 150;
 
-type SortCol = "name" | "grade" | "credit" | "dept";
+/** 교과구분(이수구분): 분반마다 다를 수 있어 모아서 보여 줌 (예: 전공필수·전공) */
+export const courseTypes = (secs: { type: string }[]) => [...new Set(secs.map((s) => s.type).filter(Boolean))];
+
+type SortCol = "name" | "type" | "grade" | "credit" | "dept";
 type Sort = { col: SortCol; dir: 1 | -1 } | null;
 
 function overlaps(a: Slot[], b: Slot[]) {
@@ -126,7 +129,7 @@ export default function CourseBrowser(p: Props) {
     const out = searching ? [...base] : base.filter((c) => c.category === cat);
     const byDefault = (a: Course, b: Course) => gradeNum(a.grade) - gradeNum(b.grade) || a.name.localeCompare(b.name, "ko");
     if (!sort) return out.sort(byDefault);
-    const val = (c: Course) => (sort.col === "grade" ? gradeNum(c.grade) : sort.col === "credit" ? c.credit : sort.col === "dept" ? c.dept : c.name);
+    const val = (c: Course) => (sort.col === "grade" ? gradeNum(c.grade) : sort.col === "credit" ? c.credit : sort.col === "dept" ? c.dept : sort.col === "type" ? courseTypes(c.sections).join("·") : c.name);
     return out.sort((a, b) => {
       const va = val(a), vb = val(b);
       const cmp = typeof va === "number" ? va - (vb as number) : String(va).localeCompare(String(vb), "ko");
@@ -235,6 +238,7 @@ export default function CourseBrowser(p: Props) {
               <tr>
                 <th className="c-add"><span className="pl-sr">담기</span></th>
                 {th("name", "교과목명")}
+                {th("type", "교과구분", "c-type")}
                 {th("grade", "학년", "c-num")}
                 {th("credit", "학점", "c-num")}
                 {th("dept", "개설학과", "c-dept")}
@@ -300,10 +304,13 @@ export const CourseRow = memo(function CourseRow({
   const profs = [...new Set(secs.flatMap((s) => s.profs))];
   const profText = profs.length === 0 ? "-" : profs.length <= 2 ? profs.join(", ") : `${profs.slice(0, 2).join(", ")} 외 ${profs.length - 2}`;
   const flags = noteFlags(secs);
+  const types = courseTypes(secs.length ? secs : c.sections);
 
   return (
     <Fragment>
-      <tr className={`pl-tr${item ? " in-cart" : ""}${open ? " open" : ""}`} onClick={onToggleOpen}>
+      <tr className={`pl-tr${item ? " in-cart" : ""}${open ? " open" : ""}`} onClick={onToggleOpen}
+        tabIndex={0} aria-expanded={open} aria-label={`${c.name} 분반 ${open ? "접기" : "펼치기"}`}
+        onKeyDown={(e) => { if ((e.key === "Enter" || e.key === " ") && e.target === e.currentTarget) { e.preventDefault(); onToggleOpen(); } }}>
         <td className="c-add" onClick={(e) => e.stopPropagation()}>
           <button className="pl-add-btn" aria-pressed={!!item} aria-label={item ? `${c.name} 빼기` : `${c.name} 담기`} title={item ? "담기 취소" : "담기"} onClick={() => onSetMode(c.code, item ? null : "maybe")}>
             {item ? "✓" : "+"}
@@ -314,8 +321,9 @@ export const CourseRow = memo(function CourseRow({
           {showCategory && c.category !== "other" && <span className={`pl-badge cat-${c.category}`}>{CATEGORY_LABEL[c.category]}</span>}
           {otherDept && <span className="pl-badge pl-badge-other" title="우리 과 이수체계 과목이에요. 다른 학과에서 연 분반도 포함돼 있어요">타학과 개설 포함</span>}
           {c.tags.filter((t) => t === "SDG" || t === "인문교양").map((t) => <span key={t} className="pl-badge">{t}</span>)}
-          <span className="pl-mobile-meta">{[c.grade && c.grade !== "*" ? `${c.grade}학년` : "", `${c.credit}학점`, time].filter(Boolean).join(" · ")}</span>
+          <span className="pl-mobile-meta">{[types.join("·"), c.grade && c.grade !== "*" ? `${c.grade}학년` : "", `${c.credit}학점`, time].filter(Boolean).join(" · ")}</span>
         </td>
+        <td className="c-type">{types.join("·") || "-"}</td>
         <td className="c-num">{c.grade && c.grade !== "*" ? c.grade : "-"}</td>
         <td className="c-num">{c.credit}</td>
         <td className="c-dept">{c.dept}</td>
@@ -327,7 +335,7 @@ export const CourseRow = memo(function CourseRow({
       </tr>
       {open && (
         <tr className="pl-tr-sub">
-          <td colSpan={10}>
+          <td colSpan={11}>
             <div className="pl-sections">
               {secs.map((s) => {
                 const pinned = item?.pinned === s.id;

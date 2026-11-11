@@ -14,13 +14,15 @@ import {
 import FriendsPanel from "@/components/planner/FriendsPanel";
 import { trackSave } from "@/lib/trackSave";
 import { courseMatches, normQuery, recommendFill, sampleRecs, type Recommendation } from "@/lib/planner/recommend";
+import { findRelaxations, type Relaxation } from "@/lib/planner/relax";
 import QuickAdd from "@/components/planner/QuickAdd";
 import { analyticsEnabled, initAnalytics, isOptedOut, setOptOut, track } from "@/lib/analytics";
 import { dataSemFor, pickDefaultSem, recommendedSem, semLabel, sortSems, TERM_LABEL, TERMS } from "@/lib/planner/semester";
 import { shareTimetableImage, shareToKakao } from "@/lib/kakaoShare";
 import GuideTour, { type TourStep } from "@/components/GuideTour";
-import AcademicCalendarTab from "@/components/AcademicCalendarTab";
-import FeedbackTab from "@/components/FeedbackTab";
+import PlannerCalendar from "@/components/planner/PlannerCalendar";
+import { useDialogKeys } from "@/lib/planner/useDialogKeys";
+import PlannerFeedback from "@/components/planner/PlannerFeedback";
 import { DEFAULT_CONDITIONS, type CartItem, type CartMode, type Conditions, type EngineGroup, type EngineResponse, type Slot, type Snapshot, type SnapshotIndex } from "@/lib/planner/types";
 import MajorPicker from "@/components/planner/MajorPicker";
 import CourseBrowser from "@/components/planner/CourseBrowser";
@@ -87,7 +89,9 @@ const pickProfile = (s: Partial<Persisted>) =>
 
 function loadPersisted(): Persisted {
   const saved = readLocal<Partial<Persisted>>(STATE_KEY, {});
-  return { ...INITIAL, ...pickProfile(saved), conditions: { ...DEFAULT_CONDITIONS } };
+  const profile = pickProfile(saved);
+  // 다시 온 사람(학과를 이미 골라 둔 경우)은 1단계를 건너뛰고 바로 과목 담기부터 (1단계는 상단 단계 표시로 갈 수 있음)
+  return { ...INITIAL, ...profile, conditions: { ...DEFAULT_CONDITIONS }, step: profile.major ? 2 : 1 };
 }
 
 const EMPTY_MAP = new Map<string, string>();
@@ -193,6 +197,9 @@ export default function Planner() {
     reloadPlans();
   };
   const [preview, setPreview] = useState<SavedPlan | null>(null);
+  // 키보드: 열린 창은 Esc로 닫고 Tab이 창 안에서만 돌게
+  useDialogKeys(!!sheet, () => setSheet(null));
+  useDialogKeys(!!modal && !sheet, () => { setModal(null); setPreview(null); });
 
   const update = useCallback((patch: Partial<Persisted>) => setSt((s) => ({ ...s, ...patch })), []);
 
@@ -274,6 +281,19 @@ export default function Planner() {
   const shown = groups.length ? resp?.data ?? null : null;
   const resGroups = useMemo(() => resp?.groups ?? [], [resp]);
   const busy = groups.length > 0 && running;
+
+  /* 결과가 0개면: 조건 하나만 풀면 시간표가 생기는 경우를 찾아 버튼으로 (계산은 화면이 먼저 그려진 뒤에) */
+  const [relax, setRelax] = useState<{ for: EngineResponse; list: Relaxation[] } | null>(null);
+  useEffect(() => {
+    if (!shown || busy || shown.results.length > 0) return;
+    const id = setTimeout(() => setRelax({ for: shown, list: findRelaxations(cart, courseByCode, sectionFilter, st.conditions) }), 30);
+    return () => clearTimeout(id);
+  }, [shown, busy, cart, courseByCode, sectionFilter, st.conditions]);
+  const relaxations = relax && relax.for === shown ? relax.list : null;
+  const applyRelax = (r: Relaxation) => {
+    track("relax_applied", { key: r.key.replace(/[^a-z]/g, ""), total: r.total });
+    setSt((s) => ({ ...s, ...(r.cond ? { conditions: { ...s.conditions, ...r.cond } } : {}), ...(r.cart ? { cart: r.cart } : {}) }));
+  };
 
   /* ── 장바구니 조작 ── */
   const courseRef = useRef(courseByCode);
@@ -360,6 +380,7 @@ export default function Planner() {
     courses,
     cartCodes: new Set(cart.map((c) => c.code)),
     busy: busySlots,
+    busyByCourse: view.items.map((i) => i.slots),
     currentCredit: view.items.reduce((s, i) => s + i.credit, 0),
     cond: st.conditions,
     filter: sectionFilter,
@@ -428,6 +449,10 @@ export default function Planner() {
         title: cardTitle,
         description: [majorLabel, "KNU 시간표 마법사에서 만들었어요"].filter(Boolean).join("\n"),
         fileName,
+      }, (reason) => {
+        // 조용히 넘어가면 원인을 알 수 없어서(2026-11-11 실제 발생) 안내 + 기록
+        flash("카카오톡 카드 공유가 안 돼서 기본 공유 창(사진)으로 보내요");
+        track("kakao_share_failed", { reason: reason.slice(0, 120) });
       });
       track("timetable_shared", { how, courses: items.length });
       if (how === "download") { await doImage(items); flash("공유할 수 없어 이미지로 저장했어요"); }
@@ -774,10 +799,19 @@ export default function Planner() {
             </aside>
           </div>
           <div className="pl-bar" data-tour="next">
-            <button className="pl-bar-summary" onClick={() => setModal("cart")}>
-              <b>{cart.length}과목 담음</b>
-              <div className="pl-hint">최대 {cartCredit(cart, courseByCode)}학점<span className="pl-hide-mobile"> · 겹치지 않게 최대한 넣어 드려요</span></div>
-            </button>
+            {(() => {
+              // 목표 학점 = 3단계 최대 학점 조건(기본 21). 담은 학점이 모자라면 결과도 그만큼 적게 나온다는 걸 미리 알려 줌
+              const credit = cartCredit(cart, courseByCode);
+              const target = st.conditions.maxCredit || 21;
+              const short = Math.max(0, target - credit);
+              return (
+                <button className="pl-bar-summary" onClick={() => setModal("cart")} aria-label={`${cart.length}과목, ${credit}학점 담음, 목표 ${target}학점`}>
+                  <b>{cart.length}과목 담음</b> <span className="pl-bar-credit">{credit} / {target}학점</span>
+                  <span className="pl-credit-bar" aria-hidden><span style={{ width: `${Math.min(100, (credit / target) * 100)}%` }} data-full={short === 0} /></span>
+                  <div className="pl-hint">{short > 0 ? `목표까지 ${short}학점 더 담으면 좋아요 · 시간이 겹치면 다 못 넣을 수 있어 넉넉히` : "목표 학점만큼 담았어요 · 겹치지 않게 최대한 넣어 드려요"}</div>
+                </button>
+              );
+            })()}
             <button className="pl-btn primary lg" disabled={cart.length === 0} onClick={() => goStep(3)}>시간표 보기</button>
           </div>
         </div>
@@ -823,6 +857,8 @@ export default function Planner() {
               onShuffleRecs={() => { setRecSeed((x) => x + 1); track("rec_shuffled"); }}
               hasMajor={!!st.major || st.extras.length > 0}
               recommendSearch={recommendSearch}
+              relaxations={relaxations}
+              onRelax={applyRelax}
               majorMore={majorMore}
               quickAdd={(q, list) => (
                 <QuickAdd
@@ -1012,9 +1048,9 @@ export default function Planner() {
       )}
       {sheet && (
         <div className="pl-modal-bg" onClick={() => setSheet(null)}>
-          <div className="pl-modal pl-sheet" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
+          <div className={`pl-modal ${sheet === "calendar" ? "pl-sheet" : "pl-fb-modal"}`} onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label={sheet === "calendar" ? "학사일정" : "피드백 · 응원"}>
             <div className="pl-modal-head"><h3>{sheet === "calendar" ? "학사일정" : "피드백 · 응원"}</h3><button className="pl-x" aria-label="닫기" onClick={() => setSheet(null)}>×</button></div>
-            <div className="pl-sheet-body">{sheet === "calendar" ? <AcademicCalendarTab /> : <FeedbackTab />}</div>
+            <div className="pl-sheet-body">{sheet === "calendar" ? <PlannerCalendar /> : <PlannerFeedback majorLabel={majorLabel} entryYear={st.entryYear} />}</div>
           </div>
         </div>
       )}

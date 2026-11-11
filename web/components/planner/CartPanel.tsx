@@ -134,7 +134,7 @@ export function ConditionsPanel({
           required={required}
           initialMode={timeMode}
           onClose={() => setTimeMode(null)}
-          onApply={(b, r) => { set({ blockedSlots: b, requiredSlots: r }); setTimeMode(null); }}
+          onChange={(b, r) => set({ blockedSlots: b, requiredSlots: r })}
         />
       )}
 
