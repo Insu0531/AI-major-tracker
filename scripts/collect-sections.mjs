@@ -124,12 +124,22 @@ const nextSem = (sem) => {
   return i === 3 ? `${+y + 1}-1` : `${y}-${TERMS[i + 1]}`;
 };
 
-/** 지금 수강신청을 준비할 학기 + 그다음 학기 (4~6월 여름, 7~9월 2학기, 10~11월 겨울, 12~3월 1학기) */
+const prevSem = (sem) => {
+  const [y, t] = sem.split("-");
+  const i = TERMS.indexOf(t);
+  return i === 0 ? `${+y - 1}-w` : `${y}-${TERMS[i - 1]}`;
+};
+
+/**
+ * 매일 수집할 학기: 진행 중인 학기 + 지금 수강신청을 준비할 학기 + 그다음 학기
+ * (준비 학기: 4~6월 여름, 7~9월 2학기, 10~11월 겨울, 12~3월 1학기)
+ * 예) 11월 → 2026-2 · 2026-w · 2027-1. 아직 안 열린 학기(0건)는 건너뛰므로 다음 해 학기도 미리 뜨면 바로 잡힌다.
+ */
 function defaultSems(now = new Date()) {
   const y = now.getFullYear();
   const m = now.getMonth() + 1;
   const cur = m >= 4 && m <= 6 ? `${y}-s` : m >= 7 && m <= 9 ? `${y}-2` : m >= 10 && m <= 11 ? `${y}-w` : m === 12 ? `${y + 1}-1` : `${y}-1`;
-  return [cur, nextSem(cur)];
+  return [prevSem(cur), cur, nextSem(cur)];
 }
 
 async function readJson(file) {
