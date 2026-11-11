@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { colorFor } from "@/lib/planner/data";
 import { SORT_LABEL, SORT_OPTIONS, type CartItem, type CartMode, type Conditions, type Course } from "@/lib/planner/types";
 import TimeRangePicker, { describeSlots, type TimeMode } from "./TimeRangePicker";
+import Icon from "./Icon";
 
 export function cartCredit(items: CartItem[], courseByCode: Map<string, Course>) {
   return items.reduce((s, i) => s + (courseByCode.get(i.code)?.credit ?? 0), 0);
@@ -40,7 +41,7 @@ export function CartList({
               <div title={course.name}>{course.name}</div>
               <div className="pl-hint">{[`${course.credit}학점`, ...notes].join(" | ")}</div>
             </div>
-            <button className="pl-x" aria-label={`${course.name} 빼기`} onClick={() => onSetMode(i.code, null)}>×</button>
+            <button className="pl-x" aria-label={`${course.name} 빼기`} onClick={() => onSetMode(i.code, null)}><Icon name="close" /></button>
           </div>
         );
       })}
@@ -215,7 +216,7 @@ function ProfChooser({
               aria-label={`${p} 교수님${state === "inc" ? ", 꼭 듣기" : state === "exc" ? ", 피하기" : ""}`}
               title={[profCourses.get(p)?.join(", "), state === "inc" ? "꼭 듣기" : state === "exc" ? "피하기" : ""].filter(Boolean).join(" | ")}
               onClick={() => onCycle(p)}>
-              {state === "inc" ? "✓ " : state === "exc" ? "✕ " : ""}{p}
+              {state === "inc" ? <Icon name="check" /> : state === "exc" ? <Icon name="close" /> : null}{p}
             </button>
           );
         })}

@@ -6,6 +6,7 @@ import { track } from "@/lib/analytics";
 import type { TimetableItem } from "@/lib/planner/exportImage";
 import { semLabel } from "@/lib/planner/semester";
 import Timetable from "./Timetable";
+import Icon from "./Icon";
 
 /** 친구 창: 내 초대 링크 · 코드로 친구 추가 · 친구 목록 · 친구의 대표 시간표 */
 export default function FriendsPanel({ sems, defaultSem, flash }: { sems: string[]; defaultSem: string; flash: (m: string) => void }) {
@@ -129,7 +130,7 @@ export default function FriendsPanel({ sems, defaultSem, flash }: { sems: string
           : friends.map((f) => (
             <button key={f.friend_id} className="pl-code-row pl-friend-row" onClick={() => { setViewing(f); setSem(defaultSem); setTt("loading"); track("friend_timetable_viewed"); }}>
               <span style={{ fontWeight: 600, textAlign: "left" }}>{f.display_name}</span>
-              <span className="pl-muted">시간표 보기 ›</span>
+              <span className="pl-muted">시간표 보기 <Icon name="right" /></span>
             </button>
           ))}
       </div>

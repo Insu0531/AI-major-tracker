@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { EVENTS, type CalEvent, type EvColor } from "@/lib/planner/calendarEvents";
+import Icon from "./Icon";
 
 /** 학사일정. 일정 데이터는 lib/planner/calendarEvents.ts */
 const WEEKDAYS = ["일", "월", "화", "수", "목", "금", "토"];
@@ -40,9 +41,9 @@ export default function PlannerCalendar() {
   return (
     <div className="pl-cal">
       <div className="pl-cal-head">
-        <button className="pl-btn sm" aria-label="이전 달" onClick={() => move(-1)}>‹</button>
+        <button className="pl-btn sm" aria-label="이전 달" onClick={() => move(-1)}><Icon name="left" /></button>
         <h4>{y}년 {m + 1}월</h4>
-        <button className="pl-btn sm" aria-label="다음 달" onClick={() => move(1)}>›</button>
+        <button className="pl-btn sm" aria-label="다음 달" onClick={() => move(1)}><Icon name="right" /></button>
         <button className="pl-chip" onClick={() => { setYm({ y: today.getFullYear(), m: today.getMonth() }); setSel(null); }}>오늘</button>
         <button className="pl-chip" aria-pressed={grad} onClick={() => setGrad((v) => !v)}>대학원 일정</button>
       </div>

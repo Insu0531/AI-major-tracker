@@ -31,6 +31,7 @@ import ResultPanel, { type ResultView } from "@/components/planner/ResultPanel";
 import { CodesBody, PickBody } from "@/components/planner/SectionModals";
 import { TOUR_2, TOUR_3 } from "@/lib/planner/tour";
 import Timetable from "@/components/planner/Timetable";
+import Icon from "./Icon";
 
 const STATE_KEY = "knu_planner_state_v1";
 const TOUR_KEY = "knu_planner_tour_v1";
@@ -816,7 +817,7 @@ export default function Planner() {
         <div className="pl-plan pl-enter">
           <aside className="pl-cond" data-open={condOpen}>
             <button className="pl-cond-toggle" onClick={() => setCondOpen((v) => !v)} aria-expanded={condOpen}>
-              <span>조건과 정렬</span><span className="pl-muted">{condOpen ? "접기 ▴" : "펼치기 ▾"}</span>
+              <span>조건과 정렬</span><span className="pl-muted">{condOpen ? "접기" : "펼치기"} <Icon name={condOpen ? "up" : "down"} /></span>
             </button>
             <div className="pl-scroll">
               <div className="pl-cond-block" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -881,7 +882,7 @@ export default function Planner() {
           <div className="pl-modal" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
             {modal === "refresh" && (
               <>
-                <div className="pl-modal-head"><h3>새로고침할까요?</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-head"><h3>새로고침할까요?</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}><Icon name="close" /></button></div>
                 <div className="pl-modal-body">
                   <div>새로고침하면 담은 과목과 조건이 <b>처음부터 다시</b> 시작돼요. (학기·학과·학번은 그대로)</div>
                   {view ? (
@@ -910,7 +911,7 @@ export default function Planner() {
             )}
             {modal === "cart" && (
               <>
-                <div className="pl-modal-head"><h3>담은 과목 {cart.length}</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-head"><h3>담은 과목 {cart.length}</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}><Icon name="close" /></button></div>
                 <div className="pl-modal-body" style={{ padding: 0 }}>
                   <CartList cart={cart} courseByCode={courseByCode} colorOf={colorOf} onSetMode={setMode} onClear={() => update({ cart: [] })} />
                 </div>
@@ -918,13 +919,13 @@ export default function Planner() {
             )}
             {modal === "friends" && loggedIn && (
               <>
-                <div className="pl-modal-head"><h3>친구</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-head"><h3>친구</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}><Icon name="close" /></button></div>
                 <FriendsPanel sems={sems} defaultSem={st.sem ?? sems[sems.length - 1]} flash={flash} />
               </>
             )}
             {modal === "invite" && (
               <>
-                <div className="pl-modal-head"><h3>친구 초대를 받았어요</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-head"><h3>친구 초대를 받았어요</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}><Icon name="close" /></button></div>
                 <div className="pl-modal-body">
                   <div>구글 계정으로 로그인하면 바로 친구가 돼요. 서로의 <b>대표 시간표</b>(과목명·시간·교수님)를 볼 수 있어요.</div>
                   <button className="pl-btn primary lg" onClick={() => { track("login_clicked", { from: "invite" }); void signInWithGoogle(); }}>구글로 로그인하고 친구 되기</button>
@@ -934,7 +935,7 @@ export default function Planner() {
             )}
             {modal === "bulk" && (
               <>
-                <div className="pl-modal-head"><h3>이미지 {results.length}장 저장</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-head"><h3>이미지 {results.length}장 저장</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}><Icon name="close" /></button></div>
                 <div className="pl-modal-body">
                   <div>결과 {results.length}개를 모두 이미지로 저장해요. 브라우저가 여러 파일 다운로드를 물어보면 허용해 주세요.</div>
                   <button className="pl-btn primary" onClick={doBulkImages}>모두 저장</button>
@@ -943,7 +944,7 @@ export default function Planner() {
             )}
             {modal === "save" && (
               <>
-                <div className="pl-modal-head"><h3>보관함에 저장</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-head"><h3>보관함에 저장</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}><Icon name="close" /></button></div>
                 <div className="pl-modal-body">
                   <input autoFocus className="pl-field" placeholder={`${title} ${plans.length + 1}`} value={saveName}
                     onChange={(e) => setSaveName(e.target.value)} onKeyDown={(e) => e.key === "Enter" && doSave()} />
@@ -964,7 +965,7 @@ export default function Planner() {
               <>
                 <div className="pl-modal-head">
                   <h3>{preview ? preview.name : `보관함 ${plans.length}`}</h3>
-                  <button className="pl-x" aria-label="닫기" onClick={() => { setModal(null); setPreview(null); }}>×</button>
+                  <button className="pl-x" aria-label="닫기" onClick={() => { setModal(null); setPreview(null); }}><Icon name="close" /></button>
                 </div>
                 <div className="pl-modal-body">
                   {preview ? (
@@ -1004,7 +1005,7 @@ export default function Planner() {
       {sheet && (
         <div className="pl-modal-bg" onClick={() => setSheet(null)}>
           <div className={`pl-modal ${sheet === "calendar" ? "pl-sheet" : "pl-fb-modal"}`} onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label={sheet === "calendar" ? "학사일정" : "피드백/응원"}>
-            <div className="pl-modal-head"><h3>{sheet === "calendar" ? "학사일정" : "피드백/응원"}</h3><button className="pl-x" aria-label="닫기" onClick={() => setSheet(null)}>×</button></div>
+            <div className="pl-modal-head"><h3>{sheet === "calendar" ? "학사일정" : "피드백/응원"}</h3><button className="pl-x" aria-label="닫기" onClick={() => setSheet(null)}><Icon name="close" /></button></div>
             <div className="pl-sheet-body">{sheet === "calendar" ? <PlannerCalendar /> : <PlannerFeedback majorLabel={majorLabel} entryYear={st.entryYear} />}</div>
           </div>
         </div>

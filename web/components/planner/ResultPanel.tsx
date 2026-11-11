@@ -8,6 +8,7 @@ import type { Relaxation } from "@/lib/planner/relax";
 import type { TimetableItem } from "@/lib/planner/exportImage";
 import type { Course, EngineResponse } from "@/lib/planner/types";
 import Timetable from "./Timetable";
+import Icon from "./Icon";
 
 export type ResultView = {
   items: (TimetableItem & { sectionIds: string[]; options: { id: string; prof: string; room: string }[]; chosen: string; decided: boolean })[];
@@ -142,7 +143,7 @@ export default function ResultPanel({
         <div className="pl-rec-name">{r.course.name} <span className="pl-muted">{r.course.credit}학점</span></div>
         <div className="pl-rec-meta">{formatSlots(r.section.slots)} | {r.section.profs.join(", ") || "교수 미정"}{r.section.room ? ` | ${r.section.room}` : ""}</div>
       </div>
-      <button className="pl-btn sm" aria-pressed="true" onClick={() => onRemoveRec(r.course.code)} title="누르면 담은 과목에서 빼요">담음 ✓ 빼기</button>
+      <button className="pl-btn sm" aria-pressed="true" onClick={() => onRemoveRec(r.course.code)} title="누르면 담은 과목에서 빼요"><Icon name="check" /> 담음 | 빼기</button>
     </div>
   ));
   const emptyWithAdded = (msg: React.ReactNode) => (
@@ -189,9 +190,9 @@ export default function ResultPanel({
       <div className="pl-result-head">
         <div className="pl-result-bar">
           <div className="pl-nav">
-            <button className="pl-btn sm" aria-label="이전 시간표" onClick={() => onSelect((selIdx - 1 + results.length) % results.length)}>‹</button>
+            <button className="pl-btn sm" aria-label="이전 시간표" onClick={() => onSelect((selIdx - 1 + results.length) % results.length)}><Icon name="left" /></button>
             <span>{selIdx + 1} / {results.length}</span>
-            <button className="pl-btn sm" aria-label="다음 시간표" onClick={() => onSelect((selIdx + 1) % results.length)}>›</button>
+            <button className="pl-btn sm" aria-label="다음 시간표" onClick={() => onSelect((selIdx + 1) % results.length)}><Icon name="right" /></button>
           </div>
           <div className="pl-stats">
             <span><b>{m.credit}</b>학점</span>
@@ -203,7 +204,7 @@ export default function ResultPanel({
           <button className="pl-btn pl-kakao" onClick={onKakao}>카톡 공유</button>
           {/* 나머지(보관함·수강신청 코드·전체 이미지)는 더보기 안에 (2026-11-11 단순화) */}
           <div className="pl-pop pl-more">
-            <button className="pl-btn" aria-expanded={moreOpen} aria-haspopup="menu" onClick={() => setMoreOpen((v) => !v)}>더보기 ▾</button>
+            <button className="pl-btn" aria-expanded={moreOpen} aria-haspopup="menu" onClick={() => setMoreOpen((v) => !v)}>더보기 <Icon name="down" /></button>
             {moreOpen && (
               <>
                 <div style={{ position: "fixed", inset: 0, zIndex: 29 }} onClick={() => setMoreOpen(false)} />
@@ -234,7 +235,7 @@ export default function ResultPanel({
         )}
         <div className="pl-jumps">
           <button className="pl-rec-jump" onClick={() => { toggleFill(true); setTimeout(() => document.getElementById("pl-fill")?.scrollIntoView({ behavior: "smooth", block: "start" }), 30); }}>
-            <span aria-hidden>✦</span> 내 시간표 맞춤 추천 받기
+            <Icon name="spark" /> 내 시간표 맞춤 추천 받기
             <em>{hasMajor ? <>전공 <b>{recs.major.length}</b> | </> : null}교양 <b>{recs.gyoyang.length}</b>개 | 과목 검색</em>
           </button>
         </div>
@@ -250,13 +251,13 @@ export default function ResultPanel({
             onChoose={onChoose}
           />
           {view.items.some((i) => i.options.length > 1 && !i.decided) && (
-            <div className="pl-hint" style={{ marginTop: 8 }}>‘교수님 선택 ▾’이 붙은 과목은 블록에 마우스를 올리거나 눌러 분반을 고를 수 있어요.</div>
+            <div className="pl-hint" style={{ marginTop: 8 }}>‘교수님 선택’이 붙은 과목은 블록에 마우스를 올리거나 눌러 분반을 고를 수 있어요.</div>
           )}
         </div>
         <div className="pl-recs pl-fill" id="pl-fill" data-tour="recs">
           <button className="pl-list-title pl-recs-title pl-fill-toggle" aria-expanded={fillOpen} onClick={() => toggleFill(!fillOpen)}>
             <span>내 시간표 맞춤 추천 <span className="pl-muted" style={{ fontWeight: 500 }}>| {hasMajor ? `전공 ${recs.major.length} | ` : ""}교양 {recs.gyoyang.length} | 과목 검색</span></span>
-            <span className="pl-muted">{fillOpen ? "접기 ▴" : "펼치기 ▾"}</span>
+            <span className="pl-muted">{fillOpen ? "접기" : "펼치기"} <Icon name={fillOpen ? "up" : "down"} /></span>
           </button>
           {fillOpen && <>
           <div className="pl-fill-search">
@@ -289,7 +290,7 @@ export default function ResultPanel({
                     {t.label}<span className="pl-tab-count">{recs[t.key].length}</span>
                   </button>
                 ))}
-                {canShuffle[curTab] && <button className="pl-btn sm pl-fill-shuffle" onClick={onShuffleRecs}>↻ 다른 추천 보기</button>}
+                {canShuffle[curTab] && <button className="pl-btn sm pl-fill-shuffle" onClick={onShuffleRecs}><Icon name="refresh" /> 다른 추천 보기</button>}
               </div>
               <div className="pl-fill-body">
                 {curTab === "major" && <div className="pl-fill-sub">지금 시간표 빈 시간에 들어가는 분반</div>}
@@ -315,7 +316,7 @@ export default function ResultPanel({
             <span>다른 시간표 전체 목록 <span className="pl-muted" style={{ fontWeight: 500 }}>
               {response ? `${response.total.toLocaleString()}${response.truncated ? "+" : ""}개 중 상위 ${results.length}개` : ""}
             </span></span>
-            <span className="pl-muted">{listOpen ? "접기 ▴" : "펼치기 ▾"}</span>
+            <span className="pl-muted">{listOpen ? "접기" : "펼치기"} <Icon name={listOpen ? "up" : "down"} /></span>
           </button>
           {listOpen && results.map((r, i) => (
             <button key={i} className="pl-list-row" aria-current={i === selIdx} onClick={() => onSelect(i)}>

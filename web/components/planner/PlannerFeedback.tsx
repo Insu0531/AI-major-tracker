@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { track } from "@/lib/analytics";
+import Icon from "./Icon";
 
 /** 피드백/응원 (새 디자인). 같은 구글 폼(entry ID)으로 보낸다. 전공·학번은 1단계 내 정보를 그대로 */
 const FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSc6VyJCdBAmc2olMVcSBrC2FN0iNMoCqPPXIfQHzE_Ew1145g/formResponse";
@@ -39,7 +40,7 @@ export default function PlannerFeedback({ majorLabel, entryYear }: { majorLabel:
   if (status === "done") {
     return (
       <div className="pl-fb pl-fb-done">
-        <div className="pl-fb-check" aria-hidden>✓</div>
+        <div className="pl-fb-check" aria-hidden><Icon name="check" /></div>
         <b>보내 주셔서 고마워요!</b>
         <div className="pl-hint">꼼꼼히 읽고 서비스에 반영할게요.</div>
         <button className="pl-btn" onClick={() => setStatus("idle")}>하나 더 보내기</button>

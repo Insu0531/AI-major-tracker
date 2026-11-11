@@ -4,6 +4,7 @@ import { Fragment, memo, useEffect, useMemo, useState } from "react";
 import { track } from "@/lib/analytics";
 import { dayPatterns, formatSlots, isFull, sectionAllowed, type SectionFilter } from "@/lib/planner/data";
 import { CATEGORY_LABEL, type CartItem, type CartMode, type Category, type Conditions, type Course, type RawSection, type Slot } from "@/lib/planner/types";
+import Icon from "./Icon";
 
 const CATS: Category[] = ["major", "major2", "gyoyang", "kyoshik", "ilban", "other"];
 const TAGS = ["SDG", "인문교양", "KNU미래설계", "원격", "SU평가", "플립드"];
@@ -144,7 +145,7 @@ export default function CourseBrowser(p: Props) {
   const th = (col: SortCol, label: string, className = "") => (
     <th className={className} aria-sort={sort?.col === col ? (sort.dir === 1 ? "ascending" : "descending") : "none"}>
       <button className="pl-th-sort" onClick={() => sortBy(col)}>
-        {label}<span aria-hidden>{sort?.col === col ? (sort.dir === 1 ? " ↑" : " ↓") : ""}</span>
+        {label}{sort?.col === col ? <Icon name={sort.dir === 1 ? "arrowUp" : "arrowDown"} /> : null}
       </button>
     </th>
   );
@@ -179,7 +180,7 @@ export default function CourseBrowser(p: Props) {
             onChange={(e) => { setQ(e.target.value); setLimit(PAGE); }}
           />
           <button className="pl-btn" onClick={() => setFiltersOpen((v) => !v)} aria-expanded={filtersOpen}>
-            {filtersOpen ? "필터 접기 ▴" : `필터${activeExtra ? ` ${activeExtra}개 켜짐` : ""} ▾`}
+            {filtersOpen ? "필터 접기" : `필터${activeExtra ? ` ${activeExtra}개 켜짐` : ""}`} <Icon name={filtersOpen ? "up" : "down"} />
           </button>
         </div>
 
@@ -310,7 +311,7 @@ export const CourseRow = memo(function CourseRow({
         onKeyDown={(e) => { if ((e.key === "Enter" || e.key === " ") && e.target === e.currentTarget) { e.preventDefault(); onToggleOpen(); } }}>
         <td className="c-add" onClick={(e) => e.stopPropagation()}>
           <button className="pl-add-btn" aria-pressed={!!item} aria-label={item ? `${c.name} 빼기` : `${c.name} 담기`} title={item ? "담기 취소" : "담기"} onClick={() => onSetMode(c.code, item ? null : "maybe")}>
-            {item ? "✓" : "+"}
+            <Icon name={item ? "check" : "plus"} />
           </button>
         </td>
         <td className="c-name">
@@ -325,7 +326,7 @@ export const CourseRow = memo(function CourseRow({
         <td className="c-num">{c.credit}</td>
         <td className="c-prof">{profText}</td>
         <td className="c-time">{time}</td>
-        <td className="c-chev" aria-hidden><span className={open ? "up" : ""}>⌄</span></td>
+        <td className="c-chev" aria-hidden><span className={open ? "up" : ""}><Icon name="down" /></span></td>
       </tr>
       {open && (
         <tr className="pl-tr-sub">

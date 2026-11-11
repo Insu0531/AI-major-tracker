@@ -808,3 +808,19 @@
 .pl-chip, .pl-strip-item { transition: background-color 0.15s, color 0.15s, transform 0.1s; }
 /* 접었다 펴는 칸이 열릴 때 */
 .pl-filter-grid, .pl-fill-search, .pl-fill-tabs, .pl-trp-quick, .pl-sem-line, .pl-relax { animation: pl-in 0.2s ease-out both; }
+
+/* ── 디자인 정리 (2026-11-11) ── */
+/* 1. 화면 시간표 = 저장 이미지 모양: 세로선 없음, 정시 실선 + 30분 점선, 각진 단색 블록 */
+.pl-tt-col + .pl-tt-col, .pl-tt-hour-col + .pl-tt-col { box-shadow: none; }
+.pl-tt-line.half { height: 0; background: none; border-top: 1px dashed var(--line); left: 6px; right: 6px; }
+.pl-tt-block { border-radius: 2px; padding: 6px 8px; }
+.pl-tt-head div { font-family: var(--font-head); font-weight: 800; font-size: 14px; color: var(--ink); }
+/* 2. 아이콘 한 벌 */
+.pl-icon { display: inline-block; vertical-align: -0.14em; flex-shrink: 0; }
+.pl-x .pl-icon { width: 18px; height: 18px; vertical-align: middle; }
+.pl-add-btn .pl-icon { width: 16px; height: 16px; vertical-align: middle; }
+.pl-th-sort .pl-icon { width: 12px; height: 12px; margin-left: 2px; }
+.c-chev .pl-icon { width: 18px; height: 18px; }
+.pl-nav .pl-btn .pl-icon { width: 16px; height: 16px; vertical-align: middle; }
+.pl-fb-check .pl-icon { width: 24px; height: 24px; }
+.pl-tt-pick .pl-icon { width: 10px; height: 10px; }
