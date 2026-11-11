@@ -30,6 +30,7 @@ import { CartList, ConditionsPanel, cartCredit } from "@/components/planner/Cart
 import ResultPanel, { type ResultView } from "@/components/planner/ResultPanel";
 import { CodesBody, PickBody } from "@/components/planner/SectionModals";
 import { TOUR_2, TOUR_3 } from "@/lib/planner/tour";
+import { SAMPLE_TIMETABLE } from "@/lib/planner/sample";
 import Timetable from "@/components/planner/Timetable";
 import Icon from "./Icon";
 
@@ -697,8 +698,13 @@ export default function Planner() {
           <div className="pl-intro">
             <div className="pl-intro-lead pl-enter">
               <h1>담기만 하세요.<br /><em>시간표</em>는 알아서<br />짜 드릴게요.</h1>
-              <p>전공·교양·교직을 한 번에 담으면 시간이 겹치지 않는 조합을 모두 찾아,<br />공강 많은 순·늦게 시작하는 순으로 정리해 드려요.</p>
+              <p>전공·교양·교직을 한 번에 담으면 시간이 겹치지 않는 조합을 모두 찾아,<br />학점 많은 순·공강 많은 순으로 정리해 드려요.</p>
               <p className="pl-intro-point">우리 과에서는 안 열려도 <b>전공으로 인정되는 다른 학과 개설 과목</b>까지 함께 찾아 드려요.</p>
+              {/* 이런 결과가 나온다는 걸 바로 보여 주는 예시 (넓은 화면만) */}
+              <div className="pl-intro-sample" aria-hidden>
+                <Timetable items={SAMPLE_TIMETABLE} />
+                <span className="pl-intro-sample-tag">예시</span>
+              </div>
               <div className="pl-hint">
                 {collectedAt && <>{fmtDate(collectedAt)} 기준 개설 정보 | </>}
                 <a className="pl-link" href="/privacy" target="_blank" rel="noopener">개인정보처리방침</a> | <a className="pl-link" href="mailto:insu0531@knu.ac.kr">insu0531@knu.ac.kr</a>
