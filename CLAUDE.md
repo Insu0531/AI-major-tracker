@@ -370,6 +370,7 @@ web/lib/planner/
 - 2단계 하단 바: 담은 학점 / 목표 학점(= 최대 학점 조건, 기본 21) 막대 + "목표까지 N학점 더" 안내.
 - 다시 온 사람(저장된 학과 있음)은 2단계부터 시작(`loadPersisted`). 카톡 카드 공유가 실패하면 토스트 + `kakao_share_failed`(사유) 기록.
 - 학사일정·피드백은 새 디자인 컴포넌트(`PlannerCalendar.tsx` — 데이터는 구버전 `AcademicCalendarTab`의 `EVENTS`를 export해 공유, 2026년 1~7월만 입력돼 있음 / `PlannerFeedback.tsx` — 같은 구글 폼 entry, 학과·학번은 1단계 내 정보를 선택적으로 첨부). 구버전(/old)은 원래 컴포넌트 그대로.
+- **애니메이션 (2026-11-11, 과하지 않게)**: 시간표 블록이 과목 순서대로 18ms씩 늦게 살짝 커지며 등장(`--i`), ‹ › 넘길 때 방향대로 14px 밀림(`.pl-tt-wrap[data-dir]`), 추천 목록 25ms 차례, 2단계 하단 담은 과목 수·학점이 바뀌면 톡(`.pl-bump`, key로 다시 재생), 버튼·칩 누르면 0.97배, 접는 칸 열릴 때 pl-in. 전부 0.3초 안, `prefers-reduced-motion`이면 꺼짐.
 - 키보드 접근성(`lib/planner/useDialogKeys.ts`): 열린 창은 Esc로 닫기·Tab 가두기·열 때 첫 입력에 포커스·닫으면 원래 자리로. 과목 표 행은 Tab으로 이동해 Enter/Space로 분반 펼침(`aria-expanded`), 시간표의 분반 고르기 블록도 Enter/Space. 시간대 창은 요일 머리 버튼으로 키보드 선택 가능(칸 하나하나는 마우스·터치).
 - 결과는 계산에 쓴 groups와 함께 저장한다 (담은 과목이 바뀌는 사이 이전 결과의 picks가 새 groups와 어긋나 크래시 났던 버그 방지).
 - 검증: `npx next build` 후 `next start` + Playwright로 담기→결과→정렬→공강필터→이미지→새로고침 유지, 데스크톱 1440/모바일 390 확인.
