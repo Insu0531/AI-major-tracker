@@ -126,7 +126,7 @@ export function dayPatterns(slotLists: [number, number, number][][]): string {
     if (!sl.length) continue;
     pats.add([...new Set(sl.map(([d]) => d))].sort().map((d) => DAY_NAMES[d]).join(""));
   }
-  return [...pats].join(" · ");
+  return [...pats].join(" | ");
 }
 
 export const fmtMin = (m: number) => `${Math.floor(m / 60)}:${String(Math.round(m % 60)).padStart(2, "0")}`;
@@ -140,7 +140,7 @@ export function formatSlots(slots: [number, number, number][]): string {
     if (!byTime.has(k)) byTime.set(k, []);
     byTime.get(k)!.push(d);
   }
-  return [...byTime.entries()].map(([t, ds]) => `${ds.map((d) => DAY_NAMES[d]).join("·")} ${t}`).join(", ");
+  return [...byTime.entries()].map(([t, ds]) => `${ds.map((d) => DAY_NAMES[d]).join("")} ${t}`).join(", ");
 }
 
 /**

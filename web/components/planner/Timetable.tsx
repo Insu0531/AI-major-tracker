@@ -105,7 +105,7 @@ export default function Timetable({
                     role="listbox"
                     aria-label={`${it.name} 분반`}
                   >
-                    <div className="pl-tt-picker-title">{it.name} · 분반 고르기</div>
+                    <div className="pl-tt-picker-title">{it.name} 분반 고르기</div>
                     {c.options.map((o) => (
                       <button
                         key={o.id}
@@ -126,7 +126,7 @@ export default function Timetable({
       </div>
       {noTime.length > 0 && (
         <div className="pl-notime">
-          시간 미정 · {noTime.map((i) => `${i.name}(${i.credit})`).join(", ")}
+          시간 미정 | {noTime.map((i) => `${i.name}(${i.credit})`).join(", ")}
         </div>
       )}
     </div>

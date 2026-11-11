@@ -48,7 +48,7 @@ export function describeSlots(slots: Slot[], max = 3): string {
       if (i < ms.length) { a = ms[i]; b = ms[i] + STEP; }
     }
   }
-  return parts.length > max ? `${parts.slice(0, max).join(" · ")} 외 ${parts.length - max}곳` : parts.join(" · ");
+  return parts.length > max ? `${parts.slice(0, max).join(" | ")} 외 ${parts.length - max}곳` : parts.join(" | ");
 }
 
 export default function TimeRangePicker({

@@ -28,7 +28,7 @@ export function CartList({
   }
   return (
     <div className="pl-cart-group">
-      <div className="pl-label">{cart.length}과목 · 최대 {cartCredit(cart, courseByCode)}학점</div>
+      <div className="pl-label">{cart.length}과목 | 최대 {cartCredit(cart, courseByCode)}학점</div>
       {cart.map((i) => {
         const course = courseByCode.get(i.code);
         if (!course) return null;
@@ -38,7 +38,7 @@ export function CartList({
             <span className="pl-swatch" style={{ background: colorOf(i.code) }} />
             <div className="pl-cart-name">
               <div title={course.name}>{course.name}</div>
-              <div className="pl-hint">{[`${course.credit}학점`, ...notes].join(" · ")}</div>
+              <div className="pl-hint">{[`${course.credit}학점`, ...notes].join(" | ")}</div>
             </div>
             <button className="pl-x" aria-label={`${course.name} 빼기`} onClick={() => onSetMode(i.code, null)}>×</button>
           </div>
@@ -49,7 +49,7 @@ export function CartList({
   );
 }
 
-/** 3단계 조건 · 정렬 — 순서: 꼭 넣을 과목 → 정렬 → 시간대 → 학점 → 공강·하루 일정 → 교수님 */
+/** 3단계 조건과 정렬 — 순서: 꼭 넣을 과목 → 정렬 → 시간대 → 학점 → 공강·하루 일정 → 교수님 */
 export function ConditionsPanel({
   cart,
   courseByCode,
@@ -96,7 +96,7 @@ export function ConditionsPanel({
               <button key={i.code} className="pl-chip" aria-pressed={i.mode === "must" || !!i.pinned}
                 title={i.pinned ? "분반을 고정한 과목은 항상 들어가요. 빼려면 과목 담기에서 고정을 해제하세요" : undefined}
                 onClick={() => { if (!i.pinned) onSetMode(i.code, i.mode === "must" ? "maybe" : "must"); }}>
-                {course.name.replace(/\s*\(.*?\)\s*$/, "")}{i.pinned ? " · 고정" : ""}
+                {course.name.replace(/\s*\(.*?\)\s*$/, "")}{i.pinned ? " (고정)" : ""}
               </button>
             );
           })}

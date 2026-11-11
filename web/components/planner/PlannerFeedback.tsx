@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FORM_ACTION } from "@/components/FeedbackTab";
 import { track } from "@/lib/analytics";
 
-/** 피드백 · 응원 (새 디자인). 같은 구글 폼(entry ID)으로 보낸다. 전공·학번은 1단계 내 정보를 그대로 */
+/** 피드백/응원 (새 디자인). 같은 구글 폼(entry ID)으로 보낸다. 전공·학번은 1단계 내 정보를 그대로 */
 const CATEGORIES = ["기능 추가 문의", "버그 신고", "UI/UX(디자인) 개선", "응원"] as const;
 
 export default function PlannerFeedback({ majorLabel, entryYear }: { majorLabel: string; entryYear: number }) {
@@ -63,10 +63,10 @@ export default function PlannerFeedback({ majorLabel, entryYear }: { majorLabel:
       </div>
       <label className="pl-fb-check-row">
         <input type="checkbox" checked={withProfile} onChange={(e) => setWithProfile(e.target.checked)} />
-        내 정보 같이 보내기 <span className="pl-muted">({[majorLabel || "학과 없음", entryYear ? `${entryYear}학번` : ""].filter(Boolean).join(" · ")})</span>
+        내 정보 같이 보내기 <span className="pl-muted">({[majorLabel || "학과 없음", entryYear ? `${entryYear}학번` : ""].filter(Boolean).join(" | ")})</span>
       </label>
       <div className="pl-fb-privacy">
-        수집 항목: 학과·학번(선택), 문의 내용 · 목적: 서비스 개선과 답변 · 보유: 목적 달성 후 파기
+        수집 항목: 학과·학번(선택), 문의 내용 | 목적: 서비스 개선과 답변 | 보유: 목적 달성 후 파기
       </div>
       <label className="pl-fb-check-row">
         <input type="checkbox" checked={agreed} onChange={(e) => setAgreed(e.target.checked)} />

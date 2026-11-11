@@ -40,8 +40,8 @@ const TOUR_2: TourStep[] = [
 ];
 const TOUR_3: TourStep[] = [
   { selector: '[data-tour="must"]', title: "꼭 넣을 과목", body: "반드시 들어가야 하는 과목을 고르면 그 과목이 들어간 시간표만 보여 줘요." },
-  { selector: '[data-tour="sort"]', title: "정렬 · 조건", body: "공강 많은 순, 늦게 시작 등으로 정렬하고, 아래에서 학점·공강 요일·수업 시간·피할 교수를 정할 수 있어요." },
-  { selector: '[data-tour="actions"]', title: "저장 · 수강신청", body: "이미지로 저장하거나 보관함에 넣고, 수강신청 코드를 복사할 수 있어요. ← → 키로 시간표를 넘길 수 있어요." },
+  { selector: '[data-tour="sort"]', title: "정렬과 조건", body: "공강 많은 순, 늦게 시작 등으로 정렬하고, 아래에서 학점·공강 요일·수업 시간·피할 교수를 정할 수 있어요." },
+  { selector: '[data-tour="actions"]', title: "저장과 수강신청", body: "이미지로 저장하거나 보관함에 넣고, 수강신청 코드를 복사할 수 있어요. ← → 키로 시간표를 넘길 수 있어요." },
 ];
 const ENTRY_YEAR_LAST = 2026; // 이수체계 데이터가 있는 마지막 학번
 const fmtDate = (iso: string) => new Date(iso).toLocaleString("ko-KR", { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
@@ -466,7 +466,7 @@ export default function Planner() {
     const credit = items.reduce((s, i) => s + i.credit, 0);
     await exportTimetable({
       title: t,
-      subtitle: [majorLabel, `${credit}학점`].filter(Boolean).join(" · "),
+      subtitle: [majorLabel, `${credit}학점`].filter(Boolean).join(" | "),
       items,
     });
     logSave("이미지 저장");
@@ -487,7 +487,7 @@ export default function Planner() {
       const credit = items.reduce((s, it) => s + it.credit, 0);
       await exportTimetable({
         title,
-        subtitle: [majorLabel, `${credit}학점`, `${i + 1}번`].filter(Boolean).join(" · "),
+        subtitle: [majorLabel, `${credit}학점`, `${i + 1}번`].filter(Boolean).join(" | "),
         items,
         fileName: `${title} ${String(i + 1).padStart(pad, "0")}`,
         });
@@ -602,7 +602,7 @@ export default function Planner() {
             {p.featured && <span className="pl-badge cat-major">대표</span>}
             {p.legacy && <span className="pl-badge">기존 사이트</span>}
           </div>
-          <div className="pl-hint">{semLabel(p.sem)} · {p.items.reduce((s, i) => s + i.credit, 0)}학점 · {p.items.length}과목</div>
+          <div className="pl-hint">{semLabel(p.sem)} | {p.items.reduce((s, i) => s + i.credit, 0)}학점 | {p.items.length}과목</div>
         </button>
       )}
       <div style={{ display: "flex", gap: 4, flexWrap: "wrap", justifyContent: "flex-end" }}>
@@ -645,9 +645,9 @@ export default function Planner() {
             ? <button className="pl-btn ghost" onClick={() => { setModal("friends"); track("friends_opened"); }}>친구</button>
             : <button className="pl-btn ghost" onClick={() => { track("login_clicked"); void signInWithGoogle(); }}>구글 로그인</button>)
             : (
-              <button className="pl-btn ghost pl-soon pl-hide-mobile" aria-disabled="true" title="구글 로그인 · 친구 시간표 기능을 준비하고 있어요"
+              <button className="pl-btn ghost pl-soon pl-hide-mobile" aria-disabled="true" title="구글 로그인/친구 시간표 기능을 준비하고 있어요"
                 onClick={() => { flash("구글 로그인과 친구 기능은 준비 중이에요"); track("soon_clicked", { feature: "account" }); }}>
-                로그인 · 친구 <span className="pl-soon-badge">준비 중</span>
+                로그인/친구 <span className="pl-soon-badge">준비 중</span>
               </button>
             )}
           <button className="pl-btn ghost" onClick={() => { reloadPlans(); setModal("saved"); }}>보관함{plans.length + cloudPlans.length ? ` ${plans.length + cloudPlans.length}` : ""}</button>
@@ -666,14 +666,14 @@ export default function Planner() {
                     )}
                     {step > 1 && <button onClick={() => { setMenuOpen(false); setTour(true); }}>사용법 보기</button>}
                     {!accountsEnabled() && (
-                      <button className="pl-show-mobile" onClick={() => { setMenuOpen(false); flash("구글 로그인과 친구 기능은 준비 중이에요"); }}>로그인 · 친구 (준비 중)</button>
+                      <button className="pl-show-mobile" onClick={() => { setMenuOpen(false); flash("구글 로그인과 친구 기능은 준비 중이에요"); }}>로그인/친구 (준비 중)</button>
                     )}
                     <button onClick={() => { setMenuOpen(false); setSheet("calendar"); track("menu_calendar"); }}>학사일정</button>
-                    <button onClick={() => { setMenuOpen(false); setSheet("feedback"); track("menu_feedback"); }}>피드백 · 응원</button>
+                    <button onClick={() => { setMenuOpen(false); setSheet("feedback"); track("menu_feedback"); }}>피드백/응원</button>
                     <button onClick={() => { setMenuOpen(false); shareToKakao(); track("kakao_share"); }}>카카오톡으로 공유</button>
                     <a href="/old" onClick={() => track("old_version_opened")}>구버전 보기</a>
                     <a href="/privacy" target="_blank" rel="noopener">개인정보처리방침</a>
-                    <a href="mailto:insu0531@knu.ac.kr">문의 · insu0531@knu.ac.kr</a>
+                    <a href="mailto:insu0531@knu.ac.kr">문의: insu0531@knu.ac.kr</a>
                     {loggedIn && <button onClick={async () => { setMenuOpen(false); await signOut(); setCloudPlans([]); setMe(null); flash("로그아웃했어요"); }}>로그아웃</button>}
                     {loggedIn && (
                       <button onClick={async () => {
@@ -709,8 +709,8 @@ export default function Planner() {
               <p>전공·교양·교직을 한 번에 담으면 시간이 겹치지 않는 조합을 모두 찾아,<br />공강 많은 순·늦게 시작하는 순으로 정리해 드려요.</p>
               <p className="pl-intro-point">우리 과에서는 안 열려도 <b>전공으로 인정되는 다른 학과 개설 과목</b>까지 함께 찾아 드려요.</p>
               <div className="pl-hint">
-                {collectedAt && <>{fmtDate(collectedAt)} 기준 개설 정보 · </>}
-                <a className="pl-link" href="/privacy" target="_blank" rel="noopener">개인정보처리방침</a> · <a className="pl-link" href="mailto:insu0531@knu.ac.kr">insu0531@knu.ac.kr</a>
+                {collectedAt && <>{fmtDate(collectedAt)} 기준 개설 정보 | </>}
+                <a className="pl-link" href="/privacy" target="_blank" rel="noopener">개인정보처리방침</a> | <a className="pl-link" href="mailto:insu0531@knu.ac.kr">insu0531@knu.ac.kr</a>
               </div>
             </div>
             <div className="pl-intro-form pl-enter" style={{ animationDelay: "60ms" }}>
@@ -752,7 +752,7 @@ export default function Planner() {
               </div>
               {st.major && (
                 <div>
-                  <div className="pl-label">복수전공 · 부전공 <span className="pl-muted" style={{ fontWeight: 500 }}>(선택, 최대 3개)</span></div>
+                  <div className="pl-label">복수전공/부전공 <span className="pl-muted" style={{ fontWeight: 500 }}>(선택, 최대 3개)</span></div>
                   <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                     {st.extras.map((m, i) => (
                       <MajorPicker options={levelMajors} key={i} value={m} onChange={(nm) => update({ extras: st.extras.map((x, j) => (j === i ? nm : x)) })} onRemove={() => update({ extras: st.extras.filter((_, j) => j !== i) })} />
@@ -808,7 +808,7 @@ export default function Planner() {
                 <button className="pl-bar-summary" onClick={() => setModal("cart")} aria-label={`${cart.length}과목, ${credit}학점 담음, 목표 ${target}학점`}>
                   <b>{cart.length}과목 담음</b> <span className="pl-bar-credit">{credit} / {target}학점</span>
                   <span className="pl-credit-bar" aria-hidden><span style={{ width: `${Math.min(100, (credit / target) * 100)}%` }} data-full={short === 0} /></span>
-                  <div className="pl-hint">{short > 0 ? `목표까지 ${short}학점 더 담으면 좋아요 · 시간이 겹치면 다 못 넣을 수 있어 넉넉히` : "목표 학점만큼 담았어요 · 겹치지 않게 최대한 넣어 드려요"}</div>
+                  <div className="pl-hint">{short > 0 ? `목표까지 ${short}학점 더 담으면 좋아요 | 시간이 겹치면 다 못 넣을 수 있어 넉넉히` : "목표 학점만큼 담았어요 | 겹치지 않게 최대한 넣어 드려요"}</div>
                 </button>
               );
             })()}
@@ -819,12 +819,12 @@ export default function Planner() {
         <div className="pl-plan pl-enter">
           <aside className="pl-cond" data-open={condOpen}>
             <button className="pl-cond-toggle" onClick={() => setCondOpen((v) => !v)} aria-expanded={condOpen}>
-              <span>조건 · 정렬</span><span className="pl-muted">{condOpen ? "접기 ▴" : "펼치기 ▾"}</span>
+              <span>조건과 정렬</span><span className="pl-muted">{condOpen ? "접기 ▴" : "펼치기 ▾"}</span>
             </button>
             <div className="pl-scroll">
               <div className="pl-cond-block" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <span><b>{cart.length}과목</b> <span className="pl-muted">담음</span></span>
-                <button className="pl-link" onClick={() => goStep(2)}>과목 더 담기 · 빼기</button>
+                <button className="pl-link" onClick={() => goStep(2)}>과목 더 담기/빼기</button>
               </div>
               <ConditionsPanel cart={cart} courseByCode={courseByCode} conditions={st.conditions} onConditions={(c) => {
                 const changed = (Object.keys(c) as (keyof Conditions)[]).filter((k) => JSON.stringify(c[k]) !== JSON.stringify(st.conditions[k]));
@@ -889,7 +889,7 @@ export default function Planner() {
                   <div>새로고침하면 담은 과목과 조건이 <b>처음부터 다시</b> 시작돼요. (학기·학과·학번은 그대로)</div>
                   {view ? (
                     <>
-                      <div className="pl-hint">지금 보고 있는 시간표({view.items.length}과목 · {view.items.reduce((s, i) => s + i.credit, 0)}학점)를 보관함에 저장해 둘까요?</div>
+                      <div className="pl-hint">지금 보고 있는 시간표({view.items.length}과목 | {view.items.reduce((s, i) => s + i.credit, 0)}학점)를 보관함에 저장해 둘까요?</div>
                       <button className="pl-btn primary lg" onClick={async () => { if (await doSave()) { track("refresh_saved"); reloadNow(); } }}>보관함에 저장하고 새로고침</button>
                     </>
                   ) : (
@@ -914,7 +914,7 @@ export default function Planner() {
                         {it.options.map((o) => (
                           <button key={o.id} className="pl-chip" aria-pressed={it.decided && it.chosen === o.id}
                             onClick={() => { setProfPick((p) => ({ ...p, [it.code]: o.id })); track("section_chosen", { where: "save" }); }}>
-                            {o.id.split("-").pop()} · {o.prof}
+                            {o.id.split("-").pop()}분반 {o.prof}
                           </button>
                         ))}
                       </div>
@@ -938,7 +938,7 @@ export default function Planner() {
                         {it.options.length > 1 ? (
                           <select className="pl-select" style={{ marginTop: 6, height: 28 }} value={it.chosen}
                             onChange={(e) => setProfPick((p) => ({ ...p, [it.code]: e.target.value }))} aria-label={`${it.name} 분반 선택`}>
-                            {it.options.map((o) => <option key={o.id} value={o.id}>{o.id.split("-")[1]}분반 · {o.prof}</option>)}
+                            {it.options.map((o) => <option key={o.id} value={o.id}>{o.id.split("-")[1]}분반 {o.prof}</option>)}
                           </select>
                         ) : <div className="pl-muted pl-small">{it.prof}</div>}
                         <code>{it.chosen}</code>
@@ -1048,8 +1048,8 @@ export default function Planner() {
       )}
       {sheet && (
         <div className="pl-modal-bg" onClick={() => setSheet(null)}>
-          <div className={`pl-modal ${sheet === "calendar" ? "pl-sheet" : "pl-fb-modal"}`} onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label={sheet === "calendar" ? "학사일정" : "피드백 · 응원"}>
-            <div className="pl-modal-head"><h3>{sheet === "calendar" ? "학사일정" : "피드백 · 응원"}</h3><button className="pl-x" aria-label="닫기" onClick={() => setSheet(null)}>×</button></div>
+          <div className={`pl-modal ${sheet === "calendar" ? "pl-sheet" : "pl-fb-modal"}`} onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label={sheet === "calendar" ? "학사일정" : "피드백/응원"}>
+            <div className="pl-modal-head"><h3>{sheet === "calendar" ? "학사일정" : "피드백/응원"}</h3><button className="pl-x" aria-label="닫기" onClick={() => setSheet(null)}>×</button></div>
             <div className="pl-sheet-body">{sheet === "calendar" ? <PlannerCalendar /> : <PlannerFeedback majorLabel={majorLabel} entryYear={st.entryYear} />}</div>
           </div>
         </div>

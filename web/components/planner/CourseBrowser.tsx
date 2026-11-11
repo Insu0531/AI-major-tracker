@@ -129,7 +129,7 @@ export default function CourseBrowser(p: Props) {
     const out = searching ? [...base] : base.filter((c) => c.category === cat);
     const byDefault = (a: Course, b: Course) => gradeNum(a.grade) - gradeNum(b.grade) || a.name.localeCompare(b.name, "ko");
     if (!sort) return out.sort(byDefault);
-    const val = (c: Course) => (sort.col === "grade" ? gradeNum(c.grade) : sort.col === "credit" ? c.credit : sort.col === "dept" ? c.dept : sort.col === "type" ? courseTypes(c.sections).join("·") : c.name);
+    const val = (c: Course) => (sort.col === "grade" ? gradeNum(c.grade) : sort.col === "credit" ? c.credit : sort.col === "dept" ? c.dept : sort.col === "type" ? courseTypes(c.sections).join(", ") : c.name);
     return out.sort((a, b) => {
       const va = val(a), vb = val(b);
       const cmp = typeof va === "number" ? va - (vb as number) : String(va).localeCompare(String(vb), "ko");
@@ -228,7 +228,7 @@ export default function CourseBrowser(p: Props) {
       <div className="pl-scroll">
         <div className="pl-count">
           {searching ? <>전체에서 <b>{filtered.length.toLocaleString()}</b>과목 찾음</> : <><b>{filtered.length.toLocaleString()}</b>과목</>}
-          <span className="pl-muted"> · 과목을 누르면 분반별 교수·시간·정원이 펼쳐져요</span>
+          <span className="pl-muted"> | 과목을 누르면 분반별 교수·시간·정원이 펼쳐져요</span>
         </div>
         {filtered.length === 0 ? (
           <div className="pl-empty">조건에 맞는 과목이 없어요.<br />다른 탭이나 필터를 바꿔 보세요.</div>
@@ -321,9 +321,9 @@ export const CourseRow = memo(function CourseRow({
           {showCategory && c.category !== "other" && <span className={`pl-badge cat-${c.category}`}>{CATEGORY_LABEL[c.category]}</span>}
           {otherDept && <span className="pl-badge pl-badge-other" title="우리 과 이수체계 과목이에요. 다른 학과에서 연 분반도 포함돼 있어요">타학과 개설 포함</span>}
           {c.tags.filter((t) => t === "SDG" || t === "인문교양").map((t) => <span key={t} className="pl-badge">{t}</span>)}
-          <span className="pl-mobile-meta">{[types.join("·"), c.grade && c.grade !== "*" ? `${c.grade}학년` : "", `${c.credit}학점`, time].filter(Boolean).join(" · ")}</span>
+          <span className="pl-mobile-meta">{[types.join(", "), c.grade && c.grade !== "*" ? `${c.grade}학년` : "", `${c.credit}학점`, time].filter(Boolean).join(" | ")}</span>
         </td>
-        <td className="c-type">{types.join("·") || "-"}</td>
+        <td className="c-type">{types.join(", ") || "-"}</td>
         <td className="c-num">{c.grade && c.grade !== "*" ? c.grade : "-"}</td>
         <td className="c-num">{c.credit}</td>
         <td className="c-dept">{c.dept}</td>
@@ -357,7 +357,7 @@ export const CourseRow = memo(function CourseRow({
                       </button>
                     </span>
                     {(s.campus !== "산격동" || s.remark) && (
-                      <span className="pl-sec-note">{[s.campus !== "산격동" ? s.campus : "", s.remark].filter(Boolean).join(" · ")}</span>
+                      <span className="pl-sec-note">{[s.campus !== "산격동" ? s.campus : "", s.remark].filter(Boolean).join(" | ")}</span>
                     )}
                   </div>
                 );
