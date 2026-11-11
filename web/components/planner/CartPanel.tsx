@@ -121,7 +121,7 @@ export function ConditionsPanel({
           </button>
           <button className={`pl-time-btn need${required.length ? " on" : ""}`} onClick={() => setTimeMode("need")}>
             <span>꼭 넣을 시간</span>
-            <small>{required.length ? describeSlots(required, 2) : "수업이 꼭 있어야 할 칸"}</small>
+            <small>{required.length ? describeSlots(required, 2) : "이 시간대엔 수업이 있게"}</small>
           </button>
         </div>
         {(blocked.length > 0 || required.length > 0) && (

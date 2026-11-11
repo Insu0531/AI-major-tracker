@@ -179,8 +179,19 @@ export function runEngine(groups: EngineGroup[], cond: Conditions, nodeLimit = N
   const emptyMust: string[] = [];
 
   const blocked = slotsToMask(cond.blockedSlots ?? []);
-  const required = slotsToMask(cond.requiredSlots ?? []);
-  const hasRequired = required.some(Boolean);
+  // 꼭 넣을 시간: 같은 요일에서 이어 칠한 칸 묶음(시간대)마다 수업이 하나라도 걸치면 통과 (2026-11-11: 칸을 다 채워야 하던 건 너무 엄격)
+  const requiredRuns: { day: number; mask: number }[] = [];
+  {
+    const req = slotsToMask(cond.requiredSlots ?? []);
+    for (let d = 0; d < 7; d++) {
+      let run = 0;
+      for (let u = 0; u <= UNITS; u++) {
+        const on = u < UNITS && (req[d] >>> u) & 1;
+        if (on) run |= 1 << u;
+        else if (run) { requiredRuns.push({ day: d, mask: run }); run = 0; }
+      }
+    }
+  }
   const prepared: PreparedGroup[] = groups.map((g, origIdx) => {
     const options: PreparedOption[] = [];
     g.options.forEach((o, idx) => {
@@ -216,8 +227,7 @@ export function runEngine(groups: EngineGroup[], cond: Conditions, nodeLimit = N
 
   const includeProfs = cond.includeProfs ?? [];
   const leaf = (credit: number) => {
-    // 꼭 넣을 시간: 고른 칸이 모두 수업으로 채워져야 함
-    if (hasRequired) for (let d = 0; d < 7; d++) if ((mask[d] & required[d]) !== required[d]) return;
+    for (const r of requiredRuns) if (!(mask[r.day] & r.mask)) return;
     // 꼭 들어야 하는 교수님: 고른 분반 중 그 교수님 수업이 있어야 함
     for (const prof of includeProfs) {
       let found = false;
