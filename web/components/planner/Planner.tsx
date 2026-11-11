@@ -87,7 +87,9 @@ const pickProfile = (s: Partial<Persisted>) =>
 
 function loadPersisted(): Persisted {
   const saved = readLocal<Partial<Persisted>>(STATE_KEY, {});
-  return { ...INITIAL, ...pickProfile(saved), conditions: { ...DEFAULT_CONDITIONS } };
+  const profile = pickProfile(saved);
+  // 다시 온 사람(학과를 이미 골라 둔 경우)은 1단계를 건너뛰고 바로 과목 담기부터 (1단계는 상단 단계 표시로 갈 수 있음)
+  return { ...INITIAL, ...profile, conditions: { ...DEFAULT_CONDITIONS }, step: profile.major ? 2 : 1 };
 }
 
 const EMPTY_MAP = new Map<string, string>();
@@ -429,6 +431,10 @@ export default function Planner() {
         title: cardTitle,
         description: [majorLabel, "KNU 시간표 마법사에서 만들었어요"].filter(Boolean).join("\n"),
         fileName,
+      }, (reason) => {
+        // 조용히 넘어가면 원인을 알 수 없어서(2026-11-11 실제 발생) 안내 + 기록
+        flash("카카오톡 카드 공유가 안 돼서 기본 공유 창(사진)으로 보내요");
+        track("kakao_share_failed", { reason: reason.slice(0, 120) });
       });
       track("timetable_shared", { how, courses: items.length });
       if (how === "download") { await doImage(items); flash("공유할 수 없어 이미지로 저장했어요"); }
