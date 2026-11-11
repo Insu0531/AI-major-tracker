@@ -109,7 +109,7 @@ export type Conditions = {
   noRemote: boolean;
   /** 빼고 싶은 시간: 이 칸(30분 단위 [요일, 시작분, 끝분])에 걸리는 분반은 쓰지 않음 */
   blockedSlots: Slot[];
-  /** 꼭 넣을 시간: 이 칸이 전부 수업으로 채워진 시간표만 */
+  /** 꼭 넣을 시간: 이어 칠한 시간대마다 수업이 하나라도 걸쳐 있는 시간표만 */
   requiredSlots: Slot[];
   sort: SortKey;
 };
