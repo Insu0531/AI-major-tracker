@@ -781,10 +781,19 @@ export default function Planner() {
             </aside>
           </div>
           <div className="pl-bar" data-tour="next">
-            <button className="pl-bar-summary" onClick={() => setModal("cart")}>
-              <b>{cart.length}과목 담음</b>
-              <div className="pl-hint">최대 {cartCredit(cart, courseByCode)}학점<span className="pl-hide-mobile"> · 겹치지 않게 최대한 넣어 드려요</span></div>
-            </button>
+            {(() => {
+              // 목표 학점 = 3단계 최대 학점 조건(기본 21). 담은 학점이 모자라면 결과도 그만큼 적게 나온다는 걸 미리 알려 줌
+              const credit = cartCredit(cart, courseByCode);
+              const target = st.conditions.maxCredit || 21;
+              const short = Math.max(0, target - credit);
+              return (
+                <button className="pl-bar-summary" onClick={() => setModal("cart")} aria-label={`${cart.length}과목, ${credit}학점 담음, 목표 ${target}학점`}>
+                  <b>{cart.length}과목 담음</b> <span className="pl-bar-credit">{credit} / {target}학점</span>
+                  <span className="pl-credit-bar" aria-hidden><span style={{ width: `${Math.min(100, (credit / target) * 100)}%` }} data-full={short === 0} /></span>
+                  <div className="pl-hint">{short > 0 ? `목표까지 ${short}학점 더 담으면 좋아요 · 시간이 겹치면 다 못 넣을 수 있어 넉넉히` : "목표 학점만큼 담았어요 · 겹치지 않게 최대한 넣어 드려요"}</div>
+                </button>
+              );
+            })()}
             <button className="pl-btn primary lg" disabled={cart.length === 0} onClick={() => goStep(3)}>시간표 보기</button>
           </div>
         </div>

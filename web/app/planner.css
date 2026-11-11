@@ -686,3 +686,9 @@
 .c-type { color: var(--ink-2) !important; font-size: 13px; white-space: nowrap; max-width: 120px; overflow: hidden; text-overflow: ellipsis; }
 @media (max-width: 720px) { .c-type { display: none; } }
 .pl-rec-type { display: inline-block; margin-right: 6px; padding: 0 6px; border-radius: 6px; background: var(--sunken); font-size: 12px; font-weight: 600; color: var(--ink-2); }
+
+/* 2단계 하단: 목표 학점 진행 막대 */
+.pl-bar-credit { font-size: 14px; font-weight: 600; color: var(--ink-2); margin-left: 4px; font-variant-numeric: tabular-nums; }
+.pl-credit-bar { display: block; height: 6px; margin: 6px 0 4px; max-width: 360px; border-radius: 3px; background: var(--sunken); overflow: hidden; }
+.pl-credit-bar > span { display: block; height: 100%; border-radius: 3px; background: var(--pick); transition: width 0.25s ease-out; }
+.pl-credit-bar > span[data-full="true"] { background: oklch(55% 0.12 150); }
