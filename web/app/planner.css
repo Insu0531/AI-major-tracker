@@ -419,6 +419,13 @@
 .pl-rec-meta { font-size: 14px; color: var(--ink-2); margin-top: 2px; }
 .pl-rec-reasons { display: flex; flex-wrap: wrap; gap: var(--s1); margin-top: 6px; }
 .pl-rec-reason { font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 10px; background: var(--pick-weak); color: var(--pick); }
+/* 이유마다 색 (같은 명도·채도대, 색상만 다르게) */
+.pl-rec-reason[data-kind="free"]   { background: oklch(94% 0.045 150); color: oklch(45% 0.12 150); }
+.pl-rec-reason[data-kind="near"]   { background: oklch(94% 0.035 255); color: oklch(48% 0.14 255); }
+.pl-rec-reason[data-kind="seat"]   { background: oklch(94.5% 0.05 75);  color: oklch(48% 0.11 65); }
+.pl-rec-reason[data-kind="sdg"]    { background: oklch(94% 0.04 195);  color: oklch(45% 0.09 200); }
+.pl-rec-reason[data-kind="hum"]    { background: oklch(94% 0.04 330);  color: oklch(47% 0.13 340); }
+.pl-rec-reason[data-kind="remote"] { background: var(--sunken); color: var(--ink-2); }
 @media (max-width: 720px) { .pl-rec { padding-left: var(--s4); padding-right: var(--s4); align-items: flex-start; } }
 
 /* 비고 요약 · 펼치기 표시 */
@@ -490,6 +497,7 @@
 .pl-rec-jump:hover { filter: brightness(0.97); }
 .pl-rec-jump span { display: inline-block; animation: pl-nudge 1.6s ease-in-out infinite; }
 .pl-rec-jump b { font-weight: 800; }
+.pl-rec-jump em { font-style: normal; font-weight: 500; opacity: 0.8; margin-left: 6px; }
 @keyframes pl-nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
 .pl-recs { scroll-margin-top: var(--s4); }
 /* 카톡 공유 (카카오 노랑은 버튼 하나에만) */
@@ -614,3 +622,45 @@
 /* 1단계 학부 / 대학원 탭 */
 .pl-level-tabs { margin-bottom: var(--s1); }
 .pl-level-tabs .pl-tab { flex: 1; justify-content: center; }
+
+/* ── 3단계 조건: 더 촘촘하게 (2026-11-11) ── */
+.pl-cond .pl-cond-block { padding-top: var(--s3); padding-bottom: var(--s3); }
+.pl-cond .pl-label { font-size: 13px; margin-bottom: 6px; }
+.pl-cond .pl-hint { font-size: 12.5px; }
+.pl-cond .pl-chips { gap: 4px; }
+.pl-cond .pl-chip { height: 28px; padding: 0 10px; font-size: 13px; border-radius: 14px; }
+.pl-cond .pl-select { height: 34px; font-size: 13px; }
+
+/* 시간대 버튼 두 개 */
+.pl-time-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.pl-time-btn {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 2px; min-width: 0;
+  padding: 8px 10px; border: none; border-radius: var(--radius); background: var(--sunken); text-align: left; color: var(--ink-2);
+  transition: background-color 0.15s;
+}
+.pl-time-btn span { font-size: 13px; font-weight: 700; }
+.pl-time-btn small { font-size: 12px; color: var(--ink-3); width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pl-time-btn:hover { background: var(--pick-weak); }
+.pl-time-btn.block.on { background: oklch(93% 0.04 25); color: var(--accent); }
+.pl-time-btn.need.on { background: var(--pick-weak); color: var(--pick); }
+.pl-time-btn.on small { color: inherit; opacity: 0.85; }
+
+/* 시간대 고르기 창 */
+.pl-modal.pl-trp { width: min(560px, 100%); }
+.pl-trp-modes { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.pl-trp-mode { display: flex; align-items: center; gap: 6px; height: 38px; padding: 0 12px; border: none; border-radius: var(--radius); background: var(--sunken); font-size: 14px; font-weight: 600; color: var(--ink-2); }
+.pl-trp-mode b { margin-left: auto; font-weight: 700; }
+.pl-trp-swatch { width: 12px; height: 12px; border-radius: 3px; }
+.pl-trp-mode.block .pl-trp-swatch { background: var(--accent); }
+.pl-trp-mode.need .pl-trp-swatch { background: var(--pick); }
+.pl-trp-mode.block[aria-checked="true"] { background: oklch(93% 0.04 25); color: var(--accent); box-shadow: inset 0 0 0 2px var(--accent); }
+.pl-trp-mode.need[aria-checked="true"] { background: var(--pick-weak); color: var(--pick); box-shadow: inset 0 0 0 2px var(--pick); }
+.pl-trp-grid { display: grid; grid-auto-rows: 15px; user-select: none; -webkit-user-select: none; touch-action: none; border-radius: var(--radius); background: var(--surface-2, var(--bg)); padding: 4px 4px 4px 0; }
+.pl-trp-grid > .pl-trp-day { display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: var(--ink-2); }
+.pl-trp-hour { font-size: 11px; color: var(--ink-3); text-align: right; padding-right: 6px; line-height: 1; transform: translateY(-5px); }
+.pl-trp-cell { margin: 0 1px; background: var(--sunken); cursor: pointer; }
+.pl-trp-cell.hour { box-shadow: inset 0 1px 0 var(--line); }
+.pl-trp-cell:hover { filter: brightness(0.96); }
+.pl-trp-cell.block { background: var(--accent); }
+.pl-trp-cell.need { background: var(--pick); }
+.pl-cond .pl-link { font-size: 13px; }

@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { colorFor, DAY_NAMES } from "@/lib/planner/data";
 import { SORT_LABEL, type CartItem, type CartMode, type Conditions, type Course, type SortKey } from "@/lib/planner/types";
+import TimeRangePicker, { describeSlots, type TimeMode } from "./TimeRangePicker";
 
 export function cartCredit(items: CartItem[], courseByCode: Map<string, Course>) {
   return items.reduce((s, i) => s + (courseByCode.get(i.code)?.credit ?? 0), 0);
@@ -48,7 +49,7 @@ export function CartList({
   );
 }
 
-/** 3단계 조건 · 정렬 */
+/** 3단계 조건 · 정렬 — 순서: 꼭 넣을 과목 → 정렬 → 시간대 → 학점 → 공강·하루 일정 → 교수님 */
 export function ConditionsPanel({
   cart,
   courseByCode,
@@ -63,6 +64,8 @@ export function ConditionsPanel({
   onSetMode: (code: string, mode: CartMode | null) => void;
 }) {
   const [allProfs, setAllProfs] = useState(false);
+  const [timeMode, setTimeMode] = useState<TimeMode | null>(null);
+  const blocked = c.blockedSlots ?? [], required = c.requiredSlots ?? [];
   const set = (patch: Partial<Conditions>) => onConditions({ ...c, ...patch });
 
   // 교수님 → 담당 과목명 (칩에 마우스를 올리면 어떤 과목인지 보여 줌)
@@ -110,6 +113,32 @@ export function ConditionsPanel({
       </div>
 
       <div className="pl-cond-block">
+        <div className="pl-label">시간대</div>
+        <div className="pl-time-btns">
+          <button className={`pl-time-btn block${blocked.length ? " on" : ""}`} onClick={() => setTimeMode("block")}>
+            <span>빼고 싶은 시간</span>
+            <small>{blocked.length ? describeSlots(blocked, 2) : "칸을 골라 빼기"}</small>
+          </button>
+          <button className={`pl-time-btn need${required.length ? " on" : ""}`} onClick={() => setTimeMode("need")}>
+            <span>꼭 넣을 시간</span>
+            <small>{required.length ? describeSlots(required, 2) : "수업이 꼭 있어야 할 칸"}</small>
+          </button>
+        </div>
+        {(blocked.length > 0 || required.length > 0) && (
+          <button className="pl-link" style={{ marginTop: 6 }} onClick={() => set({ blockedSlots: [], requiredSlots: [] })}>시간대 조건 지우기</button>
+        )}
+      </div>
+      {timeMode && (
+        <TimeRangePicker
+          blocked={blocked}
+          required={required}
+          initialMode={timeMode}
+          onClose={() => setTimeMode(null)}
+          onApply={(b, r) => { set({ blockedSlots: b, requiredSlots: r }); setTimeMode(null); }}
+        />
+      )}
+
+      <div className="pl-cond-block">
         <div className="pl-label">학점</div>
         <div className="pl-grid2">
           <select className="pl-select" value={c.minCredit} onChange={(e) => set({ minCredit: +e.target.value })} aria-label="최소 학점">
@@ -124,18 +153,14 @@ export function ConditionsPanel({
       </div>
 
       <div className="pl-cond-block">
-        <div className="pl-label">공강으로 비울 요일</div>
+        <div className="pl-label">공강</div>
         <div className="pl-chips">
           {DAY_NAMES.slice(0, 5).map((d, i) => (
-            <button key={d} className="pl-chip" aria-pressed={c.daysOff.includes(i)}
+            <button key={d} className="pl-chip" aria-pressed={c.daysOff.includes(i)} title={`${d}요일 수업 없는 시간표만`}
               onClick={() => set({ daysOff: c.daysOff.includes(i) ? c.daysOff.filter((x) => x !== i) : [...c.daysOff, i] })}>{d}</button>
           ))}
         </div>
-      </div>
-
-      <div className="pl-cond-block">
-        <div className="pl-label">하루 일정</div>
-        <div className="pl-chips">
+        <div className="pl-chips" style={{ marginTop: 8 }}>
           <button className="pl-chip" aria-pressed={c.lunchFree} onClick={() => set({ lunchFree: !c.lunchFree })} title="12시~13시에 수업이 없는 시간표만">점심시간 비우기</button>
           <button className="pl-chip" aria-pressed={c.maxStreak === 180} onClick={() => set({ maxStreak: c.maxStreak ? 0 : 180 })} title="쉬는 시간 없이 3시간 넘게 이어지는 날이 없는 시간표만">3시간 넘는 연강 없음</button>
           <button className="pl-chip" aria-pressed={c.maxGap === 120} onClick={() => set({ maxGap: c.maxGap ? 0 : 120 })} title="수업 사이 빈 시간이 2시간 넘는 날이 없는 시간표만">2시간 넘는 공강 없음</button>

@@ -30,7 +30,9 @@ type PreparedGroup = { g: EngineGroup; origIdx: number; options: PreparedOption[
 
 const LUNCH: [number, number] = [12 * 60, 13 * 60];
 
-function optionPassesConditions(opt: EngineOption, c: Conditions): EngineOption | null {
+function optionPassesConditions(opt: EngineOption, c: Conditions, blocked: number[]): EngineOption | null {
+  const m = slotsToMask(opt.slots);
+  for (let d = 0; d < 7; d++) if (m[d] & blocked[d]) return null; // 빼고 싶은 시간
   for (const [day, start, end] of opt.slots) {
     if (c.daysOff.includes(day)) return null;
     if (c.startAfter && start < c.startAfter) return null;
@@ -121,8 +123,6 @@ export function compareMetrics(a: ComboMetrics, b: ComboMetrics, sort: SortKey):
   const by = (...diffs: number[]) => { for (const d of diffs) if (d !== 0) return d; return 0; };
   switch (sort) {
     case "freeDays": return by(b.freeDays - a.freeDays, a.gapMinutes - b.gapMinutes, b.credit - a.credit);
-    case "lateStart": return by(b.avgStart - a.avgStart, a.gapMinutes - b.gapMinutes);
-    case "earlyEnd": return by(a.avgEnd - b.avgEnd, a.gapMinutes - b.gapMinutes);
     case "gaps": return by(a.gapMinutes - b.gapMinutes, b.freeDays - a.freeDays);
     case "credit": return by(b.credit - a.credit, b.freeDays - a.freeDays, a.gapMinutes - b.gapMinutes);
     case "recommended":
@@ -178,10 +178,13 @@ export function runEngine(groups: EngineGroup[], cond: Conditions) {
   const t0 = Date.now();
   const emptyMust: string[] = [];
 
+  const blocked = slotsToMask(cond.blockedSlots ?? []);
+  const required = slotsToMask(cond.requiredSlots ?? []);
+  const hasRequired = required.some(Boolean);
   const prepared: PreparedGroup[] = groups.map((g, origIdx) => {
     const options: PreparedOption[] = [];
     g.options.forEach((o, idx) => {
-      const ok = optionPassesConditions(o, cond);
+      const ok = optionPassesConditions(o, cond, blocked);
       if (ok) options.push({ idx, mask: slotsToMask(ok.slots), opt: ok });
     });
     return { g, origIdx, options };
@@ -213,6 +216,8 @@ export function runEngine(groups: EngineGroup[], cond: Conditions) {
 
   const includeProfs = cond.includeProfs ?? [];
   const leaf = (credit: number) => {
+    // 꼭 넣을 시간: 고른 칸이 모두 수업으로 채워져야 함
+    if (hasRequired) for (let d = 0; d < 7; d++) if ((mask[d] & required[d]) !== required[d]) return;
     // 꼭 들어야 하는 교수님: 고른 분반 중 그 교수님 수업이 있어야 함
     for (const prof of includeProfs) {
       let found = false;
