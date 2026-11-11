@@ -174,7 +174,7 @@ class WorstHeap {
   }
 }
 
-export function runEngine(groups: EngineGroup[], cond: Conditions) {
+export function runEngine(groups: EngineGroup[], cond: Conditions, nodeLimit = NODE_LIMIT) {
   const t0 = Date.now();
   const emptyMust: string[] = [];
 
@@ -246,7 +246,7 @@ export function runEngine(groups: EngineGroup[], cond: Conditions) {
 
   const rec = (i: number, credit: number) => {
     if (truncated) return;
-    if (++nodes > NODE_LIMIT) { truncated = true; return; }
+    if (++nodes > nodeLimit) { truncated = true; return; }
     if (credit > maxC) return;
     if (credit + suffixCredit[i] < minC) return;
     if (i === n) { leaf(credit); return; }

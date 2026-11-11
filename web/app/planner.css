@@ -692,3 +692,10 @@
 .pl-credit-bar { display: block; height: 6px; margin: 6px 0 4px; max-width: 360px; border-radius: 3px; background: var(--sunken); overflow: hidden; }
 .pl-credit-bar > span { display: block; height: 100%; border-radius: 3px; background: var(--pick); transition: width 0.25s ease-out; }
 .pl-credit-bar > span[data-full="true"] { background: oklch(55% 0.12 150); }
+
+/* 결과 0개: 조건 하나 풀기 버튼 */
+.pl-relax { max-width: 640px; margin: calc(-1 * var(--s4)) auto var(--s5); padding: 0 var(--s5); text-align: center; }
+.pl-relax .pl-chips { justify-content: center; }
+.pl-relax-btn { height: auto !important; min-height: 34px; padding: 6px 12px !important; background: var(--pick-weak) !important; color: var(--pick) !important; }
+.pl-relax-btn b { font-weight: 700; margin-left: 4px; }
+.pl-relax-btn:hover { filter: brightness(0.97); }

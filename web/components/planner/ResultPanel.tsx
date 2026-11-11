@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { track } from "@/lib/analytics";
 import { DAY_NAMES, formatSlots } from "@/lib/planner/data";
 import type { Recommendation } from "@/lib/planner/recommend";
+import type { Relaxation } from "@/lib/planner/relax";
 import type { TimetableItem } from "@/lib/planner/exportImage";
 import type { Course, EngineResponse } from "@/lib/planner/types";
 import Timetable from "./Timetable";
@@ -62,6 +63,8 @@ export default function ResultPanel({
   onShuffleRecs,
   hasMajor,
   recommendSearch,
+  relaxations,
+  onRelax,
   majorMore,
   quickAdd,
   onChoose,
@@ -88,6 +91,9 @@ export default function ResultPanel({
   onShuffleRecs: () => void;
   hasMajor: boolean;
   recommendSearch: (q: string) => Recommendation[];
+  /** 결과 0개일 때 하나만 풀면 시간표가 생기는 조건 (null = 계산 중) */
+  relaxations: Relaxation[] | null;
+  onRelax: (r: Relaxation) => void;
   majorMore: Course[];
   quickAdd: (q: string, list?: Course[]) => React.ReactNode;
   onChoose: (code: string, sectionId: string) => void;
@@ -121,6 +127,24 @@ export default function ResultPanel({
   const emptyWithAdded = (msg: React.ReactNode) => (
     <>
       <div className="pl-empty">{msg}</div>
+      <div className="pl-relax">
+        {relaxations === null ? (
+          <div className="pl-hint">어떤 조건을 풀면 되는지 찾는 중…</div>
+        ) : relaxations.length > 0 ? (
+          <>
+            <div className="pl-label">이 조건 하나만 풀면 시간표가 생겨요</div>
+            <div className="pl-chips">
+              {relaxations.map((r) => (
+                <button key={r.key} className="pl-chip pl-relax-btn" onClick={() => onRelax(r)}>
+                  {r.label} <b>→ {r.total.toLocaleString()}개</b>
+                </button>
+              ))}
+            </div>
+          </>
+        ) : (
+          <div className="pl-hint">조건 하나만 풀어서는 안 돼요. 담은 과목끼리 시간이 겹치는지 확인하거나 조건을 여러 개 풀어 보세요.</div>
+        )}
+      </div>
       {addedRecs.length > 0 && (
         <div className="pl-recs pl-empty-added">
           <div className="pl-list-title">방금 넣은 과목 <span className="pl-muted" style={{ fontWeight: 500 }}>· 빼면 이 과목 없이 다시 짜 드려요</span></div>

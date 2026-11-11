@@ -14,6 +14,7 @@ import {
 import FriendsPanel from "@/components/planner/FriendsPanel";
 import { trackSave } from "@/lib/trackSave";
 import { courseMatches, normQuery, recommendFill, sampleRecs, type Recommendation } from "@/lib/planner/recommend";
+import { findRelaxations, type Relaxation } from "@/lib/planner/relax";
 import QuickAdd from "@/components/planner/QuickAdd";
 import { analyticsEnabled, initAnalytics, isOptedOut, setOptOut, track } from "@/lib/analytics";
 import { dataSemFor, pickDefaultSem, recommendedSem, semLabel, sortSems, TERM_LABEL, TERMS } from "@/lib/planner/semester";
@@ -276,6 +277,19 @@ export default function Planner() {
   const shown = groups.length ? resp?.data ?? null : null;
   const resGroups = useMemo(() => resp?.groups ?? [], [resp]);
   const busy = groups.length > 0 && running;
+
+  /* 결과가 0개면: 조건 하나만 풀면 시간표가 생기는 경우를 찾아 버튼으로 (계산은 화면이 먼저 그려진 뒤에) */
+  const [relax, setRelax] = useState<{ for: EngineResponse; list: Relaxation[] } | null>(null);
+  useEffect(() => {
+    if (!shown || busy || shown.results.length > 0) return;
+    const id = setTimeout(() => setRelax({ for: shown, list: findRelaxations(cart, courseByCode, sectionFilter, st.conditions) }), 30);
+    return () => clearTimeout(id);
+  }, [shown, busy, cart, courseByCode, sectionFilter, st.conditions]);
+  const relaxations = relax && relax.for === shown ? relax.list : null;
+  const applyRelax = (r: Relaxation) => {
+    track("relax_applied", { key: r.key.replace(/[^a-z]/g, ""), total: r.total });
+    setSt((s) => ({ ...s, ...(r.cond ? { conditions: { ...s.conditions, ...r.cond } } : {}), ...(r.cart ? { cart: r.cart } : {}) }));
+  };
 
   /* ── 장바구니 조작 ── */
   const courseRef = useRef(courseByCode);
@@ -839,6 +853,8 @@ export default function Planner() {
               onShuffleRecs={() => { setRecSeed((x) => x + 1); track("rec_shuffled"); }}
               hasMajor={!!st.major || st.extras.length > 0}
               recommendSearch={recommendSearch}
+              relaxations={relaxations}
+              onRelax={applyRelax}
               majorMore={majorMore}
               quickAdd={(q, list) => (
                 <QuickAdd
