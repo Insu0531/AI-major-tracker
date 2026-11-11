@@ -385,6 +385,14 @@ export default function Planner() {
     gyoyang: recommendFill({ ...recBase, categories: ["gyoyang", "ilban"] }),
     major: recommendFill({ ...recBase, categories: ["major", "major2"] }),
   } : { gyoyang: [], major: [] }, [recBase]);
+  /** 2단계 빈 장바구니: 내 학년(학기 연도 − 학번 + 1, 1~4) 전공 과목 한꺼번에 담기 */
+  const myGrade = Math.min(4, Math.max(1, (Number(st.sem?.split("-")[0]) || st.entryYear) - st.entryYear + 1));
+  const gradeMajors = useMemo(() => (st.major ? courses.filter((c) => c.category === "major" && c.grade === String(myGrade) && (st.includeGrad || !c.isGrad) && c.sections.some((x) => sectionAllowed(x, sectionFilter))) : []), [courses, myGrade, st.major, st.includeGrad, sectionFilter]);
+  const addGradeMajors = () => {
+    setSt((s) => ({ ...s, cart: [...s.cart, ...gradeMajors.filter((c) => !s.cart.some((i) => i.code === c.code)).map((c) => ({ code: c.code, mode: "maybe" as const, pinned: null, excluded: [] }))] }));
+    track("grade_majors_added", { grade: myGrade, n: gradeMajors.length });
+    flash(`${myGrade}학년 전공 ${gradeMajors.length}과목을 담았어요`);
+  };
   /** 전공 추천 탭 아래 "다른 전공 과목": 안 담은 내 전공·복수전공 과목 전부 (시간이 겹쳐도 담아 볼 수 있게) */
   const majorMore = useMemo(() => {
     const inCart = new Set(cart.map((c) => c.code));
@@ -806,7 +814,12 @@ export default function Planner() {
             <aside className="pl-cart-side">
               <div className="pl-cart-head"><h2>담은 과목</h2></div>
               <div className="pl-scroll">
-                <CartList cart={cart} courseByCode={courseByCode} colorOf={colorOf} onSetMode={setMode} onClear={() => update({ cart: [] })} />
+                <CartList cart={cart} courseByCode={courseByCode} colorOf={colorOf} onSetMode={setMode} onClear={() => update({ cart: [] })}
+                  emptyExtra={gradeMajors.length > 0 && (
+                    <button className="pl-btn primary pl-grade-add" onClick={addGradeMajors}>
+                      {myGrade}학년 전공 {gradeMajors.length}과목 한꺼번에 담기
+                    </button>
+                  )} />
               </div>
             </aside>
           </div>

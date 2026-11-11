@@ -17,15 +17,28 @@ export function CartList({
   onSetMode,
   onClear,
   colorOf = colorFor,
+  emptyExtra,
 }: {
   cart: CartItem[];
   courseByCode: Map<string, Course>;
   onSetMode: (code: string, mode: CartMode | null) => void;
   onClear?: () => void;
   colorOf?: (code: string) => string;
+  /** 비어 있을 때 아래에 붙일 것 (2단계: 내 학년 전공 한꺼번에 담기) */
+  emptyExtra?: React.ReactNode;
 }) {
   if (cart.length === 0) {
-    return <div className="pl-empty">아직 담은 과목이 없어요.<br />목록에서 <b>담기</b>를 눌러 보세요.</div>;
+    return (
+      <div className="pl-cart-empty">
+        <div className="pl-empty">아직 담은 과목이 없어요.<br />목록에서 <b>+</b>를 눌러 담아 보세요.</div>
+        <ol className="pl-cart-steps">
+          <li>들을 만한 과목을 <b>넉넉히</b> 담아요</li>
+          <li><b>시간표 보기</b>를 누르면 겹치지 않게 짜 드려요</li>
+          <li>마음에 드는 시간표를 저장하거나 공유해요</li>
+        </ol>
+        {emptyExtra}
+      </div>
+    );
   }
   return (
     <div className="pl-cart-group">
