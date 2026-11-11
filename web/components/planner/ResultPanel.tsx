@@ -13,6 +13,10 @@ export type ResultView = {
 };
 
 type RecTab = "gyoyang" | "major";
+
+/** 추천 이유 칩 색 구분 (recommend.ts의 reasons 문구 기준) */
+const reasonKind = (x: string) =>
+  x.startsWith("공강") ? "free" : x.startsWith("앞뒤") ? "near" : x.startsWith("정원") ? "seat" : x === "SDG" ? "sdg" : x === "인문교양" ? "hum" : x.startsWith("원격") ? "remote" : "etc";
 const REC_TABS: { key: RecTab; label: string; hint: string }[] = [
   { key: "gyoyang", label: "교양 추천", hint: "교양·일반선택" },
   { key: "major", label: "전공 추천", hint: "내 전공·복수전공" },
@@ -118,7 +122,8 @@ export default function ResultPanel({
         </div>
         <div className="pl-jumps">
           <button className="pl-rec-jump" onClick={() => document.getElementById("pl-fill")?.scrollIntoView({ behavior: "smooth", block: "start" })}>
-            <span aria-hidden>↓</span> 빈 시간 채우기 · 교양 <b>{recs.gyoyang.length}</b>{hasMajor ? <> · 전공 <b>{recs.major.length}</b></> : null} 추천 · 과목 검색
+            <span aria-hidden>✦</span> 내 시간표 맞춤 추천 받기
+            <em>교양 <b>{recs.gyoyang.length}</b>{hasMajor ? <> · 전공 <b>{recs.major.length}</b></> : null}개 · 과목 검색</em>
           </button>
         </div>
         {response?.truncated && (
@@ -138,7 +143,7 @@ export default function ResultPanel({
         </div>
         <div className="pl-recs pl-fill" id="pl-fill" data-tour="recs">
           <div className="pl-list-title pl-recs-title">
-            <span>빈 시간 채우기 <span className="pl-muted" style={{ fontWeight: 500 }}>· 이 시간표에 겹치지 않게 들어가는 과목</span></span>
+            <span>내 시간표 맞춤 추천 <span className="pl-muted" style={{ fontWeight: 500 }}>· 빈 시간에 겹치지 않게 들어가는 과목</span></span>
           </div>
           <div className="pl-fill-search">
             <input
@@ -184,7 +189,7 @@ export default function ResultPanel({
                     <div className="pl-rec-main">
                       <div className="pl-rec-name">{r.course.name} <span className="pl-muted">{r.course.credit}학점</span></div>
                       <div className="pl-rec-meta">{formatSlots(r.section.slots)} · {r.section.profs.join(", ") || "교수 미정"}{r.section.room ? ` · ${r.section.room}` : ""}</div>
-                      <div className="pl-rec-reasons">{r.reasons.map((x) => <span key={x} className="pl-rec-reason">{x}</span>)}</div>
+                      <div className="pl-rec-reasons">{r.reasons.map((x) => <span key={x} className="pl-rec-reason" data-kind={reasonKind(x)}>{x}</span>)}</div>
                     </div>
                     <button className="pl-btn sm primary" onClick={() => onAddRec(r)}>이 분반 넣기</button>
                   </div>
