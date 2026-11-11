@@ -501,11 +501,19 @@
 .pl-rec.added { background: var(--pick-weak); }
 .pl-rec.added .pl-btn[aria-pressed="true"] { background: var(--pick); color: #fff; }
 
-/* 3단계 검색해서 넣기 (2단계 표의 미니 버전) */
-.pl-quick { margin: var(--s4) var(--s5) var(--s2); padding: var(--s4); border-radius: var(--radius-lg); background: var(--surface); box-shadow: var(--shadow); }
-.pl-quick-head { display: flex; align-items: center; gap: var(--s3); flex-wrap: wrap; }
-.pl-quick-head .pl-field { flex: 1; min-width: 220px; }
-.pl-quick-results { margin-top: var(--s3); animation: pl-in 0.18s ease-out both; }
+/* 3단계 빈 시간 채우기: 검색창 → 교양/전공 추천 탭 → 목록 (검색어가 있으면 목록 자리에 검색 결과) */
+.pl-fill-search { padding: 0 var(--s5) var(--s3); }
+.pl-fill-search .pl-field { width: 100%; }
+.pl-fill-tabs { margin: var(--s2) var(--s5) 0; align-items: center; }
+.pl-fill-shuffle { margin-left: auto; flex-shrink: 0; }
+.pl-fill-body { min-height: 120px; }
+.pl-fill-body > .pl-quick-results, .pl-fill-body > .pl-hint { padding-left: var(--s5) !important; padding-right: var(--s5) !important; }
+.pl-quick-results { margin-top: var(--s2); animation: pl-in 0.18s ease-out both; }
+@media (max-width: 720px) {
+  .pl-fill-search { padding: 0 var(--s4) var(--s3); }
+  .pl-fill-tabs { margin-left: var(--s4); margin-right: var(--s4); }
+  .pl-fill-body > .pl-quick-results, .pl-fill-body > .pl-hint { padding-left: var(--s4) !important; padding-right: var(--s4) !important; }
+}
 .pl-table-mini { font-size: 13px; }
 .pl-table-mini td { padding: var(--s2) var(--s2); }
 .pl-table-mini td:first-child { padding-left: 0; }
@@ -513,7 +521,6 @@
 .pl-table-mini .c-dept, .pl-table-mini .c-secs, .pl-table-mini .c-note { display: none; }
 .pl-table-mini .pl-cname { font-size: 14px; }
 .pl-table-mini .pl-tr-sub td { padding: 0 0 var(--s2); }
-@media (max-width: 720px) { .pl-quick { margin-left: var(--s4); margin-right: var(--s4); } }
 
 /* ── 모바일 사용감 (2026-11-11) ── */
 .pl-show-mobile { display: none !important; }

@@ -352,21 +352,29 @@ export default function Planner() {
   const names = useCallback((i: number) => resGroups.filter((_, gi) => (results[i]?.picks[gi] ?? -1) >= 0).map((g) => g.name), [resGroups, results]);
   const busySlots: Slot[] = useMemo(() => view?.items.flatMap((i) => i.slots) ?? [], [view]);
 
-  /* 지금 시간표의 빈 시간에 넣기 좋은 교양 (규칙 기반 추천 → 상위 24개 중 8개를 무작위로) */
+  /* 지금 시간표의 빈 시간에 넣기 좋은 과목 — 교양 탭 / 전공 탭 (규칙 기반 추천 → 상위 24개 중 8개를 무작위로) */
   const [recSeed, setRecSeed] = useState(() => Math.floor(Math.random() * 1e9));
-  const recPool = useMemo(() => {
-    if (!view) return [];
-    return recommendFill({
+  const recPools = useMemo(() => {
+    if (!view) return { gyoyang: [], major: [] };
+    const base = {
       courses,
       cartCodes: new Set(cart.map((c) => c.code)),
       busy: busySlots,
       currentCredit: view.items.reduce((s, i) => s + i.credit, 0),
       cond: st.conditions,
       filter: sectionFilter,
+      includeGrad: st.includeGrad,
       limit: 24,
-    });
-  }, [view, courses, cart, busySlots, st.conditions, sectionFilter]);
-  const recs = useMemo(() => sampleRecs(recPool, 8, recSeed), [recPool, recSeed]);
+    };
+    return {
+      gyoyang: recommendFill({ ...base, categories: ["gyoyang", "ilban"] }),
+      major: recommendFill({ ...base, categories: ["major", "major2"] }),
+    };
+  }, [view, courses, cart, busySlots, st.conditions, sectionFilter, st.includeGrad]);
+  const recs = useMemo(() => ({
+    gyoyang: sampleRecs(recPools.gyoyang, 8, recSeed),
+    major: sampleRecs(recPools.major, 8, recSeed),
+  }), [recPools, recSeed]);
 
   /* 추천에서 넣은 과목: 목록 위에 남겨 두고 다시 누르면 뺄 수 있게 */
   const [recAdded, setRecAdded] = useState<string[]>([]);
@@ -389,7 +397,8 @@ export default function Planner() {
       cart: [...s.cart.filter((c) => c.code !== r.course.code), { code: r.course.code, mode: "must", pinned: r.section.id, excluded: [] }],
     }));
     setRecAdded((a) => [...a.filter((c) => c !== r.course.code), r.course.code]);
-    track("rec_added", { code: r.course.code, name: r.course.name, reasons: r.reasons, rank: recs.indexOf(r) + 1 });
+    const tab = recs.major.includes(r) ? "major" : "gyoyang";
+    track("rec_added", { code: r.course.code, name: r.course.name, reasons: r.reasons, tab, rank: recs[tab].indexOf(r) + 1 });
     flash(`${r.course.name}을(를) 넣었어요`);
   };
 
@@ -793,9 +802,12 @@ export default function Planner() {
               addedRecs={addedRecs}
               onAddRec={addRec}
               onRemoveRec={removeRec}
-              onShuffleRecs={recPool.length > recs.length ? () => { setRecSeed((x) => x + 1); track("rec_shuffled"); } : undefined}
-              quickAdd={
+              canShuffle={{ gyoyang: recPools.gyoyang.length > recs.gyoyang.length, major: recPools.major.length > recs.major.length }}
+              onShuffleRecs={() => { setRecSeed((x) => x + 1); track("rec_shuffled"); }}
+              hasMajor={!!st.major || st.extras.length > 0}
+              quickAdd={(q) => (
                 <QuickAdd
+                  q={q}
                   courses={courses}
                   cart={cart}
                   sectionFilter={sectionFilter}
@@ -804,7 +816,7 @@ export default function Planner() {
                   onSetMode={setMode}
                   onSection={onSection}
                 />
-              }
+              )}
               onChoose={(code, id) => { setProfPick((p) => ({ ...p, [code]: id })); track("section_chosen", { where: "block" }); }}
             />
           </section>

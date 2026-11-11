@@ -1,5 +1,5 @@
 /**
- * 빈 시간에 넣기 좋은 교양 추천 (규칙 기반 점수)
+ * 빈 시간에 넣기 좋은 과목 추천 (규칙 기반 점수) — 교양 탭(교양·일반선택), 전공 탭(내 전공·복수전공)
  *
  * 지금 보고 있는 시간표에 "겹치지 않고 + 조건을 지키며" 들어가는 분반만 후보로 두고, 아래 규칙으로 점수를 매긴다.
  * 점수와 함께 사람이 읽을 수 있는 추천 이유를 돌려준다.
@@ -46,6 +46,7 @@ export function recommendFill({
   cond,
   filter,
   categories = ["gyoyang", "ilban"],
+  includeGrad = false,
   limit = 8,
 }: {
   courses: Course[];
@@ -55,6 +56,7 @@ export function recommendFill({
   cond: Conditions;
   filter: SectionFilter;
   categories?: Category[];
+  includeGrad?: boolean;
   limit?: number;
 }): Recommendation[] {
   const usedDays = new Set(busy.map(([d]) => d));
@@ -66,7 +68,7 @@ export function recommendFill({
 
   const out: Recommendation[] = [];
   for (const course of courses) {
-    if (!categories.includes(course.category) || course.isGrad || cartCodes.has(course.code)) continue;
+    if (!categories.includes(course.category) || (course.isGrad && !includeGrad) || cartCodes.has(course.code)) continue;
     if (cond.maxCredit && currentCredit + course.credit > cond.maxCredit) continue;
 
     let best: Recommendation | null = null;
