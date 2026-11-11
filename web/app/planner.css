@@ -781,3 +781,9 @@
 .pl-sem-line { display: flex; align-items: center; gap: var(--s3); height: 44px; padding: 0 14px; border-radius: var(--radius); background: var(--sunken); }
 .pl-sem-line b { font-size: 16px; }
 .pl-sem-line .pl-link { margin-left: auto; }
+
+/* 시간대 창 빠른 선택 (공강 요일·점심) */
+.pl-trp-quick { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; }
+.pl-trp-quick .pl-muted { font-size: 12.5px; margin-right: 2px; }
+.pl-trp-quick .pl-chip { height: 28px; padding: 0 10px; font-size: 13px; }
+.pl-trp-quick .pl-chip[aria-pressed="true"] { background: oklch(85% 0.075 25); color: oklch(35% 0.12 25); }

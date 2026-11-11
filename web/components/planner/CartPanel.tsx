@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { colorFor, DAY_NAMES } from "@/lib/planner/data";
+import { colorFor } from "@/lib/planner/data";
 import { SORT_LABEL, SORT_OPTIONS, type CartItem, type CartMode, type Conditions, type Course } from "@/lib/planner/types";
 import TimeRangePicker, { describeSlots, type TimeMode } from "./TimeRangePicker";
 
@@ -113,11 +113,11 @@ export function ConditionsPanel({
       </div>
 
       <div className="pl-cond-block">
-        <div className="pl-label">시간대</div>
+        <div className="pl-label">시간대와 공강</div>
         <div className="pl-time-btns">
           <button className={`pl-time-btn block${blocked.length ? " on" : ""}`} onClick={() => setTimeMode("block")}>
             <span>빼고 싶은 시간</span>
-            <small>{blocked.length ? describeSlots(blocked, 2) : "칸을 골라 빼기"}</small>
+            <small>{blocked.length ? describeSlots(blocked, 2) : "공강 요일·점심·시간 빼기"}</small>
           </button>
           <button className={`pl-time-btn need${required.length ? " on" : ""}`} onClick={() => setTimeMode("need")}>
             <span>꼭 넣을 시간</span>
@@ -153,15 +153,8 @@ export function ConditionsPanel({
       </div>
 
       <div className="pl-cond-block">
-        <div className="pl-label">공강</div>
+        <div className="pl-label">하루 일정</div>
         <div className="pl-chips">
-          {DAY_NAMES.slice(0, 5).map((d, i) => (
-            <button key={d} className="pl-chip" aria-pressed={c.daysOff.includes(i)} title={`${d}요일 수업 없는 시간표만`}
-              onClick={() => set({ daysOff: c.daysOff.includes(i) ? c.daysOff.filter((x) => x !== i) : [...c.daysOff, i] })}>{d}</button>
-          ))}
-        </div>
-        <div className="pl-chips" style={{ marginTop: 8 }}>
-          <button className="pl-chip" aria-pressed={c.lunchFree} onClick={() => set({ lunchFree: !c.lunchFree })} title="12시~13시에 수업이 없는 시간표만">점심시간 비우기</button>
           <button className="pl-chip" aria-pressed={c.maxStreak === 180} onClick={() => set({ maxStreak: c.maxStreak ? 0 : 180 })} title="쉬는 시간 없이 3시간 넘게 이어지는 날이 없는 시간표만">3시간 넘는 연강 없음</button>
           <button className="pl-chip" aria-pressed={c.maxGap === 120} onClick={() => set({ maxGap: c.maxGap ? 0 : 120 })} title="수업 사이 빈 시간이 2시간 넘는 날이 없는 시간표만">2시간 넘는 공강 없음</button>
           <button className="pl-chip" aria-pressed={c.maxPerDay === 3} onClick={() => set({ maxPerDay: c.maxPerDay ? 0 : 3 })} title="하루에 3과목까지만 듣는 시간표만">하루 3과목 이하</button>

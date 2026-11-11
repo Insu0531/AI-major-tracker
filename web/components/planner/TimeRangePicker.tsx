@@ -41,6 +41,8 @@ export function describeSlots(slots: Slot[], max = 3): string {
   const hm = (m: number) => `${Math.floor(m / 60)}:${String(m % 60).padStart(2, "0")}`;
   for (const d of [...byDay.keys()].sort()) {
     const ms = [...new Set(byDay.get(d))].sort((a, b) => a - b);
+    // 8~22시를 다 칠한 요일은 "금 공강"으로
+    if (ms.length >= ROWS.length && ROWS.every((m) => ms.includes(m))) { parts.push(`${DAY_NAMES[d]} 공강`); continue; }
     let a = ms[0], b = ms[0] + STEP;
     for (let i = 1; i <= ms.length; i++) {
       if (ms[i] === b) { b += STEP; continue; }
@@ -104,6 +106,16 @@ export default function TimeRangePicker({
       return next;
     });
 
+  // 점심(월~금 12~13시) 빼기 — 예전 "점심시간 비우기" 조건을 여기로 합침
+  const LUNCH = 12 * 60;
+  const lunchOn = [0, 1, 2, 3, 4].every((d) => cells.get(key(d, LUNCH)) === "block");
+  const toggleLunch = () =>
+    setCells((prev) => {
+      const next = new Map(prev);
+      for (let d = 0; d < 5; d++) if (lunchOn) next.delete(key(d, LUNCH)); else next.set(key(d, LUNCH), "block");
+      return next;
+    });
+
   const cellAt = (x: number, y: number) => (document.elementFromPoint(x, y) as HTMLElement | null)?.closest<HTMLElement>("[data-cell]")?.dataset.cell;
 
   // 어떤 방법으로 닫든(완료·×·바깥) 마지막으로 칠한 것까지 저장하고 닫기
@@ -130,8 +142,17 @@ export default function TimeRangePicker({
               <span className="pl-trp-swatch" /> 꼭 넣을 시간 <b>{count("need") ? hours(count("need")) : ""}</b>
             </button>
           </div>
+          {mode === "block" && (
+            <div className="pl-trp-quick">
+              <span className="pl-muted">빠른 선택</span>
+              {DAY_NAMES.slice(0, 5).map((dn, d) => (
+                <button key={dn} type="button" className="pl-chip" aria-pressed={allOf(d)} onClick={() => toggleDay(d)}>{dn} 공강</button>
+              ))}
+              <button type="button" className="pl-chip" aria-pressed={lunchOn} onClick={toggleLunch}>점심 12~13시</button>
+            </div>
+          )}
           <div className="pl-hint">
-            {mode === "block" ? "칠한 시간에 걸리는 분반은 시간표에 넣지 않아요." : "칠한 시간이 모두 수업으로 채워진 시간표만 보여 줘요."} 칸을 누르거나 끌어서 칠하고, 칠한 칸을 다시 누르면 지워져요. 요일을 누르면 그 요일 전체를 칠해요. 칠하면 바로 반영돼요.
+            {mode === "block" ? "칠한 시간에 걸리는 분반은 시간표에 넣지 않아요." : "칠한 시간이 모두 수업으로 채워진 시간표만 보여 줘요."} 칸을 누르거나 끌어서 칠하고, 칠한 칸을 다시 누르면 지워져요. 요일(또는 ○ 공강)을 누르면 그 요일 전체를 칠해요. 칠하면 바로 반영돼요.
           </div>
           <div
             className="pl-trp-grid"
