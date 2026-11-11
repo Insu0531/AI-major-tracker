@@ -31,7 +31,7 @@ function RecRow({ r, onAdd, showSection, cont }: { r: Recommendation; onAdd: (r:
         ) : (
           <div className="pl-rec-name">{r.course.name} <span className="pl-muted">{r.course.credit}학점</span>{showSection && <span className="pl-rec-sec">{r.section.id.split("-").pop()}분반</span>}</div>
         )}
-        <div className="pl-rec-meta">{formatSlots(r.section.slots)} · {r.section.profs.join(", ") || "교수 미정"}{r.section.room ? ` · ${r.section.room}` : ""}</div>
+        <div className="pl-rec-meta">{r.section.type && <span className="pl-rec-type">{r.section.type}</span>}{formatSlots(r.section.slots)} · {r.section.profs.join(", ") || "교수 미정"}{r.section.room ? ` · ${r.section.room}` : ""}</div>
         {r.reasons.length > 0 && <div className="pl-rec-reasons">{r.reasons.map((x) => <span key={x} className="pl-rec-reason" data-kind={reasonKind(x)}>{x}</span>)}</div>}
       </div>
       <button className="pl-btn sm primary" onClick={() => onAdd(r)}>이 분반 넣기</button>

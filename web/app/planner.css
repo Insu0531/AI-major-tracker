@@ -680,3 +680,8 @@
 .pl-rec.cont { padding-top: var(--s2); padding-left: calc(var(--s5) + 14px); }
 .pl-rec.cont .pl-rec-sec { margin-left: 0; }
 @media (max-width: 720px) { .pl-rec.cont { padding-left: calc(var(--s4) + 12px); } }
+
+/* 교과구분(이수구분) 칸 */
+.c-type { color: var(--ink-2) !important; font-size: 13px; white-space: nowrap; max-width: 120px; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 720px) { .c-type { display: none; } }
+.pl-rec-type { display: inline-block; margin-right: 6px; padding: 0 6px; border-radius: 6px; background: var(--sunken); font-size: 12px; font-weight: 600; color: var(--ink-2); }
