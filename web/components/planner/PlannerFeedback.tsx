@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { FORM_ACTION } from "@/components/FeedbackTab";
 import { track } from "@/lib/analytics";
 
 /** 피드백/응원 (새 디자인). 같은 구글 폼(entry ID)으로 보낸다. 전공·학번은 1단계 내 정보를 그대로 */
+const FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSc6VyJCdBAmc2olMVcSBrC2FN0iNMoCqPPXIfQHzE_Ew1145g/formResponse";
 const CATEGORIES = ["기능 추가 문의", "버그 신고", "UI/UX(디자인) 개선", "응원"] as const;
 
 export default function PlannerFeedback({ majorLabel, entryYear }: { majorLabel: string; entryYear: number }) {

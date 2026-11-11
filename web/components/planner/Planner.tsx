@@ -662,7 +662,6 @@ export default function Planner() {
                     <button onClick={() => { setMenuOpen(false); setSheet("calendar"); track("menu_calendar"); }}>학사일정</button>
                     <button onClick={() => { setMenuOpen(false); setSheet("feedback"); track("menu_feedback"); }}>피드백/응원</button>
                     <button onClick={() => { setMenuOpen(false); shareToKakao(); track("kakao_share"); }}>카카오톡으로 공유</button>
-                    <a href="/old" onClick={() => track("old_version_opened")}>구버전 보기</a>
                     <a href="/privacy" target="_blank" rel="noopener">개인정보처리방침</a>
                     <a href="mailto:insu0531@knu.ac.kr">문의: insu0531@knu.ac.kr</a>
                     {loggedIn && <button onClick={async () => { setMenuOpen(false); await signOut(); setCloudPlans([]); setMe(null); flash("로그아웃했어요"); }}>로그아웃</button>}
