@@ -723,7 +723,7 @@ export default function Planner() {
               </div>
               <div className="pl-hint">
                 {collectedAt && <>{fmtDate(collectedAt)} 기준 개설 정보 | </>}
-                <a className="pl-link" href="/privacy" target="_blank" rel="noopener">개인정보처리방침</a> | <span className="pl-credit">만든 사람 강인수</span>
+                <a className="pl-link" href="/privacy" target="_blank" rel="noopener">개인정보처리방침</a>
               </div>
             </div>
             <div className="pl-intro-form pl-enter" style={{ animationDelay: "60ms" }}>

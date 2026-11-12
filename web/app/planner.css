@@ -936,6 +936,3 @@
 .pl[data-theme="dark"] .pl-btn[aria-pressed="true"],
 .pl[data-theme="dark"] .pl-chip.pl-prof-chip.inc { color: oklch(17% 0.02 255); }
 .pl[data-theme="dark"] .pl-add-btn[aria-pressed="true"] { color: oklch(17% 0.02 25); }
-
-/* 1단계 하단 제작자 표시 (작게, 눈에 안 띄게) */
-.pl .pl-credit { color: var(--ink-3); font-size: 12px; }
