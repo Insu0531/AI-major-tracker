@@ -682,7 +682,6 @@ export default function Planner() {
                     <button onClick={() => { setMenuOpen(false); setSheet("feedback"); track("menu_feedback"); }}>피드백/응원</button>
                     <button onClick={() => { setMenuOpen(false); shareToKakao(); track("kakao_share"); }}>카카오톡으로 공유</button>
                     <a href="/privacy" target="_blank" rel="noopener">개인정보처리방침</a>
-                    <a href="mailto:insu0531@knu.ac.kr">문의: insu0531@knu.ac.kr</a>
                     {loggedIn && <button onClick={async () => { setMenuOpen(false); await signOut(); setCloudPlans([]); setMe(null); flash("로그아웃했어요"); }}>로그아웃</button>}
                     {loggedIn && (
                       <button onClick={async () => {
@@ -724,7 +723,7 @@ export default function Planner() {
               </div>
               <div className="pl-hint">
                 {collectedAt && <>{fmtDate(collectedAt)} 기준 개설 정보 | </>}
-                <a className="pl-link" href="/privacy" target="_blank" rel="noopener">개인정보처리방침</a> | <a className="pl-link" href="mailto:insu0531@knu.ac.kr">insu0531@knu.ac.kr</a>
+                <a className="pl-link" href="/privacy" target="_blank" rel="noopener">개인정보처리방침</a> | <span className="pl-credit">만든 사람 강인수</span>
               </div>
             </div>
             <div className="pl-intro-form pl-enter" style={{ animationDelay: "60ms" }}>
