@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { DAY_NAMES } from "@/lib/planner/data";
 import { useDialogKeys } from "@/lib/planner/useDialogKeys";
 import type { Slot } from "@/lib/planner/types";
+import Icon from "./Icon";
 
 /**
  * 시간대 고르기 창: 빈 주간 격자(월~토, 8~22시, 1시간 칸)를 클릭·드래그로 칠한다. 칠하면 바로 조건에 반영(적용 버튼 없음).
@@ -137,7 +138,7 @@ export default function TimeRangePicker({
       <div className="pl-modal pl-trp" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label="시간대 고르기">
         <div className="pl-modal-head">
           <h3>시간대 고르기</h3>
-          <button className="pl-x" aria-label="닫기" onClick={close}>×</button>
+          <button className="pl-x" aria-label="닫기" onClick={close}><Icon name="close" /></button>
         </div>
         <div className="pl-modal-body">
           <div className="pl-trp-modes" role="radiogroup" aria-label="칠할 종류">

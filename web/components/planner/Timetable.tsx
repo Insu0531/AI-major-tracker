@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { dayCount, hourRange, type TimetableItem } from "@/lib/planner/exportImage";
 import { DAY_NAMES, mergeSlots } from "@/lib/planner/data";
+import Icon from "./Icon";
 
 const LABEL_W = 34;
 
@@ -47,6 +48,8 @@ export default function Timetable({
           {Array.from({ length: days }, (_, d) => (
             <div key={d} className="pl-tt-col">
               {hours.map((h, i) => <div key={h} className="pl-tt-line" style={{ top: `calc(var(--hour) * ${i})` }} />)}
+              {/* 30분 점선 (저장 이미지와 같은 격자) */}
+              {hours.map((h, i) => <div key={`h${h}`} className="pl-tt-line half" style={{ top: `calc(var(--hour) * ${i + 0.5})` }} />)}
               {items.flatMap((it, ii) =>
                 mergeSlots(it.slots)
                   .filter(([day]) => day === d)
@@ -64,8 +67,8 @@ export default function Timetable({
                           // 결과를 바꿀 때 과목 순서대로 살짝 차례로 나타남 (planner.css .pl-tt-block)
                           ["--i" as string]: ii,
                           background: it.color,
-                          top: `calc(var(--hour) * ${(s - h0 * 60) / 60} + 1px)`,
-                          height: `calc(var(--hour) * ${(e - s) / 60} - 2px)`,
+                          top: `calc(var(--hour) * ${(s - h0 * 60) / 60} + 2px)`,
+                          height: `calc(var(--hour) * ${(e - s) / 60} - 4px)`,
                           left: 2,
                           right: 2,
                         }}
@@ -81,7 +84,7 @@ export default function Timetable({
                         <strong>{it.name}</strong>
                         {it.prof && <span>{it.prof}</span>}
                         {it.room && <span>{it.room}</span>}
-                        {pickable && !choice!.decided && <em className="pl-tt-pick">교수님 선택 ▾</em>}
+                        {pickable && !choice!.decided && <em className="pl-tt-pick">교수님 선택 <Icon name="down" /></em>}
                       </div>
                     );
                   }),

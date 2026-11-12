@@ -30,7 +30,9 @@ import { CartList, ConditionsPanel, cartCredit } from "@/components/planner/Cart
 import ResultPanel, { type ResultView } from "@/components/planner/ResultPanel";
 import { CodesBody, PickBody } from "@/components/planner/SectionModals";
 import { TOUR_2, TOUR_3 } from "@/lib/planner/tour";
+import { SAMPLE_TIMETABLE } from "@/lib/planner/sample";
 import Timetable from "@/components/planner/Timetable";
+import Icon from "./Icon";
 
 const STATE_KEY = "knu_planner_state_v1";
 const TOUR_KEY = "knu_planner_tour_v1";
@@ -112,6 +114,14 @@ export default function Planner() {
   const [saveFeatured, setSaveFeatured] = useState(true);
   const [sheet, setSheet] = useState<null | "calendar" | "feedback">(null);
   const [menuOpen, setMenuOpen] = useState(false);
+  // 다크 모드: 메뉴에서 켬 (기본은 밝게, 이 브라우저에 기억). 저장 이미지는 항상 밝은 색
+  const [theme, setTheme] = useState<"light" | "dark">(() => (readLocal<string>("knu_planner_theme", "light") === "dark" ? "dark" : "light"));
+  const toggleTheme = () => {
+    const next = theme === "dark" ? "light" : "dark";
+    setTheme(next);
+    writeLocal("knu_planner_theme", next);
+    track("theme_changed", { theme: next });
+  };
   const [tour, setTour] = useState(false);
   const [renaming, setRenaming] = useState<{ id: string; name: string } | null>(null);
   const [bulkProgress, setBulkProgress] = useState<number | null>(null);
@@ -383,6 +393,14 @@ export default function Planner() {
     gyoyang: recommendFill({ ...recBase, categories: ["gyoyang", "ilban"] }),
     major: recommendFill({ ...recBase, categories: ["major", "major2"] }),
   } : { gyoyang: [], major: [] }, [recBase]);
+  /** 2단계 빈 장바구니: 내 학년(학기 연도 − 학번 + 1, 1~4) 전공 과목 한꺼번에 담기 */
+  const myGrade = Math.min(4, Math.max(1, (Number(st.sem?.split("-")[0]) || st.entryYear) - st.entryYear + 1));
+  const gradeMajors = useMemo(() => (st.major ? courses.filter((c) => c.category === "major" && c.grade === String(myGrade) && (st.includeGrad || !c.isGrad) && c.sections.some((x) => sectionAllowed(x, sectionFilter))) : []), [courses, myGrade, st.major, st.includeGrad, sectionFilter]);
+  const addGradeMajors = () => {
+    setSt((s) => ({ ...s, cart: [...s.cart, ...gradeMajors.filter((c) => !s.cart.some((i) => i.code === c.code)).map((c) => ({ code: c.code, mode: "maybe" as const, pinned: null, excluded: [] }))] }));
+    track("grade_majors_added", { grade: myGrade, n: gradeMajors.length });
+    flash(`${myGrade}학년 전공 ${gradeMajors.length}과목을 담았어요`);
+  };
   /** 전공 추천 탭 아래 "다른 전공 과목": 안 담은 내 전공·복수전공 과목 전부 (시간이 겹쳐도 담아 볼 수 있게) */
   const majorMore = useMemo(() => {
     const inCart = new Set(cart.map((c) => c.code));
@@ -623,7 +641,7 @@ export default function Planner() {
   };
 
   return (
-    <div className="pl">
+    <div className="pl" data-theme={theme}>
       <header className="pl-top">
         <div className="pl-brand">KNU <span>시간표 마법사</span></div>
         <nav className="pl-steps" aria-label="단계">
@@ -659,6 +677,7 @@ export default function Planner() {
                     {!accountsEnabled() && (
                       <button onClick={() => { setMenuOpen(false); flash("구글 로그인과 친구 기능은 준비 중이에요"); track("soon_clicked", { feature: "account" }); }}>로그인/친구 (준비 중)</button>
                     )}
+                    <button onClick={() => { setMenuOpen(false); toggleTheme(); }}>{theme === "dark" ? "밝은 화면으로" : "다크 모드"}</button>
                     <button onClick={() => { setMenuOpen(false); setSheet("calendar"); track("menu_calendar"); }}>학사일정</button>
                     <button onClick={() => { setMenuOpen(false); setSheet("feedback"); track("menu_feedback"); }}>피드백/응원</button>
                     <button onClick={() => { setMenuOpen(false); shareToKakao(); track("kakao_share"); }}>카카오톡으로 공유</button>
@@ -696,8 +715,13 @@ export default function Planner() {
           <div className="pl-intro">
             <div className="pl-intro-lead pl-enter">
               <h1>담기만 하세요.<br /><em>시간표</em>는 알아서<br />짜 드릴게요.</h1>
-              <p>전공·교양·교직을 한 번에 담으면 시간이 겹치지 않는 조합을 모두 찾아,<br />공강 많은 순·늦게 시작하는 순으로 정리해 드려요.</p>
+              <p>전공·교양·교직을 한 번에 담으면 시간이 겹치지 않는 조합을 모두 찾아,<br />학점 많은 순·공강 많은 순으로 정리해 드려요.</p>
               <p className="pl-intro-point">우리 과에서는 안 열려도 <b>전공으로 인정되는 다른 학과 개설 과목</b>까지 함께 찾아 드려요.</p>
+              {/* 이런 결과가 나온다는 걸 바로 보여 주는 예시 (넓은 화면만) */}
+              <div className="pl-intro-sample" aria-hidden>
+                <Timetable items={SAMPLE_TIMETABLE} />
+                <span className="pl-intro-sample-tag">예시</span>
+              </div>
               <div className="pl-hint">
                 {collectedAt && <>{fmtDate(collectedAt)} 기준 개설 정보 | </>}
                 <a className="pl-link" href="/privacy" target="_blank" rel="noopener">개인정보처리방침</a> | <a className="pl-link" href="mailto:insu0531@knu.ac.kr">insu0531@knu.ac.kr</a>
@@ -766,7 +790,15 @@ export default function Planner() {
           </div>
         </div>
       ) : !snapshot ? (
-        <div className="pl-loading">{loadError ? "강의 데이터를 불러오지 못했어요. 잠시 후 새로고침해 주세요." : "강의 정보 불러오는 중…"}</div>
+        loadError
+          ? <div className="pl-loading">강의 데이터를 불러오지 못했어요. 잠시 후 새로고침해 주세요.</div>
+          : (
+            // 표 모양 뼈대 (빈 화면 대신)
+            <div className="pl-skel" role="status" aria-label="강의 정보 불러오는 중">
+              <div className="pl-skel-bar w40" /><div className="pl-skel-bar w70" />
+              {Array.from({ length: 8 }, (_, i) => <div key={i} className="pl-skel-row"><span /><span /><span /><span /></div>)}
+            </div>
+          )
       ) : step === 2 ? (
         <div className="pl-body pl-enter">
           <div className="pl-split">
@@ -791,7 +823,12 @@ export default function Planner() {
             <aside className="pl-cart-side">
               <div className="pl-cart-head"><h2>담은 과목</h2></div>
               <div className="pl-scroll">
-                <CartList cart={cart} courseByCode={courseByCode} colorOf={colorOf} onSetMode={setMode} onClear={() => update({ cart: [] })} />
+                <CartList cart={cart} courseByCode={courseByCode} colorOf={colorOf} onSetMode={setMode} onClear={() => update({ cart: [] })}
+                  emptyExtra={gradeMajors.length > 0 && (
+                    <button className="pl-btn primary pl-grade-add" onClick={addGradeMajors}>
+                      {myGrade}학년 전공 {gradeMajors.length}과목 한꺼번에 담기
+                    </button>
+                  )} />
               </div>
             </aside>
           </div>
@@ -816,7 +853,7 @@ export default function Planner() {
         <div className="pl-plan pl-enter">
           <aside className="pl-cond" data-open={condOpen}>
             <button className="pl-cond-toggle" onClick={() => setCondOpen((v) => !v)} aria-expanded={condOpen}>
-              <span>조건과 정렬</span><span className="pl-muted">{condOpen ? "접기 ▴" : "펼치기 ▾"}</span>
+              <span>조건과 정렬</span><span className="pl-muted">{condOpen ? "접기" : "펼치기"} <Icon name={condOpen ? "up" : "down"} /></span>
             </button>
             <div className="pl-scroll">
               <div className="pl-cond-block" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -881,7 +918,7 @@ export default function Planner() {
           <div className="pl-modal" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
             {modal === "refresh" && (
               <>
-                <div className="pl-modal-head"><h3>새로고침할까요?</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-head"><h3>새로고침할까요?</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}><Icon name="close" /></button></div>
                 <div className="pl-modal-body">
                   <div>새로고침하면 담은 과목과 조건이 <b>처음부터 다시</b> 시작돼요. (학기·학과·학번은 그대로)</div>
                   {view ? (
@@ -910,7 +947,7 @@ export default function Planner() {
             )}
             {modal === "cart" && (
               <>
-                <div className="pl-modal-head"><h3>담은 과목 {cart.length}</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-head"><h3>담은 과목 {cart.length}</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}><Icon name="close" /></button></div>
                 <div className="pl-modal-body" style={{ padding: 0 }}>
                   <CartList cart={cart} courseByCode={courseByCode} colorOf={colorOf} onSetMode={setMode} onClear={() => update({ cart: [] })} />
                 </div>
@@ -918,13 +955,13 @@ export default function Planner() {
             )}
             {modal === "friends" && loggedIn && (
               <>
-                <div className="pl-modal-head"><h3>친구</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-head"><h3>친구</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}><Icon name="close" /></button></div>
                 <FriendsPanel sems={sems} defaultSem={st.sem ?? sems[sems.length - 1]} flash={flash} />
               </>
             )}
             {modal === "invite" && (
               <>
-                <div className="pl-modal-head"><h3>친구 초대를 받았어요</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-head"><h3>친구 초대를 받았어요</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}><Icon name="close" /></button></div>
                 <div className="pl-modal-body">
                   <div>구글 계정으로 로그인하면 바로 친구가 돼요. 서로의 <b>대표 시간표</b>(과목명·시간·교수님)를 볼 수 있어요.</div>
                   <button className="pl-btn primary lg" onClick={() => { track("login_clicked", { from: "invite" }); void signInWithGoogle(); }}>구글로 로그인하고 친구 되기</button>
@@ -934,7 +971,7 @@ export default function Planner() {
             )}
             {modal === "bulk" && (
               <>
-                <div className="pl-modal-head"><h3>이미지 {results.length}장 저장</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-head"><h3>이미지 {results.length}장 저장</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}><Icon name="close" /></button></div>
                 <div className="pl-modal-body">
                   <div>결과 {results.length}개를 모두 이미지로 저장해요. 브라우저가 여러 파일 다운로드를 물어보면 허용해 주세요.</div>
                   <button className="pl-btn primary" onClick={doBulkImages}>모두 저장</button>
@@ -943,7 +980,7 @@ export default function Planner() {
             )}
             {modal === "save" && (
               <>
-                <div className="pl-modal-head"><h3>보관함에 저장</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}>×</button></div>
+                <div className="pl-modal-head"><h3>보관함에 저장</h3><button className="pl-x" aria-label="닫기" onClick={() => setModal(null)}><Icon name="close" /></button></div>
                 <div className="pl-modal-body">
                   <input autoFocus className="pl-field" placeholder={`${title} ${plans.length + 1}`} value={saveName}
                     onChange={(e) => setSaveName(e.target.value)} onKeyDown={(e) => e.key === "Enter" && doSave()} />
@@ -964,7 +1001,7 @@ export default function Planner() {
               <>
                 <div className="pl-modal-head">
                   <h3>{preview ? preview.name : `보관함 ${plans.length}`}</h3>
-                  <button className="pl-x" aria-label="닫기" onClick={() => { setModal(null); setPreview(null); }}>×</button>
+                  <button className="pl-x" aria-label="닫기" onClick={() => { setModal(null); setPreview(null); }}><Icon name="close" /></button>
                 </div>
                 <div className="pl-modal-body">
                   {preview ? (
@@ -1004,7 +1041,7 @@ export default function Planner() {
       {sheet && (
         <div className="pl-modal-bg" onClick={() => setSheet(null)}>
           <div className={`pl-modal ${sheet === "calendar" ? "pl-sheet" : "pl-fb-modal"}`} onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label={sheet === "calendar" ? "학사일정" : "피드백/응원"}>
-            <div className="pl-modal-head"><h3>{sheet === "calendar" ? "학사일정" : "피드백/응원"}</h3><button className="pl-x" aria-label="닫기" onClick={() => setSheet(null)}>×</button></div>
+            <div className="pl-modal-head"><h3>{sheet === "calendar" ? "학사일정" : "피드백/응원"}</h3><button className="pl-x" aria-label="닫기" onClick={() => setSheet(null)}><Icon name="close" /></button></div>
             <div className="pl-sheet-body">{sheet === "calendar" ? <PlannerCalendar /> : <PlannerFeedback majorLabel={majorLabel} entryYear={st.entryYear} />}</div>
           </div>
         </div>

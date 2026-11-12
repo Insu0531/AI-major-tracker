@@ -1,6 +1,7 @@
 "use client";
 
 import type { ResultView } from "./ResultPanel";
+import Icon from "./Icon";
 
 /** Planner.tsx에서 떼어 낸 창 내용: 분반 고르기(저장·공유 전) / 수강신청 코드 */
 type Items = ResultView["items"];
@@ -15,7 +16,7 @@ export function PickBody({ items, pickFor, onClose, onPick, onDone }: {
   const verb = pickFor === "kakao" ? "공유" : "저장";
   return (
     <>
-      <div className="pl-modal-head"><h3>분반 고르고 {verb}</h3><button className="pl-x" aria-label="닫기" onClick={onClose}>×</button></div>
+      <div className="pl-modal-head"><h3>분반 고르고 {verb}</h3><button className="pl-x" aria-label="닫기" onClick={onClose}><Icon name="close" /></button></div>
       <div className="pl-modal-body">
         <div className="pl-hint">같은 시간에 교수님이 다른 분반이 있어요. 고르면 이미지에 교수님·강의실이 들어가요.</div>
         {items.filter((i) => i.options.length > 1).map((it) => (
@@ -47,7 +48,7 @@ export function CodesBody({ items, onClose, onCopy, onPick }: {
 }) {
   return (
     <>
-      <div className="pl-modal-head"><h3>수강신청 코드</h3><button className="pl-x" aria-label="닫기" onClick={onClose}>×</button></div>
+      <div className="pl-modal-head"><h3>수강신청 코드</h3><button className="pl-x" aria-label="닫기" onClick={onClose}><Icon name="close" /></button></div>
       <div className="pl-modal-body">
         {items.map((it) => (
           <div key={it.code} className="pl-code-row">

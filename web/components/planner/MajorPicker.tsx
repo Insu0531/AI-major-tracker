@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { MajorInfo } from "@/lib/planner/majors";
+import Icon from "./Icon";
 
 const sortMajors = (list: MajorInfo[]) => [...list].sort((a, b) => {
   const aS = a.label.startsWith("["), bS = b.label.startsWith("[");
@@ -51,7 +52,7 @@ export default function MajorPicker({
         >
           {value ? labelOf(value) : <span className="pl-muted">{placeholder}</span>}
         </button>
-        {onRemove && <button type="button" className="pl-x" aria-label="복수전공 삭제" onClick={onRemove}>×</button>}
+        {onRemove && <button type="button" className="pl-x" aria-label="복수전공 삭제" onClick={onRemove}><Icon name="close" /></button>}
       </div>
       {open && (
         <div className="pl-pop-panel">

@@ -4,12 +4,16 @@ import { Fragment, memo, useEffect, useMemo, useState } from "react";
 import { track } from "@/lib/analytics";
 import { dayPatterns, formatSlots, isFull, sectionAllowed, type SectionFilter } from "@/lib/planner/data";
 import { CATEGORY_LABEL, type CartItem, type CartMode, type Category, type Conditions, type Course, type RawSection, type Slot } from "@/lib/planner/types";
+import Icon from "./Icon";
 
 const CATS: Category[] = ["major", "major2", "gyoyang", "kyoshik", "ilban", "other"];
 const TAGS = ["SDG", "인문교양", "KNU미래설계", "원격", "SU평가", "플립드"];
 const GRADES = ["1", "2", "3", "4"];
 const CAMPUSES = ["산격동", "동인동", "상주"];
 const PAGE = 150;
+
+/** 교과구분 태그 색: 필수(빨강 계열) · 교양 · 교직 · 그 밖 전공류(무채색) */
+const typeTone = (t: string) => (t.includes("필수") ? "must" : t.includes("교양") ? "gy" : t.includes("교직") ? "ky" : t.includes("일반") ? "il" : "etc");
 
 /** 교과구분(이수구분): 분반마다 다를 수 있어 모아서 보여 줌 (예: 전공필수·전공) */
 export const courseTypes = (secs: { type: string }[]) => [...new Set(secs.map((s) => s.type).filter(Boolean))];
@@ -144,7 +148,7 @@ export default function CourseBrowser(p: Props) {
   const th = (col: SortCol, label: string, className = "") => (
     <th className={className} aria-sort={sort?.col === col ? (sort.dir === 1 ? "ascending" : "descending") : "none"}>
       <button className="pl-th-sort" onClick={() => sortBy(col)}>
-        {label}<span aria-hidden>{sort?.col === col ? (sort.dir === 1 ? " ↑" : " ↓") : ""}</span>
+        {label}{sort?.col === col ? <Icon name={sort.dir === 1 ? "arrowUp" : "arrowDown"} /> : null}
       </button>
     </th>
   );
@@ -179,7 +183,7 @@ export default function CourseBrowser(p: Props) {
             onChange={(e) => { setQ(e.target.value); setLimit(PAGE); }}
           />
           <button className="pl-btn" onClick={() => setFiltersOpen((v) => !v)} aria-expanded={filtersOpen}>
-            {filtersOpen ? "필터 접기 ▴" : `필터${activeExtra ? ` ${activeExtra}개 켜짐` : ""} ▾`}
+            {filtersOpen ? "필터 접기" : `필터${activeExtra ? ` ${activeExtra}개 켜짐` : ""}`} <Icon name={filtersOpen ? "up" : "down"} />
           </button>
         </div>
 
@@ -310,22 +314,22 @@ export const CourseRow = memo(function CourseRow({
         onKeyDown={(e) => { if ((e.key === "Enter" || e.key === " ") && e.target === e.currentTarget) { e.preventDefault(); onToggleOpen(); } }}>
         <td className="c-add" onClick={(e) => e.stopPropagation()}>
           <button className="pl-add-btn" aria-pressed={!!item} aria-label={item ? `${c.name} 빼기` : `${c.name} 담기`} title={item ? "담기 취소" : "담기"} onClick={() => onSetMode(c.code, item ? null : "maybe")}>
-            {item ? "✓" : "+"}
+            <Icon name={item ? "check" : "plus"} />
           </button>
         </td>
         <td className="c-name">
           <span className="pl-cname">{c.name}</span>
           {showCategory && c.category !== "other" && <span className={`pl-badge cat-${c.category}`}>{CATEGORY_LABEL[c.category]}</span>}
-          {otherDept && <span className="pl-badge pl-badge-other" title="우리 과 이수체계 과목이에요. 다른 학과에서 연 분반도 포함돼 있어요">타학과 개설 포함</span>}
+          {otherDept && <span className="pl-badge pl-badge-other" title="우리 과 이수체계 과목이에요. 다른 학과에서 연 분반도 포함돼 있어요">타학과 개설</span>}
           {c.tags.filter((t) => t === "SDG" || t === "인문교양").map((t) => <span key={t} className="pl-badge">{t}</span>)}
           <span className="pl-mobile-meta">{[types.join(", "), c.grade && c.grade !== "*" ? `${c.grade}학년` : "", `${c.credit}학점`, time].filter(Boolean).join(" | ")}</span>
         </td>
-        <td className="c-type">{types.join(", ") || "-"}</td>
+        <td className="c-type">{types.length ? types.map((t) => <span key={t} className="pl-type" data-t={typeTone(t)}>{t}</span>) : "-"}</td>
         <td className="c-num">{c.grade && c.grade !== "*" ? c.grade : "-"}</td>
         <td className="c-num">{c.credit}</td>
         <td className="c-prof">{profText}</td>
         <td className="c-time">{time}</td>
-        <td className="c-chev" aria-hidden><span className={open ? "up" : ""}>⌄</span></td>
+        <td className="c-chev" aria-hidden><span className={open ? "up" : ""}><Icon name="down" /></span></td>
       </tr>
       {open && (
         <tr className="pl-tr-sub">

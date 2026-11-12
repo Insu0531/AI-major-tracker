@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { colorFor } from "@/lib/planner/data";
 import { SORT_LABEL, SORT_OPTIONS, type CartItem, type CartMode, type Conditions, type Course } from "@/lib/planner/types";
 import TimeRangePicker, { describeSlots, type TimeMode } from "./TimeRangePicker";
+import Icon from "./Icon";
 
 export function cartCredit(items: CartItem[], courseByCode: Map<string, Course>) {
   return items.reduce((s, i) => s + (courseByCode.get(i.code)?.credit ?? 0), 0);
@@ -16,15 +17,28 @@ export function CartList({
   onSetMode,
   onClear,
   colorOf = colorFor,
+  emptyExtra,
 }: {
   cart: CartItem[];
   courseByCode: Map<string, Course>;
   onSetMode: (code: string, mode: CartMode | null) => void;
   onClear?: () => void;
   colorOf?: (code: string) => string;
+  /** 비어 있을 때 아래에 붙일 것 (2단계: 내 학년 전공 한꺼번에 담기) */
+  emptyExtra?: React.ReactNode;
 }) {
   if (cart.length === 0) {
-    return <div className="pl-empty">아직 담은 과목이 없어요.<br />목록에서 <b>담기</b>를 눌러 보세요.</div>;
+    return (
+      <div className="pl-cart-empty">
+        <div className="pl-empty">아직 담은 과목이 없어요.<br />목록에서 <b>+</b>를 눌러 담아 보세요.</div>
+        <ol className="pl-cart-steps">
+          <li>들을 만한 과목을 <b>넉넉히</b> 담아요</li>
+          <li><b>시간표 보기</b>를 누르면 겹치지 않게 짜 드려요</li>
+          <li>마음에 드는 시간표를 저장하거나 공유해요</li>
+        </ol>
+        {emptyExtra}
+      </div>
+    );
   }
   return (
     <div className="pl-cart-group">
@@ -40,7 +54,7 @@ export function CartList({
               <div title={course.name}>{course.name}</div>
               <div className="pl-hint">{[`${course.credit}학점`, ...notes].join(" | ")}</div>
             </div>
-            <button className="pl-x" aria-label={`${course.name} 빼기`} onClick={() => onSetMode(i.code, null)}>×</button>
+            <button className="pl-x" aria-label={`${course.name} 빼기`} onClick={() => onSetMode(i.code, null)}><Icon name="close" /></button>
           </div>
         );
       })}
@@ -106,9 +120,11 @@ export function ConditionsPanel({
       <div className="pl-cond-block" data-tour="sort">
         <div className="pl-label">정렬</div>
         <div className="pl-chips">
-          {SORT_OPTIONS.map((k) => (
-            <button key={k} className="pl-chip" aria-pressed={c.sort === k} onClick={() => set({ sort: k })}>{SORT_LABEL[k]}</button>
-          ))}
+          <div className="pl-seg" role="radiogroup" aria-label="정렬">
+            {SORT_OPTIONS.map((k) => (
+              <button key={k} role="radio" aria-checked={c.sort === k} onClick={() => set({ sort: k })}>{SORT_LABEL[k]}</button>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -154,11 +170,18 @@ export function ConditionsPanel({
 
       <div className="pl-cond-block">
         <div className="pl-label">하루 일정</div>
-        <div className="pl-chips">
-          <button className="pl-chip" aria-pressed={c.maxStreak === 180} onClick={() => set({ maxStreak: c.maxStreak ? 0 : 180 })} title="쉬는 시간 없이 3시간 넘게 이어지는 날이 없는 시간표만">3시간 넘는 연강 없음</button>
-          <button className="pl-chip" aria-pressed={c.maxGap === 120} onClick={() => set({ maxGap: c.maxGap ? 0 : 120 })} title="수업 사이 빈 시간이 2시간 넘는 날이 없는 시간표만">2시간 넘는 공강 없음</button>
-          <button className="pl-chip" aria-pressed={c.maxPerDay === 3} onClick={() => set({ maxPerDay: c.maxPerDay ? 0 : 3 })} title="하루에 3과목까지만 듣는 시간표만">하루 3과목 이하</button>
-          <button className="pl-chip" aria-pressed={c.noRemote} onClick={() => set({ noRemote: !c.noRemote })} title="원격강좌 분반은 빼고 시간표를 만들어요">원격강좌 빼기</button>
+        {/* 켜고 끄는 조건이라 칩 대신 스위치 (정렬·시간대와 모양을 달리해 구분) */}
+        <div className="pl-switches">
+          {([
+            ["3시간 넘는 연강 없음", c.maxStreak === 180, () => set({ maxStreak: c.maxStreak ? 0 : 180 })],
+            ["2시간 넘는 공강 없음", c.maxGap === 120, () => set({ maxGap: c.maxGap ? 0 : 120 })],
+            ["하루 3과목 이하", c.maxPerDay === 3, () => set({ maxPerDay: c.maxPerDay ? 0 : 3 })],
+            ["원격강좌 빼기", c.noRemote, () => set({ noRemote: !c.noRemote })],
+          ] as const).map(([label, on, toggle]) => (
+            <button key={label} role="switch" aria-checked={on} className="pl-switch" onClick={toggle}>
+              <span>{label}</span><i aria-hidden />
+            </button>
+          ))}
         </div>
       </div>
 
@@ -215,7 +238,7 @@ function ProfChooser({
               aria-label={`${p} 교수님${state === "inc" ? ", 꼭 듣기" : state === "exc" ? ", 피하기" : ""}`}
               title={[profCourses.get(p)?.join(", "), state === "inc" ? "꼭 듣기" : state === "exc" ? "피하기" : ""].filter(Boolean).join(" | ")}
               onClick={() => onCycle(p)}>
-              {state === "inc" ? "✓ " : state === "exc" ? "✕ " : ""}{p}
+              {state === "inc" ? <Icon name="check" /> : state === "exc" ? <Icon name="close" /> : null}{p}
             </button>
           );
         })}

@@ -808,3 +808,131 @@
 .pl-chip, .pl-strip-item { transition: background-color 0.15s, color 0.15s, transform 0.1s; }
 /* 접었다 펴는 칸이 열릴 때 */
 .pl-filter-grid, .pl-fill-search, .pl-fill-tabs, .pl-trp-quick, .pl-sem-line, .pl-relax { animation: pl-in 0.2s ease-out both; }
+
+/* ── 디자인 정리 (2026-11-11) ── */
+/* 1. 화면 시간표 = 저장 이미지 모양: 세로선 없음, 정시 실선 + 30분 점선, 각진 단색 블록 */
+.pl-tt-col + .pl-tt-col, .pl-tt-hour-col + .pl-tt-col { box-shadow: none; }
+.pl-tt-line.half { height: 0; background: none; border-top: 1px dashed var(--line); left: 6px; right: 6px; }
+.pl-tt-block { border-radius: 2px; padding: 6px 8px; }
+.pl-tt-head div { font-family: var(--font-head); font-weight: 800; font-size: 14px; color: var(--ink); }
+/* 2. 아이콘 한 벌 */
+.pl-icon { display: inline-block; vertical-align: -0.14em; flex-shrink: 0; }
+.pl-x .pl-icon { width: 18px; height: 18px; vertical-align: middle; }
+.pl-add-btn .pl-icon { width: 16px; height: 16px; vertical-align: middle; }
+.pl-th-sort .pl-icon { width: 12px; height: 12px; margin-left: 2px; }
+.c-chev .pl-icon { width: 18px; height: 18px; }
+.pl-nav .pl-btn .pl-icon { width: 16px; height: 16px; vertical-align: middle; }
+.pl-fb-check .pl-icon { width: 24px; height: 24px; }
+.pl-tt-pick .pl-icon { width: 10px; height: 10px; }
+/* 3. 추천 이유: 같은 무채색 칩 + 종류별 작은 점 (예전 무지개 배경 대신) */
+.pl-rec-reason, .pl-rec-reason[data-kind] { background: var(--sunken); color: var(--ink-2); font-weight: 500; display: inline-flex; align-items: center; gap: 5px; }
+.pl-rec-reason::before { content: ""; width: 6px; height: 6px; border-radius: 3px; background: var(--ink-3); }
+.pl-rec-reason[data-kind="free"]::before { background: oklch(60% 0.13 150); }
+.pl-rec-reason[data-kind="near"]::before { background: var(--pick); }
+.pl-rec-reason[data-kind="seat"]::before { background: oklch(70% 0.13 75); }
+.pl-rec-reason[data-kind="sdg"]::before { background: oklch(62% 0.1 200); }
+.pl-rec-reason[data-kind="hum"]::before { background: oklch(60% 0.14 340); }
+.pl-rec-reason[data-kind="remote"]::before { background: var(--accent); }
+
+/* 4. 조건 칸: 정렬은 두 칸 탭 버튼, 하루 일정은 스위치 */
+.pl-seg { display: inline-flex; padding: 3px; border-radius: 10px; background: var(--sunken); gap: 2px; }
+.pl-seg button { border: none; background: none; height: 30px; padding: 0 14px; border-radius: 8px; font-size: 13px; font-weight: 600; color: var(--ink-2); transition: background-color 0.15s, color 0.15s; }
+.pl-seg button[aria-checked="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px oklch(30% 0.02 60 / 0.12); }
+.pl-switches { display: flex; flex-direction: column; gap: 2px; }
+.pl-switch { display: flex; align-items: center; justify-content: space-between; gap: var(--s3); width: 100%; border: none; background: none; padding: 7px 0; font-size: 13.5px; color: var(--ink); text-align: left; }
+.pl-switch i { position: relative; width: 34px; height: 20px; border-radius: 10px; background: var(--sunken-2); flex-shrink: 0; transition: background-color 0.18s; }
+.pl-switch i::after { content: ""; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 8px; background: var(--surface); box-shadow: 0 1px 2px oklch(30% 0.02 60 / 0.25); transition: transform 0.18s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.pl-switch[aria-checked="true"] i { background: var(--pick); }
+.pl-switch[aria-checked="true"] i::after { transform: translateX(14px); }
+
+/* 5. 2단계 표: 더 촘촘하게, 배지는 조용히, 교과구분은 작은 태그 */
+.pl-table td { padding-top: 9px; padding-bottom: 9px; }
+.pl-badge.pl-badge-other { background: var(--sunken); color: var(--ink-3); font-weight: 500; }
+.pl-type { display: inline-block; margin: 1px 4px 1px 0; padding: 1px 7px; border-radius: 5px; font-size: 12px; font-weight: 600; background: var(--sunken); color: var(--ink-2); white-space: nowrap; }
+.pl-type[data-t="must"] { background: var(--accent-weak); color: var(--accent); }
+.pl-type[data-t="gy"] { background: color-mix(in srgb, var(--c-gyoyang) 12%, transparent); color: var(--c-gyoyang); }
+.pl-type[data-t="ky"] { background: color-mix(in srgb, var(--c-kyoshik) 14%, transparent); color: var(--c-kyoshik); }
+.pl-type[data-t="il"] { background: color-mix(in srgb, var(--c-ilban) 12%, transparent); color: var(--c-ilban); }
+.c-type { white-space: normal !important; }
+/* 7. 1단계 예시 시간표 (넓은 화면만, 작게·흐리게) */
+.pl-intro-sample { position: relative; margin-top: var(--s5); max-width: 460px; --hour: 30px; pointer-events: none; }
+.pl-intro-sample .pl-tt { box-shadow: 0 1px 2px oklch(30% 0.02 60 / 0.06), 0 12px 32px oklch(30% 0.02 60 / 0.1); }
+.pl-intro-sample .pl-tt-block { font-size: 11px; padding: 4px 6px; }
+.pl-intro-sample .pl-tt-block strong { font-size: 11.5px; }
+.pl-intro-sample .pl-tt-block span:empty { display: none; }
+.pl-intro-sample-tag { position: absolute; top: 10px; right: 12px; font-size: 11px; font-weight: 700; color: var(--ink-3); background: var(--sunken); padding: 2px 8px; border-radius: 10px; }
+@media (max-width: 900px) { .pl-intro-sample { display: none; } }
+/* 8. 불러오는 중 뼈대 · 빈 화면 그림 */
+@keyframes pl-shimmer { 0% { background-position: -240px 0; } 100% { background-position: 240px 0; } }
+.pl-skel { flex: 1; padding: var(--s6) var(--s5); display: flex; flex-direction: column; gap: 10px; max-width: 1100px; width: 100%; margin: 0 auto; }
+.pl-skel-bar, .pl-skel-row span, .pl-skel-grid span {
+  border-radius: 6px; background: linear-gradient(90deg, var(--sunken) 0, var(--sunken-2) 120px, var(--sunken) 240px) 0 0 / 480px 100%;
+  animation: pl-shimmer 1.2s linear infinite;
+}
+.pl-skel-bar { height: 22px; }
+.pl-skel-bar.w40 { width: 40%; height: 28px; margin-bottom: 4px; }
+.pl-skel-bar.w70 { width: 70%; margin-bottom: 12px; }
+.pl-skel-row { display: grid; grid-template-columns: 28px 2fr 1fr 1.4fr; gap: 16px; align-items: center; padding: 8px 0; box-shadow: inset 0 -1px 0 var(--line); }
+.pl-skel-row span { height: 14px; }
+.pl-skel-row span:first-child { height: 28px; border-radius: 14px; }
+.pl-skel-tt { padding: var(--s5); }
+.pl-skel-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; height: 360px; padding: 12px; border-radius: var(--radius-lg); background: var(--surface); box-shadow: var(--shadow); }
+.pl-skel-grid span { border-radius: 2px; margin-top: calc(var(--i) * 28px + 10px); height: 90px; }
+.pl-empty::before {
+  content: ""; display: block; width: 44px; height: 44px; margin: 0 auto var(--s3); border-radius: 22px; background: var(--sunken);
+  -webkit-mask: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='4' y='5' width='16' height='15' rx='2'/%3E%3Cpath d='M4 10h16M9 3v4M15 3v4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: center; background-size: 22px;
+}
+/* 9. 빈 장바구니: 사용법 3줄 + 내 학년 전공 담기 */
+.pl-cart-empty .pl-empty { padding: var(--s6) var(--s2) var(--s4); }
+.pl-cart-steps { margin: 0 0 var(--s4); padding: 0 0 0 20px; color: var(--ink-2); font-size: 13.5px; line-height: 1.6; display: flex; flex-direction: column; gap: 4px; }
+.pl-cart-steps b { color: var(--ink); }
+.pl-grade-add { width: 100%; }
+/* 10. 다크 모드 (메뉴에서 켬, .pl[data-theme="dark"]) — 같은 따뜻한 뉴트럴을 어둡게, 포인트색은 조금 밝게 */
+.pl[data-theme="dark"] {
+  --bg: oklch(19% 0.008 60);
+  --surface: oklch(23.5% 0.009 60);
+  --sunken: oklch(28% 0.01 60);
+  --sunken-2: oklch(33% 0.012 60);
+  --ink: oklch(93% 0.006 80);
+  --ink-2: oklch(80% 0.008 80);
+  --ink-3: oklch(64% 0.01 80);
+  --line: oklch(31% 0.01 60);
+  --accent: oklch(66% 0.17 25);
+  --accent-ink: oklch(16% 0.02 25);
+  --accent-weak: oklch(32% 0.07 25);
+  --pick: oklch(68% 0.14 255);
+  --pick-weak: oklch(31% 0.06 255);
+  --c-major: oklch(68% 0.16 25);
+  --c-major2: oklch(72% 0.13 55);
+  --c-gyoyang: oklch(70% 0.13 255);
+  --c-kyoshik: oklch(70% 0.12 150);
+  --c-ilban: oklch(70% 0.13 300);
+  --shadow: 0 1px 2px oklch(0% 0 0 / 0.3), 0 8px 24px oklch(0% 0 0 / 0.35);
+  color-scheme: dark;
+}
+.pl[data-theme="dark"] .pl-btn.primary { color: oklch(99% 0 0); background: oklch(52% 0.17 25); }
+.pl[data-theme="dark"] .pl-btn.pl-kakao { background: #fee500; color: #191600; }
+.pl[data-theme="dark"] .pl-time-btn.block.on,
+.pl[data-theme="dark"] .pl-trp-mode.block[aria-checked="true"],
+.pl[data-theme="dark"] .pl-chip.pl-prof-chip.exc { background: oklch(32% 0.07 25); color: oklch(80% 0.1 25); }
+.pl[data-theme="dark"] .pl-trp-mode.need[aria-checked="true"] { background: oklch(31% 0.06 255); color: oklch(82% 0.08 255); }
+.pl[data-theme="dark"] .pl-sem-note { background: oklch(30% 0.05 80); color: oklch(88% 0.06 85); }
+.pl[data-theme="dark"] .pl-cal-ev[data-kind] { background: var(--sunken-2); color: var(--ink); }
+.pl[data-theme="dark"] .pl-fb-check { background: oklch(32% 0.06 150); color: oklch(85% 0.1 150); }
+.pl[data-theme="dark"] .pl-trp-cell.block { background: oklch(55% 0.12 25); }
+.pl[data-theme="dark"] .pl-trp-cell.need { background: oklch(55% 0.12 255); }
+.pl[data-theme="dark"] .pl-tt-block { box-shadow: none; }
+.pl[data-theme="dark"] .pl-modal-bg { background: oklch(0% 0 0 / 0.55); }
+/* 디자인 정리 보정 */
+.pl-intro-sample-tag { top: auto; bottom: 10px; right: 12px; }
+.pl-cart-empty { padding: 0 var(--s4) var(--s4); }
+.pl-cart-empty .pl-cart-steps { padding-left: 18px; }
+/* 다크: 밝은 파랑·빨강 바탕 위 글씨는 어둡게 (흰 글씨는 대비 부족) */
+.pl[data-theme="dark"] .pl-chip[aria-pressed="true"],
+.pl[data-theme="dark"] .pl-strip-item[aria-current="true"],
+.pl[data-theme="dark"] .pl-strip-item[aria-current="true"] b,
+.pl[data-theme="dark"] .pl-btn[aria-pressed="true"],
+.pl[data-theme="dark"] .pl-chip.pl-prof-chip.inc { color: oklch(17% 0.02 255); }
+.pl[data-theme="dark"] .pl-add-btn[aria-pressed="true"] { color: oklch(17% 0.02 25); }
